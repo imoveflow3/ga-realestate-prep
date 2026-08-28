@@ -1,0 +1,1938 @@
+[
+ {
+  "answer": 0,
+  "choices": [
+   "18 years old",
+   "17 years old",
+   "21 years old",
+   "19 years old"
+  ],
+  "concept": "Georgia age requirements",
+  "difficulty": 1,
+  "explain": "18 for salesperson or community association manager; 21 for broker or associate broker. An applicant may TAKE the salesperson exam at 17 but cannot activate the license until 18.",
+  "id": "geo-72d3ad74",
+  "portion": "georgia",
+  "q": "To be licensed as a Georgia salesperson an applicant must be at least:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "75 hours",
+   "25 hours",
+   "90 hours",
+   "60 hours"
+  ],
+  "concept": "Georgia prelicense education",
+  "difficulty": 1,
+  "explain": "Georgia requires a 75-hour GREC-approved salesperson prelicense course. Do not confuse it with the 25-hour POSTlicense course due in the first year.",
+  "id": "geo-472088bb",
+  "portion": "georgia",
+  "q": "The Georgia prelicense course required for a salesperson's license is:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Before taking the exam",
+   "Within two years",
+   "Within one year of original licensure",
+   "Only if practicing full time"
+  ],
+  "concept": "Georgia postlicense requirement",
+  "difficulty": 1,
+  "explain": "The 25-hour Sales Post-license Course is due within ONE year of original licensure. It applies whether the license is active or inactive and whether the licensee is a Georgia resident or not. Missing it costs the license.",
+  "id": "geo-c0627056",
+  "portion": "georgia",
+  "q": "A newly licensed Georgia salesperson must complete a 25-hour postlicense course:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "24 hours",
+   "36 hours",
+   "12 hours",
+   "45 hours"
+  ],
+  "concept": "Georgia continuing education",
+  "difficulty": 1,
+  "explain": "Georgia requires at least 24 hours of GREC-approved CE during each four-year renewal period. Many national study guides quote 36 hours, which is a different state -- Georgia is 24.",
+  "id": "geo-56b4785c",
+  "portion": "georgia",
+  "q": "Active Georgia licensees must complete how much continuing education each four-year renewal period?",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Two of the past three years",
+   "Five continuous years",
+   "Three of the five years immediately preceding application",
+   "One of the past two years"
+  ],
+  "concept": "Georgia broker experience requirement",
+  "difficulty": 1,
+  "explain": "Three years of active licensure within the five years immediately preceding application. Active licensure in ANOTHER state counts, provided the applicant supplies a certified license history.",
+  "id": "geo-bbd32933",
+  "portion": "georgia",
+  "q": "An applicant for a Georgia broker's license must have held an active license for at least:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Qualifying broker",
+   "Associate broker",
+   "Salesperson",
+   "Broker"
+  ],
+  "concept": "Which licenses require experience",
+  "difficulty": 1,
+  "explain": "A salesperson's license has no experience requirement -- only age, education, exam, and background. Broker and associate broker both require the three-of-five-years experience.",
+  "id": "geo-f0bfc729",
+  "portion": "georgia",
+  "q": "There is no experience requirement for which Georgia license?",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Reprimanding a licensee",
+   "Suspending or revoking a license",
+   "Ordering a licensee to repay a consumer's financial loss",
+   "Imposing a fine and requiring education"
+  ],
+  "concept": "Limits on GREC's authority",
+  "difficulty": 1,
+  "explain": "GREC may reprimand, suspend, revoke, fine, require education, and require accountant reports on trust accounts. It has NO power to force a licensee to compensate someone for a financial loss -- that requires a civil suit. This is a favorite exam distinction.",
+  "id": "geo-070796c2",
+  "portion": "georgia",
+  "q": "The Georgia Real Estate Commission's disciplinary powers include all of the following EXCEPT:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Immediate revocation",
+   "Referral for criminal prosecution",
+   "Automatic license suspension",
+   "A consent order the licensee may sign"
+  ],
+  "concept": "The GREC disciplinary process",
+  "difficulty": 1,
+  "explain": "The Commission may offer a Consent Order stating the violation and a proposed sanction, usually a reprimand, fine, and/or education. The licensee may sign it, propose an alternative, present evidence, or demand a formal hearing.",
+  "id": "geo-965aa59a",
+  "portion": "georgia",
+  "q": "A GREC investigation that finds a violation causing no significant public harm is most likely resolved by:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The full Commission",
+   "A superior court judge",
+   "An Administrative Law Judge from the Office of State Administrative Hearings",
+   "The Attorney General"
+  ],
+  "concept": "Who hears GREC cases",
+  "difficulty": 1,
+  "explain": "An ALJ hears the case and issues a decision. A dissatisfied respondent may then ask to appear before the Commission, and ultimately may appeal to the courts.",
+  "id": "geo-f2e2d756",
+  "portion": "georgia",
+  "q": "A formal GREC disciplinary hearing is conducted by:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Anyone, by sworn written request -- and the Commission on its own motion",
+   "Only a party to the transaction",
+   "Only the licensee's broker",
+   "Only the Attorney General"
+  ],
+  "concept": "Initiating an investigation",
+  "difficulty": 1,
+  "explain": "Anyone may file a sworn, written request for investigation, and the Commission may also act on its own motion. The licensee will be notified that they are the subject of an investigation.",
+  "id": "geo-98058cd4",
+  "portion": "georgia",
+  "q": "Who may initiate a GREC investigation of a licensee?",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Obtain a separate owner's permit",
+   "Disclose his licensed status in writing in the contract",
+   "Use another broker exclusively",
+   "Ignore license law because he is the owner"
+  ],
+  "concept": "Licensee acting as a principal",
+  "difficulty": 1,
+  "explain": "O.C.G.A. 43-40-29(c) says the exceptions to licensure never apply to someone who holds a license. A licensee selling his own property must disclose licensed status in writing and put any trust funds in a broker-approved trust account.",
+  "id": "geo-83485c1c",
+  "portion": "georgia",
+  "q": "A Georgia licensee selling a property he personally owns must:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Has no education obligations",
+   "Must still meet the postlicense education requirement",
+   "May still list property",
+   "Loses the license automatically"
+  ],
+  "concept": "Inactive status obligations",
+  "difficulty": 1,
+  "explain": "Postlicense education still applies to an inactive salesperson, and renewal fees still come due. Inactive licensees may not perform licensed activity.",
+  "id": "geo-321aa315",
+  "portion": "georgia",
+  "q": "A licensee whose license is on inactive status:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "An attorney performing legal services",
+   "Negotiating a lease for another for compensation",
+   "An owner selling her own home",
+   "An executor selling estate property"
+  ],
+  "concept": "Activities requiring licensure",
+  "difficulty": 1,
+  "explain": "Negotiating, listing, selling, leasing, or collecting rents FOR ANOTHER for compensation requires a license. Owners, executors, and attorneys acting in their own roles are excepted -- but never a person who already holds a license.",
+  "id": "geo-51fd47de",
+  "portion": "georgia",
+  "q": "Which activity requires a Georgia real estate license?",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Verbally to the broker only",
+   "By filing a change application with the Commission",
+   "Only at renewal",
+   "Within one year"
+  ],
+  "concept": "Keeping the license record current",
+  "difficulty": 1,
+  "explain": "Changes in affiliation or status are made by filing a change application. Operating without a current, properly affiliated license is itself a violation.",
+  "id": "geo-8f8b3d94",
+  "portion": "georgia",
+  "q": "A Georgia licensee must notify GREC of a change of address or broker affiliation:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The MLS",
+   "The Commission until renewal",
+   "The broker with whom the salesperson is affiliated",
+   "The salesperson personally, independent of any firm"
+  ],
+  "concept": "Broker supervision",
+  "difficulty": 1,
+  "explain": "A salesperson may only act through and under the supervision of the affiliated broker. All compensation for licensed activity must come from that broker, not directly from a client or another licensee.",
+  "id": "geo-4f67e40c",
+  "portion": "georgia",
+  "q": "A salesperson's license in Georgia is held by:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Only the broker's own transactions",
+   "Supervising affiliated licensees and the firm's trust accounts",
+   "Paying affiliates' income taxes",
+   "Guaranteeing affiliates' commissions"
+  ],
+  "concept": "Qualifying broker duties",
+  "difficulty": 1,
+  "explain": "The qualifying broker answers to GREC for the firm's compliance -- supervision, trust accounts, records, and advertising. Failure to supervise is an independent violation.",
+  "id": "geo-4a0902bb",
+  "portion": "georgia",
+  "q": "The qualifying broker of a real estate firm is responsible for:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Clearly identify the licensee's firm",
+   "Appear only in the MLS",
+   "Use only the licensee's personal name",
+   "Omit the firm name for brevity"
+  ],
+  "concept": "Advertising and the firm name",
+  "difficulty": 1,
+  "explain": "Advertising must not be misleading and must identify the brokerage firm. A licensee may never advertise in a way that suggests they operate independently of their broker.",
+  "id": "geo-fdba3b6d",
+  "portion": "georgia",
+  "q": "Georgia advertising rules require that a licensee's advertising:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Surrender the license automatically",
+   "Do nothing until renewal",
+   "Report the conviction to the Commission",
+   "Notify only the broker"
+  ],
+  "concept": "Reporting convictions",
+  "difficulty": 1,
+  "explain": "Licensees must report criminal convictions to GREC. Failing to report is often punished more severely than the underlying offense.",
+  "id": "geo-3305ff44",
+  "portion": "georgia",
+  "q": "A licensee convicted of a felony after licensure must:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Always prohibited",
+   "Permitted only under strict disclosure conditions",
+   "The standard listing form",
+   "Required for commercial property"
+  ],
+  "concept": "Net listings in Georgia",
+  "difficulty": 1,
+  "explain": "Georgia permits net listings only with careful disclosure, because they create a conflict between the broker's profit and the client's interest. Many brokerages ban them outright by policy.",
+  "id": "geo-c0b31065",
+  "portion": "georgia",
+  "q": "Under Georgia law, a net listing is:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Elected by licensees",
+   "Appointed by the Attorney General",
+   "Selected by the state association of REALTORS",
+   "Appointed by the Governor"
+  ],
+  "concept": "GREC structure",
+  "difficulty": 1,
+  "explain": "Commission members are appointed by the Governor. GREC administers the license law, issues rules, investigates complaints, and disciplines licensees.",
+  "id": "geo-339a3d36",
+  "portion": "georgia",
+  "q": "The Georgia Real Estate Commission's members are:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Held in the salesperson's name",
+   "A federally insured checking account the bank designates as a trust or escrow account",
+   "Any personal savings account",
+   "An investment brokerage account"
+  ],
+  "concept": "Trust account requirements",
+  "difficulty": 1,
+  "explain": "It must be a separate, federally insured bank checking account that the BANK designates as trust or escrow, registered with the Commission, with the broker holding signatory power.",
+  "id": "geo-1162a3ff",
+  "portion": "georgia",
+  "q": "A Georgia broker's trust account must be:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The broker's Social Security Number",
+   "An Employer Identification Number",
+   "The client's tax ID",
+   "No tax identification"
+  ],
+  "concept": "Protecting the trust account from seizure",
+  "difficulty": 1,
+  "explain": "Accounts opened under a broker's SSN have been seized by the IRS, awarded in divorce, and attached by banks for the broker's personal debts. An EIN keeps the account identifiable as trust property.",
+  "id": "geo-0aa08fbc",
+  "portion": "georgia",
+  "q": "A Georgia broker should open the trust account under:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Whenever the broker chooses",
+   "Only after closing",
+   "Promptly, unless all parties give written authority otherwise",
+   "Within 30 days"
+  ],
+  "concept": "Timing of trust deposits",
+  "difficulty": 1,
+  "explain": "Funds must be deposited promptly into a non-interest-bearing checking account. To hold a check until offer acceptance, or to use an interest-bearing account, the broker needs clear WRITTEN authority agreed to by all parties.",
+  "id": "geo-f298f548",
+  "portion": "georgia",
+  "q": "Georgia law requires a broker to deposit trust funds:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Commingling",
+   "Subrogation",
+   "A permissible practice",
+   "Novation"
+  ],
+  "concept": "Commingling in Georgia",
+  "difficulty": 1,
+  "explain": "Trust funds must stay separate from the broker's own money. Commingling is one of the most frequently disciplined license law violations; actually spending the funds is conversion.",
+  "id": "geo-84751b3a",
+  "portion": "georgia",
+  "q": "A broker who deposits earnest money into the firm's operating account has committed:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "At least one, and more if each is registered with the Commission",
+   "One per affiliated licensee",
+   "Exactly one",
+   "No more than two"
+  ],
+  "concept": "Multiple trust accounts",
+  "difficulty": 1,
+  "explain": "Brokers must have at least one but may have several -- commonly separate accounts for earnest money, rents, and security deposits. Each must be bank-designated as trust and registered with GREC, with the broker holding signatory power.",
+  "id": "geo-0ef45ddf",
+  "portion": "georgia",
+  "q": "How many trust accounts may a Georgia broker maintain?",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "No access without a warrant",
+   "Setting the interest rate",
+   "Examining the account upon reasonable request",
+   "Freezing the account at will"
+  ],
+  "concept": "GREC audit authority",
+  "difficulty": 1,
+  "explain": "GREC may examine trust accounts on reasonable request and does so routinely. The Commission may accept a CPA's certification of compliance in lieu of its own examination, at its discretion.",
+  "id": "geo-7b4bf9f8",
+  "portion": "georgia",
+  "q": "The Georgia Real Estate Commission's authority over a broker's trust account includes:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A buyer's advance for a credit report",
+   "Rents collected for an owner",
+   "The broker's earned commission after disbursement",
+   "A tenant's security deposit"
+  ],
+  "concept": "What counts as trust funds",
+  "difficulty": 1,
+  "explain": "Once a transaction closes and the commission is properly earned and disbursed, it is the broker's money. Everything held ON BEHALF OF another -- deposits, rents, advances -- is trust money.",
+  "id": "geo-059d3763",
+  "portion": "georgia",
+  "q": "Which of these is NOT trust money that must go into the trust account?",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Interest is earned",
+   "The account balance changes",
+   "A new client is added",
+   "The trust account's bank, name, or number changes or the account closes"
+  ],
+  "concept": "Trust account recordkeeping duties",
+  "difficulty": 1,
+  "explain": "Any change in the bank, account name or number, or closure of the account requires written notice to GREC on Commission forms.",
+  "id": "geo-bbcc573a",
+  "portion": "georgia",
+  "q": "A broker must notify the Commission in writing when:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Each client depositor is treated as a separate account owner",
+   "The broker is insured for $250,000 total",
+   "Coverage is unlimited",
+   "No coverage applies to trust accounts"
+  ],
+  "concept": "FDIC coverage of trust accounts",
+  "difficulty": 1,
+  "explain": "With proper records, each buyer, seller, or tenant is insured separately up to $250,000. But the FDIC ADDS that person's other deposits in the same bank, so a client near the limit may be underinsured -- brokers should disclose which bank they use.",
+  "id": "geo-167a6da3",
+  "portion": "georgia",
+  "q": "FDIC 'pass-through' coverage on a broker's trust account means:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Keep no records",
+   "Register the account personally with the IRS only",
+   "Provide the broker at least quarterly written reconciliation statements",
+   "Avoid telling the broker"
+  ],
+  "concept": "Affiliate-held trust accounts",
+  "difficulty": 1,
+  "explain": "The broker must register the account with GREC and remains responsible for it. The affiliate must provide at least quarterly written reconciliations comparing total trust liability with the reconciled bank balance.",
+  "id": "geo-a6ab9dae",
+  "portion": "georgia",
+  "q": "An affiliated licensee permitted to hold a trust account for personally owned rentals must:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "A verbal promise to represent",
+   "Showing a buyer three properties",
+   "Paying the broker a commission",
+   "A written brokerage engagement"
+  ],
+  "concept": "How agency is created in Georgia",
+  "difficulty": 1,
+  "explain": "BRRETA defines agency as representing another as a client 'by the latter's WRITTEN authority.' A brokerage engagement is a written contract. This is why accidental agency is far harder to create in Georgia than in many states.",
+  "id": "geo-e8f74763",
+  "portion": "georgia",
+  "q": "Under BRRETA, an agency relationship in Georgia is created by:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "No -- there must be an express written agreement",
+   "Yes, always",
+   "Yes, if the payer is the seller",
+   "Only in residential transactions"
+  ],
+  "concept": "Compensation does not equal agency",
+  "difficulty": 1,
+  "explain": "A seller paying the buyer's broker does NOT make that broker the seller's agent. Source of compensation and agency are separate questions -- a frequently tested point.",
+  "id": "geo-52c8c0e7",
+  "portion": "georgia",
+  "q": "Under BRRETA, does paying a broker's commission by itself create an agency relationship?",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Principal",
+   "Client",
+   "Customer",
+   "Subagent"
+  ],
+  "concept": "Client vs. customer under BRRETA",
+  "difficulty": 1,
+  "explain": "A CLIENT is represented under a written brokerage engagement. A CUSTOMER is unrepresented; the broker may perform ministerial acts for them under a verbal OR written agreement.",
+  "id": "geo-baee4117",
+  "portion": "georgia",
+  "q": "Under BRRETA, a person NOT represented by a broker but for whom the broker performs ministerial acts is a:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Owes no duties at all",
+   "Owes unlimited fiduciary duties",
+   "May not represent buyers",
+   "Is not deemed to have a fiduciary relationship, but must exercise reasonable care in the duties specified"
+  ],
+  "concept": "BRRETA limits the scope of duties",
+  "difficulty": 1,
+  "explain": "BRRETA states a broker 'shall not be deemed to have a fiduciary relationship with any party' and is responsible for reasonable care in discharging the duties the statute and the engagement specify. This narrowing of liability is the heart of the Act.",
+  "id": "geo-46ec3b54",
+  "portion": "georgia",
+  "q": "A significant difference between BRRETA and traditional common-law agency is that under BRRETA a broker:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The broker's compensation and whether it is shared",
+   "The broker's confidentiality obligations",
+   "The names of the broker's other clients buying similar property",
+   "The types of agency relationships available"
+  ],
+  "concept": "The four BRRETA pre-engagement disclosures",
+  "difficulty": 1,
+  "explain": "The broker discloses agency types available, conflicting relationships actually known, compensation and sharing, and confidentiality obligations. It expressly EXCLUDES having to reveal that the broker represents other buyers or sellers generally.",
+  "id": "geo-79ff4d97",
+  "portion": "georgia",
+  "q": "BRRETA requires a broker, before or at the time of entering a brokerage engagement, to advise the prospective client of all of the following EXCEPT:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Prohibited in Georgia",
+   "Allowed with written consent from both clients",
+   "Allowed with verbal consent",
+   "Allowed only for commercial property"
+  ],
+  "concept": "Dual agency in Georgia",
+  "difficulty": 1,
+  "explain": "Georgia permits dual agency but requires written consent. Consent is presumed if the writing contains the required elements, including a statement that the client does NOT have to consent.",
+  "id": "geo-09ddd332",
+  "portion": "georgia",
+  "q": "Under BRRETA, dual agency is:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The commission will be doubled",
+   "The broker will favor the seller",
+   "The client does not have to consent to the dual agency",
+   "The client must consent to proceed"
+  ],
+  "concept": "Contents of dual agency consent",
+  "difficulty": 1,
+  "explain": "The writing must describe the transactions involved, state that the broker represents two clients with potentially adverse interests, explain the disclosure of adverse material facts, and state that consent is voluntary.",
+  "id": "geo-aa6e7675",
+  "portion": "georgia",
+  "q": "A required element of a valid Georgia dual agency consent is a statement that:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A conflict requiring withdrawal",
+   "Automatically illegal dual agency",
+   "Designated agency, permitted with written consent",
+   "Subagency"
+  ],
+  "concept": "Designated agency -- a Georgia distinction",
+  "difficulty": 1,
+  "explain": "Many states treat this as firm-wide dual agency. BRRETA lets the broker assign different affiliated licensees to represent opposing clients, with the parties' written consent. Each designated agent represents only their own client.",
+  "id": "geo-beaf1733",
+  "portion": "georgia",
+  "q": "Two licensees of the same Georgia firm represent the buyer and the seller in one transaction. This is:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The other designated agent in the firm",
+   "Any licensee in the firm",
+   "The other party's attorney",
+   "Their broker only"
+  ],
+  "concept": "Confidentiality between designated agents",
+  "difficulty": 1,
+  "explain": "Designated agents may not disclose confidential client information except to their broker, and except for information BRRETA allows or requires to be disclosed. The two designated agents must not share confidences with each other.",
+  "id": "geo-574495cc",
+  "portion": "georgia",
+  "q": "A designated agent under BRRETA may share a client's confidential information with:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "All confidential information from each client",
+   "Nothing at all",
+   "Only the property's list price",
+   "All adverse material facts actually known to the dual agent"
+  ],
+  "concept": "What a dual agent must and must not reveal",
+  "difficulty": 1,
+  "explain": "The dual agent discloses adverse material facts actually known, but NOT information a client has asked be kept confidential. Balancing these two rules is the practical difficulty of dual agency.",
+  "id": "geo-20064531",
+  "portion": "georgia",
+  "q": "A dual agent must disclose to both parties:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The first showing",
+   "Delivery of a CMA",
+   "Any expiration date agreed to by the parties",
+   "The broker's request only"
+  ],
+  "concept": "Duration of the engagement",
+  "difficulty": 1,
+  "explain": "It begins when the client engages the broker and runs until the agreed expiration date or another statutory ending event. An engagement with no ending date invites disputes.",
+  "id": "geo-c12a2b38",
+  "portion": "georgia",
+  "q": "A brokerage engagement under BRRETA terminates upon:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Never",
+   "By the time of the brokerage engagement, though earlier is better practice",
+   "At the first contact, by statute",
+   "Only after an offer is made"
+  ],
+  "concept": "Timing of the agency conversation",
+  "difficulty": 1,
+  "explain": "BRRETA does not require the discussion until the engagement, but the InfoBase urges doing it as early as possible so a customer never presumes they are represented.",
+  "id": "geo-19d6ea04",
+  "portion": "georgia",
+  "q": "Under BRRETA, when must a licensee discuss agency status with a prospect?",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The duty to negotiate the lowest price",
+   "Honesty, fairness, and disclosure of adverse material facts, plus ministerial acts",
+   "No duties whatsoever",
+   "Full fiduciary duties"
+  ],
+  "concept": "Duties owed to customers",
+  "difficulty": 1,
+  "explain": "Customers get honesty and disclosure of adverse material facts the broker knows, and may receive ministerial assistance. They do not get advocacy, advice on price, or confidentiality.",
+  "id": "geo-30eea4d1",
+  "portion": "georgia",
+  "q": "A Georgia broker representing the seller shows a home to an unrepresented buyer. The broker owes that buyer:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Unlimited and non-negotiable",
+   "Those set out in the chapter and specified in the brokerage engagement",
+   "Whatever the common law of agency provides",
+   "Determined by the MLS"
+  ],
+  "concept": "Contractual scope of duties",
+  "difficulty": 1,
+  "explain": "BRRETA ties the broker's obligations to the statute plus the engagement, unless the parties expressly agree otherwise in a signed writing. This lets Georgia brokers define the scope of what they promise.",
+  "id": "geo-2053fa40",
+  "portion": "georgia",
+  "q": "Under BRRETA, the duties a broker owes a client are:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Appraisal fraud",
+   "Fair housing violations",
+   "Accidental or unintended agency relationships with customers",
+   "Commission disputes between brokers"
+  ],
+  "concept": "Purpose of BRRETA",
+  "difficulty": 1,
+  "explain": "Licensees treating customers like clients created implied agency and lawsuits from buyers who believed they were represented. BRRETA fixed this by requiring written engagements and defining each role.",
+  "id": "geo-1f5e67d3",
+  "portion": "georgia",
+  "q": "The main problem BRRETA was enacted to solve was:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The earnest money is deposited",
+   "Acceptance is communicated to the offeror",
+   "The offer is signed by the buyer",
+   "The contract is recorded"
+  ],
+  "concept": "Formation of the binding agreement",
+  "difficulty": 1,
+  "explain": "Georgia measures deadlines from the 'binding agreement date' -- the date acceptance is communicated back to the offeror. Signing alone does not bind; the other party must be notified.",
+  "id": "geo-de981917",
+  "portion": "georgia",
+  "q": "In Georgia, a real estate sales contract becomes binding when:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Match the tax assessor's value",
+   "Identify the property with reasonable certainty",
+   "Impress the lender",
+   "Satisfy the MLS"
+  ],
+  "concept": "Georgia description requirements",
+  "difficulty": 1,
+  "explain": "Georgia courts require a description that identifies the land or provides a 'key' leading to identification. A vague description can make the contract unenforceable for lack of definiteness.",
+  "id": "geo-6e4eee0f",
+  "portion": "georgia",
+  "q": "A Georgia real estate sales contract must contain a legal description sufficient to:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Only an attorney, in every case",
+   "Only the closing attorney",
+   "A licensee may complete Commission-approved or standard preprinted forms",
+   "Any party, without limits"
+  ],
+  "concept": "Unauthorized practice of law",
+  "difficulty": 1,
+  "explain": "Licensees may fill in the blanks on preprinted forms incident to a transaction they are handling. Drafting custom clauses or giving legal advice about them crosses into the unauthorized practice of law.",
+  "id": "geo-0ac85fcb",
+  "portion": "georgia",
+  "q": "Under Georgia law, who may draft a real estate sales contract?",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Controls over the preprinted language",
+   "Must be initialed by the broker",
+   "Is void",
+   "Requires GREC approval"
+  ],
+  "concept": "Interpreting conflicting contract terms",
+  "difficulty": 1,
+  "explain": "Handwritten or typed additions reflect the parties' specific intent and prevail over standard preprinted terms. This is a general contract-construction rule the Georgia exam likes to test.",
+  "id": "geo-192e1d21",
+  "portion": "georgia",
+  "q": "A special stipulation in a Georgia contract that conflicts with the preprinted text generally:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Redemption period",
+   "Right of first refusal",
+   "Option to renew",
+   "Due diligence period"
+  ],
+  "concept": "Due diligence in Georgia contracts",
+  "difficulty": 1,
+  "explain": "During the due diligence period the buyer may inspect and, in most standard forms, terminate for any reason and recover the earnest money. After it expires, the buyer's exit rights narrow sharply.",
+  "id": "geo-173a374e",
+  "portion": "georgia",
+  "q": "The Georgia contract term giving a buyer a set number of days to inspect and terminate is commonly the:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "May not recover anything",
+   "Retains the earnest money as agreed damages",
+   "Receives three times the deposit",
+   "Must sue for specific performance first"
+  ],
+  "concept": "Liquidated damages in Georgia",
+  "difficulty": 1,
+  "explain": "The earnest money serves as the agreed measure of damages. For the clause to be enforceable rather than a penalty, the amount must be a reasonable pre-estimate of loss, and damages must be hard to determine.",
+  "id": "geo-ec8637aa",
+  "portion": "georgia",
+  "q": "If a Georgia buyer defaults and the contract provides for liquidated damages, the seller typically:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Be verbal to be enforceable",
+   "Be recorded with the clerk",
+   "Automatically renew",
+   "Be in writing with a definite expiration date"
+  ],
+  "concept": "Listing agreement requirements",
+  "difficulty": 1,
+  "explain": "Georgia requires listings in writing with a definite ending date. Automatic renewal provisions are prohibited -- a licensee cannot roll a listing forward indefinitely.",
+  "id": "geo-cd17b130",
+  "portion": "georgia",
+  "q": "A Georgia listing agreement must:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Enforceable for one year",
+   "Converted to an open listing",
+   "A violation of license law",
+   "Valid indefinitely"
+  ],
+  "concept": "Definite termination dates",
+  "difficulty": 1,
+  "explain": "GREC requires a definite expiration date in brokerage engagements. Open-ended agreements are a disciplinary matter for the broker.",
+  "id": "geo-e6129ce9",
+  "portion": "georgia",
+  "q": "A Georgia brokerage engagement with no definite expiration date is:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Only within 24 hours",
+   "Only with the seller's consent",
+   "Never once signed",
+   "Any time before acceptance is communicated"
+  ],
+  "concept": "Revocation of an offer",
+  "difficulty": 1,
+  "explain": "An offer may be revoked any time before the offeror learns of acceptance. Once acceptance is communicated, a binding agreement exists and unilateral withdrawal becomes a breach.",
+  "id": "geo-c989f45c",
+  "portion": "georgia",
+  "q": "In Georgia, an offer may be withdrawn by the buyer:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Failing to perform by a stated date is a breach",
+   "Only the seller must be timely",
+   "Closing may slip 30 days",
+   "Dates are advisory"
+  ],
+  "concept": "Effect of time-is-of-the-essence",
+  "difficulty": 1,
+  "explain": "Without it, courts allow a reasonable time. With it, deadlines are strict -- particularly important with Georgia's due diligence and financing contingency dates.",
+  "id": "geo-dffb5011",
+  "portion": "georgia",
+  "q": "A 'time is of the essence' provision in a Georgia contract means:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A voidable contract",
+   "A counteroffer the buyer may accept or reject",
+   "A binding contract on the buyer's terms",
+   "An automatic 10-day extension"
+  ],
+  "concept": "Counteroffers",
+  "difficulty": 1,
+  "explain": "Any change to terms rejects the original offer and creates a counteroffer. The original buyer is released and becomes the new offeree.",
+  "id": "geo-4c4a95f8",
+  "portion": "georgia",
+  "q": "If a Georgia seller accepts an offer but changes the closing date before signing, the result is:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Kick-out clause letting the seller continue marketing",
+   "Subordination agreement",
+   "Prepayment penalty",
+   "Mandatory arbitration clause"
+  ],
+  "concept": "Sale-of-buyer's-property contingencies",
+  "difficulty": 1,
+  "explain": "A kick-out clause lets the seller accept a backup offer and require the first buyer to remove the contingency within a short window or terminate.",
+  "id": "geo-da1d82c6",
+  "portion": "georgia",
+  "q": "A contingency requiring the buyer to sell an existing home is usually paired with a:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "A homicide or suicide",
+   "A failing septic system",
+   "Active termite infestation",
+   "A leaking underground tank"
+  ],
+  "concept": "Stigmatized property in Georgia",
+  "difficulty": 1,
+  "explain": "Georgia expressly protects licensees from liability for not disclosing that a property was the site of a death, homicide, suicide, or felony. Physical CONDITION defects must always be disclosed.",
+  "id": "geo-f2f4db98",
+  "portion": "georgia",
+  "q": "Georgia law generally does NOT require disclosure that a property was the site of:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Acted within BRRETA",
+   "Failed to disclose a known adverse material fact",
+   "Committed puffing",
+   "Properly protected client confidences"
+  ],
+  "concept": "Adverse material facts",
+  "difficulty": 1,
+  "explain": "Confidentiality never shields a known physical defect. Under BRRETA a broker must disclose adverse material facts actually known, even to customers.",
+  "id": "geo-69f3f5e3",
+  "portion": "georgia",
+  "q": "A Georgia licensee who knows the basement floods but says nothing has:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Only for new construction",
+   "No -- the duty covers adverse material facts actually known",
+   "Yes, a full inspection is required",
+   "Only if the buyer asks"
+  ],
+  "concept": "No duty to discover",
+  "difficulty": 1,
+  "explain": "BRRETA limits the obligation to facts ACTUALLY KNOWN. Brokers are not inspectors; the buyer should retain one. But a licensee may not ignore what is plainly visible or make false statements.",
+  "id": "geo-3837ab1a",
+  "portion": "georgia",
+  "q": "Under BRRETA, does a Georgia broker have a duty to independently inspect the property for defects?",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "1972",
+   "1968",
+   "1978",
+   "1985"
+  ],
+  "concept": "Lead-based paint",
+  "difficulty": 1,
+  "explain": "Pre-1978 target housing requires the disclosure, the EPA pamphlet, and a 10-day testing opportunity. This is federal law and applies in Georgia unchanged.",
+  "id": "geo-47806543",
+  "portion": "georgia",
+  "q": "The federal lead-based paint disclosure applies in Georgia to homes built before:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Closing attorney",
+   "Buyer's agent",
+   "Listing broker",
+   "Seller"
+  ],
+  "concept": "Who makes the disclosure",
+  "difficulty": 1,
+  "explain": "The SELLER completes the disclosure from personal knowledge. The licensee should never fill it in for the seller or guess at answers -- doing so transfers the seller's liability to the licensee.",
+  "id": "geo-beeb6434",
+  "portion": "georgia",
+  "q": "Georgia's Property Disclosure Statement is completed by the:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Cancel the listing without notice",
+   "Change the form personally",
+   "Not pass along information known to be false",
+   "Say nothing -- the seller signed it"
+  ],
+  "concept": "Passing along false information",
+  "difficulty": 1,
+  "explain": "A licensee may not knowingly convey false information. Relaying a statement the licensee knows to be untrue makes the licensee a participant in the misrepresentation.",
+  "id": "geo-5e658fe9",
+  "portion": "georgia",
+  "q": "A Georgia licensee learns the seller's disclosure statement contains a false answer about the roof. The licensee must:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Required in Georgia",
+   "Prohibited, as handicap is a protected class",
+   "Optional at the seller's request",
+   "Required only in writing"
+  ],
+  "concept": "Fair housing limits on disclosure",
+  "difficulty": 1,
+  "explain": "Handicap includes HIV/AIDS status. Disclosing it would be discriminatory under federal fair housing law, and Georgia does not require disclosure of stigma in any event.",
+  "id": "geo-7e79de81",
+  "portion": "georgia",
+  "q": "Disclosure that a former occupant had HIV/AIDS is:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Defective septic system",
+   "Prior owner's bankruptcy",
+   "Ghost sighting",
+   "Neighbor dispute over politics"
+  ],
+  "concept": "Material physical defects",
+  "difficulty": 1,
+  "explain": "Conditions affecting the property's value, safety, or use must be disclosed. Personal matters and stigma generally need not be.",
+  "id": "geo-04baa8d4",
+  "portion": "georgia",
+  "q": "A Georgia seller must disclose the presence of a known:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Only to the broker",
+   "Verbally at closing",
+   "In writing in the contract or lease",
+   "Only if asked"
+  ],
+  "concept": "Licensee-as-principal disclosure",
+  "difficulty": 1,
+  "explain": "Written disclosure of licensed status in the sales contract or lease is mandatory whenever a licensee buys, sells, or leases for their own account.",
+  "id": "geo-7363d396",
+  "portion": "georgia",
+  "q": "Georgia requires a licensee acting as a principal in a transaction to disclose their licensed status:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Disclosed after closing",
+   "Only the lender's concern",
+   "Confidential",
+   "An adverse material fact requiring disclosure"
+  ],
+  "concept": "Flood plain disclosure",
+  "difficulty": 1,
+  "explain": "Flood exposure affects value, insurability, and use, making it a material fact. It also drives the lender's flood insurance requirement.",
+  "id": "geo-e1078a45",
+  "portion": "georgia",
+  "q": "If a Georgia property is in a flood plain and the seller knows it, the fact is:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "A Georgia-licensed attorney",
+   "The lender's underwriter",
+   "A title company escrow officer",
+   "A licensed real estate broker"
+  ],
+  "concept": "Georgia is an attorney-closing state",
+  "difficulty": 1,
+  "explain": "Georgia requires a licensed attorney to supervise the closing, because examining title and preparing conveyance documents is the practice of law. This differs sharply from escrow states like California.",
+  "id": "geo-9647f0a2",
+  "portion": "georgia",
+  "q": "Georgia real estate closings must be conducted under the supervision of:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "1% of the sale price",
+   "$10 per $1,000",
+   "$0.10 per $1,000",
+   "$1.00 per $1,000 of consideration"
+  ],
+  "concept": "Georgia transfer tax",
+  "difficulty": 1,
+  "explain": "The rate is $1.00 per $1,000 (0.10%), customarily paid by the SELLER and collected by the clerk of superior court when the deed is recorded.",
+  "id": "geo-eec46c41",
+  "portion": "georgia",
+  "q": "The Georgia real estate transfer tax is:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Mortgage",
+   "Security deed",
+   "Land contract",
+   "Deed of trust"
+  ],
+  "concept": "Georgia's security instrument",
+  "difficulty": 1,
+  "explain": "Georgia uses a SECURITY DEED (deed to secure debt), which passes legal title to the lender until the debt is paid. This is why Georgia foreclosures are nonjudicial and comparatively fast.",
+  "id": "geo-6904823f",
+  "portion": "georgia",
+  "q": "The Georgia instrument that secures a loan by conveying title to the lender is a:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Nonjudicial, by power of sale with advertisement",
+   "Judicial, requiring a lawsuit",
+   "Automatic after 30 days",
+   "Prohibited on residences"
+  ],
+  "concept": "Georgia foreclosure procedure",
+  "difficulty": 1,
+  "explain": "The security deed's power of sale permits nonjudicial foreclosure: notice to the borrower and advertisement in the county legal organ, typically for four weeks, then a sale on the courthouse steps on the first Tuesday of the month.",
+  "id": "geo-006b47ea",
+  "portion": "georgia",
+  "q": "Foreclosure in Georgia is typically:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "20 years",
+   "30 years",
+   "7 years",
+   "10 years"
+  ],
+  "concept": "Georgia adverse possession",
+  "difficulty": 1,
+  "explain": "20 years without color of title, or 7 years WITH color of title (a defective written instrument the possessor believes is valid). Both require open, notorious, continuous, hostile possession.",
+  "id": "geo-b42eb237",
+  "portion": "georgia",
+  "q": "The period for acquiring Georgia title by adverse possession without color of title is:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Ownership by a partnership",
+   "Tenancy by the entirety",
+   "Joint tenancy with right of survivorship",
+   "Tenancy in common"
+  ],
+  "concept": "Georgia co-ownership forms",
+  "difficulty": 1,
+  "explain": "Georgia abolished tenancy by the entirety. Married Georgians typically hold as joint tenants with right of survivorship or as tenants in common -- a classic national-vs-Georgia contrast question.",
+  "id": "geo-632572db",
+  "portion": "georgia",
+  "q": "Georgia does NOT recognize which form of co-ownership?",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Secretary of State's office",
+   "Department of Revenue",
+   "Probate court",
+   "Clerk of superior court in the county where the land lies"
+  ],
+  "concept": "Where documents are recorded",
+  "difficulty": 1,
+  "explain": "Deeds, security deeds, and plats are recorded with the clerk of superior court in the county where the property is located, giving constructive notice to the world.",
+  "id": "geo-a4ada124",
+  "portion": "georgia",
+  "q": "Recording a deed in Georgia is done in the:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Both buyer and seller equally",
+   "The real estate broker",
+   "The lender, unless otherwise agreed",
+   "The county"
+  ],
+  "concept": "Who the closing attorney represents",
+  "difficulty": 1,
+  "explain": "The closing attorney customarily represents the LENDER. Buyers who want their own advocate must retain separate counsel -- a point licensees should make clear rather than implying the attorney represents the buyer.",
+  "id": "geo-ad2c8a8e",
+  "portion": "georgia",
+  "q": "In a Georgia transaction the closing attorney generally represents:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Only after a court judgment",
+   "On January 1 of the tax year",
+   "At closing",
+   "When the bill is mailed"
+  ],
+  "concept": "Georgia tax liens and prorations",
+  "difficulty": 1,
+  "explain": "The lien attaches as of January 1, which is why closings prorate taxes for the year and why unpaid taxes follow the property regardless of who owned it when they accrued.",
+  "id": "geo-7ae74454",
+  "portion": "georgia",
+  "q": "Georgia property taxes become a lien on real property:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "HUD-1 in all cases",
+   "Loan Estimate",
+   "Settlement affidavit",
+   "Closing Disclosure"
+  ],
+  "concept": "TRID at the Georgia closing table",
+  "difficulty": 1,
+  "explain": "The Closing Disclosure must be received at least 3 business days before consummation. It replaced the HUD-1 for most consumer mortgage transactions in 2015.",
+  "id": "geo-cdaf025e",
+  "portion": "georgia",
+  "q": "The document a Georgia buyer receives showing final loan terms and closing figures is the:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The lead paint rule",
+   "No law -- children may be excluded",
+   "Only local ordinance",
+   "The Fair Housing Act's familial status protection"
+  ],
+  "concept": "Familial status",
+  "difficulty": 1,
+  "explain": "Familial status covers households with children under 18, pregnant persons, and those securing custody. The narrow exception is qualified housing for older persons (55+ or 62+).",
+  "id": "geo-b9eaa39f",
+  "portion": "georgia",
+  "q": "A Georgia landlord refuses to rent to a family with two young children. This violates:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Steering",
+   "Good customer service",
+   "Blockbusting",
+   "Puffing"
+  ],
+  "concept": "Steering",
+  "difficulty": 1,
+  "explain": "Directing buyers toward or away from areas based on a protected class is steering, even when the licensee believes they are being helpful. Provide objective information and let the buyer choose.",
+  "id": "geo-16882484",
+  "portion": "georgia",
+  "q": "A Georgia licensee tells a buyer 'you'd be more comfortable in a neighborhood on the south side.' This is:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Redlining",
+   "A permitted market opinion",
+   "Blockbusting",
+   "Steering"
+  ],
+  "concept": "Blockbusting (panic peddling)",
+  "difficulty": 1,
+  "explain": "Inducing sales by claiming a protected group's entry will harm the neighborhood is blockbusting. It is illegal whether or not the statements are true.",
+  "id": "geo-fa986fcf",
+  "portion": "georgia",
+  "q": "A licensee tells owners that property values will drop because a protected group is moving in, hoping to get listings. This is:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Permit the reasonable modification at the tenant's expense",
+   "Terminate the lease",
+   "Pay for and install it",
+   "Refuse if the lease bars changes"
+  ],
+  "concept": "Modification vs. accommodation",
+  "difficulty": 1,
+  "explain": "Physical MODIFICATIONS are permitted at the tenant's expense, with possible restoration on move-out. Policy ACCOMMODATIONS, like waiving a no-pets rule for a service animal, are at the landlord's expense.",
+  "id": "geo-42db70a4",
+  "portion": "georgia",
+  "q": "A tenant with a disability asks to install a grab bar. Under fair housing law the landlord must:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Religion",
+   "National origin",
+   "Marital status",
+   "Familial status"
+  ],
+  "concept": "The seven federal protected classes",
+  "difficulty": 1,
+  "explain": "Race, color, religion, sex, national origin, familial status, and handicap. Marital status is protected by ECOA in LENDING and by some local ordinances, but is not one of the seven federal housing classes.",
+  "id": "geo-0379ccf7",
+  "portion": "georgia",
+  "q": "Which is NOT a protected class under the federal Fair Housing Act?",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "GREC only",
+   "HUD, and GREC may also discipline the licensee",
+   "The MLS",
+   "The county tax office"
+  ],
+  "concept": "Enforcement channels",
+  "difficulty": 1,
+  "explain": "HUD handles federal fair housing complaints (generally within one year), and a licensee's conduct can independently cost them their license through GREC discipline.",
+  "id": "geo-45081387",
+  "portion": "georgia",
+  "q": "A complaint of housing discrimination in Georgia may be filed with:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Refuse and, if the seller persists, withdraw from the engagement",
+   "Refer the seller to another licensee",
+   "Comply, since the seller is the client",
+   "Comply but document it"
+  ],
+  "concept": "Unlawful client instructions",
+  "difficulty": 1,
+  "explain": "The duty of obedience covers LAWFUL instructions only. Following the instruction makes the licensee personally liable, and referring the seller to a colleague simply spreads the violation.",
+  "id": "geo-f039cc11",
+  "portion": "georgia",
+  "q": "A seller instructs a Georgia licensee to reject offers from a particular ethnic group. The licensee should:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Always a federal fair housing violation",
+   "Not a federal violation, though it may violate local law and can show disparate impact",
+   "Required by HUD",
+   "Permitted only for houses"
+  ],
+  "concept": "Source of income and fair housing",
+  "difficulty": 1,
+  "explain": "Source of income is not one of the seven federal classes, so the phrase is not automatically a federal violation. Some Georgia local ordinances do protect it, and a blanket policy can still create disparate-impact exposure.",
+  "id": "geo-89d9e927",
+  "portion": "georgia",
+  "q": "An advertisement for a Georgia rental reading 'no Section 8' is:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Converts automatically to inactive",
+   "Is fine if the licensee took CE instead",
+   "Renews normally at the four-year mark",
+   "Lapses -- the 25-hour course was due within the first year"
+  ],
+  "concept": "The postlicense deadline is absolute",
+  "difficulty": 2,
+  "explain": "The 25-hour Sales Post-license Course is due within ONE year of original licensure and applies whether active or inactive, resident or nonresident. CE does not substitute for it. Missing the deadline costs the license.",
+  "id": "geo-d0f34702",
+  "portion": "georgia",
+  "q": "A Georgia salesperson licensed 14 months ago never took the postlicense course. The licensee's status is that the license:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Award treble damages",
+   "Revoke or suspend the license, fine, and require education or accountant reports",
+   "Order the licensee to repay the $18,000",
+   "Garnish the licensee's commissions"
+  ],
+  "concept": "GREC cannot order restitution",
+  "difficulty": 2,
+  "explain": "GREC's powers are reprimand, suspension, revocation, fines, required education, and required CPA reports on trust accounts. It has NO authority to compel repayment of a financial loss -- the consumer must sue civilly, and should not wait for the investigation to finish.",
+  "id": "geo-bd43e39c",
+  "portion": "georgia",
+  "q": "A consumer loses $18,000 because of a Georgia licensee's mishandling of funds and files a GREC complaint. The most GREC itself can do is:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Must have five continuous years",
+   "Must first hold a Georgia salesperson license for three years",
+   "Satisfies the requirement, with a certified license history from Florida",
+   "Cannot qualify, since out-of-state experience does not count"
+  ],
+  "concept": "Out-of-state experience counts in Georgia",
+  "difficulty": 2,
+  "explain": "Georgia requires three of the five years immediately preceding application in ACTIVE status, and active licensure in another state qualifies. The applicant must obtain a certified copy of license history and education from every state where they have held a license.",
+  "id": "geo-b5b7dcf6",
+  "portion": "georgia",
+  "q": "An applicant held an active Florida broker's license for four of the last five years and now applies for a Georgia broker's license. Regarding experience, the applicant:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Needs a separate property management license",
+   "Must transfer the property to the brokerage",
+   "Must disclose licensed status in writing in the lease and use a broker-approved trust account",
+   "May act as an ordinary owner, since owners are exempt from licensure"
+  ],
+  "concept": "Exceptions to licensure never apply to a licensee",
+  "difficulty": 2,
+  "explain": "O.C.G.A. 43-40-29(c) provides that none of the exceptions to licensure applies to a person who holds a license. Selling or leasing your own property means written disclosure of licensed status and placing any trust funds in an account approved by your broker.",
+  "id": "geo-48593a94",
+  "portion": "georgia",
+  "q": "A Georgia licensee owns a rental duplex personally and advertises it for lease. The licensee:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A new hearing is scheduled",
+   "An automatic appeal to superior court",
+   "The decision became final after 30 days",
+   "The decision is void for lack of a hearing before the Commission"
+  ],
+  "concept": "The 30-day window after an ALJ decision",
+  "difficulty": 2,
+  "explain": "If the respondent does not ask the Commission to review within 30 days of the ALJ's decision, it becomes final. The Commission also has 30 days to request review if IT disagrees. After that, the route is an appeal to the courts.",
+  "id": "geo-3996bce3",
+  "portion": "georgia",
+  "q": "An ALJ rules against a Georgia licensee. The licensee disagrees and does nothing for 35 days. The result is:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Only if a consumer complains",
+   "Limited to a fine against the firm",
+   "Potential discipline for failure to supervise, in addition to the salesperson's violation",
+   "None, since the salesperson acted alone"
+  ],
+  "concept": "Failure to supervise is its own violation",
+  "difficulty": 2,
+  "explain": "The qualifying broker answers to GREC for the firm's compliance, and inadequate supervision is an independent charge. GREC can act on its own motion, so a consumer complaint is not a prerequisite.",
+  "id": "geo-9534fcbc",
+  "portion": "georgia",
+  "q": "A qualifying broker discovers an affiliated salesperson has been advertising without naming the firm. The broker's exposure is:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Violated the reporting requirement, often punished more harshly than the underlying offense",
+   "Acted properly, since disclosure occurs at renewal",
+   "An obligation only to notify the broker",
+   "No obligation, as the crime was unrelated"
+  ],
+  "concept": "Reporting convictions to GREC",
+  "difficulty": 2,
+  "explain": "Convictions must be reported to the Commission, not saved for renewal. GREC treats concealment as a separate and often more serious matter than the conviction itself, because it goes to honesty and trustworthiness.",
+  "id": "geo-a3d94b59",
+  "portion": "georgia",
+  "q": "A licensee is convicted of a felony unrelated to real estate and does not report it, believing renewal is two years away. The licensee has:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Has satisfied the requirement",
+   "Must complete 6 hours per year regardless",
+   "Must complete 36 hours total",
+   "Must complete 24 more hours"
+  ],
+  "concept": "Georgia CE is per renewal period, not per year",
+  "difficulty": 2,
+  "explain": "The requirement is at least 24 hours of GREC-approved CE during each FOUR-YEAR renewal period. There is no annual minimum. National guides quoting 36 hours are describing a different state.",
+  "id": "geo-9ba56f68",
+  "portion": "georgia",
+  "q": "A Georgia licensee with license number above 100,000 completed 24 hours of CE in the first year of a four-year renewal period and none after. At renewal the licensee:",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Has no agency relationship, since BRRETA requires written authority, but has acted well outside the customer role",
+   "Is a dual agent",
+   "Is the buyer's agent by implication",
+   "Is a subagent of the seller automatically"
+  ],
+  "concept": "Written engagement is required -- but conduct still matters",
+  "difficulty": 2,
+  "explain": "BRRETA defines agency as representation 'by the latter's WRITTEN authority,' so no engagement means no agency. That is exactly why the statute exists. But behaving like an agent invites a claim and confusion, which is why the InfoBase urges clarifying status early.",
+  "id": "geo-84542fba",
+  "portion": "georgia",
+  "q": "A Georgia buyer works with a licensee for weeks, and the licensee gives advice on price and negotiation. No written agreement is ever signed. Under BRRETA the licensee:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Withdraw from the transaction",
+   "Keep it confidential -- a dual agent discloses adverse material facts, not information a client asked be kept confidential",
+   "Disclose it only if the buyer asks directly",
+   "Disclose the seller's bottom line, since dual agents disclose everything"
+  ],
+  "concept": "The dual agent's two competing rules",
+  "difficulty": 2,
+  "explain": "A dual agent must disclose adverse MATERIAL FACTS actually known, but expressly not information made confidential by a client's request. A negotiating position is confidential, not a material fact. Balancing these is the practical difficulty of dual agency.",
+  "id": "geo-1a3c41df",
+  "portion": "georgia",
+  "q": "A Georgia seller asks her broker to keep confidential that she will accept $20,000 less. The broker later serves as a DUAL agent for both sides. The broker must:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Becomes a dual agent and must stay neutral",
+   "Must withdraw from the transaction",
+   "Represents whichever client signed first",
+   "Has no role, since the designated agents replace the broker"
+  ],
+  "concept": "Designated agency does not eliminate the broker's position",
+  "difficulty": 2,
+  "explain": "The two designated agents each represent only their own client and may not share confidences except with the broker. The broker, standing above both, occupies a dual-agent position and must remain neutral -- which is why the broker is the one person who receives both sides' confidences.",
+  "id": "geo-fa8caffa",
+  "portion": "georgia",
+  "q": "A Georgia broker assigns one licensee to the buyer and another to the seller in the same deal, with written consent. The BROKER personally:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Still represents only the buyer -- compensation does not create agency",
+   "Becomes the seller's agent or subagent",
+   "Must disclose the payment as a conflict",
+   "Becomes a dual agent"
+  ],
+  "concept": "Compensation and agency are independent under BRRETA",
+  "difficulty": 2,
+  "explain": "BRRETA is explicit that paying compensation does not by itself create a brokerage engagement; only an express written agreement does. This is heavily tested because the intuition runs the other way.",
+  "id": "geo-898fed27",
+  "portion": "georgia",
+  "q": "In a Georgia transaction the seller pays the buyer-broker's commission out of closing proceeds. This means the buyer-broker:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Disclose the identity of those buyers",
+   "Obtain the other buyers' written consent",
+   "Advise of agency types available, known conflicting relationships, compensation and sharing, and confidentiality duties -- but need not reveal that other buyers are represented",
+   "Decline the new engagement"
+  ],
+  "concept": "The four BRRETA pre-engagement disclosures and their limit",
+  "difficulty": 2,
+  "explain": "BRRETA lists four disclosures and then expressly EXCLUDES having to reveal that the broker represents other buyers or sellers in similar transactions. Competing clients are normal; naming them would breach confidentiality.",
+  "id": "geo-eeeacbae",
+  "portion": "georgia",
+  "q": "Before entering a brokerage engagement, a Georgia broker who already represents three other buyers looking in the same neighborhood must:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Only the Commission can decide the claim",
+   "The client waived all duties by signing",
+   "Fiduciary duties never apply to brokers anywhere",
+   "BRRETA provides a broker is not deemed a fiduciary and owes reasonable care in the duties the statute and engagement specify"
+  ],
+  "concept": "BRRETA narrowed broker liability",
+  "difficulty": 2,
+  "explain": "BRRETA states a broker 'shall not be deemed to have a fiduciary relationship with any party' and is responsible for exercising reasonable care in its specified duties. That statutory narrowing -- unless the parties agree otherwise in a signed writing -- is the heart of the Act.",
+  "id": "geo-2fac4f13",
+  "portion": "georgia",
+  "q": "A Georgia client sues a broker for breach of fiduciary duty, citing common-law agency standards. Under BRRETA the broker's best position is that:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Automatically one year",
+   "Valid until either party cancels",
+   "Valid for commercial property only",
+   "A license law violation -- a definite date is required"
+  ],
+  "concept": "Definite termination dates",
+  "difficulty": 2,
+  "explain": "GREC requires a definite expiration date in brokerage engagements, and automatic renewal clauses are prohibited. An open-ended agreement is a disciplinary matter for the broker, independent of whether the client is happy.",
+  "id": "geo-47fed133",
+  "portion": "georgia",
+  "q": "A brokerage engagement in Georgia is signed with no expiration date. This is:",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Do so if the check is under $5,000",
+   "Never do so under any circumstances",
+   "Do so only with clear written authority agreed to by all parties",
+   "Do so on the buyer's verbal request"
+  ],
+  "concept": "Deviating from prompt deposit",
+  "difficulty": 2,
+  "explain": "Georgia requires prompt deposit into a non-interest-bearing trust account. Holding a check until acceptance, using an interest-bearing account, or accepting a postdated check all require clear WRITTEN authority from all parties -- not just the buyer's say-so.",
+  "id": "geo-92661673",
+  "portion": "georgia",
+  "q": "A Georgia buyer asks the broker to hold the earnest money check uncashed until the seller accepts. The broker may:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Opened all trust accounts under an Employer Identification Number",
+   "Used a second bank",
+   "Notified clients of the risk",
+   "Kept balances under $250,000"
+  ],
+  "concept": "EIN, not SSN, for trust accounts",
+  "difficulty": 2,
+  "explain": "The InfoBase recounts trust accounts seized by the IRS, awarded in a divorce, and attached by a bank -- the common thread being accounts opened under the broker's SSN. An EIN keeps the account identifiable as trust property rather than the broker's asset.",
+  "id": "geo-2f6be5e6",
+  "portion": "georgia",
+  "q": "A Georgia broker opened the firm's trust account using her Social Security Number. The IRS later levies it for her personal tax debt. The InfoBase's guidance is that the broker should have:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Is fully protected by pass-through coverage",
+   "Has no exposure, as FDIC covers brokers separately",
+   "May be liable for the $10,000 if the client was not told which bank holds trust funds",
+   "Must reimburse the full $260,000"
+  ],
+  "concept": "The limit of FDIC pass-through coverage",
+  "difficulty": 2,
+  "explain": "Pass-through treats each client as a separate owner, but the FDIC ADDS the client's other deposits at the same bank against the $250,000 cap. The InfoBase warns that a broker who failed to disclose the bank and this limitation may be liable for the uninsured excess.",
+  "id": "geo-052c454d",
+  "portion": "georgia",
+  "q": "A client already has $250,000 on deposit at the same bank holding the broker's trust account, and gives the broker a $10,000 earnest money deposit. If the bank fails, the broker:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Obtain GREC approval for each transaction",
+   "Register the account with GREC, remain responsible for it, and obtain at least quarterly written reconciliations",
+   "Close the account and consolidate",
+   "Do nothing further, since the properties are the licensee's"
+  ],
+  "concept": "Affiliate-held trust accounts",
+  "difficulty": 2,
+  "explain": "The broker registers the account with the Commission and stays responsible for it. The affiliate must provide at least QUARTERLY written reconciliation statements comparing total trust liability with the reconciled bank balance, and keep the same records a broker keeps.",
+  "id": "geo-68a1c025",
+  "portion": "georgia",
+  "q": "A Georgia broker lets an affiliated licensee maintain a trust account for the licensee's own rental properties. The broker must:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Insist GREC obtain a subpoena",
+   "Request that GREC accept the CPA report instead, which GREC may accept at its discretion",
+   "Refuse the examination outright",
+   "Provide only bank statements"
+  ],
+  "concept": "CPA certification in lieu of examination",
+  "difficulty": 2,
+  "explain": "GREC may examine trust accounts on reasonable request. The Commission MAY accept a CPA's certification of compliance instead, but that is discretionary -- the broker can request it, not demand it.",
+  "id": "geo-f206c14f",
+  "portion": "georgia",
+  "q": "GREC staff asks a Georgia broker to produce trust account records. The broker has a CPA's compliance certification on file. The broker may:",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Wednesday, splitting the difference",
+   "Thursday, when acceptance was communicated",
+   "Tuesday, when the seller signed",
+   "The date the contract is recorded"
+  ],
+  "concept": "Georgia's binding agreement date",
+  "difficulty": 2,
+  "explain": "Georgia measures contract deadlines -- due diligence, financing, closing -- from the binding agreement date, which is when acceptance is communicated to the offeror. Getting this wrong shifts every subsequent deadline.",
+  "id": "geo-1952d812",
+  "portion": "georgia",
+  "q": "A Georgia seller signs a buyer's offer on Tuesday but the agent does not notify the buyer until Thursday. The binding agreement date is:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "May terminate only for inspection defects",
+   "Forfeits the earnest money for failing to state cause",
+   "Is generally entitled to the earnest money back",
+   "Must pay the seller's costs"
+  ],
+  "concept": "What the due diligence period buys",
+  "difficulty": 2,
+  "explain": "Georgia's standard due diligence provision lets the buyer terminate for any reason or no reason within the window and recover the earnest money. That latitude is exactly why the period is negotiated hard -- once it expires, the buyer's exits narrow sharply.",
+  "id": "geo-4302c25c",
+  "portion": "georgia",
+  "q": "A Georgia buyer terminates during the due diligence period without stating a reason. Under a standard form the buyer:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Give effect to the preprinted text",
+   "Give effect to the handwritten stipulation",
+   "Refer the matter to GREC",
+   "Void the whole contract for ambiguity"
+  ],
+  "concept": "Specific terms beat boilerplate",
+  "difficulty": 2,
+  "explain": "Handwritten or typed additions reflect the parties' specific intent and prevail over standard preprinted terms. That is also why licensees must be careful: a poorly drafted stipulation controls the deal, and drafting original clauses edges into the unauthorized practice of law.",
+  "id": "geo-b20b6bb2",
+  "portion": "georgia",
+  "q": "A Georgia licensee adds a handwritten special stipulation that conflicts with the preprinted form language. A dispute arises. A court will MOST likely:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Refuse to write the offer at all",
+   "Draft the clause, since filling in forms is permitted",
+   "Advise the buyer to have an attorney draft it",
+   "Copy a clause from another transaction"
+  ],
+  "concept": "Where form-filling ends and law practice begins",
+  "difficulty": 2,
+  "explain": "Licensees may complete blanks on approved preprinted forms incident to a transaction they are handling. Composing an original financing clause is drafting a legal instrument -- the unauthorized practice of law, and a liability trap even when the clause happens to work.",
+  "id": "geo-932dc2a7",
+  "portion": "georgia",
+  "q": "A Georgia licensee, asked by a buyer to add a complex owner-financing clause, should:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Valid only for commercial property",
+   "Enforceable if initialed",
+   "Enforceable for 90 days",
+   "Prohibited -- Georgia requires a definite expiration date"
+  ],
+  "concept": "No automatic renewals",
+  "difficulty": 2,
+  "explain": "GREC requires listings and brokerage engagements in writing with a definite ending date, and automatic renewal clauses are not permitted. A broker cannot roll a listing forward indefinitely by default.",
+  "id": "geo-596b119f",
+  "portion": "georgia",
+  "q": "A Georgia listing agreement provides that it automatically renews monthly unless cancelled. This provision is:",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Must disclose only if the buyer has children",
+   "Must disclose it as a material fact",
+   "Must disclose it in the MLS",
+   "Generally need not disclose it, and Georgia protects against liability for that nondisclosure"
+  ],
+  "concept": "Georgia's stigmatized-property protection",
+  "difficulty": 2,
+  "explain": "Georgia expressly shields licensees from liability for not disclosing that a property was the site of a death, homicide, suicide, or felony. Physical CONDITION defects are a different matter and must always be disclosed.",
+  "id": "geo-6a1e3c73",
+  "portion": "georgia",
+  "q": "A Georgia seller knows a murder occurred in the home three years ago. The buyer does not ask. The seller and licensee:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Decline to answer and refer the buyer to other sources, since nondisclosure is protected but an affirmative lie is not",
+   "Deny it, since disclosure is not required",
+   "Answer fully, waiving the protection",
+   "Refuse to continue the showing"
+  ],
+  "concept": "Nondisclosure is protected; lying is not",
+  "difficulty": 2,
+  "explain": "Georgia's protection covers NOT volunteering the information. It does not license an affirmative misstatement, which would be misrepresentation. Declining to answer keeps the licensee inside the protection.",
+  "id": "geo-36d469e0",
+  "portion": "georgia",
+  "q": "A Georgia buyer asks the listing agent directly whether anyone died in the house. The agent knows someone did. The safest response is:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Adverse material facts actually known to the broker",
+   "All defects a competent inspector would find",
+   "Only defects listed on the seller's disclosure form",
+   "Nothing, if the buyer is a customer"
+  ],
+  "concept": "No duty to discover in Georgia",
+  "difficulty": 2,
+  "explain": "BRRETA limits the obligation to adverse material facts ACTUALLY KNOWN. Brokers are not inspectors and need not investigate. But the duty runs to customers as well as clients, so 'the buyer is unrepresented' is never the answer.",
+  "id": "geo-a7bdd3e9",
+  "portion": "georgia",
+  "q": "Under BRRETA a Georgia broker's disclosure duty regarding property condition extends to:",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Answer the buyer's legal question personally",
+   "Let the attorney advise the buyer as a courtesy",
+   "Make clear the attorney represents the lender and the buyer may retain their own counsel",
+   "Postpone the closing"
+  ],
+  "concept": "Who the Georgia closing attorney represents",
+  "difficulty": 2,
+  "explain": "Georgia requires an attorney to supervise the closing, and that attorney customarily represents the LENDER. Letting a buyer believe otherwise is a common and costly misunderstanding -- and the licensee must not supply the legal opinion instead.",
+  "id": "geo-eca90b42",
+  "portion": "georgia",
+  "q": "At a Georgia closing the buyer asks the closing attorney whether the contract's repair clause protects them. The attorney typically represents the lender. The licensee should:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Ignored, since the bill has not arrived",
+   "Prorated, with the seller debited for their share",
+   "Paid entirely by the buyer",
+   "Paid entirely by the seller"
+  ],
+  "concept": "Georgia tax liens attach January 1",
+  "difficulty": 2,
+  "explain": "The lien attaches January 1 and follows the property, so closings prorate. Because the taxes are unpaid, the seller is DEBITED for the portion covering their ownership and the buyer is credited, since the buyer will pay the full bill later.",
+  "id": "geo-4bfa10df",
+  "portion": "georgia",
+  "q": "A Georgia property sells on March 10. County taxes for the year became a lien on January 1 and are unpaid. At closing the taxes are:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A judicial action in superior court",
+   "Advertisement in the county legal organ and a sale on the courthouse steps the first Tuesday of the month",
+   "Automatic transfer after 90 days",
+   "Repossession without notice"
+  ],
+  "concept": "Georgia nonjudicial foreclosure",
+  "difficulty": 2,
+  "explain": "The security deed's power of sale permits nonjudicial foreclosure: notice to the borrower plus advertisement in the county legal organ, typically four weeks, then a public sale on the first Tuesday. This is why Georgia foreclosures move comparatively fast.",
+  "id": "geo-8cb2d30e",
+  "portion": "georgia",
+  "q": "A Georgia borrower defaults. The lender holds a security deed with a power of sale. Foreclosure will typically proceed by:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Recognizes tenancy by the entirety for spouses",
+   "Does not recognize tenancy by the entirety; they may hold as joint tenants with right of survivorship",
+   "Requires tenancy in common for spouses",
+   "Requires a trust"
+  ],
+  "concept": "Georgia abolished tenancy by the entirety",
+  "difficulty": 2,
+  "explain": "This is a frequent national-vs-Georgia contrast. Georgians achieve survivorship through joint tenancy with right of survivorship, expressly stated in the deed. A licensee should route the actual titling decision to an attorney.",
+  "id": "geo-63c83fa8",
+  "portion": "georgia",
+  "q": "A married Georgia couple wants title with automatic survivorship. The correct advice is that Georgia:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Barred, because a defective deed defeats the claim",
+   "Complete, because 7 years applies under color of title",
+   "Limited to a prescriptive easement",
+   "Not ripe -- 20 years is required"
+  ],
+  "concept": "Georgia's two adverse possession periods",
+  "difficulty": 2,
+  "explain": "Georgia requires 20 years without color of title, but only 7 years WITH color of title -- a written instrument that appears to convey title but is defective. Twelve years under a defective deed satisfies the shorter period.",
+  "id": "geo-4f67996c",
+  "portion": "georgia",
+  "q": "A Georgia parcel has been occupied openly and continuously by a neighbor for 12 years under a defective deed the neighbor believed valid. The neighbor's claim is:",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Comply, documenting that the seller directed it",
+   "Continue the listing but ignore the instruction quietly",
+   "Withdraw from the engagement",
+   "Refer the seller to a colleague"
+  ],
+  "concept": "Unlawful instructions end the relationship",
+  "difficulty": 2,
+  "explain": "Obedience covers LAWFUL instructions only. Quietly ignoring the instruction leaves the agent working for a client who will discriminate; referring the seller to a colleague simply relocates the violation. Withdrawing is the clean answer.",
+  "id": "geo-f5061434",
+  "portion": "georgia",
+  "q": "A Georgia seller instructs the listing agent to reject offers from a protected class. The agent refuses; the seller insists. The agent's correct course is:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Lawful for commercial property",
+   "Lawful if disclosed in the lease",
+   "Lawful, since it applies to everyone equally",
+   "Unlawful -- an assistance animal is not a pet and no pet fee may be charged"
+  ],
+  "concept": "Assistance animals and reasonable accommodation",
+  "difficulty": 2,
+  "explain": "Waiving a pet policy for an assistance animal is a reasonable ACCOMMODATION, made at the housing provider's expense. Charging a pet fee or deposit defeats the accommodation. The tenant remains liable for actual damage the animal causes.",
+  "id": "geo-62081001",
+  "portion": "georgia",
+  "q": "A Georgia property manager charges a $300 non-refundable fee to tenants with assistance animals, applied uniformly. This is:",
+  "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Required by fair housing law",
+   "Fine, since the data is publicly available",
+   "A disclosure violation only",
+   "Steering, because selective delivery of information channels buyers by protected class"
+  ],
+  "concept": "Steering by selective information",
+  "difficulty": 2,
+  "explain": "Steering does not require saying anything negative. Providing or withholding neighborhood information based on who is asking channels buyers just as effectively. The safe practice is a consistent policy for every buyer -- typically pointing everyone to the same public sources.",
+  "id": "geo-21edfab6",
+  "portion": "georgia",
+  "q": "A licensee provides school ratings and crime statistics only when buyers of a certain background ask. This practice is:",
+  "topic": "georgia/fair-housing"
+ }
+]

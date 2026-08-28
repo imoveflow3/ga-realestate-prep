@@ -1,0 +1,2722 @@
+[
+ {
+  "answer": 1,
+  "choices": [
+   "Estate at sufferance",
+   "Leased fee estate",
+   "Leasehold estate",
+   "Life estate"
+  ],
+  "concept": "Freehold vs. leasehold interests",
+  "difficulty": 1,
+  "explain": "The LANDLORD holds the leased fee estate (ownership subject to the lease); the TENANT holds the leasehold. A tenant who stays past expiration without permission creates an estate at sufferance, but that describes the tenant, not the landlord.",
+  "id": "nat-140b8304",
+  "portion": "national",
+  "q": "A tenant's lease expires and the landlord takes back possession. The landlord's interest during the lease term was a:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Joint tenant with the other two",
+   "Trustee for the other two",
+   "Tenant in common with the other two",
+   "Tenant by the entirety"
+  ],
+  "concept": "Severance of joint tenancy",
+  "difficulty": 1,
+  "explain": "Selling a joint tenancy interest severs the four unities as to that share. The buyer takes as a tenant in common; the two remaining original owners stay joint tenants with each other and keep survivorship between themselves.",
+  "id": "nat-706069e5",
+  "portion": "national",
+  "q": "Three people own property as joint tenants. One sells her interest to a stranger. The new owner holds title as a:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Fee simple defeasible",
+   "Life estate pur autre vie",
+   "Fee simple absolute",
+   "Leasehold for 99 years"
+  ],
+  "concept": "The bundle of rights and degrees of ownership",
+  "difficulty": 1,
+  "explain": "Fee simple absolute is ownership without condition or time limit -- the entire bundle of rights. A defeasible fee can be lost if a condition occurs, and a life estate ends at a death.",
+  "id": "nat-fd3b7053",
+  "portion": "national",
+  "q": "Which of these is the MOST complete form of ownership recognized in law?",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "An emblement",
+   "A fixture that conveys with the real estate",
+   "Personal property the seller may remove",
+   "A trade fixture"
+  ],
+  "concept": "Fixtures: personal property becoming real property",
+  "difficulty": 1,
+  "explain": "Courts look at method of annexation, adaptation to the property, and intent. A built-in appliance is annexed and adapted, so it conveys unless the contract excludes it. Trade fixtures belong to a commercial TENANT and are removable.",
+  "id": "nat-dd11c32c",
+  "portion": "national",
+  "q": "A built-in dishwasher installed by the seller is BEST classified at closing as:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "As a tenant in common with the other unit owners",
+   "Under a proprietary lease",
+   "Not at all -- the association owns them",
+   "As a joint tenant with the association"
+  ],
+  "concept": "Condominium vs. cooperative ownership",
+  "difficulty": 1,
+  "explain": "Condo owners own their unit in fee plus an undivided tenancy-in-common interest in common elements. A COOPERATIVE is the one where a corporation owns the building and the resident holds stock plus a proprietary lease.",
+  "id": "nat-0f115e44",
+  "portion": "national",
+  "q": "In a condominium, the individual owner holds fee simple title to the unit and owns the common elements:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Riparian rights",
+   "Littoral rights",
+   "Prior appropriation",
+   "Percolating rights"
+  ],
+  "concept": "Water rights",
+  "difficulty": 1,
+  "explain": "Riparian rights attach to flowing water -- rivers and streams. LITTORAL rights attach to static bodies: lakes, seas, oceans. Prior appropriation is the western doctrine where use is granted by permit regardless of adjacency.",
+  "id": "nat-1131797b",
+  "portion": "national",
+  "q": "A property abuts a navigable river. The owner's rights to use the water are called:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Joint tenancy",
+   "Tenancy in common",
+   "Tenancy by the entirety",
+   "Community property"
+  ],
+  "concept": "Forms of co-ownership between spouses",
+  "difficulty": 1,
+  "explain": "Tenancy by the entirety is the marital form where neither spouse can convey separately and survivorship is automatic. Note that Georgia does NOT recognize tenancy by the entirety -- a fact the state portion may test.",
+  "id": "nat-1d9b363e",
+  "portion": "national",
+  "q": "A husband and wife hold title with right of survivorship that neither can defeat by a separate conveyance. This is:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Encroaching parcel",
+   "Dominant tenement",
+   "Servient tenement",
+   "Licensed parcel"
+  ],
+  "concept": "Easement appurtenant terminology",
+  "difficulty": 1,
+  "explain": "The parcel that BENEFITS is the dominant tenement; the parcel burdened by the crossing is the servient tenement. An easement appurtenant runs with the land and passes to later owners.",
+  "id": "nat-1ca4fbeb",
+  "portion": "national",
+  "q": "An owner grants a neighbor the right to cross her land to reach a road. The neighbor's parcel is the:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Collect rents from the property",
+   "Lease the property",
+   "Devise the property by will",
+   "Mortgage the life estate"
+  ],
+  "concept": "Rights and limits of a life estate",
+  "difficulty": 1,
+  "explain": "A life estate ends at the measuring life's death, so there is nothing left to pass by will -- it cannot be devised. The life tenant may otherwise use, lease, and encumber the interest, subject to not committing waste.",
+  "id": "nat-972eb5b6",
+  "portion": "national",
+  "q": "A life tenant may do all of the following EXCEPT:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A license",
+   "An easement by prescription",
+   "An encroachment",
+   "A deed restriction"
+  ],
+  "concept": "Encroachments and how they are discovered",
+  "difficulty": 1,
+  "explain": "An unauthorized physical intrusion onto another's land is an encroachment, typically revealed by a survey. If it continues openly for the statutory period it may ripen into a prescriptive easement, but the intrusion itself is the encroachment.",
+  "id": "nat-6f524289",
+  "portion": "national",
+  "q": "A fence built two feet onto the neighbor's lot is an example of:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Leasehold interest",
+   "Right-to-use interest",
+   "License",
+   "Timeshare estate"
+  ],
+  "concept": "Timeshare estates vs. right-to-use",
+  "difficulty": 1,
+  "explain": "A timeshare ESTATE conveys a real property interest by deed. A right-to-use timeshare is only a contract right to occupy for a term, with no ownership interest -- it expires when the contract ends.",
+  "id": "nat-663453e6",
+  "portion": "national",
+  "q": "Ownership of a timeshare that gives the buyer a deeded fractional interest is a:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Recorded covenants, conditions and restrictions",
+   "The doctrine of eminent domain",
+   "State police power",
+   "Zoning ordinance"
+  ],
+  "concept": "Private land use control vs. public",
+  "difficulty": 1,
+  "explain": "CC&Rs are PRIVATE restrictions recorded against the subdivision and enforced by the HOA or owners through injunction. Zoning and police power are PUBLIC controls enforced by government.",
+  "id": "nat-ddda222c",
+  "portion": "national",
+  "q": "A homeowner's association enforces a rule barring commercial signs. The authority for that rule comes from:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Variance",
+   "Nonconforming use",
+   "Spot zoning",
+   "Special use"
+  ],
+  "concept": "Nonconforming use ('grandfathering')",
+  "difficulty": 1,
+  "explain": "A lawful use that predates the new zoning may continue as a legal nonconforming use. A VARIANCE is permission to deviate granted on hardship; a SPECIAL USE permit allows a listed conditional use like a church or school.",
+  "id": "nat-9c1c1268",
+  "portion": "national",
+  "q": "A city rezones an area from commercial to residential. An existing store may continue operating as a:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Eminent domain",
+   "Police power",
+   "Escheat",
+   "Condemnation"
+  ],
+  "concept": "The four government powers over land (PETE)",
+  "difficulty": 1,
+  "explain": "EMINENT DOMAIN is the power itself; CONDEMNATION is the legal proceeding that exercises it. Police power regulates without paying (zoning, codes); escheat passes property to the state when an owner dies with no heirs or will.",
+  "id": "nat-3ef4ffb9",
+  "portion": "national",
+  "q": "Government's power to take private property for public use upon payment of just compensation is:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Rezoning",
+   "Conditional use permit",
+   "Nonconforming use permit",
+   "Variance"
+  ],
+  "concept": "Variance as relief from a dimensional requirement",
+  "difficulty": 1,
+  "explain": "A variance permits a deviation from a dimensional rule when strict compliance creates a unique hardship not caused by the owner. Rezoning changes the classification for everyone; a conditional use permits a different TYPE of use.",
+  "id": "nat-a4e3d303",
+  "portion": "national",
+  "q": "A lot is too narrow to meet the setback requirement. The owner should seek a:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Inverse condemnation",
+   "Spot zoning",
+   "A buffer zone",
+   "Downzoning"
+  ],
+  "concept": "Illegal zoning practices",
+  "difficulty": 1,
+  "explain": "Spot zoning singles out one parcel for treatment inconsistent with the comprehensive plan and is generally invalid. Downzoning reduces intensity across an area; inverse condemnation is an owner's suit claiming a regulation effectively took the property.",
+  "id": "nat-2abb62ce",
+  "portion": "national",
+  "q": "Rezoning a single parcel for the benefit of one owner, inconsistent with the surrounding area, is:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Ensure compliance with building codes for public safety",
+   "Confirm marketable title",
+   "Raise revenue for the municipality",
+   "Establish the property's assessed value"
+  ],
+  "concept": "Building codes as an exercise of police power",
+  "difficulty": 1,
+  "explain": "Codes and permits exist to protect public health and safety. The certificate of OCCUPANCY issued at the end confirms the structure may lawfully be occupied.",
+  "id": "nat-6163c84a",
+  "portion": "national",
+  "q": "The primary purpose of a building permit and subsequent inspections is to:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Any lot owner in the subdivision",
+   "Only the original developer",
+   "The state real estate commission",
+   "The zoning board only"
+  ],
+  "concept": "Enforcement of private deed restrictions",
+  "difficulty": 1,
+  "explain": "Restrictive covenants run with the land and any benefited lot owner may sue to enforce them, usually by injunction. Government bodies do not enforce private covenants.",
+  "id": "nat-29dbb24d",
+  "portion": "national",
+  "q": "A subdivision developer records a plat with restrictions limiting lots to single-family homes. These restrictions are enforceable by:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Has the force of law immediately",
+   "Applies only to commercial districts",
+   "Is a long-range policy guide for future development",
+   "Replaces the need for building codes"
+  ],
+  "concept": "Planning vs. zoning",
+  "difficulty": 1,
+  "explain": "The comprehensive plan states long-term goals; ZONING ordinances are the legal tool that implements the plan parcel by parcel.",
+  "id": "nat-0e6b7ee8",
+  "portion": "national",
+  "q": "A comprehensive (master) plan differs from zoning in that the plan:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Dedication",
+   "Eminent domain",
+   "Adverse possession",
+   "Escheat"
+  ],
+  "concept": "Escheat",
+  "difficulty": 1,
+  "explain": "Escheat prevents land from being ownerless. It applies only when there is neither a will nor any locatable heir.",
+  "id": "nat-d5092a9f",
+  "portion": "national",
+  "q": "Land that reverts to the state when an owner dies leaving no heirs and no will passes by:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A property is refinanced",
+   "A federal action may significantly affect the environment",
+   "A lease exceeds one year",
+   "Any home is resold"
+  ],
+  "concept": "Environmental review under NEPA",
+  "difficulty": 1,
+  "explain": "NEPA requires an EIS for major FEDERAL actions significantly affecting the human environment -- typically large developments involving federal funding, permits, or land.",
+  "id": "nat-7ca13b8c",
+  "portion": "national",
+  "q": "An environmental impact statement is MOST likely required when:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Easement in gross",
+   "Right-of-way",
+   "Setback",
+   "Buffer zone"
+  ],
+  "concept": "Zoning transition devices",
+  "difficulty": 1,
+  "explain": "A buffer zone cushions between, say, industrial and residential districts. A SETBACK is the required distance from a lot line to a structure.",
+  "id": "nat-5be8bbc3",
+  "portion": "national",
+  "q": "The strip of land separating incompatible zoning districts, often landscaped, is a:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Sales comparison approach",
+   "Income approach",
+   "Cost approach",
+   "Gross rent multiplier"
+  ],
+  "concept": "Choosing the appropriate approach to value",
+  "difficulty": 1,
+  "explain": "Special-purpose properties rarely sell and produce no rent, so the COST approach (reproduction cost less depreciation plus land) is most reliable. Sales comparison needs comparables; income needs rental income.",
+  "id": "nat-ffdfc09d",
+  "portion": "national",
+  "q": "An appraiser valuing a 40-year-old church would rely MOST heavily on the:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Substitution",
+   "Anticipation",
+   "Conformity",
+   "Progression"
+  ],
+  "concept": "Appraisal principles",
+  "difficulty": 1,
+  "explain": "SUBSTITUTION underlies the whole sales comparison approach. Progression is a modest home gaining value near larger ones; anticipation is value based on expected future benefits.",
+  "id": "nat-036f4666",
+  "portion": "national",
+  "q": "The principle stating that a property's maximum value tends to be set by the cost of an equally desirable substitute is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$328,000",
+   "$310,000",
+   "$301,000",
+   "$319,000"
+  ],
+  "concept": "Direction of adjustments in the sales comparison approach",
+  "difficulty": 1,
+  "explain": "Always adjust the COMPARABLE, never the subject. The comp is inferior, so ADD the value of the missing feature: $310,000 + $9,000 = $319,000. Memory hook: CIA -- Comp Inferior, Add.",
+  "id": "nat-beb7a3b8",
+  "portion": "national",
+  "q": "A comparable sold for $310,000 but has one fewer bathroom than the subject, worth $9,000. The adjusted sale price is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Regression",
+   "Plottage",
+   "Progression",
+   "Contribution"
+  ],
+  "concept": "Progression and regression",
+  "difficulty": 1,
+  "explain": "PROGRESSION: the lesser property is pulled up by superior neighbors. REGRESSION is the reverse -- a superior property dragged down by lesser surroundings.",
+  "id": "nat-559092c3",
+  "portion": "national",
+  "q": "A modest home located among much larger, expensive homes tends to gain value. This illustrates:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Economic appreciation",
+   "Physical deterioration",
+   "Functional obsolescence",
+   "External obsolescence"
+  ],
+  "concept": "The three types of depreciation",
+  "difficulty": 1,
+  "explain": "FUNCTIONAL obsolescence is a defect within the structure's design or utility. Physical deterioration is wear and tear; EXTERNAL obsolescence comes from outside the property line and is always incurable.",
+  "id": "nat-1048e826",
+  "portion": "national",
+  "q": "Loss in value because a home has only one bathroom and buyers expect two is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "External obsolescence",
+   "Deferred maintenance",
+   "Curable physical deterioration",
+   "Functional obsolescence"
+  ],
+  "concept": "External (economic) obsolescence",
+  "difficulty": 1,
+  "explain": "The cause is outside the property boundaries and beyond the owner's control, so it is external obsolescence -- by definition incurable, because the owner cannot remove the highway.",
+  "id": "nat-c8b8af53",
+  "portion": "national",
+  "q": "A highway is built next to a residence, reducing its value. This is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "$750,000",
+   "$480,000",
+   "$4,800,000",
+   "$600,000"
+  ],
+  "concept": "IRV formula in the income approach",
+  "difficulty": 1,
+  "explain": "Value = NOI / Rate = $60,000 / 0.08 = $750,000. Remember IRV: Income = Rate x Value. Note that cap rate and value move INVERSELY -- a higher cap rate means lower value.",
+  "id": "nat-14230394",
+  "portion": "national",
+  "q": "In the income approach, a property with $60,000 net operating income and a 8% capitalization rate is valued at:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Chosen by the owner",
+   "Most profitable regardless of legality",
+   "The current use in all cases",
+   "Legally permitted, physically possible, financially feasible, and maximally productive"
+  ],
+  "concept": "Highest and best use",
+  "difficulty": 1,
+  "explain": "All four tests must be met, and legality comes first -- an illegal use can never be highest and best no matter how profitable.",
+  "id": "nat-8ec7ff53",
+  "portion": "national",
+  "q": "The highest and best use of a property is the use that is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Performing an appraisal requiring a license",
+   "Determining assessed value for taxation",
+   "Estimating market value using recent comparable sales",
+   "Required to use the cost approach"
+  ],
+  "concept": "CMA vs. appraisal",
+  "difficulty": 1,
+  "explain": "A CMA is a broker's pricing opinion built from comparables to help set a list price. It is NOT an appraisal, may not be represented as one, and does not require an appraiser's license.",
+  "id": "nat-45ea517d",
+  "portion": "national",
+  "q": "A broker preparing a CMA for a seller is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The seller's asking price",
+   "The most probable price under normal, arm's-length conditions",
+   "Always equal to assessed value",
+   "What the property actually sold for"
+  ],
+  "concept": "Value vs. price vs. cost",
+  "difficulty": 1,
+  "explain": "MARKET VALUE is an opinion of the most probable price assuming an informed buyer and seller, adequate exposure, and no duress. MARKET PRICE is the historical fact of what a property actually sold for -- which may reflect a distress sale.",
+  "id": "nat-dfd5d480",
+  "portion": "national",
+  "q": "Market value differs from market price in that market value is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Contribution",
+   "Assemblage cost",
+   "Plottage increment",
+   "Progression"
+  ],
+  "concept": "Assemblage and plottage",
+  "difficulty": 1,
+  "explain": "ASSEMBLAGE is the act of joining parcels; PLOTTAGE (or plottage increment) is the added value that results. The exam frequently pairs these two terms as distractors.",
+  "id": "nat-e0e35d20",
+  "portion": "national",
+  "q": "Combining two adjacent lots so the whole is worth more than the sum of the parts creates:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Correlation of assessments",
+   "Reconciliation",
+   "Averaging",
+   "Adjustment"
+  ],
+  "concept": "The appraisal process",
+  "difficulty": 1,
+  "explain": "Reconciliation weighs each approach by its reliability for that property type. An appraiser never simply averages the three values.",
+  "id": "nat-42662f96",
+  "portion": "national",
+  "q": "The appraisal step in which the three approaches are weighted into a single conclusion is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Subordination clause",
+   "Acceleration clause",
+   "Alienation clause",
+   "Defeasance clause"
+  ],
+  "concept": "Standard mortgage clauses",
+  "difficulty": 1,
+  "explain": "ACCELERATION makes the whole balance due on default -- a prerequisite to foreclosure. The ALIENATION (due-on-sale) clause triggers on TRANSFER, not default; DEFEASANCE requires the lender to release the lien when the debt is paid.",
+  "id": "nat-215dd2bd",
+  "portion": "national",
+  "q": "The clause allowing a lender to declare the entire balance due immediately upon default is the:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The legal owner of the property",
+   "Secondarily liable for the debt",
+   "Entitled to the tax deduction",
+   "Free of all liability"
+  ],
+  "concept": "Assumption vs. 'subject to' vs. novation",
+  "difficulty": 1,
+  "explain": "On assumption the buyer becomes primarily liable, but the original borrower stays SECONDARILY liable until the lender grants a release -- a NOVATION. Taking title 'subject to' the loan means the buyer accepts no personal liability at all.",
+  "id": "nat-103788d5",
+  "portion": "national",
+  "q": "A buyer assumes the seller's existing loan. Unless the lender releases the seller, the seller remains:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Increase the lender's yield on the loan",
+   "Fund the escrow account",
+   "Pay the mortgage broker's commission",
+   "Cover the appraisal cost"
+  ],
+  "concept": "Points and lender yield",
+  "difficulty": 1,
+  "explain": "Points are prepaid interest that raise the lender's effective yield, allowing a lower note rate. One point equals 1% of the LOAN amount, and roughly 8 points change the yield by about 1%.",
+  "id": "nat-580b0136",
+  "portion": "national",
+  "q": "Discount points are charged by a lender primarily to:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A single payment at the end of the term",
+   "Equal payments that retire principal and interest by maturity",
+   "Payments that increase every year",
+   "Interest-only payments with a balloon"
+  ],
+  "concept": "Amortization vs. term loans",
+  "difficulty": 1,
+  "explain": "A fully amortized loan's level payments pay off the entire balance by the last payment. A TERM (straight) loan pays interest only with principal due at the end; a partially amortized loan leaves a balloon.",
+  "id": "nat-89e33f58",
+  "portion": "national",
+  "q": "Which loan feature makes a mortgage 'fully amortized'?",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "ECOA",
+   "RESPA",
+   "The Fair Housing Act",
+   "Truth in Lending (Regulation Z)"
+  ],
+  "concept": "Consumer credit disclosure",
+  "difficulty": 1,
+  "explain": "Reg Z / TILA governs cost-of-credit disclosure including APR and triggering terms in advertising. RESPA governs settlement services, kickbacks, and the Loan Estimate/Closing Disclosure timing.",
+  "id": "nat-9ec5ca90",
+  "portion": "national",
+  "q": "The federal law requiring lenders to disclose the Annual Percentage Rate to consumers is:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Pay a referral fee to a broker for sending it business",
+   "Collect an escrow cushion",
+   "Require a survey",
+   "Charge an origination fee"
+  ],
+  "concept": "RESPA Section 8 anti-kickback",
+  "difficulty": 1,
+  "explain": "Paying or receiving anything of value for the mere REFERRAL of settlement business is prohibited. Fees for services actually performed are allowed.",
+  "id": "nat-727f2ea8",
+  "portion": "national",
+  "q": "Under RESPA, a lender may NOT:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Private mortgage insurance",
+   "A VA funding fee",
+   "Title insurance for the borrower",
+   "FHA mortgage insurance premium"
+  ],
+  "concept": "Mortgage insurance by loan type",
+  "difficulty": 1,
+  "explain": "PMI protects the LENDER on conventional loans above 80% LTV. FHA loans carry MIP instead; VA loans carry a funding fee and need no monthly mortgage insurance.",
+  "id": "nat-9c6c1542",
+  "portion": "national",
+  "q": "A borrower with a conventional loan and less than 20% down will typically be required to carry:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Originate loans to consumers",
+   "Purchase existing loans, restoring lenders' funds to lend again",
+   "Insure loans against default",
+   "Set federal interest rates"
+  ],
+  "concept": "Primary vs. secondary mortgage market",
+  "difficulty": 1,
+  "explain": "Fannie Mae, Freddie Mac, and Ginnie Mae buy loans from originators, providing liquidity so lenders can make new loans. Consumers never deal with the secondary market directly.",
+  "id": "nat-f0d5d176",
+  "portion": "national",
+  "q": "The secondary mortgage market's primary function is to:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Escrow agent",
+   "Mortgagee",
+   "Trustee",
+   "Grantor"
+  ],
+  "concept": "Mortgage vs. deed of trust",
+  "difficulty": 1,
+  "explain": "The TRUSTEE holds bare legal title for the lender (beneficiary) and can conduct a nonjudicial foreclosure sale. Georgia uses a similar instrument called a security deed.",
+  "id": "nat-f1b49f53",
+  "portion": "national",
+  "q": "In a deed of trust there are three parties: the borrower, the lender, and the:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Fixed-rate mortgage",
+   "Purchase-money mortgage",
+   "Wraparound mortgage",
+   "Adjustable-rate mortgage"
+  ],
+  "concept": "ARM structure",
+  "difficulty": 1,
+  "explain": "An ARM's rate equals INDEX + MARGIN, adjusted at intervals subject to periodic and lifetime caps. The margin is the lender's constant markup; the index moves with the market.",
+  "id": "nat-eeedfd3c",
+  "portion": "national",
+  "q": "A loan where the interest rate adjusts periodically based on a published index is a:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "The maximum interest rate a lender may charge",
+   "Prepayment penalties",
+   "Loan-to-value ratios",
+   "The number of points charged"
+  ],
+  "concept": "Usury",
+  "difficulty": 1,
+  "explain": "Usury statutes cap the maximum lawful interest rate. Exceeding the cap can cost the lender interest or subject it to penalties.",
+  "id": "nat-08b7e7c6",
+  "portion": "national",
+  "q": "Usury laws limit:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Purchase-money mortgage",
+   "Package mortgage",
+   "Open-end mortgage",
+   "Blanket mortgage"
+  ],
+  "concept": "Specialty loan types",
+  "difficulty": 1,
+  "explain": "A purchase-money mortgage is seller financing taken back at the sale. A BLANKET mortgage covers multiple parcels with a release clause; a PACKAGE mortgage includes personal property; an OPEN-END loan lets the borrower re-borrow.",
+  "id": "nat-fb6f1082",
+  "portion": "national",
+  "q": "A seller finances part of the buyer's purchase and takes back a note secured by the property. This is a:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Marital status",
+   "Receipt of public assistance",
+   "Amount of verifiable income",
+   "Age (if the applicant can contract)"
+  ],
+  "concept": "ECOA protected bases",
+  "difficulty": 1,
+  "explain": "ECOA bars race, color, religion, national origin, sex, marital status, age, and receipt of public assistance. A lender MAY absolutely evaluate the amount and stability of income -- that is legitimate underwriting.",
+  "id": "nat-0ae2a8e2",
+  "portion": "national",
+  "q": "The Equal Credit Opportunity Act prohibits discrimination in lending based on all of the following EXCEPT:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "1 business day before consummation",
+   "3 business days before consummation",
+   "10 business days before consummation",
+   "7 business days before consummation"
+  ],
+  "concept": "TRID timing rules",
+  "difficulty": 1,
+  "explain": "The Closing Disclosure must be in the borrower's hands 3 business days before closing. The Loan Estimate is due within 3 business days of APPLICATION, and there is a separate 7-business-day wait between the LE and consummation.",
+  "id": "nat-edafaad0",
+  "portion": "national",
+  "q": "Under TRID, the Closing Disclosure must be received by the borrower at least:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Tell any buyer who asks",
+   "Tell only buyers who are also clients",
+   "Disclose it in the MLS",
+   "Keep it confidential unless the seller authorizes disclosure"
+  ],
+  "concept": "Fiduciary duty of confidentiality",
+  "difficulty": 1,
+  "explain": "The seller's motivation and bottom line are confidential. Disclosing it would breach loyalty and confidentiality and cost the client bargaining power. Confidentiality survives termination of the agency.",
+  "id": "nat-d1d9dc75",
+  "portion": "national",
+  "q": "A seller's agent learns the seller will accept far less than list price. The agent must:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Oversight",
+   "Openness",
+   "Objectivity",
+   "Obedience"
+  ],
+  "concept": "The six fiduciary duties",
+  "difficulty": 1,
+  "explain": "Obedience, Loyalty, Disclosure, Confidentiality, Accounting, Reasonable care. OBEDIENCE means following lawful instructions -- an agent must refuse instructions that are unlawful, such as an instruction to discriminate.",
+  "id": "nat-4ff1b5d7",
+  "portion": "national",
+  "q": "The fiduciary duties owed by an agent to a principal are often remembered as OLD CAR. The 'O' stands for:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Express agency",
+   "Implied agency",
+   "Agency coupled with an interest",
+   "Agency by ratification"
+  ],
+  "concept": "How agency is created",
+  "difficulty": 1,
+  "explain": "Implied agency arises from behavior that leads a party to reasonably believe they are represented -- a common accidental-agency trap. RATIFICATION is approving an unauthorized act after the fact.",
+  "id": "nat-3d523b05",
+  "portion": "national",
+  "q": "An agency relationship created by the conduct of the parties, without a written agreement, is:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Loyalty and full disclosure to one party conflict with the other",
+   "Commission must be split",
+   "The MLS prohibits it",
+   "Only one party may be a client"
+  ],
+  "concept": "The structural conflict in dual agency",
+  "difficulty": 1,
+  "explain": "A dual agent cannot advocate for both sides on price and terms without breaching loyalty to someone, so the duties are reduced to neutrality. Dual agency requires informed written consent from BOTH parties and is illegal in some states.",
+  "id": "nat-8f7b6ef5",
+  "portion": "national",
+  "q": "In a dual agency, the agent's ability to fully represent both parties is limited primarily because:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Disclose the material defect to the buyer client",
+   "Say nothing -- it is the seller's duty",
+   "Withdraw from the transaction",
+   "Report it only to the listing broker"
+  ],
+  "concept": "Duty to disclose material facts to one's own client",
+  "difficulty": 1,
+  "explain": "The buyer's agent owes the buyer disclosure of all known material facts. Agents also owe honesty about material defects to CUSTOMERS -- there is no duty to stay silent about a known defect for anyone.",
+  "id": "nat-70f120c0",
+  "portion": "national",
+  "q": "A buyer's agent discovers the property has a cracked foundation the seller did not disclose. The buyer's agent must:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Universal agent",
+   "Special agent",
+   "Designated agent",
+   "General agent"
+  ],
+  "concept": "Scope of agency authority",
+  "difficulty": 1,
+  "explain": "A SPECIAL agent has narrow authority for one transaction -- the typical listing broker. A GENERAL agent handles ongoing matters (a property manager); a UNIVERSAL agent may act in all matters under power of attorney.",
+  "id": "nat-d3f0445c",
+  "portion": "national",
+  "q": "An agent who represents the principal in a single transaction with limited authority is a:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Bankruptcy of the principal",
+   "Destruction of the property",
+   "Death of the principal",
+   "The client refusing an offer"
+  ],
+  "concept": "Termination of agency",
+  "difficulty": 1,
+  "explain": "Refusing an offer is simply the client exercising judgment -- the agency continues. Death, incapacity, destruction of the property, bankruptcy, expiration, and mutual agreement all end it.",
+  "id": "nat-daf09347",
+  "portion": "national",
+  "q": "An agency relationship terminates by operation of law upon all of the following EXCEPT:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Novation",
+   "Estoppel",
+   "Subrogation",
+   "Commingling"
+  ],
+  "concept": "Handling client money",
+  "difficulty": 1,
+  "explain": "COMMINGLING is mixing client funds with the broker's own. Actually SPENDING them is conversion -- a more serious offense that typically costs the license.",
+  "id": "nat-10d4624a",
+  "portion": "national",
+  "q": "When an agent places client funds in the agent's personal account, the violation is:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Ask the buyer's agent to screen",
+   "Comply -- the seller is the principal",
+   "Refuse; the instruction is unlawful",
+   "Comply but document the instruction"
+  ],
+  "concept": "Limits on the duty of obedience",
+  "difficulty": 1,
+  "explain": "Obedience extends only to LAWFUL instructions. Familial status is a protected class under the Fair Housing Act; following the instruction would make the agent liable alongside the seller.",
+  "id": "nat-0b6dfc8d",
+  "portion": "national",
+  "q": "A seller instructs the listing agent not to show the home to families with children. The agent must:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The buyer",
+   "The seller",
+   "Neither",
+   "Both equally"
+  ],
+  "concept": "Subagency",
+  "difficulty": 1,
+  "explain": "A subagent works through the listing broker and owes full fiduciary duties to the SELLER, even though the subagent may spend all day driving the buyer around. This is why many states moved to buyer agency.",
+  "id": "nat-a968239a",
+  "portion": "national",
+  "q": "A subagent of the seller owes fiduciary duties to:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Predicts future appreciation",
+   "Is an opinion about the view",
+   "Is a statement of material fact that is false",
+   "Praises the neighborhood"
+  ],
+  "concept": "Puffing vs. misrepresentation",
+  "difficulty": 1,
+  "explain": "Exaggerated opinion ('the best view in town') is puffing. A false statement of MATERIAL FACT ('the roof is three years old' when it is twenty) is misrepresentation and creates liability.",
+  "id": "nat-c712a9fa",
+  "portion": "national",
+  "q": "Puffing becomes actionable misrepresentation when the statement:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Ready, willing, and able to buy on the seller's terms",
+   "Pre-qualified by any lender",
+   "Willing to make any offer",
+   "Merely interested in the property"
+  ],
+  "concept": "When commission is earned",
+  "difficulty": 1,
+  "explain": "The classic standard is a ready, willing, and able buyer meeting the seller's stated terms. Under most modern listing agreements, commission is actually earned at that moment even if the seller then refuses to close.",
+  "id": "nat-dd2928a0",
+  "portion": "national",
+  "q": "A broker earns a commission when the broker produces a buyer who is:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Fiduciary",
+   "Client",
+   "Third party",
+   "Customer"
+  ],
+  "concept": "Client vs. customer",
+  "difficulty": 1,
+  "explain": "The CLIENT is the principal, owed fiduciary duties. A CUSTOMER is an unrepresented third party owed only honesty, fairness, and disclosure of material defects.",
+  "id": "nat-ccdd2ad3",
+  "portion": "national",
+  "q": "The principal in an agency relationship is also called the:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Always structural",
+   "Disclosed in the listing",
+   "Visible on inspection",
+   "Hidden and not discoverable by ordinary inspection"
+  ],
+  "concept": "Latent vs. patent defects",
+  "difficulty": 1,
+  "explain": "A LATENT defect is concealed -- the seller and agent must disclose known latent defects because a buyer cannot find them. A PATENT defect is obvious on reasonable inspection.",
+  "id": "nat-87e6a92c",
+  "portion": "national",
+  "q": "A latent defect is one that is:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Before 1968",
+   "Before 1978",
+   "Before 1988",
+   "Any year, if paint is peeling"
+  ],
+  "concept": "Residential Lead-Based Paint Hazard Reduction Act",
+  "difficulty": 1,
+  "explain": "The rule covers target housing built before 1978. Sellers must disclose known hazards, provide records and the EPA pamphlet, and give buyers a 10-day opportunity to test.",
+  "id": "nat-919374cf",
+  "portion": "national",
+  "q": "Under federal law, the lead-based paint disclosure applies to residential dwellings built:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Methane",
+   "Radon",
+   "Formaldehyde",
+   "Asbestos"
+  ],
+  "concept": "Environmental hazards",
+  "difficulty": 1,
+  "explain": "Radon is a colorless, odorless gas and the second leading cause of lung cancer. Mitigation is typically a sub-slab depressurization vent system -- relatively inexpensive.",
+  "id": "nat-451974f5",
+  "portion": "national",
+  "q": "A naturally occurring radioactive gas that enters homes through foundation cracks is:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Only commercial owners",
+   "Current owners even if innocent of causing it",
+   "Only the party that caused the contamination",
+   "Only the original developer"
+  ],
+  "concept": "CERCLA / Superfund liability",
+  "difficulty": 1,
+  "explain": "Liability is strict, joint and several, and retroactive -- a current owner can be liable without fault. The 'innocent landowner' defense requires having done appropriate due diligence, such as a Phase I assessment, before purchase.",
+  "id": "nat-4cda142c",
+  "portion": "national",
+  "q": "Under CERCLA, liability for cleanup of hazardous waste on a property may be imposed on:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Has an unrecorded easement",
+   "Has a structural defect",
+   "Buyers may find undesirable for psychological reasons",
+   "Is in a flood zone"
+  ],
+  "concept": "Stigmatized property",
+  "difficulty": 1,
+  "explain": "Stigma comes from events -- a death, crime, or rumor -- not physical condition. Most states, including Georgia, do NOT require disclosure of such events, and some expressly protect against liability for nondisclosure.",
+  "id": "nat-0d2dfd2b",
+  "portion": "national",
+  "q": "A stigmatized property is one that:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A mortgage default",
+   "AIDS or another protected medical condition",
+   "An unpaid tax lien",
+   "A pending divorce"
+  ],
+  "concept": "Fair housing limits on disclosure",
+  "difficulty": 1,
+  "explain": "Handicap (including HIV/AIDS status) is a protected class under the Fair Housing Act, so disclosure would itself be discriminatory. Property CONDITION facts are disclosable; protected personal characteristics are not.",
+  "id": "nat-848a9514",
+  "portion": "national",
+  "q": "Federal law prohibits disclosing that a former occupant had:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "It conducts electricity",
+   "It is flammable",
+   "It crumbles and releases fibers into the air",
+   "It attracts moisture"
+  ],
+  "concept": "Asbestos hazards",
+  "difficulty": 1,
+  "explain": "Friable material can be crumbled by hand and releases airborne fibers. Intact asbestos is often best ENCAPSULATED rather than removed, since improper removal raises exposure.",
+  "id": "nat-4ada5806",
+  "portion": "national",
+  "q": "Friable asbestos is dangerous chiefly because:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Potential soil and groundwater contamination",
+   "Loss of riparian rights",
+   "Property tax assessment",
+   "Zoning nonconformity"
+  ],
+  "concept": "USTs as an environmental hazard",
+  "difficulty": 1,
+  "explain": "Leaking tanks contaminate soil and groundwater, and the cleanup obligation can fall on the current owner under CERCLA-style liability.",
+  "id": "nat-afc7e1a0",
+  "portion": "national",
+  "q": "An underground storage tank triggers a disclosure concern mainly because of:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Novation",
+   "Fraudulent concealment of a material fact",
+   "Puffing",
+   "A permissible withholding of client confidences"
+  ],
+  "concept": "Material fact vs. client confidence",
+  "difficulty": 1,
+  "explain": "Confidentiality never covers material defects. A known physical condition affecting value or desirability must be disclosed to buyers -- silence about it is fraudulent concealment, not loyalty.",
+  "id": "nat-564a1d27",
+  "portion": "national",
+  "q": "A seller's agent who knows the basement floods after heavy rain and stays silent has committed:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Identify potential contamination through records and inspection",
+   "Certify the septic system",
+   "Remediate contamination",
+   "Establish market value"
+  ],
+  "concept": "Environmental due diligence",
+  "difficulty": 1,
+  "explain": "A Phase I is a non-invasive review of records, interviews, and a site visit. Only if it finds a concern does a Phase II involve sampling and testing.",
+  "id": "nat-2e29719d",
+  "portion": "national",
+  "q": "The purpose of a Phase I Environmental Site Assessment is to:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Before or at the time the buyer makes an offer",
+   "After closing",
+   "Only if the buyer requests it",
+   "Only for new construction"
+  ],
+  "concept": "Timing of seller disclosure",
+  "difficulty": 1,
+  "explain": "Disclosure must come early enough for the buyer to weigh it before committing. Delivery after a binding contract typically gives the buyer a right to rescind.",
+  "id": "nat-8391b49f",
+  "portion": "national",
+  "q": "Most states require a residential seller's property disclosure to be delivered:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Counteroffer that rejects the original offer",
+   "Conditional acceptance binding both",
+   "Voidable acceptance",
+   "Valid acceptance"
+  ],
+  "concept": "Mirror-image rule of acceptance",
+  "difficulty": 1,
+  "explain": "Any change to terms is a COUNTEROFFER, which terminates the original offer and makes the former seller the new offeror. The original buyer is then free to accept, reject, or counter again.",
+  "id": "nat-80112577",
+  "portion": "national",
+  "q": "A buyer makes an offer; the seller changes the closing date and signs. This is legally a:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Void",
+   "Voidable by the adult party",
+   "Unenforceable by anyone",
+   "Voidable by the minor"
+  ],
+  "concept": "Capacity and the void/voidable distinction",
+  "difficulty": 1,
+  "explain": "The minor may disaffirm, so the contract is VOIDABLE at the minor's option -- the adult party remains bound. A VOID contract (illegal purpose) never existed at all.",
+  "id": "nat-326a7715",
+  "portion": "national",
+  "q": "A contract signed by a minor is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "In writing and signed by the party to be charged",
+   "Witnessed by two parties",
+   "Recorded within 30 days",
+   "Notarized"
+  ],
+  "concept": "Statute of Frauds",
+  "difficulty": 1,
+  "explain": "Writing and signature are required for enforceability -- notarization and recording are separate matters. Leases for one year or less are commonly exempt.",
+  "id": "nat-1a05a43a",
+  "portion": "national",
+  "q": "The Statute of Frauds requires that contracts for the sale of real estate be:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The broker's commission",
+   "The consideration that makes the contract valid",
+   "Evidence of the buyer's good faith and a potential source of damages",
+   "A down payment required by lenders"
+  ],
+  "concept": "Purpose of earnest money",
+  "difficulty": 1,
+  "explain": "A promise-for-a-promise supplies the consideration, so a contract is valid without earnest money. The deposit demonstrates good faith and gives the seller a fund to look to if the buyer defaults.",
+  "id": "nat-20632cfb",
+  "portion": "national",
+  "q": "Earnest money in a sales contract serves primarily as:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Unilateral",
+   "Implied",
+   "Executed",
+   "Bilateral"
+  ],
+  "concept": "Bilateral vs. unilateral contracts",
+  "difficulty": 1,
+  "explain": "An OPTION is the classic unilateral contract: the seller must sell if the optionee exercises, but the optionee need not buy. A typical purchase contract is bilateral -- both promise.",
+  "id": "nat-e7cf13b1",
+  "portion": "national",
+  "q": "A contract in which only one party is obligated to perform until the other acts is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Liquidated damages",
+   "Novation",
+   "Rescission",
+   "Specific performance"
+  ],
+  "concept": "Remedies for breach",
+  "difficulty": 1,
+  "explain": "Specific performance compels the actual transfer, available because each parcel of land is legally unique. LIQUIDATED DAMAGES is keeping an agreed sum (usually the earnest money) instead.",
+  "id": "nat-619202b7",
+  "portion": "national",
+  "q": "A buyer defaults. The seller sues to force the buyer to complete the purchase. This remedy is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Stated dates must be met exactly or the party is in breach",
+   "The contract expires in 30 days",
+   "Deadlines are approximate",
+   "Closing may be extended once"
+  ],
+  "concept": "Effect of time-is-of-the-essence",
+  "difficulty": 1,
+  "explain": "Without the clause, courts allow performance within a reasonable time. With it, missing a stated date is a breach.",
+  "id": "nat-94ed46a2",
+  "portion": "national",
+  "q": "The 'time is of the essence' clause means:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Record the option",
+   "Do nothing unless the option is exercised",
+   "Pay the full purchase price up front",
+   "Buy at the stated price"
+  ],
+  "concept": "Option contracts",
+  "difficulty": 1,
+  "explain": "The optionee buys the RIGHT to decide, paying option consideration that is usually nonrefundable. Only exercise creates a bilateral obligation.",
+  "id": "nat-826868be",
+  "portion": "national",
+  "q": "An option contract requires the optionor to sell and the optionee to:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Rights only, with the assignor remaining secondarily liable",
+   "All liability, releasing the assignor completely",
+   "Ownership of the real property",
+   "Nothing without a new contract"
+  ],
+  "concept": "Assignment vs. novation",
+  "difficulty": 1,
+  "explain": "An assignment passes rights but leaves the original party secondarily liable. Only a NOVATION -- substituting a new party with everyone's consent -- releases the original party.",
+  "id": "nat-fb500977",
+  "portion": "national",
+  "q": "Assignment of a contract transfers:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Executory",
+   "Void",
+   "Unilateral",
+   "Executed"
+  ],
+  "concept": "Executory vs. executed",
+  "difficulty": 1,
+  "explain": "EXECUTED means fully performed. A contract signed but not yet closed is EXECUTORY -- a distinction the exam likes, since 'executed' also loosely means 'signed' in everyday speech.",
+  "id": "nat-bb8886e4",
+  "portion": "national",
+  "q": "A contract that has been fully performed by both parties is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Lender, by fixing the rate",
+   "Seller, by guaranteeing the sale",
+   "Broker, by securing commission",
+   "Buyer, by allowing withdrawal if the loan is denied"
+  ],
+  "concept": "Contingencies as conditions precedent",
+  "difficulty": 1,
+  "explain": "If the buyer applies in good faith and the loan is denied within the contingency period, the buyer may terminate and recover the earnest money.",
+  "id": "nat-8b534de3",
+  "portion": "national",
+  "q": "A financing contingency in a purchase agreement protects the:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Absence of earnest money",
+   "A low sale price",
+   "Fraud, duress, menace, undue influence, or mistake",
+   "Failure to record"
+  ],
+  "concept": "Genuine assent",
+  "difficulty": 1,
+  "explain": "The four essentials are competent parties, mutual assent (offer and acceptance), consideration, and lawful object. Fraud or duress makes the contract VOIDABLE by the injured party.",
+  "id": "nat-b4cf064c",
+  "portion": "national",
+  "q": "Mutual assent in a contract is destroyed by:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Death of the offeror",
+   "The offeree telling a friend she will probably accept",
+   "Revocation before acceptance",
+   "Lapse of the stated time"
+  ],
+  "concept": "Termination of an offer",
+  "difficulty": 1,
+  "explain": "Acceptance must be communicated TO THE OFFEROR. Private intent changes nothing. Offers end by revocation, rejection, counteroffer, lapse, death or incapacity, or destruction of the property.",
+  "id": "nat-c505648a",
+  "portion": "national",
+  "q": "An offer terminates in all of the following ways EXCEPT:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Recording a satisfaction",
+   "Delivering the deed at signing",
+   "Retaining legal title until the price is paid",
+   "Providing title insurance"
+  ],
+  "concept": "Installment land contracts",
+  "difficulty": 1,
+  "explain": "The buyer takes possession and equitable title while the seller keeps legal title as security. The buyer's risk is losing everything on default if the contract lacks protection.",
+  "id": "nat-0b17e06c",
+  "portion": "national",
+  "q": "A land contract (contract for deed) is characterized by the seller:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Agreed to in advance in the contract",
+   "Determined by a jury after trial",
+   "Unenforceable in real estate",
+   "Always three times the deposit"
+  ],
+  "concept": "Liquidated damages clauses",
+  "difficulty": 1,
+  "explain": "Parties fix the amount in advance -- typically the earnest money -- to avoid litigating actual loss. Courts will void the clause if the sum is so large it functions as a penalty.",
+  "id": "nat-ee5f6eda",
+  "portion": "national",
+  "q": "Liquidated damages differ from actual damages in that liquidated damages are:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Reformation",
+   "Novation",
+   "Rescission",
+   "Assignment"
+  ],
+  "concept": "Discharge of contracts",
+  "difficulty": 1,
+  "explain": "RESCISSION unwinds the contract and returns the parties to the status quo. REFORMATION is a court rewriting the document to reflect the parties' true intent -- usually to fix a scrivener's error.",
+  "id": "nat-53e024b5",
+  "portion": "national",
+  "q": "If a buyer and seller sign an agreement to cancel their contract and restore each party to their prior position, this is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Quitclaim deed",
+   "General warranty deed",
+   "Bargain and sale deed",
+   "Special warranty deed"
+  ],
+  "concept": "Deed types and covenants",
+  "difficulty": 1,
+  "explain": "A general warranty deed warrants title against ALL defects, back through the entire chain, including before the grantor owned it. A SPECIAL warranty covers only the grantor's own period; a QUITCLAIM warrants nothing.",
+  "id": "nat-526404cf",
+  "portion": "national",
+  "q": "The deed offering the greatest protection to the grantee is the:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Covenant of quiet enjoyment",
+   "Covenant against encumbrances",
+   "Covenant of further assurance",
+   "Covenant of seisin"
+  ],
+  "concept": "The covenants of title",
+  "difficulty": 1,
+  "explain": "Quiet enjoyment promises undisturbed possession and defense against lawful claims. SEISIN promises the grantor owns and can convey; FURTHER ASSURANCE promises to sign whatever documents are later needed.",
+  "id": "nat-8f9c509b",
+  "portion": "national",
+  "q": "The covenant in a general warranty deed promising the grantor will defend against lawful claims is:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Delivered to and accepted by the grantee",
+   "Notarized",
+   "Recorded",
+   "Signed by the grantee"
+  ],
+  "concept": "Requirements for a valid deed",
+  "difficulty": 1,
+  "explain": "Title passes on DELIVERY AND ACCEPTANCE. Recording is not required for validity -- it gives CONSTRUCTIVE NOTICE to the world and establishes priority against later claimants.",
+  "id": "nat-324b502e",
+  "portion": "national",
+  "q": "For a deed to be valid between grantor and grantee, it must be:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Proof of the purchase price",
+   "Constructive notice to the world",
+   "A guarantee of clear title",
+   "Actual notice to the grantee"
+  ],
+  "concept": "Notice: actual vs. constructive",
+  "difficulty": 1,
+  "explain": "Recording gives constructive (legal) notice -- everyone is charged with knowledge whether or not they looked. ACTUAL notice is what a person genuinely knows.",
+  "id": "nat-16d15dfa",
+  "portion": "national",
+  "q": "Recording a deed provides:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Tenant damage",
+   "Future losses from fire",
+   "Defects that already existed when the policy was issued",
+   "Declines in market value"
+  ],
+  "concept": "Title insurance",
+  "difficulty": 1,
+  "explain": "Title insurance is retrospective: it covers hidden past defects such as forgeries, undisclosed heirs, and recording errors. It is paid once at closing rather than by ongoing premiums.",
+  "id": "nat-c4b58b19",
+  "portion": "national",
+  "q": "Title insurance differs from other insurance in that it protects against:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Adverse possession",
+   "Accretion",
+   "Dedication",
+   "Alienation"
+  ],
+  "concept": "Involuntary alienation",
+  "difficulty": 1,
+  "explain": "Adverse possession requires possession that is open, notorious, hostile, actual, and continuous for the statutory term. Georgia's period is 20 years, or 7 years under color of title.",
+  "id": "nat-fe3dbb3b",
+  "portion": "national",
+  "q": "Acquiring title by open, notorious, hostile, and continuous possession for the statutory period is:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "By devise",
+   "Intestate",
+   "In escheat",
+   "Testate"
+  ],
+  "concept": "Transfer at death",
+  "difficulty": 1,
+  "explain": "TESTATE means with a will; INTESTATE means without, in which case state succession laws control. Real property passed by will is a DEVISE; personal property is a bequest or legacy.",
+  "id": "nat-0b0f2e27",
+  "portion": "national",
+  "q": "A person who dies leaving a valid will dies:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Reliction",
+   "Erosion",
+   "Accretion",
+   "Avulsion"
+  ],
+  "concept": "Natural changes to land",
+  "difficulty": 1,
+  "explain": "ACCRETION is gradual buildup (the new land is alluvion). AVULSION is sudden loss or addition; RELICTION is land exposed when water permanently recedes.",
+  "id": "nat-cc78d617",
+  "portion": "national",
+  "q": "The gradual addition of land by waterborne deposits of soil is:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Certificate of occupancy",
+   "Chain of title",
+   "Title commitment",
+   "Abstract of title"
+  ],
+  "concept": "Chain of title and abstracts",
+  "difficulty": 1,
+  "explain": "The CHAIN OF TITLE is the sequence of ownership. An ABSTRACT is the condensed written history of all recorded documents; the attorney's OPINION OF TITLE interprets it.",
+  "id": "nat-0b40a0e6",
+  "portion": "national",
+  "q": "A title search that traces ownership back through successive owners produces the:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Recording a quitclaim deed from the claimant or a suit to quiet title",
+   "Filing a lis pendens",
+   "Purchasing title insurance",
+   "Obtaining a survey"
+  ],
+  "concept": "Clearing title defects",
+  "difficulty": 1,
+  "explain": "A quitclaim from whoever might hold the interest releases it; if the claimant will not sign, a quiet title action asks a court to settle ownership. A LIS PENDENS actually CREATES a cloud by giving notice of pending litigation.",
+  "id": "nat-7893809b",
+  "portion": "national",
+  "q": "A cloud on title is BEST removed by:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Debit to the seller",
+   "Credit to the seller and debit to the buyer",
+   "Debit to the lender",
+   "Credit to both parties"
+  ],
+  "concept": "Closing prorations and their direction",
+  "difficulty": 1,
+  "explain": "The seller prepaid a benefit the buyer will enjoy, so the seller is reimbursed: seller CREDIT, buyer DEBIT. Unpaid taxes reverse it -- seller debit, buyer credit.",
+  "id": "nat-69d5f58f",
+  "portion": "national",
+  "q": "In most closings, real property taxes already paid by the seller beyond the closing date result in a:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Lot and block",
+   "Metes and bounds",
+   "Rectangular survey",
+   "Monument reference"
+  ],
+  "concept": "Legal description systems",
+  "difficulty": 1,
+  "explain": "Metes (distances) and bounds (directions/boundaries) must return to the point of beginning to close. LOT AND BLOCK references a recorded plat and is the most common system in Georgia subdivisions.",
+  "id": "nat-96df336c",
+  "portion": "national",
+  "q": "A legal description that uses distances and compass bearings from a point of beginning is:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A permissible trade practice",
+   "Legal if disclosed",
+   "Illegal price fixing under antitrust law",
+   "Allowed if the MLS approves"
+  ],
+  "concept": "Antitrust: price fixing",
+  "difficulty": 1,
+  "explain": "Competitors setting prices together is a per se violation of the Sherman Act -- no defense, no disclosure cure. Commission rates must always be negotiated independently between a broker and a client.",
+  "id": "nat-b203442e",
+  "portion": "national",
+  "q": "Two competing brokerages agree to charge the same commission rate. This is:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Steering",
+   "Market allocation",
+   "A group boycott",
+   "Tie-in arrangement"
+  ],
+  "concept": "Antitrust violations",
+  "difficulty": 1,
+  "explain": "A GROUP BOYCOTT is competitors conspiring to refuse dealing with someone. MARKET ALLOCATION is dividing territories or customer types; a TIE-IN conditions one sale on buying another product.",
+  "id": "nat-1f23d887",
+  "portion": "national",
+  "q": "Brokers agreeing not to show each other's listings to certain buyers is:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Blockbusting",
+   "Puffing",
+   "Redlining",
+   "Steering"
+  ],
+  "concept": "Fair housing violations",
+  "difficulty": 1,
+  "explain": "STEERING channels people by protected class. BLOCKBUSTING induces panic selling by claiming a protected group is moving in; REDLINING is a lender refusing loans in an area based on its demographics.",
+  "id": "nat-9e2ae535",
+  "portion": "national",
+  "q": "Directing buyers toward or away from neighborhoods based on race is:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Familial status",
+   "Handicap",
+   "Source of income",
+   "National origin"
+  ],
+  "concept": "The seven federal protected classes",
+  "difficulty": 1,
+  "explain": "Race, color, religion, sex, national origin, familial status, and handicap. Source of income is protected in some states and cities but is NOT one of the seven federal classes.",
+  "id": "nat-c9ce85d1",
+  "portion": "national",
+  "q": "The federal Fair Housing Act protects all of the following classes EXCEPT:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Income",
+   "Marital status only",
+   "Familial status and religion",
+   "Occupation"
+  ],
+  "concept": "Discriminatory advertising",
+  "difficulty": 1,
+  "explain": "'Mature' signals age/familial status and 'Christian' signals religion. Advertising must describe the PROPERTY, not the desired occupant.",
+  "id": "nat-916dc5ca",
+  "portion": "national",
+  "q": "An advertisement stating 'perfect for a mature Christian couple' violates fair housing because it indicates a preference based on:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Sublet without approval",
+   "Make reasonable modifications at the tenant's expense",
+   "Break the lease without notice",
+   "Remodel the entire unit at the landlord's expense"
+  ],
+  "concept": "Reasonable accommodation vs. modification",
+  "difficulty": 1,
+  "explain": "MODIFICATIONS are physical changes, generally at the tenant's expense (and the tenant may be required to restore). ACCOMMODATIONS are changes to rules or policies -- like waiving a no-pets rule for a service animal -- at the landlord's expense.",
+  "id": "nat-180dbaa5",
+  "portion": "national",
+  "q": "Under the Fair Housing Act, a landlord must permit a tenant with a disability to:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Held in the agent's name",
+   "Separate from the broker's own funds",
+   "Combined with operating funds for efficiency",
+   "Interest-bearing in all cases"
+  ],
+  "concept": "Trust fund handling",
+  "difficulty": 1,
+  "explain": "Client money must be segregated in a designated trust or escrow account. Mixing it with business funds is commingling, one of the most common license-law violations.",
+  "id": "nat-c96270cc",
+  "portion": "national",
+  "q": "A broker's trust account must be:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Give preference to disabled tenants",
+   "Rebuild all facilities",
+   "Provide free parking",
+   "Remove barriers to public accommodations when readily achievable"
+  ],
+  "concept": "ADA Title III",
+  "difficulty": 1,
+  "explain": "Existing public accommodations must remove barriers where readily achievable -- cheap and easy relative to resources. New construction and alterations face stricter accessibility standards.",
+  "id": "nat-b27b6814",
+  "portion": "national",
+  "q": "The Americans with Disabilities Act requires commercial property owners to:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Must provide health insurance",
+   "Controls the hours and methods of work",
+   "Controls the results but not the details of how work is done",
+   "Must withhold income taxes"
+  ],
+  "concept": "Independent contractor vs. employee",
+  "difficulty": 1,
+  "explain": "The broker sets goals and must supervise for license-law compliance, but does not dictate schedules or methods. The IRS safe harbor requires a license, pay based on output rather than hours, and a written IC agreement.",
+  "id": "nat-8fe96f76",
+  "portion": "national",
+  "q": "An independent contractor relationship between a broker and a salesperson means the broker:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Receives a flat fee",
+   "Splits commission with the buyer's broker",
+   "Keeps everything above a price the seller sets",
+   "Charges by the hour"
+  ],
+  "concept": "Net listings and why they are disfavored",
+  "difficulty": 1,
+  "explain": "Net listings invite the broker to profit at the client's expense and are illegal in many states. Georgia permits them only under strict disclosure conditions.",
+  "id": "nat-617cc4c3",
+  "portion": "national",
+  "q": "A net listing is one in which the broker:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Only one broker may market the property",
+   "The listing must be in the MLS",
+   "The seller owes no commission if the seller finds the buyer",
+   "The term is unlimited"
+  ],
+  "concept": "Listing agreement types",
+  "difficulty": 1,
+  "explain": "OPEN: many brokers, and the seller pays nothing if the seller sells it. EXCLUSIVE AGENCY: one broker, but the seller may still sell it themselves commission-free. EXCLUSIVE RIGHT TO SELL: the broker is paid no matter who sells.",
+  "id": "nat-fa7e416c",
+  "portion": "national",
+  "q": "An open listing differs from an exclusive right to sell in that with an open listing:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Commingling",
+   "Conversion only",
+   "Novation",
+   "A permissible practice with disclosure"
+  ],
+  "concept": "Commingling",
+  "difficulty": 1,
+  "explain": "Placing trust funds in a business account is commingling as soon as it happens. If the broker then spends the money, it becomes conversion.",
+  "id": "nat-55d54a6b",
+  "portion": "national",
+  "q": "A broker who deposits a buyer's earnest money into the brokerage operating account has committed:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The number was found in the MLS",
+   "The call is made before 9 p.m.",
+   "The consumer has an established business relationship or gave written consent",
+   "The licensee identifies themselves"
+  ],
+  "concept": "Telephone Consumer Protection Act",
+  "difficulty": 1,
+  "explain": "An existing business relationship or express written consent permits the call. FSBO and expired-listing calls to registered numbers are a frequent source of violations.",
+  "id": "nat-cd09d6e2",
+  "portion": "national",
+  "q": "The 'do not call' rules generally allow a licensee to call a consumer on the registry if:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Negotiate a price reduction with a buyer",
+   "Schedule appointments and prepare marketing materials for broker approval",
+   "Explain contract contingencies",
+   "Hold an open house alone and answer questions about terms"
+  ],
+  "concept": "Unlicensed assistants",
+  "difficulty": 1,
+  "explain": "Ministerial and clerical tasks are fine. Anything involving negotiating, soliciting, showing, or giving advice about terms requires a license -- and letting an assistant do it exposes the broker to discipline.",
+  "id": "nat-8b288ba2",
+  "portion": "national",
+  "q": "Which activity may an unlicensed personal assistant legally perform?",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "$7,500",
+   "$15,000",
+   "$30,000",
+   "$3,750"
+  ],
+  "concept": "Commission is a percentage of the SALE price",
+  "difficulty": 1,
+  "explain": "$250,000 x 6% = $15,000 total; split 50/50 gives each brokerage $7,500. The most common error is stopping at the total commission.",
+  "id": "nat-4d440cd4",
+  "portion": "national",
+  "q": "A property sells for $250,000 with a 6% commission split 50/50 between two brokerages. Each brokerage receives:",
+  "topic": "national/math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "5,280",
+   "43,560",
+   "36,000",
+   "640"
+  ],
+  "concept": "Core memorized conversions",
+  "difficulty": 1,
+  "explain": "1 acre = 43,560 sq ft. Also memorize: 1 mile = 5,280 feet; 1 section = 640 acres = 1 square mile; 36 sections = 1 township.",
+  "id": "nat-62e18f6d",
+  "portion": "national",
+  "q": "One acre contains how many square feet?",
+  "topic": "national/math"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "$400",
+   "$40,000",
+   "$4,000",
+   "$2,000"
+  ],
+  "concept": "Points are a percentage of the LOAN",
+  "difficulty": 1,
+  "explain": "One point = 1% of the loan = $2,000, so 2 points = $4,000. The classic trap is applying points to the sale price instead of the loan amount.",
+  "id": "nat-c620b6f3",
+  "portion": "national",
+  "q": "A buyer pays 2 discount points on a $200,000 loan. The cost is:",
+  "topic": "national/math"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$62,000",
+   "$50,000",
+   "$60,000",
+   "$70,000"
+  ],
+  "concept": "Lenders lend on the LESSER of price or appraised value",
+  "difficulty": 1,
+  "explain": "Loan = 80% x $300,000 (the lower figure) = $240,000. Down payment = $310,000 - $240,000 = $70,000. The buyer must cover the $10,000 appraisal gap in cash.",
+  "id": "nat-d955ca07",
+  "portion": "national",
+  "q": "A home appraises at $300,000 and the buyer obtains an 80% LTV loan. The down payment on a $310,000 purchase price is:",
+  "topic": "national/math"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$2,100",
+   "$300",
+   "$1,500",
+   "$1,800"
+  ],
+  "concept": "Proration on the closing calendar",
+  "difficulty": 1,
+  "explain": "Six months elapsed x $300/month = $1,800 owed by the seller and credited to the buyer, who will pay the full bill later. Unpaid taxes always produce a seller debit.",
+  "id": "nat-c7f1b97c",
+  "portion": "national",
+  "q": "Annual taxes are $3,600, paid in arrears. Closing is on July 1 in a 360-day year. The seller's share is approximately:",
+  "topic": "national/math"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "$199,500",
+   "$209,000",
+   "$200,000",
+   "$180,500"
+  ],
+  "concept": "Net-to-seller problems require division",
+  "difficulty": 1,
+  "explain": "$190,000 / 0.95 = $200,000. Adding 5% to $190,000 gives $199,500 -- the wrong answer the exam always offers, because 5% of the higher price is more than 5% of the net.",
+  "id": "nat-e2201432",
+  "portion": "national",
+  "q": "A seller wants to net $190,000 after a 5% commission and no other costs. The sale price must be:",
+  "topic": "national/math"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The restriction is void as an unreasonable restraint on alienation",
+   "B holds a fee simple absolute because A already conveyed away the whole estate",
+   "Title reverts to A or A's heirs automatically, without any court action",
+   "A must sue to re-enter and recover title"
+  ],
+  "concept": "Determinable fee vs. fee on condition subsequent",
+  "difficulty": 2,
+  "explain": "A DETERMINABLE fee ends automatically -- the possibility of reverter takes effect the instant the condition occurs. A fee subject to a CONDITION SUBSEQUENT requires the grantor to exercise a right of re-entry, which is where a lawsuit would be needed. A cannot convey a larger estate than A held.",
+  "id": "nat-8e82b0b5",
+  "portion": "national",
+  "q": "A owns property in fee simple determinable, to revert automatically if liquor is ever sold there. A conveys to B, who opens a bar. At that moment:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "A life estate in one-half",
+   "A one-half interest as a joint tenant",
+   "A one-half interest as a tenant in common",
+   "Nothing in this property"
+  ],
+  "concept": "Survivorship defeats a will",
+  "difficulty": 2,
+  "explain": "The right of survivorship operates at the instant of death, before the will takes effect -- the deceased joint tenant has no interest left to devise. The surviving sister owns the whole property. A will can only pass what the decedent still owned.",
+  "id": "nat-7d6399cf",
+  "portion": "national",
+  "q": "Two sisters own a lake house as joint tenants. One dies leaving a will devising 'all my real property to my son.' The son receives:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Remove them only if they can be taken out without any damage",
+   "Not remove them, because bolting made them fixtures",
+   "Remove them only with the landlord's written consent",
+   "Remove them, repairing any damage, because they are trade fixtures"
+  ],
+  "concept": "Trade fixtures are the exception to the fixture rule",
+  "difficulty": 2,
+  "explain": "Items a commercial tenant installs to conduct business remain the tenant's personal property and may be removed before the lease ends, provided the tenant repairs damage. The annexation test that would make them fixtures does not apply to trade fixtures. Leaving them past lease end can forfeit them.",
+  "id": "nat-686487b2",
+  "portion": "national",
+  "q": "A commercial tenant bolts specialized refrigeration units to the floor of a leased space. The lease is silent. At lease end the tenant may:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Converts to an easement appurtenant on transfer",
+   "Continues, because an easement in gross benefiting a commercial entity is assignable and survives transfer",
+   "Continues only if the buyer expressly assumes it",
+   "Terminates at the sale because it was personal to the grantor"
+  ],
+  "concept": "Easement in gross vs. appurtenant",
+  "difficulty": 2,
+  "explain": "A utility easement is an easement in gross -- it benefits a person or entity, not a parcel, so there is no dominant tenement. Commercial easements in gross are assignable and bind later owners of the servient land once recorded. Only a personal (non-commercial) easement in gross would arguably end.",
+  "id": "nat-ba3773b7",
+  "portion": "national",
+  "q": "An owner grants a utility company the right to run a line across her land. She later sells. The easement:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Waste, for which the remainderman may sue now",
+   "Grounds to terminate the life estate automatically",
+   "Permissible, since the life tenant owns the present interest",
+   "A breach the remainderman must wait until the life estate ends to raise"
+  ],
+  "concept": "Waste and the life tenant's duties",
+  "difficulty": 2,
+  "explain": "A life tenant must pay taxes and ordinary carrying costs and avoid permissive waste. The remainderman has a present interest to protect and may sue for waste immediately -- waiting could mean the property is lost to a tax sale. The estate does not terminate automatically.",
+  "id": "nat-e67b2148",
+  "portion": "national",
+  "q": "A life tenant fails to pay property taxes for three years and lets the roof fail. The remainderman's BEST characterization of this is:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Voting power and share of assessments",
+   "Square footage of the unit",
+   "Right to lease the unit",
+   "Property tax rate"
+  ],
+  "concept": "How the common-element percentage functions",
+  "difficulty": 2,
+  "explain": "The undivided percentage drives assessments and usually voting weight. It is set in the declaration, not by unit size alone, and it cannot be separated from the unit -- you cannot sell your common-element share by itself.",
+  "id": "nat-0bfe6f48",
+  "portion": "national",
+  "q": "A condominium declaration allots each unit an undivided percentage of the common elements. That percentage MOST directly determines each owner's:",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Win, because the value loss exceeds one third",
+   "Lose, because zoning can never be challenged",
+   "Lose, because the regulation left economically viable use of the land",
+   "Win, because downzoning is per se a taking"
+  ],
+  "concept": "Regulatory taking vs. valid police power",
+  "difficulty": 2,
+  "explain": "A regulation becomes a taking when it denies ALL economically viable use, not merely when it reduces value. Diminution in value alone -- even substantial -- is generally a cost of regulation. Zoning can certainly be challenged, but on grounds like arbitrariness, not mere value loss.",
+  "id": "nat-4c7bd8ba",
+  "portion": "national",
+  "q": "A city downzones an area, leaving an owner's lot usable but worth 40% less. The owner sues claiming a taking. The owner will MOST likely:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Likely be barred, because destruction usually extinguishes nonconforming status",
+   "Be permitted, because nonconforming status runs with the land",
+   "Need only a building permit",
+   "Be permitted only if rebuilt larger"
+  ],
+  "concept": "How nonconforming use is lost",
+  "difficulty": 2,
+  "explain": "Nonconforming rights are meant to phase out, not persist forever. Most ordinances end the status on destruction beyond a stated percentage, on abandonment for a set period, or on a change to a different nonconforming use. Rebuilding then requires conforming to current zoning or obtaining a variance.",
+  "id": "nat-28e3a8ba",
+  "portion": "national",
+  "q": "A legal nonconforming gas station burns down. The owner wants to rebuild it as it was. Under a typical ordinance the owner will:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Only the developer may enforce covenants",
+   "Covenants are unenforceable against later buyers",
+   "The covenant expired automatically after ten years",
+   "Laches and abandonment of the covenant through a pattern of non-enforcement"
+  ],
+  "concept": "Defenses to enforcement of covenants",
+  "difficulty": 2,
+  "explain": "Long, widespread non-enforcement can waive a covenant through abandonment, and delay that prejudices the defendant supports laches. Covenants do not expire on their own unless they say so, they do bind later buyers, and any benefited owner may enforce them.",
+  "id": "nat-cd967c82",
+  "portion": "national",
+  "q": "A subdivision's recorded covenants bar fences over four feet. For fifteen years owners have built six-foot fences with no objection. A neighbor now sues to enforce. The BEST defense is:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A license from the neighbor",
+   "An easement by necessity",
+   "An easement by prescription",
+   "Eminent domain against the neighbor"
+  ],
+  "concept": "Easement by necessity",
+  "difficulty": 2,
+  "explain": "When a single parcel is severed and one part is left without access, the law implies an easement by necessity over the retained land. Prescription requires long adverse use, which has not occurred here; a license is revocable; private owners cannot condemn.",
+  "id": "nat-802f42b1",
+  "portion": "national",
+  "q": "A property owner's land is landlocked after the seller conveys away the parcel fronting the road. The owner's strongest claim to access is:",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Serve as a check, with sales comparison given the most weight",
+   "Be the only reliable approach",
+   "Replace the need for reconciliation",
+   "Be meaningless for new construction"
+  ],
+  "concept": "Weighting the approaches in reconciliation",
+  "difficulty": 2,
+  "explain": "Abundant near-identical sales make sales comparison the strongest indicator. Cost is genuinely useful on nearly new homes (little depreciation to estimate) but serves as support here. An appraiser reconciles by weighting reliability, never by averaging.",
+  "id": "nat-9040ba6b",
+  "portion": "national",
+  "q": "An appraiser must value a two-year-old home in a subdivision where twelve nearly identical homes sold in the last six months. The cost approach would MOST likely:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "$424,000",
+   "$400,000",
+   "$416,000",
+   "$440,000"
+  ],
+  "concept": "Netting adjustments on the comparable",
+  "difficulty": 2,
+  "explain": "Adjust the COMP toward the subject. Superior feature: subtract $12,000. Inferior feature: add $8,000. $420,000 - $12,000 + $8,000 = $416,000. Adjusting the subject instead, or moving both in the same direction, produces the distractors.",
+  "id": "nat-1be22d17",
+  "portion": "national",
+  "q": "A comparable superior to the subject sold for $420,000; its extra half-bath is worth $12,000 and its inferior lot costs $8,000. The adjusted value indication is:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$625,000",
+   "$840,000",
+   "$690,000",
+   "$560,000"
+  ],
+  "concept": "Building NOI before applying the cap rate",
+  "difficulty": 2,
+  "explain": "Gross annual = 4 x $1,400 x 12 = $67,200. Less 5% vacancy ($3,360) = $63,840 effective gross. Less $19,000 expenses = $44,840 NOI. $44,840 / 0.08 = $560,500, closest to $560,000. Skipping vacancy or expenses produces the higher distractors -- debt service is never an operating expense.",
+  "id": "nat-beaf41b6",
+  "portion": "national",
+  "q": "A four-unit building rents for $1,400 per unit monthly with 5% vacancy and $19,000 annual operating expenses. At an 8% cap rate its value is closest to:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Functional obsolescence",
+   "External obsolescence",
+   "Curable physical deterioration",
+   "Incurable physical deterioration"
+  ],
+  "concept": "Curable vs. incurable depreciation",
+  "difficulty": 2,
+  "explain": "Curability is an economic test, not a physical one: an item is curable when the cost to fix it is recovered in added value. Spending $9,000 to gain $9,000 sits right at the line and is treated as curable. If the fix cost more than it returned, it would be incurable.",
+  "id": "nat-d877e4df",
+  "portion": "national",
+  "q": "An appraiser notes the subject's roof needs $9,000 of work that would add $9,000 of value. This is BEST classified as:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The improvements, as physical deterioration",
+   "Neither -- it is a financing concession",
+   "The improvements, as functional obsolescence",
+   "The land, as external obsolescence"
+  ],
+  "concept": "Where external obsolescence is charged",
+  "difficulty": 2,
+  "explain": "External obsolescence comes from outside the property. Because a location penalty attaches to the site rather than the building, appraisers charge it against the LAND. Functional problems attach to the improvements; physical deterioration is wear.",
+  "id": "nat-f66bb10e",
+  "portion": "national",
+  "q": "A house on a busy corner sells for less than identical houses mid-block. When the appraiser accounts for this, the deduction is properly assigned to:",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Neither party",
+   "Both buyer and seller jointly",
+   "The original seller-borrower only",
+   "The buyer only"
+  ],
+  "concept": "'Subject to' vs. assumption",
+  "difficulty": 2,
+  "explain": "Taking 'subject to' means the buyer accepts NO personal liability on the note -- the buyer just risks losing the property. The original borrower remains fully liable. Had the buyer ASSUMED, both would be liable (buyer primarily, seller secondarily) absent a novation.",
+  "id": "nat-6338191f",
+  "portion": "national",
+  "q": "A buyer takes title 'subject to' the seller's existing loan and later defaults. The lender forecloses and the sale leaves a $40,000 shortfall. The lender may pursue a deficiency judgment against:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "About 8 years",
+   "About 1 year",
+   "About 4 years",
+   "The points never pay off"
+  ],
+  "concept": "Break-even analysis on discount points",
+  "difficulty": 2,
+  "explain": "Points cost 2% x $300,000 = $6,000. The rate saving is 0.5% x $300,000 = $1,500 in the first year. $6,000 / $1,500 = 4 years to break even. A buyer planning to sell or refinance sooner should decline the points.",
+  "id": "nat-52419ef3",
+  "portion": "national",
+  "q": "A borrower is offered 6.5% with no points, or 6.0% with 2 points on a $300,000 loan. Roughly how long must the borrower keep the loan for the points to pay off, using simple first-year interest?",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The loan amount decreases by $200",
+   "The seller agrees to pay an extra $500 toward closing costs",
+   "The APR increases beyond tolerance",
+   "A typo in the borrower's name is corrected"
+  ],
+  "concept": "The three CD re-disclosure triggers",
+  "difficulty": 2,
+  "explain": "Only three changes restart the clock: the APR becomes inaccurate beyond tolerance, the loan PRODUCT changes, or a prepayment penalty is added. Other changes require a corrected CD at or before consummation but no new waiting period.",
+  "id": "nat-ec8c3a9f",
+  "portion": "national",
+  "q": "Under TRID, which change after the Closing Disclosure is delivered REQUIRES a new three-business-day waiting period?",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Terminate with the earnest money returned",
+   "Require the seller to lower the price",
+   "Renegotiate or bring the $15,000 difference in cash, on top of the down payment",
+   "Accept a loan of 95% of the contract price"
+  ],
+  "concept": "The appraisal gap",
+  "difficulty": 2,
+  "explain": "The lender lends on the LOWER of price or appraised value, so the loan shrinks and the shortfall becomes the buyer's cash problem. Without an appraisal contingency the buyer has no automatic right to terminate and no power to force a price reduction -- only to ask.",
+  "id": "nat-6891f80a",
+  "portion": "national",
+  "q": "A lender's appraisal comes in $15,000 below the contract price on a 95% LTV loan. Absent an appraisal contingency, the buyer must:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Remains tied up until the loan is paid or a substitution of entitlement occurs",
+   "Is fully restored at closing",
+   "Was never at risk",
+   "Is lost permanently"
+  ],
+  "concept": "VA entitlement and assumption",
+  "difficulty": 2,
+  "explain": "Entitlement stays committed to the loan until it is paid off or another eligible veteran substitutes their entitlement. Without a release of liability the veteran also remains liable for a deficiency, and cannot use that entitlement for a new home.",
+  "id": "nat-ed9aae6a",
+  "portion": "national",
+  "q": "A veteran's VA loan is assumed by a non-veteran buyer with VA approval, but the veteran does not obtain a release of liability. The veteran's entitlement:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Violated the Act by failing to give specific reasons or notice of the right to them",
+   "Complied, provided the denial was in writing",
+   "Complied, because reasons are optional",
+   "Violated the Act only if the applicant is in a protected class"
+  ],
+  "concept": "ECOA adverse action notice",
+  "difficulty": 2,
+  "explain": "ECOA entitles a rejected applicant to a statement of SPECIFIC reasons, or notice of the right to request them within 60 days. The obligation applies to every applicant regardless of protected class -- the notice requirement is not itself a discrimination question.",
+  "id": "nat-c4baa683",
+  "portion": "national",
+  "q": "A lender denies a loan and tells the applicant only 'you did not meet our standards.' Under ECOA the lender has:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Sell individual lots free of the lien as portions of the debt are paid",
+   "Avoid personal liability on the note",
+   "Substitute other collateral at will",
+   "Prepay without penalty"
+  ],
+  "concept": "Blanket mortgages and partial releases",
+  "difficulty": 2,
+  "explain": "The release (or partial release) clause lets the developer clear the lien lot by lot as agreed payments come in, so buyers get clear title. Without it, the whole debt would have to be retired before any lot could convey free of the blanket lien.",
+  "id": "nat-13d9b8dc",
+  "portion": "national",
+  "q": "A blanket mortgage covering twelve subdivision lots contains a release clause. Its practical effect is that the developer can:",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Answer truthfully, since honesty is owed to customers",
+   "Decline to answer, saying the seller has not authorized disclosure of motivation",
+   "Say the seller has no particular reason",
+   "Answer only if the buyer submits an offer first"
+  ],
+  "concept": "Confidentiality vs. honesty",
+  "difficulty": 2,
+  "explain": "Motivation is confidential, not a material defect, so it stays private. But honesty forbids the affirmative lie in option C -- the agent must decline rather than misstate. Declining to answer is not deceit; inventing an answer is.",
+  "id": "nat-b91dd82c",
+  "portion": "national",
+  "q": "A listing agent learns from the seller, in confidence, that the seller must move for a job in 30 days. A buyer's agent asks why the seller is selling. The listing agent should:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Permissible if the property has since sold",
+   "Permissible, since the agency ended",
+   "A breach only if it causes provable damage",
+   "A breach -- confidentiality survives termination of the agency"
+  ],
+  "concept": "Which duties survive termination",
+  "difficulty": 2,
+  "explain": "Accounting and CONFIDENTIALITY survive the end of the relationship indefinitely. Loyalty, obedience, disclosure, and reasonable care end with the agency. Damage is not required for the breach to exist.",
+  "id": "nat-5ace4b52",
+  "portion": "national",
+  "q": "An agent's listing expires unsold. Six months later the agent mentions to a friend that the former seller had been desperate. This is:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Disclose the relationship to the seller in writing before presenting the offer",
+   "Present the offer without comment, as with any other",
+   "Refuse to present the son's offer",
+   "Resign the listing immediately"
+  ],
+  "concept": "Disclosure of a personal interest",
+  "difficulty": 2,
+  "explain": "A family or financial interest in a buyer is a material conflict the principal must know about, disclosed before the offer is considered. The broker must still present all offers -- refusing to present one breaches the duty. Resigning may follow, but disclosure comes first.",
+  "id": "nat-65b71c16",
+  "portion": "national",
+  "q": "A broker represents the seller. The broker's own son wants to buy the property. The broker's FIRST obligation is to:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Decline to advise on price to avoid liability",
+   "Give an informed opinion supported by comparable sales",
+   "Repeat the listing agent's opinion",
+   "Say only that the seller set the price"
+  ],
+  "concept": "Advocacy is the point of representation",
+  "difficulty": 2,
+  "explain": "A client is owed advice, not just information. Withholding a price opinion from a CLIENT under-serves the fiduciary-style duty of reasonable care and skill. The agent who declines is behaving as though the buyer were a customer.",
+  "id": "nat-25f2b60f",
+  "portion": "national",
+  "q": "A buyer's agent shows a property and the buyer asks, 'Is this a good price?' The agent has a written buyer agency agreement. The agent should:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Present only the higher offer, since it serves the seller best",
+   "Let the seller's attorney decide",
+   "Present both offers and disclose the compensation difference to the seller",
+   "Present both without mentioning compensation"
+  ],
+  "concept": "Presenting all offers plus conflict disclosure",
+  "difficulty": 2,
+  "explain": "All offers go to the seller. Additionally, the prospect of a larger commission on one offer is a conflict of interest the principal is entitled to know about, so the agent discloses it and lets the seller weigh it. Silence here is the trap answer.",
+  "id": "nat-27053515",
+  "portion": "national",
+  "q": "A seller's agent receives two offers. The higher offer is from an unrepresented buyer, meaning the agent would keep the whole commission. The agent must:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Limited to a warning letter",
+   "None, since the assistant is not licensed",
+   "Liability for unlicensed activity and breach of confidentiality by the firm",
+   "Only the assistant's problem"
+  ],
+  "concept": "Supervision and unlicensed activity",
+  "difficulty": 2,
+  "explain": "Discussing terms is licensed activity, and the answer also leaked the seller's negotiating position. The broker is responsible for supervising assistants; letting one host an open house unaccompanied and field substantive questions is a classic disciplinary case.",
+  "id": "nat-31e2087a",
+  "portion": "national",
+  "q": "An unlicensed assistant, alone at an open house, answers a visitor's question about whether the seller would take less. The broker's exposure is:",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Note it only if the repair is under warranty",
+   "Disclose only if the buyer's inspector finds evidence",
+   "Say nothing, since the condition is fixed",
+   "Disclose the past problem and the repair"
+  ],
+  "concept": "Past defects are still material",
+  "difficulty": 2,
+  "explain": "A history of water intrusion is material to value and desirability even after repair, because it bears on recurrence risk and insurability. Disclosing the problem AND the fix protects the seller; silence is the classic post-closing lawsuit.",
+  "id": "nat-72bbf3e4",
+  "portion": "national",
+  "q": "A seller repaired a chronic basement leak two years ago and it has not recurred. On the disclosure form the seller should:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Ask the listing agent to repaint it",
+   "Assume the seller disclosed everything material",
+   "Say nothing, as the agent is not an inspector",
+   "Point it out to the buyer and recommend the inspector examine it"
+  ],
+  "concept": "No duty to discover, but no license to ignore",
+  "difficulty": 2,
+  "explain": "Agents are not inspectors and have no duty to hunt for defects -- but a visible red flag they actually observe must be passed on. Seeing it and staying silent converts 'no duty to discover' into concealment of something known.",
+  "id": "nat-8c9dbc26",
+  "portion": "national",
+  "q": "A buyer's agent sees a fresh paint patch on a ceiling and a faint stain edge. The agent should:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Do nothing, because no hazard is known",
+   "Test the property before closing",
+   "Disclose the absence of knowledge, give the pamphlet, and allow the 10-day opportunity",
+   "Disclose only if the buyer has children"
+  ],
+  "concept": "Lead disclosure when nothing is known",
+  "difficulty": 2,
+  "explain": "The federal rule requires the disclosure form, records, EPA pamphlet, and 10-day testing window on all pre-1978 target housing. Having no knowledge is a permitted answer on the form -- but the process still applies. Sellers are never required to test.",
+  "id": "nat-b02be796",
+  "portion": "national",
+  "q": "A property built in 1975 is sold. The seller has never tested for lead and knows of no hazard. The seller must:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Answer only in writing",
+   "Decline, explaining that the question involves a protected class",
+   "Answer factually if the licensee knows",
+   "Refer the buyer to the seller"
+  ],
+  "concept": "Fair housing overrides the impulse to be helpful",
+  "difficulty": 2,
+  "explain": "Handicap is a protected class, so answering would facilitate discriminatory steering regardless of the licensee's intent. The right move is to decline and direct the buyer to publicly available sources they can research themselves.",
+  "id": "nat-3b1812fa",
+  "portion": "national",
+  "q": "A buyer asks a licensee whether a nearby group home houses people with disabilities. The licensee should:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Refuse to pass on information known to be false, and withdraw if the seller persists",
+   "Correct the form personally",
+   "Disclose the truth only to the buyer's agent",
+   "Present the form as the seller wrote it, since it is the seller's statement"
+  ],
+  "concept": "A licensee cannot transmit known falsehoods",
+  "difficulty": 2,
+  "explain": "The form belongs to the seller, but the licensee cannot become the conduit for a misrepresentation they know to be false -- that is participation in fraud. The licensee never alters the seller's form; if the seller will not fix it, the engagement must end.",
+  "id": "nat-713f3a24",
+  "portion": "national",
+  "q": "A licensee discovers the seller's disclosure understates the age of the roof by twelve years. The seller refuses to correct it. The licensee should:",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A binding contract dated Saturday",
+   "A counteroffer the buyer may accept",
+   "No contract, because acceptance was not communicated within the deadline",
+   "A binding contract, because the seller signed in time"
+  ],
+  "concept": "Acceptance is effective on communication",
+  "difficulty": 2,
+  "explain": "Signing is not acceptance -- the offeror must receive it within the stated time. Late delivery means the offer lapsed. The late acceptance may operate as a new offer the buyer can accept, but no contract exists on the original terms.",
+  "id": "nat-1c0b5387",
+  "portion": "national",
+  "q": "A buyer's offer says acceptance must be received by 5 p.m. Friday. The seller signs at 3 p.m. Friday but the acceptance is not delivered until Saturday morning. There is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Prevail, because the approval did not meet the stated term",
+   "Prevail only if the buyer applied to three lenders",
+   "Lose, because 0.25% is immaterial",
+   "Lose, because the buyer was approved"
+  ],
+  "concept": "Contingencies are read as written",
+  "difficulty": 2,
+  "explain": "The condition specified a rate ceiling, and an approval above it does not satisfy it. Courts enforce the stated terms; materiality is not re-argued after the parties fixed the number. The buyer must still have applied in good faith, which a single genuine application satisfies.",
+  "id": "nat-bd6c19ef",
+  "portion": "national",
+  "q": "A contract is contingent on the buyer obtaining financing at no more than 6.5%. The buyer is approved at 6.75% and terminates. The seller argues bad faith. The buyer will MOST likely:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Buyer, who holds equitable title",
+   "Seller, because possession and title had not passed",
+   "Insurer only",
+   "Parties equally"
+  ],
+  "concept": "Equitable conversion vs. the Risk Act",
+  "difficulty": 2,
+  "explain": "Under the older doctrine of equitable conversion the BUYER bore the risk from contract signing. The Uniform Act reverses that: risk stays with the seller until title or possession transfers. Knowing which rule the question invokes is the whole point.",
+  "id": "nat-4eeb78f6",
+  "portion": "national",
+  "q": "A seller and buyer sign a contract. Before closing the house burns down. In a state that has adopted the Uniform Vendor and Purchaser Risk Act, the loss falls on the:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The seller may terminate the contract",
+   "The assignment converts the deal to a novation",
+   "The assignment is valid, and the original buyer remains secondarily liable",
+   "The assignment is void without consent"
+  ],
+  "concept": "Assignability of real estate contracts",
+  "difficulty": 2,
+  "explain": "Real estate purchase contracts are assignable unless they say otherwise. The assignee gains the rights; the assignor stays secondarily liable unless the seller agrees to a novation. Personal-service contracts are the category that resists assignment.",
+  "id": "nat-dff6a6a6",
+  "portion": "national",
+  "q": "A buyer assigns her purchase contract to a third party. The contract is silent on assignment. The seller objects. Generally:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Specific performance against the owner and the buyer if the buyer had notice",
+   "Nothing, since options are revocable",
+   "Recovery of the $5,000 only",
+   "Damages capped at the option price"
+  ],
+  "concept": "Options create an enforceable interest",
+  "difficulty": 2,
+  "explain": "An option supported by consideration is a binding contract, and land is unique, so specific performance is available. A later buyer with actual or constructive notice (a recorded option) takes subject to it. Options are not revocable once consideration is paid.",
+  "id": "nat-8d6cae58",
+  "portion": "national",
+  "q": "An option agreement gives a tenant the right to buy for $500,000 within one year, for $5,000 consideration. Six months in, the owner sells to someone else. The tenant's BEST remedy is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Prevail, because the date passed",
+   "Not prevail, because performance within a reasonable time is allowed",
+   "Prevail only if damages are shown",
+   "Not prevail, because closing dates are unenforceable"
+  ],
+  "concept": "Effect of omitting time-is-of-the-essence",
+  "difficulty": 2,
+  "explain": "Without the clause, courts permit performance within a reasonable time and three days is ordinarily reasonable. The clause exists precisely to convert a date into a hard deadline. Closing dates are enforceable -- just not automatically strict.",
+  "id": "nat-fac7cd96",
+  "portion": "national",
+  "q": "A contract states 'closing on or before June 30' with no time-is-of-the-essence clause. The buyer is ready on July 3. The seller declares a breach. The seller will MOST likely:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Rescission",
+   "Reformation",
+   "Specific performance as written",
+   "Novation"
+  ],
+  "concept": "Reformation for scrivener's error",
+  "difficulty": 2,
+  "explain": "Reformation asks a court to rewrite the document to reflect the parties' actual agreement. Rescission would unwind a deal both sides want; enforcing the erroneous description would convey the wrong lot.",
+  "id": "nat-a4377df9",
+  "portion": "national",
+  "q": "Two parties sign a contract that misstates the parcel number due to a typing error, though both intended the same lot. The proper remedy is:",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "The Monday recorder, if that buyer had no notice of the earlier sale",
+   "The Wednesday recorder, because possession controls",
+   "Neither -- the deeds cancel",
+   "The earlier buyer, because that purchase came first"
+  ],
+  "concept": "Race-notice recording acts",
+  "difficulty": 2,
+  "explain": "A race-notice statute protects the party who both takes WITHOUT NOTICE and records FIRST. The catch: open possession by the earlier buyer can itself be constructive notice, which would defeat the Monday recorder. The stem's 'no notice' condition is what decides it.",
+  "id": "nat-f8510410",
+  "portion": "national",
+  "q": "A buyer records a deed on Monday. An earlier buyer of the same parcel, who had paid and taken possession, records on Wednesday. In a race-notice state the winner is:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "When the defect is recorded",
+   "When the grantee resells",
+   "At the moment of conveyance",
+   "Only when the grantee is evicted"
+  ],
+  "concept": "Present vs. future covenants",
+  "difficulty": 2,
+  "explain": "Seisin, right to convey, and against encumbrances are PRESENT covenants -- breached, if at all, at delivery, which starts the limitations clock then. Quiet enjoyment, warranty, and further assurances are FUTURE covenants, breached only on later disturbance.",
+  "id": "nat-ef368726",
+  "portion": "national",
+  "q": "A general warranty deed's covenant of seisin is breached. When does the breach occur?",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Is valid on payment, relating back to the original deposit",
+   "Must be re-executed by the estate",
+   "Is void, because delivery requires a living grantor",
+   "Passes only a life estate"
+  ],
+  "concept": "Relation-back doctrine in escrow delivery",
+  "difficulty": 2,
+  "explain": "Once a grantor deposits a deed in escrow beyond recall, delivery relates back to the deposit date when the condition is met. This defeats the argument that death revoked it. The doctrine exists precisely to prevent death from unwinding completed bargains.",
+  "id": "nat-bab807ac",
+  "portion": "national",
+  "q": "A grantor hands a signed deed to an escrow agent with instructions to deliver on payment. The grantor dies before payment. The deed:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Buy title insurance covering it",
+   "Obtain and record a release or satisfaction",
+   "Wait for the statute of limitations",
+   "Disclose it and proceed"
+  ],
+  "concept": "Marketable title and Schedule B exceptions",
+  "difficulty": 2,
+  "explain": "An exception is a defect the policy will NOT cover, so insurance does not solve it. Marketable title requires clearing the lien of record with a recorded release. A buyer cannot be forced to accept title subject to an undischarged mortgage.",
+  "id": "nat-9eb1c726",
+  "portion": "national",
+  "q": "A title commitment lists an unreleased mortgage from 1978 as an exception. To convey marketable title the seller must:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Acquires a prescriptive easement instead",
+   "Acquires title anyway, since possession is the main element",
+   "Acquires title after twice the period",
+   "Fails, because every statutory element must be satisfied"
+  ],
+  "concept": "Adverse possession is all-elements",
+  "difficulty": 2,
+  "explain": "Every element of the statute must be met -- possession that is open, notorious, hostile, actual, continuous for the period, plus any state-specific requirement like tax payment or color of title. Missing one defeats the claim entirely.",
+  "id": "nat-9cc968a6",
+  "portion": "national",
+  "q": "An adverse possessor occupies land for the statutory period but pays no taxes, and the state's statute requires tax payment. The possessor:",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Violated antitrust by publishing a rate",
+   "Committed a group boycott",
+   "Set a lawful internal company policy",
+   "Committed price fixing with its competitors"
+  ],
+  "concept": "Company policy vs. conspiracy",
+  "difficulty": 2,
+  "explain": "A single firm may set its own rates -- that is competition, not conspiracy. Antitrust requires an AGREEMENT between competitors. Parallel behavior alone is not proof; what would make it illegal is evidence the firms coordinated.",
+  "id": "nat-14de8545",
+  "portion": "national",
+  "q": "A brokerage tells its agents never to quote a commission below 5%, and the firm's competitors independently do the same. The brokerage has:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Nothing -- occupancy limits are lawful",
+   "Handicap",
+   "Familial status",
+   "National origin"
+  ],
+  "concept": "Reading an ad for the actual violation",
+  "difficulty": 2,
+  "explain": "'No children under 12' is a direct familial status violation. 'Ideal for professionals' is a weaker signal about income or occupation, which is not federally protected. Reasonable OCCUPANCY limits by number of persons are lawful, but limits by age of occupant are not.",
+  "id": "nat-8e96b0ad",
+  "portion": "national",
+  "q": "A landlord's ad says 'quiet building, ideal for professionals, no children under 12.' The clearest violation involves:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Disparate impact, even without discriminatory intent",
+   "Intentional discrimination only",
+   "Not actionable, since the rule is neutral",
+   "A steering violation"
+  ],
+  "concept": "Disparate impact",
+  "difficulty": 2,
+  "explain": "A facially neutral policy that falls disproportionately on a protected class can violate fair housing law without any intent to discriminate. The landlord's defense is that the rule serves a substantial, legitimate business need that no less discriminatory rule would serve.",
+  "id": "nat-ac98caad",
+  "portion": "national",
+  "q": "A property manager applies a rule requiring all applicants to have income of three times the rent. Statistically it screens out a protected class at a much higher rate. This may be challenged as:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Continue holding it and use interpleader or the state's prescribed dispute procedure",
+   "Split it evenly between them",
+   "Release it to whoever demands first",
+   "Keep it as compensation for the failed sale"
+  ],
+  "concept": "Disputed trust funds",
+  "difficulty": 2,
+  "explain": "A broker holding disputed funds must not choose sides. The safe course is to hold and let a court (interpleader) or the state-prescribed process decide. Releasing, splitting, or keeping the money all expose the broker to a conversion claim.",
+  "id": "nat-7daf0dc2",
+  "portion": "national",
+  "q": "A broker holds a $10,000 earnest money deposit. Buyer and seller both demand it after a failed closing. The broker should:",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A permissible market update",
+   "Puffing",
+   "A misleading advertisement misrepresenting the licensee's involvement",
+   "A RESPA violation"
+  ],
+  "concept": "Truthful advertising",
+  "difficulty": 2,
+  "explain": "Implying credit for another firm's transaction misrepresents the licensee's role. Market-update advertising is legitimate only when it clearly attributes the sale and does not suggest the advertiser handled it.",
+  "id": "nat-de18bc19",
+  "portion": "national",
+  "q": "A licensee advertises 'Just sold! Call me to sell yours' with a photo of a property listed and sold by another firm. This is MOST directly:",
+  "topic": "national/practice"
+ }
+]

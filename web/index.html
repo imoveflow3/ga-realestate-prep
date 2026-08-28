@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Georgia Real Estate Exam Prep</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">Georgia Real Estate Prep
+      <small id="countdown">salesperson licensing exam</small></div>
+    <nav>
+      <button data-view="home" class="on">Practice</button>
+      <button data-view="math">Math</button>
+      <button data-view="weak">Weak spots</button>
+      <button data-view="dash">Dashboard</button>
+      <button data-view="plan">Study plan</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ------------------------------------------------ practice -->
+  <section id="view-home">
+    <h1>Practice quiz</h1>
+    <p class="sub">Pick a portion, choose how many questions, and go. Every question
+      is explained the moment you answer it.</p>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <label for="portion">Portion</label>
+          <select id="portion">
+            <option value="national">National (80 of 132 exam questions)</option>
+            <option value="georgia">Georgia state (52 of 132)</option>
+            <option value="mixed">Mixed, exam-weighted</option>
+            <option value="comprehensive">Comprehensive subtest (drill)</option>
+          </select>
+        </div>
+        <div>
+          <label for="topic">Topic</label>
+          <select id="topic"><option value="">All topics (exam-weighted)</option></select>
+        </div>
+        <div style="max-width:120px">
+          <label for="count">Questions</label>
+          <select id="count">
+            <option>10</option><option selected>20</option><option>30</option><option>50</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <div style="max-width:215px">
+          <label for="timed">Timer</label>
+          <select id="timed">
+            <option value="1" selected>Timed (75 s/question)</option>
+            <option value="0">Untimed</option>
+          </select>
+        </div>
+        <div style="max-width:210px">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="harder" selected>Harder mix (default)</option>
+            <option value="hard">Hard only</option>
+            <option value="any">Full bank</option>
+            <option value="core">Core only</option>
+          </select>
+        </div>
+        <div style="flex:0 0 auto">
+          <button class="btn" id="start">Start quiz</button>
+        </div>
+        <div style="flex:0 0 auto">
+          <button class="btn ghost" id="startWeak">Weak-spot quiz</button>
+        </div>
+        <div style="flex:0 0 auto">
+          <button class="btn ghost" id="startExam">Full mock exam (132)</button>
+        </div>
+      </div>
+      <p class="muted" style="margin:12px 0 0">
+        <b>Weak-spot mode</b> draws more heavily from topics and individual questions
+        you have missed before, instead of picking at random.</p>
+    </div>
+
+    <div id="homeWeak"></div>
+  </section>
+
+  <!-- ------------------------------------------------ math -->
+  <section id="view-math" hidden>
+    <h1>Real estate math</h1>
+    <p class="sub">Freshly generated problems with a full worked solution after every
+      answer. Numbers change each time, so you learn the method, not the answer.</p>
+    <div class="card">
+      <div class="row">
+        <div>
+          <label for="mathTopic">Problem type</label>
+          <select id="mathTopic"><option value="">All types (mixed)</option></select>
+        </div>
+        <div style="max-width:120px">
+          <label for="mathCount">Problems</label>
+          <select id="mathCount">
+            <option>5</option><option selected>10</option><option>15</option><option>25</option>
+          </select>
+        </div>
+        <div style="flex:0 0 auto">
+          <button class="btn" id="startMath">Start math practice</button>
+        </div>
+        <div style="flex:0 0 auto">
+          <button class="btn ghost" id="startMathWeak">Weak math types</button>
+        </div>
+      </div>
+    </div>
+    <div id="mathStats"></div>
+  </section>
+
+  <!-- ------------------------------------------------ weak spots -->
+  <section id="view-weak" hidden>
+    <h1>Weak spots</h1>
+    <p class="sub">Ranked by how you have actually scored, with the topics worth the
+      most on the exam breaking ties. Drill any row directly.</p>
+    <div id="weakBody"></div>
+  </section>
+
+  <!-- ------------------------------------------------ quiz runner -->
+  <section id="view-quiz" hidden>
+    <div class="progressbar"><div id="qprog" style="width:0"></div></div>
+    <div class="qhead">
+      <div><span class="tag" id="qtag">National</span>
+        <span class="tag hard" id="qhard" hidden>Hard</span>
+        <span class="muted" id="qcount"></span></div>
+      <div class="timer" id="qtimer"></div>
+    </div>
+    <div class="card">
+      <div class="muted" id="qtopic"></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="choices" id="qchoices"></div>
+      <div id="qfeedback"></div>
+    </div>
+    <div class="row">
+      <div style="flex:0 0 auto"><button class="btn" id="qnext" disabled>Next</button></div>
+      <div style="flex:0 0 auto"><button class="btn ghost" id="qquit">End &amp; score</button></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------ results -->
+  <section id="view-result" hidden>
+    <h1>Results</h1>
+    <div id="resultBody"></div>
+    <div class="row" style="margin-top:10px">
+      <div style="flex:0 0 auto"><button class="btn" id="againSame">Another quiz</button></div>
+      <div style="flex:0 0 auto"><button class="btn ghost" id="againWeak">Drill my weak spots</button></div>
+      <div style="flex:0 0 auto"><button class="btn ghost" id="toDash">See dashboard</button></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------ dashboard -->
+  <section id="view-dash" hidden>
+    <h1>Dashboard</h1>
+    <p class="sub">Score per topic over time. Weakest topics sort to the top.</p>
+    <div id="dashBody"></div>
+  </section>
+
+  <!-- ------------------------------------------------ plan -->
+  <section id="view-plan" hidden>
+    <h1>Study plan</h1>
+    <p class="sub">Weighted for the real exam: 80 national questions, 52 Georgia.</p>
+    <div class="card">
+      <div class="row">
+        <div><label for="examDate">Exam date</label><input type="date" id="examDate"></div>
+        <div><label for="masteryDate">Want to be done by</label><input type="date" id="masteryDate"></div>
+        <div style="max-width:150px"><label for="hours">Study hours/week</label>
+          <input type="number" id="hours" min="1" max="40" value="8"></div>
+        <div style="flex:0 0 auto"><button class="btn" id="savePlan">Save &amp; rebuild plan</button></div>
+      </div>
+      <div style="margin-top:14px">
+        <label>Topics you know are weak (these get pushed to the front)</label>
+        <div id="weakPicker" class="grid g3" style="margin-top:6px"></div>
+      </div>
+    </div>
+    <div id="planBody"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

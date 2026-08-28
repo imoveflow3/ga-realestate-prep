@@ -1,0 +1,7 @@
+# your own progress and local runtime noise stay off GitHub
+data/
+*.log
+.DS_Store
+venv/
+__pycache__/
+*.pyc

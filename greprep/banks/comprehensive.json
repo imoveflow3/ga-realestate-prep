@@ -1,0 +1,978 @@
+[
+ {
+  "answer": 1,
+  "choices": [
+   "Encroachment",
+   "Encumbrance",
+   "Escheat",
+   "Estoppel"
+  ],
+  "concept": "Encumbrance vs. encroachment",
+  "difficulty": 2,
+  "explain": "An ENCUMBRANCE is any claim, lien, restriction, or easement limiting the fee. An ENCROACHMENT is the specific case of a physical intrusion. All encroachments are encumbrances; not all encumbrances are physical.",
+  "id": "com-5d4b5380",
+  "portion": "comprehensive",
+  "q": "A charge or claim against property that does not prevent transfer but travels with it is an:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Execution",
+   "Acknowledgment",
+   "Delivery and acceptance",
+   "Recording"
+  ],
+  "concept": "Deed vocabulary in sequence",
+  "difficulty": 2,
+  "explain": "EXECUTION is signing; ACKNOWLEDGMENT is the notary's certification (needed to record); DELIVERY AND ACCEPTANCE is what actually passes title; RECORDING gives constructive notice. Only delivery and acceptance are essential between the parties.",
+  "id": "com-9b9593b0",
+  "portion": "comprehensive",
+  "q": "The written instrument that conveys title is a deed. The act that makes it effective is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A statutory lien",
+   "A general lien",
+   "A voluntary lien",
+   "A specific lien"
+  ],
+  "concept": "Lien classifications are independent axes",
+  "difficulty": 2,
+  "explain": "Liens sort three ways at once: general vs. specific (scope), voluntary vs. involuntary (consent), statutory vs. equitable (source). A judgment lien is general, involuntary, and statutory. A mortgage is specific and voluntary.",
+  "id": "com-cff51bd6",
+  "portion": "comprehensive",
+  "q": "A lien that attaches to all of a debtor's property rather than one specific parcel is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Also a security deposit in every state",
+   "An escrow advance",
+   "A trade fixture",
+   "Prepaid rent, which is generally earned income to the landlord"
+  ],
+  "concept": "Security deposit vs. prepaid rent",
+  "difficulty": 2,
+  "explain": "A security deposit remains the tenant's money held in trust against damage. PREPAID RENT is payment for a specific period and belongs to the landlord when received. Mislabeling one as the other is a common trust-account error.",
+  "id": "com-0d932e16",
+  "portion": "comprehensive",
+  "q": "Money a tenant pays that the landlord holds and may return is a security deposit. Rent paid for the final month in advance is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Right of reverter",
+   "Statutory right of redemption",
+   "Right of first refusal",
+   "Equitable right of redemption"
+  ],
+  "concept": "Two redemption rights",
+  "difficulty": 2,
+  "explain": "The EQUITABLE right runs from default up to the moment of sale. The STATUTORY right, where a state grants one, runs for a period AFTER the sale. The dividing line is the sale itself.",
+  "id": "com-7d548a08",
+  "portion": "comprehensive",
+  "q": "The right of a defaulting borrower to reclaim property AFTER a foreclosure sale is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "A chain of title",
+   "A certificate of title",
+   "A title commitment",
+   "An abstract of title"
+  ],
+  "concept": "Title-evidence vocabulary",
+  "difficulty": 2,
+  "explain": "The ABSTRACT is the condensed history of all recorded instruments. The CHAIN OF TITLE is the ownership sequence within it. A COMMITMENT is the insurer's promise to issue a policy; an attorney's OPINION interprets the abstract.",
+  "id": "com-726d65a6",
+  "portion": "comprehensive",
+  "q": "A written summary of every recorded document affecting a parcel is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Separate property",
+   "Community property",
+   "Tenancy by the entirety",
+   "Homestead property"
+  ],
+  "concept": "Community vs. separate property",
+  "difficulty": 2,
+  "explain": "Property owned before marriage, or received during marriage by gift or inheritance, stays SEPARATE. Community property is what the spouses acquire during marriage through effort. Georgia is not a community property state.",
+  "id": "com-ef53e6b7",
+  "portion": "comprehensive",
+  "q": "Property acquired by one spouse before marriage, in a community property state, is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Subordination",
+   "Acceleration",
+   "Alienation",
+   "Defeasance"
+  ],
+  "concept": "Mortgage clauses that sound alike",
+  "difficulty": 2,
+  "explain": "DEFEASANCE defeats the lien on payment. ACCELERATION calls the balance on default; ALIENATION (due-on-sale) calls it on transfer; SUBORDINATION voluntarily moves a lien to a lower priority.",
+  "id": "com-9eaacb73",
+  "portion": "comprehensive",
+  "q": "The clause in a mortgage requiring the lender to release the lien when the debt is paid is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Estate at will",
+   "Estate at sufferance",
+   "Periodic estate",
+   "Estate for years"
+  ],
+  "concept": "The four leasehold estates",
+  "difficulty": 2,
+  "explain": "A PERIODIC estate (month-to-month) renews automatically until notice. An ESTATE FOR YEARS has a fixed start and end and needs no notice. An ESTATE AT WILL ends at either party's pleasure; SUFFERANCE is a holdover without permission.",
+  "id": "com-eb43c30c",
+  "portion": "comprehensive",
+  "q": "An estate that continues indefinitely and renews automatically until notice is given is a:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Anticipation",
+   "Substitution",
+   "Conformity",
+   "Contribution"
+  ],
+  "concept": "Appraisal principles that are easily swapped",
+  "difficulty": 2,
+  "explain": "CONFORMITY: maximum value arises when properties are reasonably similar. CONTRIBUTION: a component is worth what it adds to the whole, not what it cost. SUBSTITUTION caps value at the cost of an equal alternative; ANTICIPATION values future benefits.",
+  "id": "com-baa996f4",
+  "portion": "comprehensive",
+  "q": "The appraisal principle that a property's value is influenced by the values of surrounding properties is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "An emblement",
+   "A fixture",
+   "A chattel",
+   "A trade fixture"
+  ],
+  "concept": "Real vs. personal property vocabulary",
+  "difficulty": 2,
+  "explain": "A FIXTURE is former personal property now part of the realty. A CHATTEL is personal property generally. EMBLEMENTS are annual crops, treated as personal property of the tenant who planted them. A TRADE FIXTURE stays the commercial tenant's property.",
+  "id": "com-640d0475",
+  "portion": "comprehensive",
+  "q": "Personal property permanently attached to real property becomes:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Mortgage",
+   "Security deed",
+   "Deed of trust",
+   "Land contract"
+  ],
+  "concept": "The two loan documents, Georgia edition",
+  "difficulty": 2,
+  "explain": "The NOTE is the promise to pay; the security instrument pledges the collateral. Georgia uses a SECURITY DEED (deed to secure debt), which transfers legal title to the lender until payoff -- unlike a mortgage, which creates only a lien.",
+  "id": "com-c9ca0d36",
+  "portion": "comprehensive",
+  "q": "The document a buyer signs promising to repay a loan is the note. The document pledging the property as security in Georgia is the:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Satisfaction",
+   "Subrogation",
+   "Substitution",
+   "Subordination"
+  ],
+  "concept": "The 'sub-' words",
+  "difficulty": 2,
+  "explain": "SUBORDINATION voluntarily lowers a lien's priority, commonly so a construction lender can take first position. SUBROGATION is one party stepping into another's legal claim, typical of insurers. SATISFACTION is the recorded proof a debt is paid.",
+  "id": "com-46cf6dbf",
+  "portion": "comprehensive",
+  "q": "A provision allowing a later-recorded lien to take priority over an earlier one is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Book value",
+   "Assessed value",
+   "Insurable value",
+   "Market value"
+  ],
+  "concept": "The many kinds of value",
+  "difficulty": 2,
+  "explain": "ASSESSED value is the tax base, often a set percentage of market value. INSURABLE value covers the improvements only, since land does not burn. Confusing assessed with market value is a persistent exam trap.",
+  "id": "com-c0220954",
+  "portion": "comprehensive",
+  "q": "The measure of a property's value used to compute property taxes is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Estate at will",
+   "Estate at sufferance",
+   "Estate for years",
+   "Periodic estate"
+  ],
+  "concept": "Holdover tenancy",
+  "difficulty": 2,
+  "explain": "SUFFERANCE is the lowest estate: possession without right, but not quite trespass because entry was originally lawful. If the landlord accepts rent, it typically converts to a periodic tenancy.",
+  "id": "com-eee2f4ad",
+  "portion": "comprehensive",
+  "q": "A tenant who remains after the lease ends, without the landlord's consent, holds an:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Proximate cause",
+   "Efficient cause",
+   "Procuring cause",
+   "Ready cause"
+  ],
+  "concept": "Procuring cause",
+  "difficulty": 2,
+  "explain": "PROCURING CAUSE is the uninterrupted chain of events by which a broker produced the buyer. It is the standard used to resolve commission disputes between brokers, usually through arbitration rather than the license law.",
+  "id": "com-0472722d",
+  "portion": "comprehensive",
+  "q": "Compensation paid to a broker who is the direct cause of a completed sale reflects:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Purchase-money mortgage",
+   "Lease option",
+   "Wraparound mortgage",
+   "Land contract"
+  ],
+  "concept": "Seller-financing arrangements",
+  "difficulty": 2,
+  "explain": "A LAND CONTRACT (contract for deed) splits title: seller keeps legal title, buyer holds equitable title and possession. A PURCHASE-MONEY MORTGAGE conveys title at closing with the seller taking back a lien. A LEASE OPTION is a lease plus a right to buy.",
+  "id": "com-f30b9d26",
+  "portion": "comprehensive",
+  "q": "An agreement where the seller retains legal title while the buyer takes possession and pays over time is a:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Accretion",
+   "Avulsion",
+   "Reliction",
+   "Erosion"
+  ],
+  "concept": "Four ways water changes land",
+  "difficulty": 2,
+  "explain": "EROSION is gradual loss; ACCRETION is gradual gain; AVULSION is sudden change, which does NOT alter boundaries; RELICTION is land exposed by permanently receding water.",
+  "id": "com-24042f61",
+  "portion": "comprehensive",
+  "q": "The gradual wearing away of land by water is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Escheat",
+   "Police power",
+   "Taxation",
+   "Eminent domain"
+  ],
+  "concept": "PETE, the four public powers",
+  "difficulty": 2,
+  "explain": "Police power regulates without paying -- zoning, codes, environmental rules. Eminent domain TAKES and must pay. Escheat claims ownerless property; taxation funds government. Only eminent domain requires just compensation.",
+  "id": "com-6688848a",
+  "portion": "comprehensive",
+  "q": "A blanket term for the government's power to regulate land use for health and safety, without compensation, is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Effective gross income",
+   "Cash flow",
+   "Net operating income",
+   "Gross rent"
+  ],
+  "concept": "The income statement in order",
+  "difficulty": 2,
+  "explain": "Potential gross, minus vacancy, equals EFFECTIVE GROSS. Minus operating expenses equals NET OPERATING INCOME. Minus debt service equals CASH FLOW. Debt service is never an operating expense -- a favorite trap in cap rate problems.",
+  "id": "com-ec391831",
+  "portion": "comprehensive",
+  "q": "The dollar amount by which a property's income exceeds operating expenses, before debt service, is:",
+  "topic": "comp/vocabulary"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "End the relationship immediately without explanation",
+   "Explain you cannot select or exclude areas on that basis, and continue on objective criteria",
+   "Show only areas matching the request without comment",
+   "Note the preference and screen listings accordingly"
+  ],
+  "concept": "A client's discriminatory request does not bind you",
+  "difficulty": 2,
+  "explain": "Acting on the request is steering, whoever asked for it. The professional move is to state plainly that you select properties on objective criteria -- price, size, schools, commute -- and continue on that basis. Most buyers accept it.",
+  "id": "com-915c96d8",
+  "portion": "comprehensive",
+  "q": "You are showing a home. The buyer says, 'Before we go further -- I don't want to be in a neighborhood with too many immigrants.' You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Present both without comment, since price is the seller's decision",
+   "Advise the seller to counter both",
+   "Present only the offer you consider stronger",
+   "Present both, with your assessment of each offer's strength and risk"
+  ],
+  "concept": "Presenting offers plus giving advice",
+  "difficulty": 2,
+  "explain": "All offers get presented -- but a client is owed advice, not just paperwork. Highlighting financing risk is exactly the value of representation. Presenting without comment under-serves the client; withholding an offer breaches outright.",
+  "id": "com-b2d26e37",
+  "portion": "comprehensive",
+  "q": "Your seller client receives two offers. One is $5,000 higher but from a buyer whose lender you know to be unreliable. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Stay quiet, since the closing attorney prepared the figures",
+   "Sign and request a correction later",
+   "Raise it immediately, before anyone signs",
+   "Mention it to your client afterward"
+  ],
+  "concept": "Speak up before the signatures",
+  "difficulty": 2,
+  "explain": "Reasonable care obliges you to flag a known error while it can still be fixed cheaply. Deference to the attorney is not a defense when you personally know the number is wrong, and post-closing corrections are far harder to obtain.",
+  "id": "com-ed57dcb7",
+  "portion": "comprehensive",
+  "q": "At the closing table you notice the settlement statement omits a $1,200 repair credit the parties agreed to. Nobody else has caught it. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Disclose the payment, or better, provide several names and take no fee",
+   "Recommend someone else and keep the arrangement",
+   "Let the buyer find their own inspector",
+   "Recommend them, since you know their work"
+  ],
+  "concept": "Referral fees and undisclosed compensation",
+  "difficulty": 2,
+  "explain": "Undisclosed compensation for a referral is a conflict, and in a federally related mortgage transaction a referral fee for settlement services violates RESPA Section 8 outright. Offering several names and declining the fee removes the problem.",
+  "id": "com-ba45ba1c",
+  "portion": "comprehensive",
+  "q": "A buyer client asks you to recommend an inspector. You have a regular referral who pays you $50 per referral. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Complete the form yourself with the information",
+   "Comply -- the disclosure is the seller's document",
+   "Explain it must be disclosed, and end the engagement if the seller refuses",
+   "Leave it off but tell buyers verbally"
+  ],
+  "concept": "You cannot participate in concealment",
+  "difficulty": 2,
+  "explain": "A known defect affecting a major system is material. You never complete the seller's form for them, and you cannot market a property while knowing the disclosure is false. If the seller will not correct it, withdraw.",
+  "id": "com-43f34db0",
+  "portion": "comprehensive",
+  "q": "Your seller tells you the HVAC failed last winter and was patched, then says, 'Don't put that on the disclosure.' You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Hold it, since the buyer asked",
+   "Deposit it promptly unless all parties give written authority to hold it",
+   "Return the check and ask for cash",
+   "Deposit it and let it bounce"
+  ],
+  "concept": "Prompt deposit and written authority",
+  "difficulty": 2,
+  "explain": "Trust funds go in promptly. Any deviation -- holding a check, a postdated check, an interest-bearing account -- needs clear written authority agreed to by ALL parties, not just the buyer, because the seller has an interest in the deposit too.",
+  "id": "com-b30f6348",
+  "portion": "comprehensive",
+  "q": "You receive an earnest money check made out to your brokerage. The buyer asks you to hold it until Friday when their paycheck clears. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Share only an approximate figure",
+   "Share it, since a closed sale price is public information",
+   "Share it only with the seller's permission",
+   "Not disclose it, as it is confidential"
+  ],
+  "concept": "What confidentiality actually covers",
+  "difficulty": 2,
+  "explain": "Confidentiality protects your client's motivations, finances, and negotiating position -- not facts already public. A recorded sale price is public record. Refusing to state public information is not a duty, just unhelpfulness.",
+  "id": "com-e70db283",
+  "portion": "comprehensive",
+  "q": "A past client calls asking what their neighbor's house sold for. The sale was your listing and the price is in the MLS and public records. You may:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Tell the seller's agent privately",
+   "Withdraw from the transaction",
+   "Continue, since the relationship is not yours",
+   "Raise it with your broker and ensure the relationship is disclosed to the seller"
+  ],
+  "concept": "Firm-level conflicts still need disclosure",
+  "difficulty": 2,
+  "explain": "A material relationship between the firm and a party must be disclosed to the other side's principal, regardless of which licensee holds it. Going around your broker to the other agent is not the channel; raising it internally and getting proper disclosure is.",
+  "id": "com-8a4b5f84",
+  "portion": "comprehensive",
+  "q": "Mid-transaction you realize the buyer you are representing is your broker's brother-in-law, and you were not told. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Suggest a smaller amount",
+   "Refuse -- this is loan fraud if concealed from the lender",
+   "Write it, since the parties agreed",
+   "Write it and disclose it only if asked"
+  ],
+  "concept": "Silent second / inflated price schemes",
+  "difficulty": 2,
+  "explain": "Inflating price to extract cash without the lender's knowledge is mortgage fraud, and the licensee who writes it participates. The transaction can be structured legitimately only if every term is fully disclosed to the lender.",
+  "id": "com-5712780c",
+  "portion": "comprehensive",
+  "q": "A buyer asks you to write an offer $20,000 above the contract price with a $20,000 'decorating allowance' back at closing, so they can borrow more. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Decline, explaining you cannot reveal either side's confidential position",
+   "Tell the seller only after an offer is signed",
+   "Tell the seller, who is also your client",
+   "Hint at it without stating the number"
+  ],
+  "concept": "The dual agent's neutrality",
+  "difficulty": 2,
+  "explain": "As a dual agent you hold both sides' confidences and may reveal neither. Hinting is the same disclosure by another route. This is exactly the limitation both parties acknowledged when they consented in writing.",
+  "id": "com-e90dc434",
+  "portion": "comprehensive",
+  "q": "You are a dual agent. The buyer tells you privately they would pay $15,000 more. The seller asks you what the buyer's ceiling is. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Refuse to speak with them further",
+   "Give them your honest opinion",
+   "Explain you represent the seller and cannot advise them on price, and suggest they get their own representation",
+   "Advise them to offer full price"
+  ],
+  "concept": "Customers get honesty, not advice",
+  "difficulty": 2,
+  "explain": "Advising a customer on negotiating strategy against your own client breaches loyalty and can create accidental agency. Telling them to offer full price is self-serving pressure. Clarify your role and point them toward representation.",
+  "id": "com-3d3eb452",
+  "portion": "comprehensive",
+  "q": "An unrepresented buyer at your listing asks, 'Do you think I should offer less than asking?' You represent the seller. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Quietly reimburse the $400 without explanation",
+   "Wait to see if anyone raises it",
+   "Tell your client promptly and work to correct it",
+   "Say nothing, since the closing is final"
+  ],
+  "concept": "Accounting survives closing",
+  "difficulty": 2,
+  "explain": "The duty to account does not end at the closing table. Disclosing your own error is uncomfortable but it is the duty, and errors-and-omissions coverage exists for exactly this. Silent reimbursement hides the error from the person entitled to know.",
+  "id": "com-7be27755",
+  "portion": "comprehensive",
+  "q": "You discover after closing that you miscalculated a proration and your client overpaid $400. Nobody has noticed. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "They may refuse, since it alters the unit",
+   "They must install it themselves",
+   "They may charge a higher deposit",
+   "This is a reasonable modification the tenant may make at their own expense"
+  ],
+  "concept": "Modification vs. accommodation, applied",
+  "difficulty": 2,
+  "explain": "A physical change is a MODIFICATION, permitted at the tenant's expense with possible restoration on move-out. Had the request been to waive a policy -- a no-pets rule for a service animal -- it would be an ACCOMMODATION at the landlord's expense.",
+  "id": "com-3fd0c48e",
+  "portion": "comprehensive",
+  "q": "A tenant applicant with a visual impairment asks whether they may install a doorbell light signal at their own expense. You should tell the landlord:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Terminate the listing",
+   "Present current comparable sales and days-on-market data and discuss options",
+   "Advertise more aggressively at your own cost",
+   "Reduce your commission to compensate"
+  ],
+  "concept": "Advice grounded in evidence",
+  "difficulty": 2,
+  "explain": "Bring data, not opinion or concession. Comparables and market absorption reframe the conversation around the market rather than blame, and give the seller a real basis to decide between a price change, staging, or waiting.",
+  "id": "com-073a656c",
+  "portion": "comprehensive",
+  "q": "Your listing has been on the market 90 days with no offers. The seller refuses to lower the price and blames your marketing. The most professional response is:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Lend it but say nothing",
+   "Suggest they use a colleague's instead",
+   "Refuse and inform your broker -- practising on an expired license is unlicensed activity",
+   "Lend it, as a courtesy"
+  ],
+  "concept": "Unlicensed activity implicates the firm",
+  "difficulty": 2,
+  "explain": "Practising on an expired license is unlicensed activity, and helping conceal it exposes you and the broker. The broker must know, because supervision failures are charged against the firm as well as the individual.",
+  "id": "com-cd9d106e",
+  "portion": "comprehensive",
+  "q": "A licensee in your office asks you to hold their pocket card while they meet a client, because theirs expired last week. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Say nothing, since the buyer chose to waive",
+   "Order an inspection anyway",
+   "Document your recommendation to inspect in writing, and disclose what you actually observe",
+   "Refuse to write the offer"
+  ],
+  "concept": "Waiver does not erase your duty",
+  "difficulty": 2,
+  "explain": "The buyer may waive an inspection; you may not waive disclosure of what you actually know or see. Putting your recommendation in writing protects the buyer's decision-making and your own position if the roof fails later.",
+  "id": "com-878660c7",
+  "portion": "comprehensive",
+  "q": "A buyer waives the inspection to win a bidding war. You believe the roof is near the end of its life. You should:",
+  "topic": "comp/situational"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "75-hour prelicense, then 24 hours CE annually",
+   "60-hour prelicense, then 30-hour postlicense, then 36 hours CE per 4 years",
+   "75-hour prelicense, then 25-hour postlicense within one year, then 24 hours CE per 4 years",
+   "25-hour prelicense, then 75-hour postlicense, then 24 hours CE per 4 years"
+  ],
+  "concept": "The three education stages",
+  "difficulty": 2,
+  "explain": "75 hours before licensure; 25 hours of postlicense inside the first year; then at least 24 hours of CE per four-year renewal period. The 75/25 numbers are frequently transposed, and the CE figure is often misquoted as 36.",
+  "id": "com-4379b0cd",
+  "portion": "comprehensive",
+  "q": "Georgia's education requirements, in order for a salesperson, are:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The accounts be consolidated into one",
+   "Each account be interest-bearing",
+   "Only the earnest money account be registered",
+   "Each account be bank-designated as trust and registered with the Commission, with the broker holding signatory power"
+  ],
+  "concept": "Multiple trust accounts",
+  "difficulty": 2,
+  "explain": "Brokers must have at least one and may have more. Every one must be designated as a trust or escrow account by the BANK, registered with GREC on Commission forms, and carry the broker's signatory power.",
+  "id": "com-0fc9e99d",
+  "portion": "comprehensive",
+  "q": "A Georgia broker maintains three trust accounts: earnest money, rents, and security deposits. GREC requires that:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "At the next renewal",
+   "Verbally to an investigator",
+   "In writing, on Commission forms, when the change occurs",
+   "Only if the account number changes"
+  ],
+  "concept": "Trust account change notifications",
+  "difficulty": 2,
+  "explain": "Written notice on Commission forms is required when the bank changes, the account name or number changes, the bank changes names, or the account closes. A letter satisfies the requirement, but it must be in writing.",
+  "id": "com-b939f102",
+  "portion": "comprehensive",
+  "q": "A Georgia broker changes banks. The broker must notify GREC:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Only on a sworn written complaint from a transaction party",
+   "Only at the request of the Attorney General",
+   "On a sworn written request from anyone, or on the Commission's own motion",
+   "Only after a civil judgment"
+  ],
+  "concept": "Who can start a GREC case",
+  "difficulty": 2,
+  "explain": "Anyone may file a sworn written request, and the Commission may also act on its own motion -- so an audit finding or a news report can start a case with no complainant at all. The licensee is notified that they are under investigation.",
+  "id": "com-e2f363b0",
+  "portion": "comprehensive",
+  "q": "GREC may initiate an investigation:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Only the sanction",
+   "Findings of fact, conclusions of law, and a sanction, with no hearing held",
+   "A hearing date",
+   "The amount of consumer restitution"
+  ],
+  "concept": "What a consent settlement contains",
+  "difficulty": 2,
+  "explain": "The respondent and Commission agree on specific findings of fact, conclusions of law, and a sanction, and no hearing is held. Restitution is never part of it, because GREC has no power to order repayment of losses.",
+  "id": "com-d3f67a1d",
+  "portion": "comprehensive",
+  "q": "In a GREC consent settlement, the parties agree on:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Affiliate with an out-of-state broker only",
+   "Not do so -- affiliation is mandatory",
+   "Apply for inactive status, paying fees and still meeting postlicense education",
+   "Practise independently"
+  ],
+  "concept": "Inactive status",
+  "difficulty": 2,
+  "explain": "A licensee who passes the exam may go inactive rather than affiliate, but must still pay the license and renewal fees and complete the postlicense requirement. Inactive licensees may not perform licensed activity.",
+  "id": "com-e1c14f69",
+  "portion": "comprehensive",
+  "q": "A Georgia licensee wishes to hold their license without affiliating with a broker. They may:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Obtain a waiver from the Commission",
+   "Be licensed at home first",
+   "Take only the state portion of the exam",
+   "Meet the same requirements Georgia imposes on residents and affiliate with a GREC-licensed broker"
+  ],
+  "concept": "Nonresident licensure",
+  "difficulty": 2,
+  "explain": "Such an applicant completes the full Georgia requirements and must affiliate with a broker licensed by GREC -- who may themselves be a resident or nonresident. Georgia's postlicense and CE requirements apply to nonresidents too.",
+  "id": "com-bf5d9d58",
+  "portion": "comprehensive",
+  "q": "A nonresident applying for a Georgia salesperson license who holds no license in their home state must:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Decide the dispute and order payment",
+   "Not resolve it -- commission disputes go to arbitration or the courts",
+   "Suspend both licenses pending resolution",
+   "Split the commission equally"
+  ],
+  "concept": "What GREC does not do",
+  "difficulty": 2,
+  "explain": "GREC administers the license law, makes rules, investigates, and disciplines. It does not adjudicate money disputes between licensees, and it cannot order anyone to pay. Procuring-cause disputes go to association arbitration or civil court.",
+  "id": "com-f8011a38",
+  "portion": "comprehensive",
+  "q": "Two Georgia brokers dispute which of them is entitled to a commission. GREC will:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Their affiliated broker only",
+   "The closing attorney",
+   "Another licensee who refers business",
+   "Any party to the transaction"
+  ],
+  "concept": "The flow of compensation",
+  "difficulty": 2,
+  "explain": "A salesperson works through the broker and may only be paid by that broker. Accepting money directly from a client, another licensee, or a settlement provider is a license law violation, however the parties label it.",
+  "id": "com-90098ac2",
+  "portion": "comprehensive",
+  "q": "A Georgia salesperson may lawfully accept compensation for licensed activity from:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Become part of the broker's estate for the heirs",
+   "Escheat to the state",
+   "Are divided among the broker's creditors",
+   "Are not part of the estate and remain the clients' property"
+  ],
+  "concept": "Why the trust account exists",
+  "difficulty": 2,
+  "explain": "The InfoBase lists this as a core purpose: properly maintained trust funds stay outside the broker's estate on death, are not subject to garnishment on a judgment against the broker, and do not go to creditors in bankruptcy.",
+  "id": "com-aadc0f3b",
+  "portion": "comprehensive",
+  "q": "A Georgia broker dies with $80,000 of client funds in a properly maintained trust account. Those funds:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Permitted only under strict disclosure conditions",
+   "Permitted only for commercial property",
+   "The default listing form",
+   "Illegal in all circumstances"
+  ],
+  "concept": "Net listings in Georgia",
+  "difficulty": 2,
+  "explain": "Georgia permits net listings under strict disclosure, unlike states that ban them outright. They remain disfavored because the broker profits from every dollar above the seller's stated net -- a direct conflict with the client's interest.",
+  "id": "com-3d16112c",
+  "portion": "comprehensive",
+  "q": "A net listing in Georgia is:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Identify the brokerage firm and not be misleading",
+   "Be pre-approved by GREC",
+   "Appear only in the MLS",
+   "Use the licensee's name only"
+  ],
+  "concept": "Advertising rules",
+  "difficulty": 2,
+  "explain": "Advertising must name the firm and must not mislead. A licensee may never advertise so as to imply they operate independently of their broker -- a growing issue with personal branding and social media.",
+  "id": "com-87448fe5",
+  "portion": "comprehensive",
+  "q": "A Georgia broker's advertising must:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Appeals the suspension",
+   "Ceases all activity for the suspension period",
+   "Immediately designates a new qualifying broker",
+   "Transfers the license to a salesperson"
+  ],
+  "concept": "Suspension of a qualifying broker",
+  "difficulty": 2,
+  "explain": "If the corporation or LLC immediately designates a replacement qualifying broker, it may continue and keep its wall certificate and its affiliates' licenses. Otherwise the firm's license and all affiliated licenses are suspended for the same period.",
+  "id": "com-2e53f43c",
+  "portion": "comprehensive",
+  "q": "A suspended Georgia qualifying broker's corporation may keep operating if it:",
+  "topic": "comp/grec-deep"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Debit to the buyer",
+   "Credit to the seller",
+   "Debit to the seller",
+   "Credit to the buyer"
+  ],
+  "concept": "Debits and credits, buyer's side",
+  "difficulty": 2,
+  "explain": "The buyer already paid it, so it reduces what they owe at the table -- a CREDIT to the buyer. It is not a seller credit; the money never belonged to the seller. Debits increase what a party owes; credits reduce it.",
+  "id": "com-74e4aaad",
+  "portion": "comprehensive",
+  "q": "On a settlement statement, the buyer's earnest money deposit already held by the broker appears as a:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A credit to both",
+   "A debit to the buyer and a credit to the seller",
+   "A credit to the buyer and a debit to the seller",
+   "A debit to both"
+  ],
+  "concept": "The single largest line",
+  "difficulty": 2,
+  "explain": "The buyer owes the price (debit to buyer); the seller is owed it (credit to seller). Every prorated item then adjusts around this anchor. Reversing it inverts the entire statement.",
+  "id": "com-2f1e52fe",
+  "portion": "comprehensive",
+  "q": "The sale price appears on a settlement statement as:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "A debit to the seller",
+   "A credit to the seller",
+   "A debit to the buyer",
+   "A credit to the buyer"
+  ],
+  "concept": "Seller's payoff",
+  "difficulty": 2,
+  "explain": "The payoff comes out of the seller's proceeds -- a DEBIT to the seller. It does not touch the buyer's side at all unless the buyer is assuming the loan, in which case it becomes a buyer credit and seller debit instead.",
+  "id": "com-8225ecab",
+  "portion": "comprehensive",
+  "q": "A seller's existing loan payoff of $184,000 appears as:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Seller credit / buyer debit of $2,880",
+   "Seller debit / buyer credit of $2,880",
+   "Seller debit / buyer credit of $1,440",
+   "Seller credit / buyer debit of $1,440"
+  ],
+  "concept": "Unpaid taxes reverse the direction",
+  "difficulty": 2,
+  "explain": "Eight months elapsed x $360/month = $2,880 the seller owes. Because the bill is UNPAID and the buyer will pay it all later, the seller is debited and the buyer credited. Prepaid taxes would reverse both signs.",
+  "id": "com-1df6fd9f",
+  "portion": "comprehensive",
+  "q": "Annual taxes of $4,320 are unpaid. Closing is September 1, with the seller responsible through August 31 in a 360-day year. The entry is:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A debit to both",
+   "Not entered on the statement",
+   "A seller debit and buyer credit",
+   "A buyer debit and seller credit"
+  ],
+  "concept": "Accrued interest on an assumed loan",
+  "difficulty": 2,
+  "explain": "Mortgage interest is paid in ARREARS, so the seller has used the money but not yet paid the interest. The seller is debited and the buyer credited, because the buyer will make the payment covering that period.",
+  "id": "com-b79a77b8",
+  "portion": "comprehensive",
+  "q": "A buyer assumes the seller's loan with a $312 accrued interest balance owed for the current month. At closing this is:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A buyer debit and seller credit",
+   "Returned to the tenant",
+   "A seller debit and buyer credit",
+   "Not shown on the statement"
+  ],
+  "concept": "Security deposits transfer with the property",
+  "difficulty": 2,
+  "explain": "The deposit belongs to the tenant, and the new owner inherits the obligation to return it. So the seller is debited and the buyer credited. The tenant is not paid at closing -- the duty simply moves to the buyer.",
+  "id": "com-d6ddd16d",
+  "portion": "comprehensive",
+  "q": "A tenant's $1,500 security deposit on a property being sold is handled at closing as:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Seller credit and buyer debit of $400",
+   "Seller credit and buyer debit of $560",
+   "Seller debit and buyer credit of $400",
+   "No entry -- policies do not transfer"
+  ],
+  "concept": "Prepaid items reimburse the seller",
+  "difficulty": 2,
+  "explain": "$960 / 12 = $80 per month x 5 remaining = $400 of coverage the buyer will enjoy but the seller paid for. The seller is reimbursed: seller CREDIT, buyer DEBIT. Prepaid always runs the opposite direction from unpaid.",
+  "id": "com-b08be823",
+  "portion": "comprehensive",
+  "q": "A seller has prepaid a $960 annual insurance policy the buyer will assume, with 5 months remaining. The entry is:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "$2,400",
+   "$4,250",
+   "$24,000",
+   "$1,850"
+  ],
+  "concept": "Reading loan charges together",
+  "difficulty": 2,
+  "explain": "Origination = 1% x $240,000 = $2,400. Plus $1,850 in other charges = $4,250 debited to the buyer. The origination fee is a percentage of the LOAN, not the sale price -- the same trap as discount points.",
+  "id": "com-039785af",
+  "portion": "comprehensive",
+  "q": "A buyer's loan is $240,000 with a 1% origination fee and $1,850 in other lender charges. The buyer's total lender debits are:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Recording the deed",
+   "The new loan amount",
+   "The broker's commission",
+   "The sale price"
+  ],
+  "concept": "The new loan is buyer money",
+  "difficulty": 2,
+  "explain": "The lender's funds are applied toward what the buyer owes, so the new loan is a buyer CREDIT. The sale price is a buyer debit; commission is normally a seller debit; recording fees are typically buyer debits.",
+  "id": "com-31bcffa0",
+  "portion": "comprehensive",
+  "q": "Which item is normally a credit to the BUYER on a settlement statement?",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$4,150",
+   "$41.50",
+   "$415,000",
+   "$415"
+  ],
+  "concept": "Georgia transfer tax on the statement",
+  "difficulty": 2,
+  "explain": "$1.00 per $1,000 of consideration: $415,000 / 1,000 = 415, so $415. It is customarily a SELLER debit and is collected by the clerk of superior court when the deed is recorded.",
+  "id": "com-b5620ead",
+  "portion": "comprehensive",
+  "q": "A Georgia sale closes at $415,000. The transfer tax the seller is debited is:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "$118,600",
+   "$340,000",
+   "$221,400",
+   "$561,400"
+  ],
+  "concept": "Reading the bottom line",
+  "difficulty": 2,
+  "explain": "Seller credits minus seller debits: $340,000 - $221,400 = $118,600 walking-away money. Every proration and payoff feeds one of those two columns, which is why direction matters more than arithmetic.",
+  "id": "com-67fdc60e",
+  "portion": "comprehensive",
+  "q": "A seller's gross proceeds are $340,000 with total debits of $221,400. The seller's net at closing is:",
+  "topic": "comp/closing-math"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "Seller credit / buyer debit of $1,400",
+   "Seller debit / buyer credit of $1,400",
+   "No entry required",
+   "Seller debit / buyer credit of $700"
+  ],
+  "concept": "Rent runs opposite to taxes",
+  "difficulty": 2,
+  "explain": "Days 11 through 30 = 20 days x $70/day = $1,400 belonging to the buyer. The seller is holding the cash, so the seller is DEBITED and the buyer credited -- the reverse of an unpaid tax proration.",
+  "id": "com-b3d34cdc",
+  "portion": "comprehensive",
+  "q": "Rent of $2,100 for a 30-day month was collected by the seller on the 1st. Closing is on the 11th, with the buyer owning from closing day. The entry is:",
+  "topic": "comp/closing-math"
+ }
+]
