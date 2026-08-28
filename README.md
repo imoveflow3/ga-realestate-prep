@@ -3,27 +3,38 @@
 A study app for the Georgia real estate **salesperson** licensing exam (PSI):
 80 national questions + 52 Georgia state questions, 75% to pass.
 
-Runs as a private page on claude.ai from any device, or on your own machine
-with nothing but the Python 3 that ships with macOS. No third-party packages
-either way.
+Runs at a public web address, as a private page on claude.ai, or on your own
+machine with nothing but the Python 3 that ships with macOS. No third-party
+packages any way you run it.
 
-## Two ways to use it
+## Three ways to use it
 
-**Online (any device, nothing to start):**
+**Public web address (open it anywhere, no sign-in):**
+<https://imoveflow3.github.io/ga-realestate-prep/>
+
+Served by GitHub Pages from `docs/index.html`. Works in any browser on any
+device -- bookmark it, or add it to your phone's home screen and it opens like
+an app. This is the one to use day to day.
+
+**Private page on claude.ai:**
 <https://claude.ai/code/artifact/c0451a46-499d-4471-9b9a-d2b3ce5cb9ad>
 
-One self-contained page holding all 1,402 questions. Works on your phone while
-signed in to claude.ai, and stays private unless you share it. Progress is
+The same app, private to your account. Only opens on a device where you are
+signed in to claude.ai -- elsewhere it shows "Page not found" rather than a
+login prompt.
+
+Both are one self-contained page holding all 1,402 questions. Progress is
 stored in that browser, so each device keeps its own history -- use
 **Setup -> Export / Import** to move it between them.
 
-After changing questions or the math generators, rebuild and republish:
+To publish changes to the public site:
 
 ```bash
-python3 ~/ga-realestate-prep/tools/build_online.py
+cd ~/ga-realestate-prep && python3 tools/build_online.py && git add -A && git commit -m "update questions" && git push
 ```
 
-Then republish `online/ga-real-estate.html` to the same URL.
+GitHub Pages redeploys in about a minute. To update the claude.ai page as well,
+republish `online/ga-real-estate.html` to the same artifact URL.
 
 **Locally:**
 
@@ -135,7 +146,8 @@ Deleting the file resets everything.
 
 ```
 server.py             HTTP server + JSON API (stdlib only)
-online/               the single-file build: shell.html, style.css, engine.js, ui.js
+online/               single-file build sources + the Artifact fragment
+docs/index.html       the standalone build GitHub Pages serves
 greprep/
   topics.py           exam structure and per-topic weights
   questions.py        bank loading, weak-spot selection, mock exam blueprint
@@ -147,6 +159,7 @@ web/                  index.html, style.css, app.js
 tools/
   build_banks.py      rebuilds banks/*.json from the _*.py sources
   build_online.py     bundles everything into online/ga-real-estate.html
+                      (Artifact fragment) and docs/index.html (standalone)
   _national_*.py      national questions, readable and diffable
   _national_hard_*.py the national hard tier
   _georgia_*.py       Georgia questions
