@@ -1,4 +1,5 @@
 """Local JSON persistence for profile, attempts, and per-topic history."""
+import datetime
 import json
 import os
 import tempfile
@@ -142,6 +143,95 @@ def trend_series(data):
                 "seen": v["seen"],
             })
     return series
+
+
+def _slice_stats(rows):
+    """rows: [{'seen','correct'}] in attempt order -> totals, recent, and trend."""
+    qs = sum(r["seen"] for r in rows)
+    corr = sum(r["correct"] for r in rows)
+    recent = rows[-3:]
+    rq = sum(r["seen"] for r in recent)
+    rc = sum(r["correct"] for r in recent)
+    trend = None
+    if len(rows) >= 2:
+        half = rows[:max(1, len(rows) // 2)]
+        hq = sum(r["seen"] for r in half)
+        hc = sum(r["correct"] for r in half)
+        if hq and rq:
+            trend = (rc / float(rq)) - (hc / float(hq))
+    return {"sets": len(rows), "qs": qs, "correct": corr,
+            "pct": (corr / float(qs)) if qs else None,
+            "recent_pct": (rc / float(rq)) if rq else None,
+            "trend": trend}
+
+
+def topic_table(data):
+    """One row per topic, in exam order, with per-attempt history folded in."""
+    hist = {}
+    for att in data["attempts"]:
+        for tkey, v in (att.get("topics") or {}).items():
+            if v.get("seen"):
+                hist.setdefault(tkey, []).append(v)
+    rows = []
+    for key in topics.ORDER:
+        portion, label, weight, blurb = topics.TOPICS[key]
+        st = _slice_stats(hist.get(key, []))
+        st.update({"topic": key, "portion": portion, "label": label,
+                   "exam_questions": weight,
+                   "counts_on_exam": topics.counts_on_exam(key)})
+        rows.append(st)
+    return rows
+
+
+def section_table(data):
+    """One row per section, folding every attempt that touched it."""
+    names = {"national": "National", "georgia": "Georgia state",
+             "comprehensive": "Comprehensive"}
+    out = []
+    for portion in ("national", "georgia", "comprehensive"):
+        keys = set(topics.portion_topics(portion))
+        rows = []
+        for att in data["attempts"]:
+            seen = corr = 0
+            for tkey, v in (att.get("topics") or {}).items():
+                if tkey in keys:
+                    seen += v["seen"]
+                    corr += v["correct"]
+            if seen:
+                rows.append({"seen": seen, "correct": corr})
+        st = _slice_stats(rows)
+        st.update({"portion": portion, "name": names[portion],
+                   "scored": topics.PORTIONS[portion].get("scored", 0)})
+        out.append(st)
+    return out
+
+
+def headline(data):
+    """The readout strip: standing on the two scored portions only."""
+    keys = set(topics.portion_topics("national")) | set(topics.portion_topics("georgia"))
+    rows = []
+    for att in data["attempts"]:
+        seen = corr = 0
+        for tkey, v in (att.get("topics") or {}).items():
+            if tkey in keys:
+                seen += v["seen"]
+                corr += v["correct"]
+        if seen:
+            rows.append({"seen": seen, "correct": corr})
+    st = _slice_stats(rows)
+    answered = sum(a["count"] for a in data["attempts"])
+    days = None
+    exam = (data.get("profile") or {}).get("exam_date")
+    if exam:
+        try:
+            d = datetime.datetime.strptime(str(exam)[:10], "%Y-%m-%d").date()
+            days = (d - datetime.date.today()).days
+        except ValueError:
+            days = None
+    return {"exam_pct": st["recent_pct"], "trend": st["trend"],
+            "sets": len(data["attempts"]), "answered": answered,
+            "days_out": days,
+            "passing": st["recent_pct"] is not None and st["recent_pct"] >= 0.75}
 
 
 def generator_report(data):

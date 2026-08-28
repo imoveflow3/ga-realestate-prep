@@ -510,82 +510,203 @@ function sparkline(points, w, h){
   return svg;
 }
 
+function cardHead(title, hint){
+  var h = el('div', 'cardhead');
+  h.appendChild(el('h2', null, title));
+  if (hint) h.appendChild(el('span', 'hint', hint));
+  return h;
+}
+function accuracyCell(p){
+  var td = el('td'), track = el('div', 'bar-track');
+  var fill = el('div', 'bar-fill ' + band(p));
+  fill.style.width = Math.round((p || 0) * 100) + '%';
+  track.appendChild(fill); td.appendChild(track);
+  return td;
+}
+function trendCell(trend){
+  if (trend === null || trend === undefined) return el('td', 'num muted', '—');
+  var pts = Math.round(trend * 100);
+  var td = el('td', 'num ' + (pts > 0 ? 'up' : (pts < 0 ? 'down' : '')));
+  td.textContent = (pts > 0 ? '+' : '') + pts;
+  return td;
+}
+function actionCell(label, fn){
+  var td = el('td');
+  var b = el('button', 'btn mini' + (label === 'START' ? ' ghost' : ''), label);
+  b.onclick = fn; td.appendChild(b);
+  return td;
+}
+function statRow(cells){
+  var tr = el('tr');
+  cells.forEach(function(c){ tr.appendChild(c); });
+  return tr;
+}
+
 function renderDash(){
   var box = $('dashBody');
   box.innerHTML = '';
+
+  var h = PROGRESS.headline || {};
+  var strip = el('div', 'card'), rd = el('div', 'readouts');
+  [['Exam readiness', h.exam_pct == null ? '—' : pct(h.exam_pct),
+    h.exam_pct == null ? 'no data yet' : (h.passing ? 'at or above the 75% pass mark'
+                                                    : 'below the 75% pass mark')],
+   ['Trend', h.trend == null ? '—' : ((h.trend > 0 ? '+' : '') + Math.round(h.trend * 100)),
+    'points, recent vs earlier'],
+   ['Sets', String(h.sets || 0), (h.sets === 1 ? 'quiz taken' : 'quizzes taken')],
+   ['Answered', String(h.answered || 0), 'questions total'],
+   ['Days out', h.days_out == null ? '—' : String(h.days_out),
+    h.days_out == null ? 'set an exam date' : 'until your exam']
+  ].forEach(function(r){
+    var d = el('div', 'readout');
+    d.appendChild(el('div', 'eyebrow', r[0]));
+    var val = el('div', 'stat', r[1]);
+    if (r[0] === 'Exam readiness' && h.exam_pct != null)
+      val.className = 'stat ' + (h.passing ? 'good' : 'bad');
+    d.appendChild(val);
+    d.appendChild(el('div', 'muted', r[2]));
+    rd.appendChild(d);
+  });
+  strip.appendChild(rd); box.appendChild(strip);
+
   if (!PROGRESS.total_attempts){
-    var c = el('div', 'card');
-    c.appendChild(el('div', 'empty', 'No attempts recorded yet. Take a quiz first.'));
-    box.appendChild(c); return;
+    var e = el('div', 'card');
+    e.appendChild(el('div', 'empty',
+      'No attempts recorded yet. Take a quiz and every table below fills in.'));
+    box.appendChild(e); return;
   }
-  var head = el('div', 'card');
-  var g = el('div', 'grid g3');
-  var NAMES = {national:'National portion', georgia:'Georgia portion',
-               comprehensive:'Comprehensive subtest'};
-  ['national', 'georgia', 'comprehensive'].forEach(function(p){
-    var s = PROGRESS.portions[p] || {};
-    var d = el('div');
-    d.appendChild(el('div', 'muted', NAMES[p]));
-    d.appendChild(el('div', 'stat', pct(s.recent_pct)));
-    var note = s.attempts ? (s.attempts + ' attempts, ' + s.questions + ' questions') : 'no attempts yet';
-    if (s.trend !== null && s.trend !== undefined){
-      note += ' | trend ' + (s.trend >= 0 ? '+' : '') + Math.round(s.trend * 100) + ' pts';
-    }
-    d.appendChild(el('div', 'muted', note));
-    g.appendChild(d);
-  });
-  var d3 = el('div');
-  d3.appendChild(el('div', 'muted', 'Total attempts'));
-  d3.appendChild(el('div', 'stat', String(PROGRESS.total_attempts)));
-  g.appendChild(d3);
-  head.appendChild(g);
-  box.appendChild(head);
 
-  var card = el('div', 'card');
-  card.appendChild(el('h2', null, 'Score trend by topic'));
-  card.appendChild(el('p', 'muted',
-    'Each point is one quiz that included the topic. Dashed line is the 75% pass mark.'));
-  var any = false;
-  (PROGRESS.topics || []).forEach(function(t){
-    var series = (PROGRESS.trends || {})[t.topic];
-    if (!series || !series.length) return;
-    any = true;
-    var row = el('div');
-    row.style.cssText = 'display:flex;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)';
-    var left = el('div'); left.style.cssText = 'flex:1;min-width:150px';
-    var name = el('div');
-    name.appendChild(el('b', null, t.label));
+  var sec = el('div', 'card');
+  sec.appendChild(cardHead('Sections', 'recent accuracy'));
+  var st = el('table', 'stats');
+  st.innerHTML = '<tr><th>Section</th><th class="num">Sets</th><th class="num">Qs</th>' +
+                 '<th class="num">Recent</th><th></th><th class="num">Trend</th><th></th></tr>';
+  (PROGRESS.sections || []).forEach(function(r){
+    var name = el('td');
+    name.appendChild(el('b', null, r.name));
     name.appendChild(document.createTextNode(' '));
-    name.appendChild(tagFor(t.portion));
-    left.appendChild(name);
-    left.appendChild(el('div', 'muted', pct(t.pct) + ' overall, ' + t.seen +
-                        ' questions | worth ' + t.exam_questions + ' on the exam'));
-    var right = el('div');
-    right.style.color = 'var(--accent)';
-    right.appendChild(sparkline(series, 280, 84));
-    row.appendChild(left); row.appendChild(right);
-    card.appendChild(row);
+    name.appendChild(r.scored ? el('span', 'tag', r.scored + ' on exam')
+                              : el('span', 'tag comp', 'drill'));
+    st.appendChild(statRow([
+      name, el('td', 'num', String(r.sets)), el('td', 'num', String(r.qs)),
+      el('td', 'num', r.recent_pct == null ? '—' : pct(r.recent_pct)),
+      accuracyCell(r.recent_pct), trendCell(r.trend),
+      actionCell(r.sets ? 'DRILL' : 'START', (function(p, has){
+        return function(){
+          startQuiz({portion: p, count: 20, weak_spot: has, timed: true, difficulty: 'harder'});
+        };
+      })(r.portion, !!r.sets))
+    ]));
   });
-  if (!any) card.appendChild(el('div', 'empty', 'Take a couple of quizzes to see trends.'));
-  box.appendChild(card);
+  var sw = el('div', 'scroll'); sw.appendChild(st); sec.appendChild(sw);
+  box.appendChild(sec);
 
-  var mc = el('div', 'card');
-  mc.appendChild(el('h2', null, 'Math by problem type'));
-  var mt = el('table');
-  mt.innerHTML = '<tr><th>Type</th><th class="num">Correct</th><th class="num">Score</th></tr>';
-  var seenAny = false;
-  (PROGRESS.generators || []).forEach(function(gn){
-    if (!gn.seen) return;
-    seenAny = true;
-    var tr = el('tr');
-    tr.appendChild(el('td', null, gn.label));
-    tr.appendChild(el('td', 'num', gn.correct + '/' + gn.seen));
-    tr.appendChild(el('td', 'num', pct(gn.pct)));
-    mt.appendChild(tr);
+  var tc = el('div', 'card');
+  tc.appendChild(cardHead('Topics', 'badge is questions on the real exam'));
+  var tt = el('table', 'stats');
+  tt.innerHTML = '<tr><th>Topic</th><th class="num">Sets</th><th class="num">Qs</th>' +
+                 '<th class="num">Recent</th><th></th><th class="num">Trend</th><th></th></tr>';
+  var last = null;
+  (PROGRESS.topic_table || []).forEach(function(r){
+    if (r.portion !== last){
+      last = r.portion;
+      var hr = el('tr', 'grouprow');
+      var cell = el('td', null, {national:'National portion', georgia:'Georgia state portion',
+                                 comprehensive:'Comprehensive subtest'}[r.portion]);
+      cell.colSpan = 7; hr.appendChild(cell); tt.appendChild(hr);
+    }
+    var name = el('td');
+    name.appendChild(document.createTextNode(r.label + ' '));
+    name.appendChild(r.counts_on_exam ? el('span', 'tag', String(r.exam_questions))
+                                      : el('span', 'tag comp', 'drill'));
+    tt.appendChild(statRow([
+      name, el('td', 'num', String(r.sets)), el('td', 'num', String(r.qs)),
+      el('td', 'num', r.recent_pct == null ? '—' : pct(r.recent_pct)),
+      accuracyCell(r.recent_pct), trendCell(r.trend),
+      actionCell(r.sets ? 'DRILL' : 'START', (function(t, p){
+        return function(){
+          startQuiz({portion: p, count: 15, topic: t, timed: false, difficulty: 'harder'});
+        };
+      })(r.topic, r.portion))
+    ]));
   });
-  if (seenAny) mc.appendChild(mt);
-  else mc.appendChild(el('div', 'empty', 'No math attempts yet.'));
+  var tw = el('div', 'scroll'); tw.appendChild(tt); tc.appendChild(tw);
+  box.appendChild(tc);
+
+  var weak = (PROGRESS.topics || []).filter(function(r){ return r.seen >= 3; })
+    .sort(function(a, b){
+      if (a.pct !== b.pct) return a.pct - b.pct;
+      return b.exam_questions - a.exam_questions;
+    }).slice(0, 8);
+  var wc = el('div', 'card');
+  wc.appendChild(cardHead('Weakest topics', 'what weak-spot mode targets'));
+  if (!weak.length){
+    wc.appendChild(el('div', 'empty',
+      'Answer at least 3 questions in a topic and it is ranked here.'));
+  } else {
+    var wt = el('table', 'stats');
+    wt.innerHTML = '<tr><th>Topic</th><th>Section</th><th class="num">Correct</th>' +
+                   '<th class="num">Accuracy</th><th></th><th></th></tr>';
+    weak.forEach(function(r){
+      var sc = el('td'); sc.appendChild(tagFor(r.portion));
+      wt.appendChild(statRow([
+        el('td', null, r.label), sc,
+        el('td', 'num', r.correct + '/' + r.seen),
+        el('td', 'num', pct(r.pct)), accuracyCell(r.pct),
+        actionCell('DRILL', (function(t, p){
+          return function(){
+            startQuiz({portion: p, count: 15, topic: t, timed: false, difficulty: 'harder'});
+          };
+        })(r.topic, r.portion))
+      ]));
+    });
+    var ww = el('div', 'scroll'); ww.appendChild(wt); wc.appendChild(ww);
+  }
+  box.appendChild(wc);
+
+  var mrows = (PROGRESS.generators || []).filter(function(x){ return x.seen; });
+  var mc = el('div', 'card');
+  mc.appendChild(cardHead('Math by problem type', 'weakest first'));
+  if (!mrows.length){
+    mc.appendChild(el('div', 'empty', 'No math attempts yet.'));
+  } else {
+    var mt = el('table', 'stats');
+    mt.innerHTML = '<tr><th>Type</th><th class="num">Correct</th>' +
+                   '<th class="num">Accuracy</th><th></th><th></th></tr>';
+    mrows.forEach(function(x){
+      mt.appendChild(statRow([
+        el('td', null, x.label), el('td', 'num', x.correct + '/' + x.seen),
+        el('td', 'num', pct(x.pct)), accuracyCell(x.pct),
+        actionCell('DRILL', (function(k){
+          return function(){ startQuiz({portion:'math', count:10, topic:k, timed:false}); };
+        })(x.key))
+      ]));
+    });
+    var mw = el('div', 'scroll'); mw.appendChild(mt); mc.appendChild(mw);
+  }
   box.appendChild(mc);
+
+  var series = PROGRESS.trends || {};
+  var hasTrend = Object.keys(series).some(function(k){ return series[k].length >= 2; });
+  if (hasTrend){
+    var trc = el('div', 'card');
+    trc.appendChild(cardHead('Score trend over time', 'dashed line is the 75% pass mark'));
+    (PROGRESS.topics || []).forEach(function(t){
+      var sd = series[t.topic];
+      if (!sd || sd.length < 2) return;
+      var row = el('div', 'trendrow'), who = el('div', 'who'), name = el('div');
+      name.appendChild(el('b', null, t.label));
+      name.appendChild(document.createTextNode(' '));
+      name.appendChild(tagFor(t.portion));
+      who.appendChild(name);
+      who.appendChild(el('div', 'muted', pct(t.pct) + ' overall, ' + t.seen + ' questions'));
+      row.appendChild(who);
+      var chart = el('div'); chart.style.color = 'var(--accent)';
+      chart.appendChild(sparkline(sd, 280, 84));
+      row.appendChild(chart); trc.appendChild(row);
+    });
+    box.appendChild(trc);
+  }
 }
 
 function renderMathStats(){

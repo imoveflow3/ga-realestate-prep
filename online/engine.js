@@ -321,6 +321,99 @@ function generatorReport(d){
   });
 }
 
+/* ------------------------------------------------- dashboard tables ---- */
+function _sliceStats(rows){
+  /* rows: [{seen, correct}] in attempt order -> totals, recent, trend */
+  var qs = 0, corr = 0;
+  rows.forEach(function(r){ qs += r.seen; corr += r.correct; });
+  var recent = rows.slice(-3), rq = 0, rc = 0;
+  recent.forEach(function(r){ rq += r.seen; rc += r.correct; });
+  var trend = null;
+  if (rows.length >= 2){
+    var half = rows.slice(0, Math.max(1, Math.floor(rows.length / 2))), hq = 0, hc = 0;
+    half.forEach(function(r){ hq += r.seen; hc += r.correct; });
+    if (hq && rq) trend = (rc / rq) - (hc / hq);
+  }
+  return {sets: rows.length, qs: qs, correct: corr,
+          pct: qs ? corr / qs : null,
+          recent_pct: rq ? rc / rq : null,
+          trend: trend};
+}
+
+function topicTable(d){
+  /* one row per topic, in exam order, with per-attempt history folded in */
+  var hist = {};
+  d.attempts.forEach(function(a){
+    Object.keys(a.topics || {}).forEach(function(t){
+      var v = a.topics[t];
+      if (!v.seen) return;
+      (hist[t] || (hist[t] = [])).push(v);
+    });
+  });
+  return ORDER.map(function(k){
+    var t = TOPIC[k];
+    var st = _sliceStats(hist[k] || []);
+    st.topic = k; st.portion = t.portion; st.label = t.label;
+    st.exam_questions = t.exam_questions;
+    st.counts_on_exam = countsOnExam(k);
+    return st;
+  });
+}
+
+function sectionTable(d){
+  /* one row per section, folding every attempt that belongs to it */
+  var out = [];
+  ['national', 'georgia', 'comprehensive'].forEach(function(p){
+    var keys = {};
+    portionTopics(p).forEach(function(k){ keys[k] = 1; });
+    var rows = [];
+    d.attempts.forEach(function(a){
+      var seen = 0, corr = 0;
+      Object.keys(a.topics || {}).forEach(function(t){
+        if (!keys[t]) return;
+        seen += a.topics[t].seen; corr += a.topics[t].correct;
+      });
+      if (seen) rows.push({seen: seen, correct: corr});
+    });
+    var st = _sliceStats(rows);
+    st.portion = p;
+    st.name = {national: 'National', georgia: 'Georgia state',
+               comprehensive: 'Comprehensive'}[p];
+    st.scored = (DATA.portions[p] || {}).scored || 0;
+    out.push(st);
+  });
+  return out;
+}
+
+function headline(d){
+  /* the readout strip: overall standing against the 75% pass mark */
+  var all = [];
+  d.attempts.forEach(function(a){
+    var keys = {};
+    portionTopics('national').concat(portionTopics('georgia'))
+      .forEach(function(k){ keys[k] = 1; });
+    var seen = 0, corr = 0;
+    Object.keys(a.topics || {}).forEach(function(t){
+      if (!keys[t]) return;
+      seen += a.topics[t].seen; corr += a.topics[t].correct;
+    });
+    if (seen) all.push({seen: seen, correct: corr});
+  });
+  var overall = _sliceStats(all);
+  var answered = 0;
+  d.attempts.forEach(function(a){ answered += a.count; });
+  var days = null;
+  var exam = asDate((d.profile || {}).exam_date);
+  if (exam){
+    var t = new Date(); t.setHours(0, 0, 0, 0);
+    days = Math.round((exam - t) / 86400000);
+  }
+  return {exam_pct: overall.recent_pct, sets: d.attempts.length,
+          answered: answered, days_out: days,
+          trend: overall.trend, passing: overall.recent_pct !== null
+                                          && overall.recent_pct >= 0.75};
+}
+
 /* ---------------------------------------------------------------- plan */
 function asDate(v){
   if (!v) return null;

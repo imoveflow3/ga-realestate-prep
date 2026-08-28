@@ -96,3 +96,18 @@ svg .gl{stroke:var(--line)} svg text{fill:var(--muted);font-size:10px}
 @media (prefers-color-scheme:dark){
   .tag.comp{background:#1e2233;color:#9aa8d4}
 }
+
+.cardhead{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.cardhead h2{margin:0}
+.hint{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.readouts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.readout .eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px}
+.readout .stat{line-height:1.05;margin-bottom:2px}
+.stat.good{color:var(--good)} .stat.bad{color:var(--bad)}
+table.stats td,table.stats th{padding:7px 9px;white-space:nowrap}
+table.stats td:first-child,table.stats th:first-child{white-space:normal;min-width:170px}
+table.stats .bar-track{min-width:96px}
+table.stats tr.grouprow td{padding:14px 9px 5px;border-bottom:1px solid var(--line);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+td.up{color:var(--good)} td.down{color:var(--bad)}
+button.btn.mini{padding:4px 11px;font-size:11.5px;letter-spacing:.06em;border-radius:6px}
+.scroll{overflow-x:auto}
