@@ -942,7 +942,7 @@ function renderSetup(){
   };
   $('doReset').onclick = function(){
     if (!confirm('Erase all attempts and scores? This cannot be undone.')) return;
-    D.attempts = []; D.topics = {}; D.items = {}; D.generators = {};
+    D.attempts = []; D.topics = {}; D.subs = {}; D.items = {}; D.generators = {};
     persist(); renderSetup();
   };
 

@@ -249,6 +249,7 @@ class Handler(BaseHTTPRequestHandler):
                 data = store.load()
                 data["attempts"] = []
                 data["topics"] = {}
+                data["subs"] = {}
                 data["items"] = {}
                 data["generators"] = {}
                 store.save(data)
