@@ -287,6 +287,14 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     random.seed()
+    # rebuild notebook entries from any quizzes taken before the notebook existed
+    with LOCK:
+        data = store.load()
+        recovered = store.backfill_misses(data)
+        if recovered:
+            store.save(data)
+            print("Recovered %d missed question%s into your notebook."
+                  % (recovered, "" if recovered == 1 else "s"))
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     url = "http://localhost:%d" % PORT
     print("Georgia Real Estate Prep is running.")

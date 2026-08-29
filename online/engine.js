@@ -64,6 +64,37 @@ function bump(bucket, k, correct){
    have unique ids, so without a cap the notebook would grow without limit. */
 var MATH_MISS_CAP = 6;
 
+/* The notebook was added after quizzes had already been taken. Every non-math
+   question you have missed is still recorded in `items` as seen/correct counts,
+   so rebuild notebook entries from those. What was never stored is WHICH wrong
+   choice you picked, so recovered entries say so rather than inventing one. */
+function backfillMisses(d){
+  if (d.backfilled) return 0;
+  var index = {};
+  ['national', 'georgia', 'comprehensive'].forEach(function(p){
+    (DATA.banks[p] || []).forEach(function(r){ index[r.id] = r; });
+  });
+  var added = 0;
+  Object.keys(d.items || {}).forEach(function(qid){
+    var rec = d.items[qid];
+    var missed = (rec.seen || 0) - (rec.correct || 0);
+    if (missed <= 0 || d.misses[qid]) return;
+    var q = index[qid];
+    if (!q) return;                       // generated math cannot be rebuilt
+    d.misses[qid] = {
+      qid: qid, topic: q.topic, sub: q.sub || null, portion: q.portion,
+      generator: null, difficulty: q.difficulty || 1,
+      q: q.q, choices: q.choices, answer: q.answer, chose: null,
+      concept: q.concept || '', explain: q.explain || '', steps: [],
+      at: rec.last || (Date.now() / 1000), times: missed,
+      cleared: 0, recovered: true
+    };
+    added++;
+  });
+  d.backfilled = 1;
+  return added;
+}
+
 function noteMiss(d, a){
   var q = a.q;
   if (!q) return;
@@ -393,7 +424,8 @@ function missReport(d, opts){
       generator: m.generator, difficulty: m.difficulty,
       q: m.q, choices: m.choices, answer: m.answer, chose: m.chose,
       concept: m.concept, explain: m.explain, steps: m.steps || [],
-      at: m.at, times: m.times || 1, cleared: m.cleared || 0
+      at: m.at, times: m.times || 1, cleared: m.cleared || 0,
+      recovered: !!m.recovered
     });
   });
   rows.sort(function(a, b){

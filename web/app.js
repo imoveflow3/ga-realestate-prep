@@ -397,12 +397,20 @@ function notebookEntry(item){
   if (item.difficulty === 2) meta.appendChild(el('span', 'tag hard', 'Hard'));
   if (item.times > 1) meta.appendChild(el('span', null, 'missed ' + item.times + '×'));
   if (item.cleared) meta.appendChild(el('span', 'tag', 'got it since'));
-  if (item.chose === null) meta.appendChild(el('span', null, 'ran out of time'));
+  if (item.recovered)
+    meta.appendChild(el('span', null, 'from earlier quizzes'));
+  else if (item.chose === null)
+    meta.appendChild(el('span', null, 'ran out of time'));
   wrap.appendChild(meta);
   wrap.appendChild(el('p', 'nbq', item.q));
   var opts = el('div', 'nbopts');
   item.choices.forEach(function(_, i){ opts.appendChild(nbOption(item, i)); });
   wrap.appendChild(opts);
+  if (item.recovered){
+    wrap.appendChild(el('div', 'muted',
+      'Recovered from a quiz you took before the notebook existed, so the answer ' +
+      'you picked was not recorded — only that you missed it.'));
+  }
   var why = el('div', 'nbwhy');
   if (item.steps && item.steps.length){
     why.appendChild(el('div', 'lab', 'How to get there'));

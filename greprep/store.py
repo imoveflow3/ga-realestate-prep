@@ -57,6 +57,42 @@ def _bump(bucket, key, correct):
     return rec
 
 
+def backfill_misses(data):
+    """Rebuild notebook entries from quizzes taken before the notebook existed.
+
+    `items` records seen/correct per question id, so which questions were missed
+    is recoverable. Which wrong choice was picked never was, so recovered entries
+    are flagged rather than guessed at. Generated math ids are one-off and cannot
+    be rebuilt.
+    """
+    if data.get("backfilled"):
+        return 0
+    from . import questions
+    index = {r["id"]: r for r in questions.all_rows()}
+    misses = data.setdefault("misses", {})
+    added = 0
+    for qid, rec in (data.get("items") or {}).items():
+        missed = rec.get("seen", 0) - rec.get("correct", 0)
+        if missed <= 0 or qid in misses:
+            continue
+        q = index.get(qid)
+        if not q:
+            continue
+        misses[qid] = {
+            "qid": qid, "topic": q["topic"], "sub": q.get("sub"),
+            "portion": q.get("portion"), "generator": None,
+            "difficulty": q.get("difficulty", 1),
+            "q": q["q"], "choices": q["choices"], "answer": q["answer"],
+            "chose": None, "concept": q.get("concept", ""),
+            "explain": q.get("explain", ""), "steps": [],
+            "at": rec.get("last") or time.time(), "times": missed,
+            "cleared": 0, "recovered": True,
+        }
+        added += 1
+    data["backfilled"] = 1
+    return added
+
+
 def _note_miss(data, a):
     q = a.get("q")
     if not q:
@@ -289,6 +325,7 @@ def miss_report(data, open_only=False):
         portion, label, weight, blurb = topics.TOPICS[tkey]
         sub = rec.get("sub")
         row = dict(rec)
+        row.setdefault("recovered", False)
         row.update({"topic_label": label, "portion": portion,
                     "subtopic": sub.split("|", 1)[1] if sub else None,
                     "exam_questions": weight,
