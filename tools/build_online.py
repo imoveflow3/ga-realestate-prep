@@ -98,6 +98,8 @@ def build_data():
         "math": build_math(),
         "spq": 75,
         "exam": {"national": 80, "georgia": 52},
+        "study": json.load(io.open(os.path.join(HERE, "greprep", "banks", "study.json"),
+                                   encoding="utf-8")),
         "practice_only": sorted(topics.PRACTICE_ONLY),
         "difficulties": list(questions.DIFFICULTIES),
         "harder_share": questions.HARDER_SHARE,
@@ -141,12 +143,15 @@ def main():
     fixed_n = sum(len(v) for v in data["banks"].values())
     hard_n = sum(1 for rows in data["banks"].values() for r in rows
                  if r.get("difficulty", 1) == 2)
+    study_n = len(data["study"]["topics"])
+    vocab_n = sum(len(t["vocab"]) for t in data["study"]["topics"].values())
     print("wrote %s" % os.path.relpath(OUT, HERE))
     print("wrote %s  (%.2f MB standalone)"
           % (os.path.relpath(OUT_STANDALONE, HERE),
              os.path.getsize(OUT_STANDALONE) / 1e6))
     print("  %.2f MB  |  %d written (%d hard) + %d pre-rolled math = %d questions"
           % (os.path.getsize(OUT) / 1e6, fixed_n, hard_n, math_n, fixed_n + math_n))
+    print("  study notes: %d topics, %d vocab terms" % (study_n, vocab_n))
 
 
 if __name__ == "__main__":

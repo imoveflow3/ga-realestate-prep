@@ -1,0 +1,3575 @@
+{
+ "sources": [
+  {
+   "by": "Georgia Real Estate Commission",
+   "name": "Georgia Real Estate InfoBase",
+   "note": "The Commission's own reference text. Every Georgia-specific fact in these notes was checked against it.",
+   "url": "https://grec.state.ga.us/information-research/infobase-main/"
+  },
+  {
+   "by": "Georgia General Assembly",
+   "name": "O.C.G.A. Title 43 Chapter 40",
+   "note": "The Georgia real estate licence law itself.",
+   "url": "https://law.justia.com/codes/georgia/title-43/chapter-40/"
+  },
+  {
+   "by": "Georgia General Assembly",
+   "name": "O.C.G.A. Title 10 Chapter 6A (BRRETA)",
+   "note": "Brokerage Relationships in Real Estate Transactions Act, quoted in InfoBase chapter 9.",
+   "url": "https://law.justia.com/codes/georgia/title-10/chapter-6a/"
+  },
+  {
+   "by": "U.S. Department of Housing and Urban Development",
+   "name": "Fair Housing Act and HUD guidance",
+   "note": "Protected classes, accommodations, and enforcement.",
+   "url": "https://www.hud.gov/program_offices/fair_housing_equal_opp"
+  },
+  {
+   "by": "Consumer Financial Protection Bureau",
+   "name": "TRID / Regulation Z and RESPA",
+   "note": "Loan Estimate and Closing Disclosure timing, and settlement rules.",
+   "url": "https://www.consumerfinance.gov/rules-policy/regulations/"
+  },
+  {
+   "by": "U.S. Environmental Protection Agency",
+   "name": "EPA lead-based paint and radon guidance",
+   "note": "Pre-1978 disclosure duties and environmental hazards.",
+   "url": "https://www.epa.gov/lead"
+  }
+ ],
+ "topics": {
+  "comp/closing-math": {
+   "blurb": "Debits, credits, prorations, and who pays what at the table.",
+   "counts_on_exam": false,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "$2,880 as a SELLER DEBIT and BUYER CREDIT.",
+     "s": "Annual taxes $4,320, unpaid. Closing September 1; seller responsible through August 31; 360-day year.",
+     "t": "Unpaid taxes",
+     "w": [
+      "Monthly = $4,320 / 12 = $360",
+      "Eight full months elapsed = 8 x $360 = $2,880",
+      "The bill is unpaid and the buyer will pay all of it later."
+     ]
+    },
+    {
+     "k": "$1,400 SELLER DEBIT / BUYER CREDIT - the reverse of a prepaid tax proration.",
+     "s": "$2,100 rent for a 30-day month, collected by the seller on the 1st. Closing on the 11th, buyer owns from closing day.",
+     "t": "Rent runs the other way",
+     "w": [
+      "Daily = $2,100 / 30 = $70",
+      "Buyer owns the 11th through the 30th = 20 days",
+      "20 x $70 = $1,400 belonging to the buyer",
+      "The seller is holding that cash."
+     ]
+    },
+    {
+     "k": "$23,850 to the table.",
+     "s": "$417,000 price, 95% LTV loan, $8,000 buyer closing costs, $5,000 earnest money already deposited.",
+     "t": "Cash to close",
+     "w": [
+      "Loan = $417,000 x 95% = $396,150",
+      "Buyer debits = $417,000 + $8,000 = $425,000",
+      "Buyer credits = $396,150 + $5,000 = $401,150",
+      "$425,000 - $401,150 = $23,850"
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia transfer tax on the statement: price / 1,000, as a SELLER debit.",
+    "Georgia taxes attach as a lien January 1 and are paid in arrears, so they normally produce a seller debit."
+   ],
+   "label": "Closing & settlement math",
+   "portion": "comprehensive",
+   "sections": [
+    {
+     "h": "The anchor entries",
+     "l": [
+      "SALE PRICE - buyer DEBIT, seller CREDIT. The largest line, and everything else adjusts around it.",
+      "NEW LOAN - buyer CREDIT (the lender's money pays part of what the buyer owes).",
+      "EARNEST MONEY already on deposit - buyer CREDIT (already paid).",
+      "SELLER'S LOAN PAYOFF - seller DEBIT (comes out of the seller's proceeds).",
+      "COMMISSION - normally a seller DEBIT.",
+      "Georgia TRANSFER TAX - customarily a seller DEBIT, $1.00 per $1,000.",
+      "Recording the deed, loan charges, origination - normally buyer DEBITS."
+     ]
+    },
+    {
+     "h": "The one question that settles every proration",
+     "l": [
+      "UNPAID taxes (arrears) - the seller owes for their time but the buyer will pay the whole bill later: SELLER DEBIT / BUYER CREDIT.",
+      "PREPAID taxes or insurance - the seller paid for time the buyer will enjoy: SELLER CREDIT / BUYER DEBIT.",
+      "RENT collected in advance - the seller is holding the buyer's share: SELLER DEBIT / BUYER CREDIT. Rent runs OPPOSITE to prepaid taxes, because the money is cash in the seller's hand rather than a benefit already consumed.",
+      "SECURITY DEPOSITS - belong to the tenant; the buyer inherits the obligation: SELLER DEBIT / BUYER CREDIT. The tenant is not paid at closing.",
+      "ACCRUED INTEREST on an assumed loan - interest is paid in arrears, so the seller used the money but has not paid: SELLER DEBIT / BUYER CREDIT."
+     ],
+     "p": [
+      "Ask: who currently HAS the money, and who will get the BENEFIT? Whoever holds money belonging to the other side is DEBITED."
+     ]
+    },
+    {
+     "h": "Cash to close and seller's net",
+     "l": [
+      "Buyer's cash to close = (price + buyer costs) - (loan + earnest money + buyer credits)",
+      "Seller's net = price - payoff - commission - seller costs, adjusted for prorations"
+     ]
+    },
+    {
+     "h": "Mechanics",
+     "l": [
+      "Daily rate = annual amount / 360 (banker's year) unless told otherwise.",
+      "Seller owns through the day BEFORE closing; buyer owns closing day forward.",
+      "Origination and points are a percentage of the LOAN, not the price."
+     ]
+    }
+   ],
+   "summary": "A settlement statement is two columns per party. A DEBIT is what you owe; a CREDIT reduces what you owe. Get the DIRECTION right and the arithmetic is easy; get it backwards and every number is wrong.",
+   "topic": "comp/closing-math",
+   "traps": [
+    "Rent and prepaid taxes move in OPPOSITE directions. Ask who holds the cash.",
+    "Security deposits transfer to the buyer, not back to the tenant.",
+    "Origination and points are on the LOAN; commission and transfer tax are on the PRICE."
+   ],
+   "vocab": [
+    [
+     "Debit",
+     "An amount a party owes at closing."
+    ],
+    [
+     "Credit",
+     "An amount reducing what a party owes."
+    ],
+    [
+     "Proration",
+     "Dividing a shared expense between the parties by time."
+    ],
+    [
+     "Arrears",
+     "Paid after the period it covers, like Georgia property taxes."
+    ],
+    [
+     "Prepaid",
+     "Paid before the period it covers, like an annual insurance premium."
+    ],
+    [
+     "Cash to close",
+     "What the buyer must bring to the closing table."
+    ],
+    [
+     "Seller's net proceeds",
+     "What the seller walks away with after all debits."
+    ],
+    [
+     "Closing Disclosure",
+     "The TRID form due three business days before consummation."
+    ]
+   ]
+  },
+  "comp/grec-deep": {
+   "blurb": "The license-law detail the state portion leans on hardest.",
+   "counts_on_exam": false,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "Association arbitration or civil court. GREC will not adjudicate it.",
+     "s": "Two brokers each claim they were the procuring cause of a sale and ask GREC to decide.",
+     "t": "Who decides a commission dispute?",
+     "w": [
+      "GREC administers the licence law and disciplines licensees.",
+      "It has no power to order anyone to pay money.",
+      "Procuring cause is a private money dispute."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "GREC law deep-dive",
+   "portion": "comprehensive",
+   "sections": [
+    {
+     "h": "The education ladder in order",
+     "l": [
+      "75-hour prelicense course (salesperson)",
+      "Pass the exam; activate at 18",
+      "25-hour Sales Post-license Course within ONE YEAR of original licensure",
+      "24 hours of CE per FOUR-YEAR renewal period thereafter",
+      "Broker: age 21, 60-hour broker course, and an active licence for 3 of the past 5 years"
+     ]
+    },
+    {
+     "h": "Trust account mechanics",
+     "l": [
+      "Separate, federally insured CHECKING account, designated by the BANK as trust or escrow, REGISTERED with GREC, with the broker holding SIGNATORY POWER.",
+      "Opened under an EIN, not the broker's SSN.",
+      "At least one account; more are allowed if each is designated and registered.",
+      "Written notice to GREC on Commission forms when the bank, account name or number changes, the bank renames, or the account closes.",
+      "GREC may examine on reasonable request; it MAY accept a CPA compliance certification instead, at its discretion.",
+      "An affiliate permitted to hold an account for their own rentals: registered by the broker, the broker stays responsible, and at least QUARTERLY written reconciliations."
+     ]
+    },
+    {
+     "h": "What the Commission does",
+     "l": [
+      "Members appointed by the GOVERNOR",
+      "Administers the licence law, promulgates rules, investigates, disciplines",
+      "Investigation may start on ANYONE'S sworn written request or on the Commission's OWN MOTION",
+      "Consent settlement = agreed findings of fact, conclusions of law, and sanction, with no hearing",
+      "Formal hearings are conducted by an ALJ from the Office of State Administrative Hearings; 30 days to seek Commission review",
+      "Sanctions: reprimand, suspension, revocation, fine, required education, required accountant reports"
+     ]
+    },
+    {
+     "h": "What the Commission does NOT do",
+     "l": [
+      "It cannot order RESTITUTION or compel repayment of a consumer's loss",
+      "It does not resolve COMMISSION DISPUTES between brokers - arbitration or courts",
+      "Its staff cannot interpret the law for you; that is legal advice"
+     ]
+    },
+    {
+     "h": "Firm operations",
+     "l": [
+      "A salesperson may be paid ONLY by their affiliated broker",
+      "Advertising must identify the firm",
+      "Net listings permitted only under strict disclosure",
+      "A suspended qualifying broker's corporation or LLC may continue if it IMMEDIATELY designates a replacement",
+      "Nonresidents meet the same requirements and affiliate with a GREC-licensed broker",
+      "Inactive licensees still pay fees and still owe postlicense education"
+     ]
+    }
+   ],
+   "summary": "The detail-level Georgia licence law that the state portion leans on hardest: the education ladder, trust account mechanics, and exactly what the Commission does and does not have power to do.",
+   "topic": "comp/grec-deep",
+   "traps": [
+    "24 hours CE per four years, not 36 and not annual.",
+    "GREC has no restitution power.",
+    "The Commission MAY accept a CPA report - discretionary, not a right."
+   ],
+   "vocab": [
+    [
+     "Qualifying broker",
+     "The broker answerable to GREC for the firm."
+    ],
+    [
+     "Consent settlement",
+     "Agreed findings and sanction without a hearing."
+    ],
+    [
+     "OSAH",
+     "Office of State Administrative Hearings, which supplies the ALJ."
+    ],
+    [
+     "Reconciliation statement",
+     "A comparison of trust liability to the bank balance."
+    ],
+    [
+     "Signatory power",
+     "The broker's required authority over the trust account."
+    ]
+   ]
+  },
+  "comp/situational": {
+   "blurb": "You are the licensee -- what do you actually do?",
+   "counts_on_exam": false,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Explain it must be disclosed. If the seller refuses, withdraw from the engagement.",
+     "s": "The seller tells you the HVAC failed last winter and was patched, then says 'don't put that on the disclosure.'",
+     "t": "The seller wants it off the form",
+     "w": [
+      "A failed major system is a material fact.",
+      "You never complete or alter the seller's form.",
+      "You also cannot market the property knowing the disclosure is false."
+     ]
+    },
+    {
+     "k": "Do nothing with the money until a court or the agreed process decides.",
+     "s": "A closing fails. Buyer and seller each demand the $10,000 earnest money.",
+     "t": "Two people want the same deposit",
+     "w": [
+      "The broker is a stakeholder, not a judge.",
+      "Releasing to either side, splitting it, or keeping it all invite a conversion claim.",
+      "Hold the funds and use interpleader or the prescribed procedure."
+     ]
+    }
+   ],
+   "ga": [
+    "In Georgia, trust funds must be deposited PROMPTLY unless ALL parties give written authority otherwise - the buyer's request alone is never enough.",
+    "Georgia protects nondisclosure of a death on the property, but never an outright denial."
+   ],
+   "label": "Situational judgment",
+   "portion": "comprehensive",
+   "sections": [
+    {
+     "h": "The decision framework",
+     "l": [
+      "1. Is anyone asking me to break the law or a fair housing rule? Refuse, and withdraw if they persist. Referring them to a colleague relocates the violation.",
+      "2. Do I know a MATERIAL FACT about the property? Disclose it. Confidentiality never covers a defect.",
+      "3. Am I about to state something I know is untrue? Decline instead. Declining is not deceit; inventing an answer is.",
+      "4. Is this money that belongs to someone else? Into the trust account promptly, and never choose between competing claimants.",
+      "5. Is this person a client or a customer? Clients get advice and advocacy; customers get honesty and material-defect disclosure.",
+      "6. Do I have a personal interest? Disclose it in writing before the offer is considered."
+     ]
+    },
+    {
+     "h": "Situations that recur",
+     "l": [
+      "A client gives a discriminatory instruction - refuse; withdraw if they persist.",
+      "A seller says 'leave it off the disclosure' - explain it must be disclosed; if they refuse, end the engagement. Never complete the form for them.",
+      "A buyer asks you to inflate the price with cash back at closing - that is loan fraud if concealed from the lender. Refuse.",
+      "You spot an error on the settlement statement - raise it BEFORE anyone signs.",
+      "You realise after closing that you miscalculated and your client overpaid - tell them; the duty to account survives closing.",
+      "An unrepresented buyer asks 'should I offer less?' - clarify that you represent the seller and suggest they get their own representation.",
+      "A colleague's licence has expired and they want cover - refuse and tell your broker; unlicensed activity is charged against the firm too.",
+      "A buyer waives inspection - document your recommendation in writing and still disclose what you observe.",
+      "You are paid a referral fee by an inspector - disclose it, or better, offer several names and take no fee. In a federally related mortgage transaction a referral fee for settlement services violates RESPA outright."
+     ]
+    },
+    {
+     "h": "What confidentiality actually covers",
+     "p": [
+      "It covers your client's motivation, finances, and negotiating position. It does NOT cover material defects, and it does not cover facts already in the public record - a closed sale price is public, and refusing to state it is unhelpfulness, not duty."
+     ]
+    }
+   ],
+   "summary": "These give you a scene and ask what you actually do. Four principles resolve almost all of them: never lie, never conceal a known defect, never act on an unlawful instruction, and never pick a side with money you are holding in trust.",
+   "topic": "comp/situational",
+   "traps": [
+    "Referring a discriminating client to a colleague is not a solution.",
+    "'I didn't say anything untrue' is no defence to concealing a known defect.",
+    "Uniform application does not save a policy that is itself unlawful."
+   ],
+   "vocab": [
+    [
+     "Material fact",
+     "Anything affecting value, desirability, or the decision to buy."
+    ],
+    [
+     "Fraudulent concealment",
+     "Actively hiding a known material defect."
+    ],
+    [
+     "Conflict of interest",
+     "A personal stake that could compromise your duty to a client."
+    ],
+    [
+     "Interpleader",
+     "Depositing disputed funds with a court to decide."
+    ],
+    [
+     "RESPA Section 8",
+     "Bans anything of value for referring settlement business."
+    ],
+    [
+     "Ministerial act",
+     "A clerical, non-discretionary service for a customer."
+    ]
+   ]
+  },
+  "comp/vocabulary": {
+   "blurb": "The terms both portions assume you already know.",
+   "counts_on_exam": false,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Encumbrance. If the stem had said 'a fence built two feet over the line', the answer would narrow to encroachment.",
+     "s": "'A charge or claim against property that does not prevent transfer but travels with it.'",
+     "t": "Reading a definition question backwards",
+     "w": [
+      "'Travels with it' points to something running with the land.",
+      "'Does not prevent transfer' rules out anything blocking conveyance.",
+      "That is the general category, not the specific physical case."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia edition of the loan documents: the NOTE is the promise, the SECURITY DEED is the pledge - not a mortgage and not a deed of trust."
+   ],
+   "label": "Vocabulary & terminology",
+   "portion": "comprehensive",
+   "sections": [
+    {
+     "h": "Pairs that get swapped",
+     "l": [
+      "Encumbrance / encroachment - any claim on the fee / a physical intrusion. Every encroachment is an encumbrance; not every encumbrance is physical.",
+      "Mortgagor / mortgagee - borrower / lender. The '-or' gives, the '-ee' receives. Same for lessor/lessee, vendor/vendee, optionor/optionee, grantor/grantee.",
+      "Acceleration / alienation - due on DEFAULT / due on TRANSFER.",
+      "Subrogation / subordination / substitution / satisfaction - stepping into another's claim / lowering lien priority / an equal alternative / recorded proof of payoff.",
+      "Assemblage / plottage - the ACT of combining parcels / the added VALUE that results.",
+      "Progression / regression - pulled up by better neighbours / dragged down by worse.",
+      "Accretion / erosion / avulsion / reliction - gradual gain / gradual loss / sudden change (boundaries do NOT move) / land exposed by receding water.",
+      "Executed / executory - fully performed / signed but not yet performed.",
+      "Void / voidable - never a contract / valid until the protected party disaffirms.",
+      "Latent / patent - hidden / obvious.",
+      "Riparian / littoral - flowing water / still water.",
+      "Fixture / trade fixture - conveys with the realty / stays the commercial tenant's.",
+      "Security deposit / prepaid rent - held in trust for the tenant / earned by the landlord.",
+      "Equitable / statutory right of redemption - before the sale / after the sale."
+     ]
+    },
+    {
+     "h": "The value words",
+     "l": [
+      "Market value - an OPINION of most probable price.",
+      "Market price - the FACT of what it sold for.",
+      "Cost - what it took to build.",
+      "Assessed value - the tax base.",
+      "Insurable value - improvements only."
+     ]
+    },
+    {
+     "h": "The income statement in order",
+     "l": [
+      "Potential gross income",
+      "- vacancy and collection loss = EFFECTIVE GROSS INCOME",
+      "- operating expenses = NET OPERATING INCOME",
+      "- debt service = CASH FLOW",
+      "Debt service is never an operating expense."
+     ]
+    },
+    {
+     "h": "Lien classifications are three independent axes",
+     "l": [
+      "General (all property) vs. SPECIFIC (one parcel)",
+      "Voluntary (you agreed) vs. INVOLUNTARY (imposed)",
+      "Statutory (created by law) vs. EQUITABLE (created by fairness)",
+      "A judgment lien is general, involuntary, statutory. A mortgage is specific and voluntary. A question can test any axis."
+     ]
+    },
+    {
+     "h": "The four leasehold estates",
+     "l": [
+      "Estate for years - fixed start and end, no notice needed",
+      "Periodic - renews until notice",
+      "At will - endable at either party's pleasure",
+      "At sufferance - holdover with no right"
+     ]
+    },
+    {
+     "h": "Deed vocabulary in sequence",
+     "l": [
+      "Execution (signing) -> Acknowledgment (notary, needed to RECORD) -> DELIVERY AND ACCEPTANCE (what passes title) -> Recording (constructive notice, priority)"
+     ]
+    },
+    {
+     "h": "The four public powers",
+     "l": [
+      "Police power - regulate, no payment",
+      "Eminent domain - take, with just compensation",
+      "Taxation",
+      "Escheat - to the state when there is no will and no heir"
+     ]
+    }
+   ],
+   "summary": "Most missed questions are missed on a word, not a concept. These are the pairs the exam deliberately puts next to each other. Learn them as PAIRS - the distinction is what is being tested, not either term alone.",
+   "topic": "comp/vocabulary",
+   "traps": [
+    "'-or' gives, '-ee' receives. Apply it to every pair.",
+    "Executed means fully PERFORMED in exam language, not merely signed.",
+    "Avulsion is sudden and does not move boundaries."
+   ],
+   "vocab": [
+    [
+     "Encumbrance",
+     "Any claim, lien, easement, or restriction limiting the fee."
+    ],
+    [
+     "Encroachment",
+     "A physical intrusion onto another's land."
+    ],
+    [
+     "Subrogation",
+     "One party stepping into another's legal claim, typical of insurers."
+    ],
+    [
+     "Subordination",
+     "Voluntarily lowering a lien's priority."
+    ],
+    [
+     "Satisfaction",
+     "The recorded document proving a debt is paid."
+    ],
+    [
+     "Assemblage",
+     "Combining adjacent parcels."
+    ],
+    [
+     "Plottage",
+     "The added value created by assemblage."
+    ],
+    [
+     "Alluvion",
+     "The soil deposited by accretion."
+    ],
+    [
+     "Reliction",
+     "Land exposed by permanently receding water."
+    ],
+    [
+     "Procuring cause",
+     "The unbroken effort that produced a ready, willing and able buyer."
+    ],
+    [
+     "Equitable right of redemption",
+     "The right to cure default BEFORE the foreclosure sale."
+    ],
+    [
+     "Statutory right of redemption",
+     "A post-sale right to reclaim, where a state grants one."
+    ],
+    [
+     "Emblements",
+     "Annual crops; the tenant-farmer's personal property."
+    ],
+    [
+     "Chattel",
+     "Personal property."
+    ],
+    [
+     "Novation",
+     "Substituting a party and releasing the original."
+    ],
+    [
+     "Reformation",
+     "Court correction of a document to match true intent."
+    ],
+    [
+     "Lis pendens",
+     "Recorded notice of pending litigation."
+    ],
+    [
+     "Escheat",
+     "Property passing to the state for want of a will or heirs."
+    ]
+   ]
+  },
+  "georgia/brreta": {
+   "blurb": "Georgia agency law, engagements, dual and designated agency.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "Legally no agency - which is exactly why the statute exists. Practically, this is the situation that invites a lawsuit, so clarify status early.",
+     "s": "A buyer works with a licensee for weeks. The licensee advises on price and negotiation. Nothing is ever signed.",
+     "t": "Weeks of help, no agency",
+     "w": [
+      "BRRETA defines agency as representation by WRITTEN authority.",
+      "With no brokerage engagement there is no agency relationship.",
+      "But the licensee has behaved far outside the customer role."
+     ]
+    },
+    {
+     "k": "This is a real Georgia difference. In many states the same facts would create firm-wide dual agency.",
+     "s": "A broker assigns one licensee to the buyer and another to the seller in the same deal.",
+     "t": "Designated agency is not dual agency",
+     "w": [
+      "Each designated agent owes their own client the full statutory duties.",
+      "10-6A-13(b) says neither the broker, the licensees, nor the firm is a dual agent.",
+      "10-6A-13(c) removes imputed knowledge between them."
+     ]
+    },
+    {
+     "k": "Keep it confidential. Hinting is the same disclosure by another route.",
+     "s": "A seller privately tells her broker she will take $20,000 less. The broker is a dual agent and the buyer asks about flexibility.",
+     "t": "The dual agent's bind",
+     "w": [
+      "A dual agent must disclose adverse material FACTS actually known.",
+      "A negotiating position is not a material fact; it is confidential.",
+      "The client asked that it be kept confidential."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage relationships (BRRETA)",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "The core definitions",
+     "l": [
+      "AGENCY - every relationship in which a broker acts for or represents another as a CLIENT by that person's WRITTEN authority.",
+      "BROKERAGE ENGAGEMENT - the written contract by which a seller, buyer, landlord or tenant becomes the broker's client.",
+      "CLIENT - a person represented under a brokerage engagement.",
+      "CUSTOMER - a person NOT represented, for whom the broker may perform MINISTERIAL ACTS under either a verbal or written agreement.",
+      "MINISTERIAL ACTS - acts that do not require discretion or the exercise of the broker's own judgement."
+     ]
+    },
+    {
+     "h": "The point that changes everything",
+     "p": [
+      "O.C.G.A. 10-6A-4(a): a broker owes a client or customer ONLY the duties set out in the chapter, unless the parties expressly agree otherwise in a signed writing. A broker SHALL NOT BE DEEMED to have a fiduciary relationship with any party, and is responsible only for exercising REASONABLE CARE in discharging the specified duties. Georgia deliberately narrowed common-law fiduciary exposure."
+     ]
+    },
+    {
+     "h": "Compensation does not create agency",
+     "p": [
+      "Paying the commission does not make you the payer's client. A seller paying the buyer's broker out of closing proceeds does not make that broker the seller's agent. Only an express written agreement creates the engagement. This is heavily tested because intuition runs the other way."
+     ]
+    },
+    {
+     "h": "Disclosures before or within the engagement",
+     "l": [
+      "The types of agency relationships available through the broker",
+      "Any brokerage relationships the broker holds with other parties that would CONFLICT with the prospective client's interests and are actually known - but EXPRESSLY EXCLUDING the fact that the broker may represent other sellers or landlords, or other buyers or tenants, generally",
+      "The broker's compensation and whether it will be shared with other brokers",
+      "The broker's obligations to keep information confidential",
+      "BRRETA does not require the agency conversation before the engagement, but the InfoBase urges having it as early as possible so a customer never presumes they are represented."
+     ],
+     "p": [
+      "Before entering into a brokerage engagement, the broker must advise the prospective client of FOUR things:"
+     ]
+    },
+    {
+     "h": "Duration and termination",
+     "p": [
+      "The engagement begins when the client engages the broker and runs until the agreed expiration date or another statutory ending event. GREC requires a DEFINITE expiration date, and automatic renewal clauses are prohibited."
+     ]
+    },
+    {
+     "h": "Dual agency",
+     "l": [
+      "A description of the transactions or types of transactions involved",
+      "A statement that the broker represents two clients whose interests are, or at times could be, different or even adverse",
+      "A statement that the dual agent will disclose all ADVERSE MATERIAL FACTS actually known - EXCEPT information made confidential by a client's request or instruction",
+      "A statement that the client does NOT have to consent to the dual agency",
+      "A statement that the consent has been given voluntarily and the writing has been read and understood",
+      "The practical rule: a dual agent discloses adverse material FACTS, never a client's negotiating POSITION."
+     ],
+     "p": [
+      "A DUAL AGENT is a broker who simultaneously has a client relationship with both sides of the same transaction. Georgia ALLOWS it with WRITTEN consent. Consent is presumed where the writing contains:"
+     ]
+    },
+    {
+     "h": "Designated agency - a genuine Georgia distinction",
+     "l": [
+      "10-6A-13(b): where designated agents are appointed, NEITHER the broker, NOR the broker's licensees, NOR the firm is deemed a dual agent. Many other states treat this as firm-wide dual agency; Georgia does not.",
+      "10-6A-13(c): there is NO IMPUTATION of knowledge between broker, designated agents, and clients - each is treated as having only their own actual knowledge.",
+      "A designated agent may not disclose confidential client information except to their BROKER, and the broker in turn may not reveal it.",
+      "Confidential information means anything whose disclosure the client has not consented to that could harm the client's negotiating position."
+     ],
+     "p": [
+      "A broker may assign different affiliated licensees as DESIGNATED AGENTS to represent opposing clients in the same transaction, directly or through company policy. Each designated agent owes their own client the full statutory duties."
+     ]
+    }
+   ],
+   "summary": "BRRETA (the Brokerage Relationships in Real Estate Transactions Act, O.C.G.A. Title 10 Chapter 6A) is the single biggest difference between Georgia and general agency law. It was passed because licensees kept creating ACCIDENTAL agency by treating customers like clients. Its answer: agency requires WRITING, and duties are limited to what the statute and the engagement specify.",
+   "topic": "georgia/brreta",
+   "traps": [
+    "Compensation never creates agency in Georgia.",
+    "A broker is expressly NOT a fiduciary under BRRETA - only reasonable care in specified duties.",
+    "Designated agency does NOT make the broker a dual agent.",
+    "The four pre-engagement disclosures exclude having to reveal other buyer/seller clients."
+   ],
+   "vocab": [
+    [
+     "BRRETA",
+     "Brokerage Relationships in Real Estate Transactions Act, O.C.G.A. Title 10 Ch. 6A."
+    ],
+    [
+     "Brokerage engagement",
+     "The written contract making someone a broker's client."
+    ],
+    [
+     "Client",
+     "A represented party under a brokerage engagement."
+    ],
+    [
+     "Customer",
+     "An unrepresented party for whom ministerial acts may be performed."
+    ],
+    [
+     "Ministerial acts",
+     "Acts requiring no discretion or judgement by the broker."
+    ],
+    [
+     "Dual agent",
+     "A broker with client relationships on both sides of one transaction."
+    ],
+    [
+     "Designated agent",
+     "A licensee assigned to represent one client exclusively in a transaction."
+    ],
+    [
+     "Adverse material fact",
+     "A known fact that would materially affect the transaction."
+    ],
+    [
+     "Confidential information",
+     "Information a client has not consented to disclose that could harm their position."
+    ],
+    [
+     "Imputation of knowledge",
+     "Attributing one person's knowledge to another; removed for designated agency."
+    ]
+   ]
+  },
+  "georgia/contracts": {
+   "blurb": "Georgia contract requirements, offers, earnest money terms.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "Thursday is the binding agreement date, and every deadline in the contract counts from there - not Tuesday.",
+     "s": "The seller signs the buyer's offer Tuesday. The agent does not notify the buyer until Thursday.",
+     "t": "When the clock actually starts",
+     "w": [
+      "Signing is not acceptance in the legal sense.",
+      "Acceptance is effective when COMMUNICATED to the offeror.",
+      "That happened Thursday."
+     ]
+    },
+    {
+     "k": "Which is why drafting them casually is risky - and why original clauses belong with an attorney.",
+     "s": "A licensee types a special stipulation that conflicts with the preprinted contract language. A dispute follows.",
+     "t": "A stipulation beats the form",
+     "w": [
+      "Preprinted text is generic; typed terms show what these parties actually agreed.",
+      "Courts give effect to the specific over the general.",
+      "So the stipulation controls."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Georgia contracts & forms",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "The binding agreement date",
+     "p": [
+      "A Georgia contract becomes binding when ACCEPTANCE IS COMMUNICATED to the offeror - not when the seller signs. Every subsequent deadline (due diligence, financing, closing) is measured from that BINDING AGREEMENT DATE, so getting it wrong shifts the whole timeline. An offer may be revoked any time before acceptance is communicated."
+     ]
+    },
+    {
+     "h": "Due diligence",
+     "p": [
+      "Georgia's standard due diligence provision gives the buyer a set number of days to inspect and, under the common forms, to TERMINATE FOR ANY REASON OR NO REASON and recover the earnest money. That latitude is why the length is negotiated hard. Once it expires the buyer's exit rights narrow sharply and the earnest money is genuinely at risk."
+     ]
+    },
+    {
+     "h": "Form filling vs. practising law",
+     "l": [
+      "A licensee MAY complete the blanks on approved preprinted forms incident to a transaction they are handling.",
+      "A licensee MAY NOT draft original clauses or give legal advice about them - that is the unauthorised practice of law.",
+      "Handwritten or typed SPECIAL STIPULATIONS PREVAIL over conflicting preprinted text, because they show the parties' specific intent. That is exactly why a badly drafted stipulation is dangerous: it controls the deal.",
+      "Complex terms - owner financing, unusual contingencies - belong with an attorney."
+     ]
+    },
+    {
+     "h": "Description and definiteness",
+     "p": [
+      "Georgia courts require a description that identifies the property with reasonable certainty, or provides a 'key' leading to identification. A vague description can make the contract unenforceable for indefiniteness."
+     ]
+    },
+    {
+     "h": "Listing agreements",
+     "l": [
+      "Must be IN WRITING with a DEFINITE EXPIRATION DATE.",
+      "AUTOMATIC RENEWAL clauses are prohibited - a broker cannot roll a listing forward by default.",
+      "An engagement with no ending date is a licence-law violation for the broker, separate from whether the client minds."
+     ]
+    },
+    {
+     "h": "Earnest money and default",
+     "p": [
+      "Where the contract provides liquidated damages, the seller normally retains the earnest money as the agreed measure of loss. To be enforceable rather than a penalty it must be a reasonable pre-estimate of damages, damages must be hard to determine, and the parties must have intended it as liquidated damages."
+     ]
+    },
+    {
+     "h": "Contingencies you will see",
+     "l": [
+      "Financing - buyer may terminate if the stated loan cannot be obtained.",
+      "Appraisal - protects against the property valuing below the price.",
+      "Sale of buyer's property - usually paired with a KICK-OUT clause letting the seller keep marketing and requiring the buyer to remove the contingency or terminate within a short window.",
+      "Inspection / due diligence.",
+      "'Time is of the essence' makes each stated date strict."
+     ]
+    }
+   ],
+   "summary": "Georgia contract questions turn on three things: WHEN the contract became binding, what the DUE DILIGENCE period lets the buyer do, and where a licensee's authority to fill in a form ends and the practice of law begins.",
+   "topic": "georgia/contracts",
+   "traps": [
+    "Binding agreement date = communication of acceptance, not signature.",
+    "During due diligence the buyer generally does NOT need a reason to terminate.",
+    "Listings need a definite end date; automatic renewals are prohibited."
+   ],
+   "vocab": [
+    [
+     "Binding agreement date",
+     "The date acceptance is communicated; all deadlines run from it."
+    ],
+    [
+     "Due diligence period",
+     "The buyer's window to inspect and, typically, terminate for any reason."
+    ],
+    [
+     "Special stipulation",
+     "A typed or handwritten term that prevails over preprinted text."
+    ],
+    [
+     "Unauthorised practice of law",
+     "Drafting legal instruments or advising on them without a licence."
+    ],
+    [
+     "Kick-out clause",
+     "Lets a seller continue marketing while a buyer's sale contingency is pending."
+    ],
+    [
+     "Liquidated damages",
+     "An agreed sum, usually the earnest money, as the measure of loss."
+    ],
+    [
+     "Definiteness",
+     "The requirement that a contract identify the property with reasonable certainty."
+    ]
+   ]
+  },
+  "georgia/disclosures": {
+   "blurb": "What Georgia requires disclosed, and what it protects.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [
+    {
+     "k": "Decline to answer and refer the buyer to sources they can research. That keeps you inside the protection.",
+     "s": "A buyer asks the listing agent directly whether anyone died in the house. The agent knows someone did.",
+     "t": "Silence is protected; lying is not",
+     "w": [
+      "Georgia protects NONDISCLOSURE of a death on the property.",
+      "It does not protect an affirmative false statement.",
+      "Denying it would be misrepresentation."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Georgia disclosures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "The scope of the duty",
+     "p": [
+      "Under BRRETA a broker must disclose ADVERSE MATERIAL FACTS actually known, and this duty runs to CUSTOMERS as well as clients. There is NO DUTY TO DISCOVER: brokers are not inspectors and need not investigate. But a licensee may not ignore what is plainly visible, and may not pass along information they know to be false."
+     ]
+    },
+    {
+     "h": "Stigmatized property",
+     "p": [
+      "Georgia expressly shields licensees from liability for NOT disclosing that a property was the site of a death, homicide, suicide, or felony. The protection covers NONDISCLOSURE. It does not license a denial. If a buyer asks directly and you know, decline to answer and point them to public sources - denying it would be misrepresentation."
+     ]
+    },
+    {
+     "h": "Who fills in the form",
+     "p": [
+      "The SELLER completes Georgia's property disclosure statement from personal knowledge. A licensee should never complete it for the seller or guess at answers - doing so transfers the seller's liability onto the licensee. If the licensee knows an answer is false, they cannot market the property on that basis; if the seller will not correct it, withdraw."
+     ]
+    },
+    {
+     "h": "What must be disclosed",
+     "l": [
+      "Known physical defects affecting value, safety, or use - roof, foundation, septic, systems, water intrusion (including repaired history)",
+      "Flood plain location, which affects value, insurability, and lender requirements",
+      "Federal lead-based paint disclosure for housing built before 1978, with records, the EPA pamphlet, and a 10-day testing opportunity",
+      "A licensee's own LICENSED STATUS, in writing, whenever acting as a principal"
+     ]
+    },
+    {
+     "h": "What must not be disclosed",
+     "p": [
+      "Anything touching a protected class. A former occupant's HIV/AIDS status is protected as handicap; the demographic makeup of a neighbourhood is off limits because answering steers."
+     ]
+    }
+   ],
+   "summary": "Georgia's disclosure rules are narrower than most states'. The duty is to adverse material facts ACTUALLY KNOWN - there is no duty to investigate - and Georgia expressly protects licensees who stay silent about stigma. What is never protected is an affirmative lie.",
+   "topic": "georgia/disclosures",
+   "traps": [
+    "Physical condition must be disclosed; stigma generally need not.",
+    "The duty covers what you ACTUALLY KNOW - but it runs to customers too.",
+    "Never complete the seller's disclosure form for them."
+   ],
+   "vocab": [
+    [
+     "Adverse material fact",
+     "A known fact materially affecting the property or transaction."
+    ],
+    [
+     "No duty to discover",
+     "Georgia's rule that brokers need not investigate for defects."
+    ],
+    [
+     "Property disclosure statement",
+     "The seller's written statement of known conditions."
+    ],
+    [
+     "Stigmatized property",
+     "Property affected by events rather than physical condition."
+    ],
+    [
+     "Licensee-as-principal disclosure",
+     "Written disclosure of licensed status when buying or selling for yourself."
+    ]
+   ]
+  },
+  "georgia/fair-housing": {
+   "blurb": "Federal and Georgia fair housing as GREC enforces it.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "Steering. Adopt one policy for everyone - typically pointing all buyers to the same public sources.",
+     "s": "A licensee provides school ratings and crime statistics only when buyers of a certain background ask for them.",
+     "t": "Helpful, and still steering",
+     "w": [
+      "Nothing negative was said about any area.",
+      "But information was delivered selectively by who was asking.",
+      "Selective information channels buyers just as effectively as a recommendation."
+     ]
+    },
+    {
+     "k": "Unlawful. The tenant is still liable for actual damage the animal causes.",
+     "s": "A manager charges a $300 non-refundable fee to every tenant with an assistance animal, applied uniformly.",
+     "t": "No pet fee for an assistance animal",
+     "w": [
+      "Uniform application does not save it.",
+      "Waiving the pet policy is a reasonable ACCOMMODATION at the provider's expense.",
+      "Charging a fee defeats the accommodation."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Fair housing in Georgia",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "The seven federal classes",
+     "p": [
+      "Race, colour, religion, sex, national origin, familial status, handicap. Source of income and marital status are not among them federally, though some Georgia local ordinances protect source of income and a blanket policy can still create disparate-impact exposure."
+     ]
+    },
+    {
+     "h": "Steering and blockbusting in practice",
+     "l": [
+      "STEERING does not require saying anything negative. Providing school ratings and crime statistics only to certain buyers, or 'you'd be more comfortable over here', both steer. Use a consistent policy for every buyer and point everyone to the same public sources.",
+      "BLOCKBUSTING is inducing sales by suggesting a protected group's arrival will harm the neighbourhood. Illegal whether or not the statement is true.",
+      "Advertising must describe the PROPERTY, not the desired occupant. 'Mature Christian couple' signals age/familial status and religion; 'no children under 12' is a direct familial status violation."
+     ]
+    },
+    {
+     "h": "Disability: two different duties",
+     "l": [
+      "REASONABLE MODIFICATION - a PHYSICAL change (grab bar, ramp, doorbell light). Permitted at the TENANT'S expense, with possible restoration on move-out.",
+      "REASONABLE ACCOMMODATION - a change to RULES or policies (waiving a no-pets rule for an assistance animal). At the HOUSING PROVIDER'S expense.",
+      "An assistance animal is not a pet: no pet fee or pet deposit may be charged, though the tenant remains liable for actual damage."
+     ]
+    },
+    {
+     "h": "Unlawful client instructions",
+     "p": [
+      "The duty of obedience covers LAWFUL instructions only. A seller who directs you to exclude a protected class must be refused, and if they persist you WITHDRAW. Quietly ignoring the instruction leaves you working for someone who will discriminate; handing the seller to a colleague simply relocates the violation."
+     ]
+    },
+    {
+     "h": "Enforcement",
+     "p": [
+      "HUD handles federal complaints, generally within one year. Private suits are available. Separately, GREC can discipline the licence - so one act of discrimination can produce a HUD case, a lawsuit, and a licence sanction."
+     ]
+    }
+   ],
+   "summary": "Georgia enforces the federal Fair Housing Act, and GREC can independently discipline a licensee for discriminatory conduct. The exam focuses on recognising steering and blockbusting in realistic wording, and on the accommodation/modification split.",
+   "topic": "georgia/fair-housing",
+   "traps": [
+    "Steering can happen through selective helpfulness, with no negative statement at all.",
+    "Modification = physical = tenant pays. Accommodation = rules = provider absorbs.",
+    "Refusing an unlawful instruction is not enough if you keep the listing - withdraw."
+   ],
+   "vocab": [
+    [
+     "Fair Housing Act",
+     "The federal law barring housing discrimination on seven grounds."
+    ],
+    [
+     "Familial status",
+     "Households with children under 18, pregnant people, those securing custody."
+    ],
+    [
+     "Handicap",
+     "Disability, including HIV/AIDS; a protected class."
+    ],
+    [
+     "Steering",
+     "Channelling people toward or away from areas by protected class."
+    ],
+    [
+     "Blockbusting",
+     "Inducing sales with claims about a protected group moving in."
+    ],
+    [
+     "Redlining",
+     "Refusing or pricing loans by area demographics."
+    ],
+    [
+     "Reasonable modification",
+     "A physical change at the tenant's expense."
+    ],
+    [
+     "Reasonable accommodation",
+     "A rules change at the provider's expense."
+    ],
+    [
+     "Assistance animal",
+     "Not a pet; no pet fee may be charged."
+    ],
+    [
+     "Disparate impact",
+     "A neutral policy with discriminatory effect."
+    ],
+    [
+     "Housing for older persons",
+     "The narrow exemption from familial status protection."
+    ]
+   ]
+  },
+  "georgia/license-law": {
+   "blurb": "Licensing, renewal, education, GREC authority, sanctions.",
+   "counts_on_exam": true,
+   "exam_questions": 14,
+   "examples": [
+    {
+     "k": "The licence lapses. This is a hard deadline with no CE workaround.",
+     "s": "A salesperson licensed 14 months ago never took the 25-hour postlicense course, but did complete some CE.",
+     "t": "Missing the postlicense deadline",
+     "w": [
+      "The postlicense course is due within ONE year of original licensure.",
+      "It applies regardless of active or inactive status.",
+      "CE hours do not substitute for it."
+     ]
+    },
+    {
+     "k": "Discipline and compensation are separate tracks. Do not wait for the investigation before consulting an attorney.",
+     "s": "A consumer loses $18,000 through a licensee's mishandling of funds and files a complaint with GREC.",
+     "t": "The limit of GREC's power",
+     "w": [
+      "GREC may reprimand, suspend, revoke, fine, and require education or CPA reports.",
+      "It has no authority to order repayment of a financial loss.",
+      "The consumer must pursue a civil action for the money."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "GREC license law & rules",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "Getting licensed",
+     "l": [
+      "AGE - 18 for salesperson or community association manager; 21 for broker or associate broker. You may TAKE the salesperson exam at 17 but cannot activate until 18 (and the broker exam at 20, activating at 21).",
+      "EDUCATION - a 75-HOUR GREC-approved salesperson prelicense course. Brokers take a 60-hour broker prelicense course.",
+      "EXAMINATION - pass the Georgia licensing exam (national + state portions).",
+      "EXPERIENCE - NONE for a salesperson. For broker or associate broker, an ACTIVE licence for THREE of the FIVE years immediately preceding application. Active licensure in ANOTHER state counts, with a certified licence history from every state where you have held one.",
+      "Background check and application fee."
+     ]
+    },
+    {
+     "h": "Keeping it: the education ladder",
+     "l": [
+      "POSTLICENSE - a 25-hour Sales Post-license Course within ONE YEAR of original licensure. Applies whether you are active or inactive, resident or nonresident. Miss it and the licence lapses. CE does not substitute for it.",
+      "CONTINUING EDUCATION - at least 24 HOURS of GREC-approved CE during each FOUR-YEAR renewal period. Not annual. Many national guides say 36 hours; that is a different state.",
+      "The sequence to remember: 75 in, 25 in year one, then 24 every four years."
+     ]
+    },
+    {
+     "h": "Status and administration",
+     "l": [
+      "INACTIVE status - you may hold a licence without affiliating, but you still pay fees and still owe the postlicense requirement. You may not perform licensed acts.",
+      "Change of address, broker affiliation, or status is made by filing a CHANGE APPLICATION with the Commission.",
+      "A salesperson acts only through and under the supervision of their affiliated broker, and may be COMPENSATED ONLY BY THAT BROKER.",
+      "NONRESIDENTS who hold no licence at home must meet the same requirements as Georgia residents and affiliate with a GREC-licensed broker, who may themselves be resident or nonresident.",
+      "Criminal CONVICTIONS must be reported to GREC. Concealment is usually punished more severely than the underlying offence."
+     ]
+    },
+    {
+     "h": "The qualifying broker and the firm",
+     "l": [
+      "The qualifying broker answers to GREC for the firm's compliance: supervision, trust accounts, records, and advertising.",
+      "FAILURE TO SUPERVISE is an independent violation - the broker can be disciplined for an affiliate's conduct.",
+      "If a qualifying broker is suspended, a corporation or LLC may keep operating if it IMMEDIATELY designates a replacement; otherwise the firm's licence and all affiliated licences are suspended for the same period.",
+      "Advertising must identify the FIRM and must never suggest a licensee operates independently of their broker."
+     ]
+    },
+    {
+     "h": "What GREC can do - and what it cannot",
+     "l": [
+      "Members are appointed by the GOVERNOR. GREC administers the licence law, makes rules, investigates, and disciplines.",
+      "SANCTIONS: reprimand, suspension, revocation, fines, required education, and required reports from an independent accountant on the trust account.",
+      "GREC CANNOT order a licensee to repay a consumer's financial loss. There is no restitution power. A wronged consumer must sue civilly and should not wait for the investigation to conclude.",
+      "GREC also does NOT resolve commission disputes between brokers - those go to arbitration or the courts."
+     ]
+    },
+    {
+     "h": "The disciplinary process",
+     "l": [
+      "ANYONE may file a sworn written request for investigation, and the Commission may act ON ITS OWN MOTION. The licensee is notified they are under investigation.",
+      "Where a violation caused no significant public harm, GREC may offer a CONSENT ORDER stating the violation and a proposed sanction. The licensee may sign, propose an alternative, present evidence, or demand a hearing.",
+      "A CONSENT SETTLEMENT fixes agreed findings of fact, conclusions of law, and a sanction, with no hearing held.",
+      "A formal hearing is conducted by an ADMINISTRATIVE LAW JUDGE from the Office of State Administrative Hearings.",
+      "The respondent has THIRTY DAYS to ask the Commission to review the ALJ's decision; otherwise it becomes final. The Commission has the same 30 days to request review. From the Commission's final decision, appeal goes to the courts.",
+      "Commission staff may not interpret the law for you - that is legal advice."
+     ]
+    },
+    {
+     "h": "A licensee is never an ordinary owner",
+     "p": [
+      "O.C.G.A. 43-40-29(c) provides that NONE of the exceptions to licensure applies to a person who holds a licence. Selling or leasing your own property means disclosing your licensed status IN WRITING in the contract or lease, and placing any trust funds in an account approved by your broker. Georgia also permits NET LISTINGS only under strict disclosure conditions."
+     ]
+    }
+   ],
+   "summary": "The biggest single block on the state portion (14 questions). Three clusters carry most of it: what you must do to GET and KEEP a licence, what GREC can and cannot do to you, and the fact that being a licensee never lets you act as an ordinary owner.",
+   "topic": "georgia/license-law",
+   "traps": [
+    "75 prelicense / 25 postlicense - candidates transpose these constantly.",
+    "CE is 24 hours per FOUR YEARS, not per year and not 36.",
+    "GREC cannot order restitution, and does not settle commission disputes.",
+    "Being a licensee removes, not grants, the ordinary-owner exemptions."
+   ],
+   "vocab": [
+    [
+     "GREC",
+     "The Georgia Real Estate Commission; members appointed by the Governor."
+    ],
+    [
+     "Qualifying broker",
+     "The broker responsible to GREC for a firm's compliance."
+    ],
+    [
+     "Associate broker",
+     "A broker-licensed individual working under a qualifying broker."
+    ],
+    [
+     "Prelicense course",
+     "75 hours for salesperson; 60 for broker."
+    ],
+    [
+     "Postlicense course",
+     "25 hours due within one year of original licensure."
+    ],
+    [
+     "Continuing education",
+     "24 hours per four-year renewal period."
+    ],
+    [
+     "Inactive status",
+     "Holding a licence without affiliating; no licensed activity permitted."
+    ],
+    [
+     "Change application",
+     "The GREC form used to report affiliation or status changes."
+    ],
+    [
+     "Consent order",
+     "A negotiated resolution stating the violation and sanction, no hearing."
+    ],
+    [
+     "Consent settlement",
+     "Agreed findings, conclusions and sanction without a hearing."
+    ],
+    [
+     "Administrative Law Judge",
+     "The OSAH officer who conducts formal GREC hearings."
+    ],
+    [
+     "Reprimand",
+     "The mildest GREC sanction."
+    ],
+    [
+     "Revocation",
+     "Permanent loss of licence."
+    ],
+    [
+     "Net listing",
+     "Broker keeps everything above the seller's stated net; strictly limited in Georgia."
+    ],
+    [
+     "O.C.G.A.",
+     "Official Code of Georgia Annotated."
+    ]
+   ]
+  },
+  "georgia/procedures": {
+   "blurb": "Attorney-conducted closings, title, transfer tax, recording.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "Say plainly that the attorney represents the lender and the buyer may retain their own counsel. Letting the buyer assume otherwise is a costly misunderstanding.",
+     "s": "At closing the buyer asks the attorney whether the repair clause protects them.",
+     "t": "Who does the closing attorney work for?",
+     "w": [
+      "Georgia requires attorney supervision of the closing.",
+      "That attorney customarily represents the LENDER, not the buyer.",
+      "The licensee must not supply a legal opinion either."
+     ]
+    },
+    {
+     "k": "The claim is complete. Without colour of title they would have needed 20 years.",
+     "s": "A neighbour has openly occupied a strip of land for 12 years under a deed they believed valid but which was defective.",
+     "t": "Seven years, not twenty",
+     "w": [
+      "A defective instrument that appears to convey title is COLOUR OF TITLE.",
+      "With colour of title Georgia's period is 7 years, not 20.",
+      "Twelve years exceeds it."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Closings, escrow & procedure",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "Attorney closings",
+     "p": [
+      "Georgia requires a licensed ATTORNEY to supervise the closing, because examining title and preparing conveyance documents is the practice of law. That attorney customarily represents the LENDER. A buyer who wants their own advocate must retain separate counsel - and a licensee should say so plainly rather than letting the buyer assume otherwise."
+     ]
+    },
+    {
+     "h": "The security deed",
+     "p": [
+      "Georgia's security instrument is a SECURITY DEED (deed to secure debt). Unlike a mortgage, which creates only a lien, it conveys LEGAL TITLE to the lender until the debt is paid. This is what makes Georgia a title-theory state and enables fast nonjudicial foreclosure."
+     ]
+    },
+    {
+     "h": "Foreclosure",
+     "l": [
+      "Georgia foreclosure is NONJUDICIAL, under the power of sale in the security deed.",
+      "Notice to the borrower, plus ADVERTISEMENT in the county LEGAL ORGAN, customarily for four weeks.",
+      "Public sale on the courthouse steps on the FIRST TUESDAY of the month.",
+      "A deficiency requires court confirmation of the sale."
+     ]
+    },
+    {
+     "h": "Transfer tax and recording",
+     "l": [
+      "Georgia real estate TRANSFER TAX is $1.00 per $1,000 of consideration (0.10%). Customarily paid by the SELLER.",
+      "Collected by the CLERK OF SUPERIOR COURT when the deed is recorded.",
+      "Deeds, security deeds, and plats are recorded with the clerk of superior court in the county where the land lies, giving constructive notice.",
+      "There is also an intangible recording tax on long-term notes."
+     ]
+    },
+    {
+     "h": "Taxes and prorations",
+     "p": [
+      "Georgia property taxes become a LIEN ON JANUARY 1 of the tax year and follow the property regardless of who owned it when they accrued. That is why closings prorate them. Unpaid taxes produce a SELLER DEBIT and BUYER CREDIT."
+     ]
+    },
+    {
+     "h": "Ownership rules that differ",
+     "l": [
+      "Georgia does NOT recognise tenancy by the entirety. Spouses wanting survivorship hold as JOINT TENANTS WITH RIGHT OF SURVIVORSHIP, stated expressly.",
+      "Adverse possession: 20 YEARS, or 7 YEARS under COLOUR OF TITLE.",
+      "Georgia subdivisions are usually described by LOT AND BLOCK from a recorded plat; Georgia does not use the rectangular survey system."
+     ]
+    },
+    {
+     "h": "At the table",
+     "p": [
+      "TRID applies: the Closing Disclosure must be received at least three business days before consummation. The closing attorney disburses, records, and issues title insurance."
+     ]
+    }
+   ],
+   "summary": "Closing and conveyancing in Georgia differ from the national norm in several specific ways, and the exam tests exactly those differences: attorney closings, security deeds, nonjudicial foreclosure, transfer tax, January 1 tax liens, and no tenancy by the entirety.",
+   "topic": "georgia/procedures",
+   "traps": [
+    "Georgia is an attorney-closing state, not an escrow state.",
+    "Security deed, not mortgage; nonjudicial foreclosure, first Tuesday.",
+    "$1.00 per $1,000 - divide the price by 1,000. Not 1% and not $0.10.",
+    "Tax lien attaches January 1, regardless of when the bill arrives."
+   ],
+   "vocab": [
+    [
+     "Security deed",
+     "Georgia's instrument conveying title to the lender as security."
+    ],
+    [
+     "Title theory",
+     "The doctrine that the lender holds legal title until the debt is paid."
+    ],
+    [
+     "Power of sale",
+     "The clause permitting nonjudicial foreclosure."
+    ],
+    [
+     "Legal organ",
+     "The county newspaper designated for official legal advertisements."
+    ],
+    [
+     "Confirmation of sale",
+     "Court approval required before pursuing a deficiency in Georgia."
+    ],
+    [
+     "Transfer tax",
+     "$1.00 per $1,000 of consideration, customarily paid by the seller."
+    ],
+    [
+     "Intangible recording tax",
+     "A Georgia tax on long-term notes secured by real estate."
+    ],
+    [
+     "Clerk of superior court",
+     "The county officer with whom Georgia land records are filed."
+    ],
+    [
+     "Colour of title",
+     "A defective written instrument that appears to convey title."
+    ]
+   ]
+  },
+  "georgia/trust-accounts": {
+   "blurb": "Designated trust accounts, deadlines, disbursement, records.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [
+    {
+     "k": "The buyer's verbal request is not enough. Get it in writing from everyone, normally as a stipulation in the offer.",
+     "s": "A buyer asks the broker to hold the earnest money check uncashed until the seller accepts.",
+     "t": "Holding a check needs everyone's signature",
+     "w": [
+      "The default rule is prompt deposit into a non-interest-bearing account.",
+      "Any deviation requires clear WRITTEN authority.",
+      "It must be agreed by ALL parties - the seller has an interest in the deposit too."
+     ]
+    },
+    {
+     "k": "Tell clients which bank holds trust funds and mention the $250,000 limit.",
+     "s": "A client already has $250,000 at XYZ Bank and gives the broker a $10,000 deposit. The broker's trust account is also at XYZ. The bank fails.",
+     "t": "The FDIC gap",
+     "w": [
+      "Pass-through treats the client as a separate owner - but the FDIC AGGREGATES their deposits at that bank.",
+      "The client is at $260,000 total, so $10,000 is uninsured.",
+      "The InfoBase warns the broker may be liable for it if the bank was not disclosed."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Trust accounts & earnest money",
+   "portion": "georgia",
+   "sections": [
+    {
+     "h": "Why the account exists",
+     "l": [
+      "Do NOT become part of the broker's estate on death",
+      "Are NOT subject to attachment or garnishment from a judgment against the broker",
+      "Do NOT go to creditors in the broker's bankruptcy",
+      "Are not available to accidentally cover shortfalls in the firm's operating account"
+     ],
+     "p": [
+      "A properly maintained trust account protects client money regardless of the broker's own finances. Per the InfoBase, funds in it:"
+     ]
+    },
+    {
+     "h": "Setting it up",
+     "l": [
+      "A SEPARATE, FEDERALLY INSURED bank CHECKING account that the BANK designates as a trust or escrow account.",
+      "Registered with the Commission at the time of broker application, and the broker must have SIGNATORY POWER.",
+      "It may be interest-bearing or non-interest-bearing, but funds are deposited into a NON-interest-bearing account unless all parties authorise otherwise in writing.",
+      "Open it under an EMPLOYER IDENTIFICATION NUMBER, not the broker's Social Security Number. The InfoBase records accounts seized by the IRS for a broker's personal tax debt, awarded in a divorce, and attached by a bank - the common thread was an account opened under the broker's SSN.",
+      "A broker must have AT LEAST ONE and may have several - commonly separate accounts for earnest money, rents, and security deposits. Each must be bank-designated and registered."
+     ]
+    },
+    {
+     "h": "Prompt deposit",
+     "p": [
+      "The law requires trust funds to be deposited PROMPTLY. To do anything else - hold a check until the offer is accepted, take a postdated check, accept personal property instead of money, or use an interest-bearing account - the broker needs CLEAR WRITTEN AUTHORITY agreed to by ALL parties, not just the one who asked. Once deposited, funds stay there until the transaction is consummated or terminated."
+     ]
+    },
+    {
+     "h": "What counts as trust money",
+     "l": [
+      "Earnest money and other deposits",
+      "RENTS collected for an owner",
+      "SECURITY, damage, cleaning, key deposits, and last month's rent",
+      "Payments collected on land contracts or wraparound mortgages on licensee-owned property",
+      "Any funds advanced by a party for expenses - appraisals, credit reports, repairs",
+      "Closing funds the broker collects and disburses",
+      "NOT trust money: commission properly earned and disbursed after closing."
+     ]
+    },
+    {
+     "h": "FDIC coverage",
+     "p": [
+      "The FDIC insures $250,000 per account owner per bank. Trust accounts get PASS-THROUGH coverage - each buyer, seller, or tenant is treated as a separate owner - but only if the broker meets the recordkeeping requirements. The catch: the FDIC ADDS that person's other deposits at the SAME bank. A client already at $250,000 in that bank has no coverage for their deposit, and the InfoBase warns the broker may be liable for the uninsured excess if the client was not told which bank holds the funds."
+     ]
+    },
+    {
+     "h": "Records, audits, and affiliates",
+     "l": [
+      "Written notice to GREC, on Commission forms, whenever the bank, account name, or account number changes, the bank changes names, or the account closes.",
+      "GREC may EXAMINE trust accounts on reasonable request and does so routinely. It MAY, at its discretion, accept a CPA's certification of compliance instead.",
+      "A nonresident broker may keep the account in their home state if they authorise GREC to examine it.",
+      "If a broker lets an affiliate maintain an account for the affiliate's own rentals, the broker must REGISTER it with GREC, remains RESPONSIBLE for it, and the affiliate must supply at least QUARTERLY written reconciliation statements comparing total trust liability with the reconciled bank balance."
+     ]
+    },
+    {
+     "h": "Disputes",
+     "p": [
+      "When buyer and seller both demand the deposit, the broker must not choose a side. Hold the funds and use interpleader or the prescribed procedure. Releasing, splitting, or keeping it all invite a conversion claim."
+     ]
+    }
+   ],
+   "summary": "Trust account rules exist to keep the public's money separate from the broker's, and they survive the broker's death, bankruptcy, divorce, and judgments. Nearly every question here is about separation, prompt deposit, or paperwork.",
+   "topic": "georgia/trust-accounts",
+   "traps": [
+    "'Promptly' is the standard; written authority from ALL parties is the only way around it.",
+    "EIN, not SSN. This is the difference between a protected account and a seizable one.",
+    "Commission is only the broker's money AFTER it is properly earned and disbursed.",
+    "GREC MAY accept a CPA report - the broker can request it, not demand it."
+   ],
+   "vocab": [
+    [
+     "Trust account",
+     "A separate, federally insured, bank-designated account for client funds."
+    ],
+    [
+     "Escrow",
+     "Money or documents held by a neutral party pending closing."
+    ],
+    [
+     "Commingling",
+     "Mixing trust funds with the broker's own money."
+    ],
+    [
+     "Conversion",
+     "Using or spending trust funds."
+    ],
+    [
+     "Signatory power",
+     "The broker's authority to sign on the account; required."
+    ],
+    [
+     "EIN",
+     "Employer Identification Number; trust accounts should be opened under one."
+    ],
+    [
+     "Pass-through coverage",
+     "FDIC treatment of each client as a separate insured owner."
+    ],
+    [
+     "Reconciliation",
+     "Comparing total trust liability against the bank balance."
+    ],
+    [
+     "Interpleader",
+     "A court action to resolve competing claims to held funds."
+    ]
+   ]
+  },
+  "national/agency": {
+   "blurb": "Fiduciary duties, agency creation and termination, dual agency.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "Declining to answer is not deceit. Saying 'no particular reason' is.",
+     "s": "A seller privately tells the listing agent they must move in 30 days. A buyer's agent asks why the seller is selling.",
+     "t": "Confidential, but you still cannot lie",
+     "w": [
+      "Motivation is confidential, not a material defect, so it stays private.",
+      "But honesty is owed to customers too, so an invented answer is misrepresentation.",
+      "The correct move is to DECLINE to answer, not to make something up."
+     ]
+    },
+    {
+     "k": "Refuse. If the seller persists, withdraw from the engagement. Passing the seller to a colleague just relocates the violation.",
+     "s": "A seller instructs the listing agent not to show the home to families with children.",
+     "t": "An unlawful instruction",
+     "w": [
+      "Obedience covers LAWFUL instructions only.",
+      "Familial status is a protected class under the Fair Housing Act.",
+      "Complying would make the agent personally liable alongside the seller."
+     ]
+    }
+   ],
+   "ga": [
+    "In Georgia, agency requires WRITTEN authority - a brokerage engagement. BRRETA also provides that a broker is NOT deemed a fiduciary; the broker owes reasonable care in the duties the statute and the engagement specify.",
+    "Paying a broker's commission does not by itself create agency in Georgia."
+   ],
+   "label": "Principles of agency",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "The six duties (OLD CAR)",
+     "l": [
+      "Obedience - follow LAWFUL instructions. You must refuse unlawful ones.",
+      "Loyalty - put the client's interests ahead of your own.",
+      "Disclosure - tell the client everything material you know.",
+      "Confidentiality - protect the client's private information. SURVIVES the end of the relationship, indefinitely.",
+      "Accounting - account for all money and documents. Also survives closing.",
+      "Reasonable care and diligence - competence and skill.",
+      "Which survive termination? CONFIDENTIALITY and ACCOUNTING. The rest end."
+     ]
+    },
+    {
+     "h": "How agency is created and ended",
+     "l": [
+      "Express - written or spoken agreement. Written is required in Georgia.",
+      "Implied - created by CONDUCT that leads someone to reasonably believe they are represented. This is the accidental-agency trap.",
+      "Ratification - approving an unauthorised act after the fact.",
+      "Estoppel - a party is barred from denying an agency their conduct created.",
+      "Termination: expiration, completion, mutual agreement, revocation, renunciation, death or incapacity of either party, destruction of the property, or bankruptcy. A client simply refusing an offer does NOT end the agency."
+     ]
+    },
+    {
+     "h": "Scope of authority",
+     "l": [
+      "Special agent - narrow authority for one transaction. The typical listing broker.",
+      "General agent - ongoing authority in a range of matters. A property manager.",
+      "Universal agent - may act in all matters, usually under power of attorney."
+     ]
+    },
+    {
+     "h": "Who is who",
+     "l": [
+      "Client / principal - the represented party, owed full duties.",
+      "Customer - unrepresented; owed honesty, fair dealing, and disclosure of known material defects. NOT owed advice, advocacy, or confidentiality.",
+      "Subagent - works through the listing broker and owes duties to the SELLER, even while driving the buyer around all day.",
+      "Dual agent - represents both sides in the same transaction. Duties shrink to neutrality; requires informed written consent from both. Illegal in some states.",
+      "Designated agent - one licensee assigned to each side within the same firm."
+     ]
+    },
+    {
+     "h": "Where licensees get into trouble",
+     "l": [
+      "Puffing vs. misrepresentation - exaggerated opinion ('best view in town') is puffing. A false statement of MATERIAL FACT is misrepresentation.",
+      "Confidentiality never covers a known material DEFECT. You may decline to state a seller's motivation; you may not lie about the roof.",
+      "Commingling - mixing client funds with the broker's own. CONVERSION is spending them - far worse.",
+      "Failure to present all offers. Every offer goes to the seller, including ones you dislike or that pay you less.",
+      "Undisclosed personal interest - a family or financial stake in a party must be disclosed in writing before the offer is considered.",
+      "Letting an unlicensed assistant discuss terms, negotiate, or hold an open house unaccompanied."
+     ]
+    },
+    {
+     "h": "When commission is earned",
+     "p": [
+      "Classically, when the broker produces a buyer who is READY, WILLING, AND ABLE on the seller's stated terms. Under most modern listing agreements it is earned at that moment even if the seller then refuses to close. PROCURING CAUSE - the uninterrupted chain of events that produced the buyer - decides disputes between brokers, and is settled by arbitration or the courts, not the licensing commission."
+     ]
+    }
+   ],
+   "summary": "Agency is about whose interests you are legally bound to advance. A CLIENT gets fiduciary-level duties; a CUSTOMER gets honesty and disclosure of known material defects. Most agency questions are really asking which one the person is.",
+   "topic": "national/agency",
+   "traps": [
+    "Confidentiality and accounting survive termination. Loyalty, obedience, disclosure and care do not.",
+    "A subagent works with the buyer but owes duties to the SELLER.",
+    "Refusing an offer does not terminate the agency.",
+    "Commingling is mixing; conversion is spending. Know which the question describes."
+   ],
+   "vocab": [
+    [
+     "Agency",
+     "A relationship where one person acts for another with authority."
+    ],
+    [
+     "Principal / client",
+     "The represented party, owed full duties."
+    ],
+    [
+     "Customer",
+     "An unrepresented party owed honesty and material-defect disclosure."
+    ],
+    [
+     "Fiduciary",
+     "One who holds a position of trust and must act in another's interest."
+    ],
+    [
+     "OLD CAR",
+     "Obedience, Loyalty, Disclosure, Confidentiality, Accounting, Reasonable care."
+    ],
+    [
+     "Express agency",
+     "Agency created by explicit written or spoken agreement."
+    ],
+    [
+     "Implied agency",
+     "Agency created accidentally by conduct."
+    ],
+    [
+     "Ratification",
+     "Approving an unauthorised act after it occurred."
+    ],
+    [
+     "Estoppel",
+     "Being barred from denying an agency your conduct created."
+    ],
+    [
+     "Special agent",
+     "Limited authority for a single transaction."
+    ],
+    [
+     "General agent",
+     "Ongoing authority across a range of matters."
+    ],
+    [
+     "Universal agent",
+     "Authority to act in all matters, typically by power of attorney."
+    ],
+    [
+     "Subagent",
+     "An agent working through the listing broker, owing duties to the seller."
+    ],
+    [
+     "Dual agent",
+     "A broker representing both parties in one transaction."
+    ],
+    [
+     "Designated agent",
+     "A licensee assigned to represent one client exclusively within a firm."
+    ],
+    [
+     "Puffing",
+     "Exaggerated opinion that is not a statement of fact."
+    ],
+    [
+     "Misrepresentation",
+     "A false statement of material fact."
+    ],
+    [
+     "Commingling",
+     "Mixing client trust funds with the broker's own funds."
+    ],
+    [
+     "Conversion",
+     "Spending or using client trust funds."
+    ],
+    [
+     "Procuring cause",
+     "The uninterrupted effort that produced a ready, willing and able buyer."
+    ],
+    [
+     "Ready, willing and able",
+     "A buyer prepared to purchase on the seller's terms."
+    ]
+   ]
+  },
+  "national/contracts": {
+   "blurb": "Formation, contingencies, breach and remedies, assignment.",
+   "counts_on_exam": true,
+   "exam_questions": 13,
+   "examples": [
+    {
+     "k": "No contract on the original terms. The buyer may accept the late acceptance as a fresh offer, or walk away.",
+     "s": "The offer says acceptance must be RECEIVED by 5pm Friday. The seller signs at 3pm Friday but the acceptance is not delivered until Saturday morning.",
+     "t": "Signed in time, delivered too late",
+     "w": [
+      "Acceptance is effective on COMMUNICATION, not on signature.",
+      "Nothing was communicated before the deadline, so the offer lapsed.",
+      "The late acceptance is legally a new offer."
+     ]
+    },
+    {
+     "k": "The buyer prevails and recovers the earnest money.",
+     "s": "The contract is contingent on financing at no more than 6.5%. The buyer is approved at 6.75% and terminates. The seller cries bad faith.",
+     "t": "Contingencies are read literally",
+     "w": [
+      "The parties fixed a number, and 6.75% does not meet it.",
+      "Courts enforce the stated term; materiality is not re-argued afterwards.",
+      "The buyer only needed to apply in good faith, which one genuine application meets."
+     ]
+    },
+    {
+     "k": "Only a novation - substituting the party with the seller's consent - would release the original buyer.",
+     "s": "A buyer assigns her purchase contract to a third party. The contract is silent on assignment; the seller objects.",
+     "t": "Assignment does not free you",
+     "w": [
+      "Real estate contracts are assignable unless they say otherwise.",
+      "The assignment is valid over the seller's objection.",
+      "But the original buyer remains SECONDARILY liable."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia measures deadlines from the BINDING AGREEMENT DATE - the date acceptance is communicated to the offeror.",
+    "Georgia's standard DUE DILIGENCE period lets the buyer terminate for any reason and recover the earnest money. After it expires the buyer's exits narrow sharply.",
+    "A Georgia licensee may fill in blanks on approved preprinted forms. Drafting original clauses is the unauthorised practice of law.",
+    "Handwritten or typed special stipulations PREVAIL over conflicting preprinted text."
+   ],
+   "label": "Contracts",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "The four essentials",
+     "l": [
+      "Competent parties - legal age and sound mind.",
+      "Mutual assent - a valid offer and an acceptance that mirrors it.",
+      "Consideration - something of value each way. A promise for a promise is enough, so earnest money is NOT what makes a contract valid.",
+      "Lawful object - a legal purpose.",
+      "For real estate, add the STATUTE OF FRAUDS: it must be in writing and signed by the party to be charged. Leases of a year or less are commonly exempt."
+     ]
+    },
+    {
+     "h": "Valid, void, voidable, unenforceable",
+     "l": [
+      "VALID - meets all requirements and binds both.",
+      "VOID - never a contract at all (illegal purpose).",
+      "VOIDABLE - one party may disaffirm: a minor's contract (voidable by the MINOR, the adult stays bound), or one induced by fraud, duress, menace, undue influence, or mistake.",
+      "UNENFORCEABLE - looks valid but a court will not enforce it, e.g. an oral land contract barred by the Statute of Frauds."
+     ]
+    },
+    {
+     "h": "Offer and acceptance",
+     "l": [
+      "Acceptance is effective when COMMUNICATED to the offeror. Signing alone is not acceptance.",
+      "MIRROR-IMAGE RULE - any change to terms is a COUNTEROFFER, which REJECTS the original and makes the former offeree the new offeror.",
+      "An offer terminates by: revocation before acceptance, rejection, counteroffer, lapse of the stated time, death or incapacity, or destruction of the property.",
+      "Private intent is irrelevant. Telling a friend you will probably accept changes nothing."
+     ]
+    },
+    {
+     "h": "Contract classifications",
+     "l": [
+      "Bilateral - a promise for a promise. The typical purchase contract.",
+      "Unilateral - a promise for an ACT. An OPTION is the classic example: the seller must sell if the optionee exercises, but the optionee need not buy.",
+      "Executory - signed but not yet fully performed (between contract and closing).",
+      "Executed - fully performed by both. Careful: 'executed' also loosely means 'signed' in everyday speech, and the exam exploits that."
+     ]
+    },
+    {
+     "h": "Contingencies",
+     "p": [
+      "A contingency is a condition precedent - the duty to perform does not arise until it is satisfied or waived. Read them exactly as written: an approval at 6.75% does not satisfy a contingency for financing at no more than 6.5%. The buyer must still apply in good faith."
+     ]
+    },
+    {
+     "h": "Breach and remedies",
+     "l": [
+      "Specific performance - a court orders the actual transfer. Available because every parcel of land is legally unique.",
+      "Liquidated damages - the parties agree in advance what the loss is, usually the earnest money. Enforceable only if it is a reasonable pre-estimate; if it is so large it functions as a penalty, courts void it.",
+      "Compensatory damages - actual proven loss.",
+      "Rescission - unwind the contract and restore both parties to their prior position.",
+      "Reformation - a court REWRITES the document to reflect what the parties actually agreed, used for scrivener's errors like a wrong parcel number."
+     ]
+    },
+    {
+     "h": "Assignment and novation",
+     "l": [
+      "ASSIGNMENT transfers RIGHTS. Real estate purchase contracts are assignable unless they say otherwise. The assignor stays SECONDARILY liable.",
+      "NOVATION substitutes a new party with everyone's consent and RELEASES the original. Only novation ends liability."
+     ]
+    },
+    {
+     "h": "Special contract forms",
+     "l": [
+      "Option - the optionee buys the RIGHT to decide, for option consideration that is usually nonrefundable. Once paid it is binding and not revocable; a recorded option binds later buyers with notice.",
+      "Land contract / contract for deed - the seller keeps LEGAL title while the buyer takes possession and EQUITABLE title, paying over time.",
+      "Lease option - a lease plus a right to buy.",
+      "Right of first refusal - the right to match an offer the owner receives; weaker than an option because it does not set a price or force a sale."
+     ]
+    },
+    {
+     "h": "Time and risk",
+     "l": [
+      "'Time is of the essence' turns stated dates into hard deadlines. Without it, courts allow performance within a REASONABLE time.",
+      "Equitable conversion (older rule) put risk of loss on the BUYER from signing. The Uniform Vendor and Purchaser Risk Act reverses that, leaving risk with the SELLER until title or possession passes."
+     ]
+    }
+   ],
+   "summary": "Contracts is the biggest block on the national exam (13 questions). Nearly every question reduces to one of three things: was a contract formed, what happens when someone does not perform, and can the deal be handed to someone else.",
+   "topic": "national/contracts",
+   "traps": [
+    "Earnest money is not consideration and not required for validity.",
+    "A minor's contract is voidable BY THE MINOR; the adult remains bound.",
+    "'Executed' means fully performed in exam language, not merely signed.",
+    "Assignment transfers rights but keeps you liable. Novation is the release."
+   ],
+   "vocab": [
+    [
+     "Statute of Frauds",
+     "Requires real estate contracts to be in writing and signed."
+    ],
+    [
+     "Mutual assent",
+     "A valid offer met by a matching acceptance."
+    ],
+    [
+     "Consideration",
+     "Something of value exchanged by each party."
+    ],
+    [
+     "Void",
+     "Never a contract at all."
+    ],
+    [
+     "Voidable",
+     "Valid until the protected party disaffirms."
+    ],
+    [
+     "Unenforceable",
+     "Apparently valid but a court will not enforce it."
+    ],
+    [
+     "Mirror-image rule",
+     "Acceptance must match the offer exactly or it is a counteroffer."
+    ],
+    [
+     "Counteroffer",
+     "A response changing terms; rejects and replaces the original offer."
+    ],
+    [
+     "Bilateral contract",
+     "A promise exchanged for a promise."
+    ],
+    [
+     "Unilateral contract",
+     "A promise exchanged for an act."
+    ],
+    [
+     "Executory",
+     "Signed but not yet fully performed."
+    ],
+    [
+     "Executed",
+     "Fully performed by both parties."
+    ],
+    [
+     "Contingency",
+     "A condition that must be met before performance is due."
+    ],
+    [
+     "Condition precedent",
+     "A condition that must occur before a duty arises."
+    ],
+    [
+     "Specific performance",
+     "A court order compelling the actual transfer."
+    ],
+    [
+     "Liquidated damages",
+     "An amount agreed in advance as the measure of loss."
+    ],
+    [
+     "Rescission",
+     "Unwinding a contract and restoring the parties."
+    ],
+    [
+     "Reformation",
+     "Court correction of a document to reflect true intent."
+    ],
+    [
+     "Assignment",
+     "Transfer of contract rights; assignor stays secondarily liable."
+    ],
+    [
+     "Novation",
+     "Substituting a party and releasing the original."
+    ],
+    [
+     "Option",
+     "A paid right to buy on set terms within a set time."
+    ],
+    [
+     "Optionor / optionee",
+     "The one who must sell / the one who may buy."
+    ],
+    [
+     "Land contract",
+     "Seller keeps legal title; buyer holds equitable title and possession."
+    ],
+    [
+     "Equitable title",
+     "The buyer's interest after contracting but before closing."
+    ],
+    [
+     "Right of first refusal",
+     "The right to match an offer the owner receives."
+    ],
+    [
+     "Earnest money",
+     "A good-faith deposit; evidence of intent, not what makes the contract valid."
+    ],
+    [
+     "Time is of the essence",
+     "A clause making stated dates strictly binding."
+    ],
+    [
+     "Equitable conversion",
+     "The doctrine placing risk of loss on the buyer at signing."
+    ]
+   ]
+  },
+  "national/disclosures": {
+   "blurb": "Material facts, latent defects, lead paint, environmental hazards.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [
+    {
+     "k": "Disclose it. Silence here is the classic post-closing lawsuit.",
+     "s": "A seller fixed a chronic basement leak two years ago and it has not recurred. They ask whether it goes on the disclosure.",
+     "t": "Repaired, but still disclose",
+     "w": [
+      "Water intrusion history affects value, insurability, and recurrence risk.",
+      "That makes it material even though it is currently fixed.",
+      "Disclosing the problem AND the repair protects the seller."
+     ]
+    },
+    {
+     "k": "Property facts are disclosable. Protected characteristics of people are not.",
+     "s": "A buyer asks whether a nearby group home houses people with disabilities.",
+     "t": "A question you should not answer",
+     "w": [
+      "Handicap is a protected class.",
+      "Answering, even truthfully and helpfully, facilitates steering.",
+      "Decline, and point the buyer to public sources they can research."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia expressly protects licensees from liability for NOT disclosing that a property was the site of a death, homicide, suicide, or felony.",
+    "Under BRRETA the duty runs to adverse material facts ACTUALLY KNOWN - there is no duty to inspect or investigate. But the duty runs to customers as well as clients.",
+    "The seller completes Georgia's property disclosure statement from personal knowledge. A licensee should never fill it in for them."
+   ],
+   "label": "Property condition & disclosures",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "Material facts and defects",
+     "l": [
+      "Material fact - anything affecting value, desirability, or the decision to buy.",
+      "LATENT defect - hidden, not discoverable by ordinary inspection. Known latent defects MUST be disclosed, because the buyer cannot find them.",
+      "PATENT defect - obvious on reasonable inspection.",
+      "A past problem that was repaired is still material - a history of flooding bears on recurrence and insurability. Disclose the problem AND the repair.",
+      "No duty to DISCOVER, but no licence to IGNORE. A visible red flag you actually observe must be passed on."
+     ]
+    },
+    {
+     "h": "What must NOT be disclosed",
+     "l": [
+      "A former occupant's HIV/AIDS status or other disability - handicap is protected.",
+      "The racial, religious, or ethnic makeup of a neighbourhood - answering steers.",
+      "Refer buyers to public data sources they can research themselves."
+     ],
+     "p": [
+      "Facts about occupants that touch a protected class are off limits, because disclosing them facilitates discrimination:"
+     ]
+    },
+    {
+     "h": "Stigmatized property",
+     "p": [
+      "Stigma comes from events - a death, a crime, a rumour - not physical condition. Most states, including Georgia, do NOT require disclosure and expressly protect licensees from liability for staying silent. But protection covers NONDISCLOSURE, not an affirmative lie. If asked directly, decline rather than deny."
+     ]
+    },
+    {
+     "h": "Lead-based paint (federal, applies everywhere)",
+     "l": [
+      "Applies to target housing built BEFORE 1978.",
+      "Seller must disclose known lead hazards and provide any records.",
+      "Buyer gets the EPA pamphlet and a 10-DAY opportunity to test.",
+      "The seller is never required to TEST. 'No knowledge' is a valid answer on the form."
+     ]
+    },
+    {
+     "h": "Environmental hazards",
+     "l": [
+      "Radon - naturally occurring radioactive gas entering through foundation cracks; second leading cause of lung cancer. Fixed with sub-slab depressurisation.",
+      "Asbestos - dangerous when FRIABLE (crumbles and releases fibres). Often best ENCAPSULATED rather than removed, since bad removal increases exposure.",
+      "Lead - paint in pre-1978 housing, and older service pipes.",
+      "Underground storage tanks - leak into soil and groundwater.",
+      "Mould, formaldehyde, groundwater contamination, brownfields.",
+      "CERCLA / Superfund - liability is STRICT, JOINT AND SEVERAL, and RETROACTIVE. A current owner can be liable without fault. The INNOCENT LANDOWNER defence requires appropriate due diligence, such as a Phase I, BEFORE buying.",
+      "Phase I ESA - records, interviews, site visit, non-invasive. Phase II involves sampling and testing, and only follows if Phase I finds a concern."
+     ]
+    },
+    {
+     "h": "Timing",
+     "p": [
+      "Disclosure must reach the buyer early enough to weigh it before committing - normally before or at the time of the offer. Delivery after a binding contract typically gives the buyer a right to rescind."
+     ]
+    }
+   ],
+   "summary": "The rule is simple and the exceptions are what get tested: disclose known material facts about the PROPERTY; never disclose facts about the PEOPLE. Agents are not inspectors and have no duty to hunt for defects, but they cannot ignore what they see or repeat what they know to be false.",
+   "topic": "national/disclosures",
+   "traps": [
+    "External and stigma facts feel similar but are opposite: physical condition must be disclosed, stigma generally need not.",
+    "Nondisclosure protection never licenses an affirmative lie.",
+    "CERCLA liability can attach to an innocent current owner - fault is not required."
+   ],
+   "vocab": [
+    [
+     "Material fact",
+     "Anything affecting value, desirability, or the decision to buy."
+    ],
+    [
+     "Latent defect",
+     "A hidden defect not discoverable by ordinary inspection."
+    ],
+    [
+     "Patent defect",
+     "An obvious defect visible on reasonable inspection."
+    ],
+    [
+     "Stigmatized property",
+     "Property made undesirable by events rather than condition."
+    ],
+    [
+     "Caveat emptor",
+     "'Let the buyer beware' - largely displaced by disclosure duties."
+    ],
+    [
+     "Target housing",
+     "Residential property built before 1978, covered by the lead rule."
+    ],
+    [
+     "Friable",
+     "Able to be crumbled by hand, releasing fibres into the air."
+    ],
+    [
+     "Encapsulation",
+     "Sealing a hazard in place instead of removing it."
+    ],
+    [
+     "Radon",
+     "A naturally occurring radioactive gas that enters through the foundation."
+    ],
+    [
+     "CERCLA",
+     "Superfund; imposes strict, joint and several, retroactive cleanup liability."
+    ],
+    [
+     "Innocent landowner defence",
+     "A CERCLA defence requiring pre-purchase due diligence."
+    ],
+    [
+     "Phase I ESA",
+     "A non-invasive environmental review of records and site conditions."
+    ],
+    [
+     "Phase II ESA",
+     "Sampling and testing that follows a concerning Phase I."
+    ],
+    [
+     "Brownfield",
+     "A property whose redevelopment is complicated by contamination."
+    ],
+    [
+     "Fraudulent concealment",
+     "Actively hiding a known material defect."
+    ]
+   ]
+  },
+  "national/financing": {
+   "blurb": "Loan types, points, amortization, TRID/RESPA, qualifying ratios.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "The seller-borrower owes the deficiency. Had the buyer ASSUMED, both would be liable - buyer primarily, seller secondarily - unless a novation released the seller.",
+     "s": "A buyer takes title 'subject to' the seller's existing loan, then defaults. Foreclosure leaves a $40,000 shortfall.",
+     "t": "Who owes the deficiency?",
+     "w": [
+      "'Subject to' means the buyer never promised to pay the note.",
+      "The buyer's only exposure was losing the property, which has happened.",
+      "The ORIGINAL borrower's promise is still outstanding."
+     ]
+    },
+    {
+     "k": "Buy the points only if you will hold the loan longer than about four years.",
+     "s": "6.5% with no points, or 6.0% with 2 points on a $300,000 loan.",
+     "t": "Do the points pay for themselves?",
+     "w": [
+      "Points cost 2% x $300,000 = $6,000.",
+      "Rate saving is 0.5% x $300,000 = $1,500 in the first year.",
+      "$6,000 / $1,500 = 4 years to break even."
+     ]
+    },
+    {
+     "k": "The buyer must cover the $10,000 gap on top of the normal down payment, and without a contingency has no automatic right to walk.",
+     "s": "Contract price $310,000; appraisal comes in at $300,000; the loan is 80% LTV. There is no appraisal contingency.",
+     "t": "The appraisal gap",
+     "w": [
+      "The lender lends on the LESSER figure: 80% x $300,000 = $240,000.",
+      "The buyer still owes the contract price of $310,000.",
+      "$310,000 - $240,000 = $70,000 due in cash."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia uses a SECURITY DEED, which conveys legal title to the lender until the debt is paid. That is why Georgia foreclosures are NONJUDICIAL under a power of sale.",
+    "Georgia foreclosure: notice to the borrower plus advertisement in the county legal organ, customarily four weeks, then a public sale on the courthouse steps on the FIRST TUESDAY of the month."
+   ],
+   "label": "Financing",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "The two documents",
+     "l": [
+      "Promissory note - the borrower's personal promise to repay. This is the debt.",
+      "Security instrument - pledges the property as collateral. A MORTGAGE creates a lien in most states. A DEED OF TRUST adds a third party, the TRUSTEE, who holds title for the lender and can sell without a lawsuit. GEORGIA uses a SECURITY DEED (deed to secure debt), which passes legal title to the lender until payoff.",
+      "Mortgagor = borrower. Mortgagee = lender. The '-or' gives, the '-ee' receives."
+     ]
+    },
+    {
+     "h": "Clauses you must recognise",
+     "l": [
+      "Acceleration - on DEFAULT the whole balance becomes due. A prerequisite to foreclosure.",
+      "Alienation (due-on-sale) - on TRANSFER the whole balance becomes due. Triggered by sale, not default.",
+      "Defeasance - requires the lender to release the lien when the debt is paid.",
+      "Subordination - voluntarily moves a lien to lower priority, so a construction lender can take first position.",
+      "Prepayment penalty - a charge for paying early.",
+      "Release (partial release) - in a blanket mortgage, frees individual lots as portions of the debt are paid."
+     ]
+    },
+    {
+     "h": "Taking over an existing loan",
+     "l": [
+      "ASSUMPTION - the buyer becomes PRIMARILY liable; the seller stays SECONDARILY liable until the lender grants a release.",
+      "NOVATION - the lender substitutes the new borrower and RELEASES the original. Only a novation frees the seller.",
+      "'SUBJECT TO' - the buyer takes title but accepts NO personal liability. On default the buyer loses the property; the ORIGINAL borrower still owes any deficiency."
+     ]
+    },
+    {
+     "h": "Amortization",
+     "l": [
+      "Fully amortized - level payments retire principal and interest by maturity.",
+      "Partially amortized - level payments leave a BALLOON at the end.",
+      "Term (straight) loan - interest only, principal due at the end.",
+      "In an amortized loan the INTEREST portion shrinks and the principal portion grows with each payment. Interest for one month = balance x annual rate / 12."
+     ]
+    },
+    {
+     "h": "Points, yield, and LTV",
+     "l": [
+      "One discount point = 1% of the LOAN AMOUNT, never the sale price.",
+      "Points are prepaid interest that raise the lender's YIELD, letting the borrower take a lower note rate. Roughly 8 points move the yield about 1%.",
+      "Origination fee compensates the lender for making the loan; also a % of the loan.",
+      "LTV = loan / value, where value is the LESSER of sale price and appraised value.",
+      "Conventional loans above 80% LTV require PMI, which protects the LENDER. FHA carries MIP instead; VA carries a funding fee and no monthly mortgage insurance."
+     ]
+    },
+    {
+     "h": "Loan programmes",
+     "l": [
+      "Conventional - not government backed. Conforming loans meet Fannie/Freddie limits.",
+      "FHA - insured by FHA, low down payment, MIP required.",
+      "VA - guaranteed for eligible veterans, no down payment, funding fee. Entitlement stays committed until the loan is paid or another veteran substitutes theirs.",
+      "ARM - rate = INDEX + MARGIN, adjusted periodically with periodic and lifetime caps. The margin is the lender's constant markup; the index moves with the market.",
+      "Purchase-money mortgage - seller financing taken back at the sale.",
+      "Blanket - covers multiple parcels, with a release clause.",
+      "Package - includes personal property.",
+      "Open-end - lets the borrower re-borrow up to a limit.",
+      "Wraparound - a new loan wrapped around an existing one the seller keeps paying.",
+      "Construction loan - short term, paid out in draws."
+     ]
+    },
+    {
+     "h": "The markets",
+     "p": [
+      "The PRIMARY market originates loans to consumers. The SECONDARY market - Fannie Mae, Freddie Mac, Ginnie Mae - BUYS existing loans, returning cash to lenders so they can lend again. Consumers never deal with the secondary market directly."
+     ]
+    },
+    {
+     "h": "Consumer protection law",
+     "l": [
+      "TILA / Regulation Z - discloses the cost of credit, including the APR, and governs trigger terms in advertising.",
+      "RESPA - governs settlement services. Section 8 bans paying or receiving anything of value for the mere REFERRAL of settlement business. Fees for services actually performed are fine.",
+      "TRID timing - Loan Estimate within 3 business days of APPLICATION; Closing Disclosure received at least 3 business days before CONSUMMATION.",
+      "Only three changes restart the 3-day CD clock: the APR becomes inaccurate beyond tolerance, the LOAN PRODUCT changes, or a PREPAYMENT PENALTY is added.",
+      "ECOA - bars discrimination in lending on race, colour, religion, national origin, sex, marital status, age, or receipt of public assistance. A denied applicant is entitled to SPECIFIC reasons, or notice of the right to request them within 60 days.",
+      "Usury laws cap the maximum lawful interest rate."
+     ]
+    }
+   ],
+   "summary": "Two documents do two jobs: the NOTE is the promise to repay, the SECURITY INSTRUMENT pledges the property. Everything else - clauses, loan types, disclosure rules - hangs off that split. Georgia uses a security deed rather than a mortgage.",
+   "topic": "national/financing",
+   "traps": [
+    "Points are a percentage of the LOAN, not the sale price. This is the single most common math error on the exam.",
+    "PMI protects the LENDER, never the borrower.",
+    "Assumption leaves the seller secondarily liable. Only NOVATION releases them.",
+    "Loan Estimate = 3 days after application. Closing Disclosure = 3 days before closing. Don't merge them."
+   ],
+   "vocab": [
+    [
+     "Promissory note",
+     "The borrower's written promise to repay the debt."
+    ],
+    [
+     "Security deed",
+     "Georgia's instrument conveying title to the lender as security."
+    ],
+    [
+     "Deed of trust",
+     "A three-party security instrument using a trustee."
+    ],
+    [
+     "Mortgagor / mortgagee",
+     "Borrower / lender."
+    ],
+    [
+     "Acceleration clause",
+     "Makes the entire balance due on default."
+    ],
+    [
+     "Alienation clause",
+     "Due-on-sale; makes the balance due on transfer."
+    ],
+    [
+     "Defeasance clause",
+     "Requires release of the lien when the debt is paid."
+    ],
+    [
+     "Subordination",
+     "Voluntarily lowering a lien's priority."
+    ],
+    [
+     "Assumption",
+     "Buyer takes over the loan and becomes primarily liable."
+    ],
+    [
+     "Novation",
+     "Substituting a new party and releasing the original."
+    ],
+    [
+     "Subject to",
+     "Taking title without personal liability on the loan."
+    ],
+    [
+     "Deficiency judgment",
+     "A judgment for the shortfall after a foreclosure sale."
+    ],
+    [
+     "Fully amortized loan",
+     "Level payments that retire the debt by maturity."
+    ],
+    [
+     "Balloon payment",
+     "A large final payment on a partially amortized loan."
+    ],
+    [
+     "Discount point",
+     "1% of the loan amount, paid to raise the lender's yield."
+    ],
+    [
+     "Origination fee",
+     "A lender's charge for making the loan, as a % of the loan."
+    ],
+    [
+     "Loan-to-value (LTV)",
+     "Loan divided by the lesser of price or appraised value."
+    ],
+    [
+     "PMI",
+     "Private mortgage insurance on conventional loans above 80% LTV; protects the lender."
+    ],
+    [
+     "MIP",
+     "FHA's mortgage insurance premium."
+    ],
+    [
+     "Funding fee",
+     "The VA's one-time charge in place of mortgage insurance."
+    ],
+    [
+     "Index and margin",
+     "An ARM's moving benchmark plus the lender's fixed markup."
+    ],
+    [
+     "Purchase-money mortgage",
+     "Seller financing taken back at closing."
+    ],
+    [
+     "Blanket mortgage",
+     "One loan covering several parcels, with a release clause."
+    ],
+    [
+     "Wraparound mortgage",
+     "A new loan encompassing an existing one that stays in place."
+    ],
+    [
+     "Primary market",
+     "Where loans are originated to consumers."
+    ],
+    [
+     "Secondary market",
+     "Where existing loans are bought and sold, providing liquidity."
+    ],
+    [
+     "Regulation Z",
+     "TILA's implementing rule; governs APR and credit advertising."
+    ],
+    [
+     "RESPA",
+     "Governs settlement services and bans kickbacks for referrals."
+    ],
+    [
+     "Loan Estimate",
+     "TRID disclosure due within 3 business days of application."
+    ],
+    [
+     "Closing Disclosure",
+     "TRID form the borrower must receive 3 business days before closing."
+    ],
+    [
+     "ECOA",
+     "Equal Credit Opportunity Act; bars discrimination in lending."
+    ],
+    [
+     "Usury",
+     "Charging interest above the legal maximum."
+    ]
+   ]
+  },
+  "national/landuse": {
+   "blurb": "Zoning, deed restrictions, eminent domain, police power, CC&Rs.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "The owner loses. A taking requires denial of ALL economically viable use, not a large loss of value.",
+     "s": "A city downzones an area. An owner's lot stays usable but is worth 40% less. The owner sues claiming a taking.",
+     "t": "Value loss is not a taking",
+     "w": [
+      "Ask the only question that matters: does ANY economically viable use remain?",
+      "It does - the lot is still usable, just less profitably.",
+      "Diminution in value alone, even substantial, is a cost of regulation."
+     ]
+    },
+    {
+     "k": "Destruction, abandonment, and changing to a different nonconforming use are the three classic ways the protection is lost.",
+     "s": "A legal nonconforming gas station burns down. The owner wants to rebuild it exactly as it was.",
+     "t": "Losing nonconforming status",
+     "w": [
+      "Nonconforming rights exist to phase a use out, not preserve it forever.",
+      "Most ordinances end the status on destruction beyond a stated percentage.",
+      "Rebuilding therefore requires conforming to current zoning, or a variance."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia subdivisions are typically described by LOT AND BLOCK from a plat recorded with the clerk of superior court in the county where the land lies."
+   ],
+   "label": "Land use controls",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "The four public powers (PETE)",
+     "l": [
+      "Police power - regulate for health, safety, morals, and general welfare. Zoning, building codes, and environmental rules. NO compensation is paid.",
+      "Eminent domain - TAKE private property for public use. Just compensation IS required. The lawsuit that exercises it is CONDEMNATION.",
+      "Taxation - levy against property to fund government.",
+      "Escheat - property passes to the state when an owner dies with no will and no locatable heirs."
+     ]
+    },
+    {
+     "h": "Zoning and relief from it",
+     "l": [
+      "Comprehensive (master) plan - the long-range policy document. Zoning is the ordinance that IMPLEMENTS the plan parcel by parcel.",
+      "Nonconforming use - a lawful use that predates the new zoning may continue ('grandfathered'). It is usually LOST on destruction beyond a set percentage, on abandonment for a stated period, or on change to a different nonconforming use.",
+      "Variance - permission to deviate from a DIMENSIONAL requirement (setback, height) because strict compliance creates a unique hardship the owner did not cause.",
+      "Special use / conditional use permit - allows a listed USE that needs review, such as a church or a school in a residential zone.",
+      "Spot zoning - rezoning one parcel inconsistently with the plan for one owner's benefit. Generally invalid.",
+      "Downzoning - reducing permitted intensity across an area.",
+      "Buffer zone - a strip separating incompatible districts.",
+      "Setback - the required distance from a lot line to a structure."
+     ]
+    },
+    {
+     "h": "When regulation becomes a taking",
+     "p": [
+      "A regulation is a valid exercise of police power even if it reduces value. It becomes a TAKING requiring compensation only when it denies ALL economically viable use. An owner claiming a regulation went that far sues in INVERSE CONDEMNATION."
+     ]
+    },
+    {
+     "h": "Private controls",
+     "l": [
+      "CC&Rs / restrictive covenants - recorded private restrictions that RUN WITH THE LAND and bind later buyers. Any benefited owner (or the HOA) may enforce them, usually by injunction. Government does not enforce them.",
+      "Defences to enforcement: abandonment through widespread non-enforcement, and laches where delay has prejudiced the defendant.",
+      "Where a covenant and zoning conflict, the MORE RESTRICTIVE one controls."
+     ]
+    },
+    {
+     "h": "Codes, permits, and environmental review",
+     "l": [
+      "Building permit and inspections exist for public safety, not revenue. The CERTIFICATE OF OCCUPANCY at the end confirms lawful occupancy.",
+      "NEPA requires an Environmental Impact Statement for major FEDERAL actions significantly affecting the environment."
+     ]
+    }
+   ],
+   "summary": "Two systems restrict what an owner may do: PUBLIC controls imposed by government, and PRIVATE controls created by contract or deed. The most common exam error is mixing them up - zoning is public and enforced by the municipality, CC&Rs are private and enforced by owners or an HOA.",
+   "topic": "national/landuse",
+   "traps": [
+    "Eminent domain is the POWER; condemnation is the PROCEEDING.",
+    "A variance is for dimensional hardship; a special use permit is for a different type of use. Questions swap them constantly.",
+    "Zoning is public and enforced by government. CC&Rs are private and enforced by owners."
+   ],
+   "vocab": [
+    [
+     "Police power",
+     "Government's power to regulate land use for public welfare without paying."
+    ],
+    [
+     "Eminent domain",
+     "The power to take private property for public use with just compensation."
+    ],
+    [
+     "Condemnation",
+     "The legal proceeding that exercises eminent domain."
+    ],
+    [
+     "Inverse condemnation",
+     "An owner's suit claiming regulation has effectively taken the property."
+    ],
+    [
+     "Escheat",
+     "Transfer to the state when an owner dies with no will and no heirs."
+    ],
+    [
+     "Comprehensive plan",
+     "The long-range policy guide that zoning implements."
+    ],
+    [
+     "Nonconforming use",
+     "A lawful pre-existing use that does not meet current zoning."
+    ],
+    [
+     "Variance",
+     "Permission to deviate from a dimensional zoning requirement on hardship grounds."
+    ],
+    [
+     "Special use permit",
+     "Approval for a listed conditional use in a district."
+    ],
+    [
+     "Spot zoning",
+     "Rezoning one parcel inconsistently with the plan; generally invalid."
+    ],
+    [
+     "Downzoning",
+     "Reducing the permitted intensity of use across an area."
+    ],
+    [
+     "Buffer zone",
+     "A transitional strip between incompatible zoning districts."
+    ],
+    [
+     "Setback",
+     "The required distance between a lot line and a structure."
+    ],
+    [
+     "CC&Rs",
+     "Covenants, conditions and restrictions - recorded private land use controls."
+    ],
+    [
+     "Run with the land",
+     "A restriction or benefit that binds and passes to later owners."
+    ],
+    [
+     "Certificate of occupancy",
+     "The document confirming a structure may lawfully be occupied."
+    ],
+    [
+     "Environmental Impact Statement",
+     "The NEPA study required for major federal actions."
+    ],
+    [
+     "Plat",
+     "A recorded subdivision map showing lots, blocks, and easements."
+    ]
+   ]
+  },
+  "national/math": {
+   "blurb": "Commissions, prorations, LTV, points, area, appreciation.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "$7,869.40. The wrong answers are the totals from each earlier step - stopping early is the trap.",
+     "s": "$511,000 sale, 5.5% total commission. The listing brokerage keeps 40% and pays the rest to the co-op brokerage. The listing agent's split is 70% to the agent.",
+     "t": "Commission all the way down",
+     "w": [
+      "Total = $511,000 x 5.5% = $28,105",
+      "Listing brokerage = $28,105 x 40% = $11,242",
+      "Listing agent = $11,242 x 70% = $7,869.40"
+     ]
+    },
+    {
+     "k": "Adding 7% to $480,000 gives $513,600 - always offered, always wrong.",
+     "s": "The seller wants to net $478,000 after $2,000 of costs and a 7% commission.",
+     "t": "Net to seller",
+     "w": [
+      "The seller must clear $478,000 + $2,000 = $480,000",
+      "That $480,000 is the 93% left after commission",
+      "Price = $480,000 / 0.93 = $516,129.03"
+     ]
+    },
+    {
+     "k": "$940.67 as a seller DEBIT and buyer CREDIT, because the buyer will pay the whole bill later.",
+     "s": "Annual taxes $4,980, unpaid. Closing March 9, 360-day year, seller responsible through the day before closing.",
+     "t": "Unpaid tax proration",
+     "w": [
+      "Daily = $4,980 / 360 = $13.83",
+      "Seller's days = 2 full months x 30 + 8 = 68 days",
+      "Seller's share = $13.83 x 68 = $940.67"
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia transfer tax is $1.00 per $1,000 of consideration - divide the price by 1,000.",
+    "Georgia property taxes become a lien on JANUARY 1, which is why closings prorate them."
+   ],
+   "label": "Real estate math",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "Conversions to memorise",
+     "l": [
+      "1 acre = 43,560 square feet",
+      "1 mile = 5,280 feet",
+      "1 section = 640 acres = 1 square mile",
+      "1 township = 36 sections",
+      "1 square yard = 9 square feet",
+      "Area of a rectangle = length x width. Triangle = 1/2 base x height."
+     ]
+    },
+    {
+     "h": "Commission",
+     "p": [
+      "Commission is always a percentage of the SALE price, then split - first between brokerages, then between each brokerage and its agent. Work outward one step at a time and do not stop at the total."
+     ]
+    },
+    {
+     "h": "Percentage of loan vs. percentage of price",
+     "l": [
+      "Discount points and origination fees: percentage of the LOAN.",
+      "Commission and transfer tax: percentage of the SALE price.",
+      "LTV: loan divided by the LESSER of price and appraised value."
+     ]
+    },
+    {
+     "h": "Net to seller - divide, never add",
+     "p": [
+      "To find the price that produces a target net, add the seller's costs to the target, then DIVIDE by (100% - commission%). Adding the commission percentage back on always understates the price, because the commission is a percentage of the larger sale price, not of the net."
+     ]
+    },
+    {
+     "h": "Prorations",
+     "l": [
+      "Work out the daily rate, count the days, assign them to the right party.",
+      "A 360-day banker's year (30-day months) is the exam default unless told otherwise.",
+      "The SELLER owns through the day BEFORE closing; the buyer owns closing day forward.",
+      "UNPAID item (taxes in arrears): the seller owes for their time -> seller DEBIT, buyer CREDIT.",
+      "PREPAID item (rent collected, insurance paid ahead): the seller already has the benefit -> seller CREDIT... except rent, where the seller HOLDS the buyer's cash, so seller DEBIT, buyer CREDIT.",
+      "Ask 'who has the money, and who will get the benefit?' and the direction follows."
+     ]
+    },
+    {
+     "h": "Interest",
+     "p": [
+      "Interest for one month = principal x annual rate / 12. In an amortized loan the interest portion shrinks as principal is repaid, so 'interest on the NEXT payment' uses the CURRENT balance."
+     ]
+    },
+    {
+     "h": "Appreciation and depreciation",
+     "l": [
+      "COMPOUND appreciation applies the rate to the NEW value each year: multiply by (1 + rate) once per year.",
+      "STRAIGHT-LINE depreciation takes the same dollar amount off the original basis every year: basis / useful life.",
+      "Simple (non-compound) growth multiplies the original by (1 + rate x years) - the classic wrong answer on a compound question."
+     ]
+    },
+    {
+     "h": "Qualifying ratios",
+     "p": [
+      "Front-end ratio = housing expense (PITI) / gross monthly income. Back-end adds all recurring monthly debt. Convert annual income to monthly FIRST."
+     ]
+    }
+   ],
+   "summary": "Real estate math is arithmetic with vocabulary attached. Almost every mistake is choosing the wrong BASE - a percentage of the loan versus the price, or of the net versus the sale price. Identify the base first, then compute.",
+   "topic": "national/math",
+   "traps": [
+    "Points on the LOAN, commission on the PRICE. Mixing these is the top math error.",
+    "Net-to-seller is division, not addition.",
+    "Compound appreciation multiplies each year; simple growth does not.",
+    "Convert annual income to monthly before applying a qualifying ratio."
+   ],
+   "vocab": [
+    [
+     "Acre",
+     "43,560 square feet."
+    ],
+    [
+     "Section",
+     "One square mile, 640 acres."
+    ],
+    [
+     "Township",
+     "36 sections, six miles square."
+    ],
+    [
+     "Front foot",
+     "A measure of frontage along a street or water."
+    ],
+    [
+     "Basis",
+     "The original cost used to compute depreciation or gain."
+    ],
+    [
+     "Straight-line depreciation",
+     "Equal annual deductions over a useful life."
+    ],
+    [
+     "Proration",
+     "Dividing a shared expense between buyer and seller at closing."
+    ],
+    [
+     "Banker's year",
+     "A 360-day year of twelve 30-day months."
+    ],
+    [
+     "Debit",
+     "An amount a party owes at closing."
+    ],
+    [
+     "Credit",
+     "An amount reducing what a party owes."
+    ],
+    [
+     "Front-end ratio",
+     "Housing expense divided by gross monthly income."
+    ],
+    [
+     "Back-end ratio",
+     "All recurring debt divided by gross monthly income."
+    ],
+    [
+     "PITI",
+     "Principal, interest, taxes, and insurance."
+    ]
+   ]
+  },
+  "national/ownership": {
+   "blurb": "Estates, tenancy, condos/co-ops, fixtures, water and air rights.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "Durational words (so long as, while, during, until) = determinable = automatic. Conditional words (but if, provided that, on condition that) = condition subsequent = the grantor must act.",
+     "s": "Ann conveys land 'to the city so long as it is used as a park.' The city later builds offices on it.",
+     "t": "Determinable fee vs. condition subsequent",
+     "w": [
+      "'So long as' is durational language, so this is a fee simple DETERMINABLE.",
+      "A determinable fee ends AUTOMATICALLY the moment the condition is broken.",
+      "Title reverts to Ann (or her heirs) with no lawsuit required."
+     ]
+    },
+    {
+     "k": "The son receives nothing in this property. A will only passes what the person still owned at death.",
+     "s": "Two sisters own a lake house as joint tenants. One dies leaving a will giving 'all my real property' to her son.",
+     "t": "Survivorship beats a will",
+     "w": [
+      "Survivorship operates at the instant of death.",
+      "At that instant the deceased sister's interest disappears into the survivor's.",
+      "There is nothing left for the will to pass."
+     ]
+    },
+    {
+     "k": "The tenant may remove it before the lease ends and must repair the damage. If they leave it past lease end, it can become the landlord's.",
+     "s": "A commercial tenant bolts refrigeration units to the floor of a leased space. The lease is silent. The lease ends.",
+     "t": "Is it a fixture?",
+     "w": [
+      "Bolting looks like annexation, which would normally make it a fixture.",
+      "But the tenant is COMMERCIAL and installed it to run the business.",
+      "That makes it a TRADE FIXTURE, which stays the tenant's personal property."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia does NOT recognise tenancy by the entirety. Married Georgians who want survivorship hold as joint tenants with right of survivorship, stated expressly in the deed.",
+    "A Georgia licensee who buys, sells, or leases property for their own account must disclose their licensed status in writing in the contract or lease, and must place any trust funds in an account approved by their broker."
+   ],
+   "label": "Property ownership",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "The bundle of rights",
+     "l": [
+      "Dispose - sell, gift, will, or encumber it",
+      "Use - occupy and use it for any lawful purpose",
+      "Possess - occupy it and exclude others",
+      "Exclude - keep others off",
+      "Sell/transfer - convey title to someone else"
+     ],
+     "p": [
+      "Ownership is not one right but several that can be separated and sold independently. Remember them as DUPES."
+     ]
+    },
+    {
+     "h": "Freehold estates: ownership without a fixed end",
+     "l": [
+      "Fee simple absolute - the whole bundle, no conditions, no time limit. The most complete ownership the law recognises.",
+      "Fee simple defeasible - ownership that can be LOST if a condition happens. A DETERMINABLE fee ends automatically the instant the condition occurs (the grantor holds a possibility of reverter). A fee on CONDITION SUBSEQUENT does not end automatically - the grantor must act on a right of re-entry.",
+      "Life estate - lasts for someone's lifetime. Measured by the holder's life, or by a third party's life (pur autre vie). When it ends, the property goes to the REMAINDERMAN, or back to the grantor as a REVERSION."
+     ],
+     "p": [
+      "A freehold lasts for an indefinite time. The three you must know:"
+     ]
+    },
+    {
+     "h": "Leasehold estates: possession with an end date",
+     "l": [
+      "Estate for years - fixed start and end. Ends automatically; no notice needed. 'Years' is misleading: a 30-day lease with fixed dates is an estate for years.",
+      "Periodic estate - renews itself (month to month) until someone gives notice.",
+      "Estate at will - continues at the pleasure of both parties, endable any time.",
+      "Estate at sufferance - a holdover who stays without permission. Lowest estate: possession with no right, but entry was originally lawful so it is not trespass."
+     ],
+     "p": [
+      "A leasehold gives possession, not ownership. The landlord keeps the LEASED FEE; the tenant holds the leasehold."
+     ]
+    },
+    {
+     "h": "Co-ownership",
+     "l": [
+      "Tenancy in common - shares may be unequal, NO survivorship, each share passes by will or inheritance. The default when a deed says nothing.",
+      "Joint tenancy - equal shares with RIGHT OF SURVIVORSHIP. Requires the four unities: Possession, Interest, Time, Title (PITT). Selling a share severs the joint tenancy as to that share; the buyer becomes a tenant in common.",
+      "Tenancy by the entirety - joint tenancy between spouses that neither can sever alone. GEORGIA DOES NOT RECOGNISE IT.",
+      "Community property - a marital form used in nine states; Georgia is not one."
+     ],
+     "p": [
+      "Ask two questions: is there a right of survivorship, and can one owner convey their share alone?"
+     ]
+    },
+    {
+     "h": "Condominiums, cooperatives, and timeshares",
+     "l": [
+      "Condominium - you own your unit in fee simple, PLUS an undivided tenancy-in-common share of the common elements. That percentage, set in the declaration, drives your assessments and usually your voting weight, and cannot be sold separately from the unit.",
+      "Cooperative - a corporation owns the whole building. You own SHARES of stock plus a proprietary lease on your unit. You own personal property, not real property.",
+      "Timeshare estate - a deeded fractional real property interest. A right-to-use timeshare is only a contract right to occupy, which expires with the contract."
+     ]
+    },
+    {
+     "h": "Fixtures",
+     "l": [
+      "Method of annexation - how firmly is it attached?",
+      "Adaptation - is it specially fitted to this property?",
+      "Intent - what did the person attaching it intend? Intent carries the most weight.",
+      "TRADE FIXTURES are the exception: items a COMMERCIAL TENANT installs to run their business stay the tenant's personal property and may be removed before the lease ends, with damage repaired. Left past lease end, they can be forfeited."
+     ],
+     "p": [
+      "A fixture is personal property that has become part of the real estate, so it conveys with the property unless the contract excludes it. Courts weigh three things, remembered as MAI:"
+     ]
+    },
+    {
+     "h": "Encumbrances: other people's claims on your land",
+     "l": [
+      "Easement appurtenant - runs with the land and benefits an adjoining parcel. The benefited parcel is the DOMINANT tenement; the burdened one is the SERVIENT tenement. It passes automatically to later owners.",
+      "Easement in gross - benefits a person or company, not a parcel. No dominant tenement. Commercial ones (utilities) are assignable and survive a sale.",
+      "Easement by necessity - implied when a parcel is landlocked by the seller's own severance of the land.",
+      "Easement by prescription - acquired by long, open, hostile use.",
+      "Licence - mere permission to use land. Personal and revocable at any time.",
+      "Encroachment - an unauthorised physical intrusion, usually found by SURVEY.",
+      "Lien - a money claim against the property.",
+      "Deed restriction / CC&R - a private restriction enforceable by benefited owners."
+     ]
+    },
+    {
+     "h": "Water and air rights",
+     "l": [
+      "Riparian rights - attach to FLOWING water (rivers, streams).",
+      "Littoral rights - attach to STILL water (lakes, seas, ponds).",
+      "Prior appropriation - the western doctrine where use is granted by permit regardless of whether you touch the water.",
+      "Air rights can be sold separately - that is how air-rights development works."
+     ]
+    }
+   ],
+   "summary": "Ownership is a bundle of separate rights, and almost every question here asks which sticks in the bundle a party actually holds. Work out three things for any scenario: how long the interest lasts, whether anything can cut it short, and who else has a claim on the same land.",
+   "topic": "national/ownership",
+   "traps": [
+    "'Estate for years' does not mean years. A 60-day lease with fixed dates is one.",
+    "The landlord holds the LEASED FEE; the tenant holds the leasehold. Questions try to flip these.",
+    "A condominium owner owns real property; a co-op shareholder owns personal property (stock plus a lease).",
+    "Every encroachment is an encumbrance, but not every encumbrance is physical."
+   ],
+   "vocab": [
+    [
+     "Fee simple absolute",
+     "Ownership with no conditions and no time limit; the complete bundle of rights."
+    ],
+    [
+     "Defeasible fee",
+     "A fee that can be lost if a stated condition occurs."
+    ],
+    [
+     "Possibility of reverter",
+     "The grantor's future interest after a determinable fee; takes effect automatically."
+    ],
+    [
+     "Right of re-entry",
+     "The grantor's future interest after a fee on condition subsequent; must be exercised."
+    ],
+    [
+     "Life estate",
+     "An interest lasting for a person's lifetime."
+    ],
+    [
+     "Pur autre vie",
+     "A life estate measured by the life of someone other than the holder."
+    ],
+    [
+     "Remainderman",
+     "The person who takes the property when a life estate ends."
+    ],
+    [
+     "Reversion",
+     "The interest returning to the grantor when a lesser estate ends."
+    ],
+    [
+     "Waste",
+     "A life tenant's failure to maintain, pay taxes, or preserve the property; the remainderman may sue now."
+    ],
+    [
+     "Leased fee",
+     "The landlord's ownership interest, subject to the lease."
+    ],
+    [
+     "Leasehold",
+     "The tenant's right of possession for a term."
+    ],
+    [
+     "Estate at sufferance",
+     "Possession by a holdover tenant with no right to be there."
+    ],
+    [
+     "Tenancy in common",
+     "Co-ownership with no survivorship; shares pass to heirs."
+    ],
+    [
+     "Joint tenancy",
+     "Co-ownership with right of survivorship, requiring the four unities."
+    ],
+    [
+     "Four unities (PITT)",
+     "Possession, Interest, Time, Title - all required for joint tenancy."
+    ],
+    [
+     "Severance",
+     "Breaking a joint tenancy, usually by one owner conveying their share."
+    ],
+    [
+     "Tenancy by the entirety",
+     "Marital joint tenancy neither spouse can sever alone. Not recognised in Georgia."
+    ],
+    [
+     "Common elements",
+     "The parts of a condominium owned by all unit owners as tenants in common."
+    ],
+    [
+     "Proprietary lease",
+     "The occupancy right a cooperative shareholder holds."
+    ],
+    [
+     "Fixture",
+     "Personal property that has become part of the realty and conveys with it."
+    ],
+    [
+     "Trade fixture",
+     "A commercial tenant's business equipment; remains personal property and is removable."
+    ],
+    [
+     "Emblements",
+     "Annual crops, treated as the tenant-farmer's personal property."
+    ],
+    [
+     "Chattel",
+     "Personal property."
+    ],
+    [
+     "Encumbrance",
+     "Any claim, lien, easement, or restriction limiting the fee."
+    ],
+    [
+     "Dominant tenement",
+     "The parcel benefited by an easement appurtenant."
+    ],
+    [
+     "Servient tenement",
+     "The parcel burdened by an easement."
+    ],
+    [
+     "Easement in gross",
+     "An easement benefiting a person or company rather than a parcel."
+    ],
+    [
+     "Encroachment",
+     "A physical intrusion onto a neighbouring parcel."
+    ],
+    [
+     "Licence",
+     "Revocable permission to use land; not an interest in land."
+    ],
+    [
+     "Riparian rights",
+     "Water rights along flowing water."
+    ],
+    [
+     "Littoral rights",
+     "Water rights along still water."
+    ]
+   ]
+  },
+  "national/practice": {
+   "blurb": "Advertising, fair housing, antitrust, licensing, trust funds.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "Lawful company policy. What would make it illegal is evidence the firms coordinated with each other.",
+     "s": "A brokerage tells its agents never to quote below 5%. Competitors independently do the same.",
+     "t": "Company policy is not conspiracy",
+     "w": [
+      "Antitrust requires an AGREEMENT between competitors.",
+      "One firm setting its own rate is competition, not conspiracy.",
+      "Parallel behaviour alone is not proof of an agreement."
+     ]
+    },
+    {
+     "k": "The landlord must show a substantial, legitimate business need that no less discriminatory rule would serve.",
+     "s": "A manager requires income of three times the rent. It statistically screens out a protected class at a much higher rate.",
+     "t": "Neutral rule, discriminatory effect",
+     "w": [
+      "The policy is facially neutral and applied to everyone.",
+      "But fair housing reaches EFFECTS, not just intent.",
+      "That is a disparate impact claim."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia permits net listings only under strict disclosure conditions.",
+    "Georgia advertising must identify the firm; a licensee may not appear to operate independently of their broker.",
+    "A Georgia salesperson may be paid ONLY by their affiliated broker."
+   ],
+   "label": "Practice of real estate",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "Federal fair housing",
+     "l": [
+      "The SEVEN protected classes: race, colour, religion, sex, national origin, familial status, and handicap.",
+      "Familial status covers households with children under 18, pregnant people, and those securing custody. Exception: qualified housing for older persons (55+/62+).",
+      "Handicap includes HIV/AIDS. Landlords must allow reasonable MODIFICATIONS at the TENANT'S expense, and make reasonable ACCOMMODATIONS to rules at the LANDLORD'S expense (waiving a no-pets rule for an assistance animal - and no pet fee).",
+      "Source of income and marital status are NOT federally protected in housing, though some states and cities protect them.",
+      "The 1866 Civil Rights Act bars ALL racial discrimination with no exceptions."
+     ]
+    },
+    {
+     "h": "The named violations",
+     "l": [
+      "STEERING - channelling people toward or away from areas by protected class. It does not require saying anything negative; selectively providing information does it.",
+      "BLOCKBUSTING (panic peddling) - inducing sales by suggesting a protected group's entry will harm the neighbourhood. Illegal whether or not the claim is true.",
+      "REDLINING - a lender refusing or pricing loans by area demographics.",
+      "Discriminatory advertising - describe the PROPERTY, never the desired occupant.",
+      "DISPARATE IMPACT - a neutral policy that falls disproportionately on a protected class can violate the Act with NO intent to discriminate. The defence is a substantial, legitimate business need with no less discriminatory alternative."
+     ]
+    },
+    {
+     "h": "Enforcement",
+     "p": [
+      "HUD handles federal complaints, generally filed within one year. A licensee's conduct can also independently cost them their licence through the state commission, and private suits are available."
+     ]
+    },
+    {
+     "h": "Antitrust",
+     "l": [
+      "PRICE FIXING - competitors agreeing on commission rates. A per se violation: no defence, no disclosure cure. Commission is always negotiated between a broker and a client.",
+      "GROUP BOYCOTT - competitors conspiring to refuse to deal with someone.",
+      "MARKET ALLOCATION - dividing territories or customer types.",
+      "TIE-IN - conditioning one sale on the purchase of another product.",
+      "A SINGLE FIRM setting its own rate is lawful company policy, not conspiracy. Antitrust requires an AGREEMENT between competitors; parallel behaviour alone is not proof."
+     ]
+    },
+    {
+     "h": "Listings and agreements",
+     "l": [
+      "OPEN - many brokers; the seller owes nothing if the seller finds the buyer.",
+      "EXCLUSIVE AGENCY - one broker, but the seller may still sell it themselves commission-free.",
+      "EXCLUSIVE RIGHT TO SELL - one broker paid no matter who sells. Most common.",
+      "NET LISTING - the broker keeps everything above a price the seller sets. Illegal in many states; Georgia permits it only under strict disclosure.",
+      "Buyer agency agreements mirror these structures."
+     ]
+    },
+    {
+     "h": "Trust funds",
+     "p": [
+      "Client money goes into a separate trust or escrow account, never the operating account. COMMINGLING is mixing; CONVERSION is spending. When buyer and seller both demand a disputed deposit, the broker must NOT pick a side - hold the funds and use interpleader or the state's prescribed procedure."
+     ]
+    },
+    {
+     "h": "Advertising, licensing, supervision",
+     "l": [
+      "Advertising must identify the firm and must never mislead or imply a licensee operates independently of their broker. Claiming credit for another firm's sale is a misrepresentation.",
+      "Do-not-call rules: an established business relationship or express written consent is needed. FSBO and expired-listing calls are a common violation source.",
+      "Unlicensed assistants may do clerical and ministerial work - scheduling, preparing materials for approval, basic factual answers. They may NOT negotiate, solicit, discuss terms, or host an open house unaccompanied.",
+      "Independent contractor status: the broker controls RESULTS, not hours and methods, but must still supervise for licence-law compliance. The IRS safe harbour needs a licence, pay based on output, and a written IC agreement.",
+      "ADA Title III requires removing barriers in public accommodations where READILY ACHIEVABLE; new construction faces stricter standards."
+     ]
+    }
+   ],
+   "summary": "This block covers how you are allowed to run the business: fair housing, antitrust, advertising, trust funds, listings, and supervision. The recurring theme is that good intentions are no defence - conduct is judged by its effect.",
+   "topic": "national/practice",
+   "traps": [
+    "Source of income and marital status are not among the seven federal classes.",
+    "Occupancy limits by NUMBER of people can be lawful; limits by AGE of occupant are not.",
+    "Modification = physical = tenant pays. Accommodation = rules = landlord absorbs.",
+    "Intent is not required for a fair housing violation."
+   ],
+   "vocab": [
+    [
+     "Protected class",
+     "A group the law shields from housing discrimination."
+    ],
+    [
+     "Familial status",
+     "Households with children under 18, pregnant people, those seeking custody."
+    ],
+    [
+     "Reasonable modification",
+     "A physical change for a disabled tenant, at the tenant's expense."
+    ],
+    [
+     "Reasonable accommodation",
+     "A change to rules or policies, at the provider's expense."
+    ],
+    [
+     "Steering",
+     "Channelling buyers toward or away from areas by protected class."
+    ],
+    [
+     "Blockbusting",
+     "Inducing panic selling by claims about a protected group moving in."
+    ],
+    [
+     "Redlining",
+     "Refusing or pricing loans by neighbourhood demographics."
+    ],
+    [
+     "Disparate impact",
+     "A neutral policy with a discriminatory effect; intent not required."
+    ],
+    [
+     "Price fixing",
+     "Competitors agreeing on prices; a per se antitrust violation."
+    ],
+    [
+     "Group boycott",
+     "Competitors agreeing to refuse to deal with someone."
+    ],
+    [
+     "Market allocation",
+     "Competitors dividing territories or customers."
+    ],
+    [
+     "Tie-in arrangement",
+     "Conditioning one transaction on another purchase."
+    ],
+    [
+     "Open listing",
+     "Non-exclusive; seller owes nothing if they sell it themselves."
+    ],
+    [
+     "Exclusive agency listing",
+     "One broker, but the seller may sell it themselves commission-free."
+    ],
+    [
+     "Exclusive right to sell",
+     "One broker is paid regardless of who sells."
+    ],
+    [
+     "Net listing",
+     "Broker keeps everything above the seller's stated net; heavily restricted."
+    ],
+    [
+     "Commingling",
+     "Mixing trust funds with the broker's own money."
+    ],
+    [
+     "Conversion",
+     "Using or spending trust funds."
+    ],
+    [
+     "Interpleader",
+     "A court action letting a stakeholder deposit disputed funds for decision."
+    ],
+    [
+     "Ministerial acts",
+     "Clerical, non-discretionary tasks an unlicensed assistant may do."
+    ],
+    [
+     "Independent contractor",
+     "A licensee whose results, not methods, the broker directs."
+    ],
+    [
+     "Readily achievable",
+     "The ADA standard for barrier removal: easily accomplishable."
+    ]
+   ]
+  },
+  "national/transfer": {
+   "blurb": "Deeds, title insurance, recording, closing, adverse possession.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "If the Monday buyer had no notice (including no reason to see the possession), they win. If the possession was open and obvious, they lose. Notice decides it.",
+     "s": "A buyer records Monday. An earlier buyer of the same parcel, who had paid and moved in, records Wednesday. Race-notice state.",
+     "t": "Race-notice, decided by notice",
+     "w": [
+      "Race-notice protects a later buyer only if they took WITHOUT NOTICE and recorded first.",
+      "The Monday buyer did record first.",
+      "But the earlier buyer's open POSSESSION is constructive notice."
+     ]
+    },
+    {
+     "k": "The seller must obtain and RECORD a release or satisfaction. A buyer cannot be forced to take title subject to an undischarged mortgage.",
+     "s": "A title commitment lists an unreleased 1978 mortgage as a Schedule B exception.",
+     "t": "Insurance does not clear a lien",
+     "w": [
+      "An EXCEPTION is exactly what the policy will NOT cover.",
+      "So buying insurance does not solve the problem.",
+      "Marketable title requires clearing the lien of record."
+     ]
+    }
+   ],
+   "ga": [
+    "Georgia records with the CLERK OF SUPERIOR COURT in the county where the land lies.",
+    "Georgia adverse possession: 20 years, or 7 years under colour of title.",
+    "Georgia real estate transfer tax is $1.00 per $1,000 of consideration, customarily paid by the SELLER and collected when the deed is recorded.",
+    "Georgia closings are supervised by a licensed ATTORNEY, who customarily represents the LENDER, not the buyer."
+   ],
+   "label": "Transfer of title",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "Requirements for a valid deed",
+     "l": [
+      "In writing, with a competent GRANTOR",
+      "A named, identifiable GRANTEE",
+      "Words of conveyance (the granting clause)",
+      "An adequate legal description",
+      "The grantor's SIGNATURE",
+      "DELIVERY to and ACCEPTANCE by the grantee - this is what actually passes title",
+      "Notarisation (acknowledgment) is needed to RECORD, not for validity. The grantee does not sign. Consideration need only be recited."
+     ]
+    },
+    {
+     "h": "Types of deed, strongest to weakest",
+     "l": [
+      "GENERAL WARRANTY - warrants title against all defects through the ENTIRE chain, including before the grantor owned it. Strongest.",
+      "SPECIAL (limited) WARRANTY - warrants only against defects arising during the GRANTOR'S ownership.",
+      "BARGAIN AND SALE - implies the grantor holds title but gives no warranty.",
+      "QUITCLAIM - conveys whatever interest the grantor has, if any, with NO warranty. The tool for clearing clouds.",
+      "Special-purpose deeds: executor's, sheriff's, tax, gift, and trustee's deeds."
+     ]
+    },
+    {
+     "h": "The covenants of title",
+     "l": [
+      "PRESENT covenants - breached at delivery if at all, so the clock starts then: seisin (the grantor owns and can convey), right to convey, and against encumbrances.",
+      "FUTURE covenants - breached only on a later disturbance: quiet enjoyment (undisturbed possession and defence against lawful claims), warranty forever, and further assurance (the grantor will sign whatever is later needed)."
+     ]
+    },
+    {
+     "h": "Recording, notice, and priority",
+     "l": [
+      "Recording gives CONSTRUCTIVE notice - everyone is charged with knowledge whether or not they looked.",
+      "ACTUAL notice is what a person genuinely knows. Open POSSESSION by someone can itself be constructive notice, which defeats a later buyer who ignored it.",
+      "Race - first to record wins.",
+      "Notice - a later buyer without notice wins.",
+      "RACE-NOTICE - a later buyer wins only if they took WITHOUT NOTICE and recorded FIRST.",
+      "Generally, first in time, first in right - subject to those statutes. Property tax liens usually take priority over everything."
+     ]
+    },
+    {
+     "h": "Title evidence",
+     "l": [
+      "Chain of title - the sequence of owners.",
+      "Abstract of title - the condensed written history of every recorded document.",
+      "Opinion of title - an attorney's interpretation of the abstract.",
+      "Title commitment - the insurer's promise to issue a policy, with Schedule B EXCEPTIONS listing what it will NOT cover.",
+      "Title insurance - protects against defects that ALREADY EXISTED when issued: forgery, undisclosed heirs, recording errors. Paid once. An OWNER'S policy covers the buyer; a LENDER'S policy covers only the lender.",
+      "Marketable title - title a reasonable buyer would accept. An unreleased mortgage of record must be cleared with a recorded release; insurance does not fix it.",
+      "Cloud on title - removed by a QUITCLAIM from the claimant, or a QUIET TITLE suit. A LIS PENDENS creates a cloud by giving notice of pending litigation."
+     ]
+    },
+    {
+     "h": "Involuntary and non-sale transfers",
+     "l": [
+      "Adverse possession - open, notorious, hostile, actual, and continuous possession for the statutory period, plus any state-specific element. EVERY element is required. GEORGIA: 20 years, or 7 years under COLOUR OF TITLE.",
+      "Accretion - gradual gain of land by deposit (the new soil is alluvion). Erosion is gradual loss. AVULSION is sudden change and does NOT move boundaries. Reliction is land exposed by permanently receding water.",
+      "Death: TESTATE (with a will) - real property passes by DEVISE. INTESTATE - state succession law controls. Escheat if no will and no heirs.",
+      "Foreclosure, tax sale, eminent domain, and dedication."
+     ]
+    },
+    {
+     "h": "Legal descriptions",
+     "l": [
+      "METES AND BOUNDS - distances and directions from a POINT OF BEGINNING; must return to it to close.",
+      "LOT AND BLOCK - references a recorded plat. The most common system in Georgia subdivisions.",
+      "RECTANGULAR (government) SURVEY - townships, ranges, and sections. A section is 1 square mile = 640 acres; a township is 36 sections. Georgia does NOT use it."
+     ]
+    }
+   ],
+   "summary": "Title passes on DELIVERY AND ACCEPTANCE of a valid deed. Recording is not required to make the deed good between the parties - it exists to give notice to everyone else and to settle priority when two people claim the same land.",
+   "topic": "national/transfer",
+   "traps": [
+    "Recording is not required for a deed to be valid between grantor and grantee.",
+    "The grantee never signs the deed.",
+    "A title EXCEPTION is uncovered, not covered. The word means the opposite of what it sounds.",
+    "Avulsion is sudden and does not move boundaries; accretion is gradual and does."
+   ],
+   "vocab": [
+    [
+     "Grantor / grantee",
+     "The one conveying / the one receiving."
+    ],
+    [
+     "Granting clause",
+     "The words of conveyance in a deed."
+    ],
+    [
+     "Delivery and acceptance",
+     "What actually transfers title."
+    ],
+    [
+     "Acknowledgment",
+     "Notarisation; required to record, not for validity."
+    ],
+    [
+     "General warranty deed",
+     "Warrants title against all defects through the whole chain."
+    ],
+    [
+     "Special warranty deed",
+     "Warrants only against defects during the grantor's ownership."
+    ],
+    [
+     "Quitclaim deed",
+     "Conveys whatever interest the grantor has, with no warranty."
+    ],
+    [
+     "Covenant of seisin",
+     "The grantor's promise that they own and can convey."
+    ],
+    [
+     "Covenant of quiet enjoyment",
+     "Promise of undisturbed possession and defence of title."
+    ],
+    [
+     "Constructive notice",
+     "Legal notice given by recording; everyone is charged with it."
+    ],
+    [
+     "Actual notice",
+     "Knowledge a person genuinely has."
+    ],
+    [
+     "Race-notice statute",
+     "A later buyer prevails only if without notice AND recording first."
+    ],
+    [
+     "Chain of title",
+     "The successive record of ownership."
+    ],
+    [
+     "Abstract of title",
+     "A condensed history of all recorded documents."
+    ],
+    [
+     "Title commitment",
+     "The insurer's promise to issue a policy, listing exceptions."
+    ],
+    [
+     "Schedule B exception",
+     "A defect the title policy will not cover."
+    ],
+    [
+     "Marketable title",
+     "Title free enough of defects that a reasonable buyer would accept it."
+    ],
+    [
+     "Cloud on title",
+     "A claim or defect casting doubt on ownership."
+    ],
+    [
+     "Quiet title action",
+     "A suit asking a court to settle ownership."
+    ],
+    [
+     "Lis pendens",
+     "Recorded notice of pending litigation; creates a cloud."
+    ],
+    [
+     "Adverse possession",
+     "Acquiring title by long, open, hostile possession."
+    ],
+    [
+     "Colour of title",
+     "A written instrument that appears to convey title but is defective."
+    ],
+    [
+     "Accretion / alluvion",
+     "Gradual addition of land by water / the deposited soil."
+    ],
+    [
+     "Avulsion",
+     "Sudden loss or addition of land; boundaries do not change."
+    ],
+    [
+     "Testate / intestate",
+     "Dying with a will / without one."
+    ],
+    [
+     "Devise",
+     "A gift of real property by will."
+    ],
+    [
+     "Metes and bounds",
+     "Description by distances and directions from a point of beginning."
+    ],
+    [
+     "Lot and block",
+     "Description by reference to a recorded plat."
+    ],
+    [
+     "Section",
+     "One square mile; 640 acres."
+    ]
+   ]
+  },
+  "national/valuation": {
+   "blurb": "The three approaches to value, CMA, appraisal principles.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "$416,000. CIA: Comp Inferior, Add. Superior features come off.",
+     "s": "A comparable sold for $420,000. It has an extra half-bath worth $12,000, and its lot is inferior to the subject's by $8,000.",
+     "t": "Adjusting comparables in the right direction",
+     "w": [
+      "Adjust the COMP toward the subject, never the subject toward the comp.",
+      "Comp is SUPERIOR on the bath: subtract $12,000 -> $408,000.",
+      "Comp is INFERIOR on the lot: add $8,000 -> $416,000."
+     ]
+    },
+    {
+     "k": "About $560,000. Skipping vacancy or expenses inflates the answer - which is exactly what the wrong choices will look like.",
+     "s": "A four-unit building rents for $1,400 per unit per month, vacancy is 5%, and operating expenses are $19,000 a year. Cap rate 8%.",
+     "t": "Cap rate value with a proper NOI",
+     "w": [
+      "Potential gross = 4 x $1,400 x 12 = $67,200",
+      "Less 5% vacancy ($3,360) = $63,840 effective gross",
+      "Less $19,000 expenses = $44,840 NOI",
+      "Value = NOI / rate = $44,840 / 0.08 = $560,500"
+     ]
+    },
+    {
+     "k": "External obsolescence, incurable, deducted from the land - not the improvements.",
+     "s": "A house on a busy corner sells for less than identical houses mid-block.",
+     "t": "Which depreciation is it?",
+     "w": [
+      "The cause is outside the property line, so it is EXTERNAL obsolescence.",
+      "External obsolescence is always incurable - the owner cannot move the road.",
+      "Because a location penalty attaches to the site, it is charged against the LAND."
+     ]
+    }
+   ],
+   "ga": [
+    "A Georgia licensee preparing a CMA is giving a broker's pricing opinion. Presenting it as an appraisal, or implying appraiser credentials, is a licence-law problem."
+   ],
+   "label": "Valuation & market analysis",
+   "portion": "national",
+   "sections": [
+    {
+     "h": "Value, price, and cost are three different things",
+     "l": [
+      "Market value - the most probable price in an arm's-length sale, with an informed buyer and seller, adequate exposure, and no duress. An OPINION.",
+      "Market price - what a property actually sold for. A historical FACT, which may reflect a distress sale.",
+      "Cost - what it took to build. Cost does not equal value.",
+      "Assessed value - the tax base, often a percentage of market value.",
+      "Insurable value - the improvements only, since land does not burn."
+     ]
+    },
+    {
+     "h": "The four characteristics of value (DUST)",
+     "l": [
+      "Demand - buyers who want it and can pay",
+      "Utility - it can satisfy a need",
+      "Scarcity - supply is limited",
+      "Transferability - title can be conveyed"
+     ]
+    },
+    {
+     "h": "Appraisal principles",
+     "l": [
+      "Substitution - value is capped by the cost of an equally desirable substitute. This underlies the whole sales comparison approach.",
+      "Highest and best use - the use that is legally permitted, physically possible, financially feasible, and maximally productive. Legality comes first; an illegal use is never highest and best.",
+      "Conformity - maximum value where properties are reasonably similar.",
+      "Progression - a modest property is pulled UP by superior neighbours.",
+      "Regression - a superior property is dragged DOWN by lesser neighbours.",
+      "Contribution - a component is worth what it ADDS to the whole, not what it cost.",
+      "Anticipation - value reflects expected future benefits.",
+      "Assemblage - combining parcels. PLOTTAGE is the extra value that results.",
+      "Supply and demand, and change - values move with the market and never sit still."
+     ]
+    },
+    {
+     "h": "The three approaches",
+     "l": [
+      "SALES COMPARISON - compare recent similar sales. Best for houses and land. Always adjust the COMPARABLE, never the subject. Comp superior: SUBTRACT. Comp inferior: ADD. Memory hook CIA - Comp Inferior, Add.",
+      "COST - reproduction or replacement cost, LESS depreciation, PLUS land value. Best for new construction and special-purpose property (churches, schools, libraries) that rarely sells and produces no rent.",
+      "INCOME - convert income into value. Best for rentals and commercial. Use IRV: Income = Rate x Value, so Value = NOI / Rate."
+     ]
+    },
+    {
+     "h": "Building NOI correctly",
+     "l": [
+      "Potential gross income (all units, fully rented)",
+      "minus vacancy and collection loss = EFFECTIVE GROSS INCOME",
+      "minus operating expenses = NET OPERATING INCOME",
+      "minus debt service = CASH FLOW",
+      "DEBT SERVICE IS NEVER AN OPERATING EXPENSE. Neither is depreciation or capital improvement. This is the single most common trap."
+     ],
+     "p": [
+      "Nearly every income-approach mistake is a bad NOI. Work down the statement in order:"
+     ]
+    },
+    {
+     "h": "Depreciation: three kinds",
+     "l": [
+      "Physical deterioration - wear, tear, and deferred maintenance. Often curable.",
+      "Functional obsolescence - a defect in the design or utility of the structure itself: one bathroom, a bedroom you walk through, an outdated layout.",
+      "External (economic) obsolescence - caused by something OUTSIDE the property line: a new highway, a failing neighbourhood. ALWAYS INCURABLE, because the owner cannot fix it. It is charged against the LAND.",
+      "Curable vs. incurable is an ECONOMIC test, not a physical one: an item is curable when the cost to fix it is recovered in added value."
+     ]
+    },
+    {
+     "h": "CMA vs. appraisal vs. BPO",
+     "p": [
+      "A competitive market analysis is a broker's pricing opinion built from comparables to help set a list price. It is NOT an appraisal, must never be presented as one, and needs no appraiser licence. An appraisal is an independent opinion by a licensed or certified appraiser."
+     ]
+    },
+    {
+     "h": "The appraisal process ends in reconciliation",
+     "p": [
+      "Reconciliation weighs each approach by how RELIABLE it is for that property, and states a single value conclusion. Averaging the three is always wrong."
+     ]
+    }
+   ],
+   "summary": "Value is an OPINION of the most probable price, not a fact. Three approaches exist, and the whole skill is picking the right one for the property type and then weighting them honestly. Appraisers never average the three.",
+   "topic": "national/valuation",
+   "traps": [
+    "Debt service is NEVER an operating expense when building NOI.",
+    "Cap rate and value move INVERSELY: a higher cap rate means a lower value.",
+    "Curability is about economics, not physics. If the fix costs more than it returns, it is incurable even though it is physically repairable.",
+    "Cost approach for a church or school; sales comparison for a house; income for a rental."
+   ],
+   "vocab": [
+    [
+     "Market value",
+     "The most probable price under normal, arm's-length conditions."
+    ],
+    [
+     "Market price",
+     "The actual price a property sold for."
+    ],
+    [
+     "Assessed value",
+     "The value used as the property tax base."
+    ],
+    [
+     "Insurable value",
+     "The value of the improvements only."
+    ],
+    [
+     "DUST",
+     "Demand, Utility, Scarcity, Transferability - the four elements of value."
+    ],
+    [
+     "Substitution",
+     "Value is limited by the cost of an equally desirable alternative."
+    ],
+    [
+     "Highest and best use",
+     "Legally permitted, physically possible, financially feasible, maximally productive."
+    ],
+    [
+     "Conformity",
+     "Value is maximised where properties are similar."
+    ],
+    [
+     "Progression",
+     "A lesser property gains value from superior neighbours."
+    ],
+    [
+     "Regression",
+     "A superior property loses value among lesser neighbours."
+    ],
+    [
+     "Contribution",
+     "A component is worth what it adds to the whole."
+    ],
+    [
+     "Anticipation",
+     "Value based on expected future benefits."
+    ],
+    [
+     "Assemblage",
+     "Combining adjacent parcels under one owner."
+    ],
+    [
+     "Plottage",
+     "The added value created by assemblage."
+    ],
+    [
+     "Comparable",
+     "A recently sold similar property used in the sales comparison approach."
+    ],
+    [
+     "Reproduction cost",
+     "Cost to build an exact replica."
+    ],
+    [
+     "Replacement cost",
+     "Cost to build equivalent utility with current materials."
+    ],
+    [
+     "Potential gross income",
+     "Income if fully rented with no losses."
+    ],
+    [
+     "Effective gross income",
+     "Potential gross income less vacancy and collection loss."
+    ],
+    [
+     "Net operating income",
+     "Effective gross income less operating expenses, before debt service."
+    ],
+    [
+     "Capitalization rate",
+     "The rate converting income to value; Value = NOI / Rate."
+    ],
+    [
+     "Gross rent multiplier",
+     "Sale price divided by gross rent; a quick screening tool."
+    ],
+    [
+     "Physical deterioration",
+     "Loss in value from wear and tear."
+    ],
+    [
+     "Functional obsolescence",
+     "Loss in value from a defect in the structure's own design or utility."
+    ],
+    [
+     "External obsolescence",
+     "Loss in value caused from outside the property; always incurable."
+    ],
+    [
+     "Reconciliation",
+     "Weighting the approaches into one value conclusion."
+    ],
+    [
+     "CMA",
+     "A broker's comparative pricing opinion; not an appraisal."
+    ]
+   ]
+  }
+ }
+}

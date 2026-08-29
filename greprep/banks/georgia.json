@@ -1712,19 +1712,19 @@
  {
   "answer": 0,
   "choices": [
-   "Becomes a dual agent and must stay neutral",
-   "Must withdraw from the transaction",
-   "Represents whichever client signed first",
-   "Has no role, since the designated agents replace the broker"
+   "Expressly NOT deemed a dual agent, and neither is the firm or its other licensees",
+   "The agent of whichever client signed first",
+   "Required to withdraw from the transaction",
+   "A dual agent, because the firm represents both clients"
   ],
-  "concept": "Designated agency does not eliminate the broker's position",
+  "concept": "Designated agency is not dual agency in Georgia",
   "difficulty": 2,
-  "explain": "The two designated agents each represent only their own client and may not share confidences except with the broker. The broker, standing above both, occupies a dual-agent position and must remain neutral -- which is why the broker is the one person who receives both sides' confidences.",
-  "id": "geo-fa8caffa",
+  "explain": "O.C.G.A. 10-6A-13(b) states that where designated agents are appointed, neither the broker, the broker's licensees, nor the firm is deemed a dual agent. The statute also removes imputed knowledge: the broker and each designated agent are treated as having only their own actual knowledge, and the broker may not reveal confidential information received from a designated agent or client.",
+  "id": "geo-e5e8ba8e",
   "portion": "georgia",
-  "q": "A Georgia broker assigns one licensee to the buyer and another to the seller in the same deal, with written consent. The BROKER personally:",
-  "sub": "georgia/brreta|Designated agency",
-  "subtopic": "Designated agency",
+  "q": "A Georgia broker assigns one licensee to the buyer and another to the seller in the same deal. Under BRRETA the broker is:",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
   "topic": "georgia/brreta"
  },
  {

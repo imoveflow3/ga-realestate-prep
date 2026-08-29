@@ -22,6 +22,8 @@ sys.path.insert(0, HERE)
 from greprep import mathgen, questions, scheduler, store, topics   # noqa: E402
 
 WEB_DIR = os.path.join(HERE, "web")
+STUDY_FILE = os.path.join(HERE, "greprep", "banks", "study.json")
+_STUDY = None
 PORT = int(os.environ.get("GAPREP_PORT", "8778"))
 LOCK = threading.Lock()
 SESSIONS = {}
@@ -38,6 +40,14 @@ def _public(q, index):
             "sub": q.get("sub"), "subtopic": q.get("subtopic"),
             "q": q["q"], "choices": q["choices"],
             "generator": q.get("generator")}
+
+
+def _study():
+    global _STUDY
+    if _STUDY is None:
+        with open(STUDY_FILE) as f:
+            _STUDY = json.load(f)
+    return _STUDY
 
 
 def _meta():
@@ -124,6 +134,8 @@ class Handler(BaseHTTPRequestHandler):
         path = self.path.split("?", 1)[0]
         if path == "/api/meta":
             return self._json(_meta())
+        if path == "/api/study":
+            return self._json(_study())
         if path == "/api/progress":
             with LOCK:
                 return self._json(_progress_payload(store.load()))

@@ -22,7 +22,8 @@ function tagFor(portion){
 function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
-var VIEWS = ['home','math','weak','quiz','result','dash','plan','setup'];
+var VIEWS = ['dash','study','home','math','weak','quiz','result','plan','setup'];
+var STUDY_TOPIC = null;
 function show(v){
   VIEWS.forEach(function(x){ var n = $('view-'+x); if (n) n.hidden = (x !== v); });
   document.querySelectorAll('#rail button').forEach(function(b){
@@ -31,6 +32,7 @@ function show(v){
     b.setAttribute('aria-current', on ? 'page' : 'false');
   });
   if (v === 'home') renderHome();
+  if (v === 'study') renderStudy();
   if (v === 'math') renderMath();
   if (v === 'weak') renderWeak();
   if (v === 'dash') renderDash();
@@ -406,6 +408,216 @@ function renderResult(a){
   }
 }
 
+/* ---------------------------------------------------------------- study */
+function studyFor(topicKey){
+  return (DATA.study && DATA.study.topics) ? DATA.study.topics[topicKey] : null;
+}
+
+function studyButton(topicKey, label){
+  var b = el('button', 'btn mini ghost', label || 'STUDY');
+  b.onclick = function(){ STUDY_TOPIC = topicKey; show('study'); };
+  return b;
+}
+
+function renderStudy(){
+  var v = $('view-study');
+  if (STUDY_TOPIC && studyFor(STUDY_TOPIC)) return renderStudyTopic(v, studyFor(STUDY_TOPIC));
+
+  v.innerHTML = '<div id="studyBody"></div>';
+  var box = $('studyBody');
+
+  var intro = el('div', 'card');
+  intro.appendChild(cardHead('Study', 'read it, then quiz it'));
+  intro.appendChild(el('p', 'sub',
+    'Notes for every topic you are quizzed on — definitions, the rules, worked ' +
+    'examples, Georgia differences, and the mistakes that cost people marks. Open a ' +
+    'topic to read it, then quiz yourself on it without leaving the page.'));
+  box.appendChild(intro);
+
+  var order = ['national', 'georgia', 'comprehensive'];
+  var NAMES = {national: 'National portion', georgia: 'Georgia state portion',
+               comprehensive: 'Comprehensive subtest'};
+  order.forEach(function(portion){
+    var keys = Object.keys(DATA.study.topics).filter(function(k){
+      return DATA.study.topics[k].portion === portion;
+    });
+    if (!keys.length) return;
+    var card = el('div', 'card');
+    card.appendChild(cardHead(NAMES[portion],
+      portion === 'comprehensive' ? 'cross-cutting drill'
+                                  : (portion === 'national' ? '80 questions' : '52 questions')));
+    var wrap = el('div', 'scroll'), t = el('table', 'stats');
+    t.innerHTML = '<tr><th>Topic</th><th class="num">On exam</th>' +
+                  '<th class="num">Terms</th><th></th><th></th></tr>';
+    keys.forEach(function(k){
+      var n = DATA.study.topics[k];
+      var name = el('td');
+      name.appendChild(el('b', null, n.label));
+      name.appendChild(el('div', 'muted', n.blurb));
+      var acts = el('td');
+      acts.appendChild(studyButton(k, 'READ'));
+      var quiz = el('td');
+      var qb = el('button', 'btn mini', 'QUIZ');
+      qb.onclick = (function(key, p){
+        return function(){
+          startQuiz({portion: p, count: 15, topic: key, timed: false, difficulty: 'harder'});
+        };
+      })(k, n.portion);
+      quiz.appendChild(qb);
+      t.appendChild(statRow([
+        name,
+        el('td', 'num', n.counts_on_exam ? String(n.exam_questions) : 'drill'),
+        el('td', 'num', String(n.vocab.length)),
+        acts, quiz
+      ]));
+    });
+    wrap.appendChild(t); card.appendChild(wrap);
+    box.appendChild(card);
+  });
+
+  var src = el('div', 'card');
+  src.appendChild(cardHead('Where this comes from', 'sources'));
+  src.appendChild(el('p', 'muted',
+    'These notes were written for this app. Georgia facts are checked against the ' +
+    'Commission’s own published reference; federal rules against the agencies that ' +
+    'issue them. No commercial exam-prep book is reproduced here.'));
+  var list = el('div', 'focuslist');
+  (DATA.study.sources || []).forEach(function(s2){
+    var d = el('div', 'focus');
+    var line = el('div');
+    var a = el('a', null, s2.name);
+    a.href = s2.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    a.style.color = 'var(--accent)';
+    line.appendChild(a);
+    line.appendChild(document.createTextNode('  —  ' + s2.by));
+    d.appendChild(line);
+    d.appendChild(el('div', 'muted', s2.note));
+    list.appendChild(d);
+  });
+  src.appendChild(list);
+  box.appendChild(src);
+}
+
+function renderStudyTopic(v, n){
+  v.innerHTML = '<div id="studyBody"></div>';
+  var box = $('studyBody');
+
+  var head = el('div', 'card');
+  var hd = el('div', 'cardhead');
+  var left = el('div');
+  var h1 = el('h1', null, n.label);
+  left.appendChild(h1);
+  var meta = el('div', 'muted');
+  meta.appendChild(document.createTextNode(
+    n.counts_on_exam ? (n.exam_questions + ' of the 132 scored questions come from this topic')
+                     : 'A drill topic — not a scored section of the exam'));
+  left.appendChild(meta);
+  hd.appendChild(left);
+  var back = el('button', 'btn mini ghost', 'ALL TOPICS');
+  back.onclick = function(){ STUDY_TOPIC = null; renderStudy(); };
+  hd.appendChild(back);
+  head.appendChild(hd);
+  head.appendChild(el('p', 'sub', n.summary));
+  var acts = el('div', 'row');
+  [['Quiz me on this (15)', 15, false], ['Quick check (5)', 5, false]].forEach(function(a){
+    var d = el('div'); d.style.flex = '0 0 auto';
+    var b = el('button', 'btn' + (a[1] === 5 ? ' ghost' : ''), a[0]);
+    b.onclick = function(){
+      startQuiz({portion: n.portion, count: a[1], topic: n.topic,
+                 timed: a[2], difficulty: 'harder'});
+    };
+    d.appendChild(b); acts.appendChild(d);
+  });
+  head.appendChild(acts);
+  box.appendChild(head);
+
+  n.sections.forEach(function(sec){
+    var c = el('div', 'card');
+    c.appendChild(el('h2', null, sec.h));
+    (sec.p || []).forEach(function(para){ c.appendChild(el('p', null, para)); });
+    if (sec.l && sec.l.length){
+      var ul = el('ul');
+      ul.style.cssText = 'margin:.2rem 0 0;padding-left:1.15rem;display:flex;' +
+                         'flex-direction:column;gap:.3rem';
+      sec.l.forEach(function(item){ ul.appendChild(el('li', null, item)); });
+      c.appendChild(ul);
+    }
+    box.appendChild(c);
+  });
+
+  if (n.vocab.length){
+    var vc = el('div', 'card');
+    vc.appendChild(cardHead('Vocabulary', n.vocab.length + ' terms'));
+    var vwrap = el('div', 'scroll'), vt = el('table');
+    vt.innerHTML = '<tr><th>Term</th><th>Definition</th></tr>';
+    n.vocab.forEach(function(pair){
+      var tr = el('tr');
+      var td = el('td');
+      td.appendChild(el('b', null, pair[0]));
+      td.style.minWidth = '170px';
+      tr.appendChild(td);
+      tr.appendChild(el('td', null, pair[1]));
+      vt.appendChild(tr);
+    });
+    vwrap.appendChild(vt); vc.appendChild(vwrap);
+    box.appendChild(vc);
+  }
+
+  if (n.examples.length){
+    var ec = el('div', 'card');
+    ec.appendChild(cardHead('Worked examples', 'follow the steps'));
+    n.examples.forEach(function(ex){
+      var w = el('div', 'week');
+      w.appendChild(el('h3', null, ex.t));
+      w.appendChild(el('p', 'muted', ex.s));
+      var ol = el('ol', 'steps');
+      ex.w.forEach(function(step){ ol.appendChild(el('li', null, step)); });
+      w.appendChild(ol);
+      var k = el('div', 'concept');
+      k.appendChild(el('b', null, 'Takeaway: '));
+      k.appendChild(document.createTextNode(ex.k));
+      w.appendChild(k);
+      ec.appendChild(w);
+    });
+    box.appendChild(ec);
+  }
+
+  if (n.ga && n.ga.length){
+    var gc = el('div', 'card');
+    gc.appendChild(cardHead('Georgia differences', 'where Georgia departs from the national rule'));
+    var gl = el('div', 'focuslist');
+    n.ga.forEach(function(item){ gl.appendChild(el('div', 'focus', item)); });
+    gc.appendChild(gl);
+    box.appendChild(gc);
+  }
+
+  if (n.traps && n.traps.length){
+    var tc = el('div', 'card');
+    tc.appendChild(cardHead('Common traps', 'where marks get lost'));
+    var tl = el('div', 'focuslist');
+    n.traps.forEach(function(item){ tl.appendChild(el('div', 'focus', item)); });
+    tc.appendChild(tl);
+    box.appendChild(tc);
+  }
+
+  var foot = el('div', 'card');
+  var frow = el('div', 'row');
+  var d1 = el('div'); d1.style.flex = '0 0 auto';
+  var b1 = el('button', 'btn', 'Quiz me on this topic');
+  b1.onclick = function(){
+    startQuiz({portion: n.portion, count: 15, topic: n.topic, timed: false,
+               difficulty: 'harder'});
+  };
+  d1.appendChild(b1); frow.appendChild(d1);
+  var d2 = el('div'); d2.style.flex = '0 0 auto';
+  var b2 = el('button', 'btn ghost', 'Back to all topics');
+  b2.onclick = function(){ STUDY_TOPIC = null; renderStudy(); };
+  d2.appendChild(b2); frow.appendChild(d2);
+  foot.appendChild(frow);
+  box.appendChild(foot);
+  window.scrollTo(0, 0);
+}
+
 /* ----------------------------------------------------------- weak spots */
 function drillButton(topicKey, portion, count){
   var b = el('button', 'btn ghost', 'Drill ' + count);
@@ -463,17 +675,20 @@ function renderWeak(){
   } else {
     var wrap = el('div', 'scroll'), t = el('table', 'stats');
     t.innerHTML = '<tr><th>Weak spot</th><th>Topic</th><th class="num">Correct</th>' +
-                  '<th class="num">Accuracy</th><th></th><th></th></tr>';
+                  '<th class="num">Accuracy</th><th></th><th></th><th></th></tr>';
     subs.forEach(function(r){
       var parent = el('td');
       parent.appendChild(document.createTextNode(r.topic_label + ' '));
       parent.appendChild(tagFor(r.portion));
+      var study = el('td');
+      study.appendChild(studyButton(r.topic, 'STUDY'));
       t.appendChild(statRow([
         el('td', null, r.label),
         parent,
         el('td', 'num', r.correct + '/' + r.seen),
         el('td', 'num', pct(r.pct)),
         accuracyCell(r.pct),
+        study,
         actionCell('DRILL', (function(sub, p){
           return function(){
             startQuiz({portion: p, count: 10, sub: sub, timed: false, difficulty: 'harder'});
@@ -661,7 +876,8 @@ function renderDash(){
   tc.appendChild(cardHead('Topics', 'badge is questions on the real exam'));
   var twrap = el('div', 'scroll'), tt = el('table', 'stats');
   tt.innerHTML = '<tr><th>Topic</th><th class="num">Sets</th><th class="num">Qs</th>' +
-                 '<th class="num">Recent</th><th></th><th class="num">Trend</th><th></th></tr>';
+                 '<th class="num">Recent</th><th></th><th class="num">Trend</th>' +
+                 '<th></th><th></th></tr>';
   var lastPortion = null;
   topicTable(D).forEach(function(r){
     if (r.portion !== lastPortion){
@@ -670,7 +886,7 @@ function renderDash(){
       var cell = el('td', null, {national: 'National portion',
                                  georgia: 'Georgia state portion',
                                  comprehensive: 'Comprehensive subtest'}[r.portion]);
-      cell.colSpan = 7;
+      cell.colSpan = 8;
       head.appendChild(cell);
       tt.appendChild(head);
     }
@@ -706,17 +922,20 @@ function renderDash(){
   } else {
     var wwrap = el('div', 'scroll'), wt = el('table', 'stats');
     wt.innerHTML = '<tr><th>Weak spot</th><th>Topic</th><th class="num">Correct</th>' +
-                   '<th class="num">Accuracy</th><th></th><th></th></tr>';
+                   '<th class="num">Accuracy</th><th></th><th></th><th></th></tr>';
     subs.forEach(function(r){
       var parent = el('td');
       parent.appendChild(document.createTextNode(r.topic_label + ' '));
       parent.appendChild(tagFor(r.portion));
+      var study = el('td');
+      study.appendChild(studyButton(r.topic, 'STUDY'));
       wt.appendChild(statRow([
         el('td', null, r.label),
         parent,
         el('td', 'num', r.correct + '/' + r.seen),
         el('td', 'num', pct(r.pct)),
         accuracyCell(r.pct),
+        study,
         actionCell('DRILL', (function(sub, p){
           return function(){
             startQuiz({portion: p, count: 10, sub: sub, timed: false, difficulty: 'harder'});
@@ -972,8 +1191,13 @@ function renderSetup(){
     written += DATA.banks[k].length;
     hard += DATA.banks[k].filter(function(r){ return r.difficulty === 2; }).length;
   });
-  $('bankcount').textContent = written + ' written questions (' + hard + ' hard) + ' +
-    mathN + ' math problems';
+  var vocabN = 0;
+  Object.keys(DATA.study.topics).forEach(function(k){
+    vocabN += DATA.study.topics[k].vocab.length;
+  });
+  $('bankcount').textContent = written + ' questions (' + hard + ' hard) + ' + mathN +
+    ' math problems + study notes on ' + Object.keys(DATA.study.topics).length +
+    ' topics (' + vocabN + ' terms)';
   countdown();
   show('home');
 })();

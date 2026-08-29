@@ -17,6 +17,7 @@
 <nav class="rail" aria-label="Sections">
   <div class="rail-in" id="rail">
     <button data-view="dash" class="on" aria-current="page">Dashboard</button>
+    <button data-view="study" aria-current="false">Study</button>
     <button data-view="home" aria-current="false">Practice</button>
     <button data-view="weak" aria-current="false">Weak spots</button>
     <button data-view="math" aria-current="false">Math</button>
@@ -114,6 +115,11 @@
       </div>
     </div>
     <div id="mathStats"></div>
+  </section>
+
+  <!-- ------------------------------------------------ study -->
+  <section id="view-study" hidden>
+    <div id="studyBody"></div>
   </section>
 
   <!-- ------------------------------------------------ weak spots -->
