@@ -36,8 +36,10 @@ function show(view){
   ['home','math','weak','quiz','result','dash','plan'].forEach(function(v){
     var n = $('view-' + v); if (n) n.hidden = (v !== view);
   });
-  document.querySelectorAll('nav button').forEach(function(b){
-    b.classList.toggle('on', b.dataset.view === view);
+  document.querySelectorAll('#rail button').forEach(function(b){
+    var on = b.dataset.view === view;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-current', on ? 'page' : 'false');
   });
   if (view === 'dash') refreshThen(renderDash);
   if (view === 'plan') renderPlan();
@@ -46,7 +48,7 @@ function show(view){
   if (view === 'home') renderHomeWeak();
   window.scrollTo(0, 0);
 }
-document.querySelectorAll('nav button').forEach(function(b){
+document.querySelectorAll('#rail button').forEach(function(b){
   b.onclick = function(){
     if (QUIZ && !confirm('Leave this quiz? It will not be scored.')) return;
     if (QUIZ) stopTimer();
@@ -59,7 +61,7 @@ document.querySelectorAll('nav button').forEach(function(b){
 Promise.all([api('/api/meta'), api('/api/progress')]).then(function(r){
   META = r[0]; PROGRESS = r[1];
   fillTopicPicker(); fillMathPicker(); fillWeakPicker(); fillProfile();
-  renderHomeWeak(); renderCountdown();
+  renderCountdown(); show('dash');
 });
 
 function fillTopicPicker(){
@@ -108,13 +110,34 @@ function fillProfile(){
   if (p.hours_per_week) $('hours').value = p.hours_per_week;
 }
 
+function ro(key, value, note, hero){
+  var d = el('div', 'ro' + (hero ? ' hero' : ''));
+  d.appendChild(el('div', 'k', key));
+  var v = el('div', 'v', value);
+  if (note) v.appendChild(el('small', null, '\u00b7 ' + note));
+  d.appendChild(v);
+  return d;
+}
+
+/* The status strip in the header: the five numbers worth seeing on every screen. */
 function renderCountdown(){
-  var p = PROGRESS.profile || {};
-  if (!p.exam_date){ $('countdown').textContent = 'salesperson licensing exam'; return; }
-  var days = Math.ceil((new Date(p.exam_date + 'T00:00:00') - new Date()) / 86400000);
-  $('countdown').textContent = days >= 0
-    ? days + ' day' + (days === 1 ? '' : 's') + ' until your exam'
-    : 'exam date has passed';
+  var box = $('readouts');
+  if (!box) return;
+  box.innerHTML = '';
+  var h = PROGRESS.headline || {}, st = PROGRESS.portions || {};
+  var hero = ro('Readiness', h.exam_pct == null ? '\u2014' : pct(h.exam_pct),
+                h.exam_pct == null ? 'no data' : (h.passing ? 'passing' : 'need 75%'), true);
+  if (h.exam_pct != null)
+    hero.querySelector('.v').className = 'v ' + (h.passing ? 'good' : 'bad');
+  box.appendChild(hero);
+  box.appendChild(ro('National', (st.national && st.national.recent_pct != null)
+                                   ? pct(st.national.recent_pct) : '\u2014', '80 q'));
+  box.appendChild(ro('Georgia', (st.georgia && st.georgia.recent_pct != null)
+                                  ? pct(st.georgia.recent_pct) : '\u2014', '52 q'));
+  box.appendChild(ro('Answered', String(h.answered || 0),
+                     (h.sets || 0) + ((h.sets === 1) ? ' set' : ' sets')));
+  box.appendChild(ro('Days out', h.days_out == null ? '\u2014' : String(h.days_out),
+                     h.days_out == null ? 'set a date' : 'until exam'));
 }
 
 /* ------------------------------------------------------- home weak list */
@@ -534,29 +557,6 @@ function statRow(cells){
 function renderDash(){
   var box = $('dashBody');
   box.innerHTML = '';
-
-  var h = PROGRESS.headline || {};
-  var strip = el('div', 'card'), rd = el('div', 'readouts');
-  [['Exam readiness', h.exam_pct == null ? '—' : pct(h.exam_pct),
-    h.exam_pct == null ? 'no data yet' : (h.passing ? 'at or above the 75% pass mark'
-                                                    : 'below the 75% pass mark')],
-   ['Trend', h.trend == null ? '—' : ((h.trend > 0 ? '+' : '') + Math.round(h.trend * 100)),
-    'points, recent vs earlier'],
-   ['Sets', String(h.sets || 0), (h.sets === 1 ? 'quiz taken' : 'quizzes taken')],
-   ['Answered', String(h.answered || 0), 'questions total'],
-   ['Days out', h.days_out == null ? '—' : String(h.days_out),
-    h.days_out == null ? 'set an exam date' : 'until your exam']
-  ].forEach(function(r){
-    var d = el('div', 'readout');
-    d.appendChild(el('div', 'eyebrow', r[0]));
-    var val = el('div', 'stat', r[1]);
-    if (r[0] === 'Exam readiness' && h.exam_pct != null)
-      val.className = 'stat ' + (h.passing ? 'good' : 'bad');
-    d.appendChild(val);
-    d.appendChild(el('div', 'muted', r[2]));
-    rd.appendChild(d);
-  });
-  strip.appendChild(rd); box.appendChild(strip);
 
   if (!PROGRESS.total_attempts){
     var e = el('div', 'card');

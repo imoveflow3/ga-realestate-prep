@@ -7,23 +7,26 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="bar">
-    <div class="brand">Georgia Real Estate Prep
-      <small id="countdown">salesperson licensing exam</small></div>
-    <nav>
-      <button data-view="home" class="on">Practice</button>
-      <button data-view="math">Math</button>
-      <button data-view="weak">Weak spots</button>
-      <button data-view="dash">Dashboard</button>
-      <button data-view="plan">Study plan</button>
-    </nav>
+<header class="hud">
+  <div class="hud-in">
+    <div class="wordmark">GEORGIA REAL ESTATE<small>Salesperson exam prep</small></div>
+    <div class="readouts" id="readouts"></div>
   </div>
 </header>
 
+<nav class="rail" aria-label="Sections">
+  <div class="rail-in" id="rail">
+    <button data-view="dash" class="on" aria-current="page">Dashboard</button>
+    <button data-view="home" aria-current="false">Practice</button>
+    <button data-view="weak" aria-current="false">Weak spots</button>
+    <button data-view="math" aria-current="false">Math</button>
+    <button data-view="plan" aria-current="false">Study plan</button>
+  </div>
+</nav>
+
 <main>
   <!-- ------------------------------------------------ practice -->
-  <section id="view-home">
+  <section id="view-home" hidden>
     <h1>Practice quiz</h1>
     <p class="sub">Pick a portion, choose how many questions, and go. Every question
       is explained the moment you answer it.</p>
@@ -154,10 +157,7 @@
   </section>
 
   <!-- ------------------------------------------------ dashboard -->
-  <section id="view-dash" hidden>
-    <h1>Dashboard</h1>
-    <p class="sub">Where you stand, section by section and topic by topic. Drill
-      anything straight from the table.</p>
+  <section id="view-dash">
     <div id="dashBody"></div>
   </section>
 
