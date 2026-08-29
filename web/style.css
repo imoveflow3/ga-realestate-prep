@@ -234,3 +234,125 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .spark{color:var(--accent)}
 .spark .gl{stroke:var(--line-2)}
 .spark text{fill:var(--ink-3); font-family:"IBM Plex Mono",monospace; font-size:9px}
+
+/* ------------------------------------------------------------- reading --
+   The Study view is read, not scanned, so it gets its own typography: a text
+   serif, a real measure, and space between things. Scoped so the dashboard
+   tables keep their compact UI treatment. */
+/* the reading column is sized to the text, so cards do not trail off into
+   empty space on wide screens */
+.reading{--measure:66ch; max-width:47rem; margin:0 auto; width:100%}
+.reading .card{padding:1.5rem 1.7rem; gap:.55rem}
+.reading h1{font-size:2.3rem; line-height:1.1; margin-bottom:.15rem}
+.reading h2{font-size:1.5rem; line-height:1.2; margin-bottom:.5rem}
+.reading h3{font-size:1.16rem; margin-bottom:.25rem}
+
+.reading p, .reading li, .reading .vdef{
+  font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size:1.09rem;
+  line-height:1.78;
+  max-width:var(--measure);
+  color:var(--ink);
+}
+.reading p{margin:0 0 .55rem}
+.reading p:last-child{margin-bottom:0}
+.reading .sub{
+  font-family:"Source Serif 4", Georgia, serif;
+  font-size:1.14rem; line-height:1.7; color:var(--ink-2);
+  max-width:var(--measure); margin:.15rem 0 .9rem;
+}
+.reading .muted{font-family:"Barlow",sans-serif; font-size:.84rem; line-height:1.55}
+
+/* lists become breathing definition lists rather than a wall */
+.reading ul{
+  list-style:none; margin:.35rem 0 0; padding:0;
+  display:flex; flex-direction:column; gap:.85rem;
+}
+.reading ul li{
+  position:relative; padding-left:1.1rem; margin:0;
+}
+.reading ul li::before{
+  content:""; position:absolute; left:0; top:.72em;
+  width:5px; height:5px; border-radius:50%; background:var(--accent); opacity:.55;
+}
+.reading li .term{
+  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  color:var(--ink); letter-spacing:.005em;
+}
+.reading li .term::after{content:" — "; color:var(--ink-3); font-weight:400}
+
+/* vocabulary as a definition list with room to breathe */
+.vocablist{display:flex; flex-direction:column; gap:1rem; margin-top:.3rem}
+.vocabitem{
+  display:grid; grid-template-columns:minmax(150px,15rem) 1fr; gap:.2rem 1.5rem;
+  padding-bottom:.95rem; border-bottom:1px solid var(--line);
+}
+.vocabitem:last-child{border-bottom:0; padding-bottom:0}
+.vterm{
+  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  color:var(--accent); line-height:1.5;
+}
+.vocabitem .vdef{margin:0}
+@media (max-width:640px){
+  .vocabitem{grid-template-columns:1fr; gap:.1rem}
+}
+
+/* worked examples: setup, steps, takeaway - each visually distinct */
+.example{
+  border-left:3px solid var(--accent); padding:.15rem 0 .15rem 1.1rem;
+  display:flex; flex-direction:column; gap:.5rem;
+}
+.example + .example{margin-top:1.5rem; padding-top:1.4rem; border-top:1px solid var(--line)}
+.example .setup{
+  font-family:"Source Serif 4", Georgia, serif; font-style:italic;
+  font-size:1.06rem; line-height:1.7; color:var(--ink-2); max-width:var(--measure);
+}
+.reading .steps{
+  list-style:decimal; margin:.1rem 0 0; padding-left:1.5rem;
+  display:flex; flex-direction:column; gap:.5rem;
+  font-family:"IBM Plex Mono", monospace; font-size:.9rem; line-height:1.65;
+  max-width:var(--measure);
+}
+.reading .steps li{padding-left:.2rem; font-family:inherit; font-size:inherit; line-height:inherit}
+.reading .steps li::before{display:none}
+.takeaway{
+  background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.7rem .9rem; font-family:"Source Serif 4", Georgia, serif;
+  font-size:1.04rem; line-height:1.65; max-width:var(--measure);
+}
+.takeaway b{font-family:"Barlow",sans-serif; font-weight:600; font-size:.78rem;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); display:block;
+  margin-bottom:.15rem}
+
+/* callout blocks (Georgia differences, common traps) */
+.callouts{display:flex; flex-direction:column; gap:.8rem; margin-top:.2rem}
+.callout{
+  border-left:3px solid var(--line-2); padding:.1rem 0 .1rem 1rem;
+  font-family:"Source Serif 4", Georgia, serif; font-size:1.06rem; line-height:1.72;
+  max-width:var(--measure);
+}
+.callout.ga{border-left-color:var(--brass)}
+.callout.trap{border-left-color:var(--no)}
+
+/* the topic index reads as a list of things to open, not a data table */
+.topiclist{display:flex; flex-direction:column; gap:.15rem}
+.topicrow{
+  display:flex; gap:1rem; align-items:center; justify-content:space-between;
+  padding:.85rem .2rem; border-bottom:1px solid var(--line); flex-wrap:wrap;
+}
+.topicrow:last-child{border-bottom:0}
+.topicrow .who{flex:1; min-width:230px}
+.topicrow .nm{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.2rem}
+.topicrow .bl{font-size:.88rem; color:var(--ink-3); line-height:1.5; margin-top:.05rem}
+.topicrow .acts{display:flex; gap:.4rem; align-items:center}
+.topicrow .cnt{font-family:"IBM Plex Mono",monospace; font-size:.78rem; color:var(--ink-3);
+  white-space:nowrap; margin-right:.4rem}
+
+/* Runs of capitals - acronyms and the emphasis used throughout the notes -
+   are set slightly smaller with tracking, the normal treatment for caps in
+   running text. Without this they shout at reading size. */
+.reading .caps{
+  font-size:.9em; letter-spacing:.045em; font-weight:600;
+  font-family:"Barlow", sans-serif;
+}
+.reading .steps .caps, .reading .vterm .caps{font-family:inherit; font-weight:inherit}

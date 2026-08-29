@@ -384,12 +384,48 @@ function studyButton(topicKey, label){
   return b;
 }
 
+/* Build a text fragment, styling runs of capitals so they read as emphasis
+   rather than shouting once the text is set in serif at reading size. */
+var CAPS_RE = /\b[A-Z][A-Z&.''-]+(?:\s+[A-Z][A-Z&.''-]+)*\b/g;
+function richText(text){
+  var frag = document.createDocumentFragment();
+  var last = 0, m;
+  CAPS_RE.lastIndex = 0;
+  while ((m = CAPS_RE.exec(text)) !== null){
+    if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+    frag.appendChild(el('span', 'caps', m[0]));
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+  return frag;
+}
+function richPara(cls, text){
+  var n = el('p', cls);
+  n.appendChild(richText(text));
+  return n;
+}
+
+/* "Acceleration - on default the balance is due" reads far better as a bolded
+   term followed by its explanation, so split the label out where there is one. */
+function bulletItem(text){
+  var li = el('li');
+  var m = /^(.{2,48}?)\s+(?:--|-|–)\s+(.+)$/.exec(text);
+  if (m && !/[.?!]$/.test(m[1])){
+    li.appendChild(el('span', 'term', m[1]));
+    li.appendChild(richText(m[2]));
+  } else {
+    li.appendChild(richText(text));
+  }
+  return li;
+}
+
 function renderStudy(){
   if (!STUDY){
     $('studyBody').innerHTML = '<div class="card"><div class="empty">Loading notes…</div></div>';
     api('/api/study').then(function(d){ STUDY = d; renderStudy(); });
     return;
   }
+  $('view-study').className = 'reading';
   if (STUDY_TOPIC && STUDY.topics[STUDY_TOPIC]) return renderStudyTopic(STUDY.topics[STUDY_TOPIC]);
 
   var box = $('studyBody');
@@ -411,28 +447,29 @@ function renderStudy(){
     card.appendChild(cardHead(NAMES[portion],
       portion==='comprehensive' ? 'cross-cutting drill'
         : (portion==='national' ? '80 questions' : '52 questions')));
-    var t = el('table','stats');
-    t.innerHTML = '<tr><th>Topic</th><th class="num">On exam</th>' +
-                  '<th class="num">Terms</th><th></th><th></th></tr>';
+    var list = el('div','topiclist');
     keys.forEach(function(k){
       var n = STUDY.topics[k];
-      var name = el('td');
-      name.appendChild(el('b', null, n.label));
-      name.appendChild(el('div','muted', n.blurb));
-      var read = el('td'); read.appendChild(studyButton(k,'READ'));
-      var quiz = el('td');
+      var row = el('div','topicrow'), who = el('div','who');
+      who.appendChild(el('div','nm', n.label));
+      who.appendChild(el('div','bl', n.blurb));
+      row.appendChild(who);
+      var acts = el('div','acts');
+      acts.appendChild(el('span','cnt',
+        (n.counts_on_exam ? n.exam_questions + ' on exam \u00b7 ' : 'drill \u00b7 ') +
+        n.vocab.length + ' terms'));
+      acts.appendChild(studyButton(k,'READ'));
       var qb = el('button','btn mini','QUIZ');
       qb.onclick = (function(key,p){
         return function(){
           startQuiz({portion:p, count:15, topic:key, timed:false, difficulty:'harder'});
         };
       })(k, n.portion);
-      quiz.appendChild(qb);
-      t.appendChild(statRow([name,
-        el('td','num', n.counts_on_exam ? String(n.exam_questions) : 'drill'),
-        el('td','num', String(n.vocab.length)), read, quiz]));
+      acts.appendChild(qb);
+      row.appendChild(acts);
+      list.appendChild(row);
     });
-    var w = el('div','scroll'); w.appendChild(t); card.appendChild(w);
+    card.appendChild(list);
     box.appendChild(card);
   });
 
@@ -442,16 +479,14 @@ function renderStudy(){
     'These notes were written for this app. Georgia facts are checked against the ' +
     'Commission’s own published reference; federal rules against the agencies that ' +
     'issue them. No commercial exam-prep book is reproduced here.'));
-  var list = el('div','focuslist');
+  var list = el('div','callouts');
   (STUDY.sources||[]).forEach(function(s2){
-    var d = el('div','focus'), line = el('div');
+    var d = el('div','callout');
     var a = el('a', null, s2.name);
     a.href = s2.url; a.target='_blank'; a.rel='noopener noreferrer';
-    a.style.color = 'var(--accent)';
-    line.appendChild(a);
-    line.appendChild(document.createTextNode('  —  ' + s2.by));
-    d.appendChild(line);
-    d.appendChild(el('div','muted', s2.note));
+    a.style.cssText = 'color:var(--accent);font-family:\"Barlow\",sans-serif;font-weight:600';
+    d.appendChild(a);
+    d.appendChild(document.createTextNode(' \u2014 ' + s2.by + '. ' + s2.note));
     list.appendChild(d);
   });
   src.appendChild(list);
@@ -471,7 +506,7 @@ function renderStudyTopic(n){
   back.onclick = function(){ STUDY_TOPIC = null; renderStudy(); };
   hd.appendChild(back);
   head.appendChild(hd);
-  head.appendChild(el('p','sub', n.summary));
+  head.appendChild(richPara('sub', n.summary));
   var acts = el('div','row');
   [['Quiz me on this (15)',15],['Quick check (5)',5]].forEach(function(a){
     var d = el('div'); d.style.flex='0 0 auto';
@@ -487,11 +522,10 @@ function renderStudyTopic(n){
   n.sections.forEach(function(sec){
     var c = el('div','card');
     c.appendChild(el('h2', null, sec.h));
-    (sec.p||[]).forEach(function(para){ c.appendChild(el('p', null, para)); });
+    (sec.p||[]).forEach(function(para){ c.appendChild(richPara(null, para)); });
     if (sec.l && sec.l.length){
       var ul = el('ul');
-      ul.style.cssText='margin:.2rem 0 0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.3rem';
-      sec.l.forEach(function(i){ ul.appendChild(el('li', null, i)); });
+      sec.l.forEach(function(i){ ul.appendChild(bulletItem(i)); });
       c.appendChild(ul);
     }
     box.appendChild(c);
@@ -500,15 +534,15 @@ function renderStudyTopic(n){
   if (n.vocab.length){
     var vc = el('div','card');
     vc.appendChild(cardHead('Vocabulary', n.vocab.length + ' terms'));
-    var vt = el('table');
-    vt.innerHTML = '<tr><th>Term</th><th>Definition</th></tr>';
+    var vl = el('div','vocablist');
     n.vocab.forEach(function(pair){
-      var tr = el('tr'), td = el('td');
-      td.appendChild(el('b', null, pair[0])); td.style.minWidth='170px';
-      tr.appendChild(td); tr.appendChild(el('td', null, pair[1]));
-      vt.appendChild(tr);
+      var item = el('div','vocabitem');
+      item.appendChild(el('div','vterm', pair[0]));
+      var vd = el('div','vdef'); vd.appendChild(richText(pair[1]));
+      item.appendChild(vd);
+      vl.appendChild(item);
     });
-    var vw = el('div','scroll'); vw.appendChild(vt); vc.appendChild(vw);
+    vc.appendChild(vl);
     box.appendChild(vc);
   }
 
@@ -516,28 +550,33 @@ function renderStudyTopic(n){
     var ec = el('div','card');
     ec.appendChild(cardHead('Worked examples','follow the steps'));
     n.examples.forEach(function(ex){
-      var w = el('div','week');
+      var w = el('div','example');
       w.appendChild(el('h3', null, ex.t));
-      w.appendChild(el('p','muted', ex.s));
+      var setup = el('div','setup'); setup.appendChild(richText(ex.s));
+      w.appendChild(setup);
       var ol = el('ol','steps');
       ex.w.forEach(function(step){ ol.appendChild(el('li', null, step)); });
       w.appendChild(ol);
-      var k = el('div','concept');
-      k.appendChild(el('b', null, 'Takeaway: '));
-      k.appendChild(document.createTextNode(ex.k));
+      var k = el('div','takeaway');
+      k.appendChild(el('b', null, 'Takeaway'));
+      k.appendChild(richText(ex.k));
       w.appendChild(k);
       ec.appendChild(w);
     });
     box.appendChild(ec);
   }
 
-  [['Georgia differences','where Georgia departs from the national rule', n.ga],
-   ['Common traps','where marks get lost', n.traps]].forEach(function(blk){
+  [['Georgia differences','where Georgia departs from the national rule', n.ga, 'ga'],
+   ['Common traps','where marks get lost', n.traps, 'trap']].forEach(function(blk){
     if (!blk[2] || !blk[2].length) return;
     var c = el('div','card');
     c.appendChild(cardHead(blk[0], blk[1]));
-    var l = el('div','focuslist');
-    blk[2].forEach(function(i){ l.appendChild(el('div','focus', i)); });
+    var l = el('div','callouts');
+    blk[2].forEach(function(i){
+      var d = el('div','callout ' + blk[3]);
+      d.appendChild(richText(i));
+      l.appendChild(d);
+    });
     c.appendChild(l); box.appendChild(c);
   });
 
