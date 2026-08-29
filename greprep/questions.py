@@ -153,7 +153,7 @@ def _allocate(counts, total, rng):
 
 
 def select(portion, count, weak_spot=False, progress=None, topic=None, rng=None,
-           difficulty="any"):
+           difficulty="any", sub=None):
     """Build a quiz.
 
     `portion` is 'national', 'georgia', 'comprehensive', 'math', or 'mixed'.
@@ -166,6 +166,28 @@ def select(portion, count, weak_spot=False, progress=None, topic=None, rng=None,
     for qid, rec in (progress.get("items") or {}).items():
         if rec.get("seen", 0) > rec.get("correct", 0):
             missed_ids.add(qid)
+
+    if sub:
+        # Drilling one "little topic". Take everything written for it first,
+        # then generated problems if it is a math subtopic, then related
+        # questions from the parent topic so a short drill is still a full set.
+        rows = all_rows()
+        pool = [r for r in rows if r.get("sub") == sub]
+        rng.shuffle(pool)
+        out = pool[:count]
+        if len(out) < count:
+            gens = [k for k in mathgen.ORDER
+                    if sub.endswith("|" + mathgen.TOPICS[k][0])]
+            if gens:
+                out += mathgen.batch(count - len(out), gens)
+        if len(out) < count:
+            parent = sub.split("|", 1)[0]
+            have = set(r["id"] for r in out)
+            rest = [r for r in rows
+                    if r["topic"] == parent and r["id"] not in have]
+            rng.shuffle(rest)
+            out += rest[:count - len(out)]
+        return out[:count]
 
     if portion == "math":
         kinds = [topic] if topic in mathgen.GENERATORS else None

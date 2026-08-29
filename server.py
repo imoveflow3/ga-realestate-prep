@@ -35,6 +35,7 @@ def _public(q, index):
             "topic_label": topics.label(q["topic"]),
             "portion": q.get("portion", "national"),
             "difficulty": q.get("difficulty", 1),
+            "sub": q.get("sub"), "subtopic": q.get("subtopic"),
             "q": q["q"], "choices": q["choices"],
             "generator": q.get("generator")}
 
@@ -60,6 +61,7 @@ def _progress_payload(data):
         "topic_table": store.topic_table(data),
         "sections": store.section_table(data),
         "headline": store.headline(data),
+        "subs": store.sub_report(data, min_seen=2, limit=40),
         "generators": store.generator_report(data),
         "trends": store.trend_series(data),
         "attempts": data["attempts"][-60:],
@@ -154,6 +156,7 @@ class Handler(BaseHTTPRequestHandler):
             count = max(1, min(200, int(body.get("count") or 20)))
             weak = bool(body.get("weak_spot"))
             topic = body.get("topic") or None
+            sub = body.get("sub") or None
             diff = body.get("difficulty") or "harder"
             if diff not in questions.DIFFICULTIES:
                 diff = "harder"
@@ -164,7 +167,8 @@ class Handler(BaseHTTPRequestHandler):
                 portion, count = "mixed", len(qs)
             else:
                 qs = questions.select(portion, count, weak_spot=weak,
-                                      progress=data, topic=topic, difficulty=diff)
+                                      progress=data, topic=topic, difficulty=diff,
+                                      sub=sub)
             if not qs:
                 return self._json({"error": "No questions matched."}, 400)
             sid = uuid.uuid4().hex[:12]
@@ -198,7 +202,7 @@ class Handler(BaseHTTPRequestHandler):
             correct = (choice == q["answer"])
             with LOCK:
                 sess["answers"][idx] = {
-                    "qid": q["id"], "topic": q["topic"],
+                    "qid": q["id"], "topic": q["topic"], "sub": q.get("sub"),
                     "generator": q.get("generator"),
                     "choice": choice, "correct": correct,
                     "seconds": float(body.get("seconds") or 0),
@@ -225,6 +229,7 @@ class Handler(BaseHTTPRequestHandler):
                 if a is None:
                     q = sess["questions"][i]
                     answered.append({"qid": q["id"], "topic": q["topic"],
+                                     "sub": q.get("sub"),
                                      "generator": q.get("generator"),
                                      "choice": None, "correct": False, "seconds": 0.0})
             elapsed = time.time() - sess["started"]

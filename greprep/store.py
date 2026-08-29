@@ -12,7 +12,7 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__
 DATA_FILE = os.path.join(DATA_DIR, "progress.json")
 
 EMPTY = {"version": 1, "profile": {}, "attempts": [],
-         "topics": {}, "items": {}, "generators": {}}
+         "topics": {}, "subs": {}, "items": {}, "generators": {}}
 
 
 def load():
@@ -67,6 +67,9 @@ def record_attempt(data, portion, mode, answers, elapsed, weak_spot=False):
         qid = a.get("qid") or ""
         if qid and not qid.startswith("math:"):
             _bump(data["items"], qid, a.get("correct"))
+        sub = a.get("sub")
+        if sub:
+            _bump(data["subs"], sub, a.get("correct"))
         gen = a.get("generator")
         if gen:
             _bump(data["generators"], gen, a.get("correct"))
@@ -232,6 +235,31 @@ def headline(data):
             "sets": len(data["attempts"]), "answered": answered,
             "days_out": days,
             "passing": st["recent_pct"] is not None and st["recent_pct"] >= 0.75}
+
+
+def sub_report(data, min_seen=2, limit=None):
+    """The 'little topics': every subtopic you have actually answered, weakest first.
+
+    Ties break on how much the PARENT topic is worth on the exam, so a weak
+    subtopic inside Contracts outranks one inside Land use.
+    """
+    rows = []
+    for key, rec in (data.get("subs") or {}).items():
+        seen = rec.get("seen", 0)
+        if seen < min_seen:
+            continue
+        topic, _, label = key.partition("|")
+        if topic not in topics.TOPICS:
+            continue
+        portion, tlabel, weight, blurb = topics.TOPICS[topic]
+        corr = rec.get("correct", 0)
+        rows.append({"sub": key, "label": label, "topic": topic,
+                     "topic_label": tlabel, "portion": portion,
+                     "exam_questions": weight,
+                     "counts_on_exam": topics.counts_on_exam(topic),
+                     "seen": seen, "correct": corr, "pct": corr / float(seen)})
+    rows.sort(key=lambda r: (r["pct"], -r["exam_questions"]))
+    return rows[:limit] if limit else rows
 
 
 def generator_report(data):

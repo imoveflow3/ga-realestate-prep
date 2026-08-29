@@ -13,6 +13,8 @@
   "id": "com-5d4b5380",
   "portion": "comprehensive",
   "q": "A charge or claim against property that does not prevent transfer but travels with it is an:",
+  "sub": "comp/vocabulary|Liens & encumbrances",
+  "subtopic": "Liens & encumbrances",
   "topic": "comp/vocabulary"
  },
  {
@@ -29,6 +31,8 @@
   "id": "com-9b9593b0",
   "portion": "comprehensive",
   "q": "The written instrument that conveys title is a deed. The act that makes it effective is:",
+  "sub": "comp/vocabulary|Title & deed terms",
+  "subtopic": "Title & deed terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -45,6 +49,8 @@
   "id": "com-cff51bd6",
   "portion": "comprehensive",
   "q": "A lien that attaches to all of a debtor's property rather than one specific parcel is:",
+  "sub": "comp/vocabulary|Liens & encumbrances",
+  "subtopic": "Liens & encumbrances",
   "topic": "comp/vocabulary"
  },
  {
@@ -61,6 +67,8 @@
   "id": "com-0d932e16",
   "portion": "comprehensive",
   "q": "Money a tenant pays that the landlord holds and may return is a security deposit. Rent paid for the final month in advance is:",
+  "sub": "comp/vocabulary|Practice terms",
+  "subtopic": "Practice terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -77,6 +85,8 @@
   "id": "com-7d548a08",
   "portion": "comprehensive",
   "q": "The right of a defaulting borrower to reclaim property AFTER a foreclosure sale is:",
+  "sub": "comp/vocabulary|Financing terms",
+  "subtopic": "Financing terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -93,6 +103,8 @@
   "id": "com-726d65a6",
   "portion": "comprehensive",
   "q": "A written summary of every recorded document affecting a parcel is:",
+  "sub": "comp/vocabulary|Title & deed terms",
+  "subtopic": "Title & deed terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -109,6 +121,8 @@
   "id": "com-ef53e6b7",
   "portion": "comprehensive",
   "q": "Property acquired by one spouse before marriage, in a community property state, is:",
+  "sub": "comp/vocabulary|Estates & tenancy terms",
+  "subtopic": "Estates & tenancy terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -125,6 +139,8 @@
   "id": "com-9eaacb73",
   "portion": "comprehensive",
   "q": "The clause in a mortgage requiring the lender to release the lien when the debt is paid is:",
+  "sub": "comp/vocabulary|Financing terms",
+  "subtopic": "Financing terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -141,6 +157,8 @@
   "id": "com-eb43c30c",
   "portion": "comprehensive",
   "q": "An estate that continues indefinitely and renews automatically until notice is given is a:",
+  "sub": "comp/vocabulary|Estates & tenancy terms",
+  "subtopic": "Estates & tenancy terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -157,6 +175,8 @@
   "id": "com-baa996f4",
   "portion": "comprehensive",
   "q": "The appraisal principle that a property's value is influenced by the values of surrounding properties is:",
+  "sub": "comp/vocabulary|Valuation terms",
+  "subtopic": "Valuation terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -173,6 +193,8 @@
   "id": "com-640d0475",
   "portion": "comprehensive",
   "q": "Personal property permanently attached to real property becomes:",
+  "sub": "comp/vocabulary|Property & water terms",
+  "subtopic": "Property & water terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -189,6 +211,8 @@
   "id": "com-c9ca0d36",
   "portion": "comprehensive",
   "q": "The document a buyer signs promising to repay a loan is the note. The document pledging the property as security in Georgia is the:",
+  "sub": "comp/vocabulary|Financing terms",
+  "subtopic": "Financing terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -205,6 +229,8 @@
   "id": "com-46cf6dbf",
   "portion": "comprehensive",
   "q": "A provision allowing a later-recorded lien to take priority over an earlier one is:",
+  "sub": "comp/vocabulary|Liens & encumbrances",
+  "subtopic": "Liens & encumbrances",
   "topic": "comp/vocabulary"
  },
  {
@@ -221,6 +247,8 @@
   "id": "com-c0220954",
   "portion": "comprehensive",
   "q": "The measure of a property's value used to compute property taxes is:",
+  "sub": "comp/vocabulary|Valuation terms",
+  "subtopic": "Valuation terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -237,6 +265,8 @@
   "id": "com-eee2f4ad",
   "portion": "comprehensive",
   "q": "A tenant who remains after the lease ends, without the landlord's consent, holds an:",
+  "sub": "comp/vocabulary|Estates & tenancy terms",
+  "subtopic": "Estates & tenancy terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -253,6 +283,8 @@
   "id": "com-0472722d",
   "portion": "comprehensive",
   "q": "Compensation paid to a broker who is the direct cause of a completed sale reflects:",
+  "sub": "comp/vocabulary|Practice terms",
+  "subtopic": "Practice terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -269,6 +301,8 @@
   "id": "com-f30b9d26",
   "portion": "comprehensive",
   "q": "An agreement where the seller retains legal title while the buyer takes possession and pays over time is a:",
+  "sub": "comp/vocabulary|Financing terms",
+  "subtopic": "Financing terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -285,6 +319,8 @@
   "id": "com-24042f61",
   "portion": "comprehensive",
   "q": "The gradual wearing away of land by water is:",
+  "sub": "comp/vocabulary|Property & water terms",
+  "subtopic": "Property & water terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -301,6 +337,8 @@
   "id": "com-6688848a",
   "portion": "comprehensive",
   "q": "A blanket term for the government's power to regulate land use for health and safety, without compensation, is:",
+  "sub": "comp/vocabulary|Property & water terms",
+  "subtopic": "Property & water terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -317,6 +355,8 @@
   "id": "com-ec391831",
   "portion": "comprehensive",
   "q": "The dollar amount by which a property's income exceeds operating expenses, before debt service, is:",
+  "sub": "comp/vocabulary|Valuation terms",
+  "subtopic": "Valuation terms",
   "topic": "comp/vocabulary"
  },
  {
@@ -333,6 +373,8 @@
   "id": "com-915c96d8",
   "portion": "comprehensive",
   "q": "You are showing a home. The buyer says, 'Before we go further -- I don't want to be in a neighborhood with too many immigrants.' You should:",
+  "sub": "comp/situational|Fair housing judgment calls",
+  "subtopic": "Fair housing judgment calls",
   "topic": "comp/situational"
  },
  {
@@ -349,6 +391,8 @@
   "id": "com-b2d26e37",
   "portion": "comprehensive",
   "q": "Your seller client receives two offers. One is $5,000 higher but from a buyer whose lender you know to be unreliable. You should:",
+  "sub": "comp/situational|Client vs. customer conduct",
+  "subtopic": "Client vs. customer conduct",
   "topic": "comp/situational"
  },
  {
@@ -365,6 +409,8 @@
   "id": "com-ed57dcb7",
   "portion": "comprehensive",
   "q": "At the closing table you notice the settlement statement omits a $1,200 repair credit the parties agreed to. Nobody else has caught it. You should:",
+  "sub": "comp/situational|Disclosure & concealment",
+  "subtopic": "Disclosure & concealment",
   "topic": "comp/situational"
  },
  {
@@ -381,6 +427,8 @@
   "id": "com-ba45ba1c",
   "portion": "comprehensive",
   "q": "A buyer client asks you to recommend an inspector. You have a regular referral who pays you $50 per referral. You should:",
+  "sub": "comp/situational|Conflicts & compensation",
+  "subtopic": "Conflicts & compensation",
   "topic": "comp/situational"
  },
  {
@@ -397,6 +445,8 @@
   "id": "com-43f34db0",
   "portion": "comprehensive",
   "q": "Your seller tells you the HVAC failed last winter and was patched, then says, 'Don't put that on the disclosure.' You should:",
+  "sub": "comp/situational|Disclosure & concealment",
+  "subtopic": "Disclosure & concealment",
   "topic": "comp/situational"
  },
  {
@@ -413,6 +463,8 @@
   "id": "com-b30f6348",
   "portion": "comprehensive",
   "q": "You receive an earnest money check made out to your brokerage. The buyer asks you to hold it until Friday when their paycheck clears. You should:",
+  "sub": "comp/situational|Trust funds & accounting",
+  "subtopic": "Trust funds & accounting",
   "topic": "comp/situational"
  },
  {
@@ -429,6 +481,8 @@
   "id": "com-e70db283",
   "portion": "comprehensive",
   "q": "A past client calls asking what their neighbor's house sold for. The sale was your listing and the price is in the MLS and public records. You may:",
+  "sub": "comp/situational|Confidentiality & dual agency",
+  "subtopic": "Confidentiality & dual agency",
   "topic": "comp/situational"
  },
  {
@@ -445,6 +499,8 @@
   "id": "com-8a4b5f84",
   "portion": "comprehensive",
   "q": "Mid-transaction you realize the buyer you are representing is your broker's brother-in-law, and you were not told. You should:",
+  "sub": "comp/situational|Conflicts & compensation",
+  "subtopic": "Conflicts & compensation",
   "topic": "comp/situational"
  },
  {
@@ -461,6 +517,8 @@
   "id": "com-5712780c",
   "portion": "comprehensive",
   "q": "A buyer asks you to write an offer $20,000 above the contract price with a $20,000 'decorating allowance' back at closing, so they can borrow more. You should:",
+  "sub": "comp/situational|Disclosure & concealment",
+  "subtopic": "Disclosure & concealment",
   "topic": "comp/situational"
  },
  {
@@ -477,6 +535,8 @@
   "id": "com-e90dc434",
   "portion": "comprehensive",
   "q": "You are a dual agent. The buyer tells you privately they would pay $15,000 more. The seller asks you what the buyer's ceiling is. You should:",
+  "sub": "comp/situational|Confidentiality & dual agency",
+  "subtopic": "Confidentiality & dual agency",
   "topic": "comp/situational"
  },
  {
@@ -493,6 +553,8 @@
   "id": "com-3d3eb452",
   "portion": "comprehensive",
   "q": "An unrepresented buyer at your listing asks, 'Do you think I should offer less than asking?' You represent the seller. You should:",
+  "sub": "comp/situational|Client vs. customer conduct",
+  "subtopic": "Client vs. customer conduct",
   "topic": "comp/situational"
  },
  {
@@ -509,6 +571,8 @@
   "id": "com-7be27755",
   "portion": "comprehensive",
   "q": "You discover after closing that you miscalculated a proration and your client overpaid $400. Nobody has noticed. You should:",
+  "sub": "comp/situational|Trust funds & accounting",
+  "subtopic": "Trust funds & accounting",
   "topic": "comp/situational"
  },
  {
@@ -525,6 +589,8 @@
   "id": "com-3fd0c48e",
   "portion": "comprehensive",
   "q": "A tenant applicant with a visual impairment asks whether they may install a doorbell light signal at their own expense. You should tell the landlord:",
+  "sub": "comp/situational|Fair housing judgment calls",
+  "subtopic": "Fair housing judgment calls",
   "topic": "comp/situational"
  },
  {
@@ -541,6 +607,8 @@
   "id": "com-073a656c",
   "portion": "comprehensive",
   "q": "Your listing has been on the market 90 days with no offers. The seller refuses to lower the price and blames your marketing. The most professional response is:",
+  "sub": "comp/situational|Client vs. customer conduct",
+  "subtopic": "Client vs. customer conduct",
   "topic": "comp/situational"
  },
  {
@@ -557,6 +625,8 @@
   "id": "com-cd9d106e",
   "portion": "comprehensive",
   "q": "A licensee in your office asks you to hold their pocket card while they meet a client, because theirs expired last week. You should:",
+  "sub": "comp/situational|Supervision & licensure",
+  "subtopic": "Supervision & licensure",
   "topic": "comp/situational"
  },
  {
@@ -573,6 +643,8 @@
   "id": "com-878660c7",
   "portion": "comprehensive",
   "q": "A buyer waives the inspection to win a bidding war. You believe the roof is near the end of its life. You should:",
+  "sub": "comp/situational|Disclosure & concealment",
+  "subtopic": "Disclosure & concealment",
   "topic": "comp/situational"
  },
  {
@@ -589,6 +661,8 @@
   "id": "com-4379b0cd",
   "portion": "comprehensive",
   "q": "Georgia's education requirements, in order for a salesperson, are:",
+  "sub": "comp/grec-deep|Education & licensure detail",
+  "subtopic": "Education & licensure detail",
   "topic": "comp/grec-deep"
  },
  {
@@ -605,6 +679,8 @@
   "id": "com-0fc9e99d",
   "portion": "comprehensive",
   "q": "A Georgia broker maintains three trust accounts: earnest money, rents, and security deposits. GREC requires that:",
+  "sub": "comp/grec-deep|Trust account rules",
+  "subtopic": "Trust account rules",
   "topic": "comp/grec-deep"
  },
  {
@@ -621,6 +697,8 @@
   "id": "com-b939f102",
   "portion": "comprehensive",
   "q": "A Georgia broker changes banks. The broker must notify GREC:",
+  "sub": "comp/grec-deep|Trust account rules",
+  "subtopic": "Trust account rules",
   "topic": "comp/grec-deep"
  },
  {
@@ -637,6 +715,8 @@
   "id": "com-e2f363b0",
   "portion": "comprehensive",
   "q": "GREC may initiate an investigation:",
+  "sub": "comp/grec-deep|GREC process & powers",
+  "subtopic": "GREC process & powers",
   "topic": "comp/grec-deep"
  },
  {
@@ -653,6 +733,8 @@
   "id": "com-d3f67a1d",
   "portion": "comprehensive",
   "q": "In a GREC consent settlement, the parties agree on:",
+  "sub": "comp/grec-deep|GREC process & powers",
+  "subtopic": "GREC process & powers",
   "topic": "comp/grec-deep"
  },
  {
@@ -669,6 +751,8 @@
   "id": "com-e1c14f69",
   "portion": "comprehensive",
   "q": "A Georgia licensee wishes to hold their license without affiliating with a broker. They may:",
+  "sub": "comp/grec-deep|Education & licensure detail",
+  "subtopic": "Education & licensure detail",
   "topic": "comp/grec-deep"
  },
  {
@@ -685,6 +769,8 @@
   "id": "com-bf5d9d58",
   "portion": "comprehensive",
   "q": "A nonresident applying for a Georgia salesperson license who holds no license in their home state must:",
+  "sub": "comp/grec-deep|Education & licensure detail",
+  "subtopic": "Education & licensure detail",
   "topic": "comp/grec-deep"
  },
  {
@@ -701,6 +787,8 @@
   "id": "com-f8011a38",
   "portion": "comprehensive",
   "q": "Two Georgia brokers dispute which of them is entitled to a commission. GREC will:",
+  "sub": "comp/grec-deep|GREC process & powers",
+  "subtopic": "GREC process & powers",
   "topic": "comp/grec-deep"
  },
  {
@@ -717,6 +805,8 @@
   "id": "com-90098ac2",
   "portion": "comprehensive",
   "q": "A Georgia salesperson may lawfully accept compensation for licensed activity from:",
+  "sub": "comp/grec-deep|Firm operations",
+  "subtopic": "Firm operations",
   "topic": "comp/grec-deep"
  },
  {
@@ -733,6 +823,8 @@
   "id": "com-aadc0f3b",
   "portion": "comprehensive",
   "q": "A Georgia broker dies with $80,000 of client funds in a properly maintained trust account. Those funds:",
+  "sub": "comp/grec-deep|Trust account rules",
+  "subtopic": "Trust account rules",
   "topic": "comp/grec-deep"
  },
  {
@@ -749,6 +841,8 @@
   "id": "com-3d16112c",
   "portion": "comprehensive",
   "q": "A net listing in Georgia is:",
+  "sub": "comp/grec-deep|Firm operations",
+  "subtopic": "Firm operations",
   "topic": "comp/grec-deep"
  },
  {
@@ -765,6 +859,8 @@
   "id": "com-87448fe5",
   "portion": "comprehensive",
   "q": "A Georgia broker's advertising must:",
+  "sub": "comp/grec-deep|Firm operations",
+  "subtopic": "Firm operations",
   "topic": "comp/grec-deep"
  },
  {
@@ -781,6 +877,8 @@
   "id": "com-2e53f43c",
   "portion": "comprehensive",
   "q": "A suspended Georgia qualifying broker's corporation may keep operating if it:",
+  "sub": "comp/grec-deep|Firm operations",
+  "subtopic": "Firm operations",
   "topic": "comp/grec-deep"
  },
  {
@@ -797,6 +895,8 @@
   "id": "com-74e4aaad",
   "portion": "comprehensive",
   "q": "On a settlement statement, the buyer's earnest money deposit already held by the broker appears as a:",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -813,6 +913,8 @@
   "id": "com-2f1e52fe",
   "portion": "comprehensive",
   "q": "The sale price appears on a settlement statement as:",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -829,6 +931,8 @@
   "id": "com-8225ecab",
   "portion": "comprehensive",
   "q": "A seller's existing loan payoff of $184,000 appears as:",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -845,6 +949,8 @@
   "id": "com-1df6fd9f",
   "portion": "comprehensive",
   "q": "Annual taxes of $4,320 are unpaid. Closing is September 1, with the seller responsible through August 31 in a 360-day year. The entry is:",
+  "sub": "comp/closing-math|Prorations at closing",
+  "subtopic": "Prorations at closing",
   "topic": "comp/closing-math"
  },
  {
@@ -861,6 +967,8 @@
   "id": "com-b79a77b8",
   "portion": "comprehensive",
   "q": "A buyer assumes the seller's loan with a $312 accrued interest balance owed for the current month. At closing this is:",
+  "sub": "comp/closing-math|Prorations at closing",
+  "subtopic": "Prorations at closing",
   "topic": "comp/closing-math"
  },
  {
@@ -877,6 +985,8 @@
   "id": "com-d6ddd16d",
   "portion": "comprehensive",
   "q": "A tenant's $1,500 security deposit on a property being sold is handled at closing as:",
+  "sub": "comp/closing-math|Georgia closing items",
+  "subtopic": "Georgia closing items",
   "topic": "comp/closing-math"
  },
  {
@@ -893,6 +1003,8 @@
   "id": "com-b08be823",
   "portion": "comprehensive",
   "q": "A seller has prepaid a $960 annual insurance policy the buyer will assume, with 5 months remaining. The entry is:",
+  "sub": "comp/closing-math|Prorations at closing",
+  "subtopic": "Prorations at closing",
   "topic": "comp/closing-math"
  },
  {
@@ -909,6 +1021,8 @@
   "id": "com-039785af",
   "portion": "comprehensive",
   "q": "A buyer's loan is $240,000 with a 1% origination fee and $1,850 in other lender charges. The buyer's total lender debits are:",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -925,6 +1039,8 @@
   "id": "com-31bcffa0",
   "portion": "comprehensive",
   "q": "Which item is normally a credit to the BUYER on a settlement statement?",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -941,6 +1057,8 @@
   "id": "com-b5620ead",
   "portion": "comprehensive",
   "q": "A Georgia sale closes at $415,000. The transfer tax the seller is debited is:",
+  "sub": "comp/closing-math|Georgia closing items",
+  "subtopic": "Georgia closing items",
   "topic": "comp/closing-math"
  },
  {
@@ -957,6 +1075,8 @@
   "id": "com-67fdc60e",
   "portion": "comprehensive",
   "q": "A seller's gross proceeds are $340,000 with total debits of $221,400. The seller's net at closing is:",
+  "sub": "comp/closing-math|Debits vs. credits",
+  "subtopic": "Debits vs. credits",
   "topic": "comp/closing-math"
  },
  {
@@ -973,6 +1093,8 @@
   "id": "com-b3d34cdc",
   "portion": "comprehensive",
   "q": "Rent of $2,100 for a 30-day month was collected by the seller on the 1st. Closing is on the 11th, with the buyer owning from closing day. The entry is:",
+  "sub": "comp/closing-math|Prorations at closing",
+  "subtopic": "Prorations at closing",
   "topic": "comp/closing-math"
  }
 ]

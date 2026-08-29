@@ -358,67 +358,56 @@ function renderWeak(){
   box.innerHTML = '';
 
   var rows = (PROGRESS.topics || []);
-  var weak = rows.filter(function(r){ return r.seen >= 3; })
-                 .sort(function(a, b){
-                   if (a.pct !== b.pct) return a.pct - b.pct;
-                   return b.exam_questions - a.exam_questions;
-                 }).slice(0, 10);
   var untested = rows.filter(function(r){ return r.seen < 3; });
+  var subs = PROGRESS.subs || [];
 
   var act = el('div', 'card');
-  act.appendChild(el('h2', null, 'Drill everything you are weakest at'));
+  act.appendChild(cardHead('Drill everything at once', 'weighted by miss rate and exam value'));
   act.appendChild(el('p', 'muted',
-    'Weak-spot mode weights topics by your miss rate and by what they are worth on the ' +
-    'exam, and puts questions you have already missed at the front of the queue.'));
+    'Weak-spot mode weights topics by how you have scored and by what they are worth on ' +
+    'the exam, and puts questions you have already missed at the front of the queue.'));
   var row = el('div', 'row');
-  [['Weak spots: National', 'national'], ['Weak spots: Georgia', 'georgia'],
-   ['Weak spots: both portions', 'mixed']].forEach(function(p){
-    var d = el('div'); d.style.flex = '0 0 auto';
-    var b = el('button', 'btn' + (p[1] === 'mixed' ? ' ghost' : ''), p[0] + ' (20)');
-    b.onclick = function(){
-      startQuiz({portion: p[1], count: 20, weak_spot: true, timed: true, difficulty: 'harder'});
-    };
-    d.appendChild(b); row.appendChild(d);
-  });
+  [['National', 'national'], ['Georgia', 'georgia'], ['Both portions', 'mixed']]
+    .forEach(function(p){
+      var d = el('div'); d.style.flex = '0 0 auto';
+      var b = el('button', 'btn' + (p[1] === 'mixed' ? ' ghost' : ''), p[0] + ' (20)');
+      b.onclick = function(){
+        startQuiz({portion: p[1], count: 20, weak_spot: true, timed: true, difficulty: 'harder'});
+      };
+      d.appendChild(b); row.appendChild(d);
+    });
   act.appendChild(row);
   box.appendChild(act);
 
   var card = el('div', 'card');
-  card.appendChild(el('h2', null, 'Your weakest topics'));
-  if (!weak.length){
+  card.appendChild(cardHead('Sub-topics you are weakest at', 'lowest accuracy first'));
+  if (!subs.length){
     card.appendChild(el('div', 'empty',
-      'Not enough data yet. Answer at least 3 questions in a topic and it appears here.'));
+      'Nothing ranked yet. Answer at least 2 questions in a sub-topic and it appears here ' +
+      'with its own drill button.'));
   } else {
-    var t = el('table');
-    t.innerHTML = '<tr><th>Topic</th><th></th><th class="num">Score</th>' +
-                  '<th class="num">Asked</th><th class="num">On exam</th><th></th></tr>';
-    weak.forEach(function(r){
-      var tr = el('tr'), td = el('td');
-      td.appendChild(document.createTextNode(r.label + ' '));
-      td.appendChild(tagFor(r.portion));
-      tr.appendChild(td);
-      var td2 = el('td'), track = el('div', 'bar-track');
-      var fill = el('div', 'bar-fill ' + band(r.pct));
-      fill.style.width = Math.round((r.pct || 0) * 100) + '%';
-      track.appendChild(fill); td2.appendChild(track); tr.appendChild(td2);
-      tr.appendChild(el('td', 'num', pct(r.pct)));
-      tr.appendChild(el('td', 'num', String(r.seen)));
-      tr.appendChild(el('td', 'num',
-        countsOnExam(r.topic) ? String(r.exam_questions) : 'drill'));
-      var td3 = el('td');
-      var b = el('button', 'btn ghost', 'Drill 15');
-      b.onclick = function(){
-        startQuiz({portion: r.portion, count: 15, topic: r.topic,
-                   timed: false, difficulty: 'harder'});
-      };
-      td3.appendChild(b); tr.appendChild(td3);
-      t.appendChild(tr);
+    var t = el('table', 'stats');
+    t.innerHTML = '<tr><th>Weak spot</th><th>Topic</th><th class="num">Correct</th>' +
+                  '<th class="num">Accuracy</th><th></th><th></th></tr>';
+    subs.forEach(function(r){
+      var parent = el('td');
+      parent.appendChild(document.createTextNode(r.topic_label + ' '));
+      parent.appendChild(tagFor(r.portion));
+      t.appendChild(statRow([
+        el('td', null, r.label), parent,
+        el('td', 'num', r.correct + '/' + r.seen),
+        el('td', 'num', pct(r.pct)), accuracyCell(r.pct),
+        actionCell('DRILL', (function(sub, p){
+          return function(){
+            startQuiz({portion: p, count: 10, sub: sub, timed: false, difficulty: 'harder'});
+          };
+        })(r.sub, r.portion))
+      ]));
     });
-    card.appendChild(t);
+    var w = el('div', 'scroll'); w.appendChild(t); card.appendChild(w);
     card.appendChild(el('p', 'muted',
-      'Score is your all-time accuracy in that topic. "On exam" is how many of the 132 ' +
-      'scored questions come from it \u2014 a low score in a heavily weighted topic costs ' +
-      'you the most points.'));
+      'A drill starts with every question written for that sub-topic, then fills out the set ' +
+      'from the rest of its parent topic so you always get a full round.'));
   }
   box.appendChild(card);
 
@@ -633,34 +622,36 @@ function renderDash(){
   var tw = el('div', 'scroll'); tw.appendChild(tt); tc.appendChild(tw);
   box.appendChild(tc);
 
-  var weak = (PROGRESS.topics || []).filter(function(r){ return r.seen >= 3; })
-    .sort(function(a, b){
-      if (a.pct !== b.pct) return a.pct - b.pct;
-      return b.exam_questions - a.exam_questions;
-    }).slice(0, 8);
+  var subs = (PROGRESS.subs || []).slice(0, 12);
   var wc = el('div', 'card');
-  wc.appendChild(cardHead('Weakest topics', 'what weak-spot mode targets'));
-  if (!weak.length){
+  wc.appendChild(cardHead('Weak spots', 'the little topics you got wrong'));
+  if (!subs.length){
     wc.appendChild(el('div', 'empty',
-      'Answer at least 3 questions in a topic and it is ranked here.'));
+      'Answer at least 2 questions in a sub-topic and the weak ones are listed here, ' +
+      'each with its own drill.'));
   } else {
     var wt = el('table', 'stats');
-    wt.innerHTML = '<tr><th>Topic</th><th>Section</th><th class="num">Correct</th>' +
+    wt.innerHTML = '<tr><th>Weak spot</th><th>Topic</th><th class="num">Correct</th>' +
                    '<th class="num">Accuracy</th><th></th><th></th></tr>';
-    weak.forEach(function(r){
-      var sc = el('td'); sc.appendChild(tagFor(r.portion));
+    subs.forEach(function(r){
+      var parent = el('td');
+      parent.appendChild(document.createTextNode(r.topic_label + ' '));
+      parent.appendChild(tagFor(r.portion));
       wt.appendChild(statRow([
-        el('td', null, r.label), sc,
+        el('td', null, r.label), parent,
         el('td', 'num', r.correct + '/' + r.seen),
         el('td', 'num', pct(r.pct)), accuracyCell(r.pct),
-        actionCell('DRILL', (function(t, p){
+        actionCell('DRILL', (function(sub, p){
           return function(){
-            startQuiz({portion: p, count: 15, topic: t, timed: false, difficulty: 'harder'});
+            startQuiz({portion: p, count: 10, sub: sub, timed: false, difficulty: 'harder'});
           };
-        })(r.topic, r.portion))
+        })(r.sub, r.portion))
       ]));
     });
     var ww = el('div', 'scroll'); ww.appendChild(wt); wc.appendChild(ww);
+    wc.appendChild(el('p', 'muted',
+      'A drill starts with every question written for that sub-topic, then fills out the ' +
+      'set from the rest of its parent topic.'));
   }
   box.appendChild(wc);
 

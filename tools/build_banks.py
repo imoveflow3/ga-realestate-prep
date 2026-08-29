@@ -21,6 +21,7 @@ import _national_a, _national_b, _national_c      # noqa: E402
 import _national_hard_a, _national_hard_b         # noqa: E402
 import _georgia_a, _georgia_b, _georgia_hard      # noqa: E402
 import _comp_a, _comp_b                           # noqa: E402
+from _subtopics import subtopic_for               # noqa: E402
 from greprep import topics                        # noqa: E402
 
 OUT = os.path.join(ROOT, "greprep", "banks")
@@ -64,6 +65,8 @@ def build(portion):
             raise SystemExit("id collision: %s" % r["id"])
         seen_id.add(r["id"])
         r["portion"] = portion
+        r["subtopic"] = subtopic_for(r["topic"], r.get("concept", ""))
+        r["sub"] = r["topic"] + "|" + r["subtopic"]
         r.setdefault("difficulty", 1)          # unmarked questions are the core tier
         if r["difficulty"] not in topics.DIFFICULTY:
             raise SystemExit("bad difficulty on: %s" % q[:70])

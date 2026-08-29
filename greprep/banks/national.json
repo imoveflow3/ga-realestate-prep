@@ -13,6 +13,8 @@
   "id": "nat-140b8304",
   "portion": "national",
   "q": "A tenant's lease expires and the landlord takes back possession. The landlord's interest during the lease term was a:",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
   "topic": "national/ownership"
  },
  {
@@ -29,6 +31,8 @@
   "id": "nat-706069e5",
   "portion": "national",
   "q": "Three people own property as joint tenants. One sells her interest to a stranger. The new owner holds title as a:",
+  "sub": "national/ownership|Co-ownership & survivorship",
+  "subtopic": "Co-ownership & survivorship",
   "topic": "national/ownership"
  },
  {
@@ -45,6 +49,8 @@
   "id": "nat-fd3b7053",
   "portion": "national",
   "q": "Which of these is the MOST complete form of ownership recognized in law?",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
   "topic": "national/ownership"
  },
  {
@@ -61,6 +67,8 @@
   "id": "nat-dd11c32c",
   "portion": "national",
   "q": "A built-in dishwasher installed by the seller is BEST classified at closing as:",
+  "sub": "national/ownership|Fixtures & trade fixtures",
+  "subtopic": "Fixtures & trade fixtures",
   "topic": "national/ownership"
  },
  {
@@ -77,6 +85,8 @@
   "id": "nat-0f115e44",
   "portion": "national",
   "q": "In a condominium, the individual owner holds fee simple title to the unit and owns the common elements:",
+  "sub": "national/ownership|Condos, co-ops & timeshares",
+  "subtopic": "Condos, co-ops & timeshares",
   "topic": "national/ownership"
  },
  {
@@ -93,6 +103,8 @@
   "id": "nat-1131797b",
   "portion": "national",
   "q": "A property abuts a navigable river. The owner's rights to use the water are called:",
+  "sub": "national/ownership|Water & private controls",
+  "subtopic": "Water & private controls",
   "topic": "national/ownership"
  },
  {
@@ -109,6 +121,8 @@
   "id": "nat-1d9b363e",
   "portion": "national",
   "q": "A husband and wife hold title with right of survivorship that neither can defeat by a separate conveyance. This is:",
+  "sub": "national/ownership|Co-ownership & survivorship",
+  "subtopic": "Co-ownership & survivorship",
   "topic": "national/ownership"
  },
  {
@@ -125,6 +139,8 @@
   "id": "nat-1ca4fbeb",
   "portion": "national",
   "q": "An owner grants a neighbor the right to cross her land to reach a road. The neighbor's parcel is the:",
+  "sub": "national/ownership|Easements & encroachments",
+  "subtopic": "Easements & encroachments",
   "topic": "national/ownership"
  },
  {
@@ -141,6 +157,8 @@
   "id": "nat-972eb5b6",
   "portion": "national",
   "q": "A life tenant may do all of the following EXCEPT:",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
   "topic": "national/ownership"
  },
  {
@@ -157,6 +175,8 @@
   "id": "nat-6f524289",
   "portion": "national",
   "q": "A fence built two feet onto the neighbor's lot is an example of:",
+  "sub": "national/ownership|Easements & encroachments",
+  "subtopic": "Easements & encroachments",
   "topic": "national/ownership"
  },
  {
@@ -173,6 +193,8 @@
   "id": "nat-663453e6",
   "portion": "national",
   "q": "Ownership of a timeshare that gives the buyer a deeded fractional interest is a:",
+  "sub": "national/ownership|Condos, co-ops & timeshares",
+  "subtopic": "Condos, co-ops & timeshares",
   "topic": "national/ownership"
  },
  {
@@ -189,6 +211,8 @@
   "id": "nat-ddda222c",
   "portion": "national",
   "q": "A homeowner's association enforces a rule barring commercial signs. The authority for that rule comes from:",
+  "sub": "national/ownership|Water & private controls",
+  "subtopic": "Water & private controls",
   "topic": "national/ownership"
  },
  {
@@ -205,6 +229,8 @@
   "id": "nat-9c1c1268",
   "portion": "national",
   "q": "A city rezones an area from commercial to residential. An existing store may continue operating as a:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -221,6 +247,8 @@
   "id": "nat-3ef4ffb9",
   "portion": "national",
   "q": "Government's power to take private property for public use upon payment of just compensation is:",
+  "sub": "national/landuse|Government powers over land",
+  "subtopic": "Government powers over land",
   "topic": "national/landuse"
  },
  {
@@ -237,6 +265,8 @@
   "id": "nat-a4e3d303",
   "portion": "national",
   "q": "A lot is too narrow to meet the setback requirement. The owner should seek a:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -253,6 +283,8 @@
   "id": "nat-2abb62ce",
   "portion": "national",
   "q": "Rezoning a single parcel for the benefit of one owner, inconsistent with the surrounding area, is:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -269,6 +301,8 @@
   "id": "nat-6163c84a",
   "portion": "national",
   "q": "The primary purpose of a building permit and subsequent inspections is to:",
+  "sub": "national/landuse|Codes, permits & environmental review",
+  "subtopic": "Codes, permits & environmental review",
   "topic": "national/landuse"
  },
  {
@@ -285,6 +319,8 @@
   "id": "nat-29dbb24d",
   "portion": "national",
   "q": "A subdivision developer records a plat with restrictions limiting lots to single-family homes. These restrictions are enforceable by:",
+  "sub": "national/landuse|Private restrictions & access",
+  "subtopic": "Private restrictions & access",
   "topic": "national/landuse"
  },
  {
@@ -301,6 +337,8 @@
   "id": "nat-0e6b7ee8",
   "portion": "national",
   "q": "A comprehensive (master) plan differs from zoning in that the plan:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -317,6 +355,8 @@
   "id": "nat-d5092a9f",
   "portion": "national",
   "q": "Land that reverts to the state when an owner dies leaving no heirs and no will passes by:",
+  "sub": "national/landuse|Government powers over land",
+  "subtopic": "Government powers over land",
   "topic": "national/landuse"
  },
  {
@@ -333,6 +373,8 @@
   "id": "nat-7ca13b8c",
   "portion": "national",
   "q": "An environmental impact statement is MOST likely required when:",
+  "sub": "national/landuse|Codes, permits & environmental review",
+  "subtopic": "Codes, permits & environmental review",
   "topic": "national/landuse"
  },
  {
@@ -349,6 +391,8 @@
   "id": "nat-5be8bbc3",
   "portion": "national",
   "q": "The strip of land separating incompatible zoning districts, often landscaped, is a:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -365,6 +409,8 @@
   "id": "nat-ffdfc09d",
   "portion": "national",
   "q": "An appraiser valuing a 40-year-old church would rely MOST heavily on the:",
+  "sub": "national/valuation|Appraisal process & approaches",
+  "subtopic": "Appraisal process & approaches",
   "topic": "national/valuation"
  },
  {
@@ -381,6 +427,8 @@
   "id": "nat-036f4666",
   "portion": "national",
   "q": "The principle stating that a property's maximum value tends to be set by the cost of an equally desirable substitute is:",
+  "sub": "national/valuation|Value principles",
+  "subtopic": "Value principles",
   "topic": "national/valuation"
  },
  {
@@ -397,6 +445,8 @@
   "id": "nat-beb7a3b8",
   "portion": "national",
   "q": "A comparable sold for $310,000 but has one fewer bathroom than the subject, worth $9,000. The adjusted sale price is:",
+  "sub": "national/valuation|Sales comparison & adjustments",
+  "subtopic": "Sales comparison & adjustments",
   "topic": "national/valuation"
  },
  {
@@ -413,6 +463,8 @@
   "id": "nat-559092c3",
   "portion": "national",
   "q": "A modest home located among much larger, expensive homes tends to gain value. This illustrates:",
+  "sub": "national/valuation|Value principles",
+  "subtopic": "Value principles",
   "topic": "national/valuation"
  },
  {
@@ -429,6 +481,8 @@
   "id": "nat-1048e826",
   "portion": "national",
   "q": "Loss in value because a home has only one bathroom and buyers expect two is:",
+  "sub": "national/valuation|Depreciation & obsolescence",
+  "subtopic": "Depreciation & obsolescence",
   "topic": "national/valuation"
  },
  {
@@ -445,6 +499,8 @@
   "id": "nat-c8b8af53",
   "portion": "national",
   "q": "A highway is built next to a residence, reducing its value. This is:",
+  "sub": "national/valuation|Depreciation & obsolescence",
+  "subtopic": "Depreciation & obsolescence",
   "topic": "national/valuation"
  },
  {
@@ -461,6 +517,8 @@
   "id": "nat-14230394",
   "portion": "national",
   "q": "In the income approach, a property with $60,000 net operating income and a 8% capitalization rate is valued at:",
+  "sub": "national/valuation|Income approach & cap rates",
+  "subtopic": "Income approach & cap rates",
   "topic": "national/valuation"
  },
  {
@@ -477,6 +535,8 @@
   "id": "nat-8ec7ff53",
   "portion": "national",
   "q": "The highest and best use of a property is the use that is:",
+  "sub": "national/valuation|Value principles",
+  "subtopic": "Value principles",
   "topic": "national/valuation"
  },
  {
@@ -493,6 +553,8 @@
   "id": "nat-45ea517d",
   "portion": "national",
   "q": "A broker preparing a CMA for a seller is:",
+  "sub": "national/valuation|Appraisal process & approaches",
+  "subtopic": "Appraisal process & approaches",
   "topic": "national/valuation"
  },
  {
@@ -509,6 +571,8 @@
   "id": "nat-dfd5d480",
   "portion": "national",
   "q": "Market value differs from market price in that market value is:",
+  "sub": "national/valuation|Value principles",
+  "subtopic": "Value principles",
   "topic": "national/valuation"
  },
  {
@@ -525,6 +589,8 @@
   "id": "nat-e0e35d20",
   "portion": "national",
   "q": "Combining two adjacent lots so the whole is worth more than the sum of the parts creates:",
+  "sub": "national/valuation|Value principles",
+  "subtopic": "Value principles",
   "topic": "national/valuation"
  },
  {
@@ -541,6 +607,8 @@
   "id": "nat-42662f96",
   "portion": "national",
   "q": "The appraisal step in which the three approaches are weighted into a single conclusion is:",
+  "sub": "national/valuation|Appraisal process & approaches",
+  "subtopic": "Appraisal process & approaches",
   "topic": "national/valuation"
  },
  {
@@ -557,6 +625,8 @@
   "id": "nat-215dd2bd",
   "portion": "national",
   "q": "The clause allowing a lender to declare the entire balance due immediately upon default is the:",
+  "sub": "national/financing|Mortgage clauses & instruments",
+  "subtopic": "Mortgage clauses & instruments",
   "topic": "national/financing"
  },
  {
@@ -573,6 +643,8 @@
   "id": "nat-103788d5",
   "portion": "national",
   "q": "A buyer assumes the seller's existing loan. Unless the lender releases the seller, the seller remains:",
+  "sub": "national/financing|Assumption, novation & 'subject to'",
+  "subtopic": "Assumption, novation & 'subject to'",
   "topic": "national/financing"
  },
  {
@@ -589,6 +661,8 @@
   "id": "nat-580b0136",
   "portion": "national",
   "q": "Discount points are charged by a lender primarily to:",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -605,6 +679,8 @@
   "id": "nat-89e33f58",
   "portion": "national",
   "q": "Which loan feature makes a mortgage 'fully amortized'?",
+  "sub": "national/financing|Loan types & structures",
+  "subtopic": "Loan types & structures",
   "topic": "national/financing"
  },
  {
@@ -621,6 +697,8 @@
   "id": "nat-9ec5ca90",
   "portion": "national",
   "q": "The federal law requiring lenders to disclose the Annual Percentage Rate to consumers is:",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -637,6 +715,8 @@
   "id": "nat-727f2ea8",
   "portion": "national",
   "q": "Under RESPA, a lender may NOT:",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -653,6 +733,8 @@
   "id": "nat-9c6c1542",
   "portion": "national",
   "q": "A borrower with a conventional loan and less than 20% down will typically be required to carry:",
+  "sub": "national/financing|Loan types & structures",
+  "subtopic": "Loan types & structures",
   "topic": "national/financing"
  },
  {
@@ -669,6 +751,8 @@
   "id": "nat-f0d5d176",
   "portion": "national",
   "q": "The secondary mortgage market's primary function is to:",
+  "sub": "national/financing|Lending law & the secondary market",
+  "subtopic": "Lending law & the secondary market",
   "topic": "national/financing"
  },
  {
@@ -685,6 +769,8 @@
   "id": "nat-f1b49f53",
   "portion": "national",
   "q": "In a deed of trust there are three parties: the borrower, the lender, and the:",
+  "sub": "national/financing|Mortgage clauses & instruments",
+  "subtopic": "Mortgage clauses & instruments",
   "topic": "national/financing"
  },
  {
@@ -701,6 +787,8 @@
   "id": "nat-eeedfd3c",
   "portion": "national",
   "q": "A loan where the interest rate adjusts periodically based on a published index is a:",
+  "sub": "national/financing|Loan types & structures",
+  "subtopic": "Loan types & structures",
   "topic": "national/financing"
  },
  {
@@ -717,6 +805,8 @@
   "id": "nat-08b7e7c6",
   "portion": "national",
   "q": "Usury laws limit:",
+  "sub": "national/financing|Mortgage clauses & instruments",
+  "subtopic": "Mortgage clauses & instruments",
   "topic": "national/financing"
  },
  {
@@ -733,6 +823,8 @@
   "id": "nat-fb6f1082",
   "portion": "national",
   "q": "A seller finances part of the buyer's purchase and takes back a note secured by the property. This is a:",
+  "sub": "national/financing|Loan types & structures",
+  "subtopic": "Loan types & structures",
   "topic": "national/financing"
  },
  {
@@ -749,6 +841,8 @@
   "id": "nat-0ae2a8e2",
   "portion": "national",
   "q": "The Equal Credit Opportunity Act prohibits discrimination in lending based on all of the following EXCEPT:",
+  "sub": "national/financing|Lending law & the secondary market",
+  "subtopic": "Lending law & the secondary market",
   "topic": "national/financing"
  },
  {
@@ -765,6 +859,8 @@
   "id": "nat-edafaad0",
   "portion": "national",
   "q": "Under TRID, the Closing Disclosure must be received by the borrower at least:",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -781,6 +877,8 @@
   "id": "nat-d1d9dc75",
   "portion": "national",
   "q": "A seller's agent learns the seller will accept far less than list price. The agent must:",
+  "sub": "national/agency|Fiduciary duties",
+  "subtopic": "Fiduciary duties",
   "topic": "national/agency"
  },
  {
@@ -797,6 +895,8 @@
   "id": "nat-4ff1b5d7",
   "portion": "national",
   "q": "The fiduciary duties owed by an agent to a principal are often remembered as OLD CAR. The 'O' stands for:",
+  "sub": "national/agency|Fiduciary duties",
+  "subtopic": "Fiduciary duties",
   "topic": "national/agency"
  },
  {
@@ -813,6 +913,8 @@
   "id": "nat-3d523b05",
   "portion": "national",
   "q": "An agency relationship created by the conduct of the parties, without a written agreement, is:",
+  "sub": "national/agency|Creating & ending agency",
+  "subtopic": "Creating & ending agency",
   "topic": "national/agency"
  },
  {
@@ -829,6 +931,8 @@
   "id": "nat-8f7b6ef5",
   "portion": "national",
   "q": "In a dual agency, the agent's ability to fully represent both parties is limited primarily because:",
+  "sub": "national/agency|Dual agency & conflicts",
+  "subtopic": "Dual agency & conflicts",
   "topic": "national/agency"
  },
  {
@@ -845,6 +949,8 @@
   "id": "nat-70f120c0",
   "portion": "national",
   "q": "A buyer's agent discovers the property has a cracked foundation the seller did not disclose. The buyer's agent must:",
+  "sub": "national/agency|Confidentiality & disclosure",
+  "subtopic": "Confidentiality & disclosure",
   "topic": "national/agency"
  },
  {
@@ -861,6 +967,8 @@
   "id": "nat-d3f0445c",
   "portion": "national",
   "q": "An agent who represents the principal in a single transaction with limited authority is a:",
+  "sub": "national/agency|Creating & ending agency",
+  "subtopic": "Creating & ending agency",
   "topic": "national/agency"
  },
  {
@@ -877,6 +985,8 @@
   "id": "nat-daf09347",
   "portion": "national",
   "q": "An agency relationship terminates by operation of law upon all of the following EXCEPT:",
+  "sub": "national/agency|Creating & ending agency",
+  "subtopic": "Creating & ending agency",
   "topic": "national/agency"
  },
  {
@@ -893,6 +1003,8 @@
   "id": "nat-10d4624a",
   "portion": "national",
   "q": "When an agent places client funds in the agent's personal account, the violation is:",
+  "sub": "national/agency|Trust funds & supervision",
+  "subtopic": "Trust funds & supervision",
   "topic": "national/agency"
  },
  {
@@ -909,6 +1021,8 @@
   "id": "nat-0b6dfc8d",
   "portion": "national",
   "q": "A seller instructs the listing agent not to show the home to families with children. The agent must:",
+  "sub": "national/agency|Fiduciary duties",
+  "subtopic": "Fiduciary duties",
   "topic": "national/agency"
  },
  {
@@ -925,6 +1039,8 @@
   "id": "nat-a968239a",
   "portion": "national",
   "q": "A subagent of the seller owes fiduciary duties to:",
+  "sub": "national/agency|Creating & ending agency",
+  "subtopic": "Creating & ending agency",
   "topic": "national/agency"
  },
  {
@@ -941,6 +1057,8 @@
   "id": "nat-c712a9fa",
   "portion": "national",
   "q": "Puffing becomes actionable misrepresentation when the statement:",
+  "sub": "national/agency|Confidentiality & disclosure",
+  "subtopic": "Confidentiality & disclosure",
   "topic": "national/agency"
  },
  {
@@ -957,6 +1075,8 @@
   "id": "nat-dd2928a0",
   "portion": "national",
   "q": "A broker earns a commission when the broker produces a buyer who is:",
+  "sub": "national/agency|Commission & representation",
+  "subtopic": "Commission & representation",
   "topic": "national/agency"
  },
  {
@@ -973,6 +1093,8 @@
   "id": "nat-ccdd2ad3",
   "portion": "national",
   "q": "The principal in an agency relationship is also called the:",
+  "sub": "national/agency|Client vs. customer",
+  "subtopic": "Client vs. customer",
   "topic": "national/agency"
  },
  {
@@ -989,6 +1111,8 @@
   "id": "nat-87e6a92c",
   "portion": "national",
   "q": "A latent defect is one that is:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
   "topic": "national/disclosures"
  },
  {
@@ -1005,6 +1129,8 @@
   "id": "nat-919374cf",
   "portion": "national",
   "q": "Under federal law, the lead-based paint disclosure applies to residential dwellings built:",
+  "sub": "national/disclosures|Lead-based paint",
+  "subtopic": "Lead-based paint",
   "topic": "national/disclosures"
  },
  {
@@ -1021,6 +1147,8 @@
   "id": "nat-451974f5",
   "portion": "national",
   "q": "A naturally occurring radioactive gas that enters homes through foundation cracks is:",
+  "sub": "national/disclosures|Environmental hazards",
+  "subtopic": "Environmental hazards",
   "topic": "national/disclosures"
  },
  {
@@ -1037,6 +1165,8 @@
   "id": "nat-4cda142c",
   "portion": "national",
   "q": "Under CERCLA, liability for cleanup of hazardous waste on a property may be imposed on:",
+  "sub": "national/disclosures|Environmental hazards",
+  "subtopic": "Environmental hazards",
   "topic": "national/disclosures"
  },
  {
@@ -1053,6 +1183,8 @@
   "id": "nat-0d2dfd2b",
   "portion": "national",
   "q": "A stigmatized property is one that:",
+  "sub": "national/disclosures|Stigma & fair housing limits",
+  "subtopic": "Stigma & fair housing limits",
   "topic": "national/disclosures"
  },
  {
@@ -1069,6 +1201,8 @@
   "id": "nat-848a9514",
   "portion": "national",
   "q": "Federal law prohibits disclosing that a former occupant had:",
+  "sub": "national/disclosures|Stigma & fair housing limits",
+  "subtopic": "Stigma & fair housing limits",
   "topic": "national/disclosures"
  },
  {
@@ -1085,6 +1219,8 @@
   "id": "nat-4ada5806",
   "portion": "national",
   "q": "Friable asbestos is dangerous chiefly because:",
+  "sub": "national/disclosures|Environmental hazards",
+  "subtopic": "Environmental hazards",
   "topic": "national/disclosures"
  },
  {
@@ -1101,6 +1237,8 @@
   "id": "nat-afc7e1a0",
   "portion": "national",
   "q": "An underground storage tank triggers a disclosure concern mainly because of:",
+  "sub": "national/disclosures|Environmental hazards",
+  "subtopic": "Environmental hazards",
   "topic": "national/disclosures"
  },
  {
@@ -1117,6 +1255,8 @@
   "id": "nat-564a1d27",
   "portion": "national",
   "q": "A seller's agent who knows the basement floods after heavy rain and stays silent has committed:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
   "topic": "national/disclosures"
  },
  {
@@ -1133,6 +1273,8 @@
   "id": "nat-2e29719d",
   "portion": "national",
   "q": "The purpose of a Phase I Environmental Site Assessment is to:",
+  "sub": "national/disclosures|Environmental hazards",
+  "subtopic": "Environmental hazards",
   "topic": "national/disclosures"
  },
  {
@@ -1149,6 +1291,8 @@
   "id": "nat-8391b49f",
   "portion": "national",
   "q": "Most states require a residential seller's property disclosure to be delivered:",
+  "sub": "national/disclosures|Disclosure timing & duties",
+  "subtopic": "Disclosure timing & duties",
   "topic": "national/disclosures"
  },
  {
@@ -1165,6 +1309,8 @@
   "id": "nat-80112577",
   "portion": "national",
   "q": "A buyer makes an offer; the seller changes the closing date and signs. This is legally a:",
+  "sub": "national/contracts|Offer, acceptance & counteroffers",
+  "subtopic": "Offer, acceptance & counteroffers",
   "topic": "national/contracts"
  },
  {
@@ -1181,6 +1327,8 @@
   "id": "nat-326a7715",
   "portion": "national",
   "q": "A contract signed by a minor is:",
+  "sub": "national/contracts|Validity, capacity & the Statute of Frauds",
+  "subtopic": "Validity, capacity & the Statute of Frauds",
   "topic": "national/contracts"
  },
  {
@@ -1197,6 +1345,8 @@
   "id": "nat-1a05a43a",
   "portion": "national",
   "q": "The Statute of Frauds requires that contracts for the sale of real estate be:",
+  "sub": "national/contracts|Validity, capacity & the Statute of Frauds",
+  "subtopic": "Validity, capacity & the Statute of Frauds",
   "topic": "national/contracts"
  },
  {
@@ -1213,6 +1363,8 @@
   "id": "nat-20632cfb",
   "portion": "national",
   "q": "Earnest money in a sales contract serves primarily as:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -1229,6 +1381,8 @@
   "id": "nat-e7cf13b1",
   "portion": "national",
   "q": "A contract in which only one party is obligated to perform until the other acts is:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -1245,6 +1399,8 @@
   "id": "nat-619202b7",
   "portion": "national",
   "q": "A buyer defaults. The seller sues to force the buyer to complete the purchase. This remedy is:",
+  "sub": "national/contracts|Breach, remedies & damages",
+  "subtopic": "Breach, remedies & damages",
   "topic": "national/contracts"
  },
  {
@@ -1261,6 +1417,8 @@
   "id": "nat-94ed46a2",
   "portion": "national",
   "q": "The 'time is of the essence' clause means:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -1277,6 +1435,8 @@
   "id": "nat-826868be",
   "portion": "national",
   "q": "An option contract requires the optionor to sell and the optionee to:",
+  "sub": "national/contracts|Options & installment contracts",
+  "subtopic": "Options & installment contracts",
   "topic": "national/contracts"
  },
  {
@@ -1293,6 +1453,8 @@
   "id": "nat-fb500977",
   "portion": "national",
   "q": "Assignment of a contract transfers:",
+  "sub": "national/contracts|Assignment & novation",
+  "subtopic": "Assignment & novation",
   "topic": "national/contracts"
  },
  {
@@ -1309,6 +1471,8 @@
   "id": "nat-bb8886e4",
   "portion": "national",
   "q": "A contract that has been fully performed by both parties is:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -1325,6 +1489,8 @@
   "id": "nat-8b534de3",
   "portion": "national",
   "q": "A financing contingency in a purchase agreement protects the:",
+  "sub": "national/contracts|Contingencies & conditions",
+  "subtopic": "Contingencies & conditions",
   "topic": "national/contracts"
  },
  {
@@ -1341,6 +1507,8 @@
   "id": "nat-b4cf064c",
   "portion": "national",
   "q": "Mutual assent in a contract is destroyed by:",
+  "sub": "national/contracts|Validity, capacity & the Statute of Frauds",
+  "subtopic": "Validity, capacity & the Statute of Frauds",
   "topic": "national/contracts"
  },
  {
@@ -1357,6 +1525,8 @@
   "id": "nat-c505648a",
   "portion": "national",
   "q": "An offer terminates in all of the following ways EXCEPT:",
+  "sub": "national/contracts|Offer, acceptance & counteroffers",
+  "subtopic": "Offer, acceptance & counteroffers",
   "topic": "national/contracts"
  },
  {
@@ -1373,6 +1543,8 @@
   "id": "nat-0b17e06c",
   "portion": "national",
   "q": "A land contract (contract for deed) is characterized by the seller:",
+  "sub": "national/contracts|Options & installment contracts",
+  "subtopic": "Options & installment contracts",
   "topic": "national/contracts"
  },
  {
@@ -1389,6 +1561,8 @@
   "id": "nat-ee5f6eda",
   "portion": "national",
   "q": "Liquidated damages differ from actual damages in that liquidated damages are:",
+  "sub": "national/contracts|Breach, remedies & damages",
+  "subtopic": "Breach, remedies & damages",
   "topic": "national/contracts"
  },
  {
@@ -1405,6 +1579,8 @@
   "id": "nat-53e024b5",
   "portion": "national",
   "q": "If a buyer and seller sign an agreement to cancel their contract and restore each party to their prior position, this is:",
+  "sub": "national/contracts|Breach, remedies & damages",
+  "subtopic": "Breach, remedies & damages",
   "topic": "national/contracts"
  },
  {
@@ -1421,6 +1597,8 @@
   "id": "nat-526404cf",
   "portion": "national",
   "q": "The deed offering the greatest protection to the grantee is the:",
+  "sub": "national/transfer|Deeds & covenants of title",
+  "subtopic": "Deeds & covenants of title",
   "topic": "national/transfer"
  },
  {
@@ -1437,6 +1615,8 @@
   "id": "nat-8f9c509b",
   "portion": "national",
   "q": "The covenant in a general warranty deed promising the grantor will defend against lawful claims is:",
+  "sub": "national/transfer|Deeds & covenants of title",
+  "subtopic": "Deeds & covenants of title",
   "topic": "national/transfer"
  },
  {
@@ -1453,6 +1633,8 @@
   "id": "nat-324b502e",
   "portion": "national",
   "q": "For a deed to be valid between grantor and grantee, it must be:",
+  "sub": "national/transfer|Deeds & covenants of title",
+  "subtopic": "Deeds & covenants of title",
   "topic": "national/transfer"
  },
  {
@@ -1469,6 +1651,8 @@
   "id": "nat-16d15dfa",
   "portion": "national",
   "q": "Recording a deed provides:",
+  "sub": "national/transfer|Recording, notice & priority",
+  "subtopic": "Recording, notice & priority",
   "topic": "national/transfer"
  },
  {
@@ -1485,6 +1669,8 @@
   "id": "nat-c4b58b19",
   "portion": "national",
   "q": "Title insurance differs from other insurance in that it protects against:",
+  "sub": "national/transfer|Title evidence & clearing defects",
+  "subtopic": "Title evidence & clearing defects",
   "topic": "national/transfer"
  },
  {
@@ -1501,6 +1687,8 @@
   "id": "nat-fe3dbb3b",
   "portion": "national",
   "q": "Acquiring title by open, notorious, hostile, and continuous possession for the statutory period is:",
+  "sub": "national/transfer|Adverse possession & involuntary transfer",
+  "subtopic": "Adverse possession & involuntary transfer",
   "topic": "national/transfer"
  },
  {
@@ -1517,6 +1705,8 @@
   "id": "nat-0b0f2e27",
   "portion": "national",
   "q": "A person who dies leaving a valid will dies:",
+  "sub": "national/transfer|Adverse possession & involuntary transfer",
+  "subtopic": "Adverse possession & involuntary transfer",
   "topic": "national/transfer"
  },
  {
@@ -1533,6 +1723,8 @@
   "id": "nat-cc78d617",
   "portion": "national",
   "q": "The gradual addition of land by waterborne deposits of soil is:",
+  "sub": "national/transfer|Adverse possession & involuntary transfer",
+  "subtopic": "Adverse possession & involuntary transfer",
   "topic": "national/transfer"
  },
  {
@@ -1549,6 +1741,8 @@
   "id": "nat-0b40a0e6",
   "portion": "national",
   "q": "A title search that traces ownership back through successive owners produces the:",
+  "sub": "national/transfer|Title evidence & clearing defects",
+  "subtopic": "Title evidence & clearing defects",
   "topic": "national/transfer"
  },
  {
@@ -1565,6 +1759,8 @@
   "id": "nat-7893809b",
   "portion": "national",
   "q": "A cloud on title is BEST removed by:",
+  "sub": "national/transfer|Title evidence & clearing defects",
+  "subtopic": "Title evidence & clearing defects",
   "topic": "national/transfer"
  },
  {
@@ -1581,6 +1777,8 @@
   "id": "nat-69d5f58f",
   "portion": "national",
   "q": "In most closings, real property taxes already paid by the seller beyond the closing date result in a:",
+  "sub": "national/transfer|Closing & prorations",
+  "subtopic": "Closing & prorations",
   "topic": "national/transfer"
  },
  {
@@ -1597,6 +1795,8 @@
   "id": "nat-96df336c",
   "portion": "national",
   "q": "A legal description that uses distances and compass bearings from a point of beginning is:",
+  "sub": "national/transfer|Legal descriptions",
+  "subtopic": "Legal descriptions",
   "topic": "national/transfer"
  },
  {
@@ -1613,6 +1813,8 @@
   "id": "nat-b203442e",
   "portion": "national",
   "q": "Two competing brokerages agree to charge the same commission rate. This is:",
+  "sub": "national/practice|Antitrust",
+  "subtopic": "Antitrust",
   "topic": "national/practice"
  },
  {
@@ -1629,6 +1831,8 @@
   "id": "nat-1f23d887",
   "portion": "national",
   "q": "Brokers agreeing not to show each other's listings to certain buyers is:",
+  "sub": "national/practice|Antitrust",
+  "subtopic": "Antitrust",
   "topic": "national/practice"
  },
  {
@@ -1645,6 +1849,8 @@
   "id": "nat-9e2ae535",
   "portion": "national",
   "q": "Directing buyers toward or away from neighborhoods based on race is:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  },
  {
@@ -1661,6 +1867,8 @@
   "id": "nat-c9ce85d1",
   "portion": "national",
   "q": "The federal Fair Housing Act protects all of the following classes EXCEPT:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  },
  {
@@ -1677,6 +1885,8 @@
   "id": "nat-916dc5ca",
   "portion": "national",
   "q": "An advertisement stating 'perfect for a mature Christian couple' violates fair housing because it indicates a preference based on:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  },
  {
@@ -1693,6 +1903,8 @@
   "id": "nat-180dbaa5",
   "portion": "national",
   "q": "Under the Fair Housing Act, a landlord must permit a tenant with a disability to:",
+  "sub": "national/practice|Practice standards",
+  "subtopic": "Practice standards",
   "topic": "national/practice"
  },
  {
@@ -1709,6 +1921,8 @@
   "id": "nat-c96270cc",
   "portion": "national",
   "q": "A broker's trust account must be:",
+  "sub": "national/practice|Trust funds & commingling",
+  "subtopic": "Trust funds & commingling",
   "topic": "national/practice"
  },
  {
@@ -1725,6 +1939,8 @@
   "id": "nat-b27b6814",
   "portion": "national",
   "q": "The Americans with Disabilities Act requires commercial property owners to:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  },
  {
@@ -1741,6 +1957,8 @@
   "id": "nat-8fe96f76",
   "portion": "national",
   "q": "An independent contractor relationship between a broker and a salesperson means the broker:",
+  "sub": "national/practice|Licensing & supervision",
+  "subtopic": "Licensing & supervision",
   "topic": "national/practice"
  },
  {
@@ -1757,6 +1975,8 @@
   "id": "nat-617cc4c3",
   "portion": "national",
   "q": "A net listing is one in which the broker:",
+  "sub": "national/practice|Listings & agreements",
+  "subtopic": "Listings & agreements",
   "topic": "national/practice"
  },
  {
@@ -1773,6 +1993,8 @@
   "id": "nat-fa7e416c",
   "portion": "national",
   "q": "An open listing differs from an exclusive right to sell in that with an open listing:",
+  "sub": "national/practice|Listings & agreements",
+  "subtopic": "Listings & agreements",
   "topic": "national/practice"
  },
  {
@@ -1789,6 +2011,8 @@
   "id": "nat-55d54a6b",
   "portion": "national",
   "q": "A broker who deposits a buyer's earnest money into the brokerage operating account has committed:",
+  "sub": "national/practice|Trust funds & commingling",
+  "subtopic": "Trust funds & commingling",
   "topic": "national/practice"
  },
  {
@@ -1805,6 +2029,8 @@
   "id": "nat-cd09d6e2",
   "portion": "national",
   "q": "The 'do not call' rules generally allow a licensee to call a consumer on the registry if:",
+  "sub": "national/practice|Licensing & supervision",
+  "subtopic": "Licensing & supervision",
   "topic": "national/practice"
  },
  {
@@ -1821,6 +2047,8 @@
   "id": "nat-8b288ba2",
   "portion": "national",
   "q": "Which activity may an unlicensed personal assistant legally perform?",
+  "sub": "national/practice|Licensing & supervision",
+  "subtopic": "Licensing & supervision",
   "topic": "national/practice"
  },
  {
@@ -1837,6 +2065,8 @@
   "id": "nat-4d440cd4",
   "portion": "national",
   "q": "A property sells for $250,000 with a 6% commission split 50/50 between two brokerages. Each brokerage receives:",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1853,6 +2083,8 @@
   "id": "nat-62e18f6d",
   "portion": "national",
   "q": "One acre contains how many square feet?",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1869,6 +2101,8 @@
   "id": "nat-c620b6f3",
   "portion": "national",
   "q": "A buyer pays 2 discount points on a $200,000 loan. The cost is:",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1885,6 +2119,8 @@
   "id": "nat-d955ca07",
   "portion": "national",
   "q": "A home appraises at $300,000 and the buyer obtains an 80% LTV loan. The down payment on a $310,000 purchase price is:",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1901,6 +2137,8 @@
   "id": "nat-c7f1b97c",
   "portion": "national",
   "q": "Annual taxes are $3,600, paid in arrears. Closing is on July 1 in a 360-day year. The seller's share is approximately:",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1917,6 +2155,8 @@
   "id": "nat-e2201432",
   "portion": "national",
   "q": "A seller wants to net $190,000 after a 5% commission and no other costs. The sale price must be:",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
   "topic": "national/math"
  },
  {
@@ -1933,6 +2173,8 @@
   "id": "nat-8e82b0b5",
   "portion": "national",
   "q": "A owns property in fee simple determinable, to revert automatically if liquor is ever sold there. A conveys to B, who opens a bar. At that moment:",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
   "topic": "national/ownership"
  },
  {
@@ -1949,6 +2191,8 @@
   "id": "nat-7d6399cf",
   "portion": "national",
   "q": "Two sisters own a lake house as joint tenants. One dies leaving a will devising 'all my real property to my son.' The son receives:",
+  "sub": "national/ownership|Co-ownership & survivorship",
+  "subtopic": "Co-ownership & survivorship",
   "topic": "national/ownership"
  },
  {
@@ -1965,6 +2209,8 @@
   "id": "nat-686487b2",
   "portion": "national",
   "q": "A commercial tenant bolts specialized refrigeration units to the floor of a leased space. The lease is silent. At lease end the tenant may:",
+  "sub": "national/ownership|Fixtures & trade fixtures",
+  "subtopic": "Fixtures & trade fixtures",
   "topic": "national/ownership"
  },
  {
@@ -1981,6 +2227,8 @@
   "id": "nat-ba3773b7",
   "portion": "national",
   "q": "An owner grants a utility company the right to run a line across her land. She later sells. The easement:",
+  "sub": "national/ownership|Easements & encroachments",
+  "subtopic": "Easements & encroachments",
   "topic": "national/ownership"
  },
  {
@@ -1997,6 +2245,8 @@
   "id": "nat-e67b2148",
   "portion": "national",
   "q": "A life tenant fails to pay property taxes for three years and lets the roof fail. The remainderman's BEST characterization of this is:",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
   "topic": "national/ownership"
  },
  {
@@ -2013,6 +2263,8 @@
   "id": "nat-0bfe6f48",
   "portion": "national",
   "q": "A condominium declaration allots each unit an undivided percentage of the common elements. That percentage MOST directly determines each owner's:",
+  "sub": "national/ownership|Condos, co-ops & timeshares",
+  "subtopic": "Condos, co-ops & timeshares",
   "topic": "national/ownership"
  },
  {
@@ -2029,6 +2281,8 @@
   "id": "nat-4c7bd8ba",
   "portion": "national",
   "q": "A city downzones an area, leaving an owner's lot usable but worth 40% less. The owner sues claiming a taking. The owner will MOST likely:",
+  "sub": "national/landuse|Government powers over land",
+  "subtopic": "Government powers over land",
   "topic": "national/landuse"
  },
  {
@@ -2045,6 +2299,8 @@
   "id": "nat-28e3a8ba",
   "portion": "national",
   "q": "A legal nonconforming gas station burns down. The owner wants to rebuild it as it was. Under a typical ordinance the owner will:",
+  "sub": "national/landuse|Zoning, variances & nonconforming use",
+  "subtopic": "Zoning, variances & nonconforming use",
   "topic": "national/landuse"
  },
  {
@@ -2061,6 +2317,8 @@
   "id": "nat-cd967c82",
   "portion": "national",
   "q": "A subdivision's recorded covenants bar fences over four feet. For fifteen years owners have built six-foot fences with no objection. A neighbor now sues to enforce. The BEST defense is:",
+  "sub": "national/landuse|Private restrictions & access",
+  "subtopic": "Private restrictions & access",
   "topic": "national/landuse"
  },
  {
@@ -2077,6 +2335,8 @@
   "id": "nat-802f42b1",
   "portion": "national",
   "q": "A property owner's land is landlocked after the seller conveys away the parcel fronting the road. The owner's strongest claim to access is:",
+  "sub": "national/landuse|Private restrictions & access",
+  "subtopic": "Private restrictions & access",
   "topic": "national/landuse"
  },
  {
@@ -2093,6 +2353,8 @@
   "id": "nat-9040ba6b",
   "portion": "national",
   "q": "An appraiser must value a two-year-old home in a subdivision where twelve nearly identical homes sold in the last six months. The cost approach would MOST likely:",
+  "sub": "national/valuation|Appraisal process & approaches",
+  "subtopic": "Appraisal process & approaches",
   "topic": "national/valuation"
  },
  {
@@ -2109,6 +2371,8 @@
   "id": "nat-1be22d17",
   "portion": "national",
   "q": "A comparable superior to the subject sold for $420,000; its extra half-bath is worth $12,000 and its inferior lot costs $8,000. The adjusted value indication is:",
+  "sub": "national/valuation|Sales comparison & adjustments",
+  "subtopic": "Sales comparison & adjustments",
   "topic": "national/valuation"
  },
  {
@@ -2125,6 +2389,8 @@
   "id": "nat-beaf41b6",
   "portion": "national",
   "q": "A four-unit building rents for $1,400 per unit monthly with 5% vacancy and $19,000 annual operating expenses. At an 8% cap rate its value is closest to:",
+  "sub": "national/valuation|Income approach & cap rates",
+  "subtopic": "Income approach & cap rates",
   "topic": "national/valuation"
  },
  {
@@ -2141,6 +2407,8 @@
   "id": "nat-d877e4df",
   "portion": "national",
   "q": "An appraiser notes the subject's roof needs $9,000 of work that would add $9,000 of value. This is BEST classified as:",
+  "sub": "national/valuation|Depreciation & obsolescence",
+  "subtopic": "Depreciation & obsolescence",
   "topic": "national/valuation"
  },
  {
@@ -2157,6 +2425,8 @@
   "id": "nat-f66bb10e",
   "portion": "national",
   "q": "A house on a busy corner sells for less than identical houses mid-block. When the appraiser accounts for this, the deduction is properly assigned to:",
+  "sub": "national/valuation|Depreciation & obsolescence",
+  "subtopic": "Depreciation & obsolescence",
   "topic": "national/valuation"
  },
  {
@@ -2173,6 +2443,8 @@
   "id": "nat-6338191f",
   "portion": "national",
   "q": "A buyer takes title 'subject to' the seller's existing loan and later defaults. The lender forecloses and the sale leaves a $40,000 shortfall. The lender may pursue a deficiency judgment against:",
+  "sub": "national/financing|Assumption, novation & 'subject to'",
+  "subtopic": "Assumption, novation & 'subject to'",
   "topic": "national/financing"
  },
  {
@@ -2189,6 +2461,8 @@
   "id": "nat-52419ef3",
   "portion": "national",
   "q": "A borrower is offered 6.5% with no points, or 6.0% with 2 points on a $300,000 loan. Roughly how long must the borrower keep the loan for the points to pay off, using simple first-year interest?",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -2205,6 +2479,8 @@
   "id": "nat-ec8c3a9f",
   "portion": "national",
   "q": "Under TRID, which change after the Closing Disclosure is delivered REQUIRES a new three-business-day waiting period?",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
   "topic": "national/financing"
  },
  {
@@ -2221,6 +2497,8 @@
   "id": "nat-6891f80a",
   "portion": "national",
   "q": "A lender's appraisal comes in $15,000 below the contract price on a 95% LTV loan. Absent an appraisal contingency, the buyer must:",
+  "sub": "national/financing|Lending law & the secondary market",
+  "subtopic": "Lending law & the secondary market",
   "topic": "national/financing"
  },
  {
@@ -2237,6 +2515,8 @@
   "id": "nat-ed9aae6a",
   "portion": "national",
   "q": "A veteran's VA loan is assumed by a non-veteran buyer with VA approval, but the veteran does not obtain a release of liability. The veteran's entitlement:",
+  "sub": "national/financing|Assumption, novation & 'subject to'",
+  "subtopic": "Assumption, novation & 'subject to'",
   "topic": "national/financing"
  },
  {
@@ -2253,6 +2533,8 @@
   "id": "nat-c4baa683",
   "portion": "national",
   "q": "A lender denies a loan and tells the applicant only 'you did not meet our standards.' Under ECOA the lender has:",
+  "sub": "national/financing|Lending law & the secondary market",
+  "subtopic": "Lending law & the secondary market",
   "topic": "national/financing"
  },
  {
@@ -2269,6 +2551,8 @@
   "id": "nat-13d9b8dc",
   "portion": "national",
   "q": "A blanket mortgage covering twelve subdivision lots contains a release clause. Its practical effect is that the developer can:",
+  "sub": "national/financing|Loan types & structures",
+  "subtopic": "Loan types & structures",
   "topic": "national/financing"
  },
  {
@@ -2285,6 +2569,8 @@
   "id": "nat-b91dd82c",
   "portion": "national",
   "q": "A listing agent learns from the seller, in confidence, that the seller must move for a job in 30 days. A buyer's agent asks why the seller is selling. The listing agent should:",
+  "sub": "national/agency|Confidentiality & disclosure",
+  "subtopic": "Confidentiality & disclosure",
   "topic": "national/agency"
  },
  {
@@ -2301,6 +2587,8 @@
   "id": "nat-5ace4b52",
   "portion": "national",
   "q": "An agent's listing expires unsold. Six months later the agent mentions to a friend that the former seller had been desperate. This is:",
+  "sub": "national/agency|Fiduciary duties",
+  "subtopic": "Fiduciary duties",
   "topic": "national/agency"
  },
  {
@@ -2317,6 +2605,8 @@
   "id": "nat-65b71c16",
   "portion": "national",
   "q": "A broker represents the seller. The broker's own son wants to buy the property. The broker's FIRST obligation is to:",
+  "sub": "national/agency|Confidentiality & disclosure",
+  "subtopic": "Confidentiality & disclosure",
   "topic": "national/agency"
  },
  {
@@ -2333,6 +2623,8 @@
   "id": "nat-25f2b60f",
   "portion": "national",
   "q": "A buyer's agent shows a property and the buyer asks, 'Is this a good price?' The agent has a written buyer agency agreement. The agent should:",
+  "sub": "national/agency|Client vs. customer",
+  "subtopic": "Client vs. customer",
   "topic": "national/agency"
  },
  {
@@ -2349,6 +2641,8 @@
   "id": "nat-27053515",
   "portion": "national",
   "q": "A seller's agent receives two offers. The higher offer is from an unrepresented buyer, meaning the agent would keep the whole commission. The agent must:",
+  "sub": "national/agency|Dual agency & conflicts",
+  "subtopic": "Dual agency & conflicts",
   "topic": "national/agency"
  },
  {
@@ -2365,6 +2659,8 @@
   "id": "nat-31e2087a",
   "portion": "national",
   "q": "An unlicensed assistant, alone at an open house, answers a visitor's question about whether the seller would take less. The broker's exposure is:",
+  "sub": "national/agency|Trust funds & supervision",
+  "subtopic": "Trust funds & supervision",
   "topic": "national/agency"
  },
  {
@@ -2381,6 +2677,8 @@
   "id": "nat-72bbf3e4",
   "portion": "national",
   "q": "A seller repaired a chronic basement leak two years ago and it has not recurred. On the disclosure form the seller should:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
   "topic": "national/disclosures"
  },
  {
@@ -2397,6 +2695,8 @@
   "id": "nat-8c9dbc26",
   "portion": "national",
   "q": "A buyer's agent sees a fresh paint patch on a ceiling and a faint stain edge. The agent should:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
   "topic": "national/disclosures"
  },
  {
@@ -2413,6 +2713,8 @@
   "id": "nat-b02be796",
   "portion": "national",
   "q": "A property built in 1975 is sold. The seller has never tested for lead and knows of no hazard. The seller must:",
+  "sub": "national/disclosures|Lead-based paint",
+  "subtopic": "Lead-based paint",
   "topic": "national/disclosures"
  },
  {
@@ -2429,6 +2731,8 @@
   "id": "nat-3b1812fa",
   "portion": "national",
   "q": "A buyer asks a licensee whether a nearby group home houses people with disabilities. The licensee should:",
+  "sub": "national/disclosures|Stigma & fair housing limits",
+  "subtopic": "Stigma & fair housing limits",
   "topic": "national/disclosures"
  },
  {
@@ -2445,6 +2749,8 @@
   "id": "nat-713f3a24",
   "portion": "national",
   "q": "A licensee discovers the seller's disclosure understates the age of the roof by twelve years. The seller refuses to correct it. The licensee should:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
   "topic": "national/disclosures"
  },
  {
@@ -2461,6 +2767,8 @@
   "id": "nat-1c0b5387",
   "portion": "national",
   "q": "A buyer's offer says acceptance must be received by 5 p.m. Friday. The seller signs at 3 p.m. Friday but the acceptance is not delivered until Saturday morning. There is:",
+  "sub": "national/contracts|Offer, acceptance & counteroffers",
+  "subtopic": "Offer, acceptance & counteroffers",
   "topic": "national/contracts"
  },
  {
@@ -2477,6 +2785,8 @@
   "id": "nat-bd6c19ef",
   "portion": "national",
   "q": "A contract is contingent on the buyer obtaining financing at no more than 6.5%. The buyer is approved at 6.75% and terminates. The seller argues bad faith. The buyer will MOST likely:",
+  "sub": "national/contracts|Contingencies & conditions",
+  "subtopic": "Contingencies & conditions",
   "topic": "national/contracts"
  },
  {
@@ -2493,6 +2803,8 @@
   "id": "nat-4eeb78f6",
   "portion": "national",
   "q": "A seller and buyer sign a contract. Before closing the house burns down. In a state that has adopted the Uniform Vendor and Purchaser Risk Act, the loss falls on the:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -2509,6 +2821,8 @@
   "id": "nat-dff6a6a6",
   "portion": "national",
   "q": "A buyer assigns her purchase contract to a third party. The contract is silent on assignment. The seller objects. Generally:",
+  "sub": "national/contracts|Assignment & novation",
+  "subtopic": "Assignment & novation",
   "topic": "national/contracts"
  },
  {
@@ -2525,6 +2839,8 @@
   "id": "nat-8d6cae58",
   "portion": "national",
   "q": "An option agreement gives a tenant the right to buy for $500,000 within one year, for $5,000 consideration. Six months in, the owner sells to someone else. The tenant's BEST remedy is:",
+  "sub": "national/contracts|Options & installment contracts",
+  "subtopic": "Options & installment contracts",
   "topic": "national/contracts"
  },
  {
@@ -2541,6 +2857,8 @@
   "id": "nat-fac7cd96",
   "portion": "national",
   "q": "A contract states 'closing on or before June 30' with no time-is-of-the-essence clause. The buyer is ready on July 3. The seller declares a breach. The seller will MOST likely:",
+  "sub": "national/contracts|Contract terms & performance",
+  "subtopic": "Contract terms & performance",
   "topic": "national/contracts"
  },
  {
@@ -2557,6 +2875,8 @@
   "id": "nat-a4377df9",
   "portion": "national",
   "q": "Two parties sign a contract that misstates the parcel number due to a typing error, though both intended the same lot. The proper remedy is:",
+  "sub": "national/contracts|Breach, remedies & damages",
+  "subtopic": "Breach, remedies & damages",
   "topic": "national/contracts"
  },
  {
@@ -2573,6 +2893,8 @@
   "id": "nat-f8510410",
   "portion": "national",
   "q": "A buyer records a deed on Monday. An earlier buyer of the same parcel, who had paid and taken possession, records on Wednesday. In a race-notice state the winner is:",
+  "sub": "national/transfer|Recording, notice & priority",
+  "subtopic": "Recording, notice & priority",
   "topic": "national/transfer"
  },
  {
@@ -2589,6 +2911,8 @@
   "id": "nat-ef368726",
   "portion": "national",
   "q": "A general warranty deed's covenant of seisin is breached. When does the breach occur?",
+  "sub": "national/transfer|Deeds & covenants of title",
+  "subtopic": "Deeds & covenants of title",
   "topic": "national/transfer"
  },
  {
@@ -2605,6 +2929,8 @@
   "id": "nat-bab807ac",
   "portion": "national",
   "q": "A grantor hands a signed deed to an escrow agent with instructions to deliver on payment. The grantor dies before payment. The deed:",
+  "sub": "national/transfer|Closing & prorations",
+  "subtopic": "Closing & prorations",
   "topic": "national/transfer"
  },
  {
@@ -2621,6 +2947,8 @@
   "id": "nat-9eb1c726",
   "portion": "national",
   "q": "A title commitment lists an unreleased mortgage from 1978 as an exception. To convey marketable title the seller must:",
+  "sub": "national/transfer|Title evidence & clearing defects",
+  "subtopic": "Title evidence & clearing defects",
   "topic": "national/transfer"
  },
  {
@@ -2637,6 +2965,8 @@
   "id": "nat-9cc968a6",
   "portion": "national",
   "q": "An adverse possessor occupies land for the statutory period but pays no taxes, and the state's statute requires tax payment. The possessor:",
+  "sub": "national/transfer|Adverse possession & involuntary transfer",
+  "subtopic": "Adverse possession & involuntary transfer",
   "topic": "national/transfer"
  },
  {
@@ -2653,6 +2983,8 @@
   "id": "nat-14de8545",
   "portion": "national",
   "q": "A brokerage tells its agents never to quote a commission below 5%, and the firm's competitors independently do the same. The brokerage has:",
+  "sub": "national/practice|Antitrust",
+  "subtopic": "Antitrust",
   "topic": "national/practice"
  },
  {
@@ -2669,6 +3001,8 @@
   "id": "nat-8e96b0ad",
   "portion": "national",
   "q": "A landlord's ad says 'quiet building, ideal for professionals, no children under 12.' The clearest violation involves:",
+  "sub": "national/practice|Practice standards",
+  "subtopic": "Practice standards",
   "topic": "national/practice"
  },
  {
@@ -2685,6 +3019,8 @@
   "id": "nat-ac98caad",
   "portion": "national",
   "q": "A property manager applies a rule requiring all applicants to have income of three times the rent. Statistically it screens out a protected class at a much higher rate. This may be challenged as:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  },
  {
@@ -2701,6 +3037,8 @@
   "id": "nat-7daf0dc2",
   "portion": "national",
   "q": "A broker holds a $10,000 earnest money deposit. Buyer and seller both demand it after a failed closing. The broker should:",
+  "sub": "national/practice|Trust funds & commingling",
+  "subtopic": "Trust funds & commingling",
   "topic": "national/practice"
  },
  {
@@ -2717,6 +3055,8 @@
   "id": "nat-de18bc19",
   "portion": "national",
   "q": "A licensee advertises 'Just sold! Call me to sell yours' with a photo of a property listed and sold by another firm. This is MOST directly:",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
  }
 ]

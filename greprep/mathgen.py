@@ -91,10 +91,13 @@ def _pack(key, q, correct, wrongs, steps, fmt=_money):
     random.shuffle(opts)
     label, concept = TOPICS[key]
     closing = key in ("cash-to-close", "seller-proceeds", "proration-direction")
+    topic = "comp/closing-math" if closing else "national/math"
     return {
         "id": "math:%s:%d" % (key, random.randrange(10 ** 9)),
         "portion": "comprehensive" if closing else "national",
-        "topic": "comp/closing-math" if closing else "national/math",
+        "topic": topic,
+        "subtopic": label,
+        "sub": topic + "|" + label,
         "generator": key,
         "q": q,
         "choices": [fmt(o) for o in opts],
@@ -419,6 +422,7 @@ def proration_direction():
     return {
         "id": "math:proration-direction:%d" % random.randrange(10 ** 9),
         "portion": "comprehensive", "topic": "comp/closing-math",
+        "subtopic": label, "sub": "comp/closing-math|" + label,
         "generator": "proration-direction", "q": q, "choices": opts,
         "answer": opts.index(correct), "concept": concept,
         "explain": "Correct answer: %s. %s" % (correct, concept),

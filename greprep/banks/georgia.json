@@ -13,6 +13,8 @@
   "id": "geo-72d3ad74",
   "portion": "georgia",
   "q": "To be licensed as a Georgia salesperson an applicant must be at least:",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -29,6 +31,8 @@
   "id": "geo-472088bb",
   "portion": "georgia",
   "q": "The Georgia prelicense course required for a salesperson's license is:",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
   "topic": "georgia/license-law"
  },
  {
@@ -45,6 +49,8 @@
   "id": "geo-c0627056",
   "portion": "georgia",
   "q": "A newly licensed Georgia salesperson must complete a 25-hour postlicense course:",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
   "topic": "georgia/license-law"
  },
  {
@@ -61,6 +67,8 @@
   "id": "geo-56b4785c",
   "portion": "georgia",
   "q": "Active Georgia licensees must complete how much continuing education each four-year renewal period?",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
   "topic": "georgia/license-law"
  },
  {
@@ -77,6 +85,8 @@
   "id": "geo-bbd32933",
   "portion": "georgia",
   "q": "An applicant for a Georgia broker's license must have held an active license for at least:",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -93,6 +103,8 @@
   "id": "geo-f0bfc729",
   "portion": "georgia",
   "q": "There is no experience requirement for which Georgia license?",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -109,6 +121,8 @@
   "id": "geo-070796c2",
   "portion": "georgia",
   "q": "The Georgia Real Estate Commission's disciplinary powers include all of the following EXCEPT:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -125,6 +139,8 @@
   "id": "geo-965aa59a",
   "portion": "georgia",
   "q": "A GREC investigation that finds a violation causing no significant public harm is most likely resolved by:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -141,6 +157,8 @@
   "id": "geo-f2e2d756",
   "portion": "georgia",
   "q": "A formal GREC disciplinary hearing is conducted by:",
+  "sub": "georgia/license-law|Investigations & hearings",
+  "subtopic": "Investigations & hearings",
   "topic": "georgia/license-law"
  },
  {
@@ -157,6 +175,8 @@
   "id": "geo-98058cd4",
   "portion": "georgia",
   "q": "Who may initiate a GREC investigation of a licensee?",
+  "sub": "georgia/license-law|Investigations & hearings",
+  "subtopic": "Investigations & hearings",
   "topic": "georgia/license-law"
  },
  {
@@ -173,6 +193,8 @@
   "id": "geo-83485c1c",
   "portion": "georgia",
   "q": "A Georgia licensee selling a property he personally owns must:",
+  "sub": "georgia/license-law|Licensee as principal",
+  "subtopic": "Licensee as principal",
   "topic": "georgia/license-law"
  },
  {
@@ -189,6 +211,8 @@
   "id": "geo-321aa315",
   "portion": "georgia",
   "q": "A licensee whose license is on inactive status:",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -205,6 +229,8 @@
   "id": "geo-51fd47de",
   "portion": "georgia",
   "q": "Which activity requires a Georgia real estate license?",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -221,6 +247,8 @@
   "id": "geo-8f8b3d94",
   "portion": "georgia",
   "q": "A Georgia licensee must notify GREC of a change of address or broker affiliation:",
+  "sub": "georgia/license-law|Licence administration",
+  "subtopic": "Licence administration",
   "topic": "georgia/license-law"
  },
  {
@@ -237,6 +265,8 @@
   "id": "geo-4f67e40c",
   "portion": "georgia",
   "q": "A salesperson's license in Georgia is held by:",
+  "sub": "georgia/license-law|Broker supervision & the firm",
+  "subtopic": "Broker supervision & the firm",
   "topic": "georgia/license-law"
  },
  {
@@ -253,6 +283,8 @@
   "id": "geo-4a0902bb",
   "portion": "georgia",
   "q": "The qualifying broker of a real estate firm is responsible for:",
+  "sub": "georgia/license-law|Broker supervision & the firm",
+  "subtopic": "Broker supervision & the firm",
   "topic": "georgia/license-law"
  },
  {
@@ -269,6 +301,8 @@
   "id": "geo-fdba3b6d",
   "portion": "georgia",
   "q": "Georgia advertising rules require that a licensee's advertising:",
+  "sub": "georgia/license-law|Broker supervision & the firm",
+  "subtopic": "Broker supervision & the firm",
   "topic": "georgia/license-law"
  },
  {
@@ -285,6 +319,8 @@
   "id": "geo-3305ff44",
   "portion": "georgia",
   "q": "A licensee convicted of a felony after licensure must:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -301,6 +337,8 @@
   "id": "geo-c0b31065",
   "portion": "georgia",
   "q": "Under Georgia law, a net listing is:",
+  "sub": "georgia/license-law|Licence administration",
+  "subtopic": "Licence administration",
   "topic": "georgia/license-law"
  },
  {
@@ -317,6 +355,8 @@
   "id": "geo-339a3d36",
   "portion": "georgia",
   "q": "The Georgia Real Estate Commission's members are:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -333,6 +373,8 @@
   "id": "geo-1162a3ff",
   "portion": "georgia",
   "q": "A Georgia broker's trust account must be:",
+  "sub": "georgia/trust-accounts|Opening & registering the account",
+  "subtopic": "Opening & registering the account",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -349,6 +391,8 @@
   "id": "geo-0aa08fbc",
   "portion": "georgia",
   "q": "A Georgia broker should open the trust account under:",
+  "sub": "georgia/trust-accounts|Opening & registering the account",
+  "subtopic": "Opening & registering the account",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -365,6 +409,8 @@
   "id": "geo-f298f548",
   "portion": "georgia",
   "q": "Georgia law requires a broker to deposit trust funds:",
+  "sub": "georgia/trust-accounts|Deposit timing",
+  "subtopic": "Deposit timing",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -381,6 +427,8 @@
   "id": "geo-84751b3a",
   "portion": "georgia",
   "q": "A broker who deposits earnest money into the firm's operating account has committed:",
+  "sub": "georgia/trust-accounts|Deposit timing",
+  "subtopic": "Deposit timing",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -397,6 +445,8 @@
   "id": "geo-0ef45ddf",
   "portion": "georgia",
   "q": "How many trust accounts may a Georgia broker maintain?",
+  "sub": "georgia/trust-accounts|Opening & registering the account",
+  "subtopic": "Opening & registering the account",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -413,6 +463,8 @@
   "id": "geo-7b4bf9f8",
   "portion": "georgia",
   "q": "The Georgia Real Estate Commission's authority over a broker's trust account includes:",
+  "sub": "georgia/trust-accounts|Audits & reconciliation",
+  "subtopic": "Audits & reconciliation",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -429,6 +481,8 @@
   "id": "geo-059d3763",
   "portion": "georgia",
   "q": "Which of these is NOT trust money that must go into the trust account?",
+  "sub": "georgia/trust-accounts|What counts as trust money",
+  "subtopic": "What counts as trust money",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -445,6 +499,8 @@
   "id": "geo-bbcc573a",
   "portion": "georgia",
   "q": "A broker must notify the Commission in writing when:",
+  "sub": "georgia/trust-accounts|Opening & registering the account",
+  "subtopic": "Opening & registering the account",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -461,6 +517,8 @@
   "id": "geo-167a6da3",
   "portion": "georgia",
   "q": "FDIC 'pass-through' coverage on a broker's trust account means:",
+  "sub": "georgia/trust-accounts|FDIC coverage",
+  "subtopic": "FDIC coverage",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -477,6 +535,8 @@
   "id": "geo-a6ab9dae",
   "portion": "georgia",
   "q": "An affiliated licensee permitted to hold a trust account for personally owned rentals must:",
+  "sub": "georgia/trust-accounts|Audits & reconciliation",
+  "subtopic": "Audits & reconciliation",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -493,6 +553,8 @@
   "id": "geo-e8f74763",
   "portion": "georgia",
   "q": "Under BRRETA, an agency relationship in Georgia is created by:",
+  "sub": "georgia/brreta|Creating the engagement",
+  "subtopic": "Creating the engagement",
   "topic": "georgia/brreta"
  },
  {
@@ -509,6 +571,8 @@
   "id": "geo-52c8c0e7",
   "portion": "georgia",
   "q": "Under BRRETA, does paying a broker's commission by itself create an agency relationship?",
+  "sub": "georgia/brreta|Creating the engagement",
+  "subtopic": "Creating the engagement",
   "topic": "georgia/brreta"
  },
  {
@@ -525,6 +589,8 @@
   "id": "geo-baee4117",
   "portion": "georgia",
   "q": "Under BRRETA, a person NOT represented by a broker but for whom the broker performs ministerial acts is a:",
+  "sub": "georgia/brreta|Client vs. customer",
+  "subtopic": "Client vs. customer",
   "topic": "georgia/brreta"
  },
  {
@@ -541,6 +607,8 @@
   "id": "geo-46ec3b54",
   "portion": "georgia",
   "q": "A significant difference between BRRETA and traditional common-law agency is that under BRRETA a broker:",
+  "sub": "georgia/brreta|Scope of duties under BRRETA",
+  "subtopic": "Scope of duties under BRRETA",
   "topic": "georgia/brreta"
  },
  {
@@ -557,6 +625,8 @@
   "id": "geo-79ff4d97",
   "portion": "georgia",
   "q": "BRRETA requires a broker, before or at the time of entering a brokerage engagement, to advise the prospective client of all of the following EXCEPT:",
+  "sub": "georgia/brreta|Required disclosures",
+  "subtopic": "Required disclosures",
   "topic": "georgia/brreta"
  },
  {
@@ -573,6 +643,8 @@
   "id": "geo-09ddd332",
   "portion": "georgia",
   "q": "Under BRRETA, dual agency is:",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
   "topic": "georgia/brreta"
  },
  {
@@ -589,6 +661,8 @@
   "id": "geo-aa6e7675",
   "portion": "georgia",
   "q": "A required element of a valid Georgia dual agency consent is a statement that:",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
   "topic": "georgia/brreta"
  },
  {
@@ -605,6 +679,8 @@
   "id": "geo-beaf1733",
   "portion": "georgia",
   "q": "Two licensees of the same Georgia firm represent the buyer and the seller in one transaction. This is:",
+  "sub": "georgia/brreta|Designated agency",
+  "subtopic": "Designated agency",
   "topic": "georgia/brreta"
  },
  {
@@ -621,6 +697,8 @@
   "id": "geo-574495cc",
   "portion": "georgia",
   "q": "A designated agent under BRRETA may share a client's confidential information with:",
+  "sub": "georgia/brreta|Designated agency",
+  "subtopic": "Designated agency",
   "topic": "georgia/brreta"
  },
  {
@@ -637,6 +715,8 @@
   "id": "geo-20064531",
   "portion": "georgia",
   "q": "A dual agent must disclose to both parties:",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
   "topic": "georgia/brreta"
  },
  {
@@ -653,6 +733,8 @@
   "id": "geo-c12a2b38",
   "portion": "georgia",
   "q": "A brokerage engagement under BRRETA terminates upon:",
+  "sub": "georgia/brreta|Engagement duration & termination",
+  "subtopic": "Engagement duration & termination",
   "topic": "georgia/brreta"
  },
  {
@@ -669,6 +751,8 @@
   "id": "geo-19d6ea04",
   "portion": "georgia",
   "q": "Under BRRETA, when must a licensee discuss agency status with a prospect?",
+  "sub": "georgia/brreta|Creating the engagement",
+  "subtopic": "Creating the engagement",
   "topic": "georgia/brreta"
  },
  {
@@ -685,6 +769,8 @@
   "id": "geo-30eea4d1",
   "portion": "georgia",
   "q": "A Georgia broker representing the seller shows a home to an unrepresented buyer. The broker owes that buyer:",
+  "sub": "georgia/brreta|Scope of duties under BRRETA",
+  "subtopic": "Scope of duties under BRRETA",
   "topic": "georgia/brreta"
  },
  {
@@ -701,6 +787,8 @@
   "id": "geo-2053fa40",
   "portion": "georgia",
   "q": "Under BRRETA, the duties a broker owes a client are:",
+  "sub": "georgia/brreta|Scope of duties under BRRETA",
+  "subtopic": "Scope of duties under BRRETA",
   "topic": "georgia/brreta"
  },
  {
@@ -717,6 +805,8 @@
   "id": "geo-1f5e67d3",
   "portion": "georgia",
   "q": "The main problem BRRETA was enacted to solve was:",
+  "sub": "georgia/brreta|Scope of duties under BRRETA",
+  "subtopic": "Scope of duties under BRRETA",
   "topic": "georgia/brreta"
  },
  {
@@ -733,6 +823,8 @@
   "id": "geo-de981917",
   "portion": "georgia",
   "q": "In Georgia, a real estate sales contract becomes binding when:",
+  "sub": "georgia/contracts|Binding agreement date",
+  "subtopic": "Binding agreement date",
   "topic": "georgia/contracts"
  },
  {
@@ -749,6 +841,8 @@
   "id": "geo-6e4eee0f",
   "portion": "georgia",
   "q": "A Georgia real estate sales contract must contain a legal description sufficient to:",
+  "sub": "georgia/contracts|Georgia contract terms",
+  "subtopic": "Georgia contract terms",
   "topic": "georgia/contracts"
  },
  {
@@ -765,6 +859,8 @@
   "id": "geo-0ac85fcb",
   "portion": "georgia",
   "q": "Under Georgia law, who may draft a real estate sales contract?",
+  "sub": "georgia/contracts|Drafting limits & special stipulations",
+  "subtopic": "Drafting limits & special stipulations",
   "topic": "georgia/contracts"
  },
  {
@@ -781,6 +877,8 @@
   "id": "geo-192e1d21",
   "portion": "georgia",
   "q": "A special stipulation in a Georgia contract that conflicts with the preprinted text generally:",
+  "sub": "georgia/contracts|Drafting limits & special stipulations",
+  "subtopic": "Drafting limits & special stipulations",
   "topic": "georgia/contracts"
  },
  {
@@ -797,6 +895,8 @@
   "id": "geo-173a374e",
   "portion": "georgia",
   "q": "The Georgia contract term giving a buyer a set number of days to inspect and terminate is commonly the:",
+  "sub": "georgia/contracts|Due diligence period",
+  "subtopic": "Due diligence period",
   "topic": "georgia/contracts"
  },
  {
@@ -813,6 +913,8 @@
   "id": "geo-ec8637aa",
   "portion": "georgia",
   "q": "If a Georgia buyer defaults and the contract provides for liquidated damages, the seller typically:",
+  "sub": "georgia/contracts|Georgia contract terms",
+  "subtopic": "Georgia contract terms",
   "topic": "georgia/contracts"
  },
  {
@@ -829,6 +931,8 @@
   "id": "geo-cd17b130",
   "portion": "georgia",
   "q": "A Georgia listing agreement must:",
+  "sub": "georgia/contracts|Listing agreement rules",
+  "subtopic": "Listing agreement rules",
   "topic": "georgia/contracts"
  },
  {
@@ -845,6 +949,8 @@
   "id": "geo-e6129ce9",
   "portion": "georgia",
   "q": "A Georgia brokerage engagement with no definite expiration date is:",
+  "sub": "georgia/contracts|Listing agreement rules",
+  "subtopic": "Listing agreement rules",
   "topic": "georgia/contracts"
  },
  {
@@ -861,6 +967,8 @@
   "id": "geo-c989f45c",
   "portion": "georgia",
   "q": "In Georgia, an offer may be withdrawn by the buyer:",
+  "sub": "georgia/contracts|Offers & counteroffers",
+  "subtopic": "Offers & counteroffers",
   "topic": "georgia/contracts"
  },
  {
@@ -877,6 +985,8 @@
   "id": "geo-dffb5011",
   "portion": "georgia",
   "q": "A 'time is of the essence' provision in a Georgia contract means:",
+  "sub": "georgia/contracts|Georgia contract terms",
+  "subtopic": "Georgia contract terms",
   "topic": "georgia/contracts"
  },
  {
@@ -893,6 +1003,8 @@
   "id": "geo-4c4a95f8",
   "portion": "georgia",
   "q": "If a Georgia seller accepts an offer but changes the closing date before signing, the result is:",
+  "sub": "georgia/contracts|Offers & counteroffers",
+  "subtopic": "Offers & counteroffers",
   "topic": "georgia/contracts"
  },
  {
@@ -909,6 +1021,8 @@
   "id": "geo-da1d82c6",
   "portion": "georgia",
   "q": "A contingency requiring the buyer to sell an existing home is usually paired with a:",
+  "sub": "georgia/contracts|Georgia contract terms",
+  "subtopic": "Georgia contract terms",
   "topic": "georgia/contracts"
  },
  {
@@ -925,6 +1039,8 @@
   "id": "geo-f2f4db98",
   "portion": "georgia",
   "q": "Georgia law generally does NOT require disclosure that a property was the site of:",
+  "sub": "georgia/disclosures|Stigmatized property",
+  "subtopic": "Stigmatized property",
   "topic": "georgia/disclosures"
  },
  {
@@ -941,6 +1057,8 @@
   "id": "geo-69f3f5e3",
   "portion": "georgia",
   "q": "A Georgia licensee who knows the basement floods but says nothing has:",
+  "sub": "georgia/disclosures|Adverse material facts",
+  "subtopic": "Adverse material facts",
   "topic": "georgia/disclosures"
  },
  {
@@ -957,6 +1075,8 @@
   "id": "geo-3837ab1a",
   "portion": "georgia",
   "q": "Under BRRETA, does a Georgia broker have a duty to independently inspect the property for defects?",
+  "sub": "georgia/disclosures|Adverse material facts",
+  "subtopic": "Adverse material facts",
   "topic": "georgia/disclosures"
  },
  {
@@ -973,6 +1093,8 @@
   "id": "geo-47806543",
   "portion": "georgia",
   "q": "The federal lead-based paint disclosure applies in Georgia to homes built before:",
+  "sub": "georgia/disclosures|Specific required disclosures",
+  "subtopic": "Specific required disclosures",
   "topic": "georgia/disclosures"
  },
  {
@@ -989,6 +1111,8 @@
   "id": "geo-beeb6434",
   "portion": "georgia",
   "q": "Georgia's Property Disclosure Statement is completed by the:",
+  "sub": "georgia/disclosures|Who discloses what",
+  "subtopic": "Who discloses what",
   "topic": "georgia/disclosures"
  },
  {
@@ -1005,6 +1129,8 @@
   "id": "geo-5e658fe9",
   "portion": "georgia",
   "q": "A Georgia licensee learns the seller's disclosure statement contains a false answer about the roof. The licensee must:",
+  "sub": "georgia/disclosures|Adverse material facts",
+  "subtopic": "Adverse material facts",
   "topic": "georgia/disclosures"
  },
  {
@@ -1021,6 +1147,8 @@
   "id": "geo-7e79de81",
   "portion": "georgia",
   "q": "Disclosure that a former occupant had HIV/AIDS is:",
+  "sub": "georgia/disclosures|Specific required disclosures",
+  "subtopic": "Specific required disclosures",
   "topic": "georgia/disclosures"
  },
  {
@@ -1037,6 +1165,8 @@
   "id": "geo-04baa8d4",
   "portion": "georgia",
   "q": "A Georgia seller must disclose the presence of a known:",
+  "sub": "georgia/disclosures|Adverse material facts",
+  "subtopic": "Adverse material facts",
   "topic": "georgia/disclosures"
  },
  {
@@ -1053,6 +1183,8 @@
   "id": "geo-7363d396",
   "portion": "georgia",
   "q": "Georgia requires a licensee acting as a principal in a transaction to disclose their licensed status:",
+  "sub": "georgia/disclosures|Who discloses what",
+  "subtopic": "Who discloses what",
   "topic": "georgia/disclosures"
  },
  {
@@ -1069,6 +1201,8 @@
   "id": "geo-e1078a45",
   "portion": "georgia",
   "q": "If a Georgia property is in a flood plain and the seller knows it, the fact is:",
+  "sub": "georgia/disclosures|Specific required disclosures",
+  "subtopic": "Specific required disclosures",
   "topic": "georgia/disclosures"
  },
  {
@@ -1085,6 +1219,8 @@
   "id": "geo-9647f0a2",
   "portion": "georgia",
   "q": "Georgia real estate closings must be conducted under the supervision of:",
+  "sub": "georgia/procedures|Attorney closings",
+  "subtopic": "Attorney closings",
   "topic": "georgia/procedures"
  },
  {
@@ -1101,6 +1237,8 @@
   "id": "geo-eec46c41",
   "portion": "georgia",
   "q": "The Georgia real estate transfer tax is:",
+  "sub": "georgia/procedures|Transfer tax & recording",
+  "subtopic": "Transfer tax & recording",
   "topic": "georgia/procedures"
  },
  {
@@ -1117,6 +1255,8 @@
   "id": "geo-6904823f",
   "portion": "georgia",
   "q": "The Georgia instrument that secures a loan by conveying title to the lender is a:",
+  "sub": "georgia/procedures|Security deeds & foreclosure",
+  "subtopic": "Security deeds & foreclosure",
   "topic": "georgia/procedures"
  },
  {
@@ -1133,6 +1273,8 @@
   "id": "geo-006b47ea",
   "portion": "georgia",
   "q": "Foreclosure in Georgia is typically:",
+  "sub": "georgia/procedures|Security deeds & foreclosure",
+  "subtopic": "Security deeds & foreclosure",
   "topic": "georgia/procedures"
  },
  {
@@ -1149,6 +1291,8 @@
   "id": "geo-b42eb237",
   "portion": "georgia",
   "q": "The period for acquiring Georgia title by adverse possession without color of title is:",
+  "sub": "georgia/procedures|Georgia title & ownership rules",
+  "subtopic": "Georgia title & ownership rules",
   "topic": "georgia/procedures"
  },
  {
@@ -1165,6 +1309,8 @@
   "id": "geo-632572db",
   "portion": "georgia",
   "q": "Georgia does NOT recognize which form of co-ownership?",
+  "sub": "georgia/procedures|Georgia title & ownership rules",
+  "subtopic": "Georgia title & ownership rules",
   "topic": "georgia/procedures"
  },
  {
@@ -1181,6 +1327,8 @@
   "id": "geo-a4ada124",
   "portion": "georgia",
   "q": "Recording a deed in Georgia is done in the:",
+  "sub": "georgia/procedures|Transfer tax & recording",
+  "subtopic": "Transfer tax & recording",
   "topic": "georgia/procedures"
  },
  {
@@ -1197,6 +1345,8 @@
   "id": "geo-ad2c8a8e",
   "portion": "georgia",
   "q": "In a Georgia transaction the closing attorney generally represents:",
+  "sub": "georgia/procedures|Attorney closings",
+  "subtopic": "Attorney closings",
   "topic": "georgia/procedures"
  },
  {
@@ -1213,6 +1363,8 @@
   "id": "geo-7ae74454",
   "portion": "georgia",
   "q": "Georgia property taxes become a lien on real property:",
+  "sub": "georgia/procedures|Taxes & prorations",
+  "subtopic": "Taxes & prorations",
   "topic": "georgia/procedures"
  },
  {
@@ -1229,6 +1381,8 @@
   "id": "geo-cdaf025e",
   "portion": "georgia",
   "q": "The document a Georgia buyer receives showing final loan terms and closing figures is the:",
+  "sub": "georgia/procedures|Transfer tax & recording",
+  "subtopic": "Transfer tax & recording",
   "topic": "georgia/procedures"
  },
  {
@@ -1245,6 +1399,8 @@
   "id": "geo-b9eaa39f",
   "portion": "georgia",
   "q": "A Georgia landlord refuses to rent to a family with two young children. This violates:",
+  "sub": "georgia/fair-housing|Protected classes",
+  "subtopic": "Protected classes",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1261,6 +1417,8 @@
   "id": "geo-16882484",
   "portion": "georgia",
   "q": "A Georgia licensee tells a buyer 'you'd be more comfortable in a neighborhood on the south side.' This is:",
+  "sub": "georgia/fair-housing|Steering & blockbusting",
+  "subtopic": "Steering & blockbusting",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1277,6 +1435,8 @@
   "id": "geo-fa986fcf",
   "portion": "georgia",
   "q": "A licensee tells owners that property values will drop because a protected group is moving in, hoping to get listings. This is:",
+  "sub": "georgia/fair-housing|Steering & blockbusting",
+  "subtopic": "Steering & blockbusting",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1293,6 +1453,8 @@
   "id": "geo-42db70a4",
   "portion": "georgia",
   "q": "A tenant with a disability asks to install a grab bar. Under fair housing law the landlord must:",
+  "sub": "georgia/fair-housing|Accommodations & modifications",
+  "subtopic": "Accommodations & modifications",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1309,6 +1471,8 @@
   "id": "geo-0379ccf7",
   "portion": "georgia",
   "q": "Which is NOT a protected class under the federal Fair Housing Act?",
+  "sub": "georgia/fair-housing|Protected classes",
+  "subtopic": "Protected classes",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1325,6 +1489,8 @@
   "id": "geo-45081387",
   "portion": "georgia",
   "q": "A complaint of housing discrimination in Georgia may be filed with:",
+  "sub": "georgia/fair-housing|Unlawful instructions & enforcement",
+  "subtopic": "Unlawful instructions & enforcement",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1341,6 +1507,8 @@
   "id": "geo-f039cc11",
   "portion": "georgia",
   "q": "A seller instructs a Georgia licensee to reject offers from a particular ethnic group. The licensee should:",
+  "sub": "georgia/fair-housing|Unlawful instructions & enforcement",
+  "subtopic": "Unlawful instructions & enforcement",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1357,6 +1525,8 @@
   "id": "geo-89d9e927",
   "portion": "georgia",
   "q": "An advertisement for a Georgia rental reading 'no Section 8' is:",
+  "sub": "georgia/fair-housing|Protected classes",
+  "subtopic": "Protected classes",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1373,6 +1543,8 @@
   "id": "geo-d0f34702",
   "portion": "georgia",
   "q": "A Georgia salesperson licensed 14 months ago never took the postlicense course. The licensee's status is that the license:",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
   "topic": "georgia/license-law"
  },
  {
@@ -1389,6 +1561,8 @@
   "id": "geo-bd43e39c",
   "portion": "georgia",
   "q": "A consumer loses $18,000 because of a Georgia licensee's mishandling of funds and files a GREC complaint. The most GREC itself can do is:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -1405,6 +1579,8 @@
   "id": "geo-b5b7dcf6",
   "portion": "georgia",
   "q": "An applicant held an active Florida broker's license for four of the last five years and now applies for a Georgia broker's license. Regarding experience, the applicant:",
+  "sub": "georgia/license-law|Licensure & experience",
+  "subtopic": "Licensure & experience",
   "topic": "georgia/license-law"
  },
  {
@@ -1421,6 +1597,8 @@
   "id": "geo-48593a94",
   "portion": "georgia",
   "q": "A Georgia licensee owns a rental duplex personally and advertises it for lease. The licensee:",
+  "sub": "georgia/license-law|Licensee as principal",
+  "subtopic": "Licensee as principal",
   "topic": "georgia/license-law"
  },
  {
@@ -1437,6 +1615,8 @@
   "id": "geo-3996bce3",
   "portion": "georgia",
   "q": "An ALJ rules against a Georgia licensee. The licensee disagrees and does nothing for 35 days. The result is:",
+  "sub": "georgia/license-law|Investigations & hearings",
+  "subtopic": "Investigations & hearings",
   "topic": "georgia/license-law"
  },
  {
@@ -1453,6 +1633,8 @@
   "id": "geo-9534fcbc",
   "portion": "georgia",
   "q": "A qualifying broker discovers an affiliated salesperson has been advertising without naming the firm. The broker's exposure is:",
+  "sub": "georgia/license-law|Broker supervision & the firm",
+  "subtopic": "Broker supervision & the firm",
   "topic": "georgia/license-law"
  },
  {
@@ -1469,6 +1651,8 @@
   "id": "geo-a3d94b59",
   "portion": "georgia",
   "q": "A licensee is convicted of a felony unrelated to real estate and does not report it, believing renewal is two years away. The licensee has:",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
   "topic": "georgia/license-law"
  },
  {
@@ -1485,6 +1669,8 @@
   "id": "geo-9ba56f68",
   "portion": "georgia",
   "q": "A Georgia licensee with license number above 100,000 completed 24 hours of CE in the first year of a four-year renewal period and none after. At renewal the licensee:",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
   "topic": "georgia/license-law"
  },
  {
@@ -1501,6 +1687,8 @@
   "id": "geo-84542fba",
   "portion": "georgia",
   "q": "A Georgia buyer works with a licensee for weeks, and the licensee gives advice on price and negotiation. No written agreement is ever signed. Under BRRETA the licensee:",
+  "sub": "georgia/brreta|Creating the engagement",
+  "subtopic": "Creating the engagement",
   "topic": "georgia/brreta"
  },
  {
@@ -1517,6 +1705,8 @@
   "id": "geo-1a3c41df",
   "portion": "georgia",
   "q": "A Georgia seller asks her broker to keep confidential that she will accept $20,000 less. The broker later serves as a DUAL agent for both sides. The broker must:",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
   "topic": "georgia/brreta"
  },
  {
@@ -1533,6 +1723,8 @@
   "id": "geo-fa8caffa",
   "portion": "georgia",
   "q": "A Georgia broker assigns one licensee to the buyer and another to the seller in the same deal, with written consent. The BROKER personally:",
+  "sub": "georgia/brreta|Designated agency",
+  "subtopic": "Designated agency",
   "topic": "georgia/brreta"
  },
  {
@@ -1549,6 +1741,8 @@
   "id": "geo-898fed27",
   "portion": "georgia",
   "q": "In a Georgia transaction the seller pays the buyer-broker's commission out of closing proceeds. This means the buyer-broker:",
+  "sub": "georgia/brreta|Creating the engagement",
+  "subtopic": "Creating the engagement",
   "topic": "georgia/brreta"
  },
  {
@@ -1565,6 +1759,8 @@
   "id": "geo-eeeacbae",
   "portion": "georgia",
   "q": "Before entering a brokerage engagement, a Georgia broker who already represents three other buyers looking in the same neighborhood must:",
+  "sub": "georgia/brreta|Required disclosures",
+  "subtopic": "Required disclosures",
   "topic": "georgia/brreta"
  },
  {
@@ -1581,6 +1777,8 @@
   "id": "geo-2fac4f13",
   "portion": "georgia",
   "q": "A Georgia client sues a broker for breach of fiduciary duty, citing common-law agency standards. Under BRRETA the broker's best position is that:",
+  "sub": "georgia/brreta|Scope of duties under BRRETA",
+  "subtopic": "Scope of duties under BRRETA",
   "topic": "georgia/brreta"
  },
  {
@@ -1597,6 +1795,8 @@
   "id": "geo-47fed133",
   "portion": "georgia",
   "q": "A brokerage engagement in Georgia is signed with no expiration date. This is:",
+  "sub": "georgia/brreta|Engagement duration & termination",
+  "subtopic": "Engagement duration & termination",
   "topic": "georgia/brreta"
  },
  {
@@ -1613,6 +1813,8 @@
   "id": "geo-92661673",
   "portion": "georgia",
   "q": "A Georgia buyer asks the broker to hold the earnest money check uncashed until the seller accepts. The broker may:",
+  "sub": "georgia/trust-accounts|Deposit timing",
+  "subtopic": "Deposit timing",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -1629,6 +1831,8 @@
   "id": "geo-2f6be5e6",
   "portion": "georgia",
   "q": "A Georgia broker opened the firm's trust account using her Social Security Number. The IRS later levies it for her personal tax debt. The InfoBase's guidance is that the broker should have:",
+  "sub": "georgia/trust-accounts|Opening & registering the account",
+  "subtopic": "Opening & registering the account",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -1645,6 +1849,8 @@
   "id": "geo-052c454d",
   "portion": "georgia",
   "q": "A client already has $250,000 on deposit at the same bank holding the broker's trust account, and gives the broker a $10,000 earnest money deposit. If the bank fails, the broker:",
+  "sub": "georgia/trust-accounts|FDIC coverage",
+  "subtopic": "FDIC coverage",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -1661,6 +1867,8 @@
   "id": "geo-68a1c025",
   "portion": "georgia",
   "q": "A Georgia broker lets an affiliated licensee maintain a trust account for the licensee's own rental properties. The broker must:",
+  "sub": "georgia/trust-accounts|Audits & reconciliation",
+  "subtopic": "Audits & reconciliation",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -1677,6 +1885,8 @@
   "id": "geo-f206c14f",
   "portion": "georgia",
   "q": "GREC staff asks a Georgia broker to produce trust account records. The broker has a CPA's compliance certification on file. The broker may:",
+  "sub": "georgia/trust-accounts|Audits & reconciliation",
+  "subtopic": "Audits & reconciliation",
   "topic": "georgia/trust-accounts"
  },
  {
@@ -1693,6 +1903,8 @@
   "id": "geo-1952d812",
   "portion": "georgia",
   "q": "A Georgia seller signs a buyer's offer on Tuesday but the agent does not notify the buyer until Thursday. The binding agreement date is:",
+  "sub": "georgia/contracts|Binding agreement date",
+  "subtopic": "Binding agreement date",
   "topic": "georgia/contracts"
  },
  {
@@ -1709,6 +1921,8 @@
   "id": "geo-4302c25c",
   "portion": "georgia",
   "q": "A Georgia buyer terminates during the due diligence period without stating a reason. Under a standard form the buyer:",
+  "sub": "georgia/contracts|Due diligence period",
+  "subtopic": "Due diligence period",
   "topic": "georgia/contracts"
  },
  {
@@ -1725,6 +1939,8 @@
   "id": "geo-b20b6bb2",
   "portion": "georgia",
   "q": "A Georgia licensee adds a handwritten special stipulation that conflicts with the preprinted form language. A dispute arises. A court will MOST likely:",
+  "sub": "georgia/contracts|Drafting limits & special stipulations",
+  "subtopic": "Drafting limits & special stipulations",
   "topic": "georgia/contracts"
  },
  {
@@ -1741,6 +1957,8 @@
   "id": "geo-932dc2a7",
   "portion": "georgia",
   "q": "A Georgia licensee, asked by a buyer to add a complex owner-financing clause, should:",
+  "sub": "georgia/contracts|Drafting limits & special stipulations",
+  "subtopic": "Drafting limits & special stipulations",
   "topic": "georgia/contracts"
  },
  {
@@ -1757,6 +1975,8 @@
   "id": "geo-596b119f",
   "portion": "georgia",
   "q": "A Georgia listing agreement provides that it automatically renews monthly unless cancelled. This provision is:",
+  "sub": "georgia/contracts|Listing agreement rules",
+  "subtopic": "Listing agreement rules",
   "topic": "georgia/contracts"
  },
  {
@@ -1773,6 +1993,8 @@
   "id": "geo-6a1e3c73",
   "portion": "georgia",
   "q": "A Georgia seller knows a murder occurred in the home three years ago. The buyer does not ask. The seller and licensee:",
+  "sub": "georgia/disclosures|Stigmatized property",
+  "subtopic": "Stigmatized property",
   "topic": "georgia/disclosures"
  },
  {
@@ -1789,6 +2011,8 @@
   "id": "geo-36d469e0",
   "portion": "georgia",
   "q": "A Georgia buyer asks the listing agent directly whether anyone died in the house. The agent knows someone did. The safest response is:",
+  "sub": "georgia/disclosures|Stigmatized property",
+  "subtopic": "Stigmatized property",
   "topic": "georgia/disclosures"
  },
  {
@@ -1805,6 +2029,8 @@
   "id": "geo-a7bdd3e9",
   "portion": "georgia",
   "q": "Under BRRETA a Georgia broker's disclosure duty regarding property condition extends to:",
+  "sub": "georgia/disclosures|Adverse material facts",
+  "subtopic": "Adverse material facts",
   "topic": "georgia/disclosures"
  },
  {
@@ -1821,6 +2047,8 @@
   "id": "geo-eca90b42",
   "portion": "georgia",
   "q": "At a Georgia closing the buyer asks the closing attorney whether the contract's repair clause protects them. The attorney typically represents the lender. The licensee should:",
+  "sub": "georgia/procedures|Attorney closings",
+  "subtopic": "Attorney closings",
   "topic": "georgia/procedures"
  },
  {
@@ -1837,6 +2065,8 @@
   "id": "geo-4bfa10df",
   "portion": "georgia",
   "q": "A Georgia property sells on March 10. County taxes for the year became a lien on January 1 and are unpaid. At closing the taxes are:",
+  "sub": "georgia/procedures|Taxes & prorations",
+  "subtopic": "Taxes & prorations",
   "topic": "georgia/procedures"
  },
  {
@@ -1853,6 +2083,8 @@
   "id": "geo-8cb2d30e",
   "portion": "georgia",
   "q": "A Georgia borrower defaults. The lender holds a security deed with a power of sale. Foreclosure will typically proceed by:",
+  "sub": "georgia/procedures|Security deeds & foreclosure",
+  "subtopic": "Security deeds & foreclosure",
   "topic": "georgia/procedures"
  },
  {
@@ -1869,6 +2101,8 @@
   "id": "geo-63c83fa8",
   "portion": "georgia",
   "q": "A married Georgia couple wants title with automatic survivorship. The correct advice is that Georgia:",
+  "sub": "georgia/procedures|Georgia title & ownership rules",
+  "subtopic": "Georgia title & ownership rules",
   "topic": "georgia/procedures"
  },
  {
@@ -1885,6 +2119,8 @@
   "id": "geo-4f67996c",
   "portion": "georgia",
   "q": "A Georgia parcel has been occupied openly and continuously by a neighbor for 12 years under a defective deed the neighbor believed valid. The neighbor's claim is:",
+  "sub": "georgia/procedures|Georgia title & ownership rules",
+  "subtopic": "Georgia title & ownership rules",
   "topic": "georgia/procedures"
  },
  {
@@ -1901,6 +2137,8 @@
   "id": "geo-f5061434",
   "portion": "georgia",
   "q": "A Georgia seller instructs the listing agent to reject offers from a protected class. The agent refuses; the seller insists. The agent's correct course is:",
+  "sub": "georgia/fair-housing|Unlawful instructions & enforcement",
+  "subtopic": "Unlawful instructions & enforcement",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1917,6 +2155,8 @@
   "id": "geo-62081001",
   "portion": "georgia",
   "q": "A Georgia property manager charges a $300 non-refundable fee to tenants with assistance animals, applied uniformly. This is:",
+  "sub": "georgia/fair-housing|Accommodations & modifications",
+  "subtopic": "Accommodations & modifications",
   "topic": "georgia/fair-housing"
  },
  {
@@ -1933,6 +2173,8 @@
   "id": "geo-21edfab6",
   "portion": "georgia",
   "q": "A licensee provides school ratings and crime statistics only when buyers of a certain background ask. This practice is:",
+  "sub": "georgia/fair-housing|Steering & blockbusting",
+  "subtopic": "Steering & blockbusting",
   "topic": "georgia/fair-housing"
  }
 ]

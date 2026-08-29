@@ -23,7 +23,7 @@ var CLOSING_GENS = Object.keys(DATA.math).filter(function(k){ return DATA.math[k
 function countsOnExam(k){ return !PRACTICE_ONLY[k]; }
 
 /* ------------------------------------------------------------- storage */
-var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, items:{}, generators:{}};
+var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{}, items:{}, generators:{}};
 
 function load(){
   var raw;
@@ -68,6 +68,7 @@ function recordAttempt(d, portion, mode, answers, elapsed, weakSpot){
     s.seen++; if (a.correct) s.correct++;
     bump(d.topics, t, a.correct);
     if (a.qid && a.qid.indexOf('math:') !== 0) bump(d.items, a.qid, a.correct);
+    if (a.sub) bump(d.subs, a.sub, a.correct);
     if (a.generator) bump(d.generators, a.generator, a.correct);
   });
   var att = {
@@ -179,12 +180,43 @@ function mathPick(n, kinds){
   return out;
 }
 
+function allRows(){
+  var out = [];
+  ['national','georgia','comprehensive'].forEach(function(p){
+    out = out.concat(DATA.banks[p] || []);
+  });
+  return out;
+}
+
 function select(portion, count, opts){
   opts = opts || {};
   var d = opts.progress || load();
   var missed = missedSet(d);
   var diff = opts.difficulty || 'harder';
   if (DIFFICULTIES.indexOf(diff) < 0) diff = 'harder';
+
+  if (opts.sub){
+    // one "little topic": its own questions, then generated math for a math
+    // subtopic, then the rest of the parent topic so the drill is full length
+    var rows = allRows();
+    var own = shuffle(rows.filter(function(r){ return r.sub === opts.sub; }));
+    var out2 = own.slice(0, count);
+    if (out2.length < count){
+      var gens = Object.keys(DATA.math).filter(function(k){
+        return opts.sub.slice(-(DATA.math[k].label.length + 1)) === '|' + DATA.math[k].label;
+      });
+      if (gens.length) out2 = out2.concat(mathPick(count - out2.length, gens));
+    }
+    if (out2.length < count){
+      var parent = opts.sub.split('|')[0], have = {};
+      out2.forEach(function(r){ have[r.id] = 1; });
+      var rest = shuffle(rows.filter(function(r){
+        return r.topic === parent && !have[r.id];
+      }));
+      out2 = out2.concat(rest.slice(0, count - out2.length));
+    }
+    return out2.slice(0, count);
+  }
 
   if (portion === 'math'){
     var kinds = null;
@@ -308,6 +340,28 @@ function trendSeries(d){
     });
   });
   return s;
+}
+
+function subReport(d, minSeen, limit){
+  minSeen = minSeen || 2;
+  var rows = [];
+  Object.keys(d.subs || {}).forEach(function(key){
+    var rec = d.subs[key];
+    if (rec.seen < minSeen) return;
+    var cut = key.indexOf('|');
+    var topic = key.slice(0, cut), label = key.slice(cut + 1);
+    var t = TOPIC[topic];
+    if (!t) return;
+    rows.push({sub: key, label: label, topic: topic, topic_label: t.label,
+               portion: t.portion, exam_questions: t.exam_questions,
+               counts_on_exam: countsOnExam(topic),
+               seen: rec.seen, correct: rec.correct, pct: rec.correct / rec.seen});
+  });
+  rows.sort(function(a, b){
+    if (a.pct !== b.pct) return a.pct - b.pct;
+    return b.exam_questions - a.exam_questions;
+  });
+  return limit ? rows.slice(0, limit) : rows;
 }
 
 function generatorReport(d){
