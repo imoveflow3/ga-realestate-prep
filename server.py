@@ -72,6 +72,8 @@ def _progress_payload(data):
         "sections": store.section_table(data),
         "headline": store.headline(data),
         "subs": store.sub_report(data, min_seen=2, limit=40),
+        "misses": store.miss_report(data),
+        "miss_counts": store.miss_counts(data),
         "generators": store.generator_report(data),
         "trends": store.trend_series(data),
         "attempts": data["attempts"][-60:],
@@ -214,6 +216,7 @@ class Handler(BaseHTTPRequestHandler):
             correct = (choice == q["answer"])
             with LOCK:
                 sess["answers"][idx] = {
+                    "q": q,
                     "qid": q["id"], "topic": q["topic"], "sub": q.get("sub"),
                     "generator": q.get("generator"),
                     "choice": choice, "correct": correct,
@@ -240,7 +243,8 @@ class Handler(BaseHTTPRequestHandler):
             for i, a in enumerate(sess["answers"]):
                 if a is None:
                     q = sess["questions"][i]
-                    answered.append({"qid": q["id"], "topic": q["topic"],
+                    answered.append({"q": q,
+                                     "qid": q["id"], "topic": q["topic"],
                                      "sub": q.get("sub"),
                                      "generator": q.get("generator"),
                                      "choice": None, "correct": False, "seconds": 0.0})
@@ -254,6 +258,16 @@ class Handler(BaseHTTPRequestHandler):
                 payload = _progress_payload(data)
             return self._json({"attempt": attempt, "progress": payload})
 
+        if path == "/api/notebook/forget":
+            qid = body.get("qid")
+            with LOCK:
+                data = store.load()
+                if qid in (data.get("misses") or {}):
+                    del data["misses"][qid]
+                    store.save(data)
+                payload = _progress_payload(data)
+            return self._json({"ok": True, "progress": payload})
+
         if path == "/api/reset":
             if body.get("confirm") != "DELETE":
                 return self._json({"error": "confirmation required"}, 400)
@@ -264,6 +278,7 @@ class Handler(BaseHTTPRequestHandler):
                 data["subs"] = {}
                 data["items"] = {}
                 data["generators"] = {}
+                data["misses"] = {}
                 store.save(data)
             return self._json({"ok": True})
 

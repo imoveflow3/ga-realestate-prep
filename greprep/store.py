@@ -12,7 +12,11 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__
 DATA_FILE = os.path.join(DATA_DIR, "progress.json")
 
 EMPTY = {"version": 1, "profile": {}, "attempts": [],
-         "topics": {}, "subs": {}, "items": {}, "generators": {}}
+         "topics": {}, "subs": {}, "items": {}, "generators": {}, "misses": {}}
+
+# Generated math problems have unique ids, so cap how many of each generator's
+# misses the notebook keeps or it would grow without limit.
+MATH_MISS_CAP = 6
 
 
 def load():
@@ -53,8 +57,40 @@ def _bump(bucket, key, correct):
     return rec
 
 
+def _note_miss(data, a):
+    q = a.get("q")
+    if not q:
+        return
+    misses = data.setdefault("misses", {})
+    prev = misses.get(q["id"])
+    misses[q["id"]] = {
+        "qid": q["id"], "topic": q["topic"], "sub": q.get("sub"),
+        "portion": q.get("portion"), "generator": q.get("generator"),
+        "difficulty": q.get("difficulty", 1),
+        "q": q["q"], "choices": q["choices"], "answer": q["answer"],
+        "chose": a.get("choice"),
+        "concept": q.get("concept", ""), "explain": q.get("explain", ""),
+        "steps": q.get("steps") or [],
+        "at": time.time(),
+        "times": (prev.get("times", 1) + 1) if prev else 1,
+        "cleared": 0,
+    }
+    if q.get("generator"):
+        mine = [k for k, v in misses.items()
+                if v.get("generator") == q["generator"] and not v.get("cleared")]
+        mine.sort(key=lambda k: misses[k]["at"])
+        while len(mine) > MATH_MISS_CAP:
+            del misses[mine.pop(0)]
+
+
+def _clear_miss(data, a):
+    rec = (data.get("misses") or {}).get(a.get("qid"))
+    if rec and not rec.get("cleared"):
+        rec["cleared"] = time.time()
+
+
 def record_attempt(data, portion, mode, answers, elapsed, weak_spot=False):
-    """answers: [{qid, topic, generator, correct, seconds}]"""
+    """answers: [{qid, topic, sub, generator, correct, seconds, q}]"""
     now = time.time()
     correct = sum(1 for a in answers if a.get("correct"))
     per_topic = {}
@@ -73,6 +109,10 @@ def record_attempt(data, portion, mode, answers, elapsed, weak_spot=False):
         gen = a.get("generator")
         if gen:
             _bump(data["generators"], gen, a.get("correct"))
+        if a.get("correct"):
+            _clear_miss(data, a)
+        else:
+            _note_miss(data, a)
     attempt = {
         "id": uuid.uuid4().hex[:12],
         "portion": portion,
@@ -235,6 +275,38 @@ def headline(data):
             "sets": len(data["attempts"]), "answered": answered,
             "days_out": days,
             "passing": st["recent_pct"] is not None and st["recent_pct"] >= 0.75}
+
+
+def miss_report(data, open_only=False):
+    """The notebook: every question you have got wrong, grouped later by topic."""
+    rows = []
+    for rec in (data.get("misses") or {}).values():
+        if open_only and rec.get("cleared"):
+            continue
+        tkey = rec.get("topic")
+        if tkey not in topics.TOPICS:
+            continue
+        portion, label, weight, blurb = topics.TOPICS[tkey]
+        sub = rec.get("sub")
+        row = dict(rec)
+        row.update({"topic_label": label, "portion": portion,
+                    "subtopic": sub.split("|", 1)[1] if sub else None,
+                    "exam_questions": weight,
+                    "counts_on_exam": topics.counts_on_exam(tkey)})
+        rows.append(row)
+    rows.sort(key=lambda r: (bool(r.get("cleared")), -r.get("times", 1),
+                             -r.get("at", 0)))
+    return rows
+
+
+def miss_counts(data):
+    open_n = cleared = 0
+    for rec in (data.get("misses") or {}).values():
+        if rec.get("cleared"):
+            cleared += 1
+        else:
+            open_n += 1
+    return {"open": open_n, "cleared": cleared, "total": open_n + cleared}
 
 
 def sub_report(data, min_seen=2, limit=None):

@@ -22,7 +22,8 @@ function tagFor(portion){
 function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
-var VIEWS = ['dash','study','home','math','weak','quiz','result','plan','setup'];
+var VIEWS = ['dash','study','home','math','notebook','weak','quiz','result','plan','setup'];
+var NB_OPEN_ONLY = true;
 var STUDY_TOPIC = null;
 function show(v){
   VIEWS.forEach(function(x){ var n = $('view-'+x); if (n) n.hidden = (x !== v); });
@@ -33,6 +34,7 @@ function show(v){
   });
   if (v === 'home') renderHome();
   if (v === 'study') renderStudy();
+  if (v === 'notebook') renderNotebook();
   if (v === 'math') renderMath();
   if (v === 'weak') renderWeak();
   if (v === 'dash') renderDash();
@@ -303,7 +305,7 @@ function answer(choice){
   if (correct) QUIZ.correct++;
   QUIZ.answers[QUIZ.i] = {qid:q.id, topic:q.topic, sub:q.sub||null,
                           generator:q.generator||null,
-                          choice:choice, correct:correct,
+                          choice:choice, correct:correct, q:q,
                           seconds:(Date.now()-QUIZ.qStart)/1000};
   var btns = $('qchoices').children;
   for (var k = 0; k < btns.length; k++){
@@ -352,7 +354,7 @@ function finish(){
       var x = q.qs[i];
       answers.push({qid:x.id, topic:x.topic, sub:x.sub||null,
                     generator:x.generator||null,
-                    choice:null, correct:false, seconds:0});
+                    choice:null, correct:false, q:x, seconds:0});
     }
   });
   var att = recordAttempt(D, q.portion, q.mode, answers,
@@ -368,6 +370,21 @@ function renderResult(a){
     '<div style="flex:0 0 auto"><button class="btn" id="againSame">Another quiz</button></div>' +
     '<div style="flex:0 0 auto"><button class="btn ghost" id="againWeak">Drill my weak spots</button></div>' +
     '<div style="flex:0 0 auto"><button class="btn ghost" id="toDash">See dashboard</button></div></div>';
+  if (a.correct < a.count){
+    var nb = el('div', 'card');
+    nb.appendChild(cardHead('Review what you missed', 'notebook'));
+    nb.appendChild(el('p', 'muted',
+      (a.count - a.correct) + ' question' + ((a.count - a.correct) === 1 ? '' : 's') +
+      ' from this quiz went to your notebook, with the correct answer and why.'));
+    var row = el('div', 'row');
+    var d0 = el('div'); d0.style.flex = '0 0 auto';
+    var b0 = el('button', 'btn', 'Open notebook');
+    b0.onclick = function(){ NB_OPEN_ONLY = true; show('notebook'); };
+    d0.appendChild(b0); row.appendChild(d0);
+    nb.appendChild(row);
+    box.appendChild(nb);
+  }
+
   $('againSame').onclick = function(){ startQuiz(LAST || {portion:'national', count:20}); };
   $('againWeak').onclick = function(){
     startQuiz({portion:(LAST&&LAST.portion==='math')?'national':((LAST&&LAST.portion)||'national'),
@@ -406,6 +423,136 @@ function renderResult(a){
         });
     wrap.appendChild(t); card.appendChild(wrap); box.appendChild(card);
   }
+}
+
+/* -------------------------------------------------------------- notebook */
+function nbOption(item, i){
+  var row = el('div', 'nbopt' +
+    (i === item.answer ? ' right' : (i === item.chose ? ' chose' : '')));
+  row.appendChild(el('span', 'k', 'ABCD'[i]));
+  row.appendChild(el('span', null, item.choices[i]));
+  if (i === item.answer) row.appendChild(el('span', 'flag', 'correct'));
+  else if (i === item.chose) row.appendChild(el('span', 'flag', 'you picked'));
+  return row;
+}
+
+function notebookEntry(item){
+  var wrap = el('div', 'nbitem' + (item.cleared ? ' done' : ''));
+
+  var meta = el('div', 'nbmeta');
+  if (item.subtopic) meta.appendChild(el('span', null, item.subtopic));
+  if (item.difficulty === 2) meta.appendChild(el('span', 'tag hard', 'Hard'));
+  if (item.times > 1) meta.appendChild(el('span', null, 'missed ' + item.times + '×'));
+  if (item.cleared) meta.appendChild(el('span', 'tag', 'got it since'));
+  if (item.chose === null) meta.appendChild(el('span', null, 'ran out of time'));
+  wrap.appendChild(meta);
+
+  wrap.appendChild(el('p', 'nbq', item.q));
+
+  var opts = el('div', 'nbopts');
+  item.choices.forEach(function(_, i){ opts.appendChild(nbOption(item, i)); });
+  wrap.appendChild(opts);
+
+  var why = el('div', 'nbwhy');
+  if (item.steps && item.steps.length){
+    why.appendChild(el('div', 'lab', 'How to get there'));
+    var ol = el('ol', 'steps');
+    item.steps.forEach(function(st){ ol.appendChild(el('li', null, st)); });
+    why.appendChild(ol);
+  } else if (item.explain){
+    why.appendChild(el('div', 'lab', 'Why that is the answer'));
+    why.appendChild(richPara(null, item.explain));
+  }
+  if (item.concept){
+    var c = el('div', 'lab');
+    c.textContent = 'Concept: ' + item.concept;
+    why.appendChild(c);
+  }
+  wrap.appendChild(why);
+
+  var acts = el('div', 'nbacts');
+  var study = studyButton(item.topic, 'STUDY THIS');
+  acts.appendChild(study);
+  if (item.sub){
+    var d = el('button', 'btn mini', 'DRILL IT');
+    d.onclick = function(){
+      startQuiz({portion: item.portion, count: 10, sub: item.sub,
+                 timed: false, difficulty: 'harder'});
+    };
+    acts.appendChild(d);
+  } else if (item.generator){
+    var g = el('button', 'btn mini', 'MORE LIKE THIS');
+    g.onclick = function(){
+      startQuiz({portion: 'math', count: 10, topic: item.generator, timed: false});
+    };
+    acts.appendChild(g);
+  }
+  var rm = el('button', 'btn mini ghost', 'REMOVE');
+  rm.onclick = function(){
+    forgetMiss(D, item.qid); persist(); renderNotebook();
+  };
+  acts.appendChild(rm);
+  wrap.appendChild(acts);
+  return wrap;
+}
+
+function renderNotebook(){
+  var v = $('view-notebook');
+  v.className = 'reading';
+  v.innerHTML = '<div id="nbBody"></div>';
+  var box = $('nbBody');
+
+  var counts = missCounts(D);
+  var head = el('div', 'card');
+  head.appendChild(cardHead('Notebook', 'every question you have got wrong'));
+  head.appendChild(el('p', 'sub',
+    'Each question you missed, grouped by topic, with the answer you picked, the ' +
+    'right one, and why. Get the same question right later and it is marked off — ' +
+    'so what stays open is what you still have not learned.'));
+
+  if (counts.total){
+    var f = el('div', 'nbfilter');
+    var openBtn = el('button', 'btn' + (NB_OPEN_ONLY ? '' : ' ghost'),
+                     'Still open (' + counts.open + ')');
+    openBtn.onclick = function(){ NB_OPEN_ONLY = true; renderNotebook(); };
+    var allBtn = el('button', 'btn' + (NB_OPEN_ONLY ? ' ghost' : ''),
+                    'All (' + counts.total + ')');
+    allBtn.onclick = function(){ NB_OPEN_ONLY = false; renderNotebook(); };
+    f.appendChild(openBtn);
+    f.appendChild(allBtn);
+    if (counts.cleared){
+      f.appendChild(el('span', 'muted', counts.cleared + ' cleared so far'));
+    }
+    head.appendChild(f);
+  }
+  box.appendChild(head);
+
+  var groups = missGroups(D, NB_OPEN_ONLY);
+  if (!groups.length){
+    var e = el('div', 'card');
+    e.appendChild(el('div', 'empty', counts.total
+      ? 'Nothing open — you have got every missed question right since. Switch to All to review them again.'
+      : 'Nothing here yet. Take a quiz and anything you miss lands in this notebook automatically.'));
+    box.appendChild(e);
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  groups.forEach(function(g){
+    var card = el('div', 'card');
+    var hd = el('div', 'cardhead');
+    var t = el('h2', null, g.label);
+    hd.appendChild(t);
+    hd.appendChild(el('span', 'hint',
+      g.items.length + (g.items.length === 1 ? ' question' : ' questions') +
+      (g.counts_on_exam ? ' · ' + g.exam_questions + ' on exam' : ' · drill')));
+    card.appendChild(hd);
+    var list = el('div', 'nbgroup');
+    g.items.forEach(function(item){ list.appendChild(notebookEntry(item)); });
+    card.appendChild(list);
+    box.appendChild(card);
+  });
+  window.scrollTo(0, 0);
 }
 
 /* ---------------------------------------------------------------- study */
@@ -1229,7 +1376,8 @@ function renderSetup(){
   };
   $('doReset').onclick = function(){
     if (!confirm('Erase all attempts and scores? This cannot be undone.')) return;
-    D.attempts = []; D.topics = {}; D.subs = {}; D.items = {}; D.generators = {};
+    D.attempts = []; D.topics = {}; D.subs = {};
+    D.items = {}; D.generators = {}; D.misses = {};
     persist(); renderSetup();
   };
 

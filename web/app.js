@@ -3,6 +3,7 @@
 
 var META = null, PROGRESS = null, QUIZ = null, TICK = null, LAST = null;
 var STUDY = null, STUDY_TOPIC = null;
+var NB_OPEN_ONLY = true;
 
 function $(id){ return document.getElementById(id); }
 function el(tag, cls, txt){
@@ -34,7 +35,7 @@ function mmss(s){
 
 /* ------------------------------------------------------------- routing */
 function show(view){
-  ['dash','study','home','math','weak','quiz','result','plan'].forEach(function(v){
+  ['dash','study','home','math','notebook','weak','quiz','result','plan'].forEach(function(v){
     var n = $('view-' + v); if (n) n.hidden = (v !== view);
   });
   document.querySelectorAll('#rail button').forEach(function(b){
@@ -45,6 +46,7 @@ function show(view){
   if (view === 'dash') refreshThen(renderDash);
   if (view === 'plan') renderPlan();
   if (view === 'study') renderStudy();
+  if (view === 'notebook') refreshThen(renderNotebook);
   if (view === 'math') renderMathStats();
   if (view === 'weak') refreshThen(renderWeak);
   if (view === 'home') renderHomeWeak();
@@ -375,6 +377,120 @@ $('toDash').onclick = function(){ show('dash'); };
 
 function refreshThen(fn){
   api('/api/progress').then(function(p){ PROGRESS = p; renderCountdown(); fn(); });
+}
+
+/* -------------------------------------------------------------- notebook */
+function nbOption(item, i){
+  var row = el('div', 'nbopt' +
+    (i === item.answer ? ' right' : (i === item.chose ? ' chose' : '')));
+  row.appendChild(el('span', 'k', 'ABCD'[i]));
+  row.appendChild(el('span', null, item.choices[i]));
+  if (i === item.answer) row.appendChild(el('span', 'flag', 'correct'));
+  else if (i === item.chose) row.appendChild(el('span', 'flag', 'you picked'));
+  return row;
+}
+
+function notebookEntry(item){
+  var wrap = el('div', 'nbitem' + (item.cleared ? ' done' : ''));
+  var meta = el('div', 'nbmeta');
+  if (item.subtopic) meta.appendChild(el('span', null, item.subtopic));
+  if (item.difficulty === 2) meta.appendChild(el('span', 'tag hard', 'Hard'));
+  if (item.times > 1) meta.appendChild(el('span', null, 'missed ' + item.times + '×'));
+  if (item.cleared) meta.appendChild(el('span', 'tag', 'got it since'));
+  if (item.chose === null) meta.appendChild(el('span', null, 'ran out of time'));
+  wrap.appendChild(meta);
+  wrap.appendChild(el('p', 'nbq', item.q));
+  var opts = el('div', 'nbopts');
+  item.choices.forEach(function(_, i){ opts.appendChild(nbOption(item, i)); });
+  wrap.appendChild(opts);
+  var why = el('div', 'nbwhy');
+  if (item.steps && item.steps.length){
+    why.appendChild(el('div', 'lab', 'How to get there'));
+    var ol = el('ol', 'steps');
+    item.steps.forEach(function(st){ ol.appendChild(el('li', null, st)); });
+    why.appendChild(ol);
+  } else if (item.explain){
+    why.appendChild(el('div', 'lab', 'Why that is the answer'));
+    why.appendChild(richPara(null, item.explain));
+  }
+  if (item.concept) why.appendChild(el('div', 'lab', 'Concept: ' + item.concept));
+  wrap.appendChild(why);
+  var acts = el('div', 'nbacts');
+  acts.appendChild(studyButton(item.topic, 'STUDY THIS'));
+  if (item.sub){
+    var d = el('button', 'btn mini', 'DRILL IT');
+    d.onclick = function(){
+      startQuiz({portion:item.portion, count:10, sub:item.sub, timed:false, difficulty:'harder'});
+    };
+    acts.appendChild(d);
+  } else if (item.generator){
+    var g = el('button', 'btn mini', 'MORE LIKE THIS');
+    g.onclick = function(){
+      startQuiz({portion:'math', count:10, topic:item.generator, timed:false});
+    };
+    acts.appendChild(g);
+  }
+  var rm = el('button', 'btn mini ghost', 'REMOVE');
+  rm.onclick = function(){
+    api('/api/notebook/forget', {qid:item.qid}).then(function(r){
+      if (r.progress) PROGRESS = r.progress;
+      renderNotebook();
+    });
+  };
+  acts.appendChild(rm);
+  wrap.appendChild(acts);
+  return wrap;
+}
+
+function renderNotebook(){
+  var v = $('view-notebook');
+  v.className = 'reading';
+  var box = $('nbBody');
+  box.innerHTML = '';
+  var counts = PROGRESS.miss_counts || {open:0, cleared:0, total:0};
+  var head = el('div','card');
+  head.appendChild(cardHead('Notebook','every question you have got wrong'));
+  head.appendChild(el('p','sub',
+    'Each question you missed, grouped by topic, with the answer you picked, the ' +
+    'right one, and why. Get the same question right later and it is marked off — ' +
+    'so what stays open is what you still have not learned.'));
+  if (counts.total){
+    var f = el('div','nbfilter');
+    var ob = el('button','btn' + (NB_OPEN_ONLY?'':' ghost'), 'Still open (' + counts.open + ')');
+    ob.onclick = function(){ NB_OPEN_ONLY = true; renderNotebook(); };
+    var ab = el('button','btn' + (NB_OPEN_ONLY?' ghost':''), 'All (' + counts.total + ')');
+    ab.onclick = function(){ NB_OPEN_ONLY = false; renderNotebook(); };
+    f.appendChild(ob); f.appendChild(ab);
+    if (counts.cleared) f.appendChild(el('span','muted', counts.cleared + ' cleared so far'));
+    head.appendChild(f);
+  }
+  box.appendChild(head);
+
+  var rows = (PROGRESS.misses || []).filter(function(m){ return NB_OPEN_ONLY ? !m.cleared : true; });
+  if (!rows.length){
+    var e = el('div','card');
+    e.appendChild(el('div','empty', counts.total
+      ? 'Nothing open — you have got every missed question right since. Switch to All to review them again.'
+      : 'Nothing here yet. Take a quiz and anything you miss lands in this notebook automatically.'));
+    box.appendChild(e); window.scrollTo(0,0); return;
+  }
+  var byTopic = {};
+  rows.forEach(function(r){ (byTopic[r.topic] || (byTopic[r.topic] = [])).push(r); });
+  (META.topics || []).forEach(function(t){
+    var items = byTopic[t.key];
+    if (!items) return;
+    var card = el('div','card'), hd = el('div','cardhead');
+    hd.appendChild(el('h2', null, t.label));
+    hd.appendChild(el('span','hint',
+      items.length + (items.length===1?' question':' questions') +
+      (t.counts_on_exam !== false ? ' · ' + t.exam_questions + ' on exam' : ' · drill')));
+    card.appendChild(hd);
+    var list = el('div','nbgroup');
+    items.forEach(function(i){ list.appendChild(notebookEntry(i)); });
+    card.appendChild(list);
+    box.appendChild(card);
+  });
+  window.scrollTo(0,0);
 }
 
 /* ---------------------------------------------------------------- study */

@@ -23,7 +23,8 @@ var CLOSING_GENS = Object.keys(DATA.math).filter(function(k){ return DATA.math[k
 function countsOnExam(k){ return !PRACTICE_ONLY[k]; }
 
 /* ------------------------------------------------------------- storage */
-var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{}, items:{}, generators:{}};
+var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{},
+             items:{}, generators:{}, misses:{}};
 
 function load(){
   var raw;
@@ -59,6 +60,39 @@ function bump(bucket, k, correct){
   return r;
 }
 
+/* Keep at most this many missed problems per math generator. Generated problems
+   have unique ids, so without a cap the notebook would grow without limit. */
+var MATH_MISS_CAP = 6;
+
+function noteMiss(d, a){
+  var q = a.q;
+  if (!q) return;
+  var key = q.id;
+  var prev = d.misses[key];
+  d.misses[key] = {
+    qid: key, topic: q.topic, sub: q.sub || null, portion: q.portion,
+    generator: q.generator || null, difficulty: q.difficulty || 1,
+    q: q.q, choices: q.choices, answer: q.answer,
+    chose: (a.choice === null || a.choice === undefined) ? null : a.choice,
+    concept: q.concept || '', explain: q.explain || '', steps: q.steps || [],
+    at: Date.now() / 1000,
+    times: prev ? (prev.times || 1) + 1 : 1,
+    cleared: 0
+  };
+  if (q.generator){
+    // trim the oldest misses for this generator past the cap
+    var mine = Object.keys(d.misses).filter(function(k){
+      return d.misses[k].generator === q.generator && !d.misses[k].cleared;
+    }).sort(function(x, y){ return d.misses[x].at - d.misses[y].at; });
+    while (mine.length > MATH_MISS_CAP) delete d.misses[mine.shift()];
+  }
+}
+
+function clearMiss(d, a){
+  var rec = d.misses[a.qid];
+  if (rec && !rec.cleared) rec.cleared = Date.now() / 1000;
+}
+
 function recordAttempt(d, portion, mode, answers, elapsed, weakSpot){
   var perTopic = {}, correct = 0;
   answers.forEach(function(a){
@@ -70,6 +104,7 @@ function recordAttempt(d, portion, mode, answers, elapsed, weakSpot){
     if (a.qid && a.qid.indexOf('math:') !== 0) bump(d.items, a.qid, a.correct);
     if (a.sub) bump(d.subs, a.sub, a.correct);
     if (a.generator) bump(d.generators, a.generator, a.correct);
+    if (a.correct) clearMiss(d, a); else noteMiss(d, a);
   });
   var att = {
     id: Math.random().toString(16).slice(2, 14),
@@ -341,6 +376,57 @@ function trendSeries(d){
   });
   return s;
 }
+
+/* The notebook: everything you have got wrong, newest first, grouped by topic. */
+function missReport(d, opts){
+  opts = opts || {};
+  var rows = [];
+  Object.keys(d.misses || {}).forEach(function(k){
+    var m = d.misses[k];
+    if (opts.openOnly && m.cleared) return;
+    var t = TOPIC[m.topic];
+    rows.push({
+      qid: m.qid, topic: m.topic,
+      topic_label: t ? t.label : m.topic,
+      portion: t ? t.portion : m.portion,
+      sub: m.sub, subtopic: m.sub ? m.sub.split('|')[1] : null,
+      generator: m.generator, difficulty: m.difficulty,
+      q: m.q, choices: m.choices, answer: m.answer, chose: m.chose,
+      concept: m.concept, explain: m.explain, steps: m.steps || [],
+      at: m.at, times: m.times || 1, cleared: m.cleared || 0
+    });
+  });
+  rows.sort(function(a, b){
+    if (!!a.cleared !== !!b.cleared) return a.cleared ? 1 : -1;
+    if (a.times !== b.times) return b.times - a.times;
+    return b.at - a.at;
+  });
+  return rows;
+}
+
+function missGroups(d, openOnly){
+  var rows = missReport(d, {openOnly: openOnly});
+  var byTopic = {};
+  rows.forEach(function(r){
+    (byTopic[r.topic] || (byTopic[r.topic] = [])).push(r);
+  });
+  return ORDER.filter(function(k){ return byTopic[k]; }).map(function(k){
+    var t = TOPIC[k];
+    return {topic: k, label: t.label, portion: t.portion,
+            exam_questions: t.exam_questions, counts_on_exam: countsOnExam(k),
+            items: byTopic[k]};
+  });
+}
+
+function missCounts(d){
+  var open = 0, cleared = 0;
+  Object.keys(d.misses || {}).forEach(function(k){
+    if (d.misses[k].cleared) cleared++; else open++;
+  });
+  return {open: open, cleared: cleared, total: open + cleared};
+}
+
+function forgetMiss(d, qid){ delete d.misses[qid]; }
 
 function subReport(d, minSeen, limit){
   minSeen = minSeen || 2;

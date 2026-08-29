@@ -393,3 +393,37 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .cwhy b{font-family:"Barlow Condensed",sans-serif; letter-spacing:.06em;
   text-transform:uppercase; font-size:.72rem; margin-right:.35rem}
 .cwhy.ok b{color:var(--ok)} .cwhy.no b{color:var(--no)}
+
+/* ------------------------------------------------------------ notebook --
+   Each entry is a question you got wrong, with your answer, the right one,
+   and why. Laid out for reading, like the study notes. */
+.nbgroup{display:flex; flex-direction:column; gap:1.4rem}
+.nbitem{border-left:3px solid var(--no); padding-left:1.1rem; display:flex;
+  flex-direction:column; gap:.6rem}
+.nbitem.done{border-left-color:var(--ok); opacity:.72}
+.nbmeta{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;
+  font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.reading .nbq{font-family:"Barlow",sans-serif; font-size:1.02rem; line-height:1.55;
+  font-weight:500; margin:0; max-width:var(--measure); color:var(--ink)}
+.nbopts{display:flex; flex-direction:column; gap:.28rem; max-width:var(--measure)}
+.nbopt{display:flex; gap:.6rem; align-items:flex-start; font-family:"Barlow",sans-serif;
+  font-size:.92rem; line-height:1.45; padding:.38rem .6rem; border-radius:var(--r);
+  border:1px solid var(--line); background:var(--panel); color:var(--ink-2)}
+.nbopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-3);
+  min-width:1rem; flex:0 0 auto}
+.nbopt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
+.nbopt.right .k{color:var(--ok)}
+.nbopt.chose{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
+.nbopt.chose .k{color:var(--no)}
+.nbopt .flag{margin-left:auto; font-family:"Barlow Condensed",sans-serif;
+  font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap}
+.nbopt.right .flag{color:var(--ok)} .nbopt.chose .flag{color:var(--no)}
+.nbwhy{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.75rem .9rem; display:flex; flex-direction:column; gap:.4rem;
+  max-width:var(--measure)}
+.nbwhy .lab{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.reading .nbwhy p{font-size:1.02rem; line-height:1.7; margin:0}
+.nbacts{display:flex; gap:.4rem; flex-wrap:wrap; align-items:center}
+.nbfilter{display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
