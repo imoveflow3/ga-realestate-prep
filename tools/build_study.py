@@ -15,6 +15,7 @@ sys.path.insert(0, ROOT)
 
 import _study_nat_a, _study_nat_b, _study_nat_c      # noqa: E402
 import _study_ga, _study_comp                        # noqa: E402
+import _checks_a, _checks_b, _checks_c               # noqa: E402
 from greprep import topics                           # noqa: E402
 
 OUT = os.path.join(ROOT, "greprep", "banks", "study.json")
@@ -49,6 +50,26 @@ SOURCES = [
 ]
 
 
+def merged_checks():
+    """Merge the section checks and fail loudly on a heading that does not exist."""
+    out = {}
+    for mod in (_checks_a, _checks_b, _checks_c):
+        for topic, per_section in mod.CHECKS.items():
+            for heading, qs in per_section.items():
+                out.setdefault(topic, {})
+                if heading in out[topic]:
+                    raise SystemExit("duplicate checks for %s / %s" % (topic, heading))
+                for q in qs:
+                    if len(q["choices"]) < 2 or not (0 <= q["answer"] < len(q["choices"])):
+                        raise SystemExit("bad check in %s / %s" % (topic, heading))
+                    if len(set(q["choices"])) != len(q["choices"]):
+                        raise SystemExit("repeated choice in %s / %s" % (topic, heading))
+                    if not q["why"].strip():
+                        raise SystemExit("check with no explanation: %s" % q["q"][:50])
+                out[topic][heading] = qs
+    return out
+
+
 def main():
     merged = {}
     for mod in (_study_nat_a, _study_nat_b, _study_nat_c, _study_ga, _study_comp):
@@ -63,7 +84,8 @@ def main():
     if missing:
         raise SystemExit("no study notes for: %s" % ", ".join(missing))
 
-    out, totals = {}, {"sections": 0, "vocab": 0, "examples": 0, "words": 0}
+    checks = merged_checks()
+    out, totals = {}, {"sections": 0, "vocab": 0, "examples": 0, "words": 0, "checks": 0}
     for key in topics.ORDER:                      # keep exam order
         n = merged[key]
         for field in ("summary", "sections", "vocab", "examples"):
@@ -81,6 +103,16 @@ def main():
             for f in ("t", "s", "w", "k"):
                 if not ex.get(f):
                     raise SystemExit("%s has an incomplete example" % key)
+        # attach each section's checks, and refuse to ship a mismatched heading
+        heads = set(sec["h"] for sec in n["sections"])
+        for heading in (checks.get(key) or {}):
+            if heading not in heads:
+                raise SystemExit("checks reference a missing section: %s / %s"
+                                 % (key, heading))
+        for sec in n["sections"]:
+            qs = (checks.get(key) or {}).get(sec["h"], [])
+            sec["check"] = qs
+            totals["checks"] += len(qs)
         portion, label, weight, blurb = topics.TOPICS[key]
         out[key] = {
             "topic": key, "portion": portion, "label": label, "blurb": blurb,
@@ -102,6 +134,12 @@ def main():
     print("  %d topics | %d sections | %d vocab terms | %d worked examples | ~%s words"
           % (len(out), totals["sections"], totals["vocab"], totals["examples"],
              "{:,}".format(totals["words"])))
+    print("  %d section checks" % totals["checks"])
+    bare = [(k, sec["h"]) for k in out for sec in out[k]["sections"] if not sec["check"]]
+    if bare:
+        print("  NOTE %d sections have no check:" % len(bare))
+        for k, h in bare:
+            print("     %s / %s" % (k, h))
     thin = [k for k in out if len(out[k]["vocab"]) < 5]
     if thin:
         print("  NOTE thin vocab (<5): %s" % ", ".join(thin))

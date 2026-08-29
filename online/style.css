@@ -356,3 +356,40 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   font-family:"Barlow", sans-serif;
 }
 .reading .steps .caps, .reading .vterm .caps{font-family:inherit; font-weight:inherit}
+
+/* ---- section checks: a short self-test after each block of reading ---- */
+.check{
+  margin-top:1.1rem; padding:.9rem 1rem; border-radius:var(--r);
+  background:var(--panel-2); border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  display:flex; flex-direction:column; gap:.85rem;
+}
+.checkhead{
+  display:flex; justify-content:space-between; align-items:baseline; gap:.8rem;
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+}
+.checkscore{font-family:"IBM Plex Mono",monospace; font-size:.72rem; letter-spacing:0}
+.checkq{display:flex; flex-direction:column; gap:.45rem}
+.reading .cq{
+  font-family:"Barlow",sans-serif; font-size:.98rem; line-height:1.5;
+  font-weight:500; margin:0; max-width:var(--measure); color:var(--ink);
+}
+.copts{display:flex; flex-direction:column; gap:.3rem; max-width:var(--measure)}
+.copt{
+  text-align:left; font:inherit; font-family:"Barlow",sans-serif; font-size:.92rem;
+  line-height:1.45; color:var(--ink); background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--r);
+  padding:.4rem .6rem; cursor:pointer;
+}
+.copt:hover:not(:disabled){border-color:var(--accent); background:var(--accent-soft)}
+.copt:disabled{cursor:default}
+.copt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
+.copt.wrong{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
+.cwhy{
+  font-family:"Barlow",sans-serif; font-size:.87rem; line-height:1.55;
+  color:var(--ink-2); max-width:var(--measure); padding-left:.1rem;
+}
+.cwhy b{font-family:"Barlow Condensed",sans-serif; letter-spacing:.06em;
+  text-transform:uppercase; font-size:.72rem; margin-right:.35rem}
+.cwhy.ok b{color:var(--ok)} .cwhy.no b{color:var(--no)}

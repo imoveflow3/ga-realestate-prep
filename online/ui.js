@@ -531,6 +531,53 @@ function bulletItem(text){
   return li;
 }
 
+/* A short self-test after each section. Deliberately NOT recorded against your
+   scores - these check that you took the reading in, and counting them would
+   flatter the readiness number on the dashboard. */
+function checkBlock(sec){
+  var qs = sec.check || [];
+  if (!qs.length) return null;
+  var box = el('div', 'check');
+  var head = el('div', 'checkhead');
+  head.appendChild(el('span', null, 'Check yourself'));
+  var score = el('span', 'checkscore', '0 / ' + qs.length);
+  head.appendChild(score);
+  box.appendChild(head);
+
+  var answered = 0, right = 0;
+  qs.forEach(function(q){
+    var wrap = el('div', 'checkq');
+    wrap.appendChild(el('p', 'cq', q.q));
+    var opts = el('div', 'copts');
+    var why = el('div', 'cwhy');
+    why.hidden = true;
+    q.choices.forEach(function(text, i){
+      var b = el('button', 'copt', text);
+      b.onclick = function(){
+        var correct = (i === q.answer);
+        answered++;
+        if (correct) right++;
+        score.textContent = right + ' / ' + qs.length;
+        Array.prototype.forEach.call(opts.children, function(btn, j){
+          btn.disabled = true;
+          if (j === q.answer) btn.className = 'copt right';
+          else if (j === i) btn.className = 'copt wrong';
+        });
+        why.className = 'cwhy ' + (correct ? 'ok' : 'no');
+        why.innerHTML = '';
+        why.appendChild(el('b', null, correct ? 'Correct' : 'Not quite'));
+        why.appendChild(document.createTextNode(q.why));
+        why.hidden = false;
+      };
+      opts.appendChild(b);
+    });
+    wrap.appendChild(opts);
+    wrap.appendChild(why);
+    box.appendChild(wrap);
+  });
+  return box;
+}
+
 function renderStudyTopic(v, n){
   v.innerHTML = '<div id="studyBody"></div>';
   var box = $('studyBody');
@@ -570,6 +617,8 @@ function renderStudyTopic(v, n){
       sec.l.forEach(function(item){ ul.appendChild(bulletItem(item)); });
       c.appendChild(ul);
     }
+    var chk = checkBlock(sec);
+    if (chk) c.appendChild(chk);
     box.appendChild(c);
   });
 
