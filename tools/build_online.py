@@ -127,10 +127,12 @@ def main():
 
     # The Artifact host supplies <!doctype>/<head>/<body>; a plain web server does
     # not, so ship a second, fully standalone copy for GitHub Pages and friends.
-    # everything before <header> is head content (title, font links, styles)
-    if "<header>" not in html:
-        raise SystemExit("shell.html no longer starts its body with <header>")
-    standalone = html.replace("<header>", "</head>\n<body>\n<header>", 1)
+    # everything before the first <header ...> is head content (title, links, styles)
+    marker = "<header"
+    if marker not in html:
+        raise SystemExit("shell.html no longer starts its body with a <header> element")
+    cut = html.index(marker)
+    standalone = html[:cut] + "</head>\n<body>\n" + html[cut:]
     standalone = STANDALONE_HEAD + standalone + "\n</body>\n</html>\n"
     with io.open(OUT_STANDALONE, "w", encoding="utf-8") as f:
         f.write(standalone)

@@ -46,15 +46,39 @@ document.querySelectorAll('#rail button').forEach(function(b){
   };
 });
 
+function ro(key, value, note, hero){
+  var d = el('div', 'ro' + (hero ? ' hero' : ''));
+  d.appendChild(el('div', 'k', key));
+  var v = el('div', 'v', value);
+  if (note){
+    var s2 = el('small', null, '\u00b7 ' + note);
+    v.appendChild(s2);
+  }
+  d.appendChild(v);
+  return d;
+}
+
+/* The status strip in the header: the five numbers worth seeing on every screen. */
 function countdown(){
-  var p = D.profile || {};
-  var n = $('countdown');
-  if (!p.exam_date){ n.textContent = 'salesperson licensing exam'; return; }
-  var t = new Date(); t.setHours(0,0,0,0);
-  var days = Math.round((asDate(p.exam_date) - t)/86400000);
-  n.textContent = days >= 0
-    ? days + ' day' + (days===1?'':'s') + ' until your exam'
-    : 'exam date has passed';
+  var box = $('readouts');
+  if (!box) return;
+  box.innerHTML = '';
+  var h = headline(D), st = portionStats(D);
+  var hero = ro('Readiness', h.exam_pct === null ? '\u2014' : pct(h.exam_pct),
+                h.exam_pct === null ? 'no data' : (h.passing ? 'passing' : 'need 75%'), true);
+  if (h.exam_pct !== null)
+    hero.querySelector('.v').className = 'v ' + (h.passing ? 'good' : 'bad');
+  box.appendChild(hero);
+  box.appendChild(ro('National',
+                     (st.national && st.national.recent_pct != null)
+                       ? pct(st.national.recent_pct) : '\u2014', '80 q'));
+  box.appendChild(ro('Georgia',
+                     (st.georgia && st.georgia.recent_pct != null)
+                       ? pct(st.georgia.recent_pct) : '\u2014', '52 q'));
+  box.appendChild(ro('Answered', String(h.answered),
+                     h.sets + (h.sets === 1 ? ' set' : ' sets')));
+  box.appendChild(ro('Days out', h.days_out === null ? '\u2014' : String(h.days_out),
+                     h.days_out === null ? 'set a date' : 'until exam'));
 }
 
 /* ----------------------------------------------------------------- home */
@@ -593,36 +617,8 @@ function statRow(cells){
 
 function renderDash(){
   var v = $('view-dash');
-  v.innerHTML = '<h1>Dashboard</h1><p class="sub">Where you stand, section by section ' +
-                'and topic by topic. Drill anything straight from the table.</p>' +
-                '<div id="dashBody"></div>';
+  v.innerHTML = '<div id="dashBody"></div>';
   var box = $('dashBody');
-
-  var h = headline(D);
-  var strip = el('div', 'card');
-  var rd = el('div', 'readouts');
-  [['Exam readiness', h.exam_pct === null ? '—' : pct(h.exam_pct),
-    h.exam_pct === null ? 'no data yet' : (h.passing ? 'at or above the 75% pass mark'
-                                                     : 'below the 75% pass mark')],
-   ['Trend', h.trend === null ? '—'
-             : ((h.trend > 0 ? '+' : '') + Math.round(h.trend * 100)),
-    'points, recent vs earlier'],
-   ['Sets', String(h.sets), h.sets === 1 ? 'quiz taken' : 'quizzes taken'],
-   ['Answered', String(h.answered), 'questions total'],
-   ['Days out', h.days_out === null ? '—' : String(h.days_out),
-    h.days_out === null ? 'set an exam date' : 'until your exam']
-  ].forEach(function(r){
-    var d = el('div', 'readout');
-    d.appendChild(el('div', 'eyebrow', r[0]));
-    var val = el('div', 'stat', r[1]);
-    if (r[0] === 'Exam readiness' && h.exam_pct !== null)
-      val.className = 'stat ' + (h.passing ? 'good' : 'bad');
-    d.appendChild(val);
-    d.appendChild(el('div', 'muted', r[2]));
-    rd.appendChild(d);
-  });
-  strip.appendChild(rd);
-  box.appendChild(strip);
 
   if (!D.attempts.length){
     var empty = el('div', 'card');
