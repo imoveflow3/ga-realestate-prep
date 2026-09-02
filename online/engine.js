@@ -24,7 +24,7 @@ function countsOnExam(k){ return !PRACTICE_ONLY[k]; }
 
 /* ------------------------------------------------------------- storage */
 var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{},
-             items:{}, generators:{}, misses:{}};
+             items:{}, generators:{}, misses:{}, srs:{}, dayLog:{}};
 
 function load(){
   var raw;
@@ -136,6 +136,7 @@ function recordAttempt(d, portion, mode, answers, elapsed, weakSpot){
     if (a.sub) bump(d.subs, a.sub, a.correct);
     if (a.generator) bump(d.generators, a.generator, a.correct);
     if (a.correct) clearMiss(d, a); else noteMiss(d, a);
+    if (a.qid && d.misses[a.qid]) srsGrade(d, 'miss:' + a.qid, !!a.correct);
   });
   var att = {
     id: Math.random().toString(16).slice(2, 14),
@@ -584,6 +585,203 @@ function headline(d){
           answered: answered, days_out: days,
           trend: overall.trend, passing: overall.recent_pct !== null
                                           && overall.recent_pct >= 0.75};
+}
+
+/* ------------------------------------------------------- spaced repetition
+   A Leitner ladder. Get something right and it moves up a box and comes back
+   later; get it wrong and it drops to box 1 and comes back today. The point is
+   that seeing a card once is not learning it. */
+/* Interval by box. Box 1 means "still learning" and comes back the same day,
+   which is what you want right after missing something. */
+var SRS_DAYS = [0, 0, 1, 3, 7, 14];
+var DAY = 86400;
+
+function srsRec(d, key){
+  return d.srs[key] || (d.srs[key] = {box: 1, due: 0, right: 0, wrong: 0, last: 0});
+}
+
+function srsGrade(d, key, correct){
+  var r = srsRec(d, key);
+  var now = Date.now() / 1000;
+  r.last = now;
+  if (correct){
+    r.right++;
+    r.box = Math.min(SRS_DAYS.length - 1, (r.box || 1) + 1);
+  } else {
+    r.wrong++;
+    r.box = 1;
+  }
+  r.due = now + SRS_DAYS[r.box] * DAY;
+  return r;
+}
+
+function srsDue(d, prefix){
+  var now = Date.now() / 1000, out = [];
+  Object.keys(d.srs || {}).forEach(function(k){
+    if (prefix && k.indexOf(prefix) !== 0) return;
+    if ((d.srs[k].due || 0) <= now) out.push(k);
+  });
+  return out;
+}
+
+/* --------------------------------------------------------------- cards --
+   Every vocabulary term in the study notes is a card. Unseen cards count as
+   due, so a fresh deck is simply everything. */
+var CARD_INDEX = null;
+function cards(){
+  if (CARD_INDEX) return CARD_INDEX;
+  CARD_INDEX = [];
+  var topics_ = (DATA.study || {}).topics || {};
+  Object.keys(topics_).forEach(function(tk){
+    var t = topics_[tk];
+    t.vocab.forEach(function(pair){
+      CARD_INDEX.push({
+        id: 'card:' + tk + '|' + pair[0],
+        topic: tk, topic_label: t.label, portion: t.portion,
+        term: pair[0], def: pair[1]
+      });
+    });
+  });
+  return CARD_INDEX;
+}
+
+function cardState(d, c){
+  var r = d.srs[c.id];
+  if (!r) return {box: 0, due: 0, seen: false};
+  return {box: r.box, due: r.due, seen: true, right: r.right, wrong: r.wrong};
+}
+
+function cardDeck(d, opts){
+  opts = opts || {};
+  var now = Date.now() / 1000;
+  var pool = cards().filter(function(c){
+    if (opts.topic && c.topic !== opts.topic) return false;
+    if (opts.portion && c.portion !== opts.portion) return false;
+    return true;
+  });
+  if (opts.mode === 'due'){
+    pool = pool.filter(function(c){
+      var r = d.srs[c.id];
+      return !r || (r.due || 0) <= now;
+    });
+  } else if (opts.mode === 'weak'){
+    pool = pool.filter(function(c){
+      var r = d.srs[c.id];
+      return r && r.wrong > 0 && r.box <= 2;
+    });
+  } else if (opts.mode === 'new'){
+    pool = pool.filter(function(c){ return !d.srs[c.id]; });
+  }
+  pool = shuffle(pool.slice());
+  return opts.limit ? pool.slice(0, opts.limit) : pool;
+}
+
+function cardCounts(d){
+  var all = cards(), now = Date.now() / 1000;
+  var due = 0, learned = 0, unseen = 0;
+  all.forEach(function(c){
+    var r = d.srs[c.id];
+    if (!r){ unseen++; due++; return; }
+    if ((r.due || 0) <= now) due++;
+    if (r.box >= 4) learned++;
+  });
+  return {total: all.length, due: due, learned: learned, unseen: unseen};
+}
+
+/* ------------------------------------------------------ notebook review --
+   Missed questions come back on the same ladder rather than sitting in a list. */
+function notebookDue(d){
+  var now = Date.now() / 1000, out = [];
+  Object.keys(d.misses || {}).forEach(function(qid){
+    var m = d.misses[qid];
+    if (m.cleared) return;
+    var r = d.srs['miss:' + qid];
+    if (!r || (r.due || 0) <= now) out.push(m);
+  });
+  return out;
+}
+
+/* ------------------------------------------------------------ readiness --
+   Fit a straight line through your recent scored attempts and read it off at
+   the exam date. Honest about needing enough data to say anything. */
+function readiness(d){
+  var keys = {};
+  portionTopics('national').concat(portionTopics('georgia'))
+    .forEach(function(k){ keys[k] = 1; });
+  var pts = [];
+  d.attempts.forEach(function(a){
+    var seen = 0, corr = 0;
+    Object.keys(a.topics || {}).forEach(function(t){
+      if (!keys[t]) return;
+      seen += a.topics[t].seen; corr += a.topics[t].correct;
+    });
+    if (seen >= 5) pts.push({t: a.at, pct: corr / seen, n: seen});
+  });
+  var exam = asDate((d.profile || {}).exam_date);
+  var out = {points: pts.length, current: null, projected: null,
+             onTrack: null, perDay: null, exam: exam ? iso(exam) : null};
+  if (!pts.length) return out;
+  var recent = pts.slice(-5), rq = 0, rc = 0;
+  recent.forEach(function(p){ rq += p.n; rc += p.pct * p.n; });
+  out.current = rc / rq;
+  if (pts.length < 3 || !exam) return out;
+  // A trend needs quizzes taken on different days; several in one sitting say
+  // nothing about improvement over time.
+  var spanDays = (pts[pts.length - 1].t - pts[0].t) / DAY;
+  if (spanDays < 1){ out.needsSpread = true; return out; }
+
+  // least squares on (days, pct)
+  var t0 = pts[0].t, n = pts.length, sx = 0, sy = 0, sxx = 0, sxy = 0;
+  pts.forEach(function(p){
+    var x = (p.t - t0) / DAY, y = p.pct;
+    sx += x; sy += y; sxx += x * x; sxy += x * y;
+  });
+  var denom = n * sxx - sx * sx;
+  if (Math.abs(denom) < 1e-6) return out;
+  var slope = (n * sxy - sx * sy) / denom;
+  // cap at a plausible rate of change so a short noisy run cannot project 0% or 100%
+  slope = Math.max(-0.05, Math.min(0.05, slope));
+  var intercept = (sy - slope * sx) / n;
+  var examX = (exam.getTime() / 1000 - t0) / DAY;
+  var proj = intercept + slope * examX;
+  out.perDay = slope;
+  // a straight line through a handful of quizzes should not claim certainty
+  out.projected = Math.max(0.05, Math.min(0.95, proj));
+  out.onTrack = out.projected >= 0.75;
+  return out;
+}
+
+/* ---------------------------------------------------------- today's work */
+function todayKey(){
+  var t = new Date();
+  return t.getFullYear() + '-' + ('0' + (t.getMonth() + 1)).slice(-2) + '-' +
+         ('0' + t.getDate()).slice(-2);
+}
+
+function todayPlan(d){
+  var cc = cardCounts(d);
+  var nb = notebookDue(d);
+  var log = (d.dayLog || {})[todayKey()] || {};
+  var rank = ranked(d);
+  var focus = rank.slice(0, 3).map(function(r){
+    return {topic: r.topic, label: r.label, portion: r.portion};
+  });
+  return {
+    date: todayKey(),
+    cards: {due: Math.min(cc.due, 25), total: cc.total, done: !!log.cards},
+    notebook: {due: nb.length, done: !!log.notebook},
+    weak: {count: 15, done: !!log.weak},
+    math: {count: 10, done: !!log.math},
+    focus: focus,
+    doneCount: ['cards', 'notebook', 'weak', 'math'].filter(function(k){
+      return log[k]; }).length
+  };
+}
+
+function markDone(d, what){
+  var k = todayKey();
+  var log = (d.dayLog[k] || (d.dayLog[k] = {}));
+  log[what] = Date.now() / 1000;
 }
 
 /* ---------------------------------------------------------------- plan */

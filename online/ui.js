@@ -22,7 +22,7 @@ function tagFor(portion){
 function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
-var VIEWS = ['dash','study','home','math','notebook','weak','quiz','result','plan','setup'];
+var VIEWS = ['today','dash','study','cards','home','math','notebook','weak','quiz','result','plan','setup'];
 var NB_OPEN_ONLY = true;
 var STUDY_TOPIC = null;
 function show(v){
@@ -33,6 +33,8 @@ function show(v){
     b.setAttribute('aria-current', on ? 'page' : 'false');
   });
   if (v === 'home') renderHome();
+  if (v === 'today') renderToday();
+  if (v === 'cards') renderCards();
   if (v === 'study') renderStudy();
   if (v === 'notebook') renderNotebook();
   if (v === 'math') renderMath();
@@ -231,10 +233,15 @@ function startQuiz(opts){
                                              progress:D,
                                              difficulty:opts.difficulty});
   if (!qs.length){ alert('No questions matched that selection.'); return; }
+  startQuizWith(qs, opts);
+}
+
+function startQuizWith(qs, opts){
   LAST = opts;
   QUIZ = {qs:qs, i:0, correct:0, answers:new Array(qs.length),
           portion: (opts.mode === 'exam') ? 'mixed' : opts.portion,
           mode: opts.mode || (opts.topic ? 'topic' : 'quiz'),
+          dayTask: opts.dayTask || null,
           weak: !!opts.weak_spot, locked:false,
           limit: opts.timed === false ? 0 : qs.length*DATA.spq,
           started: Date.now(), qStart: Date.now()};
@@ -359,6 +366,7 @@ function finish(){
   });
   var att = recordAttempt(D, q.portion, q.mode, answers,
                           (Date.now()-q.started)/1000, q.weak);
+  if (q.dayTask) markDone(D, q.dayTask);
   persist(); countdown();
   renderResult(att); show('result');
 }
@@ -422,6 +430,319 @@ function renderResult(a){
           t.appendChild(tr);
         });
     wrap.appendChild(t); card.appendChild(wrap); box.appendChild(card);
+  }
+}
+
+/* ---------------------------------------------------------------- today */
+function renderToday(){
+  var v = $('view-today');
+  v.className = '';
+  v.innerHTML = '<div id="todayBody"></div>';
+  var box = $('todayBody');
+  var plan = todayPlan(D);
+  var r = readiness(D);
+
+  var head = el('div', 'card');
+  head.appendChild(cardHead('Today', plan.date));
+  var g = el('div', 'grid g3');
+
+  var d1 = el('div', 'metric');
+  d1.appendChild(el('div', 'eyebrow', 'Done today'));
+  var ring = el('div', 'ring');
+  ring.appendChild(el('span', 'big', String(plan.doneCount)));
+  ring.appendChild(el('span', 'of', 'of 4 blocks'));
+  d1.appendChild(ring);
+  g.appendChild(d1);
+
+  var d2 = el('div', 'metric');
+  d2.appendChild(el('div', 'eyebrow', 'Readiness now'));
+  d2.appendChild(el('div', 'stat' + (r.current === null ? ''
+    : (r.current >= 0.75 ? ' good' : ' bad')),
+    r.current === null ? '—' : pct(r.current)));
+  d2.appendChild(el('div', 'muted', 'need 75% to pass'));
+  g.appendChild(d2);
+
+  var d3 = el('div', 'metric');
+  d3.appendChild(el('div', 'eyebrow', 'Projected on exam day'));
+  if (r.projected === null){
+    d3.appendChild(el('div', 'stat', '—'));
+    d3.appendChild(el('div', 'muted',
+      r.needsSpread ? 'take quizzes on different days'
+        : (r.points < 3 ? 'needs 3 scored quizzes' : 'set an exam date')));
+  } else {
+    d3.appendChild(el('div', 'stat' + (r.onTrack ? ' good' : ' bad'), pct(r.projected)));
+    var per = Math.round((r.perDay || 0) * 1000) / 10;
+    d3.appendChild(el('div', 'muted',
+      (r.onTrack ? 'on track' : 'below the pass mark') +
+      ' · ' + (per >= 0 ? '+' : '') + per + ' pts/day'));
+  }
+  g.appendChild(d3);
+  head.appendChild(g);
+  box.appendChild(head);
+
+  var work = el('div', 'card');
+  work.appendChild(cardHead('Your queue', 'built from what you have missed'));
+  var list = el('div', 'tasklist');
+
+  function task(key, name, desc, count, go){
+    var t = el('div', 'task' + (plan[key] && plan[key].done ? ' done' : ''));
+    var w = el('div', 'tw');
+    w.appendChild(el('div', 'tn', name));
+    w.appendChild(el('div', 'td', desc));
+    t.appendChild(w);
+    if (plan[key] && plan[key].done){
+      t.appendChild(el('span', 'tick', '✓'));
+    } else if (count > 0){
+      var b = el('button', 'btn', 'Start');
+      b.onclick = go;
+      t.appendChild(b);
+    } else {
+      t.appendChild(el('span', 'muted', 'nothing due'));
+    }
+    return t;
+  }
+
+  list.appendChild(task('cards', 'Vocabulary cards',
+    plan.cards.due + ' due of ' + plan.cards.total + ' terms',
+    plan.cards.due, function(){
+      CARD_OPTS = {mode: 'due', limit: 25}; CARD_FROM_TODAY = true; show('cards');
+    }));
+
+  list.appendChild(task('notebook', 'Retry what you missed',
+    plan.notebook.due + ' question' + (plan.notebook.due === 1 ? '' : 's') +
+    ' from your notebook are due again',
+    plan.notebook.due, function(){ startNotebookRetry(); }));
+
+  list.appendChild(task('weak', 'Weak-spot quiz',
+    '15 questions weighted to your weakest topics', 1, function(){
+      startQuiz({portion: 'mixed', count: 15, weak_spot: true, timed: true,
+                 difficulty: 'harder', dayTask: 'weak'});
+    }));
+
+  list.appendChild(task('math', 'Math sprint',
+    '10 problems with worked solutions', 1, function(){
+      startQuiz({portion: 'math', count: 10, weak_spot: true, timed: false,
+                 dayTask: 'math'});
+    }));
+
+  work.appendChild(list);
+  box.appendChild(work);
+
+  if (plan.focus.length){
+    var f = el('div', 'card');
+    f.appendChild(cardHead('Read this if you have time', 'your weakest topics'));
+    var fl = el('div', 'focuslist');
+    plan.focus.forEach(function(t){
+      var d = el('div', 'focus');
+      d.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:.8rem';
+      var left = el('div');
+      left.appendChild(el('b', null, t.label));
+      left.appendChild(document.createTextNode(' '));
+      left.appendChild(tagFor(t.portion));
+      d.appendChild(left);
+      d.appendChild(studyButton(t.topic, 'READ'));
+      fl.appendChild(d);
+    });
+    f.appendChild(fl);
+    box.appendChild(f);
+  }
+  window.scrollTo(0, 0);
+}
+
+function startNotebookRetry(){
+  var due = notebookDue(D);
+  if (!due.length){ show('notebook'); return; }
+  var pool = [];
+  var index = {};
+  ['national', 'georgia', 'comprehensive'].forEach(function(p){
+    (DATA.banks[p] || []).forEach(function(r){ index[r.id] = r; });
+  });
+  due.forEach(function(m){ if (index[m.qid]) pool.push(index[m.qid]); });
+  if (!pool.length){ show('notebook'); return; }
+  startQuizWith(shuffle(pool).slice(0, 20), {
+    portion: 'mixed', mode: 'notebook', timed: false, dayTask: 'notebook'
+  });
+}
+
+/* ---------------------------------------------------------------- cards */
+var CARD_OPTS = {mode: 'due', limit: 25};
+var CARD_FROM_TODAY = false;
+var DECK = null;
+
+function renderCards(){
+  var v = $('view-cards');
+  v.className = '';
+  if (DECK && DECK.i < DECK.list.length) return renderCard(v);
+  v.innerHTML = '<div id="cardsBody"></div>';
+  var box = $('cardsBody');
+  var cc = cardCounts(D);
+
+  if (DECK && DECK.i >= DECK.list.length){
+    var done = el('div', 'card');
+    done.appendChild(cardHead('Deck finished', DECK.right + ' of ' + DECK.list.length + ' known'));
+    done.appendChild(el('p', 'muted',
+      'Cards you knew move up the ladder and come back later. Cards you missed ' +
+      'come back today.'));
+    var again = el('div', 'row');
+    var d0 = el('div'); d0.style.flex = '0 0 auto';
+    var b0 = el('button', 'btn', 'Another set');
+    b0.onclick = function(){ DECK = null; startDeck(CARD_OPTS); };
+    d0.appendChild(b0); again.appendChild(d0);
+    if (CARD_FROM_TODAY){
+      var d1 = el('div'); d1.style.flex = '0 0 auto';
+      var b1 = el('button', 'btn ghost', 'Back to today');
+      b1.onclick = function(){ DECK = null; CARD_FROM_TODAY = false; show('today'); };
+      d1.appendChild(b1); again.appendChild(d1);
+    }
+    done.appendChild(again);
+    box.appendChild(done);
+    DECK = null;
+  }
+
+  var head = el('div', 'card');
+  head.appendChild(cardHead('Vocabulary cards', cc.total + ' terms'));
+  head.appendChild(el('p', 'sub',
+    'Every term from the study notes, drilled by recall rather than reading. ' +
+    'Say the meaning out loud, flip, and mark yourself honestly — cards you miss ' +
+    'come back sooner.'));
+  var g = el('div', 'grid g3');
+  [['Due now', cc.due], ['Learned', cc.learned], ['Not seen yet', cc.unseen]]
+    .forEach(function(p){
+      var d = el('div', 'metric');
+      d.appendChild(el('div', 'eyebrow', p[0]));
+      d.appendChild(el('div', 'stat', String(p[1])));
+      g.appendChild(d);
+    });
+  head.appendChild(g);
+  var row = el('div', 'row');
+  [['Due now (25)', {mode: 'due', limit: 25}],
+   ['Ones I keep missing', {mode: 'weak', limit: 20}],
+   ['New terms (20)', {mode: 'new', limit: 20}]].forEach(function(o, i){
+    var d = el('div'); d.style.flex = '0 0 auto';
+    var b = el('button', 'btn' + (i ? ' ghost' : ''), o[0]);
+    b.onclick = function(){ CARD_FROM_TODAY = false; startDeck(o[1]); };
+    d.appendChild(b); row.appendChild(d);
+  });
+  head.appendChild(row);
+  box.appendChild(head);
+
+  var pick = el('div', 'card');
+  pick.appendChild(cardHead('By topic', 'pick a deck'));
+  var list = el('div', 'topiclist');
+  Object.keys(DATA.study.topics).forEach(function(tk){
+    var t = DATA.study.topics[tk];
+    var mine = cards().filter(function(c){ return c.topic === tk; });
+    var due = mine.filter(function(c){
+      var r = D.srs[c.id]; return !r || (r.due || 0) <= Date.now() / 1000;
+    }).length;
+    var rowx = el('div', 'topicrow'), who = el('div', 'who');
+    who.appendChild(el('div', 'nm', t.label));
+    who.appendChild(el('div', 'bl', mine.length + ' terms · ' + due + ' due'));
+    rowx.appendChild(who);
+    var acts = el('div', 'acts');
+    var b = el('button', 'btn mini', 'DRILL');
+    b.onclick = function(){
+      CARD_FROM_TODAY = false; startDeck({topic: tk, mode: 'all', limit: 30});
+    };
+    acts.appendChild(b);
+    rowx.appendChild(acts);
+    list.appendChild(rowx);
+  });
+  pick.appendChild(list);
+  box.appendChild(pick);
+  window.scrollTo(0, 0);
+}
+
+function startDeck(opts){
+  CARD_OPTS = opts;
+  var list = cardDeck(D, opts);
+  if (!list.length){
+    alert('No cards match that right now — try "New terms" or a topic deck.');
+    return;
+  }
+  DECK = {list: list, i: 0, right: 0, shown: false};
+  show('cards');
+}
+
+function renderCard(v){
+  var c = DECK.list[DECK.i];
+  var st = cardState(D, c);
+  v.innerHTML = '<div id="cardsBody"></div>';
+  var box = $('cardsBody');
+  var card = el('div', 'card');
+
+  var meta = el('div', 'cardmeta');
+  meta.appendChild(el('span', null, c.topic_label));
+  var right = el('span', null, (DECK.i + 1) + ' / ' + DECK.list.length);
+  meta.appendChild(right);
+  card.appendChild(meta);
+
+  var stage = el('div', 'cardstage');
+  var flip = el('div', 'flip');
+  if (!DECK.shown){
+    flip.appendChild(el('div', 'side', 'Term'));
+    flip.appendChild(el('div', 'term', c.term));
+    flip.appendChild(el('div', 'hintline', 'Say the meaning, then tap to check'));
+    flip.onclick = function(){ DECK.shown = true; renderCard(v); };
+  } else {
+    flip.appendChild(el('div', 'side', c.term));
+    flip.appendChild(el('div', 'def', c.def));
+    flip.style.cursor = 'default';
+  }
+  stage.appendChild(flip);
+
+  var acts = el('div', 'cardacts');
+  if (!DECK.shown){
+    var show1 = el('button', 'btn', 'Show the meaning');
+    show1.onclick = function(){ DECK.shown = true; renderCard(v); };
+    acts.appendChild(show1);
+  } else {
+    var no = el('button', 'btn ghost', 'Didn’t know it');
+    no.onclick = function(){ gradeCard(c, false, v); };
+    var yes = el('button', 'btn', 'Knew it');
+    yes.onclick = function(){ gradeCard(c, true, v); };
+    acts.appendChild(no); acts.appendChild(yes);
+  }
+  stage.appendChild(acts);
+
+  var bar = el('div', 'cardmeta');
+  var boxes = el('div', 'boxbar');
+  for (var i = 1; i <= 5; i++){
+    boxes.appendChild(el('i', (st.box >= i ? 'on' : '')));
+  }
+  var lab = el('span', null, st.seen ? ('box ' + st.box + ' of 5') : 'new card');
+  bar.appendChild(lab);
+  bar.appendChild(boxes);
+  stage.appendChild(bar);
+
+  card.appendChild(stage);
+  box.appendChild(card);
+
+  var out = el('div', 'card');
+  var orow = el('div', 'row');
+  var od = el('div'); od.style.flex = '0 0 auto';
+  var ob = el('button', 'btn ghost', 'End deck');
+  ob.onclick = function(){ DECK.i = DECK.list.length; renderCards(); };
+  od.appendChild(ob); orow.appendChild(od);
+  var sd = el('div'); sd.style.flex = '0 0 auto';
+  var sb = el('button', 'btn ghost', 'Read this topic');
+  sb.onclick = function(){ DECK = null; STUDY_TOPIC = c.topic; show('study'); };
+  sd.appendChild(sb); orow.appendChild(sd);
+  out.appendChild(orow);
+  box.appendChild(out);
+  window.scrollTo(0, 0);
+}
+
+function gradeCard(c, knew, v){
+  srsGrade(D, c.id, knew);
+  if (knew) DECK.right++;
+  persist();
+  DECK.i++; DECK.shown = false;
+  if (DECK.i >= DECK.list.length){
+    if (CARD_FROM_TODAY){ markDone(D, 'cards'); persist(); }
+    renderCards();
+  } else {
+    renderCard(v);
   }
 }
 
@@ -610,6 +931,21 @@ function renderStudy(){
     'examples, where Georgia differs from the national rule, and the mistakes that ' +
     'cost people marks. Open a topic to read it, then quiz yourself without leaving ' +
     'the page.'));
+  var sc = el('div', 'card');
+  sc.appendChild(cardHead('Look something up', 'searches every note and term'));
+  var sbox = el('div', 'searchbox');
+  var inp = el('input');
+  inp.type = 'search';
+  inp.placeholder = 'escheat, points, binding agreement date…';
+  inp.setAttribute('aria-label', 'Search the study notes');
+  sbox.appendChild(inp);
+  sc.appendChild(sbox);
+  var results = el('div');
+  results.style.cssText = 'display:flex;flex-direction:column;gap:.7rem;margin-top:.5rem';
+  sc.appendChild(results);
+  inp.oninput = function(){ runSearch(inp.value, results); };
+  box.appendChild(sc);
+
   box.appendChild(intro);
 
   var NAMES = {national: 'National portion', georgia: 'Georgia state portion',
@@ -731,6 +1067,63 @@ function checkBlock(sec){
     box.appendChild(wrap);
   });
   return box;
+}
+
+function highlight(text, needle){
+  var frag = document.createDocumentFragment();
+  var low = text.toLowerCase(), n = needle.toLowerCase(), at = 0, i;
+  while ((i = low.indexOf(n, at)) !== -1){
+    if (i > at) frag.appendChild(document.createTextNode(text.slice(at, i)));
+    frag.appendChild(el('mark', null, text.slice(i, i + needle.length)));
+    at = i + needle.length;
+  }
+  frag.appendChild(document.createTextNode(text.slice(at)));
+  return frag;
+}
+
+function runSearch(term, into){
+  into.innerHTML = '';
+  term = (term || '').trim();
+  if (term.length < 2) return;
+  var n = term.toLowerCase(), hits = [];
+  var tops = DATA.study.topics;
+  Object.keys(tops).forEach(function(tk){
+    var t = tops[tk];
+    t.vocab.forEach(function(pair){
+      if (pair[0].toLowerCase().indexOf(n) !== -1 ||
+          pair[1].toLowerCase().indexOf(n) !== -1){
+        hits.push({topic: tk, where: t.label + ' · vocabulary',
+                   text: pair[0] + ' — ' + pair[1], rank: 0});
+      }
+    });
+    t.sections.forEach(function(sec){
+      var body = (sec.p || []).concat(sec.l || []);
+      body.forEach(function(line){
+        if (line.toLowerCase().indexOf(n) !== -1){
+          hits.push({topic: tk, where: t.label + ' · ' + sec.h, text: line, rank: 1});
+        }
+      });
+    });
+  });
+  hits.sort(function(a, b){ return a.rank - b.rank; });
+  if (!hits.length){
+    into.appendChild(el('div', 'muted', 'Nothing found for “' + term + '”.'));
+    return;
+  }
+  into.appendChild(el('div', 'muted',
+    hits.length + (hits.length === 1 ? ' match' : ' matches')));
+  hits.slice(0, 25).forEach(function(h){
+    var d = el('div', 'hit');
+    d.appendChild(el('div', 'where', h.where));
+    var snip = el('div', 'snip');
+    var txt = h.text.length > 260 ? h.text.slice(0, 260) + '…' : h.text;
+    snip.appendChild(highlight(txt, term));
+    d.appendChild(snip);
+    var go = el('div');
+    go.appendChild(studyButton(h.topic, 'OPEN TOPIC'));
+    d.appendChild(go);
+    into.appendChild(d);
+  });
 }
 
 function renderStudyTopic(v, n){
