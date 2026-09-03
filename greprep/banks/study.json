@@ -201,36 +201,52 @@
    ],
    "vocab": [
     [
-     "Debit",
-     "An amount a party owes at closing."
-    ],
-    [
-     "Credit",
-     "An amount reducing what a party owes."
-    ],
-    [
-     "Proration",
-     "Dividing a shared expense between the parties by time."
-    ],
-    [
      "Arrears",
      "Paid after the period it covers, like Georgia property taxes."
-    ],
-    [
-     "Prepaid",
-     "Paid before the period it covers, like an annual insurance premium."
     ],
     [
      "Cash to close",
      "What the buyer must bring to the closing table."
     ],
     [
+     "Closing Disclosure",
+     "The TRID form due three business days before consummation."
+    ],
+    [
+     "Commission",
+     "The brokerage fee, a percentage of the sale price and normally a seller debit at closing."
+    ],
+    [
+     "Credit",
+     "An amount reducing what a party owes."
+    ],
+    [
+     "Debit",
+     "An amount a party owes at closing."
+    ],
+    [
+     "Loan payoff",
+     "The balance required to discharge the seller's existing loan; a seller debit."
+    ],
+    [
+     "Origination fee",
+     "The lender's charge for making the loan, calculated as a percentage of the loan."
+    ],
+    [
+     "Prepaid",
+     "Paid before the period it covers, like an annual insurance premium."
+    ],
+    [
+     "Proration",
+     "Dividing a shared expense between the parties by time."
+    ],
+    [
      "Seller's net proceeds",
      "What the seller walks away with after all debits."
     ],
     [
-     "Closing Disclosure",
-     "The TRID form due three business days before consummation."
+     "Settlement statement",
+     "The itemised accounting of debits and credits for each party at closing."
     ]
    ]
   },
@@ -375,24 +391,56 @@
    ],
    "vocab": [
     [
-     "Qualifying broker",
-     "The broker answerable to GREC for the firm."
+     "Certified licence history",
+     "The official record of licensure from another state, required to prove out-of-state experience."
     ],
     [
      "Consent settlement",
      "Agreed findings and sanction without a hearing."
     ],
     [
+     "Employer Identification Number",
+     "The tax identifier under which trust accounts should be opened, rather than a Social Security Number."
+    ],
+    [
      "OSAH",
      "Office of State Administrative Hearings, which supplies the ALJ."
+    ],
+    [
+     "Own motion",
+     "GREC's power to begin an investigation without any complaint being filed."
+    ],
+    [
+     "Pass-through coverage",
+     "FDIC treatment of each client in a trust account as a separate insured owner."
+    ],
+    [
+     "Qualifying broker",
+     "The broker answerable to GREC for the firm."
     ],
     [
      "Reconciliation statement",
      "A comparison of trust liability to the bank balance."
     ],
     [
+     "Reprimand",
+     "The mildest GREC sanction, a formal censure without loss of licence."
+    ],
+    [
+     "Revocation",
+     "Permanent loss of a licence."
+    ],
+    [
+     "Sanction",
+     "Any penalty GREC imposes: reprimand, fine, education, suspension or revocation."
+    ],
+    [
      "Signatory power",
      "The broker's required authority over the trust account."
+    ],
+    [
+     "Suspension",
+     "A temporary withdrawal of licensed authority imposed by GREC."
     ]
    ]
   },
@@ -526,28 +574,44 @@
    ],
    "vocab": [
     [
-     "Material fact",
-     "Anything affecting value, desirability, or the decision to buy."
+     "Conflict of interest",
+     "A personal stake that could compromise your duty to a client."
+    ],
+    [
+     "Errors and omissions insurance",
+     "Professional liability cover for a licensee's mistakes."
     ],
     [
      "Fraudulent concealment",
      "Actively hiding a known material defect."
     ],
     [
-     "Conflict of interest",
-     "A personal stake that could compromise your duty to a client."
-    ],
-    [
      "Interpleader",
      "Depositing disputed funds with a court to decide."
+    ],
+    [
+     "Material fact",
+     "Anything affecting value, desirability, or the decision to buy."
+    ],
+    [
+     "Ministerial act",
+     "A clerical, non-discretionary service for a customer."
+    ],
+    [
+     "Mortgage fraud",
+     "Misrepresenting the terms of a transaction to a lender, such as concealed cash back."
+    ],
+    [
+     "Referral fee",
+     "Payment for sending business; barred for settlement services under RESPA Section 8."
     ],
     [
      "RESPA Section 8",
      "Bans anything of value for referring settlement business."
     ],
     [
-     "Ministerial act",
-     "A clerical, non-discretionary service for a customer."
+     "Withdrawal",
+     "Ending a brokerage engagement, the required response to a client's unlawful instruction."
     ]
    ]
   },
@@ -749,76 +813,96 @@
    ],
    "vocab": [
     [
-     "Encumbrance",
-     "Any claim, lien, easement, or restriction limiting the fee."
-    ],
-    [
-     "Encroachment",
-     "A physical intrusion onto another's land."
-    ],
-    [
-     "Subrogation",
-     "One party stepping into another's legal claim, typical of insurers."
-    ],
-    [
-     "Subordination",
-     "Voluntarily lowering a lien's priority."
-    ],
-    [
-     "Satisfaction",
-     "The recorded document proving a debt is paid."
+     "Alluvion",
+     "The soil deposited by accretion."
     ],
     [
      "Assemblage",
      "Combining adjacent parcels."
     ],
     [
-     "Plottage",
-     "The added value created by assemblage."
-    ],
-    [
-     "Alluvion",
-     "The soil deposited by accretion."
-    ],
-    [
-     "Reliction",
-     "Land exposed by permanently receding water."
-    ],
-    [
-     "Procuring cause",
-     "The unbroken effort that produced a ready, willing and able buyer."
-    ],
-    [
-     "Equitable right of redemption",
-     "The right to cure default BEFORE the foreclosure sale."
-    ],
-    [
-     "Statutory right of redemption",
-     "A post-sale right to reclaim, where a state grants one."
+     "Chattel",
+     "Personal property."
     ],
     [
      "Emblements",
      "Annual crops; the tenant-farmer's personal property."
     ],
     [
-     "Chattel",
-     "Personal property."
+     "Encroachment",
+     "A physical intrusion onto another's land."
     ],
     [
-     "Novation",
-     "Substituting a party and releasing the original."
+     "Encumbrance",
+     "Any claim, lien, easement, or restriction limiting the fee."
     ],
     [
-     "Reformation",
-     "Court correction of a document to match true intent."
+     "Equitable right of redemption",
+     "The right to cure default BEFORE the foreclosure sale."
+    ],
+    [
+     "Escheat",
+     "Property passing to the state for want of a will or heirs."
+    ],
+    [
+     "Estate for years",
+     "A leasehold with fixed start and end dates, ending without notice."
+    ],
+    [
+     "Latent defect",
+     "A defect hidden from ordinary inspection."
     ],
     [
      "Lis pendens",
      "Recorded notice of pending litigation."
     ],
     [
-     "Escheat",
-     "Property passing to the state for want of a will or heirs."
+     "Novation",
+     "Substituting a party and releasing the original."
+    ],
+    [
+     "Patent defect",
+     "A defect obvious on reasonable inspection."
+    ],
+    [
+     "Periodic tenancy",
+     "A leasehold that renews automatically until notice is given."
+    ],
+    [
+     "Plottage",
+     "The added value created by assemblage."
+    ],
+    [
+     "Procuring cause",
+     "The unbroken effort that produced a ready, willing and able buyer."
+    ],
+    [
+     "Reformation",
+     "Court correction of a document to match true intent."
+    ],
+    [
+     "Reliction",
+     "Land exposed by permanently receding water."
+    ],
+    [
+     "Satisfaction",
+     "The recorded document proving a debt is paid."
+    ],
+    [
+     "Statutory right of redemption",
+     "A post-sale right to reclaim, where a state grants one."
+    ],
+    [
+     "Subordination",
+     "Voluntarily lowering a lien's priority."
+    ],
+    [
+     "Subrogation",
+     "One party stepping into another's legal claim, typical of insurers."
+    ],
+    [
+     "Tenancy at will",
+     "A leasehold endable at either party's pleasure."
     ]
    ]
   },
@@ -1094,44 +1178,44 @@
    ],
    "vocab": [
     [
-     "BRRETA",
-     "Brokerage Relationships in Real Estate Transactions Act, O.C.G.A. Title 10 Ch. 6A."
+     "Adverse material fact",
+     "A known fact that would materially affect the transaction."
     ],
     [
      "Brokerage engagement",
      "The written contract making someone a broker's client."
     ],
     [
+     "BRRETA",
+     "Brokerage Relationships in Real Estate Transactions Act, O.C.G.A. Title 10 Ch. 6A."
+    ],
+    [
      "Client",
      "A represented party under a brokerage engagement."
-    ],
-    [
-     "Customer",
-     "An unrepresented party for whom ministerial acts may be performed."
-    ],
-    [
-     "Ministerial acts",
-     "Acts requiring no discretion or judgement by the broker."
-    ],
-    [
-     "Dual agent",
-     "A broker with client relationships on both sides of one transaction."
-    ],
-    [
-     "Designated agent",
-     "A licensee assigned to represent one client exclusively in a transaction."
-    ],
-    [
-     "Adverse material fact",
-     "A known fact that would materially affect the transaction."
     ],
     [
      "Confidential information",
      "Information a client has not consented to disclose that could harm their position."
     ],
     [
+     "Customer",
+     "An unrepresented party for whom ministerial acts may be performed."
+    ],
+    [
+     "Designated agent",
+     "A licensee assigned to represent one client exclusively in a transaction."
+    ],
+    [
+     "Dual agent",
+     "A broker with client relationships on both sides of one transaction."
+    ],
+    [
      "Imputation of knowledge",
      "Attributing one person's knowledge to another; removed for designated agency."
+    ],
+    [
+     "Ministerial acts",
+     "Acts requiring no discretion or judgement by the broker."
     ]
    ]
   },
@@ -1340,20 +1424,28 @@
    ],
    "vocab": [
     [
+     "Appraisal contingency",
+     "A term protecting the buyer if the property appraises below the contract price."
+    ],
+    [
+     "Automatic renewal",
+     "A clause rolling an agreement forward by default; prohibited in Georgia listings."
+    ],
+    [
      "Binding agreement date",
      "The date acceptance is communicated; all deadlines run from it."
+    ],
+    [
+     "Definiteness",
+     "The requirement that a contract identify the property with reasonable certainty."
     ],
     [
      "Due diligence period",
      "The buyer's window to inspect and, typically, terminate for any reason."
     ],
     [
-     "Special stipulation",
-     "A typed or handwritten term that prevails over preprinted text."
-    ],
-    [
-     "Unauthorised practice of law",
-     "Drafting legal instruments or advising on them without a licence."
+     "Financing contingency",
+     "A term letting the buyer terminate if the stated loan cannot be obtained."
     ],
     [
      "Kick-out clause",
@@ -1364,8 +1456,16 @@
      "An agreed sum, usually the earnest money, as the measure of loss."
     ],
     [
-     "Definiteness",
-     "The requirement that a contract identify the property with reasonable certainty."
+     "Sale-of-property contingency",
+     "A term making the purchase conditional on the buyer selling an existing home."
+    ],
+    [
+     "Special stipulation",
+     "A typed or handwritten term that prevails over preprinted text."
+    ],
+    [
+     "Unauthorised practice of law",
+     "Drafting legal instruments or advising on them without a licence."
     ]
    ]
   },
@@ -1536,20 +1636,56 @@
      "A known fact materially affecting the property or transaction."
     ],
     [
+     "As-is sale",
+     "A sale without seller repairs; it does not remove the duty to disclose known defects."
+    ],
+    [
+     "Caveat emptor",
+     "'Let the buyer beware' - the old rule, largely displaced by disclosure duties."
+    ],
+    [
+     "Flood plain",
+     "Land subject to flooding, affecting value, insurability and lender requirements."
+    ],
+    [
+     "Latent defect",
+     "A hidden defect a buyer could not find on ordinary inspection; disclosable where known."
+    ],
+    [
+     "Lead-based paint disclosure",
+     "The federal disclosure, records, pamphlet and 10-day test window required for pre-1978 housing."
+    ],
+    [
+     "Licensee-as-principal disclosure",
+     "Written disclosure of licensed status when buying or selling for yourself."
+    ],
+    [
+     "Material defect",
+     "A known physical condition affecting the property's value, safety or use, which must be disclosed."
+    ],
+    [
      "No duty to discover",
      "Georgia's rule that brokers need not investigate for defects."
+    ],
+    [
+     "Patent defect",
+     "A defect obvious on reasonable inspection."
     ],
     [
      "Property disclosure statement",
      "The seller's written statement of known conditions."
     ],
     [
-     "Stigmatized property",
-     "Property affected by events rather than physical condition."
+     "Psychological impact",
+     "A stigma arising from events rather than condition; generally not disclosable in Georgia."
     ],
     [
-     "Licensee-as-principal disclosure",
-     "Written disclosure of licensed status when buying or selling for yourself."
+     "Seller's property disclosure",
+     "The written statement of known conditions, completed by the seller from personal knowledge."
+    ],
+    [
+     "Stigmatized property",
+     "Property affected by events rather than physical condition."
     ]
    ]
   },
@@ -1707,6 +1843,18 @@
    ],
    "vocab": [
     [
+     "Assistance animal",
+     "Not a pet; no pet fee may be charged."
+    ],
+    [
+     "Blockbusting",
+     "Inducing sales with claims about a protected group moving in."
+    ],
+    [
+     "Disparate impact",
+     "A neutral policy with discriminatory effect."
+    ],
+    [
      "Fair Housing Act",
      "The federal law barring housing discrimination on seven grounds."
     ],
@@ -1719,36 +1867,24 @@
      "Disability, including HIV/AIDS; a protected class."
     ],
     [
-     "Steering",
-     "Channelling people toward or away from areas by protected class."
-    ],
-    [
-     "Blockbusting",
-     "Inducing sales with claims about a protected group moving in."
-    ],
-    [
-     "Redlining",
-     "Refusing or pricing loans by area demographics."
-    ],
-    [
-     "Reasonable modification",
-     "A physical change at the tenant's expense."
+     "Housing for older persons",
+     "The narrow exemption from familial status protection."
     ],
     [
      "Reasonable accommodation",
      "A rules change at the provider's expense."
     ],
     [
-     "Assistance animal",
-     "Not a pet; no pet fee may be charged."
+     "Reasonable modification",
+     "A physical change at the tenant's expense."
     ],
     [
-     "Disparate impact",
-     "A neutral policy with discriminatory effect."
+     "Redlining",
+     "Refusing or pricing loans by area demographics."
     ],
     [
-     "Housing for older persons",
-     "The narrow exemption from familial status protection."
+     "Steering",
+     "Channelling people toward or away from areas by protected class."
     ]
    ]
   },
@@ -2010,32 +2146,12 @@
    ],
    "vocab": [
     [
-     "GREC",
-     "The Georgia Real Estate Commission; members appointed by the Governor."
-    ],
-    [
-     "Qualifying broker",
-     "The broker responsible to GREC for a firm's compliance."
+     "Administrative Law Judge",
+     "The OSAH officer who conducts formal GREC hearings."
     ],
     [
      "Associate broker",
      "A broker-licensed individual working under a qualifying broker."
-    ],
-    [
-     "Prelicense course",
-     "75 hours for salesperson; 60 for broker."
-    ],
-    [
-     "Postlicense course",
-     "25 hours due within one year of original licensure."
-    ],
-    [
-     "Continuing education",
-     "24 hours per four-year renewal period."
-    ],
-    [
-     "Inactive status",
-     "Holding a licence without affiliating; no licensed activity permitted."
     ],
     [
      "Change application",
@@ -2050,8 +2166,40 @@
      "Agreed findings, conclusions and sanction without a hearing."
     ],
     [
-     "Administrative Law Judge",
-     "The OSAH officer who conducts formal GREC hearings."
+     "Continuing education",
+     "24 hours per four-year renewal period."
+    ],
+    [
+     "Experience requirement",
+     "For a Georgia broker or associate broker, an active licence for three of the five years preceding application."
+    ],
+    [
+     "GREC",
+     "The Georgia Real Estate Commission; members appointed by the Governor."
+    ],
+    [
+     "Inactive status",
+     "Holding a licence without affiliating; no licensed activity permitted."
+    ],
+    [
+     "Net listing",
+     "Broker keeps everything above the seller's stated net; strictly limited in Georgia."
+    ],
+    [
+     "O.C.G.A.",
+     "Official Code of Georgia Annotated."
+    ],
+    [
+     "Postlicense course",
+     "25 hours due within one year of original licensure."
+    ],
+    [
+     "Prelicense course",
+     "75 hours for salesperson; 60 for broker."
+    ],
+    [
+     "Qualifying broker",
+     "The broker responsible to GREC for a firm's compliance."
     ],
     [
      "Reprimand",
@@ -2062,12 +2210,8 @@
      "Permanent loss of licence."
     ],
     [
-     "Net listing",
-     "Broker keeps everything above the seller's stated net; strictly limited in Georgia."
-    ],
-    [
-     "O.C.G.A.",
-     "Official Code of Georgia Annotated."
+     "Wall certificate",
+     "The licence document issued to a firm, surrendered to GREC on suspension."
     ]
    ]
   },
@@ -2286,32 +2430,8 @@
    ],
    "vocab": [
     [
-     "Security deed",
-     "Georgia's instrument conveying title to the lender as security."
-    ],
-    [
-     "Title theory",
-     "The doctrine that the lender holds legal title until the debt is paid."
-    ],
-    [
-     "Power of sale",
-     "The clause permitting nonjudicial foreclosure."
-    ],
-    [
-     "Legal organ",
-     "The county newspaper designated for official legal advertisements."
-    ],
-    [
-     "Confirmation of sale",
-     "Court approval required before pursuing a deficiency in Georgia."
-    ],
-    [
-     "Transfer tax",
-     "$1.00 per $1,000 of consideration, customarily paid by the seller."
-    ],
-    [
-     "Intangible recording tax",
-     "A Georgia tax on long-term notes secured by real estate."
+     "Advertisement",
+     "Publication of a foreclosure in the county legal organ, customarily for four weeks."
     ],
     [
      "Clerk of superior court",
@@ -2320,6 +2440,38 @@
     [
      "Colour of title",
      "A defective written instrument that appears to convey title."
+    ],
+    [
+     "Confirmation of sale",
+     "Court approval required before pursuing a deficiency in Georgia."
+    ],
+    [
+     "Deed to secure debt",
+     "Another name for Georgia's security deed, conveying title to the lender until payoff."
+    ],
+    [
+     "Intangible recording tax",
+     "A Georgia tax on long-term notes secured by real estate."
+    ],
+    [
+     "Legal organ",
+     "The county newspaper designated for official legal advertisements."
+    ],
+    [
+     "Power of sale",
+     "The clause permitting nonjudicial foreclosure."
+    ],
+    [
+     "Security deed",
+     "Georgia's instrument conveying title to the lender as security."
+    ],
+    [
+     "Title theory",
+     "The doctrine that the lender holds legal title until the debt is paid."
+    ],
+    [
+     "Transfer tax",
+     "$1.00 per $1,000 of consideration, customarily paid by the seller."
     ]
    ]
   },
@@ -2569,14 +2721,6 @@
    ],
    "vocab": [
     [
-     "Trust account",
-     "A separate, federally insured, bank-designated account for client funds."
-    ],
-    [
-     "Escrow",
-     "Money or documents held by a neutral party pending closing."
-    ],
-    [
      "Commingling",
      "Mixing trust funds with the broker's own money."
     ],
@@ -2585,12 +2729,16 @@
      "Using or spending trust funds."
     ],
     [
-     "Signatory power",
-     "The broker's authority to sign on the account; required."
-    ],
-    [
      "EIN",
      "Employer Identification Number; trust accounts should be opened under one."
+    ],
+    [
+     "Escrow",
+     "Money or documents held by a neutral party pending closing."
+    ],
+    [
+     "Interpleader",
+     "A court action to resolve competing claims to held funds."
     ],
     [
      "Pass-through coverage",
@@ -2601,8 +2749,12 @@
      "Comparing total trust liability against the bank balance."
     ],
     [
-     "Interpleader",
-     "A court action to resolve competing claims to held funds."
+     "Signatory power",
+     "The broker's authority to sign on the account; required."
+    ],
+    [
+     "Trust account",
+     "A separate, federally insured, bank-designated account for client funds."
     ]
    ]
   },
@@ -2839,88 +2991,112 @@
    ],
    "vocab": [
     [
+     "Accounting",
+     "The duty to account for all money and documents; it survives closing."
+    ],
+    [
      "Agency",
      "A relationship where one person acts for another with authority."
-    ],
-    [
-     "Principal / client",
-     "The represented party, owed full duties."
-    ],
-    [
-     "Customer",
-     "An unrepresented party owed honesty and material-defect disclosure."
-    ],
-    [
-     "Fiduciary",
-     "One who holds a position of trust and must act in another's interest."
-    ],
-    [
-     "OLD CAR",
-     "Obedience, Loyalty, Disclosure, Confidentiality, Accounting, Reasonable care."
-    ],
-    [
-     "Express agency",
-     "Agency created by explicit written or spoken agreement."
-    ],
-    [
-     "Implied agency",
-     "Agency created accidentally by conduct."
-    ],
-    [
-     "Ratification",
-     "Approving an unauthorised act after it occurred."
-    ],
-    [
-     "Estoppel",
-     "Being barred from denying an agency your conduct created."
-    ],
-    [
-     "Special agent",
-     "Limited authority for a single transaction."
-    ],
-    [
-     "General agent",
-     "Ongoing authority across a range of matters."
-    ],
-    [
-     "Universal agent",
-     "Authority to act in all matters, typically by power of attorney."
-    ],
-    [
-     "Subagent",
-     "An agent working through the listing broker, owing duties to the seller."
-    ],
-    [
-     "Dual agent",
-     "A broker representing both parties in one transaction."
-    ],
-    [
-     "Designated agent",
-     "A licensee assigned to represent one client exclusively within a firm."
-    ],
-    [
-     "Puffing",
-     "Exaggerated opinion that is not a statement of fact."
-    ],
-    [
-     "Misrepresentation",
-     "A false statement of material fact."
     ],
     [
      "Commingling",
      "Mixing client trust funds with the broker's own funds."
     ],
     [
+     "Confidentiality",
+     "The duty to protect a client's private information; it survives the end of the relationship."
+    ],
+    [
      "Conversion",
      "Spending or using client trust funds."
+    ],
+    [
+     "Customer",
+     "An unrepresented party owed honesty and material-defect disclosure."
+    ],
+    [
+     "Designated agent",
+     "A licensee assigned to represent one client exclusively within a firm."
+    ],
+    [
+     "Dual agent",
+     "A broker representing both parties in one transaction."
+    ],
+    [
+     "Estoppel",
+     "Being barred from denying an agency your conduct created."
+    ],
+    [
+     "Express agency",
+     "Agency created by explicit written or spoken agreement."
+    ],
+    [
+     "Fiduciary",
+     "One who holds a position of trust and must act in another's interest."
+    ],
+    [
+     "General agent",
+     "Ongoing authority across a range of matters."
+    ],
+    [
+     "Implied agency",
+     "Agency created accidentally by conduct."
+    ],
+    [
+     "Loyalty",
+     "The duty to put the client's interests ahead of the agent's own."
+    ],
+    [
+     "Misrepresentation",
+     "A false statement of material fact."
+    ],
+    [
+     "Obedience",
+     "The duty to follow a client's lawful instructions, and to refuse unlawful ones."
+    ],
+    [
+     "OLD CAR",
+     "Obedience, Loyalty, Disclosure, Confidentiality, Accounting, Reasonable care."
+    ],
+    [
+     "Principal / client",
+     "The represented party, owed full duties."
     ],
     [
      "Procuring cause",
      "The uninterrupted effort that produced a ready, willing and able buyer."
     ],
     [
+     "Puffing",
+     "Exaggerated opinion that is not a statement of fact."
+    ],
+    [
+     "Ratification",
+     "Approving an unauthorised act after it occurred."
+    ],
+    [
      "Ready, willing and able",
      "A buyer prepared to purchase on the seller's terms."
+    ],
+    [
+     "Reasonable care",
+     "The duty to act with the competence and skill expected of a licensee."
+    ],
+    [
+     "Special agent",
+     "Limited authority for a single transaction."
+    ],
+    [
+     "Subagent",
+     "An agent working through the listing broker, owing duties to the seller."
+    ],
+    [
+     "Undisclosed personal interest",
+     "A family or financial stake in a party that must be disclosed in writing before an offer is considered."
+    ],
+    [
+     "Universal agent",
+     "Authority to act in all matters, typically by power of attorney."
     ]
    ]
   },
@@ -3254,80 +3430,76 @@
    ],
    "vocab": [
     [
-     "Statute of Frauds",
-     "Requires real estate contracts to be in writing and signed."
-    ],
-    [
-     "Mutual assent",
-     "A valid offer met by a matching acceptance."
-    ],
-    [
-     "Consideration",
-     "Something of value exchanged by each party."
-    ],
-    [
-     "Void",
-     "Never a contract at all."
-    ],
-    [
-     "Voidable",
-     "Valid until the protected party disaffirms."
-    ],
-    [
-     "Unenforceable",
-     "Apparently valid but a court will not enforce it."
-    ],
-    [
-     "Mirror-image rule",
-     "Acceptance must match the offer exactly or it is a counteroffer."
-    ],
-    [
-     "Counteroffer",
-     "A response changing terms; rejects and replaces the original offer."
+     "Assignment",
+     "Transfer of contract rights; assignor stays secondarily liable."
     ],
     [
      "Bilateral contract",
      "A promise exchanged for a promise."
     ],
     [
-     "Unilateral contract",
-     "A promise exchanged for an act."
+     "Compensatory damages",
+     "Money awarded for the actual loss proven, as opposed to an agreed sum."
     ],
     [
-     "Executory",
-     "Signed but not yet fully performed."
-    ],
-    [
-     "Executed",
-     "Fully performed by both parties."
-    ],
-    [
-     "Contingency",
-     "A condition that must be met before performance is due."
+     "Competent parties",
+     "Parties of legal age and sound mind, a requirement of a valid contract."
     ],
     [
      "Condition precedent",
      "A condition that must occur before a duty arises."
     ],
     [
-     "Specific performance",
-     "A court order compelling the actual transfer."
+     "Consideration",
+     "Something of value exchanged by each party."
+    ],
+    [
+     "Contingency",
+     "A condition that must be met before performance is due."
+    ],
+    [
+     "Counteroffer",
+     "A response changing terms; rejects and replaces the original offer."
+    ],
+    [
+     "Earnest money",
+     "A good-faith deposit; evidence of intent, not what makes the contract valid."
+    ],
+    [
+     "Equitable conversion",
+     "The doctrine placing risk of loss on the buyer at signing."
+    ],
+    [
+     "Equitable title",
+     "The buyer's interest after contracting but before closing."
+    ],
+    [
+     "Executed",
+     "Fully performed by both parties."
+    ],
+    [
+     "Executory",
+     "Signed but not yet fully performed."
+    ],
+    [
+     "Land contract",
+     "Seller keeps legal title; buyer holds equitable title and possession."
+    ],
+    [
+     "Lawful object",
+     "A legal purpose, without which a contract is void."
     ],
     [
      "Liquidated damages",
      "An amount agreed in advance as the measure of loss."
     ],
     [
-     "Rescission",
-     "Unwinding a contract and restoring the parties."
+     "Mirror-image rule",
+     "Acceptance must match the offer exactly or it is a counteroffer."
     ],
     [
-     "Reformation",
-     "Court correction of a document to reflect true intent."
-    ],
-    [
-     "Assignment",
-     "Transfer of contract rights; assignor stays secondarily liable."
+     "Mutual assent",
+     "A valid offer met by a matching acceptance."
     ],
     [
      "Novation",
@@ -3342,28 +3514,48 @@
      "The one who must sell / the one who may buy."
     ],
     [
-     "Land contract",
-     "Seller keeps legal title; buyer holds equitable title and possession."
+     "Reformation",
+     "Court correction of a document to reflect true intent."
     ],
     [
-     "Equitable title",
-     "The buyer's interest after contracting but before closing."
+     "Rescission",
+     "Unwinding a contract and restoring the parties."
     ],
     [
      "Right of first refusal",
      "The right to match an offer the owner receives."
     ],
     [
-     "Earnest money",
-     "A good-faith deposit; evidence of intent, not what makes the contract valid."
+     "Specific performance",
+     "A court order compelling the actual transfer."
+    ],
+    [
+     "Statute of Frauds",
+     "Requires real estate contracts to be in writing and signed."
     ],
     [
      "Time is of the essence",
      "A clause making stated dates strictly binding."
     ],
     [
-     "Equitable conversion",
-     "The doctrine placing risk of loss on the buyer at signing."
+     "Unenforceable",
+     "Apparently valid but a court will not enforce it."
+    ],
+    [
+     "Unilateral contract",
+     "A promise exchanged for an act."
+    ],
+    [
+     "Valid contract",
+     "One meeting all requirements and binding on both parties."
+    ],
+    [
+     "Void",
+     "Never a contract at all."
+    ],
+    [
+     "Voidable",
+     "Valid until the protected party disaffirms."
     ]
    ]
   },
@@ -3597,48 +3789,52 @@
    ],
    "vocab": [
     [
-     "Material fact",
-     "Anything affecting value, desirability, or the decision to buy."
+     "Asbestos",
+     "A fibrous mineral hazardous when friable; often best encapsulated rather than removed."
     ],
     [
-     "Latent defect",
-     "A hidden defect not discoverable by ordinary inspection."
-    ],
-    [
-     "Patent defect",
-     "An obvious defect visible on reasonable inspection."
-    ],
-    [
-     "Stigmatized property",
-     "Property made undesirable by events rather than condition."
+     "Brownfield",
+     "A property whose redevelopment is complicated by contamination."
     ],
     [
      "Caveat emptor",
      "'Let the buyer beware' - largely displaced by disclosure duties."
     ],
     [
-     "Target housing",
-     "Residential property built before 1978, covered by the lead rule."
-    ],
-    [
-     "Friable",
-     "Able to be crumbled by hand, releasing fibres into the air."
+     "CERCLA",
+     "Superfund; imposes strict, joint and several, retroactive cleanup liability."
     ],
     [
      "Encapsulation",
      "Sealing a hazard in place instead of removing it."
     ],
     [
-     "Radon",
-     "A naturally occurring radioactive gas that enters through the foundation."
+     "Fraudulent concealment",
+     "Actively hiding a known material defect."
     ],
     [
-     "CERCLA",
-     "Superfund; imposes strict, joint and several, retroactive cleanup liability."
+     "Friable",
+     "Able to be crumbled by hand, releasing fibres into the air."
     ],
     [
      "Innocent landowner defence",
      "A CERCLA defence requiring pre-purchase due diligence."
+    ],
+    [
+     "Latent defect",
+     "A hidden defect not discoverable by ordinary inspection."
+    ],
+    [
+     "Material fact",
+     "Anything affecting value, desirability, or the decision to buy."
+    ],
+    [
+     "Mould",
+     "Fungal growth from moisture intrusion; a disclosable condition where known."
+    ],
+    [
+     "Patent defect",
+     "An obvious defect visible on reasonable inspection."
     ],
     [
      "Phase I ESA",
@@ -3649,12 +3845,20 @@
      "Sampling and testing that follows a concerning Phase I."
     ],
     [
-     "Brownfield",
-     "A property whose redevelopment is complicated by contamination."
+     "Radon",
+     "A naturally occurring radioactive gas that enters through the foundation."
     ],
     [
-     "Fraudulent concealment",
-     "Actively hiding a known material defect."
+     "Stigmatized property",
+     "Property made undesirable by events rather than condition."
+    ],
+    [
+     "Target housing",
+     "Residential property built before 1978, covered by the lead rule."
+    ],
+    [
+     "Underground storage tank",
+     "A buried tank whose leakage can contaminate soil and groundwater."
     ]
    ]
   },
@@ -3966,80 +4170,72 @@
    ],
    "vocab": [
     [
-     "Promissory note",
-     "The borrower's written promise to repay the debt."
-    ],
-    [
-     "Security deed",
-     "Georgia's instrument conveying title to the lender as security."
-    ],
-    [
-     "Deed of trust",
-     "A three-party security instrument using a trustee."
-    ],
-    [
-     "Mortgagor / mortgagee",
-     "Borrower / lender."
-    ],
-    [
      "Acceleration clause",
      "Makes the entire balance due on default."
+    ],
+    [
+     "Adjustable-rate mortgage",
+     "A loan whose rate is index plus margin, adjusted periodically within caps."
     ],
     [
      "Alienation clause",
      "Due-on-sale; makes the balance due on transfer."
     ],
     [
-     "Defeasance clause",
-     "Requires release of the lien when the debt is paid."
-    ],
-    [
-     "Subordination",
-     "Voluntarily lowering a lien's priority."
-    ],
-    [
      "Assumption",
      "Buyer takes over the loan and becomes primarily liable."
-    ],
-    [
-     "Novation",
-     "Substituting a new party and releasing the original."
-    ],
-    [
-     "Subject to",
-     "Taking title without personal liability on the loan."
-    ],
-    [
-     "Deficiency judgment",
-     "A judgment for the shortfall after a foreclosure sale."
-    ],
-    [
-     "Fully amortized loan",
-     "Level payments that retire the debt by maturity."
     ],
     [
      "Balloon payment",
      "A large final payment on a partially amortized loan."
     ],
     [
+     "Blanket mortgage",
+     "One loan covering several parcels, with a release clause."
+    ],
+    [
+     "Closing Disclosure",
+     "TRID form the borrower must receive 3 business days before closing."
+    ],
+    [
+     "Conforming loan",
+     "A conventional loan meeting Fannie Mae and Freddie Mac purchase limits."
+    ],
+    [
+     "Construction loan",
+     "Short-term financing disbursed in draws as building progresses."
+    ],
+    [
+     "Conventional loan",
+     "A loan that is not government insured or guaranteed."
+    ],
+    [
+     "Deed of trust",
+     "A three-party security instrument using a trustee."
+    ],
+    [
+     "Defeasance clause",
+     "Requires release of the lien when the debt is paid."
+    ],
+    [
+     "Deficiency judgment",
+     "A judgment for the shortfall after a foreclosure sale."
+    ],
+    [
      "Discount point",
      "1% of the loan amount, paid to raise the lender's yield."
     ],
     [
-     "Origination fee",
-     "A lender's charge for making the loan, as a % of the loan."
+     "ECOA",
+     "Equal Credit Opportunity Act; bars discrimination in lending."
     ],
     [
-     "Loan-to-value (LTV)",
-     "Loan divided by the lesser of price or appraised value."
+     "FHA loan",
+     "A loan insured by the Federal Housing Administration, with a low down payment and required MIP."
     ],
     [
-     "PMI",
-     "Private mortgage insurance on conventional loans above 80% LTV; protects the lender."
-    ],
-    [
-     "MIP",
-     "FHA's mortgage insurance premium."
+     "Fully amortized loan",
+     "Level payments that retire the debt by maturity."
     ],
     [
      "Funding fee",
@@ -4050,24 +4246,64 @@
      "An ARM's moving benchmark plus the lender's fixed markup."
     ],
     [
-     "Purchase-money mortgage",
-     "Seller financing taken back at closing."
+     "Loan Estimate",
+     "TRID disclosure due within 3 business days of application."
     ],
     [
-     "Blanket mortgage",
-     "One loan covering several parcels, with a release clause."
+     "Loan-to-value (LTV)",
+     "Loan divided by the lesser of price or appraised value."
     ],
     [
-     "Wraparound mortgage",
-     "A new loan encompassing an existing one that stays in place."
+     "MIP",
+     "FHA's mortgage insurance premium."
+    ],
+    [
+     "Mortgagor / mortgagee",
+     "Borrower / lender."
+    ],
+    [
+     "Novation",
+     "Substituting a new party and releasing the original."
+    ],
+    [
+     "Open-end mortgage",
+     "A loan permitting the borrower to re-borrow up to a set limit."
+    ],
+    [
+     "Origination fee",
+     "A lender's charge for making the loan, as a % of the loan."
+    ],
+    [
+     "Package mortgage",
+     "A loan secured by real property together with personal property."
+    ],
+    [
+     "Partial release",
+     "A blanket-mortgage clause freeing individual parcels as portions of the debt are paid."
+    ],
+    [
+     "Partially amortized loan",
+     "Level payments that do not retire the debt, leaving a balloon at maturity."
+    ],
+    [
+     "PMI",
+     "Private mortgage insurance on conventional loans above 80% LTV; protects the lender."
+    ],
+    [
+     "Prepayment penalty",
+     "A charge imposed for paying a loan off early."
     ],
     [
      "Primary market",
      "Where loans are originated to consumers."
     ],
     [
-     "Secondary market",
-     "Where existing loans are bought and sold, providing liquidity."
+     "Promissory note",
+     "The borrower's written promise to repay the debt."
+    ],
+    [
+     "Purchase-money mortgage",
+     "Seller financing taken back at closing."
     ],
     [
      "Regulation Z",
@@ -4078,20 +4314,32 @@
      "Governs settlement services and bans kickbacks for referrals."
     ],
     [
-     "Loan Estimate",
-     "TRID disclosure due within 3 business days of application."
+     "Secondary market",
+     "Where existing loans are bought and sold, providing liquidity."
     ],
     [
-     "Closing Disclosure",
-     "TRID form the borrower must receive 3 business days before closing."
+     "Security deed",
+     "Georgia's instrument conveying title to the lender as security."
     ],
     [
-     "ECOA",
-     "Equal Credit Opportunity Act; bars discrimination in lending."
+     "Subject to",
+     "Taking title without personal liability on the loan."
+    ],
+    [
+     "Subordination",
+     "Voluntarily lowering a lien's priority."
+    ],
+    [
+     "Term loan",
+     "A straight loan of interest only, with the whole principal due at the end."
     ],
     [
      "Usury",
      "Charging interest above the legal maximum."
+    ],
+    [
+     "Wraparound mortgage",
+     "A new loan encompassing an existing one that stays in place."
     ]
    ]
   },
@@ -4290,36 +4538,68 @@
    ],
    "vocab": [
     [
-     "Police power",
-     "Government's power to regulate land use for public welfare without paying."
+     "Buffer zone",
+     "A transitional strip between incompatible zoning districts."
     ],
     [
-     "Eminent domain",
-     "The power to take private property for public use with just compensation."
+     "CC&Rs",
+     "Covenants, conditions and restrictions - recorded private land use controls."
     ],
     [
-     "Condemnation",
-     "The legal proceeding that exercises eminent domain."
-    ],
-    [
-     "Inverse condemnation",
-     "An owner's suit claiming regulation has effectively taken the property."
-    ],
-    [
-     "Escheat",
-     "Transfer to the state when an owner dies with no will and no heirs."
+     "Certificate of occupancy",
+     "The document confirming a structure may lawfully be occupied."
     ],
     [
      "Comprehensive plan",
      "The long-range policy guide that zoning implements."
     ],
     [
+     "Condemnation",
+     "The legal proceeding that exercises eminent domain."
+    ],
+    [
+     "Downzoning",
+     "Reducing the permitted intensity of use across an area."
+    ],
+    [
+     "Eminent domain",
+     "The power to take private property for public use with just compensation."
+    ],
+    [
+     "Environmental Impact Statement",
+     "The NEPA study required for major federal actions."
+    ],
+    [
+     "Escheat",
+     "Transfer to the state when an owner dies with no will and no heirs."
+    ],
+    [
+     "Inverse condemnation",
+     "An owner's suit claiming regulation has effectively taken the property."
+    ],
+    [
+     "Master plan",
+     "The long-range policy document that zoning ordinances implement."
+    ],
+    [
      "Nonconforming use",
      "A lawful pre-existing use that does not meet current zoning."
     ],
     [
-     "Variance",
-     "Permission to deviate from a dimensional zoning requirement on hardship grounds."
+     "Plat",
+     "A recorded subdivision map showing lots, blocks, and easements."
+    ],
+    [
+     "Police power",
+     "Government's power to regulate land use for public welfare without paying."
+    ],
+    [
+     "Run with the land",
+     "A restriction or benefit that binds and passes to later owners."
+    ],
+    [
+     "Setback",
+     "The required distance between a lot line and a structure."
     ],
     [
      "Special use permit",
@@ -4330,36 +4610,12 @@
      "Rezoning one parcel inconsistently with the plan; generally invalid."
     ],
     [
-     "Downzoning",
-     "Reducing the permitted intensity of use across an area."
+     "Taxation",
+     "The government power to levy against property to fund public services; one of the four in PETE."
     ],
     [
-     "Buffer zone",
-     "A transitional strip between incompatible zoning districts."
-    ],
-    [
-     "Setback",
-     "The required distance between a lot line and a structure."
-    ],
-    [
-     "CC&Rs",
-     "Covenants, conditions and restrictions - recorded private land use controls."
-    ],
-    [
-     "Run with the land",
-     "A restriction or benefit that binds and passes to later owners."
-    ],
-    [
-     "Certificate of occupancy",
-     "The document confirming a structure may lawfully be occupied."
-    ],
-    [
-     "Environmental Impact Statement",
-     "The NEPA study required for major federal actions."
-    ],
-    [
-     "Plat",
-     "A recorded subdivision map showing lots, blocks, and easements."
+     "Variance",
+     "Permission to deviate from a dimensional zoning requirement on hardship grounds."
     ]
    ]
   },
@@ -4659,52 +4915,52 @@
      "43,560 square feet."
     ],
     [
-     "Section",
-     "One square mile, 640 acres."
-    ],
-    [
-     "Township",
-     "36 sections, six miles square."
-    ],
-    [
-     "Front foot",
-     "A measure of frontage along a street or water."
-    ],
-    [
-     "Basis",
-     "The original cost used to compute depreciation or gain."
-    ],
-    [
-     "Straight-line depreciation",
-     "Equal annual deductions over a useful life."
-    ],
-    [
-     "Proration",
-     "Dividing a shared expense between buyer and seller at closing."
+     "Back-end ratio",
+     "All recurring debt divided by gross monthly income."
     ],
     [
      "Banker's year",
      "A 360-day year of twelve 30-day months."
     ],
     [
-     "Debit",
-     "An amount a party owes at closing."
+     "Basis",
+     "The original cost used to compute depreciation or gain."
     ],
     [
      "Credit",
      "An amount reducing what a party owes."
     ],
     [
+     "Debit",
+     "An amount a party owes at closing."
+    ],
+    [
+     "Front foot",
+     "A measure of frontage along a street or water."
+    ],
+    [
      "Front-end ratio",
      "Housing expense divided by gross monthly income."
     ],
     [
-     "Back-end ratio",
-     "All recurring debt divided by gross monthly income."
-    ],
-    [
      "PITI",
      "Principal, interest, taxes, and insurance."
+    ],
+    [
+     "Proration",
+     "Dividing a shared expense between buyer and seller at closing."
+    ],
+    [
+     "Section",
+     "One square mile, 640 acres."
+    ],
+    [
+     "Straight-line depreciation",
+     "Equal annual deductions over a useful life."
+    ],
+    [
+     "Township",
+     "36 sections, six miles square."
     ]
    ]
   },
@@ -5028,24 +5284,144 @@
    ],
    "vocab": [
     [
-     "Fee simple absolute",
-     "Ownership with no conditions and no time limit; the complete bundle of rights."
+     "Adaptation",
+     "How specifically an item is fitted to the property; one of the three fixture tests."
+    ],
+    [
+     "Annexation",
+     "How firmly an item is attached to the property; one of the three fixture tests."
+    ],
+    [
+     "CC&Rs",
+     "Covenants, conditions and restrictions: recorded private controls enforceable by benefited owners."
+    ],
+    [
+     "Chattel",
+     "Personal property."
+    ],
+    [
+     "Common elements",
+     "The parts of a condominium owned by all unit owners as tenants in common."
+    ],
+    [
+     "Community property",
+     "A marital ownership form used in nine states. Georgia is not one of them."
+    ],
+    [
+     "Condominium",
+     "Fee simple ownership of a unit plus an undivided tenancy-in-common share of the common elements."
+    ],
+    [
+     "Cooperative",
+     "A corporation owns the building; the resident owns shares of stock plus a proprietary lease."
     ],
     [
      "Defeasible fee",
      "A fee that can be lost if a stated condition occurs."
     ],
     [
-     "Possibility of reverter",
-     "The grantor's future interest after a determinable fee; takes effect automatically."
+     "Dominant tenement",
+     "The parcel benefited by an easement appurtenant."
     ],
     [
-     "Right of re-entry",
-     "The grantor's future interest after a fee on condition subsequent; must be exercised."
+     "Easement appurtenant",
+     "An easement benefiting an adjoining parcel; it runs with the land to later owners."
+    ],
+    [
+     "Easement by necessity",
+     "An easement implied when a seller's own severance leaves a parcel landlocked."
+    ],
+    [
+     "Easement by prescription",
+     "An easement acquired by long, open, hostile use over the statutory period."
+    ],
+    [
+     "Easement in gross",
+     "An easement benefiting a person or company rather than a parcel."
+    ],
+    [
+     "Emblements",
+     "Annual crops, treated as the tenant-farmer's personal property."
+    ],
+    [
+     "Encroachment",
+     "A physical intrusion onto a neighbouring parcel."
+    ],
+    [
+     "Encumbrance",
+     "Any claim, lien, easement, or restriction limiting the fee."
+    ],
+    [
+     "Estate at sufferance",
+     "Possession by a holdover tenant with no right to be there."
+    ],
+    [
+     "Estate at will",
+     "A leasehold continuing at the pleasure of both parties, endable at any time."
+    ],
+    [
+     "Estate for years",
+     "A leasehold with a fixed start and end date; it ends automatically with no notice."
+    ],
+    [
+     "Fee simple absolute",
+     "Ownership with no conditions and no time limit; the complete bundle of rights."
+    ],
+    [
+     "Fee simple defeasible",
+     "Ownership that can be lost if a stated condition occurs."
+    ],
+    [
+     "Fixture",
+     "Personal property that has become part of the realty and conveys with it."
+    ],
+    [
+     "Four unities (PITT)",
+     "Possession, Interest, Time, Title - all required for joint tenancy."
+    ],
+    [
+     "Intent",
+     "What the person attaching an item meant to do; the fixture test carrying the most weight."
+    ],
+    [
+     "Joint tenancy",
+     "Co-ownership with right of survivorship, requiring the four unities."
+    ],
+    [
+     "Leased fee",
+     "The landlord's ownership interest, subject to the lease."
+    ],
+    [
+     "Leasehold",
+     "The tenant's right of possession for a term."
+    ],
+    [
+     "Licence",
+     "Revocable permission to use land; not an interest in land."
     ],
     [
      "Life estate",
      "An interest lasting for a person's lifetime."
+    ],
+    [
+     "Littoral rights",
+     "Water rights along still water."
+    ],
+    [
+     "Periodic estate",
+     "A leasehold that renews itself, such as month to month, until someone gives notice."
+    ],
+    [
+     "Possibility of reverter",
+     "The grantor's future interest after a determinable fee; takes effect automatically."
+    ],
+    [
+     "Prior appropriation",
+     "The western water doctrine granting use by permit regardless of whether you adjoin the water."
+    ],
+    [
+     "Proprietary lease",
+     "The occupancy right a cooperative shareholder holds."
     ],
     [
      "Pur autre vie",
@@ -5060,32 +5436,16 @@
      "The interest returning to the grantor when a lesser estate ends."
     ],
     [
-     "Waste",
-     "A life tenant's failure to maintain, pay taxes, or preserve the property; the remainderman may sue now."
+     "Right of re-entry",
+     "The grantor's future interest after a fee on condition subsequent; must be exercised."
     ],
     [
-     "Leased fee",
-     "The landlord's ownership interest, subject to the lease."
+     "Riparian rights",
+     "Water rights along flowing water."
     ],
     [
-     "Leasehold",
-     "The tenant's right of possession for a term."
-    ],
-    [
-     "Estate at sufferance",
-     "Possession by a holdover tenant with no right to be there."
-    ],
-    [
-     "Tenancy in common",
-     "Co-ownership with no survivorship; shares pass to heirs."
-    ],
-    [
-     "Joint tenancy",
-     "Co-ownership with right of survivorship, requiring the four unities."
-    ],
-    [
-     "Four unities (PITT)",
-     "Possession, Interest, Time, Title - all required for joint tenancy."
+     "Servient tenement",
+     "The parcel burdened by an easement."
     ],
     [
      "Severance",
@@ -5096,60 +5456,20 @@
      "Marital joint tenancy neither spouse can sever alone. Not recognised in Georgia."
     ],
     [
-     "Common elements",
-     "The parts of a condominium owned by all unit owners as tenants in common."
+     "Tenancy in common",
+     "Co-ownership with no survivorship; shares pass to heirs."
     ],
     [
-     "Proprietary lease",
-     "The occupancy right a cooperative shareholder holds."
-    ],
-    [
-     "Fixture",
-     "Personal property that has become part of the realty and conveys with it."
+     "Timeshare estate",
+     "A deeded fractional real property interest, as opposed to a contractual right to use."
     ],
     [
      "Trade fixture",
      "A commercial tenant's business equipment; remains personal property and is removable."
     ],
     [
-     "Emblements",
-     "Annual crops, treated as the tenant-farmer's personal property."
-    ],
-    [
-     "Chattel",
-     "Personal property."
-    ],
-    [
-     "Encumbrance",
-     "Any claim, lien, easement, or restriction limiting the fee."
-    ],
-    [
-     "Dominant tenement",
-     "The parcel benefited by an easement appurtenant."
-    ],
-    [
-     "Servient tenement",
-     "The parcel burdened by an easement."
-    ],
-    [
-     "Easement in gross",
-     "An easement benefiting a person or company rather than a parcel."
-    ],
-    [
-     "Encroachment",
-     "A physical intrusion onto a neighbouring parcel."
-    ],
-    [
-     "Licence",
-     "Revocable permission to use land; not an interest in land."
-    ],
-    [
-     "Riparian rights",
-     "Water rights along flowing water."
-    ],
-    [
-     "Littoral rights",
-     "Water rights along still water."
+     "Waste",
+     "A life tenant's failure to maintain, pay taxes, or preserve the property; the remainderman may sue now."
     ]
    ]
   },
@@ -5414,68 +5734,8 @@
    ],
    "vocab": [
     [
-     "Protected class",
-     "A group the law shields from housing discrimination."
-    ],
-    [
-     "Familial status",
-     "Households with children under 18, pregnant people, those seeking custody."
-    ],
-    [
-     "Reasonable modification",
-     "A physical change for a disabled tenant, at the tenant's expense."
-    ],
-    [
-     "Reasonable accommodation",
-     "A change to rules or policies, at the provider's expense."
-    ],
-    [
-     "Steering",
-     "Channelling buyers toward or away from areas by protected class."
-    ],
-    [
      "Blockbusting",
      "Inducing panic selling by claims about a protected group moving in."
-    ],
-    [
-     "Redlining",
-     "Refusing or pricing loans by neighbourhood demographics."
-    ],
-    [
-     "Disparate impact",
-     "A neutral policy with a discriminatory effect; intent not required."
-    ],
-    [
-     "Price fixing",
-     "Competitors agreeing on prices; a per se antitrust violation."
-    ],
-    [
-     "Group boycott",
-     "Competitors agreeing to refuse to deal with someone."
-    ],
-    [
-     "Market allocation",
-     "Competitors dividing territories or customers."
-    ],
-    [
-     "Tie-in arrangement",
-     "Conditioning one transaction on another purchase."
-    ],
-    [
-     "Open listing",
-     "Non-exclusive; seller owes nothing if they sell it themselves."
-    ],
-    [
-     "Exclusive agency listing",
-     "One broker, but the seller may sell it themselves commission-free."
-    ],
-    [
-     "Exclusive right to sell",
-     "One broker is paid regardless of who sells."
-    ],
-    [
-     "Net listing",
-     "Broker keeps everything above the seller's stated net; heavily restricted."
     ],
     [
      "Commingling",
@@ -5486,20 +5746,88 @@
      "Using or spending trust funds."
     ],
     [
-     "Interpleader",
-     "A court action letting a stakeholder deposit disputed funds for decision."
+     "Discriminatory advertising",
+     "Advertising that describes the desired occupant rather than the property."
     ],
     [
-     "Ministerial acts",
-     "Clerical, non-discretionary tasks an unlicensed assistant may do."
+     "Disparate impact",
+     "A neutral policy with a discriminatory effect; intent not required."
+    ],
+    [
+     "Exclusive agency listing",
+     "One broker, but the seller may sell it themselves commission-free."
+    ],
+    [
+     "Exclusive right to sell",
+     "One broker is paid regardless of who sells."
+    ],
+    [
+     "Familial status",
+     "Households with children under 18, pregnant people, those seeking custody."
+    ],
+    [
+     "Group boycott",
+     "Competitors agreeing to refuse to deal with someone."
     ],
     [
      "Independent contractor",
      "A licensee whose results, not methods, the broker directs."
     ],
     [
+     "Interpleader",
+     "A court action letting a stakeholder deposit disputed funds for decision."
+    ],
+    [
+     "Market allocation",
+     "Competitors dividing territories or customers."
+    ],
+    [
+     "Ministerial acts",
+     "Clerical, non-discretionary tasks an unlicensed assistant may do."
+    ],
+    [
+     "Net listing",
+     "Broker keeps everything above the seller's stated net; heavily restricted."
+    ],
+    [
+     "Open listing",
+     "Non-exclusive; seller owes nothing if they sell it themselves."
+    ],
+    [
+     "Price fixing",
+     "Competitors agreeing on prices; a per se antitrust violation."
+    ],
+    [
+     "Protected class",
+     "A group the law shields from housing discrimination."
+    ],
+    [
      "Readily achievable",
      "The ADA standard for barrier removal: easily accomplishable."
+    ],
+    [
+     "Reasonable accommodation",
+     "A change to rules or policies, at the provider's expense."
+    ],
+    [
+     "Reasonable modification",
+     "A physical change for a disabled tenant, at the tenant's expense."
+    ],
+    [
+     "Redlining",
+     "Refusing or pricing loans by neighbourhood demographics."
+    ],
+    [
+     "Steering",
+     "Channelling buyers toward or away from areas by protected class."
+    ],
+    [
+     "Subagency",
+     "An arrangement where a cooperating broker works through the listing broker and owes duties to the seller."
+    ],
+    [
+     "Tie-in arrangement",
+     "Conditioning one transaction on another purchase."
     ]
    ]
   },
@@ -5772,120 +6100,152 @@
    ],
    "vocab": [
     [
-     "Grantor / grantee",
-     "The one conveying / the one receiving."
-    ],
-    [
-     "Granting clause",
-     "The words of conveyance in a deed."
-    ],
-    [
-     "Delivery and acceptance",
-     "What actually transfers title."
-    ],
-    [
-     "Acknowledgment",
-     "Notarisation; required to record, not for validity."
-    ],
-    [
-     "General warranty deed",
-     "Warrants title against all defects through the whole chain."
-    ],
-    [
-     "Special warranty deed",
-     "Warrants only against defects during the grantor's ownership."
-    ],
-    [
-     "Quitclaim deed",
-     "Conveys whatever interest the grantor has, with no warranty."
-    ],
-    [
-     "Covenant of seisin",
-     "The grantor's promise that they own and can convey."
-    ],
-    [
-     "Covenant of quiet enjoyment",
-     "Promise of undisturbed possession and defence of title."
-    ],
-    [
-     "Constructive notice",
-     "Legal notice given by recording; everyone is charged with it."
-    ],
-    [
-     "Actual notice",
-     "Knowledge a person genuinely has."
-    ],
-    [
-     "Race-notice statute",
-     "A later buyer prevails only if without notice AND recording first."
-    ],
-    [
-     "Chain of title",
-     "The successive record of ownership."
-    ],
-    [
      "Abstract of title",
      "A condensed history of all recorded documents."
-    ],
-    [
-     "Title commitment",
-     "The insurer's promise to issue a policy, listing exceptions."
-    ],
-    [
-     "Schedule B exception",
-     "A defect the title policy will not cover."
-    ],
-    [
-     "Marketable title",
-     "Title free enough of defects that a reasonable buyer would accept it."
-    ],
-    [
-     "Cloud on title",
-     "A claim or defect casting doubt on ownership."
-    ],
-    [
-     "Quiet title action",
-     "A suit asking a court to settle ownership."
-    ],
-    [
-     "Lis pendens",
-     "Recorded notice of pending litigation; creates a cloud."
-    ],
-    [
-     "Adverse possession",
-     "Acquiring title by long, open, hostile possession."
-    ],
-    [
-     "Colour of title",
-     "A written instrument that appears to convey title but is defective."
     ],
     [
      "Accretion / alluvion",
      "Gradual addition of land by water / the deposited soil."
     ],
     [
+     "Acknowledgment",
+     "Notarisation; required to record, not for validity."
+    ],
+    [
+     "Actual notice",
+     "Knowledge a person genuinely has."
+    ],
+    [
+     "Adverse possession",
+     "Acquiring title by long, open, hostile possession."
+    ],
+    [
      "Avulsion",
      "Sudden loss or addition of land; boundaries do not change."
     ],
     [
-     "Testate / intestate",
-     "Dying with a will / without one."
+     "Bargain and sale deed",
+     "A deed implying the grantor holds title but giving no warranty."
+    ],
+    [
+     "Chain of title",
+     "The successive record of ownership."
+    ],
+    [
+     "Cloud on title",
+     "A claim or defect casting doubt on ownership."
+    ],
+    [
+     "Colour of title",
+     "A written instrument that appears to convey title but is defective."
+    ],
+    [
+     "Constructive notice",
+     "Legal notice given by recording; everyone is charged with it."
+    ],
+    [
+     "Covenant of quiet enjoyment",
+     "Promise of undisturbed possession and defence of title."
+    ],
+    [
+     "Covenant of seisin",
+     "The grantor's promise that they own and can convey."
+    ],
+    [
+     "Delivery and acceptance",
+     "What actually transfers title."
     ],
     [
      "Devise",
      "A gift of real property by will."
     ],
     [
-     "Metes and bounds",
-     "Description by distances and directions from a point of beginning."
+     "Future covenants",
+     "Quiet enjoyment, warranty, and further assurance; breached only on a later disturbance."
+    ],
+    [
+     "General warranty deed",
+     "Warrants title against all defects through the whole chain."
+    ],
+    [
+     "Granting clause",
+     "The words of conveyance in a deed."
+    ],
+    [
+     "Grantor / grantee",
+     "The one conveying / the one receiving."
+    ],
+    [
+     "Lis pendens",
+     "Recorded notice of pending litigation; creates a cloud."
     ],
     [
      "Lot and block",
      "Description by reference to a recorded plat."
     ],
     [
+     "Marketable title",
+     "Title free enough of defects that a reasonable buyer would accept it."
+    ],
+    [
+     "Metes and bounds",
+     "Description by distances and directions from a point of beginning."
+    ],
+    [
+     "Opinion of title",
+     "An attorney's written interpretation of the abstract of title."
+    ],
+    [
+     "Owner's policy",
+     "Title insurance protecting the buyer's interest, as distinct from the lender's policy."
+    ],
+    [
+     "Present covenants",
+     "Seisin, right to convey, and against encumbrances; breached at delivery if at all."
+    ],
+    [
+     "Quiet title action",
+     "A suit asking a court to settle ownership."
+    ],
+    [
+     "Quitclaim deed",
+     "Conveys whatever interest the grantor has, with no warranty."
+    ],
+    [
+     "Race-notice statute",
+     "A later buyer prevails only if without notice AND recording first."
+    ],
+    [
+     "Rectangular survey",
+     "The government survey system of townships, ranges and sections. Georgia does not use it."
+    ],
+    [
+     "Schedule B exception",
+     "A defect the title policy will not cover."
+    ],
+    [
      "Section",
      "One square mile; 640 acres."
+    ],
+    [
+     "Special warranty deed",
+     "Warrants only against defects during the grantor's ownership."
+    ],
+    [
+     "Testate / intestate",
+     "Dying with a will / without one."
+    ],
+    [
+     "Title commitment",
+     "The insurer's promise to issue a policy, listing exceptions."
+    ],
+    [
+     "Title insurance",
+     "Cover against defects that already existed when the policy issued - forgery, undisclosed heirs, recording errors. Paid once."
+    ],
+    [
+     "Township",
+     "Thirty-six sections, six miles square, in the rectangular survey system."
     ]
    ]
   },
@@ -6194,50 +6554,6 @@
    ],
    "vocab": [
     [
-     "Market value",
-     "The most probable price under normal, arm's-length conditions."
-    ],
-    [
-     "Market price",
-     "The actual price a property sold for."
-    ],
-    [
-     "Assessed value",
-     "The value used as the property tax base."
-    ],
-    [
-     "Insurable value",
-     "The value of the improvements only."
-    ],
-    [
-     "DUST",
-     "Demand, Utility, Scarcity, Transferability - the four elements of value."
-    ],
-    [
-     "Substitution",
-     "Value is limited by the cost of an equally desirable alternative."
-    ],
-    [
-     "Highest and best use",
-     "Legally permitted, physically possible, financially feasible, maximally productive."
-    ],
-    [
-     "Conformity",
-     "Value is maximised where properties are similar."
-    ],
-    [
-     "Progression",
-     "A lesser property gains value from superior neighbours."
-    ],
-    [
-     "Regression",
-     "A superior property loses value among lesser neighbours."
-    ],
-    [
-     "Contribution",
-     "A component is worth what it adds to the whole."
-    ],
-    [
      "Anticipation",
      "Value based on expected future benefits."
     ],
@@ -6246,60 +6562,132 @@
      "Combining adjacent parcels under one owner."
     ],
     [
-     "Plottage",
-     "The added value created by assemblage."
-    ],
-    [
-     "Comparable",
-     "A recently sold similar property used in the sales comparison approach."
-    ],
-    [
-     "Reproduction cost",
-     "Cost to build an exact replica."
-    ],
-    [
-     "Replacement cost",
-     "Cost to build equivalent utility with current materials."
-    ],
-    [
-     "Potential gross income",
-     "Income if fully rented with no losses."
-    ],
-    [
-     "Effective gross income",
-     "Potential gross income less vacancy and collection loss."
-    ],
-    [
-     "Net operating income",
-     "Effective gross income less operating expenses, before debt service."
+     "Assessed value",
+     "The value used as the property tax base."
     ],
     [
      "Capitalization rate",
      "The rate converting income to value; Value = NOI / Rate."
     ],
     [
-     "Gross rent multiplier",
-     "Sale price divided by gross rent; a quick screening tool."
+     "CMA",
+     "A broker's comparative pricing opinion; not an appraisal."
     ],
     [
-     "Physical deterioration",
-     "Loss in value from wear and tear."
+     "Comparable",
+     "A recently sold similar property used in the sales comparison approach."
     ],
     [
-     "Functional obsolescence",
-     "Loss in value from a defect in the structure's own design or utility."
+     "Conformity",
+     "Value is maximised where properties are similar."
+    ],
+    [
+     "Contribution",
+     "A component is worth what it adds to the whole."
+    ],
+    [
+     "Cost approach",
+     "Reproduction or replacement cost, less depreciation, plus land value."
+    ],
+    [
+     "Demand",
+     "Buyers who want the property and can pay for it; the D in DUST."
+    ],
+    [
+     "DUST",
+     "Demand, Utility, Scarcity, Transferability - the four elements of value."
+    ],
+    [
+     "Effective gross income",
+     "Potential gross income less vacancy and collection loss."
     ],
     [
      "External obsolescence",
      "Loss in value caused from outside the property; always incurable."
     ],
     [
+     "Functional obsolescence",
+     "Loss in value from a defect in the structure's own design or utility."
+    ],
+    [
+     "Gross rent multiplier",
+     "Sale price divided by gross rent; a quick screening tool."
+    ],
+    [
+     "Highest and best use",
+     "Legally permitted, physically possible, financially feasible, maximally productive."
+    ],
+    [
+     "Income approach",
+     "Converting a property's income into value, using Value = NOI / rate."
+    ],
+    [
+     "Insurable value",
+     "The value of the improvements only."
+    ],
+    [
+     "Market price",
+     "The actual price a property sold for."
+    ],
+    [
+     "Market value",
+     "The most probable price under normal, arm's-length conditions."
+    ],
+    [
+     "Net operating income",
+     "Effective gross income less operating expenses, before debt service."
+    ],
+    [
+     "Physical deterioration",
+     "Loss in value from wear and tear."
+    ],
+    [
+     "Plottage",
+     "The added value created by assemblage."
+    ],
+    [
+     "Potential gross income",
+     "Income if fully rented with no losses."
+    ],
+    [
+     "Progression",
+     "A lesser property gains value from superior neighbours."
+    ],
+    [
      "Reconciliation",
      "Weighting the approaches into one value conclusion."
     ],
     [
-     "CMA",
-     "A broker's comparative pricing opinion; not an appraisal."
+     "Regression",
+     "A superior property loses value among lesser neighbours."
+    ],
+    [
+     "Replacement cost",
+     "Cost to build equivalent utility with current materials."
+    ],
+    [
+     "Reproduction cost",
+     "Cost to build an exact replica."
+    ],
+    [
+     "Sales comparison approach",
+     "Valuing by comparison with recent sales of similar properties."
+    ],
+    [
+     "Scarcity",
+     "Limited supply relative to demand; the S in DUST."
+    ],
+    [
+     "Substitution",
+     "Value is limited by the cost of an equally desirable alternative."
+    ],
+    [
+     "Transferability",
+     "The ability to convey title; the T in DUST."
+    ],
+    [
+     "Utility",
+     "The property's capacity to satisfy a need; the U in DUST."
     ]
    ]
   }

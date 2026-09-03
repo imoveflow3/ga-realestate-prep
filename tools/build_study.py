@@ -16,6 +16,7 @@ sys.path.insert(0, ROOT)
 import _study_nat_a, _study_nat_b, _study_nat_c      # noqa: E402
 import _study_ga, _study_comp                        # noqa: E402
 import _checks_a, _checks_b, _checks_c               # noqa: E402
+from _vocab_extra import EXTRA as VOCAB_EXTRA         # noqa: E402
 from greprep import topics                           # noqa: E402
 
 OUT = os.path.join(ROOT, "greprep", "banks", "study.json")
@@ -80,6 +81,21 @@ def main():
                 raise SystemExit("study note for unknown topic: %s" % key)
             merged[key] = note
 
+    # fold in the vocabulary the notes explain inline but never listed as terms
+    added = 0
+    for key, pairs in VOCAB_EXTRA.items():
+        if key not in merged:
+            raise SystemExit("extra vocab for unknown topic: %s" % key)
+        have = set(t.lower() for t, _ in merged[key]["vocab"])
+        for term, definition in pairs:
+            if term.lower() in have:
+                continue
+            merged[key]["vocab"].append((term, definition))
+            have.add(term.lower())
+            added += 1
+    for key in merged:
+        merged[key]["vocab"].sort(key=lambda p: p[0].lower())
+
     missing = [k for k in topics.ORDER if k not in merged]
     if missing:
         raise SystemExit("no study notes for: %s" % ", ".join(missing))
@@ -135,6 +151,11 @@ def main():
           % (len(out), totals["sections"], totals["vocab"], totals["examples"],
              "{:,}".format(totals["words"])))
     print("  %d section checks" % totals["checks"])
+    print("  %d vocabulary terms folded in from the notes" % added)
+    thin = [(k, len(out[k]["vocab"])) for k in out if len(out[k]["vocab"]) < 8]
+    if thin:
+        print("  NOTE categories under 8 terms: %s"
+              % ", ".join("%s (%d)" % (topics.label(k), n) for k, n in thin))
     bare = [(k, sec["h"]) for k in out for sec in out[k]["sections"] if not sec["check"]]
     if bare:
         print("  NOTE %d sections have no check:" % len(bare))
