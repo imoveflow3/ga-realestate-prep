@@ -479,3 +479,43 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 
 /* the exam-realistic tier gets its own mark, distinct from merely hard */
 .tag.hard.exam{background:var(--brass-soft); color:var(--brass)}
+
+/* ----------------------------------------------------------- vocab quiz */
+.defpanel{
+  border:1px solid var(--line-2); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; background:var(--panel-2);
+  padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.5rem;
+}
+.defpanel .lab{font-family:"Barlow Condensed",sans-serif; font-size:.68rem;
+  font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
+.defpanel .dtext{font-family:"Source Serif 4",Georgia,serif; font-size:1.25rem;
+  line-height:1.65; color:var(--ink); max-width:52ch}
+.termopts{display:flex; flex-direction:column; gap:.45rem; margin-top:.9rem}
+.termopt{
+  display:flex; gap:.7rem; align-items:center; text-align:left; width:100%;
+  font-family:"Barlow Condensed",sans-serif; font-size:1.14rem; font-weight:600;
+  letter-spacing:.01em; color:var(--ink); background:var(--panel);
+  border:1px solid var(--line-2); border-radius:var(--r); padding:.6rem .85rem;
+  cursor:pointer;
+}
+.termopt:hover:not(:disabled){border-color:var(--accent); background:var(--accent-soft)}
+.termopt:disabled{cursor:default}
+.termopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:.9rem;
+  color:var(--ink-3); min-width:1.1rem}
+.termopt.right{border-color:var(--ok); background:var(--ok-soft)}
+.termopt.right .k{color:var(--ok)}
+.termopt.wrong{border-color:var(--no); background:var(--no-soft)}
+.termopt.wrong .k{color:var(--no)}
+.termopt .flag{margin-left:auto; font-size:.66rem; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:600}
+.termopt.right .flag{color:var(--ok)} .termopt.wrong .flag{color:var(--no)}
+.catgrid{display:grid; gap:.5rem; grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.cat{
+  display:flex; flex-direction:column; gap:.15rem; text-align:left; font:inherit;
+  color:inherit; background:var(--panel); border:1px solid var(--line);
+  border-left:3px solid var(--line-2); border-radius:0 var(--r) var(--r) 0;
+  padding:.65rem .8rem; cursor:pointer;
+}
+.cat:hover{border-color:var(--accent); border-left-color:var(--accent)}
+.cat .cn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.08rem}
+.cat .cs{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-3)}

@@ -688,6 +688,76 @@ function cardCounts(d){
   return {total: all.length, due: due, learned: learned, unseen: unseen};
 }
 
+/* --------------------------------------------------------- vocab quiz --
+   The mirror of a flashcard: you are shown the definition and must pick the
+   term. Distractors come from the same topic wherever possible, because terms
+   from the same area are the ones actually confusable. */
+function vocabQuestions(d, opts){
+  opts = opts || {};
+  var pool = cards().filter(function(c){
+    if (opts.topic && c.topic !== opts.topic) return false;
+    if (opts.portion && c.portion !== opts.portion) return false;
+    return true;
+  });
+  if (opts.mode === 'weak'){
+    var weak = pool.filter(function(c){
+      var r = d.srs[c.id];
+      return r && r.wrong > 0 && r.box <= 2;
+    });
+    if (weak.length >= 4) pool = weak;
+  } else if (opts.mode === 'due'){
+    var now = Date.now() / 1000;
+    var due = pool.filter(function(c){
+      var r = d.srs[c.id];
+      return !r || (r.due || 0) <= now;
+    });
+    if (due.length >= 4) pool = due;
+  }
+  if (pool.length < 4) return [];
+
+  var all = cards();
+  var picked = shuffle(pool.slice()).slice(0, opts.count || 15);
+  return picked.map(function(c){
+    // three wrong terms: same topic first, then same portion, then anywhere
+    var tiers = [
+      all.filter(function(x){ return x.topic === c.topic && x.term !== c.term; }),
+      all.filter(function(x){ return x.portion === c.portion && x.topic !== c.topic; }),
+      all.filter(function(x){ return x.term !== c.term; })
+    ];
+    var wrong = [], used = {};
+    used[c.term.toLowerCase()] = 1;
+    tiers.forEach(function(tier){
+      shuffle(tier.slice()).forEach(function(x){
+        if (wrong.length >= 3) return;
+        var k = x.term.toLowerCase();
+        if (used[k]) return;
+        used[k] = 1;
+        wrong.push(x.term);
+      });
+    });
+    var choices = shuffle([c.term].concat(wrong));
+    return {
+      id: c.id, topic: c.topic, topic_label: c.topic_label, portion: c.portion,
+      def: c.def, term: c.term, choices: choices, answer: choices.indexOf(c.term)
+    };
+  }).filter(function(q){ return q.choices.length === 4; });
+}
+
+function vocabTopics(d){
+  var now = Date.now() / 1000, by = {};
+  cards().forEach(function(c){
+    var e = by[c.topic] || (by[c.topic] = {
+      topic: c.topic, label: c.topic_label, portion: c.portion,
+      total: 0, due: 0, learned: 0
+    });
+    e.total++;
+    var r = d.srs[c.id];
+    if (!r || (r.due || 0) <= now) e.due++;
+    if (r && r.box >= 4) e.learned++;
+  });
+  return ORDER.filter(function(k){ return by[k]; }).map(function(k){ return by[k]; });
+}
+
 /* ------------------------------------------------------ notebook review --
    Missed questions come back on the same ladder rather than sitting in a list. */
 function notebookDue(d){

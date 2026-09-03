@@ -22,7 +22,8 @@ function tagFor(portion){
 function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
-var VIEWS = ['today','dash','study','cards','home','math','notebook','weak','quiz','result','plan','setup'];
+var VIEWS = ['today','dash','study','cards','vocab','home','math','notebook','weak','quiz','result','plan','setup'];
+var VQ = null;
 var NB_OPEN_ONLY = true;
 var STUDY_TOPIC = null;
 function show(v){
@@ -35,6 +36,7 @@ function show(v){
   if (v === 'home') renderHome();
   if (v === 'today') renderToday();
   if (v === 'cards') renderCards();
+  if (v === 'vocab') renderVocab();
   if (v === 'study') renderStudy();
   if (v === 'notebook') renderNotebook();
   if (v === 'math') renderMath();
@@ -348,6 +350,14 @@ function answer(choice){
 }
 
 document.addEventListener('keydown', function(e){
+  if (VQ && !$('view-vocab').hidden){
+    var vk = 'abcd'.indexOf((e.key || '').toLowerCase());
+    if (vk >= 0 && !VQ.locked){ answerVocab(vk, $('view-vocab')); return; }
+    var vn = $('vnext');
+    if ((e.key === 'Enter' || e.key === ' ') && vn && !vn.disabled){
+      e.preventDefault(); vn.click(); return;
+    }
+  }
   if (!QUIZ || $('view-quiz').hidden) return;
   var k = 'abcd'.indexOf((e.key||'').toLowerCase());
   if (k >= 0 && k < QUIZ.qs[QUIZ.i].choices.length && !QUIZ.locked){ answer(k); return; }
@@ -767,6 +777,204 @@ function gradeCard(c, knew, v){
   } else {
     renderCard(v);
   }
+}
+
+/* ---------------------------------------------------------- vocab quiz */
+function renderVocab(){
+  var v = $('view-vocab');
+  v.className = '';
+  if (VQ && VQ.i < VQ.list.length) return renderVocabQ(v);
+  v.innerHTML = '<div id="vocabBody"></div>';
+  var box = $('vocabBody');
+
+  if (VQ && VQ.i >= VQ.list.length){
+    var done = el('div', 'card');
+    done.appendChild(cardHead('Set finished',
+      VQ.right + ' of ' + VQ.list.length + ' correct'));
+    var missed = VQ.missed;
+    if (missed.length){
+      done.appendChild(el('p', 'muted', 'Terms you missed:'));
+      var ml = el('div', 'callouts');
+      missed.forEach(function(m){
+        var d = el('div', 'callout trap');
+        d.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.95rem;line-height:1.55';
+        d.appendChild(el('b', null, m.term));
+        d.appendChild(document.createTextNode(' — ' + m.def));
+        ml.appendChild(d);
+      });
+      done.appendChild(ml);
+    } else {
+      done.appendChild(el('p', 'muted', 'Clean sweep.'));
+    }
+    var again = el('div', 'row');
+    var a1 = el('div'); a1.style.flex = '0 0 auto';
+    var b1 = el('button', 'btn', 'Another set');
+    b1.onclick = function(){ var o = VQ.opts; VQ = null; startVocab(o); };
+    a1.appendChild(b1); again.appendChild(a1);
+    if (missed.length){
+      var a2 = el('div'); a2.style.flex = '0 0 auto';
+      var b2 = el('button', 'btn ghost', 'Drill just the ones I missed');
+      b2.onclick = function(){
+        var o = {mode: 'weak', count: Math.max(5, missed.length),
+                 topic: VQ.opts.topic, portion: VQ.opts.portion};
+        VQ = null; startVocab(o);
+      };
+      a2.appendChild(b2); again.appendChild(a2);
+    }
+    done.appendChild(again);
+    box.appendChild(done);
+    VQ = null;
+  }
+
+  var head = el('div', 'card');
+  head.appendChild(cardHead('Vocab', 'definition first — you pick the term'));
+  head.appendChild(el('p', 'sub',
+    'You are shown a definition and choose the term it belongs to, from four ' +
+    'options drawn from the same topic. Pick a category below, or drill the whole ' +
+    'bank. Recognising a term is easier than recalling it, so use the Cards tab too.'));
+  var row = el('div', 'row');
+  [['Everything (15)', {count: 15}],
+   ['National only (15)', {portion: 'national', count: 15}],
+   ['Georgia only (15)', {portion: 'georgia', count: 15}],
+   ['Ones I keep missing', {mode: 'weak', count: 15}]].forEach(function(o, i){
+    var d = el('div'); d.style.flex = '0 0 auto';
+    var b = el('button', 'btn' + (i ? ' ghost' : ''), o[0]);
+    b.onclick = function(){ startVocab(o[1]); };
+    d.appendChild(b); row.appendChild(d);
+  });
+  head.appendChild(row);
+  box.appendChild(head);
+
+  var NAMES = {national: 'National portion', georgia: 'Georgia state portion',
+               comprehensive: 'Comprehensive subtest'};
+  var rows = vocabTopics(D);
+  ['national', 'georgia', 'comprehensive'].forEach(function(portion){
+    var mine = rows.filter(function(r){ return r.portion === portion; });
+    if (!mine.length) return;
+    var card = el('div', 'card');
+    card.appendChild(cardHead(NAMES[portion], 'pick a category'));
+    var grid = el('div', 'catgrid');
+    mine.forEach(function(r){
+      var b = el('button', 'cat');
+      b.appendChild(el('span', 'cn', r.label));
+      b.appendChild(el('span', 'cs',
+        r.total + ' terms · ' + r.due + ' due · ' + r.learned + ' learned'));
+      b.onclick = function(){
+        startVocab({topic: r.topic, count: Math.min(20, r.total)});
+      };
+      grid.appendChild(b);
+    });
+    card.appendChild(grid);
+    box.appendChild(card);
+  });
+  window.scrollTo(0, 0);
+}
+
+function startVocab(opts){
+  var list = vocabQuestions(D, opts);
+  if (list.length < 1){
+    alert('That category needs at least four terms to build a multiple choice set.');
+    return;
+  }
+  VQ = {list: list, i: 0, right: 0, missed: [], locked: false, opts: opts};
+  show('vocab');
+}
+
+function renderVocabQ(v){
+  var q = VQ.list[VQ.i];
+  v.innerHTML = '<div id="vocabBody"></div>';
+  var box = $('vocabBody');
+
+  var prog = el('div', 'progressbar');
+  var bar = el('div');
+  bar.style.width = (VQ.i / VQ.list.length * 100) + '%';
+  prog.appendChild(bar);
+  box.appendChild(prog);
+
+  var card = el('div', 'card');
+  var hd = el('div', 'cardmeta');
+  var left = el('span');
+  left.appendChild(document.createTextNode(q.topic_label + ' '));
+  left.appendChild(tagFor(q.portion));
+  hd.appendChild(left);
+  hd.appendChild(el('span', null, (VQ.i + 1) + ' / ' + VQ.list.length +
+    '  ·  ' + VQ.right + ' right'));
+  card.appendChild(hd);
+
+  var panel = el('div', 'defpanel');
+  panel.appendChild(el('div', 'lab', 'Which term does this define?'));
+  panel.appendChild(el('div', 'dtext', q.def));
+  card.appendChild(panel);
+
+  var opts = el('div', 'termopts');
+  q.choices.forEach(function(text, i){
+    var b = el('button', 'termopt');
+    b.appendChild(el('span', 'k', 'ABCD'[i]));
+    b.appendChild(el('span', null, text));
+    b.onclick = function(){ answerVocab(i, v); };
+    opts.appendChild(b);
+  });
+  card.appendChild(opts);
+
+  var fb = el('div');
+  fb.id = 'vfeedback';
+  card.appendChild(fb);
+  box.appendChild(card);
+
+  var foot = el('div', 'card');
+  var frow = el('div', 'row');
+  var d1 = el('div'); d1.style.flex = '0 0 auto';
+  var nx = el('button', 'btn', VQ.i === VQ.list.length - 1 ? 'Finish' : 'Next');
+  nx.id = 'vnext';
+  nx.disabled = true;
+  nx.onclick = function(){ VQ.i++; VQ.locked = false; renderVocab(); };
+  d1.appendChild(nx); frow.appendChild(d1);
+  var d2 = el('div'); d2.style.flex = '0 0 auto';
+  var en = el('button', 'btn ghost', 'End set');
+  en.onclick = function(){ VQ.i = VQ.list.length; renderVocab(); };
+  d2.appendChild(en); frow.appendChild(d2);
+  var d3 = el('div'); d3.style.flex = '0 0 auto';
+  var rd = el('button', 'btn ghost', 'Read this topic');
+  rd.onclick = function(){ VQ = null; STUDY_TOPIC = q.topic; show('study'); };
+  d3.appendChild(rd); frow.appendChild(d3);
+  foot.appendChild(frow);
+  box.appendChild(foot);
+  window.scrollTo(0, 0);
+}
+
+function answerVocab(choice, v){
+  if (VQ.locked) return;
+  VQ.locked = true;
+  var q = VQ.list[VQ.i];
+  var correct = (choice === q.answer);
+  if (correct) VQ.right++;
+  else VQ.missed.push({term: q.term, def: q.def});
+  srsGrade(D, q.id, correct);
+  persist();
+
+  var btns = document.querySelectorAll('.termopt');
+  for (var i = 0; i < btns.length; i++){
+    btns[i].disabled = true;
+    if (i === q.answer){
+      btns[i].className = 'termopt right';
+      btns[i].appendChild(el('span', 'flag', 'correct'));
+    } else if (i === choice){
+      btns[i].className = 'termopt wrong';
+      btns[i].appendChild(el('span', 'flag', 'you picked'));
+    }
+  }
+  var fb = el('div', 'feedback ' + (correct ? 'ok' : 'no'));
+  fb.appendChild(el('div', 'verdict', correct ? 'Correct' : 'Not quite'));
+  if (!correct){
+    var p1 = el('div');
+    p1.appendChild(el('b', null, q.term));
+    p1.appendChild(document.createTextNode(' — ' + q.def));
+    fb.appendChild(p1);
+  }
+  $('vfeedback').appendChild(fb);
+  var nx = $('vnext');
+  nx.disabled = false;
+  nx.focus();
 }
 
 /* -------------------------------------------------------------- notebook */
