@@ -841,30 +841,108 @@ function readiness(d){
   return both;
 }
 
-/* ---------------------------------------------------------- today's work */
-function todayKey(){
-  var t = new Date();
+/* ---------------------------------------------------------- today's work
+   Five distinct jobs, not five ways of doing the same one:
+     learn new vocabulary, read, repair what you got wrong, practise your
+     weakest topic, keep the math warm.
+   Vocabulary advances a category at a time - finish one and the next is
+   served automatically, so there is always a clear "next". */
+var KNOWN_BOX = 3;              // right twice in a row counts as known
+var CATEGORY_PASS = 0.9;        // share of a category's terms known to pass it
+
+function todayKey(when){
+  var t = when ? new Date(when * 1000) : new Date();
   return t.getFullYear() + '-' + ('0' + (t.getMonth() + 1)).slice(-2) + '-' +
          ('0' + t.getDate()).slice(-2);
 }
 
-function todayPlan(d){
-  var cc = cardCounts(d);
-  var nb = notebookDue(d);
-  var log = (d.dayLog || {})[todayKey()] || {};
-  var rank = ranked(d);
-  var focus = rank.slice(0, 3).map(function(r){
-    return {topic: r.topic, label: r.label, portion: r.portion};
+function vocabProgress(d){
+  var by = {};
+  cards().forEach(function(c){
+    var e = by[c.topic] || (by[c.topic] = {topic: c.topic, label: c.topic_label,
+                                           portion: c.portion, total: 0, known: 0});
+    e.total++;
+    var r = d.srs[c.id];
+    if (r && r.box >= KNOWN_BOX) e.known++;
   });
+  return ORDER.filter(function(k){ return by[k]; }).map(function(k){
+    var e = by[k];
+    e.pct = e.total ? e.known / e.total : 0;
+    e.passed = e.pct >= CATEGORY_PASS;
+    e.weight = weight(k);
+    return e;
+  });
+}
+
+/* The next category to learn: heaviest on the exam first, so effort follows
+   marks. Practice-only topics come last. */
+function nextVocabCategory(d){
+  var rows = vocabProgress(d).filter(function(r){ return !r.passed; });
+  if (!rows.length) return null;
+  rows.sort(function(a, b){
+    var ax = countsOnExam(a.topic) ? 0 : 1, bx = countsOnExam(b.topic) ? 0 : 1;
+    if (ax !== bx) return ax - bx;
+    if (b.weight !== a.weight) return b.weight - a.weight;
+    return b.pct - a.pct;                 // finish what is nearly done first
+  });
+  return rows[0];
+}
+
+function studyStreak(d){
+  var log = d.dayLog || {}, streak = 0;
+  for (var i = 0; i < 400; i++){
+    var k = todayKey(Date.now() / 1000 - i * DAY);
+    var day = log[k];
+    var any = day && Object.keys(day).length;
+    if (any) streak++;
+    else if (i > 0) break;                // today not yet started is fine
+    else if (!any && i === 0) continue;
+  }
+  return streak;
+}
+
+function todayPlan(d){
+  var log = (d.dayLog || {})[todayKey()] || {};
+  var cat = nextVocabCategory(d);
+  var nb = notebookDue(d);
+  var rank = ranked(d);
+  var weakest = rank.length ? rank[0] : null;
+  var readTopic = rank.length ? rank[Math.min(1, rank.length - 1)] : null;
+
+  var tasks = [
+    {key: 'vocab', name: 'Learn a set of definitions',
+     desc: cat ? (cat.label + ' — ' + cat.known + ' of ' + cat.total + ' known (' +
+                  Math.round(cat.pct * 100) + '%)')
+               : 'Every category passed — nothing left to learn',
+     meta: cat, count: cat ? 15 : 0, done: !!log.vocab},
+    {key: 'read', name: 'Read a topic',
+     desc: readTopic ? readTopic.label : 'Pick any topic',
+     meta: readTopic, count: 1, done: !!log.read},
+    {key: 'notebook', name: 'Fix what you got wrong',
+     desc: nb.length ? (nb.length + ' question' + (nb.length === 1 ? '' : 's') +
+                        ' from your notebook are due again')
+                     : 'Nothing due — your misses are all on schedule',
+     meta: null, count: nb.length, done: !!log.notebook},
+    {key: 'topic', name: 'Drill your weakest topic',
+     desc: weakest ? (weakest.label + ' — 15 questions, exam difficulty')
+                   : '15 questions on a mixed selection',
+     meta: weakest, count: 15, done: !!log.topic},
+    {key: 'math', name: 'Math sprint',
+     desc: '10 problems with worked solutions', meta: null, count: 10,
+     done: !!log.math}
+  ];
+
+  var nextKey = null;
+  for (var i = 0; i < tasks.length; i++){
+    if (!tasks[i].done && tasks[i].count > 0){ nextKey = tasks[i].key; break; }
+  }
   return {
-    date: todayKey(),
-    cards: {due: Math.min(cc.due, 25), total: cc.total, done: !!log.cards},
-    notebook: {due: nb.length, done: !!log.notebook},
-    weak: {count: 15, done: !!log.weak},
-    math: {count: 10, done: !!log.math},
-    focus: focus,
-    doneCount: ['cards', 'notebook', 'weak', 'math'].filter(function(k){
-      return log[k]; }).length
+    date: todayKey(), tasks: tasks, nextKey: nextKey,
+    doneCount: tasks.filter(function(t){ return t.done; }).length,
+    total: tasks.length,
+    category: cat,
+    streak: studyStreak(d),
+    allDone: tasks.every(function(t){ return t.done || t.count === 0; })
   };
 }
 

@@ -449,6 +449,43 @@ function renderResult(a){
 }
 
 /* ---------------------------------------------------------------- today */
+function taskAction(t, plan){
+  if (t.key === 'vocab'){
+    if (!t.meta) return null;
+    return function(){
+      startVocab({topic: t.meta.topic, count: 15, dayTask: 'vocab'});
+    };
+  }
+  if (t.key === 'read'){
+    return function(){
+      markDone(D, 'read'); persist();
+      STUDY_TOPIC = t.meta ? t.meta.topic : null;
+      show('study');
+    };
+  }
+  if (t.key === 'notebook'){
+    return t.count ? function(){ startNotebookRetry(); } : null;
+  }
+  if (t.key === 'topic'){
+    return function(){
+      if (t.meta){
+        startQuiz({portion: t.meta.portion, count: 15, topic: t.meta.topic,
+                   timed: false, difficulty: 'harder', dayTask: 'topic'});
+      } else {
+        startQuiz({portion: 'mixed', count: 15, weak_spot: true, timed: true,
+                   difficulty: 'harder', dayTask: 'topic'});
+      }
+    };
+  }
+  if (t.key === 'math'){
+    return function(){
+      startQuiz({portion: 'math', count: 10, weak_spot: true, timed: false,
+                 dayTask: 'math'});
+    };
+  }
+  return null;
+}
+
 function renderToday(){
   var v = $('view-today');
   v.className = '';
@@ -457,128 +494,145 @@ function renderToday(){
   var plan = todayPlan(D);
   var r = readiness(D);
 
+  /* ---- the header: where you stand, and what is next ---- */
   var head = el('div', 'card');
-  head.appendChild(cardHead('Today', plan.date));
-  var g = el('div', 'grid g3');
+  head.appendChild(cardHead('Today', plan.date +
+    (plan.streak > 1 ? '  ·  ' + plan.streak + '-day streak' : '')));
 
+  var bar = el('div', 'progressbar');
+  var fill = el('div');
+  fill.style.width = (plan.doneCount / plan.total * 100) + '%';
+  bar.appendChild(fill);
+  head.appendChild(bar);
+
+  var g = el('div', 'grid g3');
   var d1 = el('div', 'metric');
-  d1.appendChild(el('div', 'eyebrow', 'Done today'));
+  d1.appendChild(el('div', 'eyebrow', 'Today'));
   var ring = el('div', 'ring');
   ring.appendChild(el('span', 'big', String(plan.doneCount)));
-  ring.appendChild(el('span', 'of', 'of 4 blocks'));
+  ring.appendChild(el('span', 'of', 'of ' + plan.total + ' done'));
   d1.appendChild(ring);
   g.appendChild(d1);
 
-  function portionMetric(label, r, note){
+  function portionMetric(label, pr){
     var d = el('div', 'metric');
     d.appendChild(el('div', 'eyebrow', label));
-    d.appendChild(el('div', 'stat' + (r.current === null ? ''
-      : (r.current >= 0.75 ? ' good' : ' bad')),
-      r.current === null ? '—' : pct(r.current)));
-    d.appendChild(el('div', 'muted', note));
+    d.appendChild(el('div', 'stat' + (pr.current === null ? ''
+      : (pr.current >= 0.75 ? ' good' : ' bad')),
+      pr.current === null ? '—' : pct(pr.current)));
+    d.appendChild(el('div', 'muted', pr.current === null ? 'no data yet'
+      : (pr.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
     return d;
   }
-  g.appendChild(portionMetric('National now', r.national,
-    r.national.current === null ? 'no data yet'
-      : (r.national.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
-  g.appendChild(portionMetric('Georgia now', r.georgia,
-    r.georgia.current === null ? 'no data yet'
-      : (r.georgia.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
-
-  var d3 = el('div', 'metric');
-  d3.appendChild(el('div', 'eyebrow', 'Weaker portion on exam day'));
-  if (r.weakestProjected === null){
-    d3.appendChild(el('div', 'stat', '\u2014'));
-    d3.appendChild(el('div', 'muted',
-      r.needsSpread ? 'take quizzes on different days'
-        : (r.points < 3 ? 'needs 3 scored quizzes' : 'set an exam date')));
-  } else {
-    d3.appendChild(el('div', 'stat' + (r.bothOnTrack ? ' good' : ' bad'),
-      pct(r.weakestProjected)));
-    d3.appendChild(el('div', 'muted', r.bothOnTrack
-      ? 'both portions on track'
-      : ((r.blocker === 'georgia' ? 'Georgia' : 'National') +
-         ' is the one holding you back')));
-  }
-  g.appendChild(d3);
+  g.appendChild(portionMetric('National', r.national));
+  g.appendChild(portionMetric('Georgia', r.georgia));
   head.appendChild(g);
+
   if (r.national.current !== null && r.georgia.current !== null &&
       (r.national.current < 0.75) !== (r.georgia.current < 0.75)){
     var warn = el('div', 'callout trap');
     warn.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.92rem;line-height:1.55';
-    warn.textContent = 'The two portions are scored separately and you must clear 75% on ' +
-      'each. Your ' + (r.blocker === 'georgia' ? 'Georgia' : 'National') + ' portion is ' +
-      'below the mark, so a healthy average does not mean a pass.';
+    warn.textContent = 'The two portions are scored separately and you must clear 75% ' +
+      'on each. Your ' + (r.blocker === 'georgia' ? 'Georgia' : 'National') +
+      ' portion is below the mark, so a healthy average does not mean a pass.';
     head.appendChild(warn);
+  }
+
+  if (plan.allDone){
+    var d = el('div', 'callout');
+    d.style.cssText = 'border-left-color:var(--ok);font-family:"Barlow",sans-serif;' +
+      'font-size:.95rem;line-height:1.55';
+    d.textContent = 'Everything for today is done. Anything further is a bonus — ' +
+      'the Practice and Vocab tabs are open.';
+    head.appendChild(d);
+  } else {
+    var nextTask = plan.tasks.filter(function(t){ return t.key === plan.nextKey; })[0];
+    if (nextTask){
+      var go = el('div', 'row');
+      var gd = el('div'); gd.style.flex = '0 0 auto';
+      var gb = el('button', 'btn', 'Start next: ' + nextTask.name.toLowerCase());
+      var fn = taskAction(nextTask, plan);
+      gb.onclick = fn;
+      gd.appendChild(gb); go.appendChild(gd);
+      head.appendChild(go);
+    }
   }
   box.appendChild(head);
 
+  /* ---- the queue ---- */
   var work = el('div', 'card');
-  work.appendChild(cardHead('Your queue', 'built from what you have missed'));
+  work.appendChild(cardHead('Your five', 'finish one and the next opens'));
   var list = el('div', 'tasklist');
-
-  function task(key, name, desc, count, go){
-    var t = el('div', 'task' + (plan[key] && plan[key].done ? ' done' : ''));
+  plan.tasks.forEach(function(t){
+    var isNext = (t.key === plan.nextKey);
+    var row = el('div', 'task' + (t.done ? ' done' : (isNext ? ' next' : '')));
     var w = el('div', 'tw');
-    w.appendChild(el('div', 'tn', name));
-    w.appendChild(el('div', 'td', desc));
-    t.appendChild(w);
-    if (plan[key] && plan[key].done){
-      t.appendChild(el('span', 'tick', '✓'));
-    } else if (count > 0){
-      var b = el('button', 'btn', 'Start');
-      b.onclick = go;
-      t.appendChild(b);
-    } else {
-      t.appendChild(el('span', 'muted', 'nothing due'));
+    var nm = el('div', 'tn', t.name);
+    if (isNext && !t.done) nm.appendChild(el('span', 'tag', 'next'));
+    w.appendChild(nm);
+    w.appendChild(el('div', 'td', t.desc));
+    if (t.key === 'vocab' && t.meta){
+      var pbar = el('div', 'bar-track');
+      pbar.style.marginTop = '.4rem';
+      var pf = el('div', 'bar-fill ' + band(t.meta.pct));
+      pf.style.width = Math.round(t.meta.pct * 100) + '%';
+      pbar.appendChild(pf);
+      w.appendChild(pbar);
     }
-    return t;
-  }
-
-  list.appendChild(task('cards', 'Vocabulary cards',
-    plan.cards.due + ' due of ' + plan.cards.total + ' terms',
-    plan.cards.due, function(){
-      CARD_OPTS = {mode: 'due', limit: 25}; CARD_FROM_TODAY = true; show('cards');
-    }));
-
-  list.appendChild(task('notebook', 'Retry what you missed',
-    plan.notebook.due + ' question' + (plan.notebook.due === 1 ? '' : 's') +
-    ' from your notebook are due again',
-    plan.notebook.due, function(){ startNotebookRetry(); }));
-
-  list.appendChild(task('weak', 'Weak-spot quiz',
-    '15 questions weighted to your weakest topics', 1, function(){
-      startQuiz({portion: 'mixed', count: 15, weak_spot: true, timed: true,
-                 difficulty: 'harder', dayTask: 'weak'});
-    }));
-
-  list.appendChild(task('math', 'Math sprint',
-    '10 problems with worked solutions', 1, function(){
-      startQuiz({portion: 'math', count: 10, weak_spot: true, timed: false,
-                 dayTask: 'math'});
-    }));
-
+    row.appendChild(w);
+    if (t.done){
+      row.appendChild(el('span', 'tick', '✓'));
+    } else if (t.count > 0){
+      var b = el('button', 'btn' + (isNext ? '' : ' ghost'), 'Start');
+      b.onclick = taskAction(t, plan);
+      row.appendChild(b);
+    } else {
+      row.appendChild(el('span', 'muted', 'nothing due'));
+    }
+    list.appendChild(row);
+  });
   work.appendChild(list);
   box.appendChild(work);
 
-  if (plan.focus.length){
-    var f = el('div', 'card');
-    f.appendChild(cardHead('Read this if you have time', 'your weakest topics'));
-    var fl = el('div', 'focuslist');
-    plan.focus.forEach(function(t){
-      var d = el('div', 'focus');
-      d.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:.8rem';
-      var left = el('div');
-      left.appendChild(el('b', null, t.label));
-      left.appendChild(document.createTextNode(' '));
-      left.appendChild(tagFor(t.portion));
-      d.appendChild(left);
-      d.appendChild(studyButton(t.topic, 'READ'));
-      fl.appendChild(d);
-    });
-    f.appendChild(fl);
-    box.appendChild(f);
-  }
+  /* ---- vocabulary progress across all categories ---- */
+  var vp = vocabProgress(D);
+  var passed = vp.filter(function(x){ return x.passed; }).length;
+  var vc = el('div', 'card');
+  vc.appendChild(cardHead('Definitions by category',
+    passed + ' of ' + vp.length + ' categories passed'));
+  vc.appendChild(el('p', 'muted',
+    'A category passes at 90% of its terms known — meaning you have got each one ' +
+    'right twice. Today serves the next unpassed category, heaviest on the exam first.'));
+  var wrap = el('div', 'scroll'), t2 = el('table', 'stats');
+  t2.innerHTML = '<tr><th>Category</th><th class="num">Known</th>' +
+                 '<th></th><th class="num">On exam</th><th></th></tr>';
+  vp.forEach(function(x){
+    var nm = el('td');
+    nm.appendChild(document.createTextNode(x.label + ' '));
+    nm.appendChild(tagFor(x.portion));
+    if (x.passed) nm.appendChild(el('span', 'tag', 'passed'));
+    var td = el('td');
+    var track = el('div', 'bar-track');
+    var f2 = el('div', 'bar-fill ' + (x.passed ? 'high' : band(x.pct)));
+    f2.style.width = Math.round(x.pct * 100) + '%';
+    track.appendChild(f2); td.appendChild(track);
+    var act = el('td');
+    var ab = el('button', 'btn mini' + (x.passed ? ' ghost' : ''),
+                x.passed ? 'REVIEW' : 'LEARN');
+    ab.onclick = (function(topic){
+      return function(){ startVocab({topic: topic, count: 15}); };
+    })(x.topic);
+    act.appendChild(ab);
+    t2.appendChild(statRow([
+      nm,
+      el('td', 'num', x.known + '/' + x.total),
+      td,
+      el('td', 'num', countsOnExam(x.topic) ? String(x.weight) : 'drill'),
+      act
+    ]));
+  });
+  wrap.appendChild(t2); vc.appendChild(wrap);
+  box.appendChild(vc);
   window.scrollTo(0, 0);
 }
 
@@ -788,9 +842,37 @@ function renderVocab(){
   var box = $('vocabBody');
 
   if (VQ && VQ.i >= VQ.list.length){
+    if (VQ.opts.dayTask){ markDone(D, VQ.opts.dayTask); persist(); }
     var done = el('div', 'card');
     done.appendChild(cardHead('Set finished',
       VQ.right + ' of ' + VQ.list.length + ' correct'));
+    if (VQ.opts.topic){
+      var after = vocabProgress(D).filter(function(x){
+        return x.topic === VQ.opts.topic; })[0];
+      if (after){
+        var line = el('div', 'callout');
+        line.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.95rem;' +
+          'line-height:1.55;border-left-color:' + (after.passed ? 'var(--ok)' : 'var(--accent)');
+        if (after.passed){
+          var nxt = nextVocabCategory(D);
+          line.textContent = after.label + ' passed — ' + after.known + ' of ' +
+            after.total + ' terms known.' +
+            (nxt ? ' Next up: ' + nxt.label + '.' : ' Every category is now passed.');
+          if (nxt){
+            var nb3 = el('button', 'btn mini');
+            nb3.textContent = 'START ' + nxt.label.toUpperCase();
+            nb3.style.marginTop = '.5rem';
+            nb3.onclick = function(){ VQ = null; startVocab({topic: nxt.topic, count: 15}); };
+            line.appendChild(document.createElement('br'));
+            line.appendChild(nb3);
+          }
+        } else {
+          line.textContent = after.label + ': ' + after.known + ' of ' + after.total +
+            ' terms known (' + Math.round(after.pct * 100) + '%). Passes at 90%.';
+        }
+        done.appendChild(line);
+      }
+    }
     var missed = VQ.missed;
     if (missed.length){
       done.appendChild(el('p', 'muted', 'Terms you missed:'));
@@ -876,7 +958,10 @@ function startVocab(opts){
     alert('That category needs at least four terms to build a multiple choice set.');
     return;
   }
-  VQ = {list: list, i: 0, right: 0, missed: [], locked: false, opts: opts};
+  var before = opts.topic ? vocabProgress(D).filter(function(x){
+    return x.topic === opts.topic; })[0] : null;
+  VQ = {list: list, i: 0, right: 0, missed: [], locked: false, opts: opts,
+        before: before};
   show('vocab');
 }
 

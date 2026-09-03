@@ -519,3 +519,8 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .cat:hover{border-color:var(--accent); border-left-color:var(--accent)}
 .cat .cn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.08rem}
 .cat .cs{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-3)}
+
+/* the task queued up next is the one the eye should land on */
+.task.next{border-left-color:var(--accent); background:var(--accent-soft)}
+.task.next .tn .tag{margin-left:.5rem}
+.task .tn{display:flex; align-items:center; gap:.2rem; flex-wrap:wrap}
