@@ -694,11 +694,18 @@ function cardCounts(d){
    from the same area are the ones actually confusable. */
 function vocabQuestions(d, opts){
   opts = opts || {};
+  var only = null;
+  if (opts.ids && opts.ids.length){
+    only = {};
+    opts.ids.forEach(function(id){ only[id] = 1; });
+  }
   var pool = cards().filter(function(c){
+    if (only) return !!only[c.id];
     if (opts.topic && c.topic !== opts.topic) return false;
     if (opts.portion && c.portion !== opts.portion) return false;
     return true;
   });
+
   if (opts.mode === 'weak'){
     var weak = pool.filter(function(c){
       var r = d.srs[c.id];
@@ -713,7 +720,10 @@ function vocabQuestions(d, opts){
     });
     if (due.length >= 4) pool = due;
   }
-  if (pool.length < 4) return [];
+  // Distractors are drawn from the whole bank, so a short list of chosen terms
+  // is fine; only a general pool needs four of its own to be worth drilling.
+  if (!pool.length) return [];
+  if (!only && pool.length < 4) return [];
 
   var all = cards();
   var picked = shuffle(pool.slice()).slice(0, opts.count || 15);
@@ -741,6 +751,39 @@ function vocabQuestions(d, opts){
       def: c.def, term: c.term, choices: choices, answer: choices.indexOf(c.term)
     };
   }).filter(function(q){ return q.choices.length === 4; });
+}
+
+/* Every term you have ever got wrong, whether in the vocab quiz or on a card.
+   Derived from the ladder rather than a separate log, so it survives sessions
+   and clears itself once a term is genuinely learned. */
+function vocabMisses(d, opts){
+  opts = opts || {};
+  var rows = [];
+  cards().forEach(function(c){
+    var r = d.srs[c.id];
+    if (!r || !r.wrong) return;
+    var known = r.box >= KNOWN_BOX;
+    if (opts.openOnly && known) return;
+    if (opts.topic && c.topic !== opts.topic) return;
+    rows.push({
+      id: c.id, term: c.term, def: c.def, topic: c.topic,
+      topic_label: c.topic_label, portion: c.portion,
+      wrong: r.wrong, right: r.right, box: r.box, last: r.last || 0,
+      known: known
+    });
+  });
+  rows.sort(function(a, b){
+    if (a.known !== b.known) return a.known ? 1 : -1;   // still shaky first
+    if (a.wrong !== b.wrong) return b.wrong - a.wrong;  // most-missed next
+    return b.last - a.last;
+  });
+  return rows;
+}
+
+function vocabMissCounts(d){
+  var all = vocabMisses(d, {});
+  var open = all.filter(function(r){ return !r.known; }).length;
+  return {total: all.length, open: open, learned: all.length - open};
 }
 
 function vocabTopics(d){

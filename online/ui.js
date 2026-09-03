@@ -24,6 +24,7 @@ function persist(){ save(D); }
 /* -------------------------------------------------------------- routing */
 var VIEWS = ['today','dash','study','cards','vocab','home','math','notebook','weak','quiz','result','plan','setup'];
 var VQ = null;
+var VOCAB_LOG_OPEN_ONLY = true;
 var NB_OPEN_ONLY = true;
 var STUDY_TOPIC = null;
 function show(v){
@@ -949,7 +950,75 @@ function renderVocab(){
     card.appendChild(grid);
     box.appendChild(card);
   });
+
+  box.appendChild(vocabMissLog());
   window.scrollTo(0, 0);
+}
+
+
+function vocabMissLog(){
+  var counts = vocabMissCounts(D);
+  var card = el('div', 'card');
+  card.appendChild(cardHead('Terms you have got wrong',
+    counts.total ? (counts.open + ' still shaky · ' + counts.learned + ' learned since')
+                 : 'nothing yet'));
+
+  if (!counts.total){
+    card.appendChild(el('div', 'empty',
+      'Nothing here yet. Any definition you miss is logged automatically and stays ' +
+      'until you have got it right twice.'));
+    return card;
+  }
+
+  card.appendChild(el('p', 'muted',
+    'A term leaves the shaky list once you have answered it correctly twice. ' +
+    'Missing it again puts it straight back.'));
+
+  var f = el('div', 'nbfilter');
+  var ob = el('button', 'btn' + (VOCAB_LOG_OPEN_ONLY ? '' : ' ghost'),
+              'Still shaky (' + counts.open + ')');
+  ob.onclick = function(){ VOCAB_LOG_OPEN_ONLY = true; renderVocab(); };
+  var ab = el('button', 'btn' + (VOCAB_LOG_OPEN_ONLY ? ' ghost' : ''),
+              'All I have missed (' + counts.total + ')');
+  ab.onclick = function(){ VOCAB_LOG_OPEN_ONLY = false; renderVocab(); };
+  f.appendChild(ob); f.appendChild(ab);
+  if (counts.open){
+    var db = el('button', 'btn ghost', 'Drill these');
+    db.onclick = function(){
+      var ids = vocabMisses(D, {openOnly: true}).map(function(r){ return r.id; });
+      startVocab({ids: ids, count: Math.min(20, ids.length)});
+    };
+    f.appendChild(db);
+  }
+  card.appendChild(f);
+
+  var rows = vocabMisses(D, {openOnly: VOCAB_LOG_OPEN_ONLY});
+  var wrap = el('div', 'scroll'), t = el('table', 'stats');
+  t.innerHTML = '<tr><th>Term</th><th>Definition</th><th>Category</th>' +
+                '<th class="num">Missed</th><th></th></tr>';
+  rows.forEach(function(r){
+    var term = el('td');
+    term.appendChild(el('b', null, r.term));
+    if (r.known) term.appendChild(el('span', 'tag', 'learned'));
+    var cat = el('td');
+    cat.appendChild(document.createTextNode(r.topic_label + ' '));
+    cat.appendChild(tagFor(r.portion));
+    var act = el('td');
+    var b = el('button', 'btn mini', 'RETRY');
+    b.onclick = (function(id){
+      return function(){ startVocab({ids: [id], count: 1}); };
+    })(r.id);
+    act.appendChild(b);
+    var def = el('td', null, r.def);
+    def.style.cssText = 'white-space:normal;min-width:230px;max-width:40ch';
+    t.appendChild(statRow([
+      term, def, cat,
+      el('td', 'num', r.wrong + '×'),
+      act
+    ]));
+  });
+  wrap.appendChild(t); card.appendChild(wrap);
+  return card;
 }
 
 function startVocab(opts){
