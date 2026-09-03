@@ -454,30 +454,48 @@ function renderToday(){
   d1.appendChild(ring);
   g.appendChild(d1);
 
-  var d2 = el('div', 'metric');
-  d2.appendChild(el('div', 'eyebrow', 'Readiness now'));
-  d2.appendChild(el('div', 'stat' + (r.current === null ? ''
-    : (r.current >= 0.75 ? ' good' : ' bad')),
-    r.current === null ? '—' : pct(r.current)));
-  d2.appendChild(el('div', 'muted', 'need 75% to pass'));
-  g.appendChild(d2);
+  function portionMetric(label, r, note){
+    var d = el('div', 'metric');
+    d.appendChild(el('div', 'eyebrow', label));
+    d.appendChild(el('div', 'stat' + (r.current === null ? ''
+      : (r.current >= 0.75 ? ' good' : ' bad')),
+      r.current === null ? '—' : pct(r.current)));
+    d.appendChild(el('div', 'muted', note));
+    return d;
+  }
+  g.appendChild(portionMetric('National now', r.national,
+    r.national.current === null ? 'no data yet'
+      : (r.national.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
+  g.appendChild(portionMetric('Georgia now', r.georgia,
+    r.georgia.current === null ? 'no data yet'
+      : (r.georgia.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
 
   var d3 = el('div', 'metric');
-  d3.appendChild(el('div', 'eyebrow', 'Projected on exam day'));
-  if (r.projected === null){
-    d3.appendChild(el('div', 'stat', '—'));
+  d3.appendChild(el('div', 'eyebrow', 'Weaker portion on exam day'));
+  if (r.weakestProjected === null){
+    d3.appendChild(el('div', 'stat', '\u2014'));
     d3.appendChild(el('div', 'muted',
       r.needsSpread ? 'take quizzes on different days'
         : (r.points < 3 ? 'needs 3 scored quizzes' : 'set an exam date')));
   } else {
-    d3.appendChild(el('div', 'stat' + (r.onTrack ? ' good' : ' bad'), pct(r.projected)));
-    var per = Math.round((r.perDay || 0) * 1000) / 10;
-    d3.appendChild(el('div', 'muted',
-      (r.onTrack ? 'on track' : 'below the pass mark') +
-      ' · ' + (per >= 0 ? '+' : '') + per + ' pts/day'));
+    d3.appendChild(el('div', 'stat' + (r.bothOnTrack ? ' good' : ' bad'),
+      pct(r.weakestProjected)));
+    d3.appendChild(el('div', 'muted', r.bothOnTrack
+      ? 'both portions on track'
+      : ((r.blocker === 'georgia' ? 'Georgia' : 'National') +
+         ' is the one holding you back')));
   }
   g.appendChild(d3);
   head.appendChild(g);
+  if (r.national.current !== null && r.georgia.current !== null &&
+      (r.national.current < 0.75) !== (r.georgia.current < 0.75)){
+    var warn = el('div', 'callout trap');
+    warn.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.92rem;line-height:1.55';
+    warn.textContent = 'The two portions are scored separately and you must clear 75% on ' +
+      'each. Your ' + (r.blocker === 'georgia' ? 'Georgia' : 'National') + ' portion is ' +
+      'below the mark, so a healthy average does not mean a pass.';
+    head.appendChild(warn);
+  }
   box.appendChild(head);
 
   var work = el('div', 'card');

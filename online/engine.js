@@ -702,12 +702,15 @@ function notebookDue(d){
 }
 
 /* ------------------------------------------------------------ readiness --
-   Fit a straight line through your recent scored attempts and read it off at
-   the exam date. Honest about needing enough data to say anything. */
-function readiness(d){
+   The two portions are scored SEPARATELY - you must clear 75% on each, so a
+   healthy blended average can still hide a failing state portion. Readiness is
+   therefore computed per portion as well as overall, and the overall figure is
+   never allowed to look better than the weaker half. */
+function readinessFor(d, portionKeys){
   var keys = {};
-  portionTopics('national').concat(portionTopics('georgia'))
-    .forEach(function(k){ keys[k] = 1; });
+  portionKeys.forEach(function(p){
+    portionTopics(p).forEach(function(k){ keys[k] = 1; });
+  });
   var pts = [];
   d.attempts.forEach(function(a){
     var seen = 0, corr = 0;
@@ -749,6 +752,23 @@ function readiness(d){
   out.projected = Math.max(0.05, Math.min(0.95, proj));
   out.onTrack = out.projected >= 0.75;
   return out;
+}
+
+function readiness(d){
+  var nat = readinessFor(d, ['national']);
+  var ga = readinessFor(d, ['georgia']);
+  var both = readinessFor(d, ['national', 'georgia']);
+  // you pass only if BOTH portions clear 75%, so the weaker one governs
+  var weakestCurrent = [nat.current, ga.current].filter(function(x){ return x !== null; });
+  var weakestProj = [nat.projected, ga.projected].filter(function(x){ return x !== null; });
+  both.national = nat;
+  both.georgia = ga;
+  both.weakest = weakestCurrent.length ? Math.min.apply(null, weakestCurrent) : null;
+  both.weakestProjected = weakestProj.length ? Math.min.apply(null, weakestProj) : null;
+  both.bothOnTrack = (nat.onTrack === true) && (ga.onTrack === true);
+  both.blocker = (nat.current !== null && ga.current !== null)
+    ? (nat.current < ga.current ? 'national' : 'georgia') : null;
+  return both;
 }
 
 /* ---------------------------------------------------------- today's work */
