@@ -240,7 +240,10 @@ function renderQuestion(){
   $('qtag').textContent = isComp ? 'Comprehensive'
                         : (q.generator ? 'Math' : (isGA ? 'Georgia' : 'National'));
   $('qtag').className = 'tag' + (isGA ? ' ga' : (isComp ? ' comp' : ''));
-  $('qhard').hidden = ((q.difficulty || 1) !== 2);
+  var tier = q.difficulty || 1;
+  $('qhard').hidden = (tier < 2);
+  $('qhard').textContent = (tier === 3) ? 'Exam' : 'Hard';
+  $('qhard').className = 'tag hard' + (tier === 3 ? ' exam' : '');
   $('qtopic').textContent = q.topic_label;
   $('qtext').textContent = q.q;
   $('qfeedback').innerHTML = '';
@@ -394,7 +397,9 @@ function notebookEntry(item){
   var wrap = el('div', 'nbitem' + (item.cleared ? ' done' : ''));
   var meta = el('div', 'nbmeta');
   if (item.subtopic) meta.appendChild(el('span', null, item.subtopic));
-  if (item.difficulty === 2) meta.appendChild(el('span', 'tag hard', 'Hard'));
+  if (item.difficulty >= 2)
+    meta.appendChild(el('span', 'tag hard' + (item.difficulty === 3 ? ' exam' : ''),
+                        item.difficulty === 3 ? 'Exam' : 'Hard'));
   if (item.times > 1) meta.appendChild(el('span', null, 'missed ' + item.times + '×'));
   if (item.cleared) meta.appendChild(el('span', 'tag', 'got it since'));
   if (item.recovered)

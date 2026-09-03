@@ -21,6 +21,7 @@ import _national_a, _national_b, _national_c      # noqa: E402
 import _national_hard_a, _national_hard_b         # noqa: E402
 import _georgia_a, _georgia_b, _georgia_hard      # noqa: E402
 import _comp_a, _comp_b                           # noqa: E402
+import _exam_nat_a, _exam_nat_b, _exam_ga, _exam_comp   # noqa: E402
 from _subtopics import subtopic_for               # noqa: E402
 from greprep import topics                        # noqa: E402
 
@@ -28,9 +29,11 @@ OUT = os.path.join(ROOT, "greprep", "banks")
 
 SOURCES = {
     "national": [_national_a.ROWS, _national_b.ROWS, _national_c.ROWS,
-                 _national_hard_a.ROWS, _national_hard_b.ROWS],
-    "georgia": [_georgia_a.ROWS, _georgia_b.ROWS, _georgia_hard.ROWS],
-    "comprehensive": [_comp_a.ROWS, _comp_b.ROWS],
+                 _national_hard_a.ROWS, _national_hard_b.ROWS,
+                 _exam_nat_a.ROWS, _exam_nat_b.ROWS],
+    "georgia": [_georgia_a.ROWS, _georgia_b.ROWS, _georgia_hard.ROWS,
+                _exam_ga.ROWS],
+    "comprehensive": [_comp_a.ROWS, _comp_b.ROWS, _exam_comp.ROWS],
 }
 
 
@@ -106,12 +109,12 @@ def main():
         grand += len(rows)
         print("%s: %d questions -> %s" % (portion, len(rows), os.path.relpath(path, ROOT)))
         for k in topics.portion_topics(portion):
-            hard = sum(1 for r in rows if r["topic"] == k and r["difficulty"] == 2)
+            hard = sum(1 for r in rows if r["topic"] == k and r["difficulty"] >= 2)
             tail = ("drill weight %d" % topics.weight(k) if k in topics.PRACTICE_ONLY
                     else "exam weight %d" % topics.weight(k))
             print("    %-28s %3d  (%d hard, %s)" % (topics.label(k), by_topic[k], hard, tail))
         print("    answer position spread: %s" % dict(sorted(pos.items())))
-        print("    difficulty: %d core / %d hard" % (diff[1], diff[2]))
+        print("    difficulty: %d core / %d hard / %d exam" % (diff[1], diff[2], diff[3]))
         thin = [topics.label(k) for k in topics.portion_topics(portion) if by_topic[k] < 5]
         if thin:
             print("    NOTE thin topics (<5): %s" % ", ".join(thin))

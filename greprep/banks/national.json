@@ -3058,5 +3058,491 @@
   "sub": "national/practice|Fair housing & advertising",
   "subtopic": "Fair housing & advertising",
   "topic": "national/practice"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "C must assume the loan to perfect her remainder",
+   "The lender may foreclose against C to satisfy the debt",
+   "C takes the property subject to the mortgage, which survives B's death",
+   "C takes free of the mortgage, because B's interest ended at her death"
+  ],
+  "concept": "A life tenant can only encumber what they own",
+  "difficulty": 3,
+  "explain": "B held a life estate, so the mortgage attached only to that estate. When B died the life estate ended and the lien died with it. C's remainder was never encumbered, so the lender's security is gone and it must pursue B's estate on the note.",
+  "id": "nat-b02700f3",
+  "portion": "national",
+  "q": "A grants Blackacre 'to B for life, then to C and her heirs.' B mortgages her interest, then dies with the loan unpaid. Which statement is TRUE?",
+  "sub": "national/ownership|Estates & the bundle of rights",
+  "subtopic": "Estates & the bundle of rights",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "All three owners hold as tenants in common in equal shares",
+   "The friend owns 1/3 and the surviving siblings 1/3 each, all as tenants in common",
+   "The friend owns 1/4 as a tenant in common; the two surviving siblings own 3/4 as joint tenants",
+   "The deceased sibling's share passes to her heirs as a tenancy in common interest"
+  ],
+  "concept": "Severance affects only the conveyed share",
+  "difficulty": 3,
+  "explain": "The conveyance severed only that 1/4, making the friend a tenant in common. The other three remained joint tenants among themselves, so when one died her share passed by survivorship to the remaining two, giving them 3/4 jointly. Nothing passed to her heirs.",
+  "id": "nat-d076eed6",
+  "portion": "national",
+  "q": "Four siblings own a cabin as joint tenants. One conveys her interest to a friend; a second then dies intestate. Immediately afterward, how is title held?",
+  "sub": "national/ownership|Co-ownership & survivorship",
+  "subtopic": "Co-ownership & survivorship",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "The tenant may return within a reasonable time to remove the shelving",
+   "All three were trade fixtures and the tenant forfeited only the shelving",
+   "None were trade fixtures because they were annexed to the realty",
+   "The landlord may sue for the value of the cooler and sign"
+  ],
+  "concept": "Trade fixtures must be removed before the term ends",
+  "difficulty": 3,
+  "explain": "All three were installed to conduct business, so all three were trade fixtures. The right to remove them expires with the lease. By leaving the shelving past the term the tenant abandoned it to the landlord; removing the other two in time was proper.",
+  "id": "nat-e2c635fc",
+  "portion": "national",
+  "q": "A tenant installs shelving, a walk-in cooler, and a custom sign at a leased bakery. The lease says nothing about removal. On the last day of the term the tenant removes the cooler and sign but leaves the shelving bolted in place. Which is TRUE?",
+  "sub": "national/ownership|Fixtures & trade fixtures",
+  "subtopic": "Fixtures & trade fixtures",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Determined by unit square footage",
+   "$1,000",
+   "$10,000",
+   "$4,000"
+  ],
+  "concept": "The common-element percentage drives assessments",
+  "difficulty": 3,
+  "explain": "$400,000 x 2.5% = $10,000. The percentage in the declaration governs both assessments and usually voting weight, and it cannot be separated from the unit or renegotiated by an individual owner.",
+  "id": "nat-05789cc4",
+  "portion": "national",
+  "q": "A condominium declaration allocates a unit 2.5% of the common elements. The association levies a special assessment of $400,000 for roof replacement. The unit owner's share is:",
+  "sub": "national/ownership|Condos, co-ops & timeshares",
+  "subtopic": "Condos, co-ops & timeshares",
+  "topic": "national/ownership"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The covenant is void once a public body grants relief",
+   "The variance overrides the covenant because zoning is superior to private agreement",
+   "The city must join the covenant holders before issuing the variance",
+   "The owner may still be enjoined by a neighbouring lot owner enforcing the covenant"
+  ],
+  "concept": "Public relief does not defeat private restrictions",
+  "difficulty": 3,
+  "explain": "Zoning and covenants operate independently, and the more restrictive controls. A variance only removes the government's objection; any benefited lot owner may still sue to enforce the one-story covenant.",
+  "id": "nat-a7dd7e7c",
+  "portion": "national",
+  "q": "A parcel is zoned for single-family use. Recorded subdivision covenants limit structures to one story. The owner obtains a variance from the city permitting a two-story home. Which is TRUE?",
+  "sub": "national/landuse|Government powers over land",
+  "subtopic": "Government powers over land",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "An improper exercise of eminent domain without condemnation",
+   "A regulatory taking, because it denies all economically viable use",
+   "Spot zoning, because it targets one parcel",
+   "Void, because police power cannot restrict private land"
+  ],
+  "concept": "Where police power crosses into a taking",
+  "difficulty": 3,
+  "explain": "Denial of ALL economically viable use is the line. That is a regulatory taking, pursued as inverse condemnation with just compensation. It is not spot zoning (which benefits an owner inconsistently with the plan), and police power certainly can restrict land - just not to that degree without paying.",
+  "id": "nat-c43c6e96",
+  "portion": "national",
+  "q": "A city adopts an ordinance barring all construction on a wetland parcel to protect a watershed. The owner had bought it to build a single home and it now has no other use. The owner's best claim is that the ordinance is:",
+  "sub": "national/landuse|Government powers over land",
+  "subtopic": "Government powers over land",
+  "topic": "national/landuse"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "An average of all three, since all the data is available",
+   "Sales comparison, because recent comparable sales exist",
+   "Income, because a buyer of this property is buying an income stream",
+   "Cost, because the improvements dominate the value"
+  ],
+  "concept": "Weighting follows how buyers actually behave",
+  "difficulty": 3,
+  "explain": "Reconciliation weights by reliability for that property type, and investment property is bought for its income. Sales comparison supports the conclusion and cost serves as a check, but income leads. Averaging the three is never correct.",
+  "id": "nat-11cc7e1b",
+  "portion": "national",
+  "q": "An appraiser must value a 6-unit apartment building. Comparable buildings sold recently, the property is fully leased, and construction costs are well documented. Which approach should be given the MOST weight, and why?",
+  "sub": "national/valuation|Appraisal process & approaches",
+  "subtopic": "Appraisal process & approaches",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "$393,000",
+   "$766,000",
+   "$573,000",
+   "$1,053,000"
+  ],
+  "concept": "What belongs in NOI and what does not",
+  "difficulty": 3,
+  "explain": "$96,000 - 8% vacancy ($7,680) = $88,320 effective gross. Less $31,000 operating expenses = $57,320 NOI. Debt service and the capital roof replacement are BOTH excluded. $57,320 / 0.075 = $764,267, closest to $766,000.",
+  "id": "nat-bc1f0e70",
+  "portion": "national",
+  "q": "A property produces $96,000 potential gross income. Vacancy runs 8%, operating expenses are $31,000, annual debt service is $28,000, and the owner spent $15,000 on a new roof this year. Using a 7.5% capitalization rate, the indicated value is closest to:",
+  "sub": "national/valuation|Income approach & cap rates",
+  "subtopic": "Income approach & cap rates",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$421,000",
+   "$445,000",
+   "$409,000",
+   "$385,000"
+  ],
+  "concept": "Two adjustments in the same direction",
+  "difficulty": 3,
+  "explain": "The comp is superior on both counts, so both come off. Size: 200 sq ft x $60 = $12,000. Garage: $18,000. $415,000 - $12,000 - $18,000 = $385,000. Adding either one back gives the distractors.",
+  "id": "nat-1a3884fd",
+  "portion": "national",
+  "q": "A subject home has 2,000 sq ft and no garage. A comparable with 2,200 sq ft and a two-car garage sold for $415,000. Living area adjusts at $60 per sq ft and the garage at $18,000. The adjusted indication is:",
+  "sub": "national/valuation|Sales comparison & adjustments",
+  "subtopic": "Sales comparison & adjustments",
+  "topic": "national/valuation"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "$62,800",
+   "$74,800",
+   "$80,800",
+   "$68,800"
+  ],
+  "concept": "Points and origination are percentages of the LOAN, and earnest money is a credit",
+  "difficulty": 3,
+  "explain": "Loan = 80% x $340,000 = $272,000, so the down payment is $68,000. Points = 1.5% x $272,000 = $4,080. Origination = 1% x $272,000 = $2,720. Debits total $74,800. The $6,000 already on deposit is a buyer credit, so $74,800 - $6,000 = $68,800 to bring. $74,800 is the figure before crediting the deposit.",
+  "id": "nat-04d75684",
+  "portion": "national",
+  "q": "A buyer purchases at $340,000 with an 80% conventional loan, pays 1.5 discount points and a 1% origination fee, and has already deposited $6,000 in earnest money. Ignoring prorations and all other costs, how much must the buyer bring to closing?",
+  "sub": "national/financing|Points, yield & TRID disclosure",
+  "subtopic": "Points, yield & TRID disclosure",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "A wraparound arrangement",
+   "Taking title subject to the loan",
+   "A novation",
+   "An assumption creating secondary liability in the seller"
+  ],
+  "concept": "Assumption plus release equals novation",
+  "difficulty": 3,
+  "explain": "Assumption alone leaves the seller secondarily liable. The lender's RELEASE is what makes it a novation - a new party substituted and the original discharged. 'Subject to' would mean the buyer accepted no liability at all.",
+  "id": "nat-e59e6e53",
+  "portion": "national",
+  "q": "A borrower assumes an existing loan with the lender's written consent, and the lender releases the seller from liability. This arrangement is BEST described as:",
+  "sub": "national/financing|Assumption, novation & 'subject to'",
+  "subtopic": "Assumption, novation & 'subject to'",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Do nothing, because the APR is unchanged",
+   "Provide a corrected disclosure at consummation only",
+   "Provide a corrected Closing Disclosure and observe a new three-business-day waiting period",
+   "Issue a new Loan Estimate instead"
+  ],
+  "concept": "The three triggers that restart the CD clock",
+  "difficulty": 3,
+  "explain": "The clock restarts for an APR inaccurate beyond tolerance, a change in LOAN PRODUCT, or the addition of a prepayment penalty. Fixed to ARM is a product change, so the waiting period runs again even though the APR held steady.",
+  "id": "nat-4d719475",
+  "portion": "national",
+  "q": "Under TRID, a lender issues a Closing Disclosure showing a 6.125% APR. Two days before consummation the loan changes from a 30-year fixed to a 5/1 ARM at the same APR. The lender must:",
+  "sub": "national/financing|Financing fundamentals",
+  "subtopic": "Financing fundamentals",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The lender's underwriting guidelines on request",
+   "A statement of specific reasons only if the applicant is in a protected class",
+   "A statement of specific reasons, or notice of the right to request them within 60 days",
+   "A second review by a different underwriter"
+  ],
+  "concept": "ECOA adverse action applies to everyone",
+  "difficulty": 3,
+  "explain": "The notice requirement runs to every rejected applicant regardless of protected class - it is not itself a discrimination test. The applicant is not entitled to internal guidelines or a second review.",
+  "id": "nat-ac91f5b8",
+  "portion": "national",
+  "q": "A lender denies a mortgage application. Under ECOA the applicant is entitled to:",
+  "sub": "national/financing|Lending law & the secondary market",
+  "subtopic": "Lending law & the secondary market",
+  "topic": "national/financing"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "All three facts",
+   "The roof only",
+   "The roof and the rezoning, but not the divorce",
+   "The roof and the divorce, but not the rezoning"
+  ],
+  "concept": "Material facts versus client confidences",
+  "difficulty": 3,
+  "explain": "The roof is a material defect and the rezoning materially affects value and desirability - both must be disclosed even to a customer. The divorce is the seller's motivation, which is confidential and would damage the client's bargaining position.",
+  "id": "nat-42e760b3",
+  "portion": "national",
+  "q": "A listing broker learns that the seller's roof leaks, that the seller is divorcing and must sell quickly, and that a neighbouring lot has been rezoned for a convenience store. A buyer customer asks about the property. The broker must disclose:",
+  "sub": "national/agency|Commission & representation",
+  "subtopic": "Commission & representation",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Decline, because she represents the seller and the information is confidential",
+   "Answer only what is in the MLS",
+   "Refer the question to Broker Y",
+   "Answer, since the buyer is represented by another firm"
+  ],
+  "concept": "Duties run to your client, not to who else is in the room",
+  "difficulty": 3,
+  "explain": "The buyer having their own agent changes nothing about the listing salesperson's loyalty and confidentiality to the seller. Declining is correct; referring the question elsewhere does not make disclosure acceptable.",
+  "id": "nat-ddc3f513",
+  "portion": "national",
+  "q": "A salesperson affiliated with Broker X shows her own listing to a buyer who has signed a buyer agency agreement with Broker Y. During negotiations the buyer asks the salesperson what the seller would accept. The salesperson should:",
+  "sub": "national/agency|Commission & representation",
+  "subtopic": "Commission & representation",
+  "topic": "national/agency"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The waiver removes the seller's disclosure obligation entirely",
+   "The agent must order a lead inspection at the seller's expense",
+   "The seller must still provide the disclosure form and EPA pamphlet, and the buyer may waive the testing period",
+   "The disclosure requirement is satisfied only if the seller tests before closing"
+  ],
+  "concept": "What is waivable under the lead rule and what is not",
+  "difficulty": 3,
+  "explain": "The seller is never required to TEST. The disclosure form, any records, and the EPA pamphlet are mandatory for pre-1978 housing and cannot be waived. Only the 10-day opportunity to test is waivable, and the buyer may do that in writing.",
+  "id": "nat-ee3caae1",
+  "portion": "national",
+  "q": "A seller of a 1974 home tells the listing agent there is no lead paint, having never tested. The buyer waives the 10-day testing opportunity in writing. Which statement is TRUE?",
+  "sub": "national/disclosures|Lead-based paint",
+  "subtopic": "Lead-based paint",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Say nothing, since the seller's disclosure governs",
+   "Advise the buyer to terminate the contract",
+   "Ask the listing agent to amend the seller's disclosure",
+   "Point out the patch to the buyer and recommend the inspector examine it"
+  ],
+  "concept": "No duty to discover, but no licence to ignore",
+  "difficulty": 3,
+  "explain": "Agents need not investigate, but must pass on what they actually observe. Flagging it and routing it to the inspector is the duty; you neither alter the seller's form nor push the buyer to terminate over a suspicion.",
+  "id": "nat-edf72ff4",
+  "portion": "national",
+  "q": "During a walkthrough a buyer's agent notices a fresh drywall patch on a ceiling directly beneath an upstairs bathroom. The seller's disclosure reports no plumbing problems. The agent should:",
+  "sub": "national/disclosures|Material facts & latent defects",
+  "subtopic": "Material facts & latent defects",
+  "topic": "national/disclosures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "A contract formed at 7:30 p.m. because the seller signed within the deadline",
+   "A contract formed at 4:00 p.m. when the seller signed",
+   "The revocation is ineffective because it was not in writing",
+   "No contract formed, because the offer was revoked before acceptance was communicated"
+  ],
+  "concept": "Revocation is effective on communication, and beats an undelivered acceptance",
+  "difficulty": 3,
+  "explain": "An offer may be revoked any time before acceptance is COMMUNICATED to the offeror, and revocation itself takes effect when communicated. The buyer revoked at 5:00; the acceptance was not delivered until 7:30. Signing at 4:00 changed nothing, and revocation need not be written.",
+  "id": "nat-3a9727fa",
+  "portion": "national",
+  "q": "A buyer's written offer states it expires at 6:00 p.m. Tuesday. At 4:00 p.m. Tuesday the seller signs and hands the acceptance to the listing agent, who delivers it to the buyer's agent at 7:30 p.m. At 5:00 p.m. Tuesday, before any delivery, the buyer had phoned the listing agent revoking the offer. Which is TRUE?",
+  "sub": "national/contracts|Offer, acceptance & counteroffers",
+  "subtopic": "Offer, acceptance & counteroffers",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The clause fails because it exceeds 5% of the price",
+   "Liquidated damages clauses are unenforceable in real estate",
+   "The seller must first prove actual damages",
+   "The clause operates as a penalty, since the seller suffered no loss"
+  ],
+  "concept": "Liquidated damages must estimate loss, not punish",
+  "difficulty": 3,
+  "explain": "A clause is enforceable only as a reasonable pre-estimate of hard-to-determine loss. Where the seller resold at a higher price weeks later, retaining $25,000 looks punitive, which is the classic ground for voiding it. There is no fixed percentage rule, and such clauses are certainly enforceable in principle.",
+  "id": "nat-2ab71b10",
+  "portion": "national",
+  "q": "A contract contains a liquidated damages clause fixing the seller's remedy at the $25,000 earnest money on a $300,000 home. The buyer defaults and the seller resells three weeks later for $305,000. The seller sues for the earnest money. The buyer's strongest argument is that:",
+  "sub": "national/contracts|Breach, remedies & damages",
+  "subtopic": "Breach, remedies & damages",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The seller signed under significant time pressure from the buyer's agent",
+   "The seller was 17 years old at signing",
+   "The stated purpose is to operate an unlicensed gambling house",
+   "The buyer was induced by the seller's fraudulent statement about the septic system"
+  ],
+  "concept": "Void versus voidable",
+  "difficulty": 3,
+  "explain": "An unlawful object means no contract ever existed - void. A minor's contract and one induced by fraud are VOIDABLE at the protected party's election. Time pressure alone is not duress.",
+  "id": "nat-5f75833b",
+  "portion": "national",
+  "q": "Which of the following would render a real estate sales contract VOID rather than voidable?",
+  "sub": "national/contracts|Validity, capacity & the Statute of Frauds",
+  "subtopic": "Validity, capacity & the Statute of Frauds",
+  "topic": "national/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "C, because a general warranty deed must be recorded to be valid",
+   "C, because C recorded first without actual knowledge",
+   "B, because B's open possession was constructive notice to C",
+   "A, because the second conveyance was fraudulent"
+  ],
+  "concept": "Possession as constructive notice",
+  "difficulty": 3,
+  "explain": "Race-notice protects a later buyer who takes WITHOUT NOTICE and records first. C recorded first but B's open, visible possession put C on constructive notice - a buyer is charged with what an inspection of the land would reveal. So C fails the notice half of the test.",
+  "id": "nat-5e39d47e",
+  "portion": "national",
+  "q": "A owns land and conveys to B by general warranty deed; B does not record. A then conveys the same land to C, who pays value, has no knowledge of B, and records immediately. B moved onto the land and has been living there openly since the first conveyance. In a race-notice state, who prevails?",
+  "sub": "national/transfer|Recording, notice & priority",
+  "subtopic": "Recording, notice & priority",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "The unreleased mortgage only",
+   "The mortgage and the easement",
+   "All three",
+   "None - exceptions are standard"
+  ],
+  "concept": "Which exceptions actually defeat marketable title",
+  "difficulty": 3,
+  "explain": "A recorded utility easement is a common encumbrance a buyer normally takes subject to, and 'rights of parties in possession' is a standard survey-type exception. An undischarged mortgage of record is a lien that must be released, and title insurance will not cover it because it is excepted.",
+  "id": "nat-8b86278e",
+  "portion": "national",
+  "q": "A title commitment lists as exceptions: a recorded utility easement, an unreleased 1996 mortgage, and rights of parties in possession. The seller must clear which of these to deliver marketable title?",
+  "sub": "national/transfer|Title evidence & clearing defects",
+  "subtopic": "Title evidence & clearing defects",
+  "topic": "national/transfer"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "It may create disparate impact liability even without discriminatory intent",
+   "None, because criminal history is not a protected class",
+   "It violates the Fair Housing Act on its face",
+   "It is lawful only if applied to every applicant equally"
+  ],
+  "concept": "Disparate impact on a facially neutral policy",
+  "difficulty": 3,
+  "explain": "Criminal history is not itself protected, and uniform application is no defence. A blanket ban falls disproportionately on protected classes, so it can create disparate impact liability. HUD guidance expects an individualised assessment rather than a blanket rule.",
+  "id": "nat-f109037e",
+  "portion": "national",
+  "q": "A property manager applies a policy of refusing all applicants with any criminal record. Which statement BEST describes the fair housing exposure?",
+  "sub": "national/practice|Fair housing & advertising",
+  "subtopic": "Fair housing & advertising",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 1,
+  "choices": [
+   "A lawful business decision by independent firms",
+   "A group boycott, a per se antitrust violation",
+   "Price fixing",
+   "Market allocation"
+  ],
+  "concept": "Naming the antitrust violation precisely",
+  "difficulty": 3,
+  "explain": "Competitors agreeing to refuse to deal with another firm is a GROUP BOYCOTT. Market allocation divides territories or customers; price fixing sets prices. All are per se violations, but the exam expects the right label.",
+  "id": "nat-33dfcbed",
+  "portion": "national",
+  "q": "Two competing brokerages' owners meet for lunch and agree not to send referrals to a discount brokerage that recently entered the market. This is:",
+  "sub": "national/practice|Antitrust",
+  "subtopic": "Antitrust",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Divide the funds equally and obtain releases",
+   "Release the funds to the party whose demand arrived first",
+   "Return the deposit to the buyer, who supplied it",
+   "Continue holding the funds and file an interpleader action"
+  ],
+  "concept": "A stakeholder does not adjudicate",
+  "difficulty": 3,
+  "explain": "Releasing, splitting, or defaulting to the buyer all substitute the broker's judgement for a court's and invite a conversion claim. Holding and interpleading - or following the state's prescribed procedure - is the safe course.",
+  "id": "nat-a1ee2d93",
+  "portion": "national",
+  "q": "A broker holds a $15,000 earnest money deposit. The transaction collapses and both parties make written demand. The contract's dispute clause is silent. The broker should:",
+  "sub": "national/practice|Practice standards",
+  "subtopic": "Practice standards",
+  "topic": "national/practice"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "$400,000",
+   "$409,900",
+   "$411,064",
+   "$386,400"
+  ],
+  "concept": "Everything the seller must clear goes above the line before dividing",
+  "difficulty": 3,
+  "explain": "The seller must clear $265,000 + $3,400 + $118,000 = $386,400. That is the 94% remaining after a 6% commission. $386,400 / 0.94 = $411,063.83. Note the payoff belongs in the amount to be cleared; leaving it out gives $286,596.",
+  "id": "nat-bb8ad8d5",
+  "portion": "national",
+  "q": "A seller must net $265,000 after paying a 6% commission, $3,400 in seller closing costs, and an existing loan payoff of $118,000. What must the property sell for?",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
+  "topic": "national/math"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "$4,770",
+   "$2,850",
+   "$3,810",
+   "$960"
+  ],
+  "concept": "Unpaid taxes and collected rent both debit the seller",
+  "difficulty": 3,
+  "explain": "Taxes: $5,400 / 360 = $15 a day. The seller owns 1 January through 14 September = 8 full months (240 days) + 14 = 254 days. 254 x $15 = $3,810, debited to the seller because the buyer will pay the whole bill. Rent: $1,800 / 30 = $60 a day. The buyer owns the 15th through the 30th = 16 days x $60 = $960, which the seller is holding, so it is also a seller debit. $3,810 + $960 = $4,770.",
+  "id": "nat-0b046181",
+  "portion": "national",
+  "q": "Closing is 15 September. Annual taxes of $5,400 are unpaid. September rent of $1,800 was collected by the seller on the 1st. Using a 360-day year, with the seller responsible through 14 September and the buyer owning from closing day, what is the seller's TOTAL debit for these two items?",
+  "sub": "national/math|Math fundamentals",
+  "subtopic": "Math fundamentals",
+  "topic": "national/math"
  }
 ]

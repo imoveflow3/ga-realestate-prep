@@ -427,3 +427,55 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .reading .nbwhy p{font-size:1.02rem; line-height:1.7; margin:0}
 .nbacts{display:flex; gap:.4rem; flex-wrap:wrap; align-items:center}
 .nbfilter{display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
+
+/* ---------------------------------------------------------- today ------ */
+.tasklist{display:flex; flex-direction:column; gap:.55rem}
+.task{display:flex; gap:.9rem; align-items:center; padding:.75rem .9rem;
+  border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; background:var(--panel); flex-wrap:wrap}
+.task.done{border-left-color:var(--ok); opacity:.6}
+.task .tw{flex:1; min-width:180px}
+.task .tn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.14rem}
+.task .td{font-size:.85rem; color:var(--ink-3); line-height:1.5}
+.task .tick{font-family:"IBM Plex Mono",monospace; font-size:1.1rem; color:var(--ok)}
+.ring{display:flex; align-items:baseline; gap:.4rem}
+.ring .big{font-family:"IBM Plex Mono",monospace; font-size:2.1rem; font-weight:600;
+  line-height:1}
+.ring .of{font-size:.85rem; color:var(--ink-3)}
+
+/* ---------------------------------------------------------- cards ------ */
+.cardstage{display:flex; flex-direction:column; gap:.9rem; align-items:stretch}
+.flip{
+  border:1px solid var(--line-2); border-radius:var(--r); background:var(--panel-2);
+  min-height:190px; padding:1.6rem 1.4rem; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:.9rem; text-align:center; cursor:pointer;
+}
+.flip .side{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
+.flip .term{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.9rem;
+  line-height:1.15; color:var(--ink)}
+.flip .def{font-family:"Source Serif 4",Georgia,serif; font-size:1.1rem; line-height:1.7;
+  max-width:44ch; color:var(--ink)}
+.flip .hintline{font-size:.8rem; color:var(--ink-3)}
+.cardmeta{display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.cardacts{display:flex; gap:.5rem; flex-wrap:wrap}
+.cardacts .btn{flex:1; min-width:130px}
+.boxbar{display:flex; gap:3px; align-items:center}
+.boxbar i{display:block; width:16px; height:5px; border-radius:2px; background:var(--line)}
+.boxbar i.on{background:var(--accent)}
+
+/* ---------------------------------------------------------- search ----- */
+.searchbox{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap}
+.searchbox input{flex:1; min-width:200px}
+.hit{border-left:3px solid var(--line-2); padding:.5rem 0 .5rem .9rem;
+  display:flex; flex-direction:column; gap:.2rem}
+.hit .where{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.hit .snip{font-family:"Source Serif 4",Georgia,serif; font-size:1rem; line-height:1.65}
+.hit mark{background:var(--accent-soft); color:var(--accent); padding:0 .12em;
+  border-radius:2px}
+
+/* the exam-realistic tier gets its own mark, distinct from merely hard */
+.tag.hard.exam{background:var(--brass-soft); color:var(--brass)}

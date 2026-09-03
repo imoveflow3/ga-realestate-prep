@@ -2176,5 +2176,275 @@
   "sub": "georgia/fair-housing|Steering & blockbusting",
   "subtopic": "Steering & blockbusting",
   "topic": "georgia/fair-housing"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "She may request a six-month extension from GREC",
+   "She is compliant, since the postlicense course is due within two years",
+   "The CE hours count toward the postlicense requirement",
+   "Her licence will lapse; the 25-hour postlicense course is due within one year and CE does not substitute"
+  ],
+  "concept": "The postlicense deadline is absolute",
+  "difficulty": 3,
+  "explain": "The 25-hour Sales Post-license Course is due within ONE year of original licensure, applies whether active or inactive, and CE hours do not count toward it. Missing the deadline costs the licence.",
+  "id": "geo-72aea721",
+  "portion": "georgia",
+  "q": "A Georgia salesperson licensed 10 months ago has completed 9 hours of continuing education but not the postlicense course. She plans to finish the postlicense course in month 14. Which is TRUE?",
+  "sub": "georgia/license-law|Education requirements",
+  "subtopic": "Education requirements",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Revoking the broker's licence",
+   "Requiring an independent accountant's report on the trust account",
+   "Ordering the broker to repay the consumer the $22,000",
+   "Imposing a fine and requiring additional education"
+  ],
+  "concept": "GREC disciplines; it does not award money",
+  "difficulty": 3,
+  "explain": "GREC may reprimand, suspend, revoke, fine, require education, and require accountant reports. It has no restitution power - the consumer must sue civilly, and should not wait for the disciplinary case to conclude.",
+  "id": "geo-c82dfea8",
+  "portion": "georgia",
+  "q": "A consumer files a sworn complaint alleging a Georgia broker mishandled $22,000 of escrow funds. Following investigation the Commission finds a violation. Which outcome is OUTSIDE GREC's authority?",
+  "sub": "georgia/license-law|GREC discipline & sanctions",
+  "subtopic": "GREC discipline & sanctions",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Cannot qualify, because out-of-state experience does not count",
+   "Must first hold a Georgia salesperson's licence for three years",
+   "Must complete an additional year of Georgia experience",
+   "Satisfies the requirement, on filing a certified licence history from Alabama"
+  ],
+  "concept": "Out-of-state active licensure counts in Georgia",
+  "difficulty": 3,
+  "explain": "Georgia requires three of the five years immediately preceding application in ACTIVE status, and active licensure in another state qualifies. The applicant must supply a certified licence history from every state where they have held a licence.",
+  "id": "geo-f94a0e8b",
+  "portion": "georgia",
+  "q": "An applicant held an active Alabama broker's licence for four of the past five years, has never been licensed in Georgia, and now applies for a Georgia broker's licence. Regarding EXPERIENCE, the applicant:",
+  "sub": "georgia/license-law|Licence administration",
+  "subtopic": "Licence administration",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "She must engage an unaffiliated broker to represent the buyer",
+   "Nothing - an owner selling her own property is exempt from the licence law",
+   "She must disclose her licensed status in writing in the contract and place trust funds in a broker-approved account",
+   "She must transfer title to the brokerage before listing"
+  ],
+  "concept": "Exceptions to licensure never apply to a licensee",
+  "difficulty": 3,
+  "explain": "O.C.G.A. 43-40-29(c) provides that none of the exceptions to licensure applies to a person holding a licence. Written disclosure of licensed status and broker-approved handling of trust funds are both required.",
+  "id": "geo-233d744d",
+  "portion": "georgia",
+  "q": "A Georgia licensee lists and sells a rental duplex she owns personally, using her own brokerage. Which is REQUIRED?",
+  "sub": "georgia/license-law|Licensee as principal",
+  "subtopic": "Licensee as principal",
+  "topic": "georgia/license-law"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The information must be disclosed as an adverse material fact",
+   "Licensee B is deemed to know the figure, because both work for the same firm",
+   "The broker becomes a dual agent and must disclose the figure to both sides",
+   "Licensee A may share the figure only with the broker, and neither may reveal it to Licensee B or the buyer"
+  ],
+  "concept": "Designated agency: no dual agency and no imputed knowledge",
+  "difficulty": 3,
+  "explain": "O.C.G.A. 10-6A-13(b) says neither the broker, the licensees, nor the firm is deemed a dual agent. Subsection (c) removes imputation of knowledge between them, and confidential information may go only to the broker, who may not reveal it. A negotiating position is confidential, not an adverse material fact.",
+  "id": "geo-b7f45ca1",
+  "portion": "georgia",
+  "q": "A Georgia broker assigns Licensee A to the seller and Licensee B to the buyer in the same transaction, with both clients' written consent. Licensee A learns from the seller that she will accept $18,000 less. Which is TRUE?",
+  "sub": "georgia/brreta|Dual agency",
+  "subtopic": "Dual agency",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Became a dual agent when paid from the seller's proceeds",
+   "Was the buyer's agent, created by conduct and confirmed by payment",
+   "Had no agency relationship with the buyer, because agency requires written authority",
+   "Was the seller's subagent by operation of law"
+  ],
+  "concept": "Written authority is the whole point of BRRETA",
+  "difficulty": 3,
+  "explain": "BRRETA defines agency as representation by the client's WRITTEN authority, and states that paying compensation does not by itself create an engagement. There was no agency - which is exactly the accidental-agency problem the Act was passed to prevent. The conduct is still a liability risk.",
+  "id": "geo-98fb280f",
+  "portion": "georgia",
+  "q": "A Georgia buyer works with a licensee for six weeks. The licensee arranges showings, advises on offer strategy, and is ultimately paid from the seller's commission at closing. No written agreement was ever signed. Under BRRETA the licensee:",
+  "sub": "georgia/brreta|Client vs. customer",
+  "subtopic": "Client vs. customer",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "The broker's compensation and whether it will be shared",
+   "The broker's obligations to keep information confidential",
+   "That the broker also represents three other sellers in the same subdivision",
+   "The types of agency relationships available through the broker"
+  ],
+  "concept": "The four disclosures, and what they expressly exclude",
+  "difficulty": 3,
+  "explain": "BRRETA requires disclosure of agency types available, conflicting relationships actually known, compensation and sharing, and confidentiality obligations - but EXPRESSLY excludes having to reveal that the broker represents other sellers or landlords generally.",
+  "id": "geo-fdb2ff2a",
+  "portion": "georgia",
+  "q": "Before entering a brokerage engagement with a prospective seller, a Georgia broker must advise the seller of all of the following EXCEPT:",
+  "sub": "georgia/brreta|Client vs. customer",
+  "subtopic": "Client vs. customer",
+  "topic": "georgia/brreta"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Hold the check only once the seller has also agreed to that stipulation in writing",
+   "Not hold the check under any circumstances",
+   "Hold the check for up to three banking days without any authority",
+   "Hold the check, because the stipulation is in the offer the buyer signed"
+  ],
+  "concept": "Written authority means ALL parties",
+  "difficulty": 3,
+  "explain": "Trust funds are deposited promptly unless clear written authority from all parties says otherwise. Until the seller accepts - including that stipulation - there is no agreement of all parties, so the broker cannot rely on it.",
+  "id": "geo-6500af94",
+  "portion": "georgia",
+  "q": "A Georgia buyer's offer states the broker will hold the earnest money check uncashed until the seller accepts. The seller has not yet seen the offer. The broker may:",
+  "sub": "georgia/trust-accounts|What counts as trust money",
+  "subtopic": "What counts as trust money",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "The $12,000 is uninsured, and the broker may be liable if the client was never told which bank holds trust funds",
+   "The broker's own FDIC coverage protects the deposit",
+   "The client's personal deposits are reduced pro rata",
+   "Pass-through coverage insures the $12,000 as a separate account"
+  ],
+  "concept": "The limit of FDIC pass-through coverage",
+  "difficulty": 3,
+  "explain": "Pass-through treats each client as a separate owner, but the FDIC AGGREGATES that person's deposits at the same institution against the $250,000 cap. The InfoBase warns the broker may be liable for the uninsured excess where the bank and the limitation were not disclosed.",
+  "id": "geo-6915f554",
+  "portion": "georgia",
+  "q": "A Georgia broker's trust account is at First Bank. A client already holds $250,000 in personal deposits at First Bank and gives the broker a $12,000 earnest money deposit. First Bank fails. Which is TRUE?",
+  "sub": "georgia/trust-accounts|FDIC coverage",
+  "subtopic": "FDIC coverage",
+  "topic": "georgia/trust-accounts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The following Monday",
+   "The date the contract is recorded",
+   "Ten business days from Monday",
+   "The following Wednesday"
+  ],
+  "concept": "Everything runs from the binding agreement date",
+  "difficulty": 3,
+  "explain": "The binding agreement date is when acceptance is COMMUNICATED - Wednesday, not Monday. Ten days from Wednesday ends the following Wednesday. Counting from the signature date shifts every deadline in the contract by two days.",
+  "id": "geo-1748dbb0",
+  "portion": "georgia",
+  "q": "A Georgia seller signs a buyer's offer Monday at 2 p.m. The listing agent notifies the buyer's agent Wednesday at 9 a.m. The contract gives the buyer a 10-day due diligence period. That period expires at the end of:",
+  "sub": "georgia/contracts|Binding agreement date",
+  "subtopic": "Binding agreement date",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "The preprinted contingency controls, because it is more specific",
+   "GREC must interpret the conflicting terms",
+   "The contract is void for ambiguity",
+   "The typed stipulation controls, and its vagueness now works against the seller"
+  ],
+  "concept": "Typed terms beat preprinted ones - which is why drafting them is dangerous",
+  "difficulty": 3,
+  "explain": "Handwritten and typed additions reflect the parties' specific intent and prevail over the preprinted text. A vague stipulation therefore governs, giving the buyer wide latitude. This is precisely why composing original clauses edges into the unauthorised practice of law.",
+  "id": "geo-35e61d5e",
+  "portion": "georgia",
+  "q": "A Georgia licensee types a special stipulation giving the buyer the right to terminate 'if financing is not obtained on satisfactory terms.' The preprinted form contains a specific financing contingency with a stated rate ceiling. The buyer later terminates citing a rate he dislikes. Which is TRUE?",
+  "sub": "georgia/contracts|Georgia contract terms",
+  "subtopic": "Georgia contract terms",
+  "topic": "georgia/contracts"
+ },
+ {
+  "answer": 2,
+  "choices": [
+   "Answer only after obtaining the seller's written permission",
+   "Confirm it, since the buyer asked directly",
+   "Decline to answer and refer the buyer to sources they can research",
+   "Deny it, since Georgia does not require disclosure"
+  ],
+  "concept": "Nondisclosure is protected; a denial is not",
+  "difficulty": 3,
+  "explain": "Georgia shields licensees from liability for NOT disclosing a death, homicide, suicide or felony on the property. That protects silence, not a false statement. Denying it would be misrepresentation; declining keeps the licensee inside the protection.",
+  "id": "geo-2ce0ca3c",
+  "portion": "georgia",
+  "q": "A Georgia buyer asks a listing agent directly whether the previous owner died in the house. The agent knows he did, of natural causes. The agent should:",
+  "sub": "georgia/disclosures|Stigmatized property",
+  "subtopic": "Stigmatized property",
+  "topic": "georgia/disclosures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "Explain that the attorney customarily represents the lender and the buyer may retain his own counsel",
+   "Summarise the addendum's legal effect for the buyer",
+   "Let the attorney advise the buyer, since the attorney is neutral",
+   "Postpone the closing until the buyer obtains counsel"
+  ],
+  "concept": "Who the Georgia closing attorney actually represents",
+  "difficulty": 3,
+  "explain": "Georgia requires attorney supervision of closings, and that attorney customarily represents the LENDER, not the buyer. The licensee must not supply a legal opinion either. Saying so plainly is the correct move; the buyer decides whether to delay.",
+  "id": "geo-06160e6c",
+  "portion": "georgia",
+  "q": "A Georgia buyer at closing asks the closing attorney whether the contract's repair addendum protects him. Which response by the licensee is correct?",
+  "sub": "georgia/procedures|Attorney closings",
+  "subtopic": "Attorney closings",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 0,
+  "choices": [
+   "The seller customarily pays approximately $487, collected by the clerk of superior court",
+   "The tax is 1% of the price, or $4,865",
+   "No transfer tax applies to residential sales",
+   "The buyer pays $486.50 at recording"
+  ],
+  "concept": "Georgia transfer tax: rate, payer, and collector",
+  "difficulty": 3,
+  "explain": "The rate is $1.00 per $1,000 of consideration - $486,500 / 1,000 = about $487. It is customarily a SELLER expense and is collected by the clerk of superior court when the deed is recorded.",
+  "id": "geo-d4446036",
+  "portion": "georgia",
+  "q": "A Georgia property sells for $486,500. Regarding the transfer tax, which is TRUE?",
+  "sub": "georgia/procedures|Transfer tax & recording",
+  "subtopic": "Transfer tax & recording",
+  "topic": "georgia/procedures"
+ },
+ {
+  "answer": 3,
+  "choices": [
+   "Incorrect only if the tenant's disability is visible",
+   "Correct, because the deposit is refundable",
+   "Correct, because the policy is applied to everyone equally",
+   "Incorrect - an assistance animal is not a pet and no pet deposit may be charged"
+  ],
+  "concept": "Waiving the pet policy is the accommodation",
+  "difficulty": 3,
+  "explain": "Uniform application is no defence where the rule itself must be waived as a reasonable accommodation. No pet fee or deposit, refundable or not, may be charged for an assistance animal - though the tenant remains liable for actual damage the animal causes.",
+  "id": "geo-d5aa27f8",
+  "portion": "georgia",
+  "q": "A Georgia landlord requires a $400 refundable pet deposit from all tenants with animals, applied uniformly. A tenant with a documented assistance animal objects. The landlord's position is:",
+  "sub": "georgia/fair-housing|Accommodations & modifications",
+  "subtopic": "Accommodations & modifications",
+  "topic": "georgia/fair-housing"
  }
 ]

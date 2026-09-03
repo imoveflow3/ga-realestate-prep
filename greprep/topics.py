@@ -84,7 +84,7 @@ TOPICS = {
 # the UI never claims they are "worth N on the exam".
 PRACTICE_ONLY = set(k for k, v in TOPICS.items() if v[0] == "comprehensive")
 
-DIFFICULTY = {1: "Core", 2: "Hard"}
+DIFFICULTY = {1: "Core", 2: "Hard", 3: "Exam"}
 
 
 def counts_on_exam(key):

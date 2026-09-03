@@ -108,9 +108,10 @@ function renderHome(){
       '<div style="max-width:215px"><label for="timed">Timer</label><select id="timed">' +
         '<option value="1" selected>Timed (75 s/question)</option>' +
         '<option value="0">Untimed</option></select></div>' +
-      '<div style="max-width:210px"><label for="difficulty">Difficulty</label><select id="difficulty">' +
+      '<div style="max-width:225px"><label for="difficulty">Difficulty</label><select id="difficulty">' +
         '<option value="harder" selected>Harder mix (default)</option>' +
-        '<option value="hard">Hard only</option>' +
+        '<option value="exam">Exam realistic only</option>' +
+        '<option value="hard">Hard + exam</option>' +
         '<option value="any">Full bank</option>' +
         '<option value="core">Core only</option></select></div>' +
       '<div style="flex:0 0 auto"><button class="btn" id="start">Start quiz</button></div>' +
@@ -119,7 +120,8 @@ function renderHome(){
     '</div>' +
     '<p class="muted" style="margin:13px 0 0"><b>Weak-spot mode</b> draws more heavily from ' +
     'topics and individual questions you have missed before. <b>Harder mix</b> pulls about ' +
-    'two thirds of its questions from the hard tier; <b>Comprehensive</b> is a cross-cutting ' +
+    'two thirds of its questions from the hard and exam-realistic tiers; ' +
+    '<b>Exam realistic</b> is the hardest set, written at PSI difficulty. <b>Comprehensive</b> is a cross-cutting ' +
     'drill (vocabulary, judgment calls, GREC detail, closing math) rather than a section of ' +
     'the real exam.</p></div>' +
     '<div id="homeWeak"></div>';
@@ -289,7 +291,10 @@ function renderQuestion(){
   $('qtag').textContent = comp ? 'Comprehensive'
                         : (q.generator ? 'Math' : (ga ? 'Georgia' : 'National'));
   $('qtag').className = 'tag' + (ga ? ' ga' : (comp ? ' comp' : ''));
-  $('qhard').hidden = ((q.difficulty || 1) !== 2);
+  var tier = q.difficulty || 1;
+  $('qhard').hidden = (tier < 2);
+  $('qhard').textContent = (tier === 3) ? 'Exam' : 'Hard';
+  $('qhard').className = 'tag hard' + (tier === 3 ? ' exam' : '');
   $('qtopic').textContent = label(q.topic);
   $('qtext').textContent = q.q;
   $('qfeedback').innerHTML = '';
@@ -780,7 +785,9 @@ function notebookEntry(item){
 
   var meta = el('div', 'nbmeta');
   if (item.subtopic) meta.appendChild(el('span', null, item.subtopic));
-  if (item.difficulty === 2) meta.appendChild(el('span', 'tag hard', 'Hard'));
+  if (item.difficulty >= 2)
+    meta.appendChild(el('span', 'tag hard' + (item.difficulty === 3 ? ' exam' : ''),
+                        item.difficulty === 3 ? 'Exam' : 'Hard'));
   if (item.times > 1) meta.appendChild(el('span', null, 'missed ' + item.times + '×'));
   if (item.cleared) meta.appendChild(el('span', 'tag', 'got it since'));
   if (item.recovered)
@@ -1827,16 +1834,18 @@ function renderSetup(){
   if (recovered) persist();
   var mathN = 0;
   Object.keys(DATA.math).forEach(function(k){ mathN += DATA.math[k].q.length; });
-  var written = 0, hard = 0;
+  var written = 0, hard = 0, exam = 0;
   Object.keys(DATA.banks).forEach(function(k){
     written += DATA.banks[k].length;
     hard += DATA.banks[k].filter(function(r){ return r.difficulty === 2; }).length;
+    exam += DATA.banks[k].filter(function(r){ return r.difficulty === 3; }).length;
   });
   var vocabN = 0;
   Object.keys(DATA.study.topics).forEach(function(k){
     vocabN += DATA.study.topics[k].vocab.length;
   });
-  $('bankcount').textContent = written + ' questions (' + hard + ' hard) + ' + mathN +
+  $('bankcount').textContent = written + ' questions (' + hard + ' hard, ' + exam +
+    ' exam-realistic) + ' + mathN +
     ' math problems + study notes on ' + Object.keys(DATA.study.topics).length +
     ' topics (' + vocabN + ' terms)';
   countdown();

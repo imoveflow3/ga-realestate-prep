@@ -53,23 +53,29 @@ def bank_summary():
 # the core tier alone is easier than the real exam.
 HARDER_SHARE = 0.65
 
-DIFFICULTIES = ("harder", "any", "core", "hard")
+DIFFICULTIES = ("harder", "exam", "hard", "any", "core")
 
 
 def _tier(rows, level):
     return [r for r in rows if r.get("difficulty", 1) == level]
 
 
-def by_difficulty(rows, difficulty):
-    """difficulty: 'harder' | 'any' | 'core' | 'hard'.
+def _tiers(rows, levels):
+    return [r for r in rows if r.get("difficulty", 1) in levels]
 
-    Falls back to the full set rather than returning nothing, so a thin topic
+
+def by_difficulty(rows, difficulty):
+    """difficulty: 'harder' | 'exam' | 'hard' | 'any' | 'core'.
+
+    Falls back to a wider set rather than returning nothing, so a thin topic
     never yields an empty quiz.
     """
     if difficulty == "core":
         return _tier(rows, 1) or rows
+    if difficulty == "exam":
+        return _tier(rows, 3) or _tiers(rows, (2, 3)) or rows
     if difficulty == "hard":
-        return _tier(rows, 2) or rows
+        return _tiers(rows, (2, 3)) or rows
     return rows
 
 
@@ -125,9 +131,9 @@ def _pick_from_topic(pool, topic, n, missed_ids, rng, difficulty="any"):
         return []
 
     if difficulty == "harder":
-        # fill a hard quota first, then top up from the core tier
+        # fill the quota from the hard and exam tiers first, then top up
         want_hard = int(round(n * HARDER_SHARE))
-        hard = _order(_tier(rows, 2), missed_ids, rng)[:want_hard]
+        hard = _order(_tiers(rows, (2, 3)), missed_ids, rng)[:want_hard]
         used = set(r["id"] for r in hard)
         rest = _order([r for r in rows if r["id"] not in used], missed_ids, rng)
         return (hard + rest)[:n]
