@@ -763,3 +763,9 @@ body.inquiz{padding-bottom:0}
   }
   .qacts #qnext{flex:1}
 }
+
+/* readouts that are really buttons: the exam date, when it needs attention */
+.ro.tappable{cursor:pointer; border-radius:var(--r); margin:-.2rem -.35rem;
+  padding:.2rem .35rem}
+.ro.tappable:hover{background:var(--panel-2)}
+.ro.tappable .v{color:var(--caution)}

@@ -45,9 +45,29 @@ function load(){
 
 /* Has this browser been through the opening questions yet? Sitting on a real
    flag rather than on "is there an exam date" matters, because choosing not to
-   set a date is a legitimate answer and must not reopen the wizard forever. */
+   set a date is a legitimate answer and must not reopen the wizard forever.
+
+   The flag did not exist before the welcome screen did, so anyone already
+   using the app would have been marched back through a setup they finished
+   months ago. Saved settings or a single recorded attempt is proof enough. */
 function onboarded(d){
-  return !!(d.profile && d.profile.onboarded);
+  if (d.profile && d.profile.onboarded) return true;
+  var had = !!(d.attempts && d.attempts.length) ||
+            !!(d.profile && (d.profile.exam_date || d.profile.declared_weak));
+  if (had){
+    d.profile = d.profile || {};
+    d.profile.onboarded = true;        // settle it, so this runs once
+    save(d);
+  }
+  return had;
+}
+
+/* An exam date in the past should stop driving a countdown and a schedule. */
+function examPassed(d){
+  var exam = asDate((d.profile || {}).exam_date);
+  if (!exam) return false;
+  var t = new Date(); t.setHours(0, 0, 0, 0);
+  return exam < t;
 }
 
 function save(d){
@@ -1063,6 +1083,11 @@ function buildPlan(d){
   var prof = d.profile || {};
   var exam = asDate(prof.exam_date);
   if (!exam) return {error:'Set an exam date to generate a schedule.'};
+  var now = new Date(); now.setHours(0, 0, 0, 0);
+  if (exam < now)
+    return {error:'That exam date has passed, so there is no schedule left to ' +
+                  'run. Set a new date, or clear it and use the app without one.',
+            passed:true};
   var mastery = asDate(prof.mastery_date) || exam;
   if (mastery > exam) mastery = exam;
   var hours = prof.hours_per_week || 8;

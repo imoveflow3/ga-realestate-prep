@@ -230,11 +230,17 @@ function countdown(){
    with no date saw a bare dash and a visitor whose date had passed saw a
    negative number counting further into the past. */
 function examReadout(days){
-  if (days === null) return ro('Exam date', '\u2014', 'tap to set');
+  var box = null;
+  if (days === null) box = ro('Exam date', '\u2014', 'tap to set');
+  else if (days < 0) box = ro('Exam date', 'PAST', 'tap to fix');
+  if (box){
+    box.classList.add('tappable');
+    box.onclick = function(){ navTo('plan'); };
+    return box;
+  }
   if (days > 1) return ro('Days out', String(days), 'until exam');
   if (days === 1) return ro('Days out', '1', 'exam tomorrow');
-  if (days === 0) return ro('Exam', 'TODAY', 'good luck');
-  return ro('Exam date', 'PAST', 'set a new one');
+  return ro('Exam', 'TODAY', 'good luck');
 }
 
 /* ----------------------------------------------------------------- home */
@@ -2193,6 +2199,24 @@ function renderPlan(){
     box.appendChild(lab);
   });
 
+  if (examPassed(D)){
+    var warn = el('div','card');
+    warn.appendChild(cardHead('Your exam date has passed', 'was ' + p.exam_date));
+    warn.appendChild(el('p','sub',
+      'Nothing here is broken -- the schedule just has nowhere left to run. ' +
+      'Put in a new date if you are sitting it again, or clear it and keep ' +
+      'using the quizzes, notes and drills without a countdown.'));
+    var wr = el('div','wizacts');
+    var clr = el('button','btn ghost', 'Clear the date');
+    clr.onclick = function(){
+      D.profile.exam_date = null; D.profile.mastery_date = null;
+      persist(); countdown(); renderPlan();
+    };
+    wr.appendChild(clr);
+    warn.appendChild(wr);
+    v.insertBefore(warn, v.children[2]);
+  }
+
   $('savePlan').onclick = function(){
     var weak = [];
     box.querySelectorAll('input:checked').forEach(function(c){ weak.push(c.value); });
@@ -2266,10 +2290,12 @@ function renderSetup(){
     '<h1>Setup</h1><p class="sub">Your progress is stored in this browser only, so each ' +
     'device keeps its own history. Use export and import to move it between them.</p>' +
     '<div class="card"><h2>Move progress between devices</h2>' +
-      '<p class="muted">Export copies your whole history as text. On the other device, ' +
-      'paste it below and choose Import.</p>' +
+      '<p class="muted">Export copies your history as text. On the other device, ' +
+      'paste it below and choose Import. <b>Export settings only</b> moves your ' +
+      'exam date, study hours and weak areas without the scores.</p>' +
       '<div class="row" style="margin-bottom:12px">' +
-        '<div style="flex:0 0 auto"><button class="btn" id="doExport">Export to the box below</button></div>' +
+        '<div style="flex:0 0 auto"><button class="btn" id="doExport">Export everything</button></div>' +
+        '<div style="flex:0 0 auto"><button class="btn ghost" id="doSettings">Export settings only</button></div>' +
         '<div style="flex:0 0 auto"><button class="btn ghost" id="doCopy">Copy to clipboard</button></div>' +
         '<div style="flex:0 0 auto"><button class="btn ghost" id="doImport">Import what is in the box</button></div>' +
       '</div>' +
@@ -2284,6 +2310,17 @@ function renderSetup(){
   $('doExport').onclick = function(){
     $('ioBox').value = JSON.stringify(D);
     $('ioNote').textContent = 'Exported ' + D.attempts.length + ' attempts.';
+  };
+  $('doSettings').onclick = function(){
+    var pr = D.profile || {};
+    $('ioBox').value = JSON.stringify({profile: {
+      exam_date: pr.exam_date || null,
+      mastery_date: pr.mastery_date || null,
+      hours_per_week: pr.hours_per_week || 8,
+      declared_weak: pr.declared_weak || []
+    }});
+    $('ioNote').textContent = 'Just your exam date, hours and weak areas. Paste ' +
+      'this on another device to set it up without copying scores across.';
   };
   $('doCopy').onclick = function(){
     if (!$('ioBox').value) $('ioBox').value = JSON.stringify(D);
@@ -2304,6 +2341,24 @@ function renderSetup(){
     var d;
     try { d = JSON.parse(raw); }
     catch(e){ $('ioNote').textContent = 'That is not valid exported progress.'; return; }
+    /* Two shapes are worth accepting: a whole history, and just the four
+       settings. Setting up a new phone usually means wanting the second --
+       the exam date, the hours and the weak areas -- without dragging one
+       device's scores along with it. */
+    var settingsOnly = d && !Array.isArray(d.attempts) && d.profile &&
+                       typeof d.profile === 'object';
+    if (settingsOnly){
+      D.profile = D.profile || {};
+      ['exam_date', 'mastery_date', 'hours_per_week', 'declared_weak']
+        .forEach(function(k){
+          if (d.profile[k] !== undefined) D.profile[k] = d.profile[k];
+        });
+      D.profile.onboarded = true;
+      persist(); countdown();
+      $('ioNote').textContent = 'Settings restored. The scores on this device ' +
+        'were left alone.';
+      return;
+    }
     if (!d || !Array.isArray(d.attempts)){
       $('ioNote').textContent = 'That does not look like a progress export.'; return;
     }
@@ -2312,6 +2367,8 @@ function renderSetup(){
     Object.keys(EMPTY).forEach(function(k){
       if (d[k] === undefined) d[k] = JSON.parse(JSON.stringify(EMPTY[k]));
     });
+    if (!d.profile) d.profile = {};
+    d.profile.onboarded = true;
     D = d; persist(); countdown();
     $('ioNote').textContent = 'Imported ' + D.attempts.length + ' attempts.';
   };

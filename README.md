@@ -167,8 +167,15 @@ domain. The sitemap can still be submitted to Search Console directly.
 ## Your data
 
 On the web build, progress lives in the browser's local storage on that device
-and never leaves it: no account, no server, no analytics. Setup → Your data
-exports it as text so you can move it to another device, and erases it.
+and never leaves it: no account, no server, no analytics. **Your data** has two
+exports: *everything*, which moves your whole history, and *settings only*,
+which moves just the exam date, study hours and weak areas so a second device
+can be set up without dragging one device's scores across. Import accepts
+either shape. The same page erases everything.
+
+Anyone who was using the app before the welcome screen existed is treated as
+already set up — saved settings or one recorded attempt is proof enough, so
+nobody gets marched back through a setup they finished months ago.
 
 Running locally, progress lives in `data/progress.json` — plain JSON, easy to
 inspect or back up. Writes are atomic, so an interrupted save cannot corrupt
