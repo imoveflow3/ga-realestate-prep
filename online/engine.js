@@ -28,6 +28,16 @@ var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{},
 
 function load(){
   var raw;
+  /* The server's copy wins on arrival: it is the one that followed you here. */
+  if (SYNC && typeof window !== 'undefined' && window.__SERVER_PROGRESS__){
+    var fromServer = window.__SERVER_PROGRESS__;
+    Object.keys(EMPTY).forEach(function(k){
+      if (fromServer[k] === undefined) fromServer[k] = JSON.parse(JSON.stringify(EMPTY[k]));
+    });
+    if (!fromServer.profile) fromServer.profile = {};
+    try { localStorage.setItem(KEY, JSON.stringify(fromServer)); } catch(e){}
+    return fromServer;
+  }
   try { raw = localStorage.getItem(KEY); } catch(e){ raw = null; }
   if (!raw){
     var fresh = JSON.parse(JSON.stringify(EMPTY));
@@ -70,7 +80,40 @@ function examPassed(d){
   return exam < t;
 }
 
+/* Served from the paid backend, the browser is a cache and the server is the
+   record: sign in on a second device and your history is already there. The
+   static build sets no flag and keeps behaving exactly as it did. */
+var SYNC = (typeof window !== 'undefined') && window.__SYNC__ === true;
+var SYNC_TIMER = null, SYNC_BODY = null;
+
+function flushProgress(){
+  if (!SYNC_BODY) return;
+  var body = SYNC_BODY;
+  SYNC_BODY = null;
+  try {
+    fetch('/api/progress', {method: 'PUT', credentials: 'same-origin',
+                            headers: {'Content-Type': 'application/json'},
+                            body: body, keepalive: true})['catch'](function(){});
+  } catch(e){}
+}
+
+/* Debounced: a twenty-question quiz saves after every answer, and twenty
+   round trips to write the same growing record is twenty too many. */
+function pushProgress(d){
+  SYNC_BODY = JSON.stringify(d);
+  if (SYNC_TIMER) return;
+  SYNC_TIMER = setTimeout(function(){ SYNC_TIMER = null; flushProgress(); }, 1500);
+}
+
+if (SYNC && typeof window !== 'undefined'){
+  window.addEventListener('pagehide', flushProgress);
+  document.addEventListener('visibilitychange', function(){
+    if (document.visibilityState === 'hidden') flushProgress();
+  });
+}
+
 function save(d){
+  if (SYNC) pushProgress(d);
   try { localStorage.setItem(KEY, JSON.stringify(d)); return true; }
   catch(e){
     alert('Could not save progress. If you are in a private window, browser ' +

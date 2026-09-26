@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>Privacy</title>
+<style>/* Georgia Real Estate Prep -- condensed display type, mono figures, flat
+   stat tables. Tokens first: light is the base, both dark paths redefine only
+   these. */
+:root{
+  --bg:#eef1f6;         --panel:#ffffff;      --panel-2:#f5f8fa;
+  --ink:#0e1720;        --ink-2:#48596c;      --ink-3:#7d8c9d;
+  --line:#e1e8ef;       --line-2:#c7d2de;
+  --accent:#0d7365;     --accent-ink:#ffffff; --accent-soft:#dff1ed;
+  --brass:#8d6111;      --brass-soft:#f8eed7;
+  --ok:#157f4a;         --ok-soft:#ddf3e6;
+  --no:#b4243c;         --no-soft:#fde4e8;
+  --caution:#8a6100;    --caution-soft:#fbf0d9;
+  --glow:rgba(13,115,101,.16);
+  --shadow:0 1px 2px rgba(14,23,32,.05), 0 8px 24px -8px rgba(14,23,32,.12);
+  --shadow-lift:0 2px 4px rgba(14,23,32,.06), 0 16px 40px -12px rgba(14,23,32,.20);
+  --r:14px;             --r-sm:10px;          --r-xs:7px;
+  --r-pill:999px;
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a0e14;       --panel:#141b24;      --panel-2:#1b232e;
+    --ink:#e7edf4;      --ink-2:#a7b5c6;      --ink-3:#77869a;
+    --line:#242f3c;     --line-2:#354354;
+    --accent:#4fd1b8;   --accent-ink:#05231e; --accent-soft:#0f2f2a;
+    --brass:#e0b25a;    --brass-soft:#2c2417;
+    --ok:#4fd07f;       --ok-soft:#0f2a1b;
+    --no:#fb7f95;       --no-soft:#2f151d;
+    --caution:#e6b95c;  --caution-soft:#2b2314;
+    --glow:rgba(79,209,184,.20);
+    --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
+    --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a0e14;         --panel:#141b24;      --panel-2:#1b232e;
+  --ink:#e7edf4;        --ink-2:#a7b5c6;      --ink-3:#77869a;
+  --line:#242f3c;       --line-2:#354354;
+  --accent:#4fd1b8;     --accent-ink:#05231e; --accent-soft:#0f2f2a;
+  --brass:#e0b25a;      --brass-soft:#2c2417;
+  --ok:#4fd07f;         --ok-soft:#0f2a1b;
+  --no:#fb7f95;         --no-soft:#2f151d;
+  --caution:#e6b95c;    --caution-soft:#2b2314;
+  --glow:rgba(79,209,184,.20);
+  --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16px; line-height:1.55; -webkit-text-size-adjust:100%;
+}
+h1,h2,h3{font-family:"Barlow Condensed","Barlow",sans-serif; font-weight:600;
+  line-height:1.14; margin:0; text-wrap:balance; letter-spacing:.005em}
+h1{font-size:1.95rem} h2{font-size:1.4rem} h3{font-size:1.08rem}
+p{margin:0}
+.num,td.num,th.num,.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none !important; transition:none !important}}
+
+/* ---- status strip ---- */
+header.hud{position:sticky; top:0; z-index:20; background:var(--panel);
+  border-bottom:1px solid var(--line); box-shadow:var(--shadow)}
+.hud-in{max-width:1040px; margin:0 auto; padding:.5rem 1.1rem;
+  display:grid; grid-template-columns:1fr auto; align-items:center; gap:.5rem 1rem}
+.wordmark{grid-area:1/1} .hudacts{grid-area:1/2} .readouts{grid-area:2/1/3/3}
+.wordmark{font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
+  letter-spacing:.13em; text-transform:uppercase; white-space:nowrap; display:flex;
+  align-items:baseline; gap:.5rem}
+.wordmark small{font-family:"Barlow",sans-serif; font-weight:500; font-size:.7rem;
+  letter-spacing:.06em; color:var(--ink-3); text-transform:none}
+/* its own full-width row: five numbers never fit beside a wordmark and a
+   button cluster, and wrapping them made the header 190px tall */
+.readouts{grid-column:1/-1; display:flex; gap:1.35rem; flex-wrap:nowrap;
+  overflow-x:auto; scrollbar-width:none; padding-bottom:.1rem}
+.readouts::-webkit-scrollbar{display:none}
+.readouts[hidden]{display:none}
+.ro{display:flex; flex-direction:column; line-height:1.1}
+.ro .k{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.ro .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.12rem; font-weight:600}
+.ro.hero .v{font-size:1.34rem}
+.ro.hero .v.good{color:var(--ok)}
+.ro.hero .v.bad{color:var(--no)}
+.ro .v small{font-family:"Barlow",sans-serif; font-size:.7rem; font-weight:400;
+  color:var(--ink-3); margin-left:.34rem; letter-spacing:0}
+
+/* ---- tabs ---- */
+nav.rail{background:var(--panel); border-bottom:1px solid var(--line); position:sticky;
+  top:0; z-index:19}
+.rail-in{max-width:1040px; margin:0 auto; padding:0 .8rem; display:flex; gap:0;
+  overflow-x:auto; scrollbar-width:none}
+.rail-in::-webkit-scrollbar{display:none}
+.rail button{font-family:"Barlow Condensed",sans-serif; font-size:.92rem; font-weight:600;
+  letter-spacing:.09em; text-transform:uppercase; background:none; border:0;
+  border-bottom:2px solid transparent; color:var(--ink-3); padding:.62rem .85rem;
+  cursor:pointer; white-space:nowrap}
+.rail button:hover{color:var(--ink)}
+.rail button.on,.rail button[aria-current="page"]{color:var(--accent);
+  border-bottom-color:var(--accent)}
+
+main{max-width:1040px; margin:0 auto; padding:1.2rem 1.1rem 2rem;
+  display:flex; flex-direction:column; gap:1rem}
+footer{max-width:1040px; margin:0 auto; padding:.4rem 1.1rem 3rem; display:flex;
+  gap:1rem; justify-content:space-between; flex-wrap:wrap; color:var(--ink-3);
+  font-size:.78rem}
+
+/* ---- surfaces ---- */
+.card{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1rem 1.15rem; box-shadow:var(--shadow); display:flex; flex-direction:column;
+  gap:.7rem; margin:0}
+.cardhead{display:flex; justify-content:space-between; align-items:baseline;
+  gap:1rem; flex-wrap:wrap}
+.cardhead h2{margin:0}
+.eyebrow,.hint{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
+.sub,.lede{color:var(--ink-2); font-size:.94rem; max-width:66ch; margin:0}
+.muted{color:var(--ink-3); font-size:.82rem}
+.grid{display:grid; gap:.7rem}
+.g2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.row{display:flex; gap:.6rem; flex-wrap:wrap; align-items:flex-end}
+.row>div{flex:1; min-width:145px}
+.empty{text-align:center; color:var(--ink-3); padding:1.6rem .6rem; font-size:.92rem}
+
+.metric,.readout{background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r); padding:.65rem .8rem; display:flex; flex-direction:column;
+  gap:.12rem}
+.readout .eyebrow{margin:0}
+.stat{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.62rem; font-weight:600; line-height:1.1}
+.stat.small{font-size:1.25rem}
+.stat.good{color:var(--ok)} .stat.bad{color:var(--no)}
+
+/* ---- controls ---- */
+button.btn{font-family:"Barlow Condensed",sans-serif; font-size:.95rem; font-weight:600;
+  letter-spacing:.07em; text-transform:uppercase; padding:.5rem 1rem; cursor:pointer;
+  border-radius:var(--r); border:1px solid var(--accent); background:var(--accent);
+  color:var(--accent-ink)}
+button.btn:hover{filter:brightness(1.08)}
+button.btn.ghost{background:transparent; color:var(--accent)}
+button.btn.danger{background:transparent; color:var(--no); border-color:var(--no)}
+button.btn.mini{padding:.24rem .58rem; font-size:.8rem; letter-spacing:.05em;
+  background:transparent; color:var(--accent)}
+button.btn.mini.ghost{color:var(--ink-2); border-color:var(--line-2)}
+button.btn:disabled{opacity:.45; cursor:not-allowed; filter:none}
+
+label{display:block; font-family:"Barlow Condensed",sans-serif; font-size:.7rem;
+  font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3);
+  margin-bottom:.25rem}
+input,select,textarea{font:inherit; font-size:.92rem; padding:.42rem .55rem;
+  border:1px solid var(--line-2); border-radius:var(--r); background:var(--panel);
+  color:var(--ink); width:100%}
+input[type=date],input[type=number]{font-family:"IBM Plex Mono",monospace}
+textarea{font-family:"IBM Plex Mono",monospace; font-size:.72rem; line-height:1.5}
+.pick{display:flex; align-items:flex-start; gap:.5rem; background:var(--panel);
+  border:1px solid var(--line); border-left:3px solid var(--line-2);
+  border-radius:0 var(--r) var(--r) 0; padding:.5rem .65rem; cursor:pointer;
+  font-size:.88rem; color:inherit}
+.pick:hover{border-color:var(--line-2)}
+.pick input{width:auto; margin:.2rem 0 0}
+
+.tag{font-family:"Barlow Condensed",sans-serif; font-size:.64rem; font-weight:700;
+  letter-spacing:.11em; text-transform:uppercase; padding:.1rem .36rem; border-radius:2px;
+  background:var(--accent-soft); color:var(--accent); white-space:nowrap;
+  display:inline-block; vertical-align:1px}
+.tag.ga{background:var(--brass-soft); color:var(--brass)}
+.tag.comp{background:var(--caution-soft); color:var(--caution)}
+.tag.hard{background:var(--no-soft); color:var(--no)}
+
+.bar-track{height:5px; border-radius:2px; background:var(--line); overflow:hidden;
+  min-width:96px}
+.bar-fill{display:block; height:100%; background:var(--accent)}
+.bar-fill.high{background:var(--ok)} .bar-fill.mid{background:var(--caution)}
+.bar-fill.low{background:var(--no)}
+
+/* ---- tables ---- */
+.scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; font-size:.9rem; min-width:min(100%,460px)}
+th{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); text-align:left;
+  padding:.4rem .5rem; border-bottom:1px solid var(--line-2); white-space:nowrap}
+td{padding:.44rem .5rem; border-bottom:1px solid var(--line); vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right; white-space:nowrap}
+td.up{color:var(--ok)} td.down{color:var(--no)}
+table.stats td:first-child,table.stats th:first-child{min-width:170px; white-space:normal}
+table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:.7rem;
+  font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  padding:.85rem .5rem .3rem; border-bottom:1px solid var(--line-2)}
+
+/* ---- quiz ---- */
+.progressbar{height:3px; background:var(--line); border-radius:2px; overflow:hidden}
+.progressbar>div{display:block; height:100%; background:var(--accent); transition:width .18s}
+.qhead{display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  flex-wrap:wrap; background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--r); padding:.55rem .9rem; box-shadow:var(--shadow)}
+.timer{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.3rem; font-weight:600}
+.timer.warn{color:var(--no)}
+.qtext{font-size:1.08rem; white-space:pre-wrap; max-width:68ch; margin:.35rem 0 .2rem}
+.choices{display:flex; flex-direction:column; gap:.45rem}
+.choice{display:flex; gap:.7rem; align-items:flex-start; text-align:left; font:inherit;
+  color:inherit; background:var(--panel); border:1px solid var(--line);
+  border-left:3px solid var(--line); border-radius:0 var(--r) var(--r) 0;
+  padding:.58rem .8rem; cursor:pointer; width:100%}
+.choice:hover:not(:disabled){border-color:var(--accent); border-left-color:var(--accent);
+  background:var(--accent-soft)}
+.choice:disabled{cursor:default}
+.choice .k{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-3);
+  min-width:1.05rem; flex:0 0 auto}
+.choice.correct{border-color:var(--ok); border-left-color:var(--ok); background:var(--ok-soft)}
+.choice.wrong{border-color:var(--no); border-left-color:var(--no); background:var(--no-soft)}
+.choice.correct .k{color:var(--ok)} .choice.wrong .k{color:var(--no)}
+.feedback{border:1px solid var(--line); border-left:3px solid var(--line);
+  border-radius:0 var(--r) var(--r) 0; padding:.7rem .9rem; display:flex;
+  flex-direction:column; gap:.3rem; margin-top:.8rem}
+.feedback.ok{border-color:var(--ok); border-left-color:var(--ok); background:var(--ok-soft)}
+.feedback.no{border-color:var(--no); border-left-color:var(--no); background:var(--no-soft)}
+.feedback .verdict{font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1rem;
+  letter-spacing:.04em; text-transform:uppercase}
+.feedback.ok .verdict{color:var(--ok)} .feedback.no .verdict{color:var(--no)}
+.concept{font-size:.82rem; color:var(--ink-3); margin-top:.35rem; padding-top:.35rem;
+  border-top:1px solid var(--line)}
+.steps{margin:.4rem 0 0; padding-left:1.15rem; font-family:"IBM Plex Mono",monospace;
+  font-size:.82rem; line-height:1.7}
+
+/* ---- plan ---- */
+.week{border-left:3px solid var(--accent); padding-left:.9rem; display:flex;
+  flex-direction:column; gap:.3rem}
+.week .when{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--ink-3)}
+.week ul{margin:.3rem 0 0; padding-left:1.1rem}
+.week li{margin:.15rem 0; font-size:.92rem}
+.focuslist{display:grid; gap:.4rem; margin-top:.5rem}
+.focus{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.5rem .65rem; font-size:.85rem}
+.focus b{font-family:"Barlow Condensed",sans-serif; font-size:1rem; font-weight:600}
+
+/* ---- trends ---- */
+.trendrow{display:flex; gap:1rem; align-items:center; padding:.55rem 0;
+  border-bottom:1px solid var(--line); flex-wrap:wrap}
+.trendrow:last-child{border-bottom:0}
+.trendrow .who{flex:1; min-width:190px}
+.spark{color:var(--accent)}
+.spark .gl{stroke:var(--line-2)}
+.spark text{fill:var(--ink-3); font-family:"IBM Plex Mono",monospace; font-size:9px}
+
+/* ------------------------------------------------------------- reading --
+   The Study view is read, not scanned, so it gets its own typography: a text
+   serif, a real measure, and space between things. Scoped so the dashboard
+   tables keep their compact UI treatment. */
+/* the reading column is sized to the text, so cards do not trail off into
+   empty space on wide screens */
+.reading{--measure:66ch; max-width:47rem; margin:0 auto; width:100%}
+.reading .card{padding:1.5rem 1.7rem; gap:.55rem}
+.reading h1{font-size:2.3rem; line-height:1.1; margin-bottom:.15rem}
+.reading h2{font-size:1.5rem; line-height:1.2; margin-bottom:.5rem}
+.reading h3{font-size:1.16rem; margin-bottom:.25rem}
+
+.reading p, .reading li, .reading .vdef{
+  font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size:1.09rem;
+  line-height:1.78;
+  max-width:var(--measure);
+  color:var(--ink);
+}
+.reading p{margin:0 0 .55rem}
+.reading p:last-child{margin-bottom:0}
+.reading .sub{
+  font-family:"Source Serif 4", Georgia, serif;
+  font-size:1.14rem; line-height:1.7; color:var(--ink-2);
+  max-width:var(--measure); margin:.15rem 0 .9rem;
+}
+.reading .muted{font-family:"Barlow",sans-serif; font-size:.84rem; line-height:1.55}
+
+/* lists become breathing definition lists rather than a wall */
+.reading ul{
+  list-style:none; margin:.35rem 0 0; padding:0;
+  display:flex; flex-direction:column; gap:.85rem;
+}
+.reading ul li{
+  position:relative; padding-left:1.1rem; margin:0;
+}
+.reading ul li::before{
+  content:""; position:absolute; left:0; top:.72em;
+  width:5px; height:5px; border-radius:50%; background:var(--accent); opacity:.55;
+}
+.reading li .term{
+  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  color:var(--ink); letter-spacing:.005em;
+}
+.reading li .term::after{content:" — "; color:var(--ink-3); font-weight:400}
+
+/* vocabulary as a definition list with room to breathe */
+.vocablist{display:flex; flex-direction:column; gap:1rem; margin-top:.3rem}
+.vocabitem{
+  display:grid; grid-template-columns:minmax(150px,15rem) 1fr; gap:.2rem 1.5rem;
+  padding-bottom:.95rem; border-bottom:1px solid var(--line);
+}
+.vocabitem:last-child{border-bottom:0; padding-bottom:0}
+.vterm{
+  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  color:var(--accent); line-height:1.5;
+}
+.vocabitem .vdef{margin:0}
+@media (max-width:640px){
+  .vocabitem{grid-template-columns:1fr; gap:.1rem}
+}
+
+/* worked examples: setup, steps, takeaway - each visually distinct */
+.example{
+  border-left:3px solid var(--accent); padding:.15rem 0 .15rem 1.1rem;
+  display:flex; flex-direction:column; gap:.5rem;
+}
+.example + .example{margin-top:1.5rem; padding-top:1.4rem; border-top:1px solid var(--line)}
+.example .setup{
+  font-family:"Source Serif 4", Georgia, serif; font-style:italic;
+  font-size:1.06rem; line-height:1.7; color:var(--ink-2); max-width:var(--measure);
+}
+.reading .steps{
+  list-style:decimal; margin:.1rem 0 0; padding-left:1.5rem;
+  display:flex; flex-direction:column; gap:.5rem;
+  font-family:"IBM Plex Mono", monospace; font-size:.9rem; line-height:1.65;
+  max-width:var(--measure);
+}
+.reading .steps li{padding-left:.2rem; font-family:inherit; font-size:inherit; line-height:inherit}
+.reading .steps li::before{display:none}
+.takeaway{
+  background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.7rem .9rem; font-family:"Source Serif 4", Georgia, serif;
+  font-size:1.04rem; line-height:1.65; max-width:var(--measure);
+}
+.takeaway b{font-family:"Barlow",sans-serif; font-weight:600; font-size:.78rem;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); display:block;
+  margin-bottom:.15rem}
+
+/* callout blocks (Georgia differences, common traps) */
+.callouts{display:flex; flex-direction:column; gap:.8rem; margin-top:.2rem}
+.callout{
+  border-left:3px solid var(--line-2); padding:.1rem 0 .1rem 1rem;
+  font-family:"Source Serif 4", Georgia, serif; font-size:1.06rem; line-height:1.72;
+  max-width:var(--measure);
+}
+.callout.ga{border-left-color:var(--brass)}
+.callout.trap{border-left-color:var(--no)}
+
+/* the topic index reads as a list of things to open, not a data table */
+.topiclist{display:flex; flex-direction:column; gap:.15rem}
+.topicrow{
+  display:flex; gap:1rem; align-items:center; justify-content:space-between;
+  padding:.85rem .2rem; border-bottom:1px solid var(--line); flex-wrap:wrap;
+}
+.topicrow:last-child{border-bottom:0}
+.topicrow .who{flex:1; min-width:230px}
+.topicrow .nm{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.2rem}
+.topicrow .bl{font-size:.88rem; color:var(--ink-3); line-height:1.5; margin-top:.05rem}
+.topicrow .acts{display:flex; gap:.4rem; align-items:center}
+.topicrow .cnt{font-family:"IBM Plex Mono",monospace; font-size:.78rem; color:var(--ink-3);
+  white-space:nowrap; margin-right:.4rem}
+
+/* Runs of capitals - acronyms and the emphasis used throughout the notes -
+   are set slightly smaller with tracking, the normal treatment for caps in
+   running text. Without this they shout at reading size. */
+.reading .caps{
+  font-size:.9em; letter-spacing:.045em; font-weight:600;
+  font-family:"Barlow", sans-serif;
+}
+.reading .steps .caps, .reading .vterm .caps{font-family:inherit; font-weight:inherit}
+
+/* ---- section checks: a short self-test after each block of reading ---- */
+.check{
+  margin-top:1.1rem; padding:.9rem 1rem; border-radius:var(--r);
+  background:var(--panel-2); border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  display:flex; flex-direction:column; gap:.85rem;
+}
+.checkhead{
+  display:flex; justify-content:space-between; align-items:baseline; gap:.8rem;
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+}
+.checkscore{font-family:"IBM Plex Mono",monospace; font-size:.72rem; letter-spacing:0}
+.checkq{display:flex; flex-direction:column; gap:.45rem}
+.reading .cq{
+  font-family:"Barlow",sans-serif; font-size:.98rem; line-height:1.5;
+  font-weight:500; margin:0; max-width:var(--measure); color:var(--ink);
+}
+.copts{display:flex; flex-direction:column; gap:.3rem; max-width:var(--measure)}
+.copt{
+  text-align:left; font:inherit; font-family:"Barlow",sans-serif; font-size:.92rem;
+  line-height:1.45; color:var(--ink); background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--r);
+  padding:.4rem .6rem; cursor:pointer;
+}
+.copt:hover:not(:disabled){border-color:var(--accent); background:var(--accent-soft)}
+.copt:disabled{cursor:default}
+.copt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
+.copt.wrong{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
+.cwhy{
+  font-family:"Barlow",sans-serif; font-size:.87rem; line-height:1.55;
+  color:var(--ink-2); max-width:var(--measure); padding-left:.1rem;
+}
+.cwhy b{font-family:"Barlow Condensed",sans-serif; letter-spacing:.06em;
+  text-transform:uppercase; font-size:.72rem; margin-right:.35rem}
+.cwhy.ok b{color:var(--ok)} .cwhy.no b{color:var(--no)}
+
+/* ------------------------------------------------------------ notebook --
+   Each entry is a question you got wrong, with your answer, the right one,
+   and why. Laid out for reading, like the study notes. */
+.nbgroup{display:flex; flex-direction:column; gap:1.4rem}
+.nbitem{border-left:3px solid var(--no); padding-left:1.1rem; display:flex;
+  flex-direction:column; gap:.6rem}
+.nbitem.done{border-left-color:var(--ok); opacity:.72}
+.nbmeta{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;
+  font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.reading .nbq{font-family:"Barlow",sans-serif; font-size:1.02rem; line-height:1.55;
+  font-weight:500; margin:0; max-width:var(--measure); color:var(--ink)}
+.nbopts{display:flex; flex-direction:column; gap:.28rem; max-width:var(--measure)}
+.nbopt{display:flex; gap:.6rem; align-items:flex-start; font-family:"Barlow",sans-serif;
+  font-size:.92rem; line-height:1.45; padding:.38rem .6rem; border-radius:var(--r);
+  border:1px solid var(--line); background:var(--panel); color:var(--ink-2)}
+.nbopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-3);
+  min-width:1rem; flex:0 0 auto}
+.nbopt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
+.nbopt.right .k{color:var(--ok)}
+.nbopt.chose{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
+.nbopt.chose .k{color:var(--no)}
+.nbopt .flag{margin-left:auto; font-family:"Barlow Condensed",sans-serif;
+  font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap}
+.nbopt.right .flag{color:var(--ok)} .nbopt.chose .flag{color:var(--no)}
+.nbwhy{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.75rem .9rem; display:flex; flex-direction:column; gap:.4rem;
+  max-width:var(--measure)}
+.nbwhy .lab{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.reading .nbwhy p{font-size:1.02rem; line-height:1.7; margin:0}
+.nbacts{display:flex; gap:.4rem; flex-wrap:wrap; align-items:center}
+.nbfilter{display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
+
+/* ---------------------------------------------------------- today ------ */
+.tasklist{display:flex; flex-direction:column; gap:.55rem}
+.task{display:flex; gap:.9rem; align-items:center; padding:.75rem .9rem;
+  border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; background:var(--panel); flex-wrap:wrap}
+.task.done{border-left-color:var(--ok); opacity:.6}
+.task .tw{flex:1; min-width:180px}
+.task .tn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.14rem}
+.task .td{font-size:.85rem; color:var(--ink-3); line-height:1.5}
+.task .tick{font-family:"IBM Plex Mono",monospace; font-size:1.1rem; color:var(--ok)}
+.ring{display:flex; align-items:baseline; gap:.4rem}
+.ring .big{font-family:"IBM Plex Mono",monospace; font-size:2.1rem; font-weight:600;
+  line-height:1}
+.ring .of{font-size:.85rem; color:var(--ink-3)}
+
+/* ---------------------------------------------------------- cards ------ */
+.cardstage{display:flex; flex-direction:column; gap:.9rem; align-items:stretch}
+.flip{
+  border:1px solid var(--line-2); border-radius:var(--r); background:var(--panel-2);
+  min-height:190px; padding:1.6rem 1.4rem; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:.9rem; text-align:center; cursor:pointer;
+}
+.flip .side{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
+.flip .term{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.9rem;
+  line-height:1.15; color:var(--ink)}
+.flip .def{font-family:"Source Serif 4",Georgia,serif; font-size:1.1rem; line-height:1.7;
+  max-width:44ch; color:var(--ink)}
+.flip .hintline{font-size:.8rem; color:var(--ink-3)}
+.cardmeta{display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.cardacts{display:flex; gap:.5rem; flex-wrap:wrap}
+.cardacts .btn{flex:1; min-width:130px}
+.boxbar{display:flex; gap:3px; align-items:center}
+.boxbar i{display:block; width:16px; height:5px; border-radius:2px; background:var(--line)}
+.boxbar i.on{background:var(--accent)}
+
+/* ---------------------------------------------------------- search ----- */
+.searchbox{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap}
+.searchbox input{flex:1; min-width:200px}
+.hit{border-left:3px solid var(--line-2); padding:.5rem 0 .5rem .9rem;
+  display:flex; flex-direction:column; gap:.2rem}
+.hit .where{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.hit .snip{font-family:"Source Serif 4",Georgia,serif; font-size:1rem; line-height:1.65}
+.hit mark{background:var(--accent-soft); color:var(--accent); padding:0 .12em;
+  border-radius:2px}
+
+/* the exam-realistic tier gets its own mark, distinct from merely hard */
+.tag.hard.exam{background:var(--brass-soft); color:var(--brass)}
+
+/* ----------------------------------------------------------- vocab quiz */
+.defpanel{
+  border:1px solid var(--line-2); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; background:var(--panel-2);
+  padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.5rem;
+}
+.defpanel .lab{font-family:"Barlow Condensed",sans-serif; font-size:.68rem;
+  font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
+.defpanel .dtext{font-family:"Source Serif 4",Georgia,serif; font-size:1.25rem;
+  line-height:1.65; color:var(--ink); max-width:52ch}
+.termopts{display:flex; flex-direction:column; gap:.45rem; margin-top:.9rem}
+.termopt{
+  display:flex; gap:.7rem; align-items:center; text-align:left; width:100%;
+  font-family:"Barlow Condensed",sans-serif; font-size:1.14rem; font-weight:600;
+  letter-spacing:.01em; color:var(--ink); background:var(--panel);
+  border:1px solid var(--line-2); border-radius:var(--r); padding:.6rem .85rem;
+  cursor:pointer;
+}
+.termopt:hover:not(:disabled){border-color:var(--accent); background:var(--accent-soft)}
+.termopt:disabled{cursor:default}
+.termopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:.9rem;
+  color:var(--ink-3); min-width:1.1rem}
+.termopt.right{border-color:var(--ok); background:var(--ok-soft)}
+.termopt.right .k{color:var(--ok)}
+.termopt.wrong{border-color:var(--no); background:var(--no-soft)}
+.termopt.wrong .k{color:var(--no)}
+.termopt .flag{margin-left:auto; font-size:.66rem; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:600}
+.termopt.right .flag{color:var(--ok)} .termopt.wrong .flag{color:var(--no)}
+.catgrid{display:grid; gap:.5rem; grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.cat{
+  display:flex; flex-direction:column; gap:.15rem; text-align:left; font:inherit;
+  color:inherit; background:var(--panel); border:1px solid var(--line);
+  border-left:3px solid var(--line-2); border-radius:0 var(--r) var(--r) 0;
+  padding:.65rem .8rem; cursor:pointer;
+}
+.cat:hover{border-color:var(--accent); border-left-color:var(--accent)}
+.cat .cn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.08rem}
+.cat .cs{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-3)}
+
+/* the task queued up next is the one the eye should land on */
+.task.next{border-left-color:var(--accent); background:var(--accent-soft)}
+.task.next .tn .tag{margin-left:.5rem}
+.task .tn{display:flex; align-items:center; gap:.2rem; flex-wrap:wrap}
+
+/* ================================================================
+   Public build: chrome, mobile navigation, onboarding.
+   Everything above styles the study material; everything below is
+   the frame a first-time visitor actually has to get through.
+   ================================================================ */
+
+.skip{position:absolute; left:-9999px; top:0; z-index:60; background:var(--accent);
+  color:var(--accent-ink); padding:.6rem 1rem; border-radius:0 0 var(--r) 0;
+  font-weight:600; text-decoration:none}
+.skip:focus{left:0}
+main:focus{outline:none}
+
+/* ---- header chrome ---- */
+.wordmark{background:none; border:0; padding:0; cursor:pointer; color:var(--ink);
+  display:flex; align-items:center; gap:.55rem; text-align:left}
+.brandmark{width:1.5rem; height:1.5rem; flex:0 0 auto; color:var(--accent)}
+.wordmark>span{display:flex; align-items:baseline; gap:.5rem;
+  font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
+  letter-spacing:.13em; text-transform:uppercase; white-space:nowrap}
+
+.hudacts{display:flex; gap:.3rem; align-items:center; flex:0 0 auto}
+.iconbtn{display:inline-flex; align-items:center; gap:.35rem; background:transparent;
+  border:1px solid var(--line); border-radius:var(--r); color:var(--ink-2);
+  font-family:"Barlow Condensed",sans-serif; font-size:.76rem; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; padding:.38rem .6rem; cursor:pointer;
+  min-height:38px}
+.iconbtn:hover{color:var(--accent); border-color:var(--accent)}
+.iconbtn svg{width:1.05rem; height:1.05rem; flex:0 0 auto; fill:none;
+  stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round}
+/* the icon shows the scheme you are in now, which in auto mode means the one
+   the system resolved to -- so it is driven off the button, not off :root */
+#themeBtn .moon{display:none}
+#themeBtn[data-shown="dark"] .sun{display:none}
+#themeBtn[data-shown="dark"] .moon{display:inline-block}
+
+/* plain prose lists inside cards */
+ul.plainlist{margin:.1rem 0 0; padding-left:1.15rem; display:flex;
+  flex-direction:column; gap:.5rem}
+ul.plainlist li{font-size:.94rem; color:var(--ink-2); line-height:1.6;
+  max-width:70ch}
+
+/* the keyboard hint under a quiz: useful once, invisible after */
+.kbhint{font-size:.78rem; color:var(--ink-3); margin-top:.6rem;
+  display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
+.kbhint kbd{font-family:"IBM Plex Mono",monospace; font-size:.72rem;
+  border:1px solid var(--line-2); border-bottom-width:2px; border-radius:3px;
+  padding:.05rem .3rem; background:var(--panel-2); color:var(--ink-2)}
+@media (max-width:860px){ .kbhint{display:none} }
+
+/* ---- footer ---- */
+footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6}
+.footrow{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
+.footrow span{max-width:72ch}
+.footlinks{gap:1.1rem}
+.linkish,footer a{background:none; border:0; padding:0; font:inherit; color:var(--accent);
+  cursor:pointer; text-decoration:underline; text-underline-offset:2px}
+.buildstamp{font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-3)}
+
+/* ---- bottom tab bar (small screens only) ---- */
+.tabbar{display:none}
+.sheet[hidden]{display:none}
+
+/* ---- more sheet ---- */
+.sheet{position:fixed; inset:0; z-index:50; display:flex; align-items:flex-end;
+  justify-content:center}
+.sheet-scrim{position:absolute; inset:0; background:rgba(8,12,17,.55);
+  backdrop-filter:blur(2px)}
+.sheet-card{position:relative; width:min(560px,100%); background:var(--panel);
+  border:1px solid var(--line); border-radius:12px 12px 0 0; padding:.6rem 1rem
+  calc(1rem + env(safe-area-inset-bottom)); box-shadow:0 -10px 40px rgba(0,0,0,.35);
+  display:flex; flex-direction:column; gap:.5rem; max-height:82vh; overflow-y:auto}
+.sheet-grip{width:36px; height:4px; border-radius:2px; background:var(--line-2);
+  margin:.15rem auto .5rem}
+.sheet-list{display:grid; gap:.3rem}
+.sheet-list button{display:flex; flex-direction:column; align-items:flex-start; gap:.05rem;
+  text-align:left; font:inherit; color:inherit; background:var(--panel-2);
+  border:1px solid var(--line); border-left:3px solid var(--line-2);
+  border-radius:0 var(--r) var(--r) 0; padding:.6rem .75rem; cursor:pointer;
+  min-height:48px}
+.sheet-list button:hover,.sheet-list button.on{border-left-color:var(--accent)}
+.sheet-list .sn{font-family:"Barlow Condensed",sans-serif; font-weight:600;
+  font-size:1.05rem}
+.sheet-list .sd{font-size:.82rem; color:var(--ink-3); line-height:1.4}
+.btn.wide{width:100%; justify-content:center}
+
+/* ---- toast ---- */
+.toast{position:fixed; left:50%; transform:translateX(-50%); bottom:1.2rem; z-index:70;
+  background:var(--ink); color:var(--bg); padding:.6rem 1rem; border-radius:999px;
+  font-size:.88rem; box-shadow:var(--shadow); max-width:90vw; text-align:center}
+.toast[hidden]{display:none}
+
+/* ================================ onboarding / welcome =================
+   The hero that used to live here is gone: the home page has its own, and
+   `landing` is now a mode on <body>, so a bare `.landing` rule would paint
+   the document itself -- which it was doing, replacing the page's bottom
+   padding with the hero's and dropping a gradient bar across the top. */
+
+.facts{display:grid; gap:.55rem; grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+  margin-top:.3rem}
+.fact{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.6rem .7rem}
+.fact .fv{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.35rem; font-weight:600; line-height:1.15; color:var(--accent)}
+.fact .fk{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3)}
+
+.trustrow{display:flex; gap:.45rem; flex-wrap:wrap; margin-top:.2rem}
+.trust{display:inline-flex; align-items:center; gap:.35rem; background:var(--ok-soft);
+  color:var(--ok); border-radius:999px; padding:.22rem .7rem; font-size:.79rem;
+  font-weight:600}
+.trust::before{content:"\2713"; font-size:.8rem}
+
+.steps3{display:grid; gap:.7rem; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.step3{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.85rem .9rem; display:flex; flex-direction:column; gap:.25rem}
+.step3 .sno{font-family:"IBM Plex Mono",monospace; font-size:.76rem; font-weight:600;
+  color:var(--accent); letter-spacing:.12em}
+.step3 h3{font-size:1.06rem}
+.step3 p{font-size:.9rem; color:var(--ink-2); line-height:1.55}
+
+.feat{display:grid; gap:.6rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.featcard{text-align:left; font:inherit; color:inherit; background:var(--panel-2);
+  border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; padding:.75rem .85rem; cursor:pointer;
+  display:flex; flex-direction:column; gap:.2rem; min-height:48px}
+.featcard:hover{background:var(--accent-soft)}
+.featcard .fn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.1rem}
+.featcard .fd{font-size:.87rem; color:var(--ink-2); line-height:1.5}
+
+/* the wizard: one question on screen at a time */
+.wiz{display:flex; flex-direction:column; gap:1rem}
+.wizdots{display:flex; gap:.35rem; align-items:center}
+.wizdots i{width:26px; height:3px; border-radius:2px; background:var(--line-2);
+  display:block}
+.wizdots i.on{background:var(--accent)}
+.pickgrid{display:grid; gap:.4rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.opt{display:flex; align-items:flex-start; gap:.6rem; text-align:left; font:inherit;
+  color:inherit; background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r); padding:.6rem .7rem; cursor:pointer; min-height:48px}
+.opt:hover{border-color:var(--accent)}
+.opt.on{border-color:var(--accent); background:var(--accent-soft)}
+.opt .box{width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;
+  border:1.5px solid var(--line-2); border-radius:3px; display:grid; place-items:center;
+  font-size:.75rem; color:transparent}
+.opt.on .box{border-color:var(--accent); background:var(--accent); color:var(--accent-ink)}
+.opt>span:last-child{display:flex; flex-direction:column; gap:.1rem}
+.opt .pn{display:block; font-weight:600; font-size:.95rem; line-height:1.35}
+.opt .pd{display:block; font-size:.8rem; color:var(--ink-3); line-height:1.3}
+.wizacts{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
+.wizacts .spacer{flex:1}
+
+/* ============================== small screens ========================== */
+@media (max-width:860px){
+  nav.rail{display:none}
+  .tabbar{
+    display:grid; grid-template-columns:repeat(5,1fr); position:fixed; z-index:40;
+    left:0; right:0; bottom:0; background:var(--panel);
+    border-top:1px solid var(--line); box-shadow:0 -2px 14px rgba(0,0,0,.10);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .tabbar button{
+    background:none; border:0; border-top:2px solid transparent; cursor:pointer;
+    color:var(--ink-3); display:flex; flex-direction:column; align-items:center;
+    gap:.12rem; padding:.45rem .1rem .5rem; min-height:56px;
+    font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  .tabbar button svg{width:1.42rem; height:1.42rem; fill:none; stroke:currentColor;
+    stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+  .tabbar button.on{color:var(--accent); border-top-color:var(--accent)}
+  body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+
+  .hud-in{padding:.5rem .85rem; gap:.6rem}
+  .wordmark>span{font-size:1rem; letter-spacing:.1em}
+  .wordmark>span small{display:none}
+  .readouts{gap:1.1rem}
+  .ro{flex:0 0 auto}
+  .hudacts{margin-left:auto}
+  .iconbtn span{display:none}
+  .iconbtn{padding:.4rem .5rem}
+
+  main{padding:1rem .85rem 1.4rem; gap:.85rem}
+  footer{padding:.4rem .85rem 1.6rem}
+  .card{padding:.9rem .9rem}
+  h1{font-size:1.72rem}
+
+  /* thumbs, not cursors */
+  .choice{padding:.78rem .8rem; min-height:52px; align-items:center}
+  .termopt{min-height:52px}
+  button.btn{padding:.62rem 1.05rem; min-height:46px}
+  button.btn.mini{min-height:36px; padding:.3rem .6rem}
+  .topicrow{min-height:48px}
+  .cat{min-height:52px}
+
+  .reading{--measure:100%}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:420px){
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .tabbar button{font-size:.64rem}
+}
+
+/* a quiz in progress hides the tab bar: leaving mid-question loses the set.
+   The footer goes too -- nobody reads a disclaimer with a timer running. */
+body.inquiz .tabbar,body.inquiz footer{display:none}
+body.inquiz{padding-bottom:0}
+
+@media print{
+  header.hud,nav.rail,.tabbar,.hudacts,.skip,.toast{display:none !important}
+}
+
+/* quiz actions: ordinary buttons on a desktop, a thumb rail on a phone */
+.qacts{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
+@media (max-width:860px){
+  .qacts{
+    position:sticky; bottom:0; z-index:15; margin:.2rem -.85rem -1.4rem;
+    padding:.6rem .85rem calc(.6rem + env(safe-area-inset-bottom));
+    background:var(--panel); border-top:1px solid var(--line);
+    box-shadow:0 -2px 14px rgba(0,0,0,.10);
+  }
+  .qacts #qnext{flex:1}
+}
+
+/* readouts that are really buttons: the exam date, when it needs attention */
+.ro.tappable{cursor:pointer; border-radius:var(--r); margin:-.2rem -.35rem;
+  padding:.2rem .35rem}
+.ro.tappable:hover{background:var(--panel-2)}
+.ro.tappable .v{color:var(--caution)}
+
+/* ======================================================================
+   Surface pass.
+
+   The first build was a flight deck: hairline boxes, everything shouted in
+   condensed capitals, four-pixel corners, no air. It read like a spreadsheet,
+   which is fine for a tool you already committed to and wrong for one you are
+   asking somebody to open every day. Softer geometry, quieter labels, real
+   hierarchy, and something that moves when you touch it.
+   ====================================================================== */
+
+/* ---- typography: stop shouting ---- */
+h1,h2,h3{letter-spacing:-.005em}
+h1{font-size:2.15rem; line-height:1.08}
+h2{font-size:1.5rem}
+h3{font-size:1.14rem}
+body{font-size:16.5px; line-height:1.6}
+
+/* eyebrows stay small caps, but lighter and less spaced than before */
+.eyebrow,.hint,label,th{letter-spacing:.09em; font-size:.68rem; opacity:.95}
+.sub,.lede{font-size:.97rem; line-height:1.62}
+
+/* ---- surfaces: air and depth ---- */
+main{gap:1.15rem; padding-top:1.5rem}
+.card{
+  padding:1.35rem 1.45rem; gap:.9rem; border-radius:var(--r);
+  border-color:var(--line); box-shadow:var(--shadow);
+}
+.cardhead{align-items:center; margin-bottom:.1rem}
+.metric,.readout{border-radius:var(--r-sm); padding:.9rem 1rem; gap:.3rem;
+  border-color:var(--line)}
+.stat{font-size:1.9rem; letter-spacing:-.02em}
+.stat.small{font-size:1.4rem}
+.grid{gap:.85rem}
+
+/* ---- controls: things that respond ---- */
+button.btn{
+  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
+  font-size:.95rem; font-weight:600; padding:.62rem 1.15rem;
+  border-radius:var(--r-sm); box-shadow:0 1px 2px rgba(0,0,0,.06);
+  transition:transform .12s var(--ease), box-shadow .18s var(--ease),
+             background .18s var(--ease), border-color .18s var(--ease);
+}
+button.btn:hover:not(:disabled){filter:none; box-shadow:0 4px 14px -4px var(--glow);
+  transform:translateY(-1px)}
+button.btn:active:not(:disabled){transform:translateY(0) scale(.985); box-shadow:none}
+button.btn.ghost{border-color:var(--line-2); box-shadow:none}
+button.btn.ghost:hover:not(:disabled){border-color:var(--accent);
+  background:var(--accent-soft)}
+button.btn.mini{font-size:.82rem; padding:.3rem .7rem; border-radius:var(--r-xs)}
+input,select,textarea{border-radius:var(--r-sm); transition:border-color .16s,
+  box-shadow .16s}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--glow)}
+
+/* ---- navigation: a pill, not an underline ---- */
+nav.rail{border-bottom:1px solid var(--line); background:var(--panel)}
+.rail-in{padding:.42rem .8rem; gap:.12rem}
+.rail button{
+  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
+  font-size:.93rem; font-weight:600; border-bottom:0; border-radius:var(--r-pill);
+  padding:.42rem .82rem; transition:background .16s var(--ease), color .16s var(--ease);
+}
+.rail button:hover{background:var(--panel-2); color:var(--ink)}
+.rail button.on,.rail button[aria-current="page"]{
+  background:var(--accent); color:var(--accent-ink); border-bottom-color:transparent;
+}
+.rail button.on:hover{background:var(--accent); color:var(--accent-ink)}
+
+.iconbtn{border-radius:var(--r-pill); border-color:var(--line);
+  transition:color .16s, border-color .16s, background .16s}
+.iconbtn:hover{background:var(--panel-2)}
+
+/* ---- the quiz: the screen people stare at longest ---- */
+.qhead{border-radius:var(--r); padding:.7rem 1.1rem}
+.qtext{font-size:1.22rem; line-height:1.5; margin:.5rem 0 .3rem; letter-spacing:-.004em}
+.choices{gap:.55rem}
+.choice{
+  border-radius:var(--r-sm); border-left-width:1px; padding:.85rem 1rem;
+  align-items:center; gap:.85rem; box-shadow:0 1px 2px rgba(0,0,0,.03);
+  transition:border-color .16s var(--ease), background .16s var(--ease),
+             transform .12s var(--ease), box-shadow .18s var(--ease);
+}
+.choice:hover:not(:disabled){border-left-color:var(--accent);
+  box-shadow:0 6px 18px -8px var(--glow); transform:translateY(-1px)}
+.choice:active:not(:disabled){transform:translateY(0) scale(.995)}
+.choice .k{
+  min-width:1.75rem; height:1.75rem; border-radius:50%; display:grid;
+  place-items:center; background:var(--panel-2); border:1px solid var(--line-2);
+  font-size:.82rem; transition:background .16s, color .16s, border-color .16s;
+}
+.choice:hover:not(:disabled) .k{border-color:var(--accent); color:var(--accent)}
+.choice.correct,.choice.wrong{transform:none}
+.choice.correct .k{background:var(--ok); border-color:var(--ok); color:var(--panel)}
+.choice.wrong .k{background:var(--no); border-color:var(--no); color:var(--panel)}
+.choice.correct{animation:pop .28s var(--ease)}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.014)}100%{transform:scale(1)}}
+.feedback{border-radius:var(--r-sm); border-left-width:1px; padding:.95rem 1.1rem;
+  animation:risein .22s var(--ease)}
+@keyframes risein{from{opacity:0; transform:translateY(5px)}to{opacity:1; transform:none}}
+.progressbar{height:5px; border-radius:var(--r-pill)}
+.progressbar>div{border-radius:var(--r-pill); transition:width .3s var(--ease)}
+.timer{font-size:1.24rem; letter-spacing:-.01em}
+
+/* ---- tables: room to read ---- */
+th{padding:.55rem .6rem; font-weight:600}
+td{padding:.62rem .6rem}
+table{font-size:.94rem}
+.bar-track{height:7px; border-radius:var(--r-pill)}
+.bar-fill{border-radius:var(--r-pill); transition:width .35s var(--ease)}
+
+/* ---- left-marker blocks: rounded on both sides now ---- */
+.cat,.opt,.featcard,.sheet-list button,.termopt{border-radius:var(--r-sm)}
+.cat,.featcard,.sheet-list button{transition:border-color .16s var(--ease),
+  background .16s var(--ease), transform .12s var(--ease)}
+.cat:hover,.featcard:hover,.sheet-list button:hover{transform:translateY(-1px)}
+.tag{border-radius:var(--r-pill); padding:.1rem .5rem}
+.trust{font-size:.8rem; padding:.28rem .8rem}
+
+.fact{border-radius:var(--r-sm); padding:.85rem .95rem}
+.fact .fv{font-size:1.6rem; letter-spacing:-.02em}
+.step3{border-radius:var(--r-sm); padding:1.1rem 1.15rem}
+
+/* ---- bottom bar ---- */
+@media (max-width:860px){
+  .tabbar{box-shadow:0 -1px 0 var(--line), 0 -8px 28px -12px rgba(0,0,0,.28)}
+  .tabbar button{transition:color .16s var(--ease); border-top:0; position:relative}
+  .tabbar button.on::before{
+    content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:26px; height:3px; border-radius:0 0 3px 3px; background:var(--accent);
+  }
+  .card{padding:1.1rem 1.05rem}
+  main{padding-top:1.1rem}
+  h1{font-size:1.85rem}
+  .qtext{font-size:1.14rem}
+}
+
+/* ---- view changes should feel like a step, not a flash ---- */
+main>section:not([hidden]){animation:viewin .22s var(--ease)}
+@keyframes viewin{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){
+  main>section:not([hidden]),.choice.correct,.feedback{animation:none}
+}
+
+/* ---- Today: make the day's count read as the headline it is ---- */
+.tasklist{gap:.6rem}
+.task{border-radius:var(--r-sm); padding:.95rem 1.05rem; gap:1rem;
+  transition:border-color .16s var(--ease), background .16s var(--ease),
+             transform .12s var(--ease)}
+.task:hover{transform:translateY(-1px)}
+.task .tn{font-family:"Barlow",sans-serif; font-size:1.04rem; font-weight:600;
+  letter-spacing:0}
+.task .td{font-size:.88rem; color:var(--ink-2)}
+.task.done{opacity:.55}
+.ring .big{font-size:2.6rem; line-height:1; letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums}
+.ring .of{font-size:.88rem}
+.metric .eyebrow{margin-bottom:.15rem}
+
+/* an empty progress bar should still show its track */
+.card>.progressbar{height:6px; background:var(--line-2); opacity:.55}
+
+/* ---- header readouts: legible, not squeezed ---- */
+.ro .k{font-size:.63rem; letter-spacing:.11em}
+.ro .v{font-size:1.16rem; letter-spacing:-.01em}
+.ro.hero .v{font-size:1.4rem}
+.readouts{gap:1.5rem}
+
+/* ---- study reading: longer measure, softer rules ---- */
+.reading h2{margin-top:.2rem}
+.topicrow{border-radius:var(--r-sm); padding:.7rem .85rem;
+  transition:background .16s var(--ease)}
+.topicrow:hover{background:var(--panel-2)}
+
+/* ---- callouts and examples pick up the new radius ---- */
+.takeaway,.focus,.week,.vocabitem{border-radius:var(--r-sm)}
+.focus{padding:.7rem .85rem}
+.week{padding-left:1.1rem}
+
+/* ---- sheet ---- */
+.sheet-card{border-radius:20px 20px 0 0; padding:.7rem 1.1rem
+  calc(1.1rem + env(safe-area-inset-bottom))}
+.toast{border-radius:var(--r-pill); padding:.65rem 1.15rem; font-weight:500;
+  box-shadow:var(--shadow-lift)}
+
+/* On a phone three stacked metric cards pushed the actual content below the
+   fold. Lead with the one that matters and pair the other two. */
+@media (max-width:860px){
+  .grid.g3{grid-template-columns:repeat(2,1fr); gap:.6rem}
+  .grid.g3>*:first-child{grid-column:1/-1}
+  .metric,.readout{padding:.75rem .85rem}
+  .ring .big{font-size:2.2rem}
+  .stat{font-size:1.6rem}
+}
+
+/* ======================================================================
+   The front door.
+
+   Everything else in here is the app. This is the page someone lands on
+   from a link, and it has one job: say what this is, show them a real
+   question, and get out of the way. It drops the tab rail and the status
+   strip -- neither means anything to a stranger -- and carries its own
+   wider rhythm.
+   ====================================================================== */
+
+body.landing nav.rail,
+body.landing .readouts{display:none}
+body.landing main{max-width:1120px; gap:0; padding-top:0}
+body.landing footer{max-width:1120px}
+
+/* ---- hero ---- */
+.hero2{
+  position:relative; overflow:hidden; border-radius:0 0 28px 28px;
+  margin:0 -1.1rem; padding:4.2rem 2.6rem 3.4rem;
+  background:
+    radial-gradient(90rem 40rem at 78% -18%, var(--accent-soft) 0%, transparent 62%),
+    radial-gradient(60rem 30rem at 6% 120%, var(--brass-soft) 0%, transparent 58%),
+    var(--panel);
+  border-bottom:1px solid var(--line);
+}
+.hero2::after{
+  content:""; position:absolute; inset:auto 0 0; height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--brass));
+}
+.hero2 .wrap{max-width:46rem; display:flex; flex-direction:column; gap:1.1rem}
+.kicker2{
+  display:inline-flex; align-items:center; gap:.5rem; align-self:flex-start;
+  font-family:"Barlow",sans-serif; font-size:.78rem; font-weight:600;
+  letter-spacing:.04em; color:var(--accent); background:var(--accent-soft);
+  border:1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  padding:.32rem .85rem; border-radius:var(--r-pill);
+}
+.hero2 h1{
+  font-size:clamp(2.5rem,7vw,4.1rem); line-height:.98; letter-spacing:-.022em;
+  max-width:15ch;
+}
+.hero2 h1 em{font-style:normal; color:var(--accent)}
+.hero2 .lede2{
+  font-size:clamp(1.05rem,2.2vw,1.24rem); line-height:1.58; color:var(--ink-2);
+  max-width:52ch;
+}
+.hero2 .cta2{display:flex; gap:.7rem; flex-wrap:wrap; margin-top:.4rem}
+.hero2 .cta2 .btn{padding:.92rem 1.7rem; font-size:1.06rem; border-radius:var(--r-sm)}
+.hero2 .fineprint{font-size:.87rem; color:var(--ink-3)}
+
+.statband{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  margin:2.2rem -2.6rem -3.4rem; padding:1.3rem 2.6rem;
+  border-top:1px solid var(--line); background:var(--panel-2);
+}
+.statband div{display:flex; flex-direction:column; gap:.1rem}
+.statband .n{
+  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.75rem; font-weight:600; line-height:1; letter-spacing:-.03em;
+  color:var(--accent);
+}
+.statband .l{font-family:"Barlow Condensed",sans-serif; font-size:.72rem;
+  font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+
+/* ---- section rhythm ---- */
+.lsec{padding:3.4rem 0 .4rem; display:flex; flex-direction:column; gap:1.3rem}
+.lsec+.lsec{border-top:1px solid var(--line)}
+.lhead{display:flex; flex-direction:column; gap:.45rem; max-width:58ch}
+.lhead .eyebrow{color:var(--accent)}
+.lhead h2{font-size:clamp(1.65rem,3.6vw,2.25rem); letter-spacing:-.015em}
+.lhead p{font-size:1.04rem; line-height:1.62; color:var(--ink-2)}
+
+/* ---- feature tiles ---- */
+.tiles{display:grid; gap:.85rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tile{
+  text-align:left; font:inherit; color:inherit; cursor:pointer;
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1.3rem 1.35rem; display:flex; flex-direction:column; gap:.5rem;
+  box-shadow:var(--shadow);
+  transition:transform .14s var(--ease), box-shadow .2s var(--ease),
+             border-color .18s var(--ease);
+}
+.tile:hover{transform:translateY(-3px); box-shadow:var(--shadow-lift);
+  border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.ico{
+  width:2.5rem; height:2.5rem; border-radius:var(--r-sm); display:grid;
+  place-items:center; background:var(--accent-soft); color:var(--accent);
+  margin-bottom:.15rem;
+}
+.ico svg{width:1.32rem; height:1.32rem; fill:none; stroke:currentColor;
+  stroke-width:1.85; stroke-linecap:round; stroke-linejoin:round}
+.tile h3{font-size:1.16rem}
+.tile p{font-size:.93rem; line-height:1.55; color:var(--ink-2)}
+.tile .go{margin-top:auto; padding-top:.35rem; font-size:.85rem; font-weight:600;
+  color:var(--accent)}
+
+/* ---- the live sample question ---- */
+.sample{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow-lift); overflow:hidden;
+}
+.sample .stop{
+  display:flex; gap:.5rem; align-items:center; padding:.7rem 1.2rem;
+  border-bottom:1px solid var(--line); background:var(--panel-2);
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3);
+}
+.sample .sbody{padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.75rem}
+.sample .sq{font-size:1.16rem; line-height:1.5; color:var(--ink)}
+
+/* ---- the blueprint table ---- */
+.blueprint{display:grid; gap:.85rem; grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.bpcol{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1.2rem 1.3rem; box-shadow:var(--shadow)}
+.bpcol h3{display:flex; align-items:baseline; gap:.5rem; margin-bottom:.15rem}
+.bpcol h3 span{font-family:"IBM Plex Mono",monospace; font-size:.82rem;
+  font-weight:600; color:var(--accent)}
+.bprow{display:flex; justify-content:space-between; gap:1rem; padding:.42rem 0;
+  border-bottom:1px solid var(--line); font-size:.93rem}
+.bprow:last-child{border-bottom:0}
+.bprow b{font-weight:500; color:var(--ink-2)}
+.bprow i{font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:.85rem;
+  color:var(--ink-3)}
+
+/* ---- faq ---- */
+.faq{display:flex; flex-direction:column; gap:.55rem}
+.faq details{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r-sm);
+  padding:.9rem 1.1rem; transition:border-color .16s var(--ease);
+}
+.faq details[open]{border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.faq summary{
+  cursor:pointer; font-weight:600; font-size:1.02rem; list-style:none;
+  display:flex; justify-content:space-between; gap:1rem; align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--accent); font-size:1.3rem; line-height:1;
+  font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin-top:.6rem; font-size:.95rem; line-height:1.65; color:var(--ink-2);
+  max-width:68ch}
+
+/* ---- closing call to action ---- */
+.endcta{
+  margin:3.4rem 0 1rem; padding:2.6rem 2rem; border-radius:var(--r);
+  background:linear-gradient(135deg,var(--accent) 0%,
+             color-mix(in srgb, var(--accent) 72%, var(--brass)) 100%);
+  color:var(--accent-ink); display:flex; flex-direction:column; gap:.75rem;
+  align-items:center; text-align:center; box-shadow:var(--shadow-lift);
+}
+.endcta h2{font-size:clamp(1.6rem,4vw,2.3rem); color:inherit; letter-spacing:-.015em}
+.endcta p{font-size:1.04rem; opacity:.9; max-width:48ch; line-height:1.55}
+.endcta .btn{background:var(--panel); color:var(--accent); border-color:var(--panel);
+  padding:.9rem 1.8rem; font-size:1.05rem; margin-top:.3rem}
+.endcta .btn:hover{background:var(--panel); box-shadow:0 8px 26px -6px rgba(0,0,0,.3)}
+
+@media (max-width:860px){
+  .hero2{margin:0 -.85rem; padding:2.8rem 1.25rem 2.4rem; border-radius:0 0 22px 22px}
+  .statband{grid-template-columns:repeat(2,1fr); gap:1rem 0;
+    margin:1.8rem -1.25rem -2.4rem; padding:1.1rem 1.25rem}
+  .statband .n{font-size:1.5rem}
+  .lsec{padding:2.4rem 0 .3rem; gap:1.1rem}
+  .hero2 .cta2 .btn{width:100%}
+  .endcta{padding:2rem 1.2rem; margin-top:2.4rem}
+}
+
+/* On a phone the landing header cannot carry a text button and three icons:
+   the call to action wrapped onto three lines and pushed the rest off-screen.
+   Install and share both live inside the app anyway. */
+@media (max-width:860px){
+  body.landing #installBtn,
+  body.landing #shareBtn{display:none}
+  body.landing #appBtn{white-space:nowrap; padding:.5rem .85rem; font-size:.9rem}
+  body.landing .hud-in{gap:.5rem}
+  .kicker2{font-size:.72rem; padding:.28rem .7rem}
+  .hero2 h1{font-size:clamp(2.1rem,9vw,2.8rem)}
+}
+</style></head><body>
+<main id="main" style="padding-top:2.5rem">
+<div class="card reading"><h1>Privacy</h1><p><b>What is collected.</b> Your email address, so you can sign in and so we know what you bought, and your study progress -- scores, which questions you have answered, and your plan settings.</p>
+<p><b>What is not.</b> No name, no address, no tracking pixels, no advertising, and no analytics of any kind.</p>
+<p><b>Payments.</b> Card details are handled entirely by Stripe and never touch this site. We store only Stripe's reference for your payment.</p>
+<p><b>Sharing.</b> Your data is not sold, rented, or shared. Stripe processes the payment; an email provider delivers your sign-in code. Nobody else sees any of it.</p>
+<p><b>Deleting it.</b> Email support@example.com and your account and every row of your progress will be deleted. That is permanent.</p>
+<p><b>Cookies.</b> One, holding your signed-in session. No tracking cookies, so there is no banner to click.</p>
+<p class="muted">Last updated 2026-09-26. <a href="/">Back to the home page</a>.</p></div>
+</main></body></html>

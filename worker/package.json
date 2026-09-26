@@ -1,0 +1,16 @@
+{
+  "name": "ga-prep-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd .. && python3 tools/build_paid.py",
+    "test": "node test/gate.test.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && npm test && wrangler deploy",
+    "db:init": "wrangler d1 execute ga-prep --remote --file=./schema.sql",
+    "db:local": "wrangler d1 execute ga-prep --local --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}
