@@ -2,40 +2,48 @@
    stat tables. Tokens first: light is the base, both dark paths redefine only
    these. */
 :root{
-  --bg:#eef1f5;         --panel:#ffffff;      --panel-2:#f6f8fa;
-  --ink:#141b24;        --ink-2:#4a5a6d;      --ink-3:#7b8a9c;
-  --line:#d5dde6;       --line-2:#c2ccd8;
-  --accent:#1a6459;     --accent-ink:#ffffff; --accent-soft:#dcefea;
-  --brass:#95651a;      --brass-soft:#f7edd8;
-  --ok:#1d7a4c;         --ok-soft:#e0f2e8;
-  --no:#a8283c;         --no-soft:#fbe6ea;
+  --bg:#eef1f6;         --panel:#ffffff;      --panel-2:#f5f8fa;
+  --ink:#0e1720;        --ink-2:#48596c;      --ink-3:#7d8c9d;
+  --line:#e1e8ef;       --line-2:#c7d2de;
+  --accent:#0d7365;     --accent-ink:#ffffff; --accent-soft:#dff1ed;
+  --brass:#8d6111;      --brass-soft:#f8eed7;
+  --ok:#157f4a;         --ok-soft:#ddf3e6;
+  --no:#b4243c;         --no-soft:#fde4e8;
   --caution:#8a6100;    --caution-soft:#fbf0d9;
-  --shadow:0 1px 1px rgba(20,27,36,.04), 0 6px 20px rgba(20,27,36,.07);
-  --r:4px;
+  --glow:rgba(13,115,101,.16);
+  --shadow:0 1px 2px rgba(14,23,32,.05), 0 8px 24px -8px rgba(14,23,32,.12);
+  --shadow-lift:0 2px 4px rgba(14,23,32,.06), 0 16px 40px -12px rgba(14,23,32,.20);
+  --r:14px;             --r-sm:10px;          --r-xs:7px;
+  --r-pill:999px;
+  --ease:cubic-bezier(.2,.7,.3,1);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0e1319;       --panel:#161d26;      --panel-2:#1d252f;
-    --ink:#e2e8f0;      --ink-2:#a3b1c2;      --ink-3:#75838f;
-    --line:#293341;     --line-2:#37434f;
-    --accent:#5fc0ad;   --accent-ink:#0b1512; --accent-soft:#13282a;
-    --brass:#d6a445;    --brass-soft:#2b2416;
-    --ok:#5fcf95;       --ok-soft:#12281d;
-    --no:#ff8c9e;       --no-soft:#2e161c;
-    --caution:#e0ae5a;  --caution-soft:#2a2214;
-    --shadow:0 1px 1px rgba(0,0,0,.5), 0 8px 26px rgba(0,0,0,.36);
+    --bg:#0a0e14;       --panel:#141b24;      --panel-2:#1b232e;
+    --ink:#e7edf4;      --ink-2:#a7b5c6;      --ink-3:#77869a;
+    --line:#242f3c;     --line-2:#354354;
+    --accent:#4fd1b8;   --accent-ink:#05231e; --accent-soft:#0f2f2a;
+    --brass:#e0b25a;    --brass-soft:#2c2417;
+    --ok:#4fd07f;       --ok-soft:#0f2a1b;
+    --no:#fb7f95;       --no-soft:#2f151d;
+    --caution:#e6b95c;  --caution-soft:#2b2314;
+    --glow:rgba(79,209,184,.20);
+    --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
+    --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0e1319;         --panel:#161d26;      --panel-2:#1d252f;
-  --ink:#e2e8f0;        --ink-2:#a3b1c2;      --ink-3:#75838f;
-  --line:#293341;       --line-2:#37434f;
-  --accent:#5fc0ad;     --accent-ink:#0b1512; --accent-soft:#13282a;
-  --brass:#d6a445;      --brass-soft:#2b2416;
-  --ok:#5fcf95;         --ok-soft:#12281d;
-  --no:#ff8c9e;         --no-soft:#2e161c;
-  --caution:#e0ae5a;    --caution-soft:#2a2214;
-  --shadow:0 1px 1px rgba(0,0,0,.5), 0 8px 26px rgba(0,0,0,.36);
+  --bg:#0a0e14;         --panel:#141b24;      --panel-2:#1b232e;
+  --ink:#e7edf4;        --ink-2:#a7b5c6;      --ink-3:#77869a;
+  --line:#242f3c;       --line-2:#354354;
+  --accent:#4fd1b8;     --accent-ink:#05231e; --accent-soft:#0f2f2a;
+  --brass:#e0b25a;      --brass-soft:#2c2417;
+  --ok:#4fd07f;         --ok-soft:#0f2a1b;
+  --no:#fb7f95;         --no-soft:#2f151d;
+  --caution:#e6b95c;    --caution-soft:#2b2314;
+  --glow:rgba(79,209,184,.20);
+  --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
 }
 
 *{box-sizing:border-box}
@@ -769,3 +777,203 @@ body.inquiz{padding-bottom:0}
   padding:.2rem .35rem}
 .ro.tappable:hover{background:var(--panel-2)}
 .ro.tappable .v{color:var(--caution)}
+
+/* ======================================================================
+   Surface pass.
+
+   The first build was a flight deck: hairline boxes, everything shouted in
+   condensed capitals, four-pixel corners, no air. It read like a spreadsheet,
+   which is fine for a tool you already committed to and wrong for one you are
+   asking somebody to open every day. Softer geometry, quieter labels, real
+   hierarchy, and something that moves when you touch it.
+   ====================================================================== */
+
+/* ---- typography: stop shouting ---- */
+h1,h2,h3{letter-spacing:-.005em}
+h1{font-size:2.15rem; line-height:1.08}
+h2{font-size:1.5rem}
+h3{font-size:1.14rem}
+body{font-size:16.5px; line-height:1.6}
+
+/* eyebrows stay small caps, but lighter and less spaced than before */
+.eyebrow,.hint,label,th{letter-spacing:.09em; font-size:.68rem; opacity:.95}
+.sub,.lede{font-size:.97rem; line-height:1.62}
+
+/* ---- surfaces: air and depth ---- */
+main{gap:1.15rem; padding-top:1.5rem}
+.card{
+  padding:1.35rem 1.45rem; gap:.9rem; border-radius:var(--r);
+  border-color:var(--line); box-shadow:var(--shadow);
+}
+.cardhead{align-items:center; margin-bottom:.1rem}
+.metric,.readout{border-radius:var(--r-sm); padding:.9rem 1rem; gap:.3rem;
+  border-color:var(--line)}
+.stat{font-size:1.9rem; letter-spacing:-.02em}
+.stat.small{font-size:1.4rem}
+.grid{gap:.85rem}
+
+/* ---- controls: things that respond ---- */
+button.btn{
+  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
+  font-size:.95rem; font-weight:600; padding:.62rem 1.15rem;
+  border-radius:var(--r-sm); box-shadow:0 1px 2px rgba(0,0,0,.06);
+  transition:transform .12s var(--ease), box-shadow .18s var(--ease),
+             background .18s var(--ease), border-color .18s var(--ease);
+}
+button.btn:hover:not(:disabled){filter:none; box-shadow:0 4px 14px -4px var(--glow);
+  transform:translateY(-1px)}
+button.btn:active:not(:disabled){transform:translateY(0) scale(.985); box-shadow:none}
+button.btn.ghost{border-color:var(--line-2); box-shadow:none}
+button.btn.ghost:hover:not(:disabled){border-color:var(--accent);
+  background:var(--accent-soft)}
+button.btn.mini{font-size:.82rem; padding:.3rem .7rem; border-radius:var(--r-xs)}
+input,select,textarea{border-radius:var(--r-sm); transition:border-color .16s,
+  box-shadow .16s}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--glow)}
+
+/* ---- navigation: a pill, not an underline ---- */
+nav.rail{border-bottom:1px solid var(--line); background:var(--panel)}
+.rail-in{padding:.42rem .8rem; gap:.12rem}
+.rail button{
+  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
+  font-size:.93rem; font-weight:600; border-bottom:0; border-radius:var(--r-pill);
+  padding:.42rem .82rem; transition:background .16s var(--ease), color .16s var(--ease);
+}
+.rail button:hover{background:var(--panel-2); color:var(--ink)}
+.rail button.on,.rail button[aria-current="page"]{
+  background:var(--accent); color:var(--accent-ink); border-bottom-color:transparent;
+}
+.rail button.on:hover{background:var(--accent); color:var(--accent-ink)}
+
+.iconbtn{border-radius:var(--r-pill); border-color:var(--line);
+  transition:color .16s, border-color .16s, background .16s}
+.iconbtn:hover{background:var(--panel-2)}
+
+/* ---- the quiz: the screen people stare at longest ---- */
+.qhead{border-radius:var(--r); padding:.7rem 1.1rem}
+.qtext{font-size:1.22rem; line-height:1.5; margin:.5rem 0 .3rem; letter-spacing:-.004em}
+.choices{gap:.55rem}
+.choice{
+  border-radius:var(--r-sm); border-left-width:1px; padding:.85rem 1rem;
+  align-items:center; gap:.85rem; box-shadow:0 1px 2px rgba(0,0,0,.03);
+  transition:border-color .16s var(--ease), background .16s var(--ease),
+             transform .12s var(--ease), box-shadow .18s var(--ease);
+}
+.choice:hover:not(:disabled){border-left-color:var(--accent);
+  box-shadow:0 6px 18px -8px var(--glow); transform:translateY(-1px)}
+.choice:active:not(:disabled){transform:translateY(0) scale(.995)}
+.choice .k{
+  min-width:1.75rem; height:1.75rem; border-radius:50%; display:grid;
+  place-items:center; background:var(--panel-2); border:1px solid var(--line-2);
+  font-size:.82rem; transition:background .16s, color .16s, border-color .16s;
+}
+.choice:hover:not(:disabled) .k{border-color:var(--accent); color:var(--accent)}
+.choice.correct,.choice.wrong{transform:none}
+.choice.correct .k{background:var(--ok); border-color:var(--ok); color:var(--panel)}
+.choice.wrong .k{background:var(--no); border-color:var(--no); color:var(--panel)}
+.choice.correct{animation:pop .28s var(--ease)}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.014)}100%{transform:scale(1)}}
+.feedback{border-radius:var(--r-sm); border-left-width:1px; padding:.95rem 1.1rem;
+  animation:risein .22s var(--ease)}
+@keyframes risein{from{opacity:0; transform:translateY(5px)}to{opacity:1; transform:none}}
+.progressbar{height:5px; border-radius:var(--r-pill)}
+.progressbar>div{border-radius:var(--r-pill); transition:width .3s var(--ease)}
+.timer{font-size:1.24rem; letter-spacing:-.01em}
+
+/* ---- tables: room to read ---- */
+th{padding:.55rem .6rem; font-weight:600}
+td{padding:.62rem .6rem}
+table{font-size:.94rem}
+.bar-track{height:7px; border-radius:var(--r-pill)}
+.bar-fill{border-radius:var(--r-pill); transition:width .35s var(--ease)}
+
+/* ---- left-marker blocks: rounded on both sides now ---- */
+.cat,.opt,.featcard,.sheet-list button,.termopt{border-radius:var(--r-sm)}
+.cat,.featcard,.sheet-list button{transition:border-color .16s var(--ease),
+  background .16s var(--ease), transform .12s var(--ease)}
+.cat:hover,.featcard:hover,.sheet-list button:hover{transform:translateY(-1px)}
+.tag{border-radius:var(--r-pill); padding:.1rem .5rem}
+.trust{font-size:.8rem; padding:.28rem .8rem}
+
+/* ---- landing ---- */
+.landing{padding:2.6rem 2rem 2.1rem; gap:1rem; box-shadow:var(--shadow-lift)}
+.landing::before{height:4px}
+.landing h1{font-size:clamp(2.2rem,6.6vw,3.4rem); line-height:1.02}
+.landing .hlede{font-size:1.12rem; line-height:1.62}
+.landing .btn{padding:.85rem 1.5rem; font-size:1.04rem; border-radius:var(--r-sm)}
+.fact{border-radius:var(--r-sm); padding:.85rem .95rem}
+.fact .fv{font-size:1.6rem; letter-spacing:-.02em}
+.step3{border-radius:var(--r-sm); padding:1.1rem 1.15rem}
+
+/* ---- bottom bar ---- */
+@media (max-width:860px){
+  .tabbar{box-shadow:0 -1px 0 var(--line), 0 -8px 28px -12px rgba(0,0,0,.28)}
+  .tabbar button{transition:color .16s var(--ease); border-top:0; position:relative}
+  .tabbar button.on::before{
+    content:""; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:26px; height:3px; border-radius:0 0 3px 3px; background:var(--accent);
+  }
+  .card{padding:1.1rem 1.05rem}
+  main{padding-top:1.1rem}
+  h1{font-size:1.85rem}
+  .qtext{font-size:1.14rem}
+  .landing{padding:1.9rem 1.25rem 1.6rem}
+}
+
+/* ---- view changes should feel like a step, not a flash ---- */
+main>section:not([hidden]){animation:viewin .22s var(--ease)}
+@keyframes viewin{from{opacity:0; transform:translateY(4px)}to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){
+  main>section:not([hidden]),.choice.correct,.feedback{animation:none}
+}
+
+/* ---- Today: make the day's count read as the headline it is ---- */
+.tasklist{gap:.6rem}
+.task{border-radius:var(--r-sm); padding:.95rem 1.05rem; gap:1rem;
+  transition:border-color .16s var(--ease), background .16s var(--ease),
+             transform .12s var(--ease)}
+.task:hover{transform:translateY(-1px)}
+.task .tn{font-family:"Barlow",sans-serif; font-size:1.04rem; font-weight:600;
+  letter-spacing:0}
+.task .td{font-size:.88rem; color:var(--ink-2)}
+.task.done{opacity:.55}
+.ring .big{font-size:2.6rem; line-height:1; letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums}
+.ring .of{font-size:.88rem}
+.metric .eyebrow{margin-bottom:.15rem}
+
+/* an empty progress bar should still show its track */
+.card>.progressbar{height:6px; background:var(--line-2); opacity:.55}
+
+/* ---- header readouts: legible, not squeezed ---- */
+.ro .k{font-size:.63rem; letter-spacing:.11em}
+.ro .v{font-size:1.16rem; letter-spacing:-.01em}
+.ro.hero .v{font-size:1.4rem}
+.readouts{gap:1.5rem}
+
+/* ---- study reading: longer measure, softer rules ---- */
+.reading h2{margin-top:.2rem}
+.topicrow{border-radius:var(--r-sm); padding:.7rem .85rem;
+  transition:background .16s var(--ease)}
+.topicrow:hover{background:var(--panel-2)}
+
+/* ---- callouts and examples pick up the new radius ---- */
+.takeaway,.focus,.week,.vocabitem{border-radius:var(--r-sm)}
+.focus{padding:.7rem .85rem}
+.week{padding-left:1.1rem}
+
+/* ---- sheet ---- */
+.sheet-card{border-radius:20px 20px 0 0; padding:.7rem 1.1rem
+  calc(1.1rem + env(safe-area-inset-bottom))}
+.toast{border-radius:var(--r-pill); padding:.65rem 1.15rem; font-weight:500;
+  box-shadow:var(--shadow-lift)}
+
+/* On a phone three stacked metric cards pushed the actual content below the
+   fold. Lead with the one that matters and pair the other two. */
+@media (max-width:860px){
+  .grid.g3{grid-template-columns:repeat(2,1fr); gap:.6rem}
+  .grid.g3>*:first-child{grid-column:1/-1}
+  .metric,.readout{padding:.75rem .85rem}
+  .ring .big{font-size:2.2rem}
+  .stat{font-size:1.6rem}
+}
