@@ -2199,24 +2199,6 @@ function renderPlan(){
     box.appendChild(lab);
   });
 
-  if (examPassed(D)){
-    var warn = el('div','card');
-    warn.appendChild(cardHead('Your exam date has passed', 'was ' + p.exam_date));
-    warn.appendChild(el('p','sub',
-      'Nothing here is broken -- the schedule just has nowhere left to run. ' +
-      'Put in a new date if you are sitting it again, or clear it and keep ' +
-      'using the quizzes, notes and drills without a countdown.'));
-    var wr = el('div','wizacts');
-    var clr = el('button','btn ghost', 'Clear the date');
-    clr.onclick = function(){
-      D.profile.exam_date = null; D.profile.mastery_date = null;
-      persist(); countdown(); renderPlan();
-    };
-    wr.appendChild(clr);
-    warn.appendChild(wr);
-    v.insertBefore(warn, v.children[2]);
-  }
-
   $('savePlan').onclick = function(){
     var weak = [];
     box.querySelectorAll('input:checked').forEach(function(c){ weak.push(c.value); });
@@ -2238,9 +2220,35 @@ function drawPlan(){
     c.appendChild(el('div','empty',p.error));
     box.appendChild(c); return;
   }
+
+  if (p.rolling){
+    var had = (D.profile || {}).exam_date;
+    var note = el('div','card');
+    note.appendChild(cardHead(had ? 'Your exam date has passed' : 'No exam date set',
+                              had ? 'was ' + had : 'rolling plan'));
+    note.appendChild(el('p','sub', had
+      ? 'The schedule below is a rolling four weeks from today instead of a ' +
+        'countdown. Put in a new date to pace it properly, or clear the old one ' +
+        'and carry on without one.'
+      : 'The schedule below runs four weeks from today. Add a date above and it ' +
+        'will re-pace itself to the time you actually have.'));
+    if (had){
+      var wr = el('div','wizacts');
+      var clr = el('button','btn ghost', 'Clear the old date');
+      clr.onclick = function(){
+        D.profile.exam_date = null; D.profile.mastery_date = null;
+        persist(); countdown(); renderPlan();
+      };
+      wr.appendChild(clr);
+      note.appendChild(wr);
+    }
+    box.appendChild(note);
+  }
+
   var head = el('div','card'), g = el('div','grid g3');
-  [['Days to exam',String(p.days_to_exam)],
-   ['Days to your mastery date',String(p.days_to_mastery)],
+  [[p.rolling ? 'Days in this block' : 'Days to exam', String(p.days_to_exam)],
+   [p.rolling ? 'Days of study planned' : 'Days to your mastery date',
+    String(p.days_to_mastery)],
    ['Exam split',p.weighting.national+' national / '+p.weighting.georgia+' Georgia']
   ].forEach(function(r){
     var d = el('div');

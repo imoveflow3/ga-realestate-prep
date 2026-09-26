@@ -1082,17 +1082,23 @@ function bufferPlan(days){
 function buildPlan(d){
   var prof = d.profile || {};
   var exam = asDate(prof.exam_date);
-  if (!exam) return {error:'Set an exam date to generate a schedule.'};
-  var now = new Date(); now.setHours(0, 0, 0, 0);
-  if (exam < now)
-    return {error:'That exam date has passed, so there is no schedule left to ' +
-                  'run. Set a new date, or clear it and use the app without one.',
-            passed:true};
-  var mastery = asDate(prof.mastery_date) || exam;
-  if (mastery > exam) mastery = exam;
-  var hours = prof.hours_per_week || 8;
+  var today = new Date(); today.setHours(0, 0, 0, 0);
 
-  var today = new Date(); today.setHours(0,0,0,0);
+  /* No date, or one that has gone by, used to mean no schedule at all -- which
+     threw away the useful part to punish a missing detail. The weekly plan is
+     what people came for; the date only decides how long it runs. Without a
+     usable one, roll a four-week block from today and say so. */
+  var rolling = !exam || exam < today;
+  var mastery;
+  if (rolling){
+    exam = addDays(today, 28);
+    mastery = addDays(today, 24);
+  } else {
+    mastery = asDate(prof.mastery_date) || exam;
+    if (mastery > exam) mastery = exam;
+    if (mastery < today) mastery = exam;   // a lapsed target under a live exam
+  }
+  var hours = prof.hours_per_week || 8;
   var daysExam = dayDiff(exam, today), daysMastery = dayDiff(mastery, today);
   var planDays = Math.max(1, daysMastery);
   var nWeeks = Math.max(1, Math.ceil(planDays/7));
@@ -1143,6 +1149,7 @@ function buildPlan(d){
   }
 
   return {
+    rolling: rolling,
     exam_date: iso(exam), mastery_date: iso(mastery),
     days_to_exam: daysExam, days_to_mastery: daysMastery,
     buffer_days: Math.max(0, dayDiff(exam, mastery)),
