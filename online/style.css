@@ -56,14 +56,20 @@ p{margin:0}
 /* ---- status strip ---- */
 header.hud{position:sticky; top:0; z-index:20; background:var(--panel);
   border-bottom:1px solid var(--line); box-shadow:var(--shadow)}
-.hud-in{max-width:1040px; margin:0 auto; padding:.55rem 1.1rem;
-  display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap}
+.hud-in{max-width:1040px; margin:0 auto; padding:.5rem 1.1rem;
+  display:grid; grid-template-columns:1fr auto; align-items:center; gap:.5rem 1rem}
+.wordmark{grid-area:1/1} .hudacts{grid-area:1/2} .readouts{grid-area:2/1/3/3}
 .wordmark{font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
   letter-spacing:.13em; text-transform:uppercase; white-space:nowrap; display:flex;
   align-items:baseline; gap:.5rem}
 .wordmark small{font-family:"Barlow",sans-serif; font-weight:500; font-size:.7rem;
   letter-spacing:.06em; color:var(--ink-3); text-transform:none}
-.readouts{display:flex; gap:1.35rem; margin-left:auto; flex-wrap:wrap}
+/* its own full-width row: five numbers never fit beside a wordmark and a
+   button cluster, and wrapping them made the header 190px tall */
+.readouts{grid-column:1/-1; display:flex; gap:1.35rem; flex-wrap:nowrap;
+  overflow-x:auto; scrollbar-width:none; padding-bottom:.1rem}
+.readouts::-webkit-scrollbar{display:none}
+.readouts[hidden]{display:none}
 .ro{display:flex; flex-direction:column; line-height:1.1}
 .ro .k{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
@@ -524,3 +530,236 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .task.next{border-left-color:var(--accent); background:var(--accent-soft)}
 .task.next .tn .tag{margin-left:.5rem}
 .task .tn{display:flex; align-items:center; gap:.2rem; flex-wrap:wrap}
+
+/* ================================================================
+   Public build: chrome, mobile navigation, onboarding.
+   Everything above styles the study material; everything below is
+   the frame a first-time visitor actually has to get through.
+   ================================================================ */
+
+.skip{position:absolute; left:-9999px; top:0; z-index:60; background:var(--accent);
+  color:var(--accent-ink); padding:.6rem 1rem; border-radius:0 0 var(--r) 0;
+  font-weight:600; text-decoration:none}
+.skip:focus{left:0}
+main:focus{outline:none}
+
+/* ---- header chrome ---- */
+.wordmark{background:none; border:0; padding:0; cursor:pointer; color:var(--ink);
+  display:flex; align-items:center; gap:.55rem; text-align:left}
+.brandmark{width:1.5rem; height:1.5rem; flex:0 0 auto; color:var(--accent)}
+.wordmark>span{display:flex; align-items:baseline; gap:.5rem;
+  font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
+  letter-spacing:.13em; text-transform:uppercase; white-space:nowrap}
+
+.hudacts{display:flex; gap:.3rem; align-items:center; flex:0 0 auto}
+.iconbtn{display:inline-flex; align-items:center; gap:.35rem; background:transparent;
+  border:1px solid var(--line); border-radius:var(--r); color:var(--ink-2);
+  font-family:"Barlow Condensed",sans-serif; font-size:.76rem; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; padding:.38rem .6rem; cursor:pointer;
+  min-height:38px}
+.iconbtn:hover{color:var(--accent); border-color:var(--accent)}
+.iconbtn svg{width:1.05rem; height:1.05rem; flex:0 0 auto; fill:none;
+  stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round}
+/* the icon shows the scheme you are in now, which in auto mode means the one
+   the system resolved to -- so it is driven off the button, not off :root */
+#themeBtn .moon{display:none}
+#themeBtn[data-shown="dark"] .sun{display:none}
+#themeBtn[data-shown="dark"] .moon{display:inline-block}
+
+/* plain prose lists inside cards */
+ul.plainlist{margin:.1rem 0 0; padding-left:1.15rem; display:flex;
+  flex-direction:column; gap:.5rem}
+ul.plainlist li{font-size:.94rem; color:var(--ink-2); line-height:1.6;
+  max-width:70ch}
+
+/* the keyboard hint under a quiz: useful once, invisible after */
+.kbhint{font-size:.78rem; color:var(--ink-3); margin-top:.6rem;
+  display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
+.kbhint kbd{font-family:"IBM Plex Mono",monospace; font-size:.72rem;
+  border:1px solid var(--line-2); border-bottom-width:2px; border-radius:3px;
+  padding:.05rem .3rem; background:var(--panel-2); color:var(--ink-2)}
+@media (max-width:860px){ .kbhint{display:none} }
+
+/* ---- footer ---- */
+footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6}
+.footrow{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
+.footrow span{max-width:72ch}
+.footlinks{gap:1.1rem}
+.linkish,footer a{background:none; border:0; padding:0; font:inherit; color:var(--accent);
+  cursor:pointer; text-decoration:underline; text-underline-offset:2px}
+.buildstamp{font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-3)}
+
+/* ---- bottom tab bar (small screens only) ---- */
+.tabbar{display:none}
+.sheet[hidden]{display:none}
+
+/* ---- more sheet ---- */
+.sheet{position:fixed; inset:0; z-index:50; display:flex; align-items:flex-end;
+  justify-content:center}
+.sheet-scrim{position:absolute; inset:0; background:rgba(8,12,17,.55);
+  backdrop-filter:blur(2px)}
+.sheet-card{position:relative; width:min(560px,100%); background:var(--panel);
+  border:1px solid var(--line); border-radius:12px 12px 0 0; padding:.6rem 1rem
+  calc(1rem + env(safe-area-inset-bottom)); box-shadow:0 -10px 40px rgba(0,0,0,.35);
+  display:flex; flex-direction:column; gap:.5rem; max-height:82vh; overflow-y:auto}
+.sheet-grip{width:36px; height:4px; border-radius:2px; background:var(--line-2);
+  margin:.15rem auto .5rem}
+.sheet-list{display:grid; gap:.3rem}
+.sheet-list button{display:flex; flex-direction:column; align-items:flex-start; gap:.05rem;
+  text-align:left; font:inherit; color:inherit; background:var(--panel-2);
+  border:1px solid var(--line); border-left:3px solid var(--line-2);
+  border-radius:0 var(--r) var(--r) 0; padding:.6rem .75rem; cursor:pointer;
+  min-height:48px}
+.sheet-list button:hover,.sheet-list button.on{border-left-color:var(--accent)}
+.sheet-list .sn{font-family:"Barlow Condensed",sans-serif; font-weight:600;
+  font-size:1.05rem}
+.sheet-list .sd{font-size:.82rem; color:var(--ink-3); line-height:1.4}
+.btn.wide{width:100%; justify-content:center}
+
+/* ---- toast ---- */
+.toast{position:fixed; left:50%; transform:translateX(-50%); bottom:1.2rem; z-index:70;
+  background:var(--ink); color:var(--bg); padding:.6rem 1rem; border-radius:999px;
+  font-size:.88rem; box-shadow:var(--shadow); max-width:90vw; text-align:center}
+.toast[hidden]{display:none}
+
+/* ================================ onboarding / welcome ================= */
+.landing{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow); padding:2rem 1.5rem 1.7rem; display:flex;
+  flex-direction:column; gap:.9rem; overflow:hidden; position:relative}
+.landing::before{content:""; position:absolute; inset:0 0 auto; height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--brass))}
+.landing .kicker{font-family:"Barlow Condensed",sans-serif; font-size:.74rem;
+  font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--accent)}
+.landing h1{font-size:clamp(2rem,6.5vw,3.1rem); max-width:18ch}
+.landing .hlede{font-size:1.06rem; color:var(--ink-2); max-width:56ch; line-height:1.6}
+.landing .cta{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.35rem}
+.landing .btn{padding:.72rem 1.3rem; font-size:1.02rem}
+
+.facts{display:grid; gap:.55rem; grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+  margin-top:.3rem}
+.fact{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.6rem .7rem}
+.fact .fv{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.35rem; font-weight:600; line-height:1.15; color:var(--accent)}
+.fact .fk{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3)}
+
+.trustrow{display:flex; gap:.45rem; flex-wrap:wrap; margin-top:.2rem}
+.trust{display:inline-flex; align-items:center; gap:.35rem; background:var(--ok-soft);
+  color:var(--ok); border-radius:999px; padding:.22rem .7rem; font-size:.79rem;
+  font-weight:600}
+.trust::before{content:"\2713"; font-size:.8rem}
+
+.steps3{display:grid; gap:.7rem; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.step3{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
+  padding:.85rem .9rem; display:flex; flex-direction:column; gap:.25rem}
+.step3 .sno{font-family:"IBM Plex Mono",monospace; font-size:.76rem; font-weight:600;
+  color:var(--accent); letter-spacing:.12em}
+.step3 h3{font-size:1.06rem}
+.step3 p{font-size:.9rem; color:var(--ink-2); line-height:1.55}
+
+.feat{display:grid; gap:.6rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.featcard{text-align:left; font:inherit; color:inherit; background:var(--panel-2);
+  border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0; padding:.75rem .85rem; cursor:pointer;
+  display:flex; flex-direction:column; gap:.2rem; min-height:48px}
+.featcard:hover{background:var(--accent-soft)}
+.featcard .fn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.1rem}
+.featcard .fd{font-size:.87rem; color:var(--ink-2); line-height:1.5}
+
+/* the wizard: one question on screen at a time */
+.wiz{display:flex; flex-direction:column; gap:1rem}
+.wizdots{display:flex; gap:.35rem; align-items:center}
+.wizdots i{width:26px; height:3px; border-radius:2px; background:var(--line-2);
+  display:block}
+.wizdots i.on{background:var(--accent)}
+.pickgrid{display:grid; gap:.4rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.opt{display:flex; align-items:flex-start; gap:.6rem; text-align:left; font:inherit;
+  color:inherit; background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r); padding:.6rem .7rem; cursor:pointer; min-height:48px}
+.opt:hover{border-color:var(--accent)}
+.opt.on{border-color:var(--accent); background:var(--accent-soft)}
+.opt .box{width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;
+  border:1.5px solid var(--line-2); border-radius:3px; display:grid; place-items:center;
+  font-size:.75rem; color:transparent}
+.opt.on .box{border-color:var(--accent); background:var(--accent); color:var(--accent-ink)}
+.opt>span:last-child{display:flex; flex-direction:column; gap:.1rem}
+.opt .pn{display:block; font-weight:600; font-size:.95rem; line-height:1.35}
+.opt .pd{display:block; font-size:.8rem; color:var(--ink-3); line-height:1.3}
+.wizacts{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
+.wizacts .spacer{flex:1}
+
+/* ============================== small screens ========================== */
+@media (max-width:860px){
+  nav.rail{display:none}
+  .tabbar{
+    display:grid; grid-template-columns:repeat(5,1fr); position:fixed; z-index:40;
+    left:0; right:0; bottom:0; background:var(--panel);
+    border-top:1px solid var(--line); box-shadow:0 -2px 14px rgba(0,0,0,.10);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .tabbar button{
+    background:none; border:0; border-top:2px solid transparent; cursor:pointer;
+    color:var(--ink-3); display:flex; flex-direction:column; align-items:center;
+    gap:.12rem; padding:.45rem .1rem .5rem; min-height:56px;
+    font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  .tabbar button svg{width:1.42rem; height:1.42rem; fill:none; stroke:currentColor;
+    stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+  .tabbar button.on{color:var(--accent); border-top-color:var(--accent)}
+  body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+
+  .hud-in{padding:.5rem .85rem; gap:.6rem}
+  .wordmark>span{font-size:1rem; letter-spacing:.1em}
+  .wordmark>span small{display:none}
+  .readouts{gap:1.1rem}
+  .ro{flex:0 0 auto}
+  .hudacts{margin-left:auto}
+  .iconbtn span{display:none}
+  .iconbtn{padding:.4rem .5rem}
+
+  main{padding:1rem .85rem 1.4rem; gap:.85rem}
+  footer{padding:.4rem .85rem 1.6rem}
+  .card{padding:.9rem .9rem}
+  h1{font-size:1.72rem}
+  .landing{padding:1.5rem 1.1rem 1.3rem}
+
+  /* thumbs, not cursors */
+  .choice{padding:.78rem .8rem; min-height:52px; align-items:center}
+  .termopt{min-height:52px}
+  button.btn{padding:.62rem 1.05rem; min-height:46px}
+  button.btn.mini{min-height:36px; padding:.3rem .6rem}
+  .topicrow{min-height:48px}
+  .cat{min-height:52px}
+
+  .reading{--measure:100%}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:420px){
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .tabbar button{font-size:.64rem}
+  .landing h1{font-size:1.85rem}
+}
+
+/* a quiz in progress hides the tab bar: leaving mid-question loses the set.
+   The footer goes too -- nobody reads a disclaimer with a timer running. */
+body.inquiz .tabbar,body.inquiz footer{display:none}
+body.inquiz{padding-bottom:0}
+
+@media print{
+  header.hud,nav.rail,.tabbar,.hudacts,.skip,.toast{display:none !important}
+}
+
+/* quiz actions: ordinary buttons on a desktop, a thumb rail on a phone */
+.qacts{display:flex; gap:.6rem; flex-wrap:wrap; align-items:center}
+@media (max-width:860px){
+  .qacts{
+    position:sticky; bottom:0; z-index:15; margin:.2rem -.85rem -1.4rem;
+    padding:.6rem .85rem calc(.6rem + env(safe-area-inset-bottom));
+    background:var(--panel); border-top:1px solid var(--line);
+    box-shadow:0 -2px 14px rgba(0,0,0,.10);
+  }
+  .qacts #qnext{flex:1}
+}

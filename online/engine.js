@@ -31,7 +31,6 @@ function load(){
   try { raw = localStorage.getItem(KEY); } catch(e){ raw = null; }
   if (!raw){
     var fresh = JSON.parse(JSON.stringify(EMPTY));
-    // first run on this device: start from the exam settings baked in at build time
     fresh.profile = JSON.parse(JSON.stringify(DATA.profile_default || {}));
     return fresh;
   }
@@ -40,10 +39,17 @@ function load(){
   Object.keys(EMPTY).forEach(function(k){
     if (d[k] === undefined) d[k] = JSON.parse(JSON.stringify(EMPTY[k]));
   });
-  if (!d.profile || !d.profile.exam_date)
-    d.profile = JSON.parse(JSON.stringify(DATA.profile_default || {}));
+  if (!d.profile) d.profile = {};
   return d;
 }
+
+/* Has this browser been through the opening questions yet? Sitting on a real
+   flag rather than on "is there an exam date" matters, because choosing not to
+   set a date is a legitimate answer and must not reopen the wizard forever. */
+function onboarded(d){
+  return !!(d.profile && d.profile.onboarded);
+}
+
 function save(d){
   try { localStorage.setItem(KEY, JSON.stringify(d)); return true; }
   catch(e){

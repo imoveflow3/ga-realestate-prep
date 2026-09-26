@@ -134,13 +134,45 @@ the weak areas you checked off until there's enough history.
 
 ## Keyboard shortcuts
 
-`A` `B` `C` `D` answer, `Enter` or `Space` advance to the next question.
+`A` `B` `C` `D` or `1` `2` `3` `4` answer, `Enter` or `Space` advance to the
+next question, `Esc` closes the More sheet.
+
+## Built for visitors, not just for one person
+
+The public build carries no personal settings: `default_profile()` returns an
+empty dict on purpose. A first-time visitor gets a landing page explaining what
+the site is and a two-question setup (exam date, weak areas) rather than
+inheriting somebody else's countdown.
+
+Every section has its own address -- `#study`, `#math`, `#vocab` and so on --
+so links are shareable and the browser Back button behaves.
+
+## Installing it as an app
+
+`docs/manifest.webmanifest` and `docs/sw.js` make the page installable and make
+it work with no signal. The service worker is network-first for the page and
+cache-first for the icons, and it drops every older cache on activate, so a new
+build reaches people the next time they are online and the app can never pin
+itself to a stale version.
+
+Icons and the link-preview card are rendered by `tools/make_icons.py` (macOS
+only -- it draws SVG and rasterises through `qlmanage`). The PNGs it makes are
+committed, so a build elsewhere just uses what is already in `docs/assets/`.
+
+Note that `docs/robots.txt` is inert on the current address: a robots file is
+only read at the root of a domain, and this site lives in a sub-path of
+`imoveflow3.github.io`. It becomes live if the site ever moves to its own
+domain. The sitemap can still be submitted to Search Console directly.
 
 ## Your data
 
-Progress lives in `data/progress.json` — plain JSON, easy to inspect or back
-up. Writes are atomic, so an interrupted save cannot corrupt your history.
-Deleting the file resets everything.
+On the web build, progress lives in the browser's local storage on that device
+and never leaves it: no account, no server, no analytics. Setup → Your data
+exports it as text so you can move it to another device, and erases it.
+
+Running locally, progress lives in `data/progress.json` — plain JSON, easy to
+inspect or back up. Writes are atomic, so an interrupted save cannot corrupt
+your history. Deleting the file resets everything.
 
 ## Layout
 

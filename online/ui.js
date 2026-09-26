@@ -22,38 +22,167 @@ function tagFor(portion){
 function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
-var VIEWS = ['today','dash','study','cards','vocab','home','math','notebook','weak','quiz','result','plan','setup'];
+var VIEWS = ['welcome','today','dash','study','cards','vocab','home','math',
+             'notebook','weak','quiz','result','plan','setup','about'];
+
+/* Everything reachable from the navigation, in one table, so the desktop rail,
+   the phone tab bar and the More sheet can never drift apart. */
+var NAV = [
+  {v:'today',    name:'Today',      desc:'Five things to do right now'},
+  {v:'study',    name:'Study',      desc:'Read the material, topic by topic'},
+  {v:'home',     name:'Practice',   desc:'Timed quizzes and the full mock exam'},
+  {v:'dash',     name:'Progress',   desc:'Where you stand against the 75% pass mark'},
+  {v:'vocab',    name:'Vocab',      desc:'See the definition, name the term'},
+  {v:'cards',    name:'Flashcards', desc:'Spaced repetition on what you keep missing'},
+  {v:'math',     name:'Math',       desc:'Every calculation, worked step by step'},
+  {v:'notebook', name:'Notebook',   desc:'Every question you have got wrong'},
+  {v:'weak',     name:'Weak spots', desc:'Drill the narrow topics dragging you down'},
+  {v:'plan',     name:'Study plan', desc:'A week-by-week schedule to your test date'},
+  {v:'setup',    name:'Your data',  desc:'Move progress between devices, or start over'},
+  {v:'about',    name:'About',      desc:'What this is, who made it, what it is not'}
+];
+var TABS = ['today','study','home','dash'];          // the phone tab bar
+var NOHASH = {quiz:1, result:1};                     // not worth a shareable link
 var VQ = null;
 var VOCAB_LOG_OPEN_ONLY = true;
 var NB_OPEN_ONLY = true;
 var STUDY_TOPIC = null;
-function show(v){
+var HASHLOCK = false;
+var CURRENT = null;
+
+var RENDERERS = {
+  welcome: function(){ renderWelcome(); },
+  home: function(){ renderHome(); },
+  today: function(){ renderToday(); },
+  cards: function(){ renderCards(); },
+  vocab: function(){ renderVocab(); },
+  study: function(){ renderStudy(); },
+  notebook: function(){ renderNotebook(); },
+  math: function(){ renderMath(); },
+  weak: function(){ renderWeak(); },
+  dash: function(){ renderDash(); },
+  plan: function(){ renderPlan(); },
+  setup: function(){ renderSetup(); },
+  about: function(){ renderAbout(); }
+};
+
+function show(v, silent){
+  if (VIEWS.indexOf(v) < 0) v = 'today';
+  CURRENT = v;
   VIEWS.forEach(function(x){ var n = $('view-'+x); if (n) n.hidden = (x !== v); });
+
   document.querySelectorAll('#rail button').forEach(function(b){
     var on = b.dataset.view === v;
     b.classList.toggle('on', on);
     b.setAttribute('aria-current', on ? 'page' : 'false');
   });
-  if (v === 'home') renderHome();
-  if (v === 'today') renderToday();
-  if (v === 'cards') renderCards();
-  if (v === 'vocab') renderVocab();
-  if (v === 'study') renderStudy();
-  if (v === 'notebook') renderNotebook();
-  if (v === 'math') renderMath();
-  if (v === 'weak') renderWeak();
-  if (v === 'dash') renderDash();
-  if (v === 'plan') renderPlan();
-  if (v === 'setup') renderSetup();
-  window.scrollTo(0,0);
+  /* A quiz launched from Practice should keep Practice lit, not light nothing. */
+  var lit = (v === 'quiz' || v === 'result') ? 'home' : v;
+  document.querySelectorAll('#tabbar button').forEach(function(b){
+    var on = b.dataset.view === lit ||
+             (b.dataset.view === '__more' && TABS.indexOf(lit) < 0 && lit !== 'welcome');
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-current', on && b.dataset.view !== '__more' ? 'page' : 'false');
+  });
+
+  /* the tab bar is a trap door out of a half-finished quiz: take it away */
+  document.body.classList.toggle('inquiz', v === 'quiz');
+
+  if (RENDERERS[v]) RENDERERS[v]();
+
+  if (!silent && !NOHASH[v]){
+    HASHLOCK = true;
+    try { location.hash = (v === 'today') ? '' : '#' + v; } catch(e){}
+    setTimeout(function(){ HASHLOCK = false; }, 0);
+  }
+  window.scrollTo(0, 0);
+  var m = $('main');
+  if (m && v !== 'quiz') m.focus({preventScroll: true});
 }
+
+/* Guards the one destructive thing navigation can do: bin a running quiz. */
+function navTo(v){
+  if (QUIZ && !confirm('Leave this quiz? It will not be scored.')) return false;
+  if (QUIZ){ stopTimer(); QUIZ = null; document.body.classList.remove('inquiz'); }
+  closeSheet();
+  show(v);
+  return true;
+}
+
+function routeFromHash(){
+  var v = (location.hash || '').replace(/^#\/?/, '');
+  if (!v) return onboarded(D) ? 'today' : 'welcome';
+  if (VIEWS.indexOf(v) < 0 || NOHASH[v]) return onboarded(D) ? 'today' : 'welcome';
+  return v;
+}
+
+window.addEventListener('hashchange', function(){
+  if (HASHLOCK) return;
+  var want = routeFromHash();
+  if (want === CURRENT) return;
+  if (QUIZ){ stopTimer(); QUIZ = null; document.body.classList.remove('inquiz'); }
+  closeSheet();
+  show(want, true);
+});
+
 document.querySelectorAll('#rail button').forEach(function(b){
+  b.onclick = function(){ navTo(b.dataset.view); };
+});
+document.querySelectorAll('#tabbar button').forEach(function(b){
   b.onclick = function(){
-    if (QUIZ && !confirm('Leave this quiz? It will not be scored.')) return;
-    if (QUIZ){ stopTimer(); QUIZ = null; }
-    show(b.dataset.view);
+    if (b.dataset.view === '__more'){ openSheet(); return; }
+    navTo(b.dataset.view);
   };
 });
+document.querySelectorAll('[data-goto]').forEach(function(b){
+  b.onclick = function(){ navTo(b.dataset.goto); };
+});
+
+/* ------------------------------------------------------- stray taps ----
+   Showing something new directly under the finger means the tail of that same
+   tap lands on whatever just appeared: the More sheet opened and shut again in
+   one touch, and the setup wizard silently ticked a topic nobody chose. A
+   press and the click it produces always share an element, so remember where
+   the press landed and drop any click that did not start on what it hit. */
+var PRESSED = null;
+document.addEventListener('pointerdown', function(e){ PRESSED = e.target; }, true);
+document.addEventListener('mousedown', function(e){ PRESSED = e.target; }, true);
+
+function strayClick(node){
+  return !!(node && PRESSED && node !== PRESSED && !node.contains(PRESSED));
+}
+
+/* ------------------------------------------------------------ more sheet */
+function openSheet(){
+  var list = $('sheetList');
+  list.innerHTML = '';
+  NAV.forEach(function(n){
+    if (TABS.indexOf(n.v) >= 0) return;         // already on the bar
+    var b = el('button');
+    b.className = (n.v === CURRENT) ? 'on' : '';
+    b.appendChild(el('span','sn', n.name));
+    b.appendChild(el('span','sd', n.desc));
+    b.onclick = function(){ navTo(n.v); };
+    list.appendChild(b);
+  });
+  $('moreSheet').hidden = false;
+  $('sheetClose').focus();
+}
+function closeSheet(){ $('moreSheet').hidden = true; }
+$('sheetScrim').onclick = function(){
+  if (strayClick($('sheetScrim'))) return;   // the tap that opened it
+  closeSheet();
+};
+$('sheetClose').onclick = closeSheet;
+
+/* ---------------------------------------------------------------- toast */
+var TOAST_T = null;
+function toast(msg){
+  var t = $('toast');
+  t.textContent = msg; t.hidden = false;
+  if (TOAST_T) clearTimeout(TOAST_T);
+  TOAST_T = setTimeout(function(){ t.hidden = true; }, 2600);
+}
 
 function ro(key, value, note, hero){
   var d = el('div', 'ro' + (hero ? ' hero' : ''));
@@ -72,6 +201,14 @@ function countdown(){
   var box = $('readouts');
   if (!box) return;
   box.innerHTML = '';
+  /* Five dashes over the words "no data" is a worse first impression than no
+     strip at all, so it stays hidden until the visitor has given it something
+     to report. */
+  if (!D.attempts.length && !(D.profile && D.profile.exam_date)){
+    box.hidden = true;
+    return;
+  }
+  box.hidden = false;
   var h = headline(D), st = portionStats(D);
   var hero = ro('Readiness', h.exam_pct === null ? '\u2014' : pct(h.exam_pct),
                 h.exam_pct === null ? 'no data' : (h.passing ? 'passing' : 'need 75%'), true);
@@ -86,8 +223,18 @@ function countdown(){
                        ? pct(st.georgia.recent_pct) : '\u2014', '52 q'));
   box.appendChild(ro('Answered', String(h.answered),
                      h.sets + (h.sets === 1 ? ' set' : ' sets')));
-  box.appendChild(ro('Days out', h.days_out === null ? '\u2014' : String(h.days_out),
-                     h.days_out === null ? 'set a date' : 'until exam'));
+  box.appendChild(examReadout(h.days_out));
+}
+
+/* The date readout has four states and the old one only had two, so a visitor
+   with no date saw a bare dash and a visitor whose date had passed saw a
+   negative number counting further into the past. */
+function examReadout(days){
+  if (days === null) return ro('Exam date', '\u2014', 'tap to set');
+  if (days > 1) return ro('Days out', String(days), 'until exam');
+  if (days === 1) return ro('Days out', '1', 'exam tomorrow');
+  if (days === 0) return ro('Exam', 'TODAY', 'good luck');
+  return ro('Exam date', 'PAST', 'set a new one');
 }
 
 /* ----------------------------------------------------------------- home */
@@ -259,9 +406,11 @@ function startQuizWith(qs, opts){
     '<div class="card"><div class="eyebrow" id="qtopic"></div>' +
       '<div class="qtext" id="qtext"></div><div class="choices" id="qchoices"></div>' +
       '<div id="qfeedback"></div></div>' +
-    '<div class="row"><div style="flex:0 0 auto">' +
-      '<button class="btn" id="qnext" disabled>Next</button></div>' +
-      '<div style="flex:0 0 auto"><button class="btn ghost" id="qquit">End &amp; score</button></div></div>';
+    '<div class="kbhint"><span>Keyboard:</span><kbd>A</kbd><kbd>B</kbd><kbd>C</kbd>' +
+      '<kbd>D</kbd><span>or</span><kbd>1</kbd>&ndash;<kbd>4</kbd><span>to answer, ' +
+      '</span><kbd>Enter</kbd><span>for the next one.</span></div>' +
+    '<div class="qacts"><button class="btn" id="qnext" disabled>Next</button>' +
+      '<button class="btn ghost" id="qquit">End &amp; score</button></div>';
   $('qnext').onclick = function(){
     if (QUIZ.i >= QUIZ.qs.length-1) return finish();
     QUIZ.i++; renderQuestion();
@@ -387,13 +536,16 @@ function finish(){
   renderResult(att); show('result');
 }
 
+var MISSED_CARD = null;
 function renderResult(a){
+  MISSED_CARD = null;
   var v = $('view-result');
   v.innerHTML = '<h1>Results</h1><div id="resultBody"></div>' +
     '<div class="row" style="margin-top:10px">' +
     '<div style="flex:0 0 auto"><button class="btn" id="againSame">Another quiz</button></div>' +
     '<div style="flex:0 0 auto"><button class="btn ghost" id="againWeak">Drill my weak spots</button></div>' +
     '<div style="flex:0 0 auto"><button class="btn ghost" id="toDash">See dashboard</button></div></div>';
+  var box = $('resultBody');
   if (a.correct < a.count){
     var nb = el('div', 'card');
     nb.appendChild(cardHead('Review what you missed', 'notebook'));
@@ -406,7 +558,7 @@ function renderResult(a){
     b0.onclick = function(){ NB_OPEN_ONLY = true; show('notebook'); };
     d0.appendChild(b0); row.appendChild(d0);
     nb.appendChild(row);
-    box.appendChild(nb);
+    MISSED_CARD = nb;
   }
 
   $('againSame').onclick = function(){ startQuiz(LAST || {portion:'national', count:20}); };
@@ -416,7 +568,7 @@ function renderResult(a){
   };
   $('toDash').onclick = function(){ show('dash'); };
 
-  var box = $('resultBody'), head = el('div','card'), g = el('div','grid g3');
+  var head = el('div','card'), g = el('div','grid g3');
   [['Score',pct(a.pct)],['Correct',a.correct+' of '+a.count],['Time',mmss(a.seconds)]]
     .forEach(function(p){
       var d = el('div');
@@ -429,6 +581,7 @@ function renderResult(a){
     ? 'At or above 75% -- that is roughly the zone you want to be in before exam day.'
     : 'Georgia requires 75% to pass. Keep drilling the topics below.'));
   box.appendChild(head);
+  if (MISSED_CARD) box.appendChild(MISSED_CARD);
 
   var keys = Object.keys(a.topics||{});
   if (keys.length){
@@ -2190,26 +2343,480 @@ function renderSetup(){
   wrap.appendChild(t); box.appendChild(wrap);
 }
 
+/* ============================================================ app chrome */
+
+/* ---- theme: auto, then whatever the reader overrides it to ---- */
+var THEME_KEY = 'ga-prep-theme';
+var THEMES = ['auto', 'light', 'dark'];
+
+function systemDark(){
+  try { return window.matchMedia('(prefers-color-scheme: dark)').matches; }
+  catch(e){ return false; }
+}
+function readTheme(){
+  var t;
+  try { t = localStorage.getItem(THEME_KEY); } catch(e){ t = null; }
+  return THEMES.indexOf(t) >= 0 ? t : 'auto';
+}
+function applyTheme(mode){
+  var root = document.documentElement;
+  if (mode === 'auto') root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', mode);
+  var resolved = (mode === 'auto') ? (systemDark() ? 'dark' : 'light') : mode;
+  var b = $('themeBtn');
+  if (b){
+    b.setAttribute('data-shown', resolved);
+    b.title = 'Theme: ' + mode + ' — tap to change';
+    $('themeLabel').textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+  }
+}
+function cycleTheme(){
+  var next = THEMES[(THEMES.indexOf(readTheme()) + 1) % THEMES.length];
+  try { localStorage.setItem(THEME_KEY, next); } catch(e){}
+  applyTheme(next);
+  toast('Theme: ' + next);
+}
+
+/* ---- share ---- */
+function doShare(){
+  var url = location.origin + location.pathname;
+  var payload = {title: 'Georgia Real Estate Exam Prep',
+                 text: 'Free practice for the Georgia salesperson exam — ' +
+                       'no signup, works offline.',
+                 url: url};
+  if (navigator.share){
+    navigator.share(payload)['catch'](function(){});
+    return;
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(function(){
+      toast('Link copied');
+    })['catch'](function(){ prompt('Copy this link:', url); });
+    return;
+  }
+  prompt('Copy this link:', url);
+}
+
+/* ---- install to the home screen ---- */
+var INSTALL_EVENT = null;
+window.addEventListener('beforeinstallprompt', function(e){
+  e.preventDefault();
+  INSTALL_EVENT = e;
+  var b = $('installBtn');
+  if (b) b.hidden = false;
+});
+window.addEventListener('appinstalled', function(){
+  INSTALL_EVENT = null;
+  var b = $('installBtn');
+  if (b) b.hidden = true;
+  toast('Installed — open it from your home screen');
+});
+
+/* iOS never fires beforeinstallprompt, so say the words instead of hiding it. */
+function iosInstallHelp(){
+  return 'On iPhone or iPad: tap the Share button in Safari, then ' +
+         '"Add to Home Screen".';
+}
+function isIOS(){
+  return /iP(hone|ad|od)/.test(navigator.userAgent) ||
+         (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+function standalone(){
+  try {
+    return window.matchMedia('(display-mode: standalone)').matches ||
+           navigator.standalone === true;
+  } catch(e){ return false; }
+}
+
+/* ---- escape closes whatever is open ---- */
+document.addEventListener('keydown', function(e){
+  if (e.key !== 'Escape') return;
+  if (!$('moreSheet').hidden){ closeSheet(); return; }
+});
+
+/* 1-4 alongside a-d: people reach for the number row on a numeric question. */
+document.addEventListener('keydown', function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var n = '1234'.indexOf(e.key || '');
+  if (n < 0) return;
+  if (VQ && !$('view-vocab').hidden && !VQ.locked){ answerVocab(n, $('view-vocab')); return; }
+  if (QUIZ && !$('view-quiz').hidden && !QUIZ.locked &&
+      n < QUIZ.qs[QUIZ.i].choices.length){ answer(n); }
+});
+
+
+/* ======================================================================
+   The front door.
+
+   For sixteen months this page opened straight onto a dashboard full of
+   somebody else's numbers. That is fine for the one person who built it and
+   useless for anyone arriving from a link, so first-time visitors get shown
+   what this is, what it costs and where their data lives, and are asked the
+   two questions the study plan actually needs.
+   ====================================================================== */
+
+function totals(){
+  var math = 0;
+  Object.keys(DATA.math).forEach(function(k){ math += DATA.math[k].q.length; });
+  var written = 0;
+  Object.keys(DATA.banks).forEach(function(k){ written += DATA.banks[k].length; });
+  var terms = 0, topics = Object.keys(DATA.study.topics);
+  topics.forEach(function(k){ terms += DATA.study.topics[k].vocab.length; });
+  return {written: written, math: math, terms: terms, topics: topics.length,
+          total: written + math};
+}
+
+function factBox(value, key){
+  var d = el('div','fact');
+  d.appendChild(el('div','fv', value));
+  d.appendChild(el('div','fk', key));
+  return d;
+}
+
+var WIZ = {step: 0, date: '', hours: 8, weak: [], at: 0};
+
+function ghostClick(node){
+  return (Date.now() - WIZ.at < 300) || strayClick(node);
+}
+
+function wizStep(n){ WIZ.step = n; WIZ.at = Date.now(); renderWelcome(); }
+
+function renderWelcome(){
+  var v = $('view-welcome');
+  v.innerHTML = '';
+  if (WIZ.step === 0) return welcomeIntro(v);
+  return welcomeWizard(v);
+}
+
+function welcomeIntro(v){
+  var t = totals();
+
+  var hero = el('div','landing');
+  hero.appendChild(el('div','kicker', 'Georgia salesperson licence'));
+  hero.appendChild(el('h1', null, 'Pass the Georgia real estate exam.'));
+  hero.appendChild(el('p','hlede',
+    'Practice questions written to the real blueprint, scored the way the real ' +
+    'exam scores you — National and Georgia separately, 75% needed on each. ' +
+    'Free, no account, nothing to install.'));
+
+  var facts = el('div','facts');
+  facts.appendChild(factBox(String(t.total), 'questions'));
+  facts.appendChild(factBox(String(t.terms), 'defined terms'));
+  facts.appendChild(factBox(String(t.topics), 'topics covered'));
+  facts.appendChild(factBox('$0', 'forever'));
+  hero.appendChild(facts);
+
+  var trust = el('div','trustrow');
+  ['No signup', 'No ads', 'Stays on your device', 'Works offline']
+    .forEach(function(x){ trust.appendChild(el('span','trust', x)); });
+  hero.appendChild(trust);
+
+  var cta = el('div','cta');
+  var go = el('button','btn', 'Set up my plan — 20 seconds');
+  go.onclick = function(){ wizStep(1); };
+  cta.appendChild(go);
+  var skip = el('button','btn ghost', 'Skip — just let me practise');
+  skip.onclick = function(){ finishOnboarding('home'); };
+  cta.appendChild(skip);
+  hero.appendChild(cta);
+  v.appendChild(hero);
+
+  var how = el('div','card');
+  how.appendChild(cardHead('How it works', 'three steps'));
+  var s3 = el('div','steps3');
+  [['01', 'Read it once',
+    'Study notes for every topic on the blueprint, in plain sentences, with a ' +
+    'short check-yourself quiz after each section.'],
+   ['02', 'Quiz until it sticks',
+    'Timed sets that mirror the real split. Every answer tells you why it is ' +
+    'right and names the concept being tested.'],
+   ['03', 'Attack your weak spots',
+    'Anything you miss lands in the Notebook and on the flashcard deck, and the ' +
+    'weak-spot drill keeps serving it back until it stops being weak.']
+  ].forEach(function(r){
+    var c = el('div','step3');
+    c.appendChild(el('div','sno', r[0]));
+    c.appendChild(el('h3', null, r[1]));
+    c.appendChild(el('p', null, r[2]));
+    s3.appendChild(c);
+  });
+  how.appendChild(s3);
+  v.appendChild(how);
+
+  var ins = el('div','card');
+  ins.appendChild(cardHead('What is inside', 'have a look first'));
+  ins.appendChild(el('p','sub',
+    'Nothing is locked. Open any of these now — you can set your date later.'));
+  var grid = el('div','feat');
+  NAV.filter(function(n){ return ['study','home','math','vocab','cards','weak']
+                                   .indexOf(n.v) >= 0; })
+     .forEach(function(n){
+    var b = el('button','featcard');
+    b.appendChild(el('span','fn', n.name));
+    b.appendChild(el('span','fd', n.desc));
+    b.onclick = function(){ finishOnboarding(n.v); };
+    grid.appendChild(b);
+  });
+  ins.appendChild(grid);
+  v.appendChild(ins);
+
+  var priv = el('div','card');
+  priv.appendChild(cardHead('Where your answers go', 'nowhere'));
+  priv.appendChild(el('p','sub',
+    'Every score stays in this browser, in local storage on this device. There ' +
+    'is no server, no account and no analytics, which also means clearing your ' +
+    'browser data clears your history — Your data has an export you can ' +
+    'paste onto another device.'));
+  v.appendChild(priv);
+}
+
+function wizDots(n){
+  var d = el('div','wizdots');
+  for (var i = 1; i <= 2; i++) d.appendChild(el('i', i <= n ? 'on' : ''));
+  var t = el('span','muted', 'Step ' + n + ' of 2');
+  d.appendChild(t);
+  return d;
+}
+
+function welcomeWizard(v){
+  var card = el('div','card wiz');
+  card.appendChild(wizDots(WIZ.step));
+
+  if (WIZ.step === 1){
+    card.appendChild(el('h1', null, 'When do you sit the exam?'));
+    card.appendChild(el('p','sub',
+      'This sets the pace of your study plan and the countdown in the header. ' +
+      'You can change it any time, and you can leave it blank.'));
+
+    var row = el('div','row');
+    var d1 = el('div');
+    var l1 = el('label', null, 'Exam date'); l1.setAttribute('for','wizDate');
+    d1.appendChild(l1);
+    var inp = el('input'); inp.type = 'date'; inp.id = 'wizDate'; inp.value = WIZ.date;
+    d1.style.maxWidth = '260px';
+    var today = new Date(); today.setHours(0,0,0,0);
+    inp.min = today.toISOString().slice(0,10);
+    inp.onchange = function(){ WIZ.date = inp.value; };
+    d1.appendChild(inp);
+    row.appendChild(d1);
+
+    var d2 = el('div'); d2.style.maxWidth = '180px';
+    var l2 = el('label', null, 'Hours a week you can study');
+    l2.setAttribute('for','wizHours');
+    d2.appendChild(l2);
+    var hrs = el('input'); hrs.type = 'number'; hrs.id = 'wizHours';
+    hrs.min = '1'; hrs.max = '40'; hrs.value = String(WIZ.hours);
+    hrs.onchange = function(){ WIZ.hours = +hrs.value || 8; };
+    d2.appendChild(hrs);
+    row.appendChild(d2);
+    card.appendChild(row);
+
+    var acts = el('div','wizacts');
+    var next = el('button','btn', 'Next');
+    next.onclick = function(){ WIZ.date = inp.value; WIZ.hours = +hrs.value || 8;
+                               wizStep(2); };
+    acts.appendChild(next);
+    var none = el('button','btn ghost', 'Not booked yet');
+    none.onclick = function(){ WIZ.date = ''; wizStep(2); };
+    acts.appendChild(none);
+    acts.appendChild(el('span','spacer'));
+    var back = el('button','btn mini ghost', 'Back');
+    back.onclick = function(){ wizStep(0); };
+    acts.appendChild(back);
+    card.appendChild(acts);
+    v.appendChild(card);
+    return;
+  }
+
+  card.appendChild(el('h1', null, 'Which parts worry you most?'));
+  card.appendChild(el('p','sub',
+    'Whatever you tick gets pushed to the front of your plan and into the ' +
+    'weak-spot drill from day one, before you have taken a single quiz. ' +
+    'Guessing is fine — your actual scores take over as soon as you start.'));
+
+  ['national','georgia'].forEach(function(portion){
+    var rows = DATA.topics.filter(function(t){ return t.portion === portion; });
+    if (!rows.length) return;
+    var h = el('div','eyebrow', portion === 'georgia'
+      ? 'Georgia portion · 52 questions' : 'National portion · 80 questions');
+    h.style.marginTop = '.6rem';
+    card.appendChild(h);
+    var grid = el('div','pickgrid');
+    rows.forEach(function(t){
+      var b = el('button','opt' + (WIZ.weak.indexOf(t.key) >= 0 ? ' on' : ''));
+      b.appendChild(el('span','box', '✓'));
+      var txt = el('span');
+      txt.appendChild(el('span','pn', t.label));
+      txt.appendChild(el('span','pd', t.exam_questions + ' questions on the exam'));
+      b.appendChild(txt);
+      b.setAttribute('aria-pressed', WIZ.weak.indexOf(t.key) >= 0 ? 'true' : 'false');
+      b.onclick = function(){
+        if (ghostClick(b)) return;
+        var at = WIZ.weak.indexOf(t.key);
+        if (at >= 0) WIZ.weak.splice(at, 1); else WIZ.weak.push(t.key);
+        b.classList.toggle('on', at < 0);
+        b.setAttribute('aria-pressed', at < 0 ? 'true' : 'false');
+      };
+      grid.appendChild(b);
+    });
+    card.appendChild(grid);
+  });
+
+  var acts2 = el('div','wizacts');
+  acts2.style.marginTop = '.4rem';
+  var done = el('button','btn', 'Start studying');
+  done.onclick = function(){ if (ghostClick(done)) return; finishOnboarding('today'); };
+  acts2.appendChild(done);
+  var dunno = el('button','btn ghost', 'Not sure yet');
+  dunno.onclick = function(){ if (ghostClick(dunno)) return; WIZ.weak = []; finishOnboarding('today'); };
+  acts2.appendChild(dunno);
+  acts2.appendChild(el('span','spacer'));
+  var back2 = el('button','btn mini ghost', 'Back');
+  back2.onclick = function(){ wizStep(1); };
+  acts2.appendChild(back2);
+  card.appendChild(acts2);
+  v.appendChild(card);
+}
+
+function finishOnboarding(goto){
+  D.profile = D.profile || {};
+  D.profile.onboarded = true;
+  if (WIZ.date){
+    D.profile.exam_date = WIZ.date;
+    // aim to be done a few days early; that gap is where revision happens
+    var m = new Date(WIZ.date + 'T00:00:00');
+    m.setDate(m.getDate() - 5);
+    var start = new Date(); start.setHours(0,0,0,0);
+    D.profile.mastery_date = (m > start) ? m.toISOString().slice(0,10) : WIZ.date;
+  }
+  D.profile.hours_per_week = WIZ.hours || 8;
+  if (WIZ.weak.length) D.profile.declared_weak = WIZ.weak.slice();
+  persist();
+  countdown();
+  show(goto || 'today');
+}
+
+/* ------------------------------------------------------------------ about */
+function renderAbout(){
+  var v = $('view-about'), t = totals();
+  v.innerHTML = '';
+  v.appendChild(el('h1', null, 'About this site'));
+  v.appendChild(el('p','sub',
+    'A free, open study tool for the Georgia real estate salesperson licensing ' +
+    'exam. It was built by one person preparing for that exam, and kept online ' +
+    'afterwards because it worked.'));
+
+  var what = el('div','card');
+  what.appendChild(cardHead('What is in it', 'built ' + BUILD));
+  var wrap = el('div','scroll'), tab = el('table');
+  tab.innerHTML = '<tr><th>Section</th><th class="num">Size</th></tr>';
+  [['Written exam-style questions', t.written],
+   ['Generated math problems, each with worked steps', t.math],
+   ['Topics with full study notes', t.topics],
+   ['Vocabulary terms defined', t.terms]].forEach(function(r){
+    var tr = el('tr');
+    tr.appendChild(el('td', null, r[0]));
+    tr.appendChild(el('td','num', String(r[1])));
+    tab.appendChild(tr);
+  });
+  wrap.appendChild(tab); what.appendChild(wrap);
+  v.appendChild(what);
+
+  var src = el('div','card');
+  src.appendChild(cardHead('Where the Georgia material comes from', 'sourcing'));
+  src.appendChild(el('p','sub',
+    'The Georgia rules in these notes were taken from the Georgia Real Estate ' +
+    'Commission’s own InfoBase and from the Georgia Code, chapter by ' +
+    'chapter, rather than from a commercial cram guide. That matters in places ' +
+    'where the guides get it wrong — continuing education, for one, is 24 ' +
+    'hours per four-year renewal in Georgia, not the 36 that national study ' +
+    'guides tend to quote.'));
+  src.appendChild(el('p','sub',
+    'The national half follows the standard content outline used by the ' +
+    'licensing exams: agency, contracts, financing, valuation, property ' +
+    'ownership, transfer of title, practice and disclosures, and the maths.'));
+  v.appendChild(src);
+
+  var warn = el('div','card');
+  warn.appendChild(cardHead('What this is not', 'read this bit'));
+  var ul = el('ul'); ul.className = 'plainlist';
+  ['Not affiliated with, endorsed by, or connected to the Georgia Real Estate ' +
+   'Commission, PSI, or any school or exam vendor.',
+   'Not legal advice, and not an official statement of Georgia law. Rules ' +
+   'change; grec.state.ga.us is the authority, not this page.',
+   'Not a substitute for the 75-hour pre-licence course Georgia requires before ' +
+   'you may sit the exam.',
+   'Not a guarantee of anything. It is practice, and practice is only worth ' +
+   'what you put into it.'].forEach(function(x){
+    ul.appendChild(el('li', null, x));
+  });
+  warn.appendChild(ul);
+  v.appendChild(warn);
+
+  var priv = el('div','card');
+  priv.appendChild(cardHead('Privacy', 'short version: none collected'));
+  priv.appendChild(el('p','sub',
+    'There is no account, no server and no analytics. Your answers and scores ' +
+    'are written to this browser’s local storage and never leave the ' +
+    'device. The page loads two font files from Google Fonts; everything else ' +
+    '— every question, every note — is inside the page you already ' +
+    'downloaded, which is why it keeps working with no signal.'));
+  var go = el('button','btn ghost');
+  go.textContent = 'Export or erase my data';
+  go.onclick = function(){ navTo('setup'); };
+  priv.appendChild(go);
+  v.appendChild(priv);
+
+  var sh = el('div','card');
+  sh.appendChild(cardHead('Pass it on', 'if it helped'));
+  sh.appendChild(el('p','sub',
+    'Someone in your pre-licence class is studying from a photocopy right now. ' +
+    'This is free and there is nothing to sign up for.'));
+  var b2 = el('button','btn');
+  b2.textContent = 'Share this site';
+  b2.onclick = doShare;
+  sh.appendChild(b2);
+  v.appendChild(sh);
+}
+
 /* ----------------------------------------------------------------- boot */
 (function(){
+  applyTheme(readTheme());
+  try {
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', function(){
+        if (readTheme() === 'auto') applyTheme('auto');
+      });
+  } catch(e){}
+
+  $('themeBtn').onclick = cycleTheme;
+  $('shareBtn').onclick = doShare;
+  $('brand').onclick = function(){ navTo(onboarded(D) ? 'today' : 'welcome'); };
+  $('installBtn').onclick = function(){
+    if (INSTALL_EVENT){ INSTALL_EVENT.prompt(); INSTALL_EVENT = null; return; }
+    alert(iosInstallHelp());
+  };
+  if (isIOS() && !standalone()) $('installBtn').hidden = false;
+
   var recovered = backfillMisses(D);
   if (recovered) persist();
-  var mathN = 0;
-  Object.keys(DATA.math).forEach(function(k){ mathN += DATA.math[k].q.length; });
-  var written = 0, hard = 0, exam = 0;
+
+  var t = totals();
+  var hard = 0, exam = 0;
   Object.keys(DATA.banks).forEach(function(k){
-    written += DATA.banks[k].length;
     hard += DATA.banks[k].filter(function(r){ return r.difficulty === 2; }).length;
     exam += DATA.banks[k].filter(function(r){ return r.difficulty === 3; }).length;
   });
-  var vocabN = 0;
-  Object.keys(DATA.study.topics).forEach(function(k){
-    vocabN += DATA.study.topics[k].vocab.length;
-  });
-  $('bankcount').textContent = written + ' questions (' + hard + ' hard, ' + exam +
-    ' exam-realistic) + ' + mathN +
-    ' math problems + study notes on ' + Object.keys(DATA.study.topics).length +
-    ' topics (' + vocabN + ' terms)';
+  $('bankcount').textContent = t.written + ' questions (' + hard + ' hard, ' + exam +
+    ' exam-realistic) + ' + t.math +
+    ' math problems + study notes on ' + t.topics + ' topics (' + t.terms + ' terms)';
+
   countdown();
-  show('home');
+  show(routeFromHash(), true);
+
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js')['catch'](function(){});
+    });
+  }
 })();
