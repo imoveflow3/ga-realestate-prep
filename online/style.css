@@ -630,18 +630,11 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
   font-size:.88rem; box-shadow:var(--shadow); max-width:90vw; text-align:center}
 .toast[hidden]{display:none}
 
-/* ================================ onboarding / welcome ================= */
-.landing{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
-  box-shadow:var(--shadow); padding:2rem 1.5rem 1.7rem; display:flex;
-  flex-direction:column; gap:.9rem; overflow:hidden; position:relative}
-.landing::before{content:""; position:absolute; inset:0 0 auto; height:3px;
-  background:linear-gradient(90deg,var(--accent),var(--brass))}
-.landing .kicker{font-family:"Barlow Condensed",sans-serif; font-size:.74rem;
-  font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--accent)}
-.landing h1{font-size:clamp(2rem,6.5vw,3.1rem); max-width:18ch}
-.landing .hlede{font-size:1.06rem; color:var(--ink-2); max-width:56ch; line-height:1.6}
-.landing .cta{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.35rem}
-.landing .btn{padding:.72rem 1.3rem; font-size:1.02rem}
+/* ================================ onboarding / welcome =================
+   The hero that used to live here is gone: the home page has its own, and
+   `landing` is now a mode on <body>, so a bare `.landing` rule would paint
+   the document itself -- which it was doing, replacing the page's bottom
+   padding with the hero's and dropping a gradient bar across the top. */
 
 .facts{display:grid; gap:.55rem; grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
   margin-top:.3rem}
@@ -731,7 +724,6 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
   footer{padding:.4rem .85rem 1.6rem}
   .card{padding:.9rem .9rem}
   h1{font-size:1.72rem}
-  .landing{padding:1.5rem 1.1rem 1.3rem}
 
   /* thumbs, not cursors */
   .choice{padding:.78rem .8rem; min-height:52px; align-items:center}
@@ -748,7 +740,6 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
 @media (max-width:420px){
   .facts{grid-template-columns:repeat(2,1fr)}
   .tabbar button{font-size:.64rem}
-  .landing h1{font-size:1.85rem}
 }
 
 /* a quiz in progress hides the tab bar: leaving mid-question loses the set.
@@ -895,12 +886,6 @@ table{font-size:.94rem}
 .tag{border-radius:var(--r-pill); padding:.1rem .5rem}
 .trust{font-size:.8rem; padding:.28rem .8rem}
 
-/* ---- landing ---- */
-.landing{padding:2.6rem 2rem 2.1rem; gap:1rem; box-shadow:var(--shadow-lift)}
-.landing::before{height:4px}
-.landing h1{font-size:clamp(2.2rem,6.6vw,3.4rem); line-height:1.02}
-.landing .hlede{font-size:1.12rem; line-height:1.62}
-.landing .btn{padding:.85rem 1.5rem; font-size:1.04rem; border-radius:var(--r-sm)}
 .fact{border-radius:var(--r-sm); padding:.85rem .95rem}
 .fact .fv{font-size:1.6rem; letter-spacing:-.02em}
 .step3{border-radius:var(--r-sm); padding:1.1rem 1.15rem}
@@ -917,7 +902,6 @@ table{font-size:.94rem}
   main{padding-top:1.1rem}
   h1{font-size:1.85rem}
   .qtext{font-size:1.14rem}
-  .landing{padding:1.9rem 1.25rem 1.6rem}
 }
 
 /* ---- view changes should feel like a step, not a flash ---- */
@@ -976,4 +960,182 @@ main>section:not([hidden]){animation:viewin .22s var(--ease)}
   .metric,.readout{padding:.75rem .85rem}
   .ring .big{font-size:2.2rem}
   .stat{font-size:1.6rem}
+}
+
+/* ======================================================================
+   The front door.
+
+   Everything else in here is the app. This is the page someone lands on
+   from a link, and it has one job: say what this is, show them a real
+   question, and get out of the way. It drops the tab rail and the status
+   strip -- neither means anything to a stranger -- and carries its own
+   wider rhythm.
+   ====================================================================== */
+
+body.landing nav.rail,
+body.landing .readouts{display:none}
+body.landing main{max-width:1120px; gap:0; padding-top:0}
+body.landing footer{max-width:1120px}
+
+/* ---- hero ---- */
+.hero2{
+  position:relative; overflow:hidden; border-radius:0 0 28px 28px;
+  margin:0 -1.1rem; padding:4.2rem 2.6rem 3.4rem;
+  background:
+    radial-gradient(90rem 40rem at 78% -18%, var(--accent-soft) 0%, transparent 62%),
+    radial-gradient(60rem 30rem at 6% 120%, var(--brass-soft) 0%, transparent 58%),
+    var(--panel);
+  border-bottom:1px solid var(--line);
+}
+.hero2::after{
+  content:""; position:absolute; inset:auto 0 0; height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--brass));
+}
+.hero2 .wrap{max-width:46rem; display:flex; flex-direction:column; gap:1.1rem}
+.kicker2{
+  display:inline-flex; align-items:center; gap:.5rem; align-self:flex-start;
+  font-family:"Barlow",sans-serif; font-size:.78rem; font-weight:600;
+  letter-spacing:.04em; color:var(--accent); background:var(--accent-soft);
+  border:1px solid color-mix(in srgb, var(--accent) 24%, transparent);
+  padding:.32rem .85rem; border-radius:var(--r-pill);
+}
+.hero2 h1{
+  font-size:clamp(2.5rem,7vw,4.1rem); line-height:.98; letter-spacing:-.022em;
+  max-width:15ch;
+}
+.hero2 h1 em{font-style:normal; color:var(--accent)}
+.hero2 .lede2{
+  font-size:clamp(1.05rem,2.2vw,1.24rem); line-height:1.58; color:var(--ink-2);
+  max-width:52ch;
+}
+.hero2 .cta2{display:flex; gap:.7rem; flex-wrap:wrap; margin-top:.4rem}
+.hero2 .cta2 .btn{padding:.92rem 1.7rem; font-size:1.06rem; border-radius:var(--r-sm)}
+.hero2 .fineprint{font-size:.87rem; color:var(--ink-3)}
+
+.statband{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  margin:2.2rem -2.6rem -3.4rem; padding:1.3rem 2.6rem;
+  border-top:1px solid var(--line); background:var(--panel-2);
+}
+.statband div{display:flex; flex-direction:column; gap:.1rem}
+.statband .n{
+  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:1.75rem; font-weight:600; line-height:1; letter-spacing:-.03em;
+  color:var(--accent);
+}
+.statband .l{font-family:"Barlow Condensed",sans-serif; font-size:.72rem;
+  font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+
+/* ---- section rhythm ---- */
+.lsec{padding:3.4rem 0 .4rem; display:flex; flex-direction:column; gap:1.3rem}
+.lsec+.lsec{border-top:1px solid var(--line)}
+.lhead{display:flex; flex-direction:column; gap:.45rem; max-width:58ch}
+.lhead .eyebrow{color:var(--accent)}
+.lhead h2{font-size:clamp(1.65rem,3.6vw,2.25rem); letter-spacing:-.015em}
+.lhead p{font-size:1.04rem; line-height:1.62; color:var(--ink-2)}
+
+/* ---- feature tiles ---- */
+.tiles{display:grid; gap:.85rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tile{
+  text-align:left; font:inherit; color:inherit; cursor:pointer;
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1.3rem 1.35rem; display:flex; flex-direction:column; gap:.5rem;
+  box-shadow:var(--shadow);
+  transition:transform .14s var(--ease), box-shadow .2s var(--ease),
+             border-color .18s var(--ease);
+}
+.tile:hover{transform:translateY(-3px); box-shadow:var(--shadow-lift);
+  border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.ico{
+  width:2.5rem; height:2.5rem; border-radius:var(--r-sm); display:grid;
+  place-items:center; background:var(--accent-soft); color:var(--accent);
+  margin-bottom:.15rem;
+}
+.ico svg{width:1.32rem; height:1.32rem; fill:none; stroke:currentColor;
+  stroke-width:1.85; stroke-linecap:round; stroke-linejoin:round}
+.tile h3{font-size:1.16rem}
+.tile p{font-size:.93rem; line-height:1.55; color:var(--ink-2)}
+.tile .go{margin-top:auto; padding-top:.35rem; font-size:.85rem; font-weight:600;
+  color:var(--accent)}
+
+/* ---- the live sample question ---- */
+.sample{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow-lift); overflow:hidden;
+}
+.sample .stop{
+  display:flex; gap:.5rem; align-items:center; padding:.7rem 1.2rem;
+  border-bottom:1px solid var(--line); background:var(--panel-2);
+  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3);
+}
+.sample .sbody{padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.75rem}
+.sample .sq{font-size:1.16rem; line-height:1.5; color:var(--ink)}
+
+/* ---- the blueprint table ---- */
+.blueprint{display:grid; gap:.85rem; grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.bpcol{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1.2rem 1.3rem; box-shadow:var(--shadow)}
+.bpcol h3{display:flex; align-items:baseline; gap:.5rem; margin-bottom:.15rem}
+.bpcol h3 span{font-family:"IBM Plex Mono",monospace; font-size:.82rem;
+  font-weight:600; color:var(--accent)}
+.bprow{display:flex; justify-content:space-between; gap:1rem; padding:.42rem 0;
+  border-bottom:1px solid var(--line); font-size:.93rem}
+.bprow:last-child{border-bottom:0}
+.bprow b{font-weight:500; color:var(--ink-2)}
+.bprow i{font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:.85rem;
+  color:var(--ink-3)}
+
+/* ---- faq ---- */
+.faq{display:flex; flex-direction:column; gap:.55rem}
+.faq details{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r-sm);
+  padding:.9rem 1.1rem; transition:border-color .16s var(--ease);
+}
+.faq details[open]{border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.faq summary{
+  cursor:pointer; font-weight:600; font-size:1.02rem; list-style:none;
+  display:flex; justify-content:space-between; gap:1rem; align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; color:var(--accent); font-size:1.3rem; line-height:1;
+  font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin-top:.6rem; font-size:.95rem; line-height:1.65; color:var(--ink-2);
+  max-width:68ch}
+
+/* ---- closing call to action ---- */
+.endcta{
+  margin:3.4rem 0 1rem; padding:2.6rem 2rem; border-radius:var(--r);
+  background:linear-gradient(135deg,var(--accent) 0%,
+             color-mix(in srgb, var(--accent) 72%, var(--brass)) 100%);
+  color:var(--accent-ink); display:flex; flex-direction:column; gap:.75rem;
+  align-items:center; text-align:center; box-shadow:var(--shadow-lift);
+}
+.endcta h2{font-size:clamp(1.6rem,4vw,2.3rem); color:inherit; letter-spacing:-.015em}
+.endcta p{font-size:1.04rem; opacity:.9; max-width:48ch; line-height:1.55}
+.endcta .btn{background:var(--panel); color:var(--accent); border-color:var(--panel);
+  padding:.9rem 1.8rem; font-size:1.05rem; margin-top:.3rem}
+.endcta .btn:hover{background:var(--panel); box-shadow:0 8px 26px -6px rgba(0,0,0,.3)}
+
+@media (max-width:860px){
+  .hero2{margin:0 -.85rem; padding:2.8rem 1.25rem 2.4rem; border-radius:0 0 22px 22px}
+  .statband{grid-template-columns:repeat(2,1fr); gap:1rem 0;
+    margin:1.8rem -1.25rem -2.4rem; padding:1.1rem 1.25rem}
+  .statband .n{font-size:1.5rem}
+  .lsec{padding:2.4rem 0 .3rem; gap:1.1rem}
+  .hero2 .cta2 .btn{width:100%}
+  .endcta{padding:2rem 1.2rem; margin-top:2.4rem}
+}
+
+/* On a phone the landing header cannot carry a text button and three icons:
+   the call to action wrapped onto three lines and pushed the rest off-screen.
+   Install and share both live inside the app anyway. */
+@media (max-width:860px){
+  body.landing #installBtn,
+  body.landing #shareBtn{display:none}
+  body.landing #appBtn{white-space:nowrap; padding:.5rem .85rem; font-size:.9rem}
+  body.landing .hud-in{gap:.5rem}
+  .kicker2{font-size:.72rem; padding:.28rem .7rem}
+  .hero2 h1{font-size:clamp(2.1rem,9vw,2.8rem)}
 }

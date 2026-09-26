@@ -16,6 +16,7 @@
     </button>
     <div class="readouts" id="readouts"></div>
     <div class="hudacts">
+      <button class="btn" id="appBtn" hidden>Open the app</button>
       <button class="iconbtn" id="installBtn" hidden title="Install this app">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"/></svg>
         <span>Install</span>
@@ -35,6 +36,7 @@
 
 <nav class="rail" aria-label="Sections">
   <div class="rail-in" id="rail">
+    <button data-view="welcome" aria-current="false">Home</button>
     <button data-view="today" class="on" aria-current="page">Today</button>
     <button data-view="study" aria-current="false">Study</button>
     <button data-view="home" aria-current="false">Practice</button>
