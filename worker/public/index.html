@@ -1490,8 +1490,17 @@ function includedList(){
   return list;
 }
 
+function openApp(){ location.href = HOME.appHref || '/buy'; }
+
 function priceButton(label){
   var b = el('button', 'btn');
+  /* Open access: the front door goes live before anything can take a payment,
+     so the button opens the app rather than asking for money nobody can pay. */
+  if (HOME.openAccess){
+    b.textContent = label || 'Start studying';
+    b.onclick = openApp;
+    return b;
+  }
   b.textContent = label || ('Get access — ' + money(HOME.price));
   b.onclick = function(){
     if (HOME.page === 'buy') return buy();
@@ -1515,8 +1524,9 @@ function renderWelcome(v, q){
   var note = noticeFor(q);
   if (note) w.appendChild(el('div', 'gatenote', note));
 
-  w.appendChild(el('div', 'kicker2',
-    'Georgia salesperson licence · Built to the real exam blueprint'));
+  w.appendChild(el('div', 'kicker2', HOME.openAccess
+    ? 'Georgia salesperson licence \u00b7 Free while it is open'
+    : 'Georgia salesperson licence \u00b7 Built to the real exam blueprint'));
   var h1 = el('h1');
   h1.appendChild(document.createTextNode('Pass the Georgia real estate exam. '));
   h1.appendChild(el('em', null, 'First try.'));
@@ -1528,18 +1538,23 @@ function renderWelcome(v, q){
 
   var cta = el('div', 'cta2');
   cta.appendChild(priceButton());
-  var si = el('button', 'btn ghost', 'Already bought? Sign in');
-  si.onclick = function(){ openAuth('email'); };
-  cta.appendChild(si);
+  if (!HOME.openAccess){
+    var si = el('button', 'btn ghost', 'Already bought? Sign in');
+    si.onclick = function(){ openAuth('email'); };
+    cta.appendChild(si);
+  }
   w.appendChild(cta);
-  w.appendChild(el('p', 'fineprint',
-    'One payment. No subscription, nothing renews, and a full refund within ' +
-    '14 days if it is not for you.'));
+  w.appendChild(el('p', 'fineprint', HOME.openAccess
+    ? 'Free to use right now. Accounts and saved progress are on the way.'
+    : 'One payment. No subscription, nothing renews, and a full refund within ' +
+      '14 days if it is not for you.'));
   hero.appendChild(w);
 
   var band = el('div', 'statband');
   [[String(t.total), 'practice questions'], [String(t.terms), 'terms defined'],
-   [String(t.topics), 'topics covered'], [money(HOME.price), 'once, not monthly']]
+   [String(t.topics), 'topics covered'],
+   HOME.openAccess ? ['$0', 'to use right now']
+                   : [money(HOME.price), 'once, not monthly']]
     .forEach(function(r){
       var d = el('div');
       d.appendChild(el('div', 'n', r[0]));
@@ -1599,6 +1614,15 @@ function renderWelcome(v, q){
 
   /* close */
   var end = el('div', 'endcta');
+  if (HOME.openAccess){
+    end.appendChild(el('h2', null, 'Start with one quiz.'));
+    end.appendChild(el('p', null,
+      'Twenty questions takes about fifteen minutes and tells you more about ' +
+      'where you stand than a week of reading will.'));
+    end.appendChild(priceButton('Open the app'));
+    v.appendChild(end);
+    return;
+  }
   end.appendChild(el('h2', null, 'One payment. Yours for good.'));
   end.appendChild(el('p', null,
     'Nothing renews and there is nothing to cancel. If it is not what you ' +
@@ -1697,10 +1721,13 @@ function render(){
   };
   /* On the welcome page this leads to the buy page; on the buy page it pays. */
   var onBuyPage = (HOME.page === 'buy');
+  if (HOME.openAccess) $('signinBtn').hidden = true;
   /* The price is all over the page already; in the header it only forces a
      wrap on a phone. */
-  $('buyBtn').textContent = onBuyPage ? ('Pay ' + money(HOME.price)) : 'Get access';
+  $('buyBtn').textContent = HOME.openAccess ? 'Open the app'
+    : (onBuyPage ? ('Pay ' + money(HOME.price)) : 'Get access');
   $('buyBtn').onclick = function(){
+    if (HOME.openAccess) return openApp();
     if (HOME.page === 'buy') return buy();
     if (HOME.preview){ HOME.page = 'buy'; render(); window.scrollTo(0, 0); return; }
     location.href = '/buy';
@@ -1713,7 +1740,9 @@ function render(){
   });
   render();
 
-  /* Somebody already signed in should not be sold to again. */
+  /* Somebody already signed in should not be sold to again. Open access has
+     no accounts and no API behind it, so there is nothing to ask. */
+  if (HOME.openAccess || HOME.preview) return;
   fetch('/api/me', {credentials: 'same-origin'})
     .then(function(r){ return r.json(); })
     .then(function(me){

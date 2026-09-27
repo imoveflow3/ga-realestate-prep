@@ -30,6 +30,14 @@ var VIEWS = ['welcome','today','dash','study','cards','vocab','home','math',
    "free, no signup" language, which is now simply untrue. */
 var PAID = (typeof window !== 'undefined') && window.__PAID__ === true;
 
+/* Two different questions. PAID decides what the copy may claim. FRONTDOOR
+   decides whether the app still needs a landing page of its own -- once the
+   site has one at /, a second one inside the app is just a wrong turn. It
+   holds the href back to that front door, or null. */
+var FRONTDOOR = (typeof window !== 'undefined' && window.__FRONTDOOR__)
+                  ? window.__FRONTDOOR__ : null;
+var NO_LANDING = PAID || !!FRONTDOOR;
+
 /* Everything reachable from the navigation, in one table, so the desktop rail,
    the phone tab bar and the More sheet can never drift apart. */
 var NAV = [
@@ -47,7 +55,7 @@ var NAV = [
   {v:'setup',    name:'Your data',  desc:'Move progress between devices, or start over'},
   {v:'about',    name:'About',      desc:'What this is, who made it, what it is not'}
 ];
-if (PAID) NAV = NAV.filter(function(n){ return n.v !== 'welcome'; });
+if (NO_LANDING) NAV = NAV.filter(function(n){ return n.v !== 'welcome'; });
 var TABS = ['today','study','home','dash'];          // the phone tab bar
 var NOHASH = {quiz:1, result:1};                     // not worth a shareable link
 var VQ = null;
@@ -97,7 +105,7 @@ function show(v, silent){
 
   /* the front door hides the rail and the status strip -- neither means
      anything to someone who has just arrived -- and offers one way in */
-  var landing = (v === 'welcome' && WIZ.step === 0 && !PAID);
+  var landing = (v === 'welcome' && WIZ.step === 0 && !NO_LANDING);
   document.body.classList.toggle('landing', landing);
   var ab = $('appBtn');
   if (ab){
@@ -142,8 +150,9 @@ window.addEventListener('hashchange', function(){
   show(want, true);
 });
 
-/* Home is the sales page. Behind the paywall it has nothing to say. */
-if (PAID){
+/* Home is the sales page. When the site has one of its own, the app's
+   copy of it has nothing left to say. */
+if (NO_LANDING){
   document.querySelectorAll('#rail button[data-view="welcome"]')
     .forEach(function(b){ b.remove(); });
 }
@@ -2571,17 +2580,17 @@ function wizStep(n){
   WIZ.at = Date.now();
   WIZ.used = true;                  // distinguishes the wizard from a tile click
   renderWelcome();
-  document.body.classList.toggle('landing', n === 0 && !PAID);
-  if ($('appBtn')) $('appBtn').hidden = (n !== 0) || PAID;
+  document.body.classList.toggle('landing', n === 0 && !NO_LANDING);
+  if ($('appBtn')) $('appBtn').hidden = (n !== 0) || NO_LANDING;
   window.scrollTo(0, 0);
 }
 
 function renderWelcome(){
   var v = $('view-welcome');
   v.innerHTML = '';
-  if (PAID && WIZ.step === 0) WIZ.step = 1;   // no sales pitch behind the till
+  if (NO_LANDING && WIZ.step === 0) WIZ.step = 1;   // the front door already did this
   if (WIZ.step === 0) return welcomeIntro(v);
-  if (PAID && WIZ.step === 1){
+  if (NO_LANDING && WIZ.step === 1){
     var hi = el('div', 'card');
     hi.appendChild(cardHead('You are in', 'two quick questions'));
     hi.appendChild(el('p', 'sub',
@@ -2921,7 +2930,7 @@ function welcomeWizard(v){
     var none = el('button','btn ghost', 'Not booked yet');
     none.onclick = function(){ WIZ.date = ''; wizStep(2); };
     acts.appendChild(none);
-    if (!PAID){
+    if (!NO_LANDING){
       acts.appendChild(el('span','spacer'));
       var back = el('button','btn mini ghost', 'Back');
       back.onclick = function(){ wizStep(0); };
@@ -3128,7 +3137,10 @@ function renderAbout(){
 
   $('themeBtn').onclick = cycleTheme;
   $('shareBtn').onclick = doShare;
-  $('brand').onclick = function(){ navTo(onboarded(D) ? 'today' : 'welcome'); };
+  $('brand').onclick = function(){
+    if (FRONTDOOR){ location.href = FRONTDOOR; return; }
+    navTo(onboarded(D) ? 'today' : 'welcome');
+  };
   $('installBtn').onclick = function(){
     if (INSTALL_EVENT){ INSTALL_EVENT.prompt(); INSTALL_EVENT = null; return; }
     alert(iosInstallHelp());
