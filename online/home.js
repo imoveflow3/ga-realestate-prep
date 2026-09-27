@@ -159,52 +159,74 @@ function iconEl(name){
   return s;
 }
 
-function render(){
-  var v = $('page'), t = HOME.totals;
-  v.innerHTML = '';
+function lsec(eyebrow, title, blurb){
+  var sec = el('section', 'lsec');
+  var h = el('div', 'lhead');
+  if (eyebrow) h.appendChild(el('div', 'eyebrow', eyebrow));
+  h.appendChild(el('h2', null, title));
+  if (blurb) h.appendChild(el('p', null, blurb));
+  sec.appendChild(h);
+  return sec;
+}
 
-  var q = new URLSearchParams(location.search);
-  if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
-  if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
+/* The list of what is included: names and a phrase. Named, not handed over. */
+function includedList(){
+  var list = el('div', 'inclist');
+  HOME.features.forEach(function(r){
+    var row = el('div', 'incrow');
+    row.appendChild(iconEl(r.icon));
+    var txt = el('div');
+    txt.appendChild(el('b', null, r.name));
+    txt.appendChild(el('span', null, r.desc));
+    row.appendChild(txt);
+    list.appendChild(row);
+  });
+  return list;
+}
+
+function priceButton(label){
+  var b = el('button', 'btn');
+  b.textContent = label || ('Get access — ' + money(HOME.price));
+  b.onclick = function(){
+    if (HOME.page === 'buy') buy(); else location.href = '/buy';
+  };
+  return b;
+}
+
+function noticeFor(q){
+  if (q.get('gate')) return 'That part is inside the app. Get access below, or ' +
+                            'sign in if you have already bought.';
+  return null;
+}
+
+/* ------------------------------------------------------- the welcome page */
+function renderWelcome(v, q){
+  var t = HOME.totals;
 
   var hero = el('div', 'hero2'), w = el('div', 'wrap');
-
-  if (q.get('gate')){
-    w.appendChild(el('div', 'gatenote',
-      'That part is inside the app. Get access below, or sign in if you have ' +
-      'already bought.'));
-  }
+  var note = noticeFor(q);
+  if (note) w.appendChild(el('div', 'gatenote', note));
 
   w.appendChild(el('div', 'kicker2',
-    money(HOME.price) + ' once · No subscription · Georgia salesperson licence'));
+    'Georgia salesperson licence · Built to the real exam blueprint'));
   var h1 = el('h1');
   h1.appendChild(document.createTextNode('Pass the Georgia real estate exam. '));
   h1.appendChild(el('em', null, 'First try.'));
   w.appendChild(h1);
   w.appendChild(el('p', 'lede2',
-    t.total + ' practice questions written to the real blueprint and scored the ' +
-    'way the real exam scores you — National and Georgia separately, 75% ' +
-    'needed on each. Every answer explained, every calculation worked out.'));
+    t.total + ' practice questions scored the way the real exam scores you — ' +
+    'National and Georgia separately, 75% needed on each. Every answer explained ' +
+    'the moment you give it, every calculation worked out a step at a time.'));
 
-  /* the price, the button, and nothing between them */
-  var buybox = el('div', 'buybox');
-  var tag = el('div', 'pricetag');
-  tag.appendChild(el('span', 'amount', money(HOME.price)));
-  tag.appendChild(el('span', 'once', 'one payment · lifetime access'));
-  buybox.appendChild(tag);
-  var go = el('button', 'btn');
-  go.textContent = 'Get access — ' + money(HOME.price);
-  go.onclick = function(){ buy(); };
-  buybox.appendChild(go);
-  var si = el('button', 'linkish', 'Already bought? Sign in');
+  var cta = el('div', 'cta2');
+  cta.appendChild(priceButton());
+  var si = el('button', 'btn ghost', 'Already bought? Sign in');
   si.onclick = function(){ openAuth('email'); };
-  buybox.appendChild(si);
-  w.appendChild(buybox);
-
-  var trust = el('div', 'trustrow');
-  ['No subscription', 'Nothing renews', '14-day refund', 'Works offline']
-    .forEach(function(x){ trust.appendChild(el('span', 'trust', x)); });
-  w.appendChild(trust);
+  cta.appendChild(si);
+  w.appendChild(cta);
+  w.appendChild(el('p', 'fineprint',
+    'One payment. No subscription, nothing renews, and a full refund within ' +
+    '14 days if it is not for you.'));
   hero.appendChild(w);
 
   var band = el('div', 'statband');
@@ -219,36 +241,131 @@ function render(){
   hero.appendChild(band);
   v.appendChild(hero);
 
-  /* what is inside: named, not handed over */
-  var inc = el('section', 'lsec');
-  var h = el('div', 'lhead');
-  h.appendChild(el('div', 'eyebrow', 'What the ' + money(HOME.price) + ' buys'));
-  h.appendChild(el('h2', null, 'All of it. There is no higher tier.'));
-  inc.appendChild(h);
-  var list = el('div', 'inclist');
-  HOME.features.forEach(function(r){
-    var row = el('div', 'incrow');
-    row.appendChild(iconEl(r.icon));
-    var txt = el('div');
-    txt.appendChild(el('b', null, r.name));
-    txt.appendChild(el('span', null, r.desc));
-    row.appendChild(txt);
-    list.appendChild(row);
+  /* who it is for */
+  var who = lsec('Who this is for', 'Three people, mostly.', null);
+  var cards = el('div', 'steps3');
+  HOME.audience.forEach(function(r){
+    var c = el('div', 'step3');
+    c.appendChild(el('h3', null, r[0]));
+    c.appendChild(el('p', null, r[1]));
+    cards.appendChild(c);
   });
-  inc.appendChild(list);
+  who.appendChild(cards);
+  v.appendChild(who);
 
+  /* why it exists */
+  var why = lsec('Why it exists', HOME.why.title, null);
+  HOME.why.paras.forEach(function(x){
+    var p = el('p', 'sub', x);
+    p.style.maxWidth = '62ch';
+    why.appendChild(p);
+  });
+  v.appendChild(why);
+
+  /* how it works */
+  var how = lsec('How it works', 'Read it, quiz it, hunt down what is left.',
+    'The app decides what you do next, so you are not the one choosing — ' +
+    'which is where most study time gets lost.');
+  var st = el('div', 'steps3');
+  HOME.steps.forEach(function(r){
+    var c = el('div', 'step3');
+    c.appendChild(el('div', 'sno', r[0]));
+    c.appendChild(el('h3', null, r[1]));
+    c.appendChild(el('p', null, r[2]));
+    st.appendChild(c);
+  });
+  how.appendChild(st);
+  v.appendChild(how);
+
+  /* what is inside */
+  var inc = lsec('What is inside', 'All of it. There is no higher tier.', null);
+  inc.appendChild(includedList());
+  v.appendChild(inc);
+
+  /* the honest part */
+  var honest = lsec('The honest part', 'What this is not.', null);
+  var ul = el('ul'); ul.className = 'plainlist';
+  HOME.honest.forEach(function(x){ ul.appendChild(el('li', null, x)); });
+  honest.appendChild(ul);
+  v.appendChild(honest);
+
+  /* close */
+  var end = el('div', 'endcta');
+  end.appendChild(el('h2', null, 'One payment. Yours for good.'));
+  end.appendChild(el('p', null,
+    'Nothing renews and there is nothing to cancel. If it is not what you ' +
+    'wanted, email within 14 days and get your money back.'));
+  end.appendChild(priceButton('See what you get — ' + money(HOME.price)));
+  v.appendChild(end);
+}
+
+/* ----------------------------------------------------------- the buy page */
+function renderBuy(v, q){
+  var t = HOME.totals;
+
+  var hero = el('div', 'hero2'), w = el('div', 'wrap');
+  var note = noticeFor(q);
+  if (note) w.appendChild(el('div', 'gatenote', note));
+
+  var back = el('button', 'linkish', '← Back to the home page');
+  back.style.cssText = 'align-self:flex-start;margin-bottom:.2rem';
+  back.onclick = function(){ location.href = '/'; };
+  w.appendChild(back);
+
+  w.appendChild(el('div', 'kicker2',
+    money(HOME.price) + ' once · No subscription · Lifetime access'));
+  w.appendChild(el('h1', null, 'Get access.'));
+  w.appendChild(el('p', 'lede2',
+    'All ' + t.total + ' questions, the study notes, the maths and the drills. ' +
+    'One payment, and the account is yours.'));
+
+  var buybox = el('div', 'buybox');
+  var tag = el('div', 'pricetag');
+  tag.appendChild(el('span', 'amount', money(HOME.price)));
+  tag.appendChild(el('span', 'once', 'one payment · lifetime access'));
+  buybox.appendChild(tag);
+  var go = el('button', 'btn');
+  go.textContent = 'Pay ' + money(HOME.price) + ' with Stripe';
+  go.onclick = function(){ buy(); };
+  buybox.appendChild(go);
+  var si = el('button', 'linkish', 'Already bought? Sign in');
+  si.onclick = function(){ openAuth('email'); };
+  buybox.appendChild(si);
+  w.appendChild(buybox);
+
+  var trust = el('div', 'trustrow');
+  ['No subscription', 'Nothing renews', '14-day refund', 'Works offline']
+    .forEach(function(x){ trust.appendChild(el('span', 'trust', x)); });
+  w.appendChild(trust);
+  hero.appendChild(w);
+  v.appendChild(hero);
+
+  var inc = lsec('What the ' + money(HOME.price) + ' buys',
+                 'Everything below. There is no higher tier.', null);
+  inc.appendChild(includedList());
   var acts = el('div', 'cta2');
   acts.style.marginTop = '.5rem';
   var go2 = el('button', 'btn');
-  go2.textContent = 'Get access — ' + money(HOME.price);
+  go2.textContent = 'Pay ' + money(HOME.price) + ' with Stripe';
   go2.onclick = function(){ buy(); };
   acts.appendChild(go2);
   inc.appendChild(acts);
-  inc.appendChild(el('p', 'muted',
-    'Card handled by Stripe — it never touches this site. Not affiliated ' +
-    'with the Georgia Real Estate Commission, PSI, or any school, and not a ' +
-    'substitute for the 75-hour pre-licence course Georgia requires.'));
+  var fine = el('p', 'muted',
+    'Card handled by Stripe — it never touches this site. Full refund ' +
+    'within 14 days if it is not for you. By buying you agree to the terms.');
+  fine.style.maxWidth = '46rem';
+  inc.appendChild(fine);
   v.appendChild(inc);
+}
+
+function render(){
+  var v = $('page');
+  v.innerHTML = '';
+  var q = new URLSearchParams(location.search);
+  if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
+  if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
+  if (HOME.page === 'buy') return renderBuy(v, q);
+  return renderWelcome(v, q);
 }
 
 /* ------------------------------------------------------------------ boot */
@@ -259,8 +376,14 @@ function render(){
     try { localStorage.setItem(THEME_KEY, next); } catch(e){}
     applyTheme(next);
   };
-  $('buyBtn').textContent = 'Get access — ' + money(HOME.price);
-  $('buyBtn').onclick = function(){ buy(); };
+  /* On the welcome page this leads to the buy page; on the buy page it pays. */
+  var onBuyPage = (HOME.page === 'buy');
+  /* The price is all over the page already; in the header it only forces a
+     wrap on a phone. */
+  $('buyBtn').textContent = onBuyPage ? ('Pay ' + money(HOME.price)) : 'Get access';
+  $('buyBtn').onclick = function(){
+    if (onBuyPage) buy(); else location.href = '/buy';
+  };
   $('signinBtn').onclick = function(){ openAuth('email'); };
   $('authScrim').onclick = closeAuth;
   $('brand').onclick = function(){ location.href = '/'; };

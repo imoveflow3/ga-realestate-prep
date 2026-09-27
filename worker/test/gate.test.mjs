@@ -52,7 +52,7 @@ function makeEnv(db) {
     RESEND_API_KEY: 're_test',
     FROM_EMAIL: 'login@prep.test',
     PRICE_CENTS: '1900',
-    ASSETS: { fetch: async () => new Response('<!doctype html>sales page', {
+    ASSETS: { fetch: async (r) => new Response(new URL(r.url).pathname, {
       status: 200, headers: { 'Content-Type': 'text/html' } }) },
   };
 }
@@ -257,6 +257,20 @@ await it('/activate without a session_id just goes home', async () => {
   const res = await worker.fetch(req('/activate'), env, {});
   assert.equal(res.status, 302);
   assert.equal(res.headers.get('Location'), '/');
+});
+
+await it('the extensionless public pages resolve to real files', async () => {
+  for (const [asked, file] of [['/', '/index.html'], ['/buy', '/buy.html'],
+                               ['/terms', '/terms.html'], ['/privacy', '/privacy.html']]) {
+    const res = await worker.fetch(req(asked), env, {});
+    assert.equal(res.status, 200, asked + ' did not resolve');
+    assert.equal(await res.text(), file, asked + ' served the wrong file');
+  }
+});
+
+await it('an unknown path goes home rather than 404ing into nothing', async () => {
+  const res = await worker.fetch(req('/nope'), env, {});
+  assert.ok([200, 302].includes(res.status));
 });
 
 globalThis.fetch = realFetch;

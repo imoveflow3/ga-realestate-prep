@@ -1186,6 +1186,19 @@ body.landing footer{max-width:1120px}
   .buybox .btn{flex:1; min-width:11rem}
   .inclist{grid-template-columns:1fr}
 }
+
+/* header actions never wrap: two words on two lines reads as broken */
+.iconbtn,.hudacts .btn{white-space:nowrap}
+@media (max-width:860px){
+  .hudacts{gap:.25rem}
+  .hudacts .btn{padding:.5rem .8rem; font-size:.9rem}
+  #signinBtn{padding:.4rem .55rem; font-size:.74rem}
+}
+/* A phone header fits a wordmark, a way in, and a way to buy. The theme
+   toggle is the one that can go -- the system preference still decides. */
+@media (max-width:640px){
+  #themeBtn{display:none}
+}
 </style></head><body>
 <main id="main" style="padding-top:2.5rem">
 <div class="card reading"><h1>Privacy</h1><p><b>What is collected.</b> Your email address, so you can sign in and so we know what you bought, and your study progress -- scores, which questions you have answered, and your plan settings.</p>
@@ -1194,5 +1207,5 @@ body.landing footer{max-width:1120px}
 <p><b>Sharing.</b> Your data is not sold, rented, or shared. Stripe processes the payment; an email provider delivers your sign-in code. Nobody else sees any of it.</p>
 <p><b>Deleting it.</b> Email support@example.com and your account and every row of your progress will be deleted. That is permanent.</p>
 <p><b>Cookies.</b> One, holding your signed-in session. No tracking cookies, so there is no banner to click.</p>
-<p class="muted">Last updated 2026-09-26. <a href="/">Back to the home page</a>.</p></div>
+<p class="muted">Last updated 2026-09-27. <a href="/">Back to the home page</a>.</p></div>
 </main></body></html>

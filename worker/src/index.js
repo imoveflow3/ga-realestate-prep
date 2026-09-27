@@ -214,7 +214,12 @@ export default {
     }
 
     /* ------------------------------------------------- everything public */
-    const asset = await env.ASSETS.fetch(request);
+    const PAGES = { '/': '/index.html', '/buy': '/buy.html',
+                    '/terms': '/terms.html', '/privacy': '/privacy.html' };
+    const wanted = PAGES[path]
+      ? new Request(new URL(PAGES[path], url.origin), request)
+      : request;
+    const asset = await env.ASSETS.fetch(wanted);
     if (asset.status !== 404) {
       const out = new Response(asset.body, asset);
       for (const [k, v] of Object.entries(SECURITY)) out.headers.set(k, v);

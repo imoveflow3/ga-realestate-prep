@@ -67,6 +67,61 @@ FEATURES = [
 ]
 
 
+AUDIENCE = [
+    ["You have finished the 75-hour course",
+     "The course teaches you the material. It does not sit you down in front "
+     "of a hundred and thirty-two questions written the way the exam writes "
+     "them, and that is a different skill."],
+    ["You are sitting it for the first time",
+     "Most people who fail do not fail both halves. They clear National and "
+     "miss Georgia, or the other way round. This tracks the two portions "
+     "apart, because that is how you are scored."],
+    ["You failed one half and have to retake",
+     "You only resit the portion you missed. The weak-spot drill finds which "
+     "narrow topics actually sank it, rather than making you reread the lot."],
+]
+
+WHY = {
+    "title": "Built by someone sitting the same exam.",
+    "paras": [
+        "This started as one person's study tool for the Georgia salesperson "
+        "exam, built because the free material was thin and the paid material "
+        "was ninety dollars. It got them through, and it is still here.",
+        "The Georgia half was not copied out of a cram guide. It was read out "
+        "of the Georgia Real Estate Commission's own InfoBase and the Georgia "
+        "Code, chapter by chapter. That matters in the places where the guides "
+        "are simply wrong \u2014 continuing education in Georgia is 24 hours "
+        "per four-year renewal, not the 36 that national study guides quote.",
+        "The national half follows the standard content outline the licensing "
+        "exams use: agency, contracts, financing, valuation, property "
+        "ownership, transfer of title, practice and disclosures, and the maths.",
+    ],
+}
+
+STEPS = [
+    ["01", "Read it once",
+     "Notes for every topic on the blueprint, in plain sentences, with a short "
+     "quiz after each section so it sticks the first time."],
+    ["02", "Quiz until it holds",
+     "Timed sets at the real difficulty. Every answer tells you why it is "
+     "right and names the concept being tested."],
+    ["03", "Attack the gaps",
+     "Anything you miss lands in your notebook and on the flashcard deck, and "
+     "comes back until it stops being a gap."],
+]
+
+HONEST = [
+    "Not affiliated with, endorsed by, or connected to the Georgia Real Estate "
+    "Commission, PSI, or any school or exam vendor.",
+    "Not legal advice and not an official statement of Georgia law. Rules "
+    "change; grec.state.ga.us is the authority, not this site.",
+    "Not a substitute for the 75-hour pre-licence course Georgia requires "
+    "before you may sit the exam. You still have to do that.",
+    "Not a guarantee. It is practice, and practice is only worth what you put "
+    "into it.",
+]
+
+
 def read(name):
     with io.open(os.path.join(ONLINE, name), encoding="utf-8") as f:
         return f.read()
@@ -172,25 +227,45 @@ def main():
                       "desc": d % {"terms": totals["terms"]} if "%(" in d else d}
                      for i, n, d in FEATURES],
         "icons": ICONS,
+        "audience": AUDIENCE,
+        "why": WHY,
+        "steps": STEPS,
+        "honest": HONEST,
     }
-    blob = json.dumps(home, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
-    page = (read("home.html")
-            .replace("__CSS__", css)
-            .replace("__HOME__", blob)
-            .replace("__HOMEJS__", read("home.js"))
-            .replace("__SUPPORT__", SUPPORT_EMAIL)
-            .replace("__BUILD__", stamp))
-    cut = page.index("<header")
+    shell = read("home.html")
+    homejs = read("home.js")
     head = online.head(sum(len(v) for v in data["banks"].values()), totals["terms"])
-    head = head.replace("<title>Georgia Real Estate Exam Prep — free salesperson "
-                        "practice tests</title>",
-                        "<title>Georgia Real Estate Exam Prep — %d practice "
-                        "questions, $%d once</title>"
-                        % (totals["total"], PRICE_CENTS // 100))
-    page = (head + page[:cut].replace(
-        "<title>Georgia Real Estate Exam Prep</title>\n", "")
-        + "</head>\n<body>\n" + page[cut:] + "\n</body>\n</html>\n")
-    write(os.path.join(PUBLIC, "index.html"), page)
+
+    def public_page(name, page, title, desc):
+        blob = json.dumps(dict(home, page=page), separators=(",", ":"),
+                          ensure_ascii=False).replace("</", "<\\/")
+        body = (shell.replace("__CSS__", css)
+                     .replace("__HOME__", blob)
+                     .replace("__HOMEJS__", homejs)
+                     .replace("__SUPPORT__", SUPPORT_EMAIL)
+                     .replace("__BUILD__", stamp))
+        cut = body.index("<header")
+        h = head.replace("<title>Georgia Real Estate Exam Prep \u2014 free "
+                         "salesperson practice tests</title>",
+                         "<title>%s</title>" % title)
+        if desc:
+            h = h.replace('<meta property="og:title" content="Pass the Georgia '
+                          'salesperson exam. Free.">',
+                          '<meta property="og:title" content="%s">' % title)
+        page_html = (h + body[:cut].replace(
+                        "<title>Georgia Real Estate Exam Prep</title>\n", "")
+                     + "</head>\n<body>\n" + body[cut:] + "\n</body>\n</html>\n")
+        write(os.path.join(PUBLIC, name), page_html)
+        return len(page_html)
+
+    welcome_n = public_page(
+        "index.html", "welcome",
+        "Georgia Real Estate Exam Prep \u2014 %d practice questions" % totals["total"],
+        "Practice for the Georgia real estate salesperson licensing exam.")
+    buy_n = public_page(
+        "buy.html", "buy",
+        "Get access \u2014 Georgia Real Estate Exam Prep",
+        "One payment for the full Georgia salesperson exam question bank.")
 
     write(os.path.join(PUBLIC, "terms.html"), legal_page(
         "Terms and refunds", [
@@ -241,9 +316,12 @@ def main():
 
     gsize = os.path.getsize(os.path.join(GATED, "gated.js"))
     psize = os.path.getsize(os.path.join(PUBLIC, "index.html"))
+    bsize = os.path.getsize(os.path.join(PUBLIC, "buy.html"))
     print("gated  worker/assets/gated.js    %.2f MB  (app + %d questions)"
           % (gsize / 1e6, totals["total"]))
-    print("public worker/public/index.html   %.2f MB  (sales page)" % (psize / 1e6))
+    print("public worker/public/index.html   %.0f KB  (welcome, for new users)"
+          % (psize / 1e3))
+    print("public worker/public/buy.html     %.0f KB  (payment)" % (bsize / 1e3))
     print("public worker/public/terms.html, privacy.html, assets/")
     print("price  $%d one-time   support %s" % (PRICE_CENTS // 100, SUPPORT_EMAIL))
 
