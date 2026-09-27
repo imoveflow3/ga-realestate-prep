@@ -236,8 +236,9 @@ def main():
     homejs = read("home.js")
     head = online.head(sum(len(v) for v in data["banks"].values()), totals["terms"])
 
-    def public_page(name, page, title, desc):
-        blob = json.dumps(dict(home, page=page), separators=(",", ":"),
+    def public_page(name, page, title, desc, preview=False):
+        blob = json.dumps(dict(home, page=page, preview=preview),
+                          separators=(",", ":"),
                           ensure_ascii=False).replace("</", "<\\/")
         body = (shell.replace("__CSS__", css)
                      .replace("__HOME__", blob)
@@ -266,6 +267,13 @@ def main():
         "buy.html", "buy",
         "Get access \u2014 Georgia Real Estate Exam Prep",
         "One payment for the full Georgia salesperson exam question bank.")
+
+    # A single self-contained file carrying both pages, for looking at the
+    # design before any of it is deployed. Nothing in it calls a server.
+    public_page("preview.html", "welcome",
+                "Preview \u2014 Georgia Real Estate Exam Prep",
+                "Preview of the Georgia salesperson exam prep site.",
+                preview=True)
 
     write(os.path.join(PUBLIC, "terms.html"), legal_page(
         "Terms and refunds", [
@@ -322,6 +330,8 @@ def main():
     print("public worker/public/index.html   %.0f KB  (welcome, for new users)"
           % (psize / 1e3))
     print("public worker/public/buy.html     %.0f KB  (payment)" % (bsize / 1e3))
+    print("       worker/public/preview.html %.0f KB  (both pages, no server needed)"
+          % (os.path.getsize(os.path.join(PUBLIC, "preview.html")) / 1e3))
     print("public worker/public/terms.html, privacy.html, assets/")
     print("price  $%d one-time   support %s" % (PRICE_CENTS // 100, SUPPORT_EMAIL))
 

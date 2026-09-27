@@ -1195,3 +1195,12 @@ body.landing footer{max-width:1120px}
 @media (max-width:640px){
   #themeBtn{display:none}
 }
+
+/* the preview banner: unmistakably not the live site */
+.previewbar{
+  background:var(--caution-soft); color:var(--ink);
+  border:1px solid color-mix(in srgb, var(--caution) 35%, transparent);
+  border-radius:var(--r-sm); padding:.7rem 1rem; margin-bottom:1rem;
+  font-size:.92rem; line-height:1.5;
+}
+.previewbar b{color:var(--caution); letter-spacing:.02em}

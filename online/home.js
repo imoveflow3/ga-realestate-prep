@@ -43,6 +43,10 @@ function applyTheme(mode){
 /* ------------------------------------------------------------- buying */
 var BUYING = false;
 function buy(email){
+  if (HOME.preview){
+    toast('Preview only \u2014 payments are not connected until this is deployed.');
+    return;
+  }
   if (BUYING) return;
   BUYING = true;
   toast('Opening secure checkout…');
@@ -65,6 +69,10 @@ function buy(email){
 var AUTH = {email: '', stage: 'email'};
 
 function openAuth(stage){
+  if (HOME.preview){
+    toast('Preview only \u2014 accounts are not connected until this is deployed.');
+    return;
+  }
   AUTH.stage = stage || 'email';
   renderAuth();
   $('authSheet').hidden = false;
@@ -188,7 +196,9 @@ function priceButton(label){
   var b = el('button', 'btn');
   b.textContent = label || ('Get access — ' + money(HOME.price));
   b.onclick = function(){
-    if (HOME.page === 'buy') buy(); else location.href = '/buy';
+    if (HOME.page === 'buy') return buy();
+    if (HOME.preview){ HOME.page = 'buy'; render(); window.scrollTo(0, 0); return; }
+    location.href = '/buy';
   };
   return b;
 }
@@ -309,7 +319,10 @@ function renderBuy(v, q){
 
   var back = el('button', 'linkish', '← Back to the home page');
   back.style.cssText = 'align-self:flex-start;margin-bottom:.2rem';
-  back.onclick = function(){ location.href = '/'; };
+  back.onclick = function(){
+    if (HOME.preview){ HOME.page = 'welcome'; render(); window.scrollTo(0, 0); return; }
+    location.href = '/';
+  };
   w.appendChild(back);
 
   w.appendChild(el('div', 'kicker2',
@@ -361,6 +374,14 @@ function renderBuy(v, q){
 function render(){
   var v = $('page');
   v.innerHTML = '';
+  if (HOME.preview){
+    var pv = el('div', 'previewbar');
+    pv.appendChild(el('b', null, 'Preview'));
+    pv.appendChild(el('span', null,
+      ' \u2014 this is how the site will look. Buying and signing in start ' +
+      'working once it is deployed.'));
+    v.appendChild(pv);
+  }
   var q = new URLSearchParams(location.search);
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
@@ -382,7 +403,9 @@ function render(){
      wrap on a phone. */
   $('buyBtn').textContent = onBuyPage ? ('Pay ' + money(HOME.price)) : 'Get access';
   $('buyBtn').onclick = function(){
-    if (onBuyPage) buy(); else location.href = '/buy';
+    if (HOME.page === 'buy') return buy();
+    if (HOME.preview){ HOME.page = 'buy'; render(); window.scrollTo(0, 0); return; }
+    location.href = '/buy';
   };
   $('signinBtn').onclick = function(){ openAuth('email'); };
   $('authScrim').onclick = closeAuth;
