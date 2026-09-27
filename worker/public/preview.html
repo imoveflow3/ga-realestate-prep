@@ -83,6 +83,11 @@
   --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
 }
 
+/* The front door and the app are two documents on one origin. Without this,
+   going between them is a hard load: a flash, then 1.17 MB arriving. With it
+   the browser cross-fades the two pages and the wordmark stays put. */
+@view-transition{navigation:auto}
+
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--bg); color:var(--ink);
@@ -1276,6 +1281,49 @@ body.landing footer{max-width:1120px}
   .gatecard h1{font-size:1.6rem}
   .gateprice .amount{font-size:2.4rem}
 }
+
+/* ======================================================================
+   Arriving and leaving.
+
+   A refresh should look composed rather than like something dropped on the
+   floor, and stepping into the app should read as one move, not two pages.
+   ====================================================================== */
+
+/* The wordmark is on both documents, so the browser can carry it across
+   instead of redrawing it. Everything else cross-fades around it. */
+header.hud .wordmark{view-transition-name:sitemark}
+
+::view-transition-old(root),
+::view-transition-new(root){animation-duration:.34s; animation-timing-function:var(--ease)}
+::view-transition-old(sitemark),
+::view-transition-new(sitemark){animation-duration:.34s}
+
+/* Arrival. Content fades up while the header and rail stay put, so the join
+   reads as one move. It sits on main, not body, because an animation on body
+   would outrank the leaving transition below and the exit would never play. */
+@keyframes arrive{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+main{animation:arrive .3s var(--ease) both}
+
+/* Entrance. The card and the app's first view rise in rather than appearing. */
+@keyframes pagein{
+  from{opacity:0; transform:translateY(10px) scale(.994)}
+  to{opacity:1; transform:none}
+}
+.gatecard{animation:pagein .44s var(--ease) both}
+.gatewrap .gatecard{animation-delay:.02s}
+
+/* Exit, for browsers with no cross-document transition: fade the page down
+   before the navigation rather than letting it sit there looking stuck. */
+body.leaving{
+  opacity:0; transform:scale(.99);
+  transition:opacity .2s var(--ease), transform .2s var(--ease);
+}
+
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+  main,.gatecard{animation:none}
+  body.leaving{transition:none; opacity:1; transform:none}
+}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1525,7 +1573,21 @@ function includedList(){
   return list;
 }
 
-function openApp(){ location.href = HOME.appHref || '/buy'; }
+function reducedMotion(){
+  try { return matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  catch(e){ return false; }
+}
+
+/* The stylesheet opts into a cross-document transition, but the browser only
+   runs one if the incoming page reaches first paint inside its budget, and a
+   1.17 MB document does not. Measured: pageswap reported "plain". So do the
+   fade here rather than trusting a transition that silently declines. */
+function openApp(){
+  var href = HOME.appHref || '/buy';
+  if (reducedMotion()){ location.href = href; return; }
+  document.body.classList.add('leaving');
+  setTimeout(function(){ location.href = href; }, 170);
+}
 
 function priceButton(label){
   var b = el('button', 'btn');
@@ -1805,6 +1867,13 @@ function render(){
 
 /* ------------------------------------------------------------------ boot */
 (function(){
+  /* Back out of the app and the browser may restore this page from bfcache
+     exactly as it was left -- mid-fade, at opacity zero. Clear it on every
+     show, or the front door comes back invisible. */
+  window.addEventListener('pageshow', function(){
+    document.body.classList.remove('leaving');
+  });
+
   applyTheme(readTheme());
   $('themeBtn').onclick = function(){
     var next = THEMES[(THEMES.indexOf(readTheme()) + 1) % THEMES.length];

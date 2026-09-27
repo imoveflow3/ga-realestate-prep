@@ -192,7 +192,21 @@ function includedList(){
   return list;
 }
 
-function openApp(){ location.href = HOME.appHref || '/buy'; }
+function reducedMotion(){
+  try { return matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  catch(e){ return false; }
+}
+
+/* The stylesheet opts into a cross-document transition, but the browser only
+   runs one if the incoming page reaches first paint inside its budget, and a
+   1.17 MB document does not. Measured: pageswap reported "plain". So do the
+   fade here rather than trusting a transition that silently declines. */
+function openApp(){
+  var href = HOME.appHref || '/buy';
+  if (reducedMotion()){ location.href = href; return; }
+  document.body.classList.add('leaving');
+  setTimeout(function(){ location.href = href; }, 170);
+}
 
 function priceButton(label){
   var b = el('button', 'btn');
@@ -472,6 +486,13 @@ function render(){
 
 /* ------------------------------------------------------------------ boot */
 (function(){
+  /* Back out of the app and the browser may restore this page from bfcache
+     exactly as it was left -- mid-fade, at opacity zero. Clear it on every
+     show, or the front door comes back invisible. */
+  window.addEventListener('pageshow', function(){
+    document.body.classList.remove('leaving');
+  });
+
   applyTheme(readTheme());
   $('themeBtn').onclick = function(){
     var next = THEMES[(THEMES.indexOf(readTheme()) + 1) % THEMES.length];
