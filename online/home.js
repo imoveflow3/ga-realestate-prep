@@ -218,6 +218,62 @@ function noticeFor(q){
   return null;
 }
 
+/* ------------------------------------------------------- the minimal page */
+/* Sign up, sign in, pay. Nothing else competing for the decision.
+   HOME.layout picks this over the long welcome page; both are built from the
+   same data, so switching back is one flag in the build. */
+function renderMinimal(v, q){
+  var t = HOME.totals;
+  var wrap = el('div', 'gatewrap');
+  var card = el('div', 'gatecard');
+
+  var note = noticeFor(q);
+  if (note) card.appendChild(el('div', 'gatenote', note));
+
+  var mark = el('div', 'gatemark');
+  mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
+    '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
+    'fill="none" stroke="currentColor" stroke-width="30" stroke-linejoin="round"/></svg>';
+  card.appendChild(mark);
+
+  card.appendChild(el('h1', null, 'Georgia Real Estate Exam Prep'));
+  card.appendChild(el('p', 'gatelede',
+    t.total + ' practice questions, ' + t.terms + ' defined terms and worked ' +
+    'maths for the salesperson licensing exam.'));
+
+  if (!HOME.openAccess){
+    var price = el('div', 'gateprice');
+    price.appendChild(el('span', 'amount', money(HOME.price)));
+    price.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
+    card.appendChild(price);
+  }
+
+  var acts = el('div', 'gateacts');
+  var go = el('button', 'btn wide');
+  if (HOME.openAccess){
+    go.textContent = 'Start studying';
+    go.onclick = openApp;
+  } else {
+    go.textContent = 'Get access \u2014 ' + money(HOME.price);
+    go.onclick = function(){ buy(); };
+  }
+  acts.appendChild(go);
+
+  if (!HOME.openAccess){
+    var si = el('button', 'btn ghost wide', 'I already have an account');
+    si.onclick = function(){ openAuth('email'); };
+    acts.appendChild(si);
+  }
+  card.appendChild(acts);
+
+  card.appendChild(el('p', 'gatefine', HOME.openAccess
+    ? 'Free to use right now. Accounts and saved progress are on the way.'
+    : 'No subscription. Nothing renews. Full refund within 14 days.'));
+
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+}
+
 /* ------------------------------------------------------- the welcome page */
 function renderWelcome(v, q){
   var t = HOME.totals;
@@ -410,6 +466,7 @@ function render(){
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
   if (HOME.page === 'buy') return renderBuy(v, q);
+  if (HOME.layout === 'minimal') return renderMinimal(v, q);
   return renderWelcome(v, q);
 }
 
@@ -424,6 +481,10 @@ function render(){
   /* On the welcome page this leads to the buy page; on the buy page it pays. */
   var onBuyPage = (HOME.page === 'buy');
   if (HOME.openAccess) $('signinBtn').hidden = true;
+  if (HOME.layout === 'minimal' && HOME.page !== 'buy'){
+    $('buyBtn').hidden = true;          // the card below is the whole point
+    $('signinBtn').hidden = true;
+  }
   /* The price is all over the page already; in the header it only forces a
      wrap on a phone. */
   $('buyBtn').textContent = HOME.openAccess ? 'Open the app'

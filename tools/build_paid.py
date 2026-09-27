@@ -35,6 +35,8 @@ GATED = os.path.join(WORKER, "assets")
 PRICE_CENTS = 1900
 SUPPORT_EMAIL = "support@example.com"          # change before you take money
 SAMPLE_COUNT = 0        # the sales page hands out nothing
+LAYOUT = "minimal"      # "minimal" = sign up / sign in / pay only;
+                        # "full" = the long welcome page
 
 from tools._homecopy import (ICONS, FEATURES, AUDIENCE, WHY, STEPS,  # noqa: E402
                              HONEST)
@@ -154,7 +156,8 @@ def main():
     head = online.head(sum(len(v) for v in data["banks"].values()), totals["terms"])
 
     def public_page(name, page, title, desc, preview=False):
-        blob = json.dumps(dict(home, page=page, preview=preview),
+        blob = json.dumps(dict(home, page=page, preview=preview,
+                                    layout=LAYOUT),
                           separators=(",", ":"),
                           ensure_ascii=False).replace("</", "<\\/")
         body = (shell.replace("__CSS__", css)

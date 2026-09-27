@@ -1204,3 +1204,38 @@ body.landing footer{max-width:1120px}
   font-size:.92rem; line-height:1.5;
 }
 .previewbar b{color:var(--caution); letter-spacing:.02em}
+
+/* ======================================================================
+   The minimal front door: sign up, sign in, pay, and nothing else.
+   ====================================================================== */
+.gatewrap{display:grid; place-items:center; min-height:min(68vh, 34rem);
+  padding:2rem 0 1rem}
+.gatecard{
+  width:100%; max-width:30rem; text-align:center; background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow-lift);
+  padding:2.6rem 2rem 2.1rem; display:flex; flex-direction:column;
+  align-items:center; gap:.85rem; position:relative; overflow:hidden;
+}
+.gatecard::before{content:""; position:absolute; inset:0 0 auto; height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--brass))}
+.gatemark{width:3.2rem; height:3.2rem; color:var(--accent); margin-bottom:.1rem}
+.gatemark svg{width:100%; height:100%}
+.gatecard h1{font-size:1.85rem; line-height:1.12; max-width:16ch}
+.gatelede{font-size:.98rem; line-height:1.55; color:var(--ink-2); max-width:38ch}
+.gateprice{display:flex; flex-direction:column; gap:.1rem; margin:.35rem 0 .1rem}
+.gateprice .amount{font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums; font-size:2.9rem; font-weight:600;
+  letter-spacing:-.04em; line-height:1}
+.gateprice .once{font-size:.82rem; color:var(--ink-3)}
+.gateacts{display:flex; flex-direction:column; gap:.55rem; width:100%;
+  max-width:22rem; margin-top:.3rem}
+.gateacts .btn{padding:.85rem 1.2rem; font-size:1.02rem; border-radius:var(--r-sm)}
+.gatefine{font-size:.85rem; color:var(--ink-3); max-width:34ch; line-height:1.5}
+.gatecard .gatenote{text-align:left; margin-bottom:.4rem}
+
+@media (max-width:860px){
+  .gatewrap{min-height:auto; padding:1.2rem 0 .5rem}
+  .gatecard{padding:2rem 1.25rem 1.7rem}
+  .gatecard h1{font-size:1.6rem}
+  .gateprice .amount{font-size:2.4rem}
+}

@@ -195,6 +195,7 @@ SITEMAP = """<?xml version="1.0" encoding="UTF-8"?>
 """
 
 VARIANTS = 70          # distinct pre-rolled problems per math generator
+LAYOUT = "minimal"     # front door: "minimal" = one card, "full" = long welcome
 
 
 def roll(key, target):
@@ -277,6 +278,7 @@ def build_home(stamp, css, totals, price_cents=1900):
     """
     home = {
         "page": "welcome",
+        "layout": LAYOUT,
         "preview": False,
         "openAccess": True,
         "appHref": "app/",
