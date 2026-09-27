@@ -25,6 +25,11 @@ function persist(){ save(D); }
 var VIEWS = ['welcome','today','dash','study','cards','vocab','home','math',
              'notebook','weak','quiz','result','plan','setup','about'];
 
+/* Served from behind the paywall, this build has no reason to sell itself:
+   the reader has already bought. It skips the front door and drops the
+   "free, no signup" language, which is now simply untrue. */
+var PAID = (typeof window !== 'undefined') && window.__PAID__ === true;
+
 /* Everything reachable from the navigation, in one table, so the desktop rail,
    the phone tab bar and the More sheet can never drift apart. */
 var NAV = [
@@ -42,6 +47,7 @@ var NAV = [
   {v:'setup',    name:'Your data',  desc:'Move progress between devices, or start over'},
   {v:'about',    name:'About',      desc:'What this is, who made it, what it is not'}
 ];
+if (PAID) NAV = NAV.filter(function(n){ return n.v !== 'welcome'; });
 var TABS = ['today','study','home','dash'];          // the phone tab bar
 var NOHASH = {quiz:1, result:1};                     // not worth a shareable link
 var VQ = null;
@@ -91,7 +97,7 @@ function show(v, silent){
 
   /* the front door hides the rail and the status strip -- neither means
      anything to someone who has just arrived -- and offers one way in */
-  var landing = (v === 'welcome' && WIZ.step === 0);
+  var landing = (v === 'welcome' && WIZ.step === 0 && !PAID);
   document.body.classList.toggle('landing', landing);
   var ab = $('appBtn');
   if (ab){
@@ -136,6 +142,11 @@ window.addEventListener('hashchange', function(){
   show(want, true);
 });
 
+/* Home is the sales page. Behind the paywall it has nothing to say. */
+if (PAID){
+  document.querySelectorAll('#rail button[data-view="welcome"]')
+    .forEach(function(b){ b.remove(); });
+}
 document.querySelectorAll('#rail button').forEach(function(b){
   b.onclick = function(){ navTo(b.dataset.view); };
 });
@@ -2560,15 +2571,24 @@ function wizStep(n){
   WIZ.at = Date.now();
   WIZ.used = true;                  // distinguishes the wizard from a tile click
   renderWelcome();
-  document.body.classList.toggle('landing', n === 0);
-  if ($('appBtn')) $('appBtn').hidden = (n !== 0);
+  document.body.classList.toggle('landing', n === 0 && !PAID);
+  if ($('appBtn')) $('appBtn').hidden = (n !== 0) || PAID;
   window.scrollTo(0, 0);
 }
 
 function renderWelcome(){
   var v = $('view-welcome');
   v.innerHTML = '';
+  if (PAID && WIZ.step === 0) WIZ.step = 1;   // no sales pitch behind the till
   if (WIZ.step === 0) return welcomeIntro(v);
+  if (PAID && WIZ.step === 1){
+    var hi = el('div', 'card');
+    hi.appendChild(cardHead('You are in', 'two quick questions'));
+    hi.appendChild(el('p', 'sub',
+      'Everything is unlocked. Answer these and the app paces itself around ' +
+      'your test date \u2014 you can change both later under Study plan.'));
+    v.appendChild(hi);
+  }
   return welcomeWizard(v);
 }
 
@@ -2901,10 +2921,12 @@ function welcomeWizard(v){
     var none = el('button','btn ghost', 'Not booked yet');
     none.onclick = function(){ WIZ.date = ''; wizStep(2); };
     acts.appendChild(none);
-    acts.appendChild(el('span','spacer'));
-    var back = el('button','btn mini ghost', 'Back');
-    back.onclick = function(){ wizStep(0); };
-    acts.appendChild(back);
+    if (!PAID){
+      acts.appendChild(el('span','spacer'));
+      var back = el('button','btn mini ghost', 'Back');
+      back.onclick = function(){ wizStep(0); };
+      acts.appendChild(back);
+    }
     card.appendChild(acts);
     v.appendChild(card);
     return;
@@ -2990,10 +3012,13 @@ function renderAbout(){
   var v = $('view-about'), t = totals();
   v.innerHTML = '';
   v.appendChild(el('h1', null, 'About this site'));
-  v.appendChild(el('p','sub',
-    'A free, open study tool for the Georgia real estate salesperson licensing ' +
-    'exam. It was built by one person preparing for that exam, and kept online ' +
-    'afterwards because it worked.'));
+  v.appendChild(el('p','sub', PAID
+    ? 'A study tool for the Georgia real estate salesperson licensing exam, ' +
+      'built by one person preparing for that exam and kept going afterwards ' +
+      'because it worked. You bought it once; it is yours.'
+    : 'A free, open study tool for the Georgia real estate salesperson licensing ' +
+      'exam. It was built by one person preparing for that exam, and kept online ' +
+      'afterwards because it worked.'));
 
   var what = el('div','card');
   what.appendChild(cardHead('What is in it', 'built ' + BUILD));
@@ -3035,21 +3060,29 @@ function renderAbout(){
    'change; grec.state.ga.us is the authority, not this page.',
    'Not a substitute for the 75-hour pre-licence course Georgia requires before ' +
    'you may sit the exam.',
-   'Not a guarantee of anything. It is practice, and practice is only worth ' +
-   'what you put into it.'].forEach(function(x){
+   (PAID ? 'Not a guarantee of anything. You bought practice material, and ' +
+           'practice is only worth what you put into it.'
+         : 'Not a guarantee of anything. It is practice, and practice is ' +
+           'only worth what you put into it.')].forEach(function(x){
     ul.appendChild(el('li', null, x));
   });
   warn.appendChild(ul);
   v.appendChild(warn);
 
   var priv = el('div','card');
-  priv.appendChild(cardHead('Privacy', 'short version: none collected'));
-  priv.appendChild(el('p','sub',
-    'There is no account, no server and no analytics. Your answers and scores ' +
-    'are written to this browser’s local storage and never leave the ' +
-    'device. The page loads two font files from Google Fonts; everything else ' +
-    '— every question, every note — is inside the page you already ' +
-    'downloaded, which is why it keeps working with no signal.'));
+  priv.appendChild(cardHead('Privacy', PAID ? 'your email, and nothing else'
+                                            : 'short version: none collected'));
+  priv.appendChild(el('p','sub', PAID
+    ? 'Your email address and your study progress, and nothing else. No name, ' +
+      'no tracking, no advertising, no analytics. Card details are handled ' +
+      'entirely by Stripe and never touch this site. Progress is stored against ' +
+      'your account so it follows you between devices, and a copy is kept in ' +
+      'this browser so the app keeps working with no signal.'
+    : 'There is no account, no server and no analytics. Your answers and scores ' +
+      'are written to this browser’s local storage and never leave the ' +
+      'device. The page loads two font files from Google Fonts; everything else ' +
+      '— every question, every note — is inside the page you already ' +
+      'downloaded, which is why it keeps working with no signal.'));
   var go = el('button','btn ghost');
   go.textContent = 'Export or erase my data';
   go.onclick = function(){ navTo('setup'); };
@@ -3057,14 +3090,29 @@ function renderAbout(){
   v.appendChild(priv);
 
   var sh = el('div','card');
-  sh.appendChild(cardHead('Pass it on', 'if it helped'));
-  sh.appendChild(el('p','sub',
-    'Someone in your pre-licence class is studying from a photocopy right now. ' +
-    'This is free and there is nothing to sign up for.'));
-  var b2 = el('button','btn');
-  b2.textContent = 'Share this site';
-  b2.onclick = doShare;
-  sh.appendChild(b2);
+  if (PAID){
+    sh.appendChild(cardHead('Your account', 'signed in'));
+    sh.appendChild(el('p','sub',
+      'Your progress is saved against your account, so signing in on another ' +
+      'device picks up exactly where you left off.'));
+    var out = el('button','btn ghost');
+    out.textContent = 'Sign out';
+    out.onclick = function(){
+      if (!confirm('Sign out on this device? Your progress is saved.')) return;
+      fetch('/api/logout', {method: 'POST', credentials: 'same-origin'})
+        .then(function(){ location.href = '/'; })['catch'](function(){ location.href = '/'; });
+    };
+    sh.appendChild(out);
+  } else {
+    sh.appendChild(cardHead('Pass it on', 'if it helped'));
+    sh.appendChild(el('p','sub',
+      'Someone in your pre-licence class is studying from a photocopy right ' +
+      'now. This is free and there is nothing to sign up for.'));
+    var b2 = el('button','btn');
+    b2.textContent = 'Share this site';
+    b2.onclick = doShare;
+    sh.appendChild(b2);
+  }
   v.appendChild(sh);
 }
 

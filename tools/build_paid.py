@@ -19,7 +19,6 @@ import datetime
 import io
 import json
 import os
-import random
 import shutil
 import sys
 
@@ -35,7 +34,7 @@ GATED = os.path.join(WORKER, "assets")
 
 PRICE_CENTS = 1900
 SUPPORT_EMAIL = "support@example.com"          # change before you take money
-SAMPLE_COUNT = 3
+SAMPLE_COUNT = 0        # the sales page hands out nothing
 
 ICONS = {
     "quiz":  '<rect x="3.5" y="3.5" width="17" height="17" rx="4"/>'
@@ -54,53 +53,18 @@ ICONS = {
 
 FEATURES = [
     ("quiz", "Practice quizzes",
-     "Timed sets that mirror the real split, scored National and Georgia "
-     "separately because that is how you pass or fail."),
+     "Timed sets, scored National and Georgia separately"),
     ("book", "Study notes",
-     "%(terms)d terms defined in plain sentences, with a short check-yourself "
-     "quiz after every section."),
-    ("math", "Math, worked out",
-     "Every calculation broken into steps you can follow -- prorations, "
-     "commissions, points, loan-to-value, area."),
+     "%(terms)d terms defined, with a quiz after every section"),
+    ("math", "Real estate math",
+     "Every calculation broken into steps you can follow"),
     ("cards", "Vocabulary drill",
-     "You read the definition and name the term. Categories unlock as you "
-     "pass them, and a flashcard deck brings back whatever slipped."),
+     "Definitions, flashcards and spaced repetition"),
     ("target", "Weak-spot targeting",
-     "The narrow sub-topics dragging your score down, each with its own "
-     "drill, plus a week-by-week plan built around your test date."),
+     "Drills for the sub-topics dragging your score down"),
     ("note", "Your notebook",
-     "Every question you get wrong, kept with the right answer and the "
-     "reason, synced to your account and waiting on any device."),
+     "Every miss kept with the reason, on your account"),
 ]
-
-
-def faq(price):
-    return [
-        ["What exactly do I get for $%d?" % (price // 100),
-         "Everything: the full question bank, the study notes, the maths with "
-         "worked solutions, the vocabulary drill, the weak-spot targeting and "
-         "the study planner. There is no higher tier and nothing else to buy."],
-        ["Is it a subscription?",
-         "No. One payment, and the account is yours. Nothing renews and there "
-         "is nothing to cancel."],
-        ["What if it is not for me?",
-         "Email within 14 days of buying and you get a full refund, no "
-         "argument. The address is in the footer."],
-        ["Where do the Georgia rules come from?",
-         "The Georgia Real Estate Commission's own InfoBase and the Georgia "
-         "Code, read chapter by chapter, rather than a commercial cram guide. "
-         "That matters where the guides are wrong -- continuing education in "
-         "Georgia is 24 hours per four-year renewal, not the 36 that national "
-         "study guides tend to quote."],
-        ["Does my progress follow me between devices?",
-         "Yes. Your scores, your notebook and your plan live on your account, "
-         "so signing in on a phone picks up where the laptop left off."],
-        ["Is this official?",
-         "No. It is not affiliated with, endorsed by, or connected to the "
-         "Georgia Real Estate Commission, PSI, or any school. It is practice "
-         "material, not legal advice, and it is no substitute for the 75-hour "
-         "pre-licence course Georgia requires before you may sit the exam."],
-    ]
 
 
 def read(name):
@@ -113,18 +77,6 @@ def write(path, text):
         f.write(text)
 
 
-def pick_samples(bank, n):
-    """A few real questions for the sales page -- enough to prove it, not
-    enough to be worth stealing."""
-    pool = [q for q in bank
-            if q.get("explain") and len(q["explain"]) > 90
-            and len(q["q"]) < 190 and q.get("difficulty", 1) >= 2]
-    rnd = random.Random(20260926)
-    rnd.shuffle(pool)
-    keep = ("q", "choices", "answer", "explain", "concept", "portion", "difficulty")
-    return [{k: q[k] for k in keep if k in q} for q in pool[:n]]
-
-
 def build_app_html(css, data_free_shell):
     """The app, with the question bank cut out of it.
 
@@ -132,7 +84,8 @@ def build_app_html(css, data_free_shell):
     are parked inside __BOOT__ and only run once the bundle has arrived.
     """
     boot = (
-        "<script>window.__SYNC__=true;window.__BOOT__=function(){\n"
+        "<script>window.__SYNC__=true;window.__PAID__=true;"
+        "window.__BOOT__=function(){\n"
         + read("engine.js") + "\n;\n" + read("ui.js") + "\n};</script>\n"
         "<script>(function(){\n"
         "  function fail(m){\n"
@@ -215,16 +168,9 @@ def main():
     home = {
         "price": PRICE_CENTS,
         "totals": totals,
-        "exam": data["exam"],
-        "topics": [{"label": t["label"], "portion": t["portion"],
-                    "exam_questions": t["exam_questions"]}
-                   for t in data["topics"] if t["counts_on_exam"]],
-        "samples": pick_samples(data["banks"]["national"]
-                                + data["banks"]["georgia"], SAMPLE_COUNT),
-        "features": [{"icon": i, "name": n, "desc": d % {"terms": totals["terms"]}
-                      if "%(" in d else d}
+        "features": [{"icon": i, "name": n,
+                      "desc": d % {"terms": totals["terms"]} if "%(" in d else d}
                      for i, n, d in FEATURES],
-        "faq": faq(PRICE_CENTS),
         "icons": ICONS,
     }
     blob = json.dumps(home, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")

@@ -1176,6 +1176,49 @@ body.landing footer{max-width:1120px}
   .kicker2{font-size:.72rem; padding:.28rem .7rem}
   .hero2 h1{font-size:clamp(2.1rem,9vw,2.8rem)}
 }
+
+/* ======================================================================
+   Sales page: the price and the button, with nothing between them.
+   ====================================================================== */
+
+.buybox{
+  display:flex; align-items:center; gap:1.1rem; flex-wrap:wrap;
+  background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r); padding:1.15rem 1.3rem; margin-top:.5rem;
+  max-width:34rem;
+}
+.pricetag{display:flex; flex-direction:column; line-height:1.1; margin-right:.2rem}
+.pricetag .amount{
+  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:2.6rem; font-weight:600; letter-spacing:-.04em; color:var(--ink);
+}
+.pricetag .once{font-size:.82rem; color:var(--ink-3); margin-top:.15rem}
+.buybox .btn{padding:.85rem 1.5rem; font-size:1.04rem; border-radius:var(--r-sm)}
+.buybox .linkish{font-size:.9rem; color:var(--ink-2); flex-basis:100%}
+.buybox .linkish:hover{color:var(--accent)}
+
+.gatenote{
+  border-left:3px solid var(--caution); background:var(--caution-soft);
+  color:var(--ink); border-radius:0 var(--r-sm) var(--r-sm) 0;
+  padding:.7rem .95rem; font-size:.93rem; line-height:1.5; max-width:46rem;
+  margin-bottom:.3rem;
+}
+
+/* the list of what is included: names and a phrase, nothing more */
+.inclist{display:grid; gap:.65rem; grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.incrow{display:flex; gap:.85rem; align-items:flex-start}
+.incrow .ico{width:2.1rem; height:2.1rem; flex:0 0 auto; margin:0}
+.incrow .ico svg{width:1.15rem; height:1.15rem}
+.incrow b{display:block; font-family:"Barlow",sans-serif; font-weight:600;
+  font-size:1.02rem; line-height:1.35}
+.incrow span{display:block; font-size:.9rem; color:var(--ink-2); line-height:1.45}
+
+@media (max-width:860px){
+  .buybox{gap:.8rem; padding:1rem 1.05rem}
+  .pricetag .amount{font-size:2.2rem}
+  .buybox .btn{flex:1; min-width:11rem}
+  .inclist{grid-template-columns:1fr}
+}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1230,7 +1273,7 @@ body.landing footer{max-width:1120px}
 
 <div class="toast" id="toast" hidden></div>
 
-<script>const HOME={"price":1900,"totals":{"total":1454,"terms":436,"topics":21},"exam":{"national":80,"georgia":52},"topics":[{"label":"Property ownership","portion":"national","exam_questions":8},{"label":"Land use controls","portion":"national","exam_questions":5},{"label":"Valuation & market analysis","portion":"national","exam_questions":7},{"label":"Financing","portion":"national","exam_questions":10},{"label":"Principles of agency","portion":"national","exam_questions":8},{"label":"Property condition & disclosures","portion":"national","exam_questions":6},{"label":"Contracts","portion":"national","exam_questions":13},{"label":"Transfer of title","portion":"national","exam_questions":8},{"label":"Practice of real estate","portion":"national","exam_questions":10},{"label":"Real estate math","portion":"national","exam_questions":5},{"label":"GREC license law & rules","portion":"georgia","exam_questions":14},{"label":"Brokerage relationships (BRRETA)","portion":"georgia","exam_questions":10},{"label":"Georgia contracts & forms","portion":"georgia","exam_questions":8},{"label":"Georgia disclosures","portion":"georgia","exam_questions":6},{"label":"Trust accounts & earnest money","portion":"georgia","exam_questions":4},{"label":"Closings, escrow & procedure","portion":"georgia","exam_questions":5},{"label":"Fair housing in Georgia","portion":"georgia","exam_questions":5}],"samples":[{"q":"A Georgia property sells on March 10. County taxes for the year became a lien on January 1 and are unpaid. At closing the taxes are:","choices":["Ignored, since the bill has not arrived","Prorated, with the seller debited for their share","Paid entirely by the buyer","Paid entirely by the seller"],"answer":1,"explain":"The lien attaches January 1 and follows the property, so closings prorate. Because the taxes are unpaid, the seller is DEBITED for the portion covering their ownership and the buyer is credited, since the buyer will pay the full bill later.","concept":"Georgia tax liens attach January 1","portion":"georgia","difficulty":2},{"q":"An agent's listing expires unsold. Six months later the agent mentions to a friend that the former seller had been desperate. This is:","choices":["Permissible if the property has since sold","Permissible, since the agency ended","A breach only if it causes provable damage","A breach -- confidentiality survives termination of the agency"],"answer":3,"explain":"Accounting and CONFIDENTIALITY survive the end of the relationship indefinitely. Loyalty, obedience, disclosure, and reasonable care end with the agency. Damage is not required for the breach to exist.","concept":"Which duties survive termination","portion":"national","difficulty":2},{"q":"A licensee provides school ratings and crime statistics only when buyers of a certain background ask. This practice is:","choices":["Required by fair housing law","Fine, since the data is publicly available","A disclosure violation only","Steering, because selective delivery of information channels buyers by protected class"],"answer":3,"explain":"Steering does not require saying anything negative. Providing or withholding neighborhood information based on who is asking channels buyers just as effectively. The safe practice is a consistent policy for every buyer -- typically pointing everyone to the same public sources.","concept":"Steering by selective information","portion":"georgia","difficulty":2}],"features":[{"icon":"quiz","name":"Practice quizzes","desc":"Timed sets that mirror the real split, scored National and Georgia separately because that is how you pass or fail."},{"icon":"book","name":"Study notes","desc":"436 terms defined in plain sentences, with a short check-yourself quiz after every section."},{"icon":"math","name":"Math, worked out","desc":"Every calculation broken into steps you can follow -- prorations, commissions, points, loan-to-value, area."},{"icon":"cards","name":"Vocabulary drill","desc":"You read the definition and name the term. Categories unlock as you pass them, and a flashcard deck brings back whatever slipped."},{"icon":"target","name":"Weak-spot targeting","desc":"The narrow sub-topics dragging your score down, each with its own drill, plus a week-by-week plan built around your test date."},{"icon":"note","name":"Your notebook","desc":"Every question you get wrong, kept with the right answer and the reason, synced to your account and waiting on any device."}],"faq":[["What exactly do I get for $19?","Everything: the full question bank, the study notes, the maths with worked solutions, the vocabulary drill, the weak-spot targeting and the study planner. There is no higher tier and nothing else to buy."],["Is it a subscription?","No. One payment, and the account is yours. Nothing renews and there is nothing to cancel."],["What if it is not for me?","Email within 14 days of buying and you get a full refund, no argument. The address is in the footer."],["Where do the Georgia rules come from?","The Georgia Real Estate Commission's own InfoBase and the Georgia Code, read chapter by chapter, rather than a commercial cram guide. That matters where the guides are wrong -- continuing education in Georgia is 24 hours per four-year renewal, not the 36 that national study guides tend to quote."],["Does my progress follow me between devices?","Yes. Your scores, your notebook and your plan live on your account, so signing in on a phone picks up where the laptop left off."],["Is this official?","No. It is not affiliated with, endorsed by, or connected to the Georgia Real Estate Commission, PSI, or any school. It is practice material, not legal advice, and it is no substitute for the 75-hour pre-licence course Georgia requires before you may sit the exam."]],"icons":{"quiz":"<rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"4\"/><path d=\"M8.6 12.2l2.3 2.4 4.5-5\"/>","book":"<path d=\"M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z\"/><path d=\"M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5\"/>","math":"<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"3\"/><path d=\"M8 8h8M8 12h3M8 16h3M15 12v4M13 14h4\"/>","cards":"<rect x=\"3\" y=\"7\" width=\"13\" height=\"13\" rx=\"2.5\"/><path d=\"M7.5 4h11A2.5 2.5 0 0 1 21 6.5v11\"/>","target":"<circle cx=\"12\" cy=\"12\" r=\"8\"/><circle cx=\"12\" cy=\"12\" r=\"3.4\"/><path d=\"M12 1.6v2.6M12 19.8v2.6M22.4 12h-2.6M4.2 12H1.6\"/>","note":"<path d=\"M5 3.5h14v17l-3.2-2.2-3.4 2.2-3.4-2.2L5.8 20.5Z\"/><path d=\"M9 8.5h6M9 12.5h6\"/>"}};</script>
+<script>const HOME={"price":1900,"totals":{"total":1454,"terms":436,"topics":21},"features":[{"icon":"quiz","name":"Practice quizzes","desc":"Timed sets, scored National and Georgia separately"},{"icon":"book","name":"Study notes","desc":"436 terms defined, with a quiz after every section"},{"icon":"math","name":"Real estate math","desc":"Every calculation broken into steps you can follow"},{"icon":"cards","name":"Vocabulary drill","desc":"Definitions, flashcards and spaced repetition"},{"icon":"target","name":"Weak-spot targeting","desc":"Drills for the sub-topics dragging your score down"},{"icon":"note","name":"Your notebook","desc":"Every miss kept with the reason, on your account"}],"icons":{"quiz":"<rect x=\"3.5\" y=\"3.5\" width=\"17\" height=\"17\" rx=\"4\"/><path d=\"M8.6 12.2l2.3 2.4 4.5-5\"/>","book":"<path d=\"M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z\"/><path d=\"M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5\"/>","math":"<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"3\"/><path d=\"M8 8h8M8 12h3M8 16h3M15 12v4M13 14h4\"/>","cards":"<rect x=\"3\" y=\"7\" width=\"13\" height=\"13\" rx=\"2.5\"/><path d=\"M7.5 4h11A2.5 2.5 0 0 1 21 6.5v11\"/>","target":"<circle cx=\"12\" cy=\"12\" r=\"8\"/><circle cx=\"12\" cy=\"12\" r=\"3.4\"/><path d=\"M12 1.6v2.6M12 19.8v2.6M22.4 12h-2.6M4.2 12H1.6\"/>","note":"<path d=\"M5 3.5h14v17l-3.2-2.2-3.4 2.2-3.4-2.2L5.8 20.5Z\"/><path d=\"M9 8.5h6M9 12.5h6\"/>"}};</script>
 <script>/* The sales page. Carries no question bank -- three sample questions and the
    blueprint counts, nothing a buyer is paying for. */
 'use strict';
@@ -1381,85 +1424,15 @@ function renderAuth(){
 }
 
 /* ----------------------------------------------------------- the page */
+/* One screen. What it is, what it costs, a button, and a way back in for
+   people who have already bought. Everything a buyer is paying for -- the
+   questions, the notes, even the blueprint weightings -- is behind the gate. */
+
 var ICONS = HOME.icons;
 function iconEl(name){
   var s = el('span', 'ico');
   s.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
   return s;
-}
-function lsec(eyebrow, title, blurb){
-  var s = el('section', 'lsec');
-  var h = el('div', 'lhead');
-  if (eyebrow) h.appendChild(el('div', 'eyebrow', eyebrow));
-  h.appendChild(el('h2', null, title));
-  if (blurb) h.appendChild(el('p', null, blurb));
-  s.appendChild(h);
-  return s;
-}
-function tagFor(portion){
-  var cls = portion === 'georgia' ? ' ga' : (portion === 'comprehensive' ? ' comp' : '');
-  var txt = portion === 'georgia' ? 'GA' : (portion === 'comprehensive' ? 'COMP' : 'NAT');
-  return el('span', 'tag' + cls, txt);
-}
-
-function sampleBlock(){
-  var q = HOME.samples[Math.floor(Math.random() * HOME.samples.length)];
-  if (!q) return null;
-  var wrap = el('div', 'sample');
-  var top = el('div', 'stop');
-  top.appendChild(el('span', null, 'A real question from the bank'));
-  top.appendChild(tagFor(q.portion));
-  if ((q.difficulty || 1) >= 2){
-    var t = el('span', 'tag hard' + (q.difficulty === 3 ? ' exam' : ''));
-    t.textContent = q.difficulty === 3 ? 'Exam' : 'Hard';
-    top.appendChild(t);
-  }
-  wrap.appendChild(top);
-  var body = el('div', 'sbody');
-  body.appendChild(el('div', 'sq', q.q));
-  var opts = el('div', 'choices'), answered = false, buttons = [], hint = null;
-  q.choices.forEach(function(text, k){
-    var b = el('button', 'choice');
-    b.appendChild(el('span', 'k', 'ABCD'[k]));
-    b.appendChild(el('span', null, text));
-    b.onclick = function(){
-      if (answered) return;
-      answered = true;
-      buttons.forEach(function(x, i){
-        x.disabled = true;
-        if (i === q.answer) x.classList.add('correct');
-        else if (i === k) x.classList.add('wrong');
-      });
-      if (hint) hint.hidden = true;
-      var fb = el('div', 'feedback ' + (k === q.answer ? 'ok' : 'no'));
-      fb.appendChild(el('div', 'verdict', k === q.answer ? 'Correct' : 'Not quite'));
-      fb.appendChild(el('div', null, q.explain));
-      if (q.concept){
-        var c = el('div', 'concept');
-        c.appendChild(el('b', null, 'Concept tested: '));
-        c.appendChild(document.createTextNode(q.concept));
-        fb.appendChild(c);
-      }
-      body.appendChild(fb);
-      var row = el('div', 'row'); row.style.marginTop = '.3rem';
-      var d = el('div'); d.style.flex = '0 0 auto';
-      var go = el('button', 'btn');
-      go.textContent = 'Get the other ' + (HOME.totals.total - HOME.samples.length) +
-                       ' — ' + money(HOME.price);
-      go.onclick = function(){ buy(); };
-      d.appendChild(go); row.appendChild(d);
-      body.appendChild(row);
-    };
-    buttons.push(b);
-    opts.appendChild(b);
-  });
-  hint = el('p', 'muted',
-    'Pick one — every answer is explained the moment you give it, and it ' +
-    'names the concept being tested.');
-  body.appendChild(opts);
-  body.appendChild(hint);
-  wrap.appendChild(body);
-  return wrap;
 }
 
 function render(){
@@ -1467,20 +1440,17 @@ function render(){
   v.innerHTML = '';
 
   var q = new URLSearchParams(location.search);
-  if (q.get('gate')){
-    var g = el('div', 'card');
-    g.style.cssText = 'border-left:3px solid var(--caution);margin-bottom:1rem';
-    g.appendChild(el('h2', null, 'That part needs an account'));
-    g.appendChild(el('p', 'sub',
-      'The quizzes, notes, math and drills are behind the one-time ' +
-      money(HOME.price) + '. Sign in if you have already bought.'));
-    v.appendChild(g);
-  }
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
 
-  /* hero */
   var hero = el('div', 'hero2'), w = el('div', 'wrap');
+
+  if (q.get('gate')){
+    w.appendChild(el('div', 'gatenote',
+      'That part is inside the app. Get access below, or sign in if you have ' +
+      'already bought.'));
+  }
+
   w.appendChild(el('div', 'kicker2',
     money(HOME.price) + ' once · No subscription · Georgia salesperson licence'));
   var h1 = el('h1');
@@ -1490,22 +1460,27 @@ function render(){
   w.appendChild(el('p', 'lede2',
     t.total + ' practice questions written to the real blueprint and scored the ' +
     'way the real exam scores you — National and Georgia separately, 75% ' +
-    'needed on each. Every answer explained. One payment, yours for good.'));
-  var cta = el('div', 'cta2');
+    'needed on each. Every answer explained, every calculation worked out.'));
+
+  /* the price, the button, and nothing between them */
+  var buybox = el('div', 'buybox');
+  var tag = el('div', 'pricetag');
+  tag.appendChild(el('span', 'amount', money(HOME.price)));
+  tag.appendChild(el('span', 'once', 'one payment · lifetime access'));
+  buybox.appendChild(tag);
   var go = el('button', 'btn');
   go.textContent = 'Get access — ' + money(HOME.price);
   go.onclick = function(){ buy(); };
-  cta.appendChild(go);
-  var see = el('button', 'btn ghost', 'Try a question first');
-  see.onclick = function(){
-    var s = $('sampleAnchor');
-    if (s) s.scrollIntoView({behavior: 'smooth', block: 'start'});
-  };
-  cta.appendChild(see);
-  w.appendChild(cta);
-  w.appendChild(el('p', 'fineprint',
-    'One payment of ' + money(HOME.price) + '. No subscription, no renewals. ' +
-    'Full refund within 14 days if it is not for you.'));
+  buybox.appendChild(go);
+  var si = el('button', 'linkish', 'Already bought? Sign in');
+  si.onclick = function(){ openAuth('email'); };
+  buybox.appendChild(si);
+  w.appendChild(buybox);
+
+  var trust = el('div', 'trustrow');
+  ['No subscription', 'Nothing renews', '14-day refund', 'Works offline']
+    .forEach(function(x){ trust.appendChild(el('span', 'trust', x)); });
+  w.appendChild(trust);
   hero.appendChild(w);
 
   var band = el('div', 'statband');
@@ -1520,82 +1495,36 @@ function render(){
   hero.appendChild(band);
   v.appendChild(hero);
 
-  /* what you get */
-  var s1 = lsec('What the ' + money(HOME.price) + ' buys', 'Six tools, one payment, no renewals.',
-    'Everything below is included. There is no higher tier and nothing else to buy.');
-  var tiles = el('div', 'tiles');
+  /* what is inside: named, not handed over */
+  var inc = el('section', 'lsec');
+  var h = el('div', 'lhead');
+  h.appendChild(el('div', 'eyebrow', 'What the ' + money(HOME.price) + ' buys'));
+  h.appendChild(el('h2', null, 'All of it. There is no higher tier.'));
+  inc.appendChild(h);
+  var list = el('div', 'inclist');
   HOME.features.forEach(function(r){
-    var b = el('div', 'tile');
-    b.appendChild(iconEl(r.icon));
-    b.appendChild(el('h3', null, r.name));
-    b.appendChild(el('p', null, r.desc));
-    tiles.appendChild(b);
+    var row = el('div', 'incrow');
+    row.appendChild(iconEl(r.icon));
+    var txt = el('div');
+    txt.appendChild(el('b', null, r.name));
+    txt.appendChild(el('span', null, r.desc));
+    row.appendChild(txt);
+    list.appendChild(row);
   });
-  s1.appendChild(tiles);
-  v.appendChild(s1);
+  inc.appendChild(list);
 
-  /* sample */
-  var s2 = lsec('See for yourself', 'Here is one, on the house.',
-    'Pulled from the same bank you get, at the difficulty the real thing is ' +
-    'written to. Answer it and see exactly what the explanations look like.');
-  s2.id = 'sampleAnchor';
-  var sample = sampleBlock();
-  if (sample) s2.appendChild(sample);
-  v.appendChild(s2);
-
-  /* blueprint */
-  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.',
-    'Georgia scores the two portions separately and you must clear 75% on each. ' +
-    'A strong average will not save a weak half, so the app tracks them apart.');
-  var bp = el('div', 'blueprint');
-  [['national', 'National portion', HOME.exam.national],
-   ['georgia', 'Georgia portion', HOME.exam.georgia]].forEach(function(r){
-    var col = el('div', 'bpcol'), h = el('h3');
-    h.appendChild(document.createTextNode(r[1]));
-    h.appendChild(el('span', null, r[2] + ' questions'));
-    col.appendChild(h);
-    HOME.topics.filter(function(x){ return x.portion === r[0]; })
-      .sort(function(a, b){ return b.exam_questions - a.exam_questions; })
-      .forEach(function(x){
-        var row = el('div', 'bprow');
-        row.appendChild(el('b', null, x.label));
-        row.appendChild(el('i', null, String(x.exam_questions)));
-        col.appendChild(row);
-      });
-    bp.appendChild(col);
-  });
-  s3.appendChild(bp);
-  v.appendChild(s3);
-
-  /* faq */
-  var s5 = lsec('Before you buy', 'The honest answers.', null);
-  var faq = el('div', 'faq');
-  HOME.faq.forEach(function(r){
-    var d = el('details'), sm = el('summary');
-    sm.appendChild(document.createTextNode(r[0]));
-    d.appendChild(sm);
-    d.appendChild(el('p', null, r[1]));
-    faq.appendChild(d);
-  });
-  s5.appendChild(faq);
-  v.appendChild(s5);
-
-  /* close */
-  var end = el('div', 'endcta');
-  end.appendChild(el('h2', null, 'One payment. Yours for good.'));
-  end.appendChild(el('p', null,
-    'No subscription to cancel and no renewal to forget. If it is not what you ' +
-    'wanted, email within 14 days and get your money back.'));
-  var eb = el('button', 'btn');
-  eb.textContent = 'Get access — ' + money(HOME.price);
-  eb.onclick = function(){ buy(); };
-  end.appendChild(eb);
-  var si = el('button', 'btn mini ghost', 'already bought? sign in');
-  si.style.cssText = 'background:transparent;border-color:transparent;color:inherit;' +
-                     'opacity:.85;text-decoration:underline';
-  si.onclick = function(){ openAuth('email'); };
-  end.appendChild(si);
-  v.appendChild(end);
+  var acts = el('div', 'cta2');
+  acts.style.marginTop = '.5rem';
+  var go2 = el('button', 'btn');
+  go2.textContent = 'Get access — ' + money(HOME.price);
+  go2.onclick = function(){ buy(); };
+  acts.appendChild(go2);
+  inc.appendChild(acts);
+  inc.appendChild(el('p', 'muted',
+    'Card handled by Stripe — it never touches this site. Not affiliated ' +
+    'with the Georgia Real Estate Commission, PSI, or any school, and not a ' +
+    'substitute for the 75-hour pre-licence course Georgia requires.'));
+  v.appendChild(inc);
 }
 
 /* ------------------------------------------------------------------ boot */

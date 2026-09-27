@@ -1139,3 +1139,46 @@ body.landing footer{max-width:1120px}
   .kicker2{font-size:.72rem; padding:.28rem .7rem}
   .hero2 h1{font-size:clamp(2.1rem,9vw,2.8rem)}
 }
+
+/* ======================================================================
+   Sales page: the price and the button, with nothing between them.
+   ====================================================================== */
+
+.buybox{
+  display:flex; align-items:center; gap:1.1rem; flex-wrap:wrap;
+  background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r); padding:1.15rem 1.3rem; margin-top:.5rem;
+  max-width:34rem;
+}
+.pricetag{display:flex; flex-direction:column; line-height:1.1; margin-right:.2rem}
+.pricetag .amount{
+  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:2.6rem; font-weight:600; letter-spacing:-.04em; color:var(--ink);
+}
+.pricetag .once{font-size:.82rem; color:var(--ink-3); margin-top:.15rem}
+.buybox .btn{padding:.85rem 1.5rem; font-size:1.04rem; border-radius:var(--r-sm)}
+.buybox .linkish{font-size:.9rem; color:var(--ink-2); flex-basis:100%}
+.buybox .linkish:hover{color:var(--accent)}
+
+.gatenote{
+  border-left:3px solid var(--caution); background:var(--caution-soft);
+  color:var(--ink); border-radius:0 var(--r-sm) var(--r-sm) 0;
+  padding:.7rem .95rem; font-size:.93rem; line-height:1.5; max-width:46rem;
+  margin-bottom:.3rem;
+}
+
+/* the list of what is included: names and a phrase, nothing more */
+.inclist{display:grid; gap:.65rem; grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.incrow{display:flex; gap:.85rem; align-items:flex-start}
+.incrow .ico{width:2.1rem; height:2.1rem; flex:0 0 auto; margin:0}
+.incrow .ico svg{width:1.15rem; height:1.15rem}
+.incrow b{display:block; font-family:"Barlow",sans-serif; font-weight:600;
+  font-size:1.02rem; line-height:1.35}
+.incrow span{display:block; font-size:.9rem; color:var(--ink-2); line-height:1.45}
+
+@media (max-width:860px){
+  .buybox{gap:.8rem; padding:1rem 1.05rem}
+  .pricetag .amount{font-size:2.2rem}
+  .buybox .btn{flex:1; min-width:11rem}
+  .inclist{grid-template-columns:1fr}
+}

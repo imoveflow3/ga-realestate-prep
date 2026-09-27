@@ -148,85 +148,15 @@ function renderAuth(){
 }
 
 /* ----------------------------------------------------------- the page */
+/* One screen. What it is, what it costs, a button, and a way back in for
+   people who have already bought. Everything a buyer is paying for -- the
+   questions, the notes, even the blueprint weightings -- is behind the gate. */
+
 var ICONS = HOME.icons;
 function iconEl(name){
   var s = el('span', 'ico');
   s.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
   return s;
-}
-function lsec(eyebrow, title, blurb){
-  var s = el('section', 'lsec');
-  var h = el('div', 'lhead');
-  if (eyebrow) h.appendChild(el('div', 'eyebrow', eyebrow));
-  h.appendChild(el('h2', null, title));
-  if (blurb) h.appendChild(el('p', null, blurb));
-  s.appendChild(h);
-  return s;
-}
-function tagFor(portion){
-  var cls = portion === 'georgia' ? ' ga' : (portion === 'comprehensive' ? ' comp' : '');
-  var txt = portion === 'georgia' ? 'GA' : (portion === 'comprehensive' ? 'COMP' : 'NAT');
-  return el('span', 'tag' + cls, txt);
-}
-
-function sampleBlock(){
-  var q = HOME.samples[Math.floor(Math.random() * HOME.samples.length)];
-  if (!q) return null;
-  var wrap = el('div', 'sample');
-  var top = el('div', 'stop');
-  top.appendChild(el('span', null, 'A real question from the bank'));
-  top.appendChild(tagFor(q.portion));
-  if ((q.difficulty || 1) >= 2){
-    var t = el('span', 'tag hard' + (q.difficulty === 3 ? ' exam' : ''));
-    t.textContent = q.difficulty === 3 ? 'Exam' : 'Hard';
-    top.appendChild(t);
-  }
-  wrap.appendChild(top);
-  var body = el('div', 'sbody');
-  body.appendChild(el('div', 'sq', q.q));
-  var opts = el('div', 'choices'), answered = false, buttons = [], hint = null;
-  q.choices.forEach(function(text, k){
-    var b = el('button', 'choice');
-    b.appendChild(el('span', 'k', 'ABCD'[k]));
-    b.appendChild(el('span', null, text));
-    b.onclick = function(){
-      if (answered) return;
-      answered = true;
-      buttons.forEach(function(x, i){
-        x.disabled = true;
-        if (i === q.answer) x.classList.add('correct');
-        else if (i === k) x.classList.add('wrong');
-      });
-      if (hint) hint.hidden = true;
-      var fb = el('div', 'feedback ' + (k === q.answer ? 'ok' : 'no'));
-      fb.appendChild(el('div', 'verdict', k === q.answer ? 'Correct' : 'Not quite'));
-      fb.appendChild(el('div', null, q.explain));
-      if (q.concept){
-        var c = el('div', 'concept');
-        c.appendChild(el('b', null, 'Concept tested: '));
-        c.appendChild(document.createTextNode(q.concept));
-        fb.appendChild(c);
-      }
-      body.appendChild(fb);
-      var row = el('div', 'row'); row.style.marginTop = '.3rem';
-      var d = el('div'); d.style.flex = '0 0 auto';
-      var go = el('button', 'btn');
-      go.textContent = 'Get the other ' + (HOME.totals.total - HOME.samples.length) +
-                       ' — ' + money(HOME.price);
-      go.onclick = function(){ buy(); };
-      d.appendChild(go); row.appendChild(d);
-      body.appendChild(row);
-    };
-    buttons.push(b);
-    opts.appendChild(b);
-  });
-  hint = el('p', 'muted',
-    'Pick one — every answer is explained the moment you give it, and it ' +
-    'names the concept being tested.');
-  body.appendChild(opts);
-  body.appendChild(hint);
-  wrap.appendChild(body);
-  return wrap;
 }
 
 function render(){
@@ -234,20 +164,17 @@ function render(){
   v.innerHTML = '';
 
   var q = new URLSearchParams(location.search);
-  if (q.get('gate')){
-    var g = el('div', 'card');
-    g.style.cssText = 'border-left:3px solid var(--caution);margin-bottom:1rem';
-    g.appendChild(el('h2', null, 'That part needs an account'));
-    g.appendChild(el('p', 'sub',
-      'The quizzes, notes, math and drills are behind the one-time ' +
-      money(HOME.price) + '. Sign in if you have already bought.'));
-    v.appendChild(g);
-  }
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
 
-  /* hero */
   var hero = el('div', 'hero2'), w = el('div', 'wrap');
+
+  if (q.get('gate')){
+    w.appendChild(el('div', 'gatenote',
+      'That part is inside the app. Get access below, or sign in if you have ' +
+      'already bought.'));
+  }
+
   w.appendChild(el('div', 'kicker2',
     money(HOME.price) + ' once · No subscription · Georgia salesperson licence'));
   var h1 = el('h1');
@@ -257,22 +184,27 @@ function render(){
   w.appendChild(el('p', 'lede2',
     t.total + ' practice questions written to the real blueprint and scored the ' +
     'way the real exam scores you — National and Georgia separately, 75% ' +
-    'needed on each. Every answer explained. One payment, yours for good.'));
-  var cta = el('div', 'cta2');
+    'needed on each. Every answer explained, every calculation worked out.'));
+
+  /* the price, the button, and nothing between them */
+  var buybox = el('div', 'buybox');
+  var tag = el('div', 'pricetag');
+  tag.appendChild(el('span', 'amount', money(HOME.price)));
+  tag.appendChild(el('span', 'once', 'one payment · lifetime access'));
+  buybox.appendChild(tag);
   var go = el('button', 'btn');
   go.textContent = 'Get access — ' + money(HOME.price);
   go.onclick = function(){ buy(); };
-  cta.appendChild(go);
-  var see = el('button', 'btn ghost', 'Try a question first');
-  see.onclick = function(){
-    var s = $('sampleAnchor');
-    if (s) s.scrollIntoView({behavior: 'smooth', block: 'start'});
-  };
-  cta.appendChild(see);
-  w.appendChild(cta);
-  w.appendChild(el('p', 'fineprint',
-    'One payment of ' + money(HOME.price) + '. No subscription, no renewals. ' +
-    'Full refund within 14 days if it is not for you.'));
+  buybox.appendChild(go);
+  var si = el('button', 'linkish', 'Already bought? Sign in');
+  si.onclick = function(){ openAuth('email'); };
+  buybox.appendChild(si);
+  w.appendChild(buybox);
+
+  var trust = el('div', 'trustrow');
+  ['No subscription', 'Nothing renews', '14-day refund', 'Works offline']
+    .forEach(function(x){ trust.appendChild(el('span', 'trust', x)); });
+  w.appendChild(trust);
   hero.appendChild(w);
 
   var band = el('div', 'statband');
@@ -287,82 +219,36 @@ function render(){
   hero.appendChild(band);
   v.appendChild(hero);
 
-  /* what you get */
-  var s1 = lsec('What the ' + money(HOME.price) + ' buys', 'Six tools, one payment, no renewals.',
-    'Everything below is included. There is no higher tier and nothing else to buy.');
-  var tiles = el('div', 'tiles');
+  /* what is inside: named, not handed over */
+  var inc = el('section', 'lsec');
+  var h = el('div', 'lhead');
+  h.appendChild(el('div', 'eyebrow', 'What the ' + money(HOME.price) + ' buys'));
+  h.appendChild(el('h2', null, 'All of it. There is no higher tier.'));
+  inc.appendChild(h);
+  var list = el('div', 'inclist');
   HOME.features.forEach(function(r){
-    var b = el('div', 'tile');
-    b.appendChild(iconEl(r.icon));
-    b.appendChild(el('h3', null, r.name));
-    b.appendChild(el('p', null, r.desc));
-    tiles.appendChild(b);
+    var row = el('div', 'incrow');
+    row.appendChild(iconEl(r.icon));
+    var txt = el('div');
+    txt.appendChild(el('b', null, r.name));
+    txt.appendChild(el('span', null, r.desc));
+    row.appendChild(txt);
+    list.appendChild(row);
   });
-  s1.appendChild(tiles);
-  v.appendChild(s1);
+  inc.appendChild(list);
 
-  /* sample */
-  var s2 = lsec('See for yourself', 'Here is one, on the house.',
-    'Pulled from the same bank you get, at the difficulty the real thing is ' +
-    'written to. Answer it and see exactly what the explanations look like.');
-  s2.id = 'sampleAnchor';
-  var sample = sampleBlock();
-  if (sample) s2.appendChild(sample);
-  v.appendChild(s2);
-
-  /* blueprint */
-  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.',
-    'Georgia scores the two portions separately and you must clear 75% on each. ' +
-    'A strong average will not save a weak half, so the app tracks them apart.');
-  var bp = el('div', 'blueprint');
-  [['national', 'National portion', HOME.exam.national],
-   ['georgia', 'Georgia portion', HOME.exam.georgia]].forEach(function(r){
-    var col = el('div', 'bpcol'), h = el('h3');
-    h.appendChild(document.createTextNode(r[1]));
-    h.appendChild(el('span', null, r[2] + ' questions'));
-    col.appendChild(h);
-    HOME.topics.filter(function(x){ return x.portion === r[0]; })
-      .sort(function(a, b){ return b.exam_questions - a.exam_questions; })
-      .forEach(function(x){
-        var row = el('div', 'bprow');
-        row.appendChild(el('b', null, x.label));
-        row.appendChild(el('i', null, String(x.exam_questions)));
-        col.appendChild(row);
-      });
-    bp.appendChild(col);
-  });
-  s3.appendChild(bp);
-  v.appendChild(s3);
-
-  /* faq */
-  var s5 = lsec('Before you buy', 'The honest answers.', null);
-  var faq = el('div', 'faq');
-  HOME.faq.forEach(function(r){
-    var d = el('details'), sm = el('summary');
-    sm.appendChild(document.createTextNode(r[0]));
-    d.appendChild(sm);
-    d.appendChild(el('p', null, r[1]));
-    faq.appendChild(d);
-  });
-  s5.appendChild(faq);
-  v.appendChild(s5);
-
-  /* close */
-  var end = el('div', 'endcta');
-  end.appendChild(el('h2', null, 'One payment. Yours for good.'));
-  end.appendChild(el('p', null,
-    'No subscription to cancel and no renewal to forget. If it is not what you ' +
-    'wanted, email within 14 days and get your money back.'));
-  var eb = el('button', 'btn');
-  eb.textContent = 'Get access — ' + money(HOME.price);
-  eb.onclick = function(){ buy(); };
-  end.appendChild(eb);
-  var si = el('button', 'btn mini ghost', 'already bought? sign in');
-  si.style.cssText = 'background:transparent;border-color:transparent;color:inherit;' +
-                     'opacity:.85;text-decoration:underline';
-  si.onclick = function(){ openAuth('email'); };
-  end.appendChild(si);
-  v.appendChild(end);
+  var acts = el('div', 'cta2');
+  acts.style.marginTop = '.5rem';
+  var go2 = el('button', 'btn');
+  go2.textContent = 'Get access — ' + money(HOME.price);
+  go2.onclick = function(){ buy(); };
+  acts.appendChild(go2);
+  inc.appendChild(acts);
+  inc.appendChild(el('p', 'muted',
+    'Card handled by Stripe — it never touches this site. Not affiliated ' +
+    'with the Georgia Real Estate Commission, PSI, or any school, and not a ' +
+    'substitute for the 75-hour pre-licence course Georgia requires.'));
+  v.appendChild(inc);
 }
 
 /* ------------------------------------------------------------------ boot */
