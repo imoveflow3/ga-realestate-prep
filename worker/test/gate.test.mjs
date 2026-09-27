@@ -15,6 +15,8 @@ const ORIGIN = 'https://prep.test';
    intercepted so the test can read the code it would have sent, and Stripe
    answers with the shape the Worker expects. */
 const SENT = { code: null, to: null };
+const GOOGLE = { email: 'gmail.user@gmail.com', verified: true };
+let LAST_CHECKOUT = new URLSearchParams();
 const realFetch = globalThis.fetch;
 globalThis.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input.url;
@@ -24,12 +26,24 @@ globalThis.fetch = async (input, init = {}) => {
     SENT.code = (body.text.match(/\b(\d{6})\b/) || [])[1] || null;
     return new Response('{"id":"stub"}', { status: 200 });
   }
+  if (url === 'https://oauth2.googleapis.com/token') {
+    const sent = new URLSearchParams(init.body);
+    if (sent.get('code') !== 'good-code') {
+      return new Response(JSON.stringify({error: 'invalid_grant'}), {status: 400});
+    }
+    const claims = btoa(JSON.stringify({
+      email: GOOGLE.email, email_verified: GOOGLE.verified,
+      aud: 'test-client-id', sub: 'sub-123',
+    })).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    return new Response(JSON.stringify({id_token: 'h.' + claims + '.s'}), {status: 200});
+  }
   if (url.startsWith('https://api.stripe.com/v1/checkout/sessions/')) {
     return new Response(JSON.stringify({
       payment_status: 'paid', customer: 'cus_activate',
       customer_details: { email: 'activated@example.com' } }), { status: 200 });
   }
   if (url === 'https://api.stripe.com/v1/checkout/sessions') {
+    LAST_CHECKOUT = new URLSearchParams(init.body);
     return new Response(JSON.stringify({ url: 'https://checkout.stripe.com/c/pay/stub' }),
                         { status: 200 });
   }
@@ -50,6 +64,8 @@ function makeEnv(db) {
     STRIPE_WEBHOOK_SECRET: 'whsec_test',
     SITE_URL: ORIGIN,
     RESEND_API_KEY: 're_test',
+    GOOGLE_CLIENT_ID: 'test-client-id',
+    GOOGLE_CLIENT_SECRET: 'test-client-secret',
     FROM_EMAIL: 'login@prep.test',
     PRICE_CENTS: '1900',
     ASSETS: { fetch: async (r) => new Response(new URL(r.url).pathname, {
@@ -234,14 +250,17 @@ await it('an oversized progress body is refused', async () => {
   assert.equal(res.status, 413);
 });
 
-await it('checkout hands back a Stripe URL and grants nothing by itself', async () => {
+/* The contract changed when sign-in moved in front of payment: you cannot
+   start a checkout as a stranger any more, and asking for one must not
+   quietly create an account out of whatever address was posted. */
+await it('an anonymous checkout is refused and creates nothing', async () => {
+  const before = db._tables.users.length;
   const res = await worker.fetch(req('/api/checkout', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'new@example.com' }) }), env, {});
-  assert.equal(res.status, 200);
-  assert.ok((await res.json()).url.startsWith('https://checkout.stripe.com/'));
-  const u = db._tables.users.find(u => u.email === 'new@example.com');
-  assert.ok(!u || !u.paid, 'starting checkout granted access');
+  assert.equal(res.status, 401);
+  assert.equal((await res.json()).signin, '/api/auth/google');
+  assert.equal(db._tables.users.length, before, 'a posted address became an account');
 });
 
 await it('returning from a real checkout signs you straight in', async () => {
@@ -271,6 +290,122 @@ await it('the extensionless public pages resolve to real files', async () => {
 await it('an unknown path goes home rather than 404ing into nothing', async () => {
   const res = await worker.fetch(req('/nope'), env, {});
   assert.ok([200, 302].includes(res.status));
+});
+
+
+console.log('\nGOOGLE SIGN-IN');
+
+await it('starting sign-in redirects to Google with a signed state', async () => {
+  const res = await worker.fetch(req('/api/auth/google'), env, {});
+  assert.equal(res.status, 302);
+  const to = new URL(res.headers.get('Location'));
+  assert.equal(to.origin + to.pathname, 'https://accounts.google.com/o/oauth2/v2/auth');
+  assert.equal(to.searchParams.get('client_id'), 'test-client-id');
+  assert.equal(to.searchParams.get('scope'), 'openid email');
+  assert.ok(to.searchParams.get('state'), 'no state');
+  assert.ok((res.headers.get('Set-Cookie') || '').startsWith('ga_oauth='),
+            'no state cookie pinned');
+});
+
+/* Walks the real redirect, keeping the state cookie, like a browser would. */
+async function signInWithGoogle(code = 'good-code', tamper = null) {
+  const start = await worker.fetch(req('/api/auth/google'), env, {});
+  const stateCookie = (start.headers.get('Set-Cookie') || '').split(';')[0];
+  let state = new URL(start.headers.get('Location')).searchParams.get('state');
+  if (tamper) state = tamper(state);
+  return worker.fetch(req(`/api/auth/google/callback?code=${code}&state=${encodeURIComponent(state)}`,
+                          { headers: { Cookie: stateCookie } }), env, {});
+}
+
+await it('a forged state is refused', async () => {
+  const res = await signInWithGoogle('good-code', (s) => s.slice(0, -4) + 'AAAA');
+  assert.equal(res.headers.get('Location'), '/?auth=expired');
+  const cookies = res.headers.getSetCookie ? res.headers.getSetCookie() : [];
+  assert.ok(!cookies.some(c => c.startsWith('ga_session=') && c.length > 20),
+            'a forged state still issued a session');
+});
+
+await it('a state with no matching cookie is refused', async () => {
+  const start = await worker.fetch(req('/api/auth/google'), env, {});
+  const state = new URL(start.headers.get('Location')).searchParams.get('state');
+  const res = await worker.fetch(
+    req(`/api/auth/google/callback?code=good-code&state=${encodeURIComponent(state)}`), env, {});
+  assert.equal(res.headers.get('Location'), '/?auth=expired');
+});
+
+await it('Google refusing the code grants nothing', async () => {
+  const res = await signInWithGoogle('bad-code');
+  assert.equal(res.headers.get('Location'), '/?auth=failed');
+});
+
+await it('an unverified Google address is refused', async () => {
+  GOOGLE.verified = false;
+  const res = await signInWithGoogle();
+  GOOGLE.verified = true;
+  assert.equal(res.headers.get('Location'), '/?auth=failed');
+});
+
+let gCookie = null;
+
+await it('a real sign-in creates the account but does not pay for it', async () => {
+  const res = await signInWithGoogle();
+  assert.equal(res.status, 302);
+  assert.equal(res.headers.get('Location'), '/?pay=1', 'unpaid user was let in');
+  const all = res.headers.getSetCookie ? res.headers.getSetCookie() : [];
+  gCookie = (all.find(c => c.startsWith('ga_session=')) || '').split(';')[0];
+  assert.ok(gCookie, 'no session cookie');
+  const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
+  assert.ok(u, 'no account created');
+  assert.equal(u.paid, 0, 'signing in marked them paid');
+});
+
+await it('signed in but unpaid still cannot reach the questions', async () => {
+  assert.equal((await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: gCookie } }), env, {})).status, 402);
+  const app = await worker.fetch(req('/app', { headers: { Cookie: gCookie } }), env, {});
+  assert.equal(app.status, 302);
+});
+
+await it('/api/me reports signed in, not paid', async () => {
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: gCookie } }), env, {})).json();
+  assert.deepEqual(me, { signedIn: true, paid: false, email: 'gmail.user@gmail.com' });
+});
+
+await it('checkout refuses a stranger and points them at Google', async () => {
+  const res = await worker.fetch(req('/api/checkout', { method: 'POST' }), env, {});
+  assert.equal(res.status, 401);
+  assert.equal((await res.json()).signin, '/api/auth/google');
+});
+
+await it('checkout for a signed-in user carries their account id', async () => {
+  const res = await worker.fetch(req('/api/checkout', {
+    method: 'POST', headers: { Cookie: gCookie } }), env, {});
+  assert.equal(res.status, 200);
+  assert.ok((await res.json()).url.startsWith('https://checkout.stripe.com/'));
+  assert.ok(LAST_CHECKOUT.get('client_reference_id'), 'account id not sent to Stripe');
+});
+
+await it('the webhook pays the account the checkout was started from', async () => {
+  const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
+  const body = JSON.stringify({ id: 'evt_g1', type: 'checkout.session.completed',
+    data: { object: { payment_status: 'paid', client_reference_id: u.id,
+                      customer: 'cus_g',
+                      /* deliberately a different address at the till */
+                      customer_details: { email: 'someone.else@example.com' } } } });
+  const res = await worker.fetch(req('/api/stripe-webhook', {
+    method: 'POST', body, headers: await signedWebhook(env, body) }), env, {});
+  assert.equal(res.status, 200);
+  assert.equal(u.paid, 1, 'the signed-in account was not marked paid');
+  const stray = db._tables.users.find(x => x.email === 'someone.else@example.com');
+  assert.ok(!stray, 'a second account was created from the till address');
+});
+
+await it('and now they get in', async () => {
+  const bundle = await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: gCookie } }), env, {});
+  assert.equal(bundle.status, 200);
+  assert.ok((await bundle.json()).banks.national.length > 100);
 });
 
 globalThis.fetch = realFetch;

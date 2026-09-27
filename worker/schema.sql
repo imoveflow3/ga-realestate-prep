@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS users (
   email       TEXT NOT NULL UNIQUE,
   paid        INTEGER NOT NULL DEFAULT 0,
   stripe_id   TEXT,
+  google_sub  TEXT,
   created_at  INTEGER NOT NULL,
   paid_at     INTEGER
 );

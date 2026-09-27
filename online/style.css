@@ -51,6 +51,12 @@
    the browser cross-fades the two pages and the wordmark stays put. */
 @view-transition{navigation:auto}
 
+/* Author styles outrank the browser's own [hidden]{display:none}, so any
+   rule like .iconbtn{display:inline-flex} quietly un-hides everything it
+   matches. The sign-in and install buttons were setting .hidden = true and
+   staying on screen, clickable, the whole time. */
+[hidden]{display:none !important}
+
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--bg); color:var(--ink);
@@ -1287,3 +1293,25 @@ body.leaving{
   main,.gatecard{animation:none}
   body.leaving{transition:none; opacity:1; transform:none}
 }
+
+/* ---- sign in with Google ---- */
+.btn.gbtn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.65rem;
+  background:var(--panel); color:var(--ink); border-color:var(--line-2);
+  font-weight:600;
+}
+.btn.gbtn:hover:not(:disabled){background:var(--panel-2); border-color:var(--line-2);
+  box-shadow:0 4px 14px -6px rgba(0,0,0,.35)}
+/* Google's mark carries its own four colours as inline fills. Do not set
+   fill on it -- an earlier `fill:inherit` here tinted the whole logo to the
+   button's text colour, which is both wrong and against their brand rules. */
+.gmark{width:1.15rem; height:1.15rem; flex:0 0 auto}
+
+.whoami{
+  font-family:"IBM Plex Mono",monospace; font-size:.82rem; color:var(--ink-2);
+  background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r-pill); padding:.3rem .85rem; max-width:100%;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.gatecard .linkish{font-size:.86rem; color:var(--ink-3)}
+.gatecard .linkish:hover{color:var(--accent)}

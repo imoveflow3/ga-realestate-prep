@@ -7,6 +7,15 @@ export function makeDB() {
   function run(sql, args) {
     const q = sql.replace(/\s+/g, ' ').trim();
 
+    /* lookups by our own account id, used once payment carries it */
+    if (like(q, 'SELECT ID, EMAIL, PAID FROM USERS WHERE ID')) {
+      const u = t.users.find(u => u.id === args[0]);
+      return u ? { id: u.id, email: u.email, paid: u.paid } : null;
+    }
+    if (like(q, 'SELECT ID FROM USERS WHERE ID')) {
+      const u = t.users.find(u => u.id === args[0]);
+      return u ? { id: u.id } : null;
+    }
     if (like(q, 'SELECT ID, EMAIL, PAID FROM USERS WHERE EMAIL'))
       return t.users.find(u => u.email === args[0]) || null;
     if (like(q, 'SELECT PAID FROM USERS WHERE EMAIL')) {

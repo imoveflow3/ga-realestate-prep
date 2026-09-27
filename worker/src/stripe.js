@@ -32,7 +32,7 @@ async function stripe(env, path, { method = 'GET', form } = {}) {
   return body;
 }
 
-export async function createCheckout(env, { email, origin }) {
+export async function createCheckout(env, { email, origin, userId }) {
   const form = {
     mode: 'payment',
     'line_items[0][quantity]': '1',
@@ -47,6 +47,8 @@ export async function createCheckout(env, { email, origin }) {
     allow_promotion_codes: 'true',
   };
   if (email) form.customer_email = email;
+  // our own account id travels with the payment and comes back on the webhook
+  if (userId) form.client_reference_id = userId;
   const session = await stripe(env, '/checkout/sessions', { method: 'POST', form });
   return session.url;
 }

@@ -88,6 +88,12 @@
    the browser cross-fades the two pages and the wordmark stays put. */
 @view-transition{navigation:auto}
 
+/* Author styles outrank the browser's own [hidden]{display:none}, so any
+   rule like .iconbtn{display:inline-flex} quietly un-hides everything it
+   matches. The sign-in and install buttons were setting .hidden = true and
+   staying on screen, clickable, the whole time. */
+[hidden]{display:none !important}
+
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--bg); color:var(--ink);
@@ -1324,6 +1330,28 @@ body.leaving{
   main,.gatecard{animation:none}
   body.leaving{transition:none; opacity:1; transform:none}
 }
+
+/* ---- sign in with Google ---- */
+.btn.gbtn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.65rem;
+  background:var(--panel); color:var(--ink); border-color:var(--line-2);
+  font-weight:600;
+}
+.btn.gbtn:hover:not(:disabled){background:var(--panel-2); border-color:var(--line-2);
+  box-shadow:0 4px 14px -6px rgba(0,0,0,.35)}
+/* Google's mark carries its own four colours as inline fills. Do not set
+   fill on it -- an earlier `fill:inherit` here tinted the whole logo to the
+   button's text colour, which is both wrong and against their brand rules. */
+.gmark{width:1.15rem; height:1.15rem; flex:0 0 auto}
+
+.whoami{
+  font-family:"IBM Plex Mono",monospace; font-size:.82rem; color:var(--ink-2);
+  background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r-pill); padding:.3rem .85rem; max-width:100%;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.gatecard .linkish{font-size:.86rem; color:var(--ink-3)}
+.gatecard .linkish:hover{color:var(--accent)}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1438,6 +1466,7 @@ function buy(email){
   }).then(function(r){ return r.json(); })
     .then(function(d){
       if (d.url){ location.href = d.url; return; }
+      if (d.signin){ location.href = d.signin; return; }
       BUYING = false;
       toast(d.error || 'Could not start checkout. Try again shortly.');
     })['catch'](function(){
@@ -1448,6 +1477,28 @@ function buy(email){
 
 /* ------------------------------------------------------------ signing in */
 var AUTH = {email: '', stage: 'email'};
+var ME = {signedIn: false, paid: false, email: null};
+
+var GOOGLE_G =
+  '<svg viewBox="0 0 48 48" aria-hidden="true" class="gmark">' +
+  '<path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.5-4.5 6.3l-.1.3 6.5 5 .4.1c4.1-3.8 6.7-9.4 6.7-15z"/>' +
+  '<path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.3c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9l-.3.1-6.7 5.2-.1.3C7.9 41.1 15.4 46 24 46z"/>' +
+  '<path fill="#FBBC05" d="M11.5 28.6c-.5-1.4-.8-2.9-.8-4.6s.3-3.2.7-4.6v-.3l-6.8-5.3-.2.1C2.8 16.8 2 20.3 2 24s.8 7.2 2.4 10.1l7.1-5.5z"/>' +
+  '<path fill="#EA4335" d="M24 10.4c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 4.2 29.9 2 24 2 15.4 2 7.9 6.9 4.4 13.9l7.1 5.5c1.8-5.2 6.7-9 12.5-9z"/>' +
+  '</svg>';
+
+function googleButton(label){
+  var b = el('button', 'btn gbtn wide');
+  b.innerHTML = GOOGLE_G;
+  b.appendChild(el('span', null, label || 'Continue with Google'));
+  b.onclick = function(){ location.href = '/api/auth/google'; };
+  return b;
+}
+
+function signOut(){
+  fetch('/api/logout', {method: 'POST', credentials: 'same-origin'})
+    .then(function(){ location.href = '/'; })['catch'](function(){ location.href = '/'; });
+}
 
 function openAuth(stage){
   if (HOME.preview){
@@ -1608,8 +1659,11 @@ function priceButton(label){
 }
 
 function noticeFor(q){
-  if (q.get('gate')) return 'That part is inside the app. Get access below, or ' +
-                            'sign in if you have already bought.';
+  if (q.get('gate')) return 'That part is inside the app. Sign in below to get to it.';
+  if (q.get('auth') === 'cancelled') return 'Sign-in was cancelled. Nothing happened.';
+  if (q.get('auth') === 'expired') return 'That sign-in took too long. Try again.';
+  if (q.get('auth') === 'failed') return 'Google could not sign you in. Try again.';
+  if (q.get('auth') === 'unavailable') return 'Google sign-in is not switched on yet.';
   return null;
 }
 
@@ -1636,35 +1690,63 @@ function renderMinimal(v, q){
     t.total + ' practice questions, ' + t.terms + ' defined terms and worked ' +
     'maths for the salesperson licensing exam.'));
 
-  if (!HOME.openAccess){
+  var acts = el('div', 'gateacts');
+
+  /* No payments behind this host, so there is nothing to sign into. */
+  if (HOME.openAccess){
+    var open = el('button', 'btn wide', 'Start studying');
+    open.onclick = openApp;
+    acts.appendChild(open);
+    card.appendChild(acts);
+    card.appendChild(el('p', 'gatefine',
+      'Free to use right now. Accounts and saved progress are on the way.'));
+    wrap.appendChild(card); v.appendChild(wrap);
+    return;
+  }
+
+  if (ME.signedIn && ME.paid){
+    card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
+    var go = el('button', 'btn wide', 'Open the app');
+    go.onclick = function(){ location.href = '/app'; };
+    acts.appendChild(go);
+    card.appendChild(acts);
+    var out = el('button', 'linkish', 'Sign out');
+    out.onclick = signOut;
+    card.appendChild(out);
+    wrap.appendChild(card); v.appendChild(wrap);
+    return;
+  }
+
+  if (ME.signedIn && !ME.paid){
+    card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
     var price = el('div', 'gateprice');
     price.appendChild(el('span', 'amount', money(HOME.price)));
     price.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
     card.appendChild(price);
+    var pay = el('button', 'btn wide');
+    pay.textContent = 'Pay ' + money(HOME.price) + ' and start';
+    pay.onclick = function(){ buy(); };
+    acts.appendChild(pay);
+    card.appendChild(acts);
+    card.appendChild(el('p', 'gatefine',
+      'No subscription. Nothing renews. Full refund within 14 days.'));
+    var out2 = el('button', 'linkish', 'Use a different account');
+    out2.onclick = signOut;
+    card.appendChild(out2);
+    wrap.appendChild(card); v.appendChild(wrap);
+    return;
   }
 
-  var acts = el('div', 'gateacts');
-  var go = el('button', 'btn wide');
-  if (HOME.openAccess){
-    go.textContent = 'Start studying';
-    go.onclick = openApp;
-  } else {
-    go.textContent = 'Get access \u2014 ' + money(HOME.price);
-    go.onclick = function(){ buy(); };
-  }
-  acts.appendChild(go);
-
-  if (!HOME.openAccess){
-    var si = el('button', 'btn ghost wide', 'I already have an account');
-    si.onclick = function(){ openAuth('email'); };
-    acts.appendChild(si);
-  }
+  /* Not signed in: one way in. */
+  var price2 = el('div', 'gateprice');
+  price2.appendChild(el('span', 'amount', money(HOME.price)));
+  price2.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
+  card.appendChild(price2);
+  acts.appendChild(googleButton('Continue with Google'));
   card.appendChild(acts);
-
-  card.appendChild(el('p', 'gatefine', HOME.openAccess
-    ? 'Free to use right now. Accounts and saved progress are on the way.'
-    : 'No subscription. Nothing renews. Full refund within 14 days.'));
-
+  card.appendChild(el('p', 'gatefine',
+    'Sign in first, then pay. New and returning, same button \u2014 we will know ' +
+    'which you are.'));
   wrap.appendChild(card);
   v.appendChild(wrap);
 }
@@ -1903,20 +1985,15 @@ function render(){
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape' && !$('authSheet').hidden) closeAuth();
   });
-  render();
-
-  /* Somebody already signed in should not be sold to again. Open access has
-     no accounts and no API behind it, so there is nothing to ask. */
-  if (HOME.openAccess || HOME.preview) return;
+  /* The card says something different to a stranger, to somebody signed in
+     who has not paid, and to somebody who has. Only the server knows which,
+     so ask before drawing rather than drawing twice. */
+  if (HOME.openAccess || HOME.preview){ render(); return; }
   fetch('/api/me', {credentials: 'same-origin'})
     .then(function(r){ return r.json(); })
-    .then(function(me){
-      if (me && me.paid){
-        $('buyBtn').textContent = 'Open the app';
-        $('buyBtn').onclick = function(){ location.href = '/app'; };
-        $('signinBtn').hidden = true;
-      }
-    })['catch'](function(){});
+    .then(function(me){ if (me) ME = me; })
+    ['catch'](function(){})
+    .then(function(){ render(); });
 })();
 </script>
 

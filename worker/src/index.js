@@ -6,6 +6,7 @@
 
 import GATED from '../assets/gated.js';
 import { createCheckout, fetchCheckout, verifyWebhook } from './stripe.js';
+import * as google from './google.js';
 import {
   currentUser, createSession, endSession, cookieHeader, readCookie,
   normalizeEmail, findOrCreateUser, issueLoginCode, verifyLoginCode, now,
@@ -81,12 +82,25 @@ export default {
 
       if (event.type === 'checkout.session.completed') {
         const s = event.data.object;
-        const email = normalizeEmail(s.customer_details?.email || s.customer_email);
-        if (email && s.payment_status === 'paid') {
-          const user = await findOrCreateUser(env, email);
-          await env.DB.prepare(
-            'UPDATE users SET paid = 1, stripe_id = ?, paid_at = ? WHERE id = ?'
-          ).bind(s.customer || s.id, now(), user.id).run();
+        if (s.payment_status === 'paid') {
+          /* client_reference_id is the account we created at sign-in. Trust
+             it over the address Stripe collected, which may be a different
+             one the buyer typed at the till. */
+          let userId = s.client_reference_id || null;
+          if (userId) {
+            const known = await env.DB.prepare('SELECT id FROM users WHERE id = ?')
+              .bind(userId).first();
+            if (!known) userId = null;
+          }
+          if (!userId) {
+            const email = normalizeEmail(s.customer_details?.email || s.customer_email);
+            if (email) userId = (await findOrCreateUser(env, email)).id;
+          }
+          if (userId) {
+            await env.DB.prepare(
+              'UPDATE users SET paid = 1, stripe_id = ?, paid_at = ? WHERE id = ?'
+            ).bind(s.customer || s.id, now(), userId).run();
+          }
         }
       }
       return json({ ok: true });
@@ -95,15 +109,54 @@ export default {
     /* --------------------------------------------------------- buy flow */
     if (path === '/api/checkout' && request.method === 'POST') {
       if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
-      const body = await readJson(request);
+      /* Signing in comes first, so the payment attaches to an account we
+         already know rather than to whatever address Stripe collects. */
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'sign in first', signin: '/api/auth/google' }, 401);
+      if (who.paid) return json({ url: `${origin}/app` });
       try {
         const link = await createCheckout(env, {
-          email: normalizeEmail(body.email) || undefined, origin,
+          email: who.email, origin, userId: who.id,
         });
         return json({ url: link });
       } catch (e) {
         return json({ error: e.message }, 502);
       }
+    }
+
+    /* ------------------------------------------------- sign in with Google */
+    if (path === '/api/auth/google') {
+      if (!google.configured(env)) {
+        return html('<h1>Google sign-in is not set up yet</h1><p>Set ' +
+                    'GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.</p>', 503);
+      }
+      const started = await google.startUrl(env, url, url.searchParams.get('next'));
+      return redirect(started.url, { 'Set-Cookie': started.cookie });
+    }
+
+    if (path === '/api/auth/google/callback') {
+      const clear = google.clearStateCookie();
+      if (!google.configured(env)) return redirect('/?auth=unavailable');
+      if (url.searchParams.get('error')) {
+        return redirect('/?auth=cancelled', { 'Set-Cookie': clear });
+      }
+      const checked = await google.checkState(
+        env, url.searchParams.get('state'), google.readStateCookie(request));
+      if (checked.error) return redirect('/?auth=expired', { 'Set-Cookie': clear });
+
+      const got = await google.exchange(env, url, url.searchParams.get('code'));
+      if (got.error) return redirect('/?auth=failed', { 'Set-Cookie': clear });
+
+      const email = normalizeEmail(got.email);
+      if (!email) return redirect('/?auth=failed', { 'Set-Cookie': clear });
+      const user = await findOrCreateUser(env, email);
+      const { cookie } = await createSession(env, user.id);
+      /* Two cookies on one response: the new session, and the state cookie
+         being cleared. Headers.append, because set() would drop one. */
+      const out = redirect(user.paid ? '/app' : '/?pay=1');
+      out.headers.append('Set-Cookie', cookie);
+      out.headers.append('Set-Cookie', clear);
+      return out;
     }
 
     /* Straight off a successful payment: verify the session with Stripe
@@ -113,9 +166,18 @@ export default {
       if (!id) return redirect('/');
       try {
         const s = await fetchCheckout(env, id);
-        const email = normalizeEmail(s.customer_details?.email || s.customer_email);
-        if (s.payment_status !== 'paid' || !email) return redirect('/?checkout=incomplete');
-        const user = await findOrCreateUser(env, email);
+        if (s.payment_status !== 'paid') return redirect('/?checkout=incomplete');
+        let user = null;
+        if (s.client_reference_id) {
+          const row = await env.DB.prepare('SELECT id, email, paid FROM users WHERE id = ?')
+            .bind(s.client_reference_id).first();
+          if (row) user = { id: row.id, email: row.email, paid: !!row.paid };
+        }
+        if (!user) {
+          const email = normalizeEmail(s.customer_details?.email || s.customer_email);
+          if (!email) return redirect('/?checkout=incomplete');
+          user = await findOrCreateUser(env, email);
+        }
         await env.DB.prepare(
           'UPDATE users SET paid = 1, stripe_id = ?, paid_at = COALESCE(paid_at, ?) WHERE id = ?'
         ).bind(s.customer || s.id, now(), user.id).run();

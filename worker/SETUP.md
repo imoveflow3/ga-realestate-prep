@@ -73,11 +73,36 @@ wrangler secret put STRIPE_WEBHOOK_SECRET
 npm run deploy
 ```
 
-## 5. Sign-in emails
+## 5. Google sign-in
 
-Buyers land straight in the app after paying without needing email. They only
-need a code when they come back on a different device, so this is required
-before you sell to anyone.
+This is how people get in, so it has to be set up before you sell anything.
+
+At <https://console.cloud.google.com/apis/credentials>: create a project, then
+**Create credentials -> OAuth client ID -> Web application**.
+
+- **Authorised JavaScript origin**: `https://YOUR-URL`
+- **Authorised redirect URI**: `https://YOUR-URL/api/auth/google/callback`
+
+You will also be asked to fill in the OAuth consent screen: app name, your
+support email, and links to `/privacy` and `/terms` (both already exist on
+your site). While the app is in *Testing* only addresses you list can sign in,
+which is what you want until you have bought it yourself. Publishing it opens
+it to everyone; for `openid email` scopes only, Google does not require a
+review.
+
+Then:
+
+```bash
+wrangler secret put GOOGLE_CLIENT_ID
+wrangler secret put GOOGLE_CLIENT_SECRET
+npm run deploy
+```
+
+## 6. Sign-in emails (optional fallback)
+
+Google sign-in covers the normal path. The six-digit email code is still
+wired up as a fallback for anyone without a Google account; it is not shown on
+the site by default, so this is optional.
 
 Make a free account at <https://resend.com>, verify a domain you own (or use
 their test sender to start), then:
@@ -88,14 +113,14 @@ wrangler secret put RESEND_API_KEY
 
 Set `FROM_EMAIL` in `wrangler.toml` to an address on that verified domain.
 
-## 6. Before you take real money
+## 7. Before you take real money
 
 - [ ] Change `SUPPORT_EMAIL` in `tools/build_paid.py` — it is
       `support@example.com` right now and it is printed on your terms and
       privacy pages.
-- [ ] Buy it yourself end to end in test mode: card `4242 4242 4242 4242`, any
-      future expiry, any CVC. Check you land in the app, close the tab, and
-      sign back in from a different browser.
+- [ ] Buy it yourself end to end in test mode: sign in with Google first,
+      then card `4242 4242 4242 4242`, any future expiry, any CVC. Check you
+      land in the app, close the tab, and sign back in from another browser.
 - [ ] Read `/terms` and `/privacy` on your own site and make sure you agree
       with what they say, because they are now promises you have made.
 - [ ] Turn off Stripe test mode, swap `STRIPE_SECRET_KEY` and
@@ -120,7 +145,7 @@ redeploy — the bundle is compiled into the Worker.
 
 | | Public | Needs an account | Needs to have paid |
 |---|---|---|---|
-| Sales page, 3 sample questions | ✅ | | |
+| Sales page | ✅ | | |
 | Terms, privacy | ✅ | | |
 | The app at `/app` | | | ✅ |
 | All 1,454 questions | | | ✅ |
