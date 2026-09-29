@@ -1353,6 +1353,20 @@ body.leaving{
 }
 .gatecard .linkish{font-size:.86rem; color:var(--ink-3)}
 .gatecard .linkish:hover{color:var(--accent)}
+
+/* ---- sign up / log in ---- */
+.gatepair{display:grid; grid-template-columns:1fr 1fr; gap:.55rem}
+.gatepair .btn{width:100%}
+.orline{display:flex; align-items:center; gap:.7rem; color:var(--ink-3);
+  font-size:.8rem; margin:.15rem 0}
+.orline::before,.orline::after{content:""; flex:1; height:1px; background:var(--line)}
+.authnote{font-size:.87rem; color:var(--ink-3); line-height:1.45; margin-top:.6rem;
+  min-height:1.2em}
+.authnote.bad{color:var(--no)}
+.sheet-card h2{margin-bottom:.1rem}
+.sheet-card .sub{margin-bottom:.9rem}
+.sheet-card label{margin-top:.7rem}
+.sheet-card .muted{margin-top:.4rem; line-height:1.45}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1385,7 +1399,7 @@ body.leaving{
 <footer>
   <div class="footrow footlinks">
                 <a href="https://grec.state.ga.us" target="_blank" rel="noopener">GREC (official)</a>
-    <span class="buildstamp">Updated 2026-09-27</span>
+    <span class="buildstamp">Updated 2026-09-29</span>
   </div>
   <div class="footrow">
     <span>Practice material, not an official statement of Georgia law and not legal
@@ -1500,89 +1514,133 @@ function signOut(){
 
 function openAuth(stage){
   if (HOME.preview){
-    toast('Preview only \u2014 accounts are not connected until this is deployed.');
+    toast('Preview only — accounts are not connected until this is deployed.');
     return;
   }
-  AUTH.stage = stage || 'email';
+  AUTH.stage = stage || 'login';
   renderAuth();
   $('authSheet').hidden = false;
 }
 function closeAuth(){ $('authSheet').hidden = true; }
 
+function field(parent, id, label, type, opts){
+  var l = el('label', null, label); l.setAttribute('for', id);
+  parent.appendChild(l);
+  var i = el('input');
+  i.type = type; i.id = id;
+  Object.keys(opts || {}).forEach(function(k){ i[k] = opts[k]; });
+  parent.appendChild(i);
+  return i;
+}
+
+function post(url, body){
+  return fetch(url, {
+    method: 'POST', credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body)
+  }).then(function(r){ return r.json().then(function(d){ return {status: r.status, d: d}; }); });
+}
+
+/* Where somebody lands after authenticating: into the app if they have paid
+   for it, back to the card to pay if they have not. */
+function afterAuth(paid){
+  location.href = paid ? '/app' : '/?pay=1';
+}
+
 function renderAuth(){
   var b = $('authBody');
   b.innerHTML = '';
-  if (AUTH.stage === 'email'){
-    b.appendChild(el('h2', null, 'Sign in'));
-    b.appendChild(el('p', 'sub',
-      'Already bought? Put in the email address you paid with and we will send ' +
-      'you a six-digit code.'));
-    var lab = el('label', null, 'Email address'); lab.setAttribute('for', 'authEmail');
-    b.appendChild(lab);
-    var inp = el('input'); inp.type = 'email'; inp.id = 'authEmail';
-    inp.autocomplete = 'email'; inp.value = AUTH.email;
-    inp.placeholder = 'you@example.com';
-    b.appendChild(inp);
-    var note = el('div', 'muted'); note.id = 'authNote'; note.style.marginTop = '.6rem';
+
+  if (AUTH.stage === 'signup' || AUTH.stage === 'login'){
+    var isNew = AUTH.stage === 'signup';
+    b.appendChild(el('h2', null, isNew ? 'Create your account' : 'Log in'));
+    b.appendChild(el('p', 'sub', isNew
+      ? 'Your progress, your notebook and your study plan are saved to this ' +
+        'account, on every device you use.'
+      : 'Welcome back. Everything you have done is waiting.'));
+
+    var g = googleButton(isNew ? 'Sign up with Google' : 'Continue with Google');
+    g.classList.remove('wide');
+    g.classList.add('wide');
+    b.appendChild(g);
+    var div = el('div', 'orline');
+    div.appendChild(el('span', null, 'or use an email address'));
+    b.appendChild(div);
+
+    var email = field(b, 'authEmail', 'Email address', 'email',
+                      {autocomplete: 'email', placeholder: 'you@example.com',
+                       value: AUTH.email});
+    var pw = field(b, 'authPassword', 'Password', 'password',
+                   {autocomplete: isNew ? 'new-password' : 'current-password',
+                    placeholder: isNew ? 'at least 10 characters' : ''});
+    if (isNew){
+      b.appendChild(el('p', 'muted',
+        'Ten characters or more. Length beats symbols — a short password ' +
+        'with punctuation in it is still a short password.'));
+    }
+    var note = el('div', 'authnote'); note.id = 'authNote';
     b.appendChild(note);
+
     var acts = el('div', 'wizacts'); acts.style.marginTop = '.9rem';
-    var go = el('button', 'btn', 'Send me a code');
-    go.onclick = function(){
-      AUTH.email = inp.value.trim();
+    var go = el('button', 'btn', isNew ? 'Create account' : 'Log in');
+    function submit(){
+      AUTH.email = email.value.trim();
       if (!AUTH.email){ note.textContent = 'Put your email in first.'; return; }
-      go.disabled = true; note.textContent = 'Sending…';
-      fetch('/api/login/start', {
-        method: 'POST', credentials: 'same-origin',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({email: AUTH.email})
-      }).then(function(r){ return r.json().then(function(d){ return {s: r.status, d: d}; }); })
+      if (!pw.value){ note.textContent = 'Put your password in.'; return; }
+      go.disabled = true; note.className = 'authnote'; note.textContent = 'One moment…';
+      post(isNew ? '/api/auth/signup' : '/api/auth/login',
+           {email: AUTH.email, password: pw.value})
         .then(function(x){
           go.disabled = false;
-          if (x.d.error){ note.textContent = x.d.error; return; }
-          AUTH.stage = 'code'; renderAuth();
-        })['catch'](function(){ go.disabled = false; note.textContent = 'Network problem. Try again.'; });
-    };
+          if (x.d.error){ note.className = 'authnote bad'; note.textContent = x.d.error; return; }
+          afterAuth(x.d.paid);
+        })['catch'](function(){
+          go.disabled = false;
+          note.className = 'authnote bad'; note.textContent = 'Network problem. Try again.';
+        });
+    }
+    go.onclick = submit;
+    pw.onkeydown = function(e){ if (e.key === 'Enter') submit(); };
+    email.onkeydown = function(e){ if (e.key === 'Enter') pw.focus(); };
     acts.appendChild(go);
-    var nope = el('button', 'btn ghost', 'I have not bought yet');
-    nope.onclick = function(){ closeAuth(); buy(inp.value.trim()); };
-    acts.appendChild(nope);
+    var swap = el('button', 'btn ghost',
+                  isNew ? 'I already have an account' : 'Create an account');
+    swap.onclick = function(){ AUTH.stage = isNew ? 'login' : 'signup'; renderAuth(); };
+    acts.appendChild(swap);
     b.appendChild(acts);
-    setTimeout(function(){ inp.focus(); }, 30);
+    setTimeout(function(){ (AUTH.email ? pw : email).focus(); }, 30);
     return;
   }
 
-  b.appendChild(el('h2', null, 'Check your email'));
-  b.appendChild(el('p', 'sub',
-    'If ' + AUTH.email + ' has access, a six-digit code is on its way. ' +
-    'It expires in fifteen minutes.'));
-  var lab2 = el('label', null, 'Six-digit code'); lab2.setAttribute('for', 'authCode');
-  b.appendChild(lab2);
-  var code = el('input'); code.id = 'authCode'; code.inputMode = 'numeric';
-  code.autocomplete = 'one-time-code'; code.maxLength = 6; code.placeholder = '000000';
-  b.appendChild(code);
-  var note2 = el('div', 'muted'); note2.id = 'authNote'; note2.style.marginTop = '.6rem';
-  b.appendChild(note2);
-  var acts2 = el('div', 'wizacts'); acts2.style.marginTop = '.9rem';
-  var ok = el('button', 'btn', 'Sign in');
-  ok.onclick = function(){
-    ok.disabled = true; note2.textContent = 'Checking…';
-    fetch('/api/login/verify', {
-      method: 'POST', credentials: 'same-origin',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({email: AUTH.email, code: code.value.trim()})
-    }).then(function(r){ return r.json().then(function(d){ return {s: r.status, d: d}; }); })
-      .then(function(x){
-        ok.disabled = false;
-        if (x.d.error){ note2.textContent = x.d.error; return; }
-        location.href = '/app';
-      })['catch'](function(){ ok.disabled = false; note2.textContent = 'Network problem.'; });
-  };
-  acts2.appendChild(ok);
-  var back = el('button', 'btn ghost', 'Use a different email');
-  back.onclick = function(){ AUTH.stage = 'email'; renderAuth(); };
-  acts2.appendChild(back);
-  b.appendChild(acts2);
-  setTimeout(function(){ code.focus(); }, 30);
+  /* The six-digit code, kept for anyone who cannot use either of the above. */
+  if (AUTH.stage === 'code'){
+    b.appendChild(el('h2', null, 'Check your email'));
+    b.appendChild(el('p', 'sub',
+      'If ' + AUTH.email + ' has access, a six-digit code is on its way. ' +
+      'It expires in fifteen minutes.'));
+    var code = field(b, 'authCode', 'Six-digit code', 'text',
+                     {inputMode: 'numeric', autocomplete: 'one-time-code',
+                      maxLength: 6, placeholder: '000000'});
+    var note2 = el('div', 'authnote'); note2.id = 'authNote';
+    b.appendChild(note2);
+    var acts2 = el('div', 'wizacts'); acts2.style.marginTop = '.9rem';
+    var ok = el('button', 'btn', 'Log in');
+    ok.onclick = function(){
+      ok.disabled = true; note2.textContent = 'Checking…';
+      post('/api/login/verify', {email: AUTH.email, code: code.value.trim()})
+        .then(function(x){
+          ok.disabled = false;
+          if (x.d.error){ note2.className = 'authnote bad'; note2.textContent = x.d.error; return; }
+          location.href = '/app';
+        })['catch'](function(){ ok.disabled = false; note2.textContent = 'Network problem.'; });
+    };
+    acts2.appendChild(ok);
+    var back = el('button', 'btn ghost', 'Back');
+    back.onclick = function(){ AUTH.stage = 'login'; renderAuth(); };
+    acts2.appendChild(back);
+    b.appendChild(acts2);
+    setTimeout(function(){ code.focus(); }, 30);
+  }
 }
 
 /* ----------------------------------------------------------- the page */
@@ -1735,16 +1793,29 @@ function renderMinimal(v, q){
     return;
   }
 
-  /* Not signed in: one way in. */
+  /* Not signed in. Two clearly separate doors, plus the one-tap shortcut. */
   var price2 = el('div', 'gateprice');
   price2.appendChild(el('span', 'amount', money(HOME.price)));
   price2.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
   card.appendChild(price2);
+
   acts.appendChild(googleButton('Continue with Google'));
+  var orline = el('div', 'orline');
+  orline.appendChild(el('span', null, 'or'));
+  acts.appendChild(orline);
+
+  var pair = el('div', 'gatepair');
+  var up = el('button', 'btn', 'Sign up');
+  up.onclick = function(){ openAuth('signup'); };
+  pair.appendChild(up);
+  var inb = el('button', 'btn ghost', 'Log in');
+  inb.onclick = function(){ openAuth('login'); };
+  pair.appendChild(inb);
+  acts.appendChild(pair);
+
   card.appendChild(acts);
   card.appendChild(el('p', 'gatefine',
-    'Sign in first, then pay. New and returning, same button \u2014 we will know ' +
-    'which you are.'));
+    'Your progress saves to your account and follows you between devices.'));
   wrap.appendChild(card);
   v.appendChild(wrap);
 }

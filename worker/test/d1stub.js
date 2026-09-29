@@ -1,7 +1,7 @@
 /* A minimum D1 good enough to exercise the gate: the handful of statements
    the Worker actually issues, backed by plain objects. */
 export function makeDB() {
-  const t = { users: [], sessions: [], login_codes: [], progress: [], stripe_events: [] };
+  const t = { users: [], sessions: [], login_codes: [], progress: [], stripe_events: [], auth_attempts: [] };
   const like = (sql, s) => sql.replace(/\s+/g, ' ').toUpperCase().includes(s);
 
   function run(sql, args) {
@@ -65,6 +65,33 @@ export function makeDB() {
     }
     if (like(q, 'DELETE FROM LOGIN_CODES')) {
       t.login_codes = t.login_codes.filter(c => c.email !== args[0]); return null;
+    }
+    if (like(q, 'SELECT ID, PASSWORD_HASH FROM USERS WHERE EMAIL')) {
+      const u = t.users.find(u => u.email === args[0]);
+      return u ? { id: u.id, password_hash: u.password_hash || null } : null;
+    }
+    if (like(q, 'SELECT ID, PAID, PASSWORD_HASH FROM USERS WHERE EMAIL')) {
+      const u = t.users.find(u => u.email === args[0]);
+      return u ? { id: u.id, paid: u.paid, password_hash: u.password_hash || null } : null;
+    }
+    if (like(q, 'UPDATE USERS SET PASSWORD_HASH')) {
+      const u = t.users.find(u => u.id === args[1]);
+      if (u) u.password_hash = args[0];
+      return null;
+    }
+    if (like(q, 'SELECT PAID FROM USERS WHERE ID')) {
+      const u = t.users.find(u => u.id === args[0]);
+      return u ? { paid: u.paid } : null;
+    }
+    if (like(q, 'SELECT FAILS, LOCKED_TILL FROM AUTH_ATTEMPTS'))
+      return t.auth_attempts.find(a => a.email === args[0]) || null;
+    if (like(q, 'INSERT INTO AUTH_ATTEMPTS')) {
+      t.auth_attempts = t.auth_attempts.filter(a => a.email !== args[0]);
+      t.auth_attempts.push({ email: args[0], fails: args[1], locked_till: args[2] });
+      return null;
+    }
+    if (like(q, 'DELETE FROM AUTH_ATTEMPTS')) {
+      t.auth_attempts = t.auth_attempts.filter(a => a.email !== args[0]); return null;
     }
     if (like(q, 'SELECT ID FROM STRIPE_EVENTS'))
       return t.stripe_events.find(e => e.id === args[0]) || null;

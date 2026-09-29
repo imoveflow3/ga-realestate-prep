@@ -7,6 +7,7 @@
 import GATED from '../assets/gated.js';
 import { createCheckout, fetchCheckout, verifyWebhook } from './stripe.js';
 import * as google from './google.js';
+import * as password from './password.js';
 import {
   currentUser, createSession, endSession, cookieHeader, readCookie,
   normalizeEmail, findOrCreateUser, issueLoginCode, verifyLoginCode, now,
@@ -122,6 +123,89 @@ export default {
       } catch (e) {
         return json({ error: e.message }, 502);
       }
+    }
+
+    /* -------------------------------------------- email and password ---- */
+    const LOCK_AFTER = 8;          // failed attempts before a cool-off
+    const LOCK_SECONDS = 900;
+
+    async function attemptState(email) {
+      const row = await env.DB.prepare(
+        'SELECT fails, locked_till FROM auth_attempts WHERE email = ?').bind(email).first();
+      return row || { fails: 0, locked_till: 0 };
+    }
+    async function noteFailure(email) {
+      const st = await attemptState(email);
+      const fails = st.fails + 1;
+      const until = fails >= LOCK_AFTER ? now() + LOCK_SECONDS : 0;
+      await env.DB.prepare(
+        `INSERT INTO auth_attempts (email, fails, locked_till) VALUES (?, ?, ?)
+         ON CONFLICT(email) DO UPDATE SET fails = excluded.fails,
+                                          locked_till = excluded.locked_till`
+      ).bind(email, fails, until).run();
+    }
+    async function clearFailures(email) {
+      await env.DB.prepare('DELETE FROM auth_attempts WHERE email = ?').bind(email).run();
+    }
+
+    if (path === '/api/auth/signup' && request.method === 'POST') {
+      const body = await readJson(request);
+      const email = normalizeEmail(body.email);
+      if (!email) return json({ error: 'That does not look like an email address.' }, 400);
+      const bad = password.problemWith(body.password);
+      if (bad) return json({ error: bad }, 400);
+
+      const existing = await env.DB.prepare(
+        'SELECT id, password_hash FROM users WHERE email = ?').bind(email).first();
+      if (existing && existing.password_hash) {
+        return json({ error: 'There is already an account on that address. ' +
+                             'Log in instead.' }, 409);
+      }
+      const hashed = await password.hash(body.password);
+      let user;
+      if (existing) {
+        /* Bought through Google first, now adding a password: same account. */
+        user = { id: existing.id };
+        await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+          .bind(hashed, user.id).run();
+      } else {
+        user = await findOrCreateUser(env, email);
+        await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+          .bind(hashed, user.id).run();
+      }
+      const fresh = await env.DB.prepare('SELECT paid FROM users WHERE id = ?')
+        .bind(user.id).first();
+      const { cookie } = await createSession(env, user.id);
+      return json({ ok: true, paid: !!(fresh && fresh.paid) }, 200,
+                  { 'Set-Cookie': cookie });
+    }
+
+    if (path === '/api/auth/login' && request.method === 'POST') {
+      const body = await readJson(request);
+      const email = normalizeEmail(body.email);
+      if (!email) return json({ error: 'That does not look like an email address.' }, 400);
+
+      const st = await attemptState(email);
+      if (st.locked_till > now()) {
+        return json({ error: 'Too many attempts. Try again in fifteen minutes, ' +
+                             'or use Continue with Google.' }, 429);
+      }
+      const row = await env.DB.prepare(
+        'SELECT id, paid, password_hash FROM users WHERE email = ?').bind(email).first();
+      /* The check runs even with no account so the reply takes the same time
+         either way, and says the same thing either way. */
+      const checked = await password.verify(body.password, row && row.password_hash);
+      if (!checked.ok) {
+        await noteFailure(email);
+        return json({ error: 'That email and password do not match.' }, 401);
+      }
+      if (checked.stale) {
+        await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+          .bind(await password.hash(body.password), row.id).run();
+      }
+      await clearFailures(email);
+      const { cookie } = await createSession(env, row.id);
+      return json({ ok: true, paid: !!row.paid }, 200, { 'Set-Cookie': cookie });
     }
 
     /* ------------------------------------------------- sign in with Google */

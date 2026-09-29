@@ -408,6 +408,99 @@ await it('and now they get in', async () => {
   assert.ok((await bundle.json()).banks.national.length > 100);
 });
 
+
+console.log('\nEMAIL AND PASSWORD');
+
+const PW = 'a long enough passphrase';
+
+await it('a short password is refused', async () => {
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: 'short' }) }), env, {});
+  assert.equal(res.status, 400);
+  assert.ok(!db._tables.users.find(u => u.email === 'pw@example.com'),
+            'a rejected signup still made an account');
+});
+
+let pwCookie = null;
+
+await it('signing up creates an account, signs you in, and pays for nothing', async () => {
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'PW@Example.com ', password: PW }) }), env, {});
+  assert.equal(res.status, 200);
+  assert.deepEqual(await res.json(), { ok: true, paid: false });
+  pwCookie = cookieOf(res);
+  const u = db._tables.users.find(u => u.email === 'pw@example.com');
+  assert.ok(u, 'no account');
+  assert.equal(u.paid, 0, 'signing up marked them paid');
+  assert.ok(u.password_hash.startsWith('pbkdf2$'), 'password not hashed');
+  assert.ok(!u.password_hash.includes(PW), 'password stored in the clear');
+});
+
+await it('a signed-up user still cannot reach the questions', async () => {
+  assert.equal((await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: pwCookie } }), env, {})).status, 402);
+});
+
+await it('signing up twice on the same address is refused', async () => {
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: PW }) }), env, {});
+  assert.equal(res.status, 409);
+});
+
+await it('the wrong password is refused and sets no cookie', async () => {
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: 'not the one' }) }), env, {});
+  assert.equal(res.status, 401);
+  assert.equal(res.headers.get('Set-Cookie'), null);
+});
+
+await it('an unknown address answers exactly like a wrong password', async () => {
+  const unknown = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'nobody-here@example.com', password: PW }) }), env, {});
+  const wrong = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: 'nope' }) }), env, {});
+  assert.equal(unknown.status, wrong.status);
+  assert.deepEqual(await unknown.json(), await wrong.json());
+});
+
+await it('guessing gets locked out', async () => {
+  for (let i = 0; i < 8; i++) {
+    await worker.fetch(req('/api/auth/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: 'pw@example.com', password: 'guess' + i }) }), env, {});
+  }
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: PW }) }), env, {});
+  assert.equal(res.status, 429, 'the right password still worked after 8 failures');
+});
+
+await it('the right password works once the lock is cleared', async () => {
+  db._tables.auth_attempts = [];
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'pw@example.com', password: PW }) }), env, {});
+  assert.equal(res.status, 200);
+  assert.ok(cookieOf(res).startsWith('ga_session='));
+  assert.equal(db._tables.auth_attempts.length, 0, 'failures not cleared on success');
+});
+
+await it('a Google account can add a password and stay one account', async () => {
+  const before = db._tables.users.length;
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'gmail.user@gmail.com', password: PW }) }), env, {});
+  assert.equal(res.status, 200);
+  assert.equal((await res.json()).paid, true, 'lost their paid status');
+  assert.equal(db._tables.users.length, before, 'a duplicate account was made');
+});
+
 globalThis.fetch = realFetch;
 console.log(`\n${PASS} passed, ${FAIL} failed\n`);
 process.exit(FAIL ? 1 : 0);

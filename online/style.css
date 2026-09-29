@@ -1315,3 +1315,17 @@ body.leaving{
 }
 .gatecard .linkish{font-size:.86rem; color:var(--ink-3)}
 .gatecard .linkish:hover{color:var(--accent)}
+
+/* ---- sign up / log in ---- */
+.gatepair{display:grid; grid-template-columns:1fr 1fr; gap:.55rem}
+.gatepair .btn{width:100%}
+.orline{display:flex; align-items:center; gap:.7rem; color:var(--ink-3);
+  font-size:.8rem; margin:.15rem 0}
+.orline::before,.orline::after{content:""; flex:1; height:1px; background:var(--line)}
+.authnote{font-size:.87rem; color:var(--ink-3); line-height:1.45; margin-top:.6rem;
+  min-height:1.2em}
+.authnote.bad{color:var(--no)}
+.sheet-card h2{margin-bottom:.1rem}
+.sheet-card .sub{margin-bottom:.9rem}
+.sheet-card label{margin-top:.7rem}
+.sheet-card .muted{margin-top:.4rem; line-height:1.45}

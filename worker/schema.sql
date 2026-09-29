@@ -3,8 +3,9 @@ CREATE TABLE IF NOT EXISTS users (
   id          TEXT PRIMARY KEY,
   email       TEXT NOT NULL UNIQUE,
   paid        INTEGER NOT NULL DEFAULT 0,
-  stripe_id   TEXT,
-  google_sub  TEXT,
+  stripe_id     TEXT,
+  google_sub    TEXT,
+  password_hash TEXT,
   created_at  INTEGER NOT NULL,
   paid_at     INTEGER
 );
@@ -40,4 +41,12 @@ CREATE TABLE IF NOT EXISTS progress (
 CREATE TABLE IF NOT EXISTS stripe_events (
   id          TEXT PRIMARY KEY,
   seen_at     INTEGER NOT NULL
+);
+
+-- Failed sign-in attempts per address, so a password cannot be guessed at
+-- speed. Cleared on success.
+CREATE TABLE IF NOT EXISTS auth_attempts (
+  email       TEXT PRIMARY KEY,
+  fails       INTEGER NOT NULL DEFAULT 0,
+  locked_till INTEGER NOT NULL DEFAULT 0
 );

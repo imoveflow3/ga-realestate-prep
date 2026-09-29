@@ -98,6 +98,25 @@ wrangler secret put GOOGLE_CLIENT_SECRET
 npm run deploy
 ```
 
+### A note on passwords and the free plan
+
+Email-and-password sign-in hashes with PBKDF2 at 100,000 iterations, which is
+the point of it -- a stolen database should not hand out logins. That costs
+real CPU, and Cloudflare's free plan allows about 10ms per request, which this
+will exceed. Signing up or logging in with a password may fail there.
+
+Three ways out, in the order I would pick them:
+
+1. Leave it. Google sign-in has no such cost and is the button most people
+   press anyway; the password form is the fallback.
+2. Move to the Workers Paid plan ($5/month), which raises the CPU limit well
+   past what this needs.
+3. Lower `ITERATIONS` in `src/password.js`. This works and I would not do it:
+   it makes every stored password cheaper to crack, forever, to save $5.
+
+Google sign-in, the six-digit email code, and everything behind the paywall
+are unaffected either way.
+
 ## 6. Sign-in emails (optional fallback)
 
 Google sign-in covers the normal path. The six-digit email code is still

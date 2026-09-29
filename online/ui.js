@@ -2449,7 +2449,12 @@ function systemDark(){
   try { return window.matchMedia('(prefers-color-scheme: dark)').matches; }
   catch(e){ return false; }
 }
+/* A preference belongs to the person, not the laptop. It rides along in the
+   profile so it syncs with everything else, with localStorage as the local
+   cache that lets the first paint happen before any of that loads. */
 function readTheme(){
+  var fromAccount = D && D.profile && D.profile.theme;
+  if (THEMES.indexOf(fromAccount) >= 0) return fromAccount;
   var t;
   try { t = localStorage.getItem(THEME_KEY); } catch(e){ t = null; }
   return THEMES.indexOf(t) >= 0 ? t : 'auto';
@@ -2469,6 +2474,9 @@ function applyTheme(mode){
 function cycleTheme(){
   var next = THEMES[(THEMES.indexOf(readTheme()) + 1) % THEMES.length];
   try { localStorage.setItem(THEME_KEY, next); } catch(e){}
+  D.profile = D.profile || {};
+  D.profile.theme = next;
+  persist();
   applyTheme(next);
   toast('Theme: ' + next);
 }
