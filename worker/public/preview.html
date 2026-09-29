@@ -1366,6 +1366,115 @@ body.leaving{
 .sheet-card .sub{margin-bottom:.9rem}
 .sheet-card label{margin-top:.7rem}
 .sheet-card .muted{margin-top:.4rem; line-height:1.45}
+
+/* ======================================================================
+   The entrance.
+
+   A short flight through space that resolves into the mark, then lifts to
+   reveal the card. Pure CSS 3D on composited properties -- transform and
+   opacity only -- so it is the GPU's problem and not the main thread's.
+   No canvas, no loop, nothing to drop frames.
+   ====================================================================== */
+
+.intro{
+  position:fixed; inset:0; z-index:100; background:#06090d;
+  display:grid; place-items:center; overflow:hidden;
+  perspective:760px; perspective-origin:50% 50%;
+  cursor:pointer;
+}
+.intro[hidden]{display:none !important}
+
+/* the flight itself */
+.intro-space{position:absolute; inset:0; transform-style:preserve-3d}
+.intro-star{
+  position:absolute; top:50%; left:50%; width:2px; height:2px; border-radius:50%;
+  background:#cfe9e3; opacity:0;
+  animation:fly var(--dur) linear var(--delay) both;
+}
+@keyframes fly{
+  0%{opacity:0; transform:translate3d(var(--x), var(--y), -1900px) scale(.4)}
+  12%{opacity:.9}
+  80%{opacity:.9}
+  100%{opacity:0; transform:translate3d(var(--x), var(--y), 620px) scale(1.9)}
+}
+
+/* the portal: frames receding, then rushing past the camera */
+.intro-ring{
+  position:absolute; top:50%; left:50%; width:280px; height:280px; margin:-140px 0 0 -140px;
+  border:1px solid color-mix(in srgb, #5fc0ad 55%, transparent);
+  border-radius:34px; opacity:0;
+  animation:ring 2.05s cubic-bezier(.36,.02,.2,1) var(--delay) both;
+}
+@keyframes ring{
+  0%{opacity:0; transform:translateZ(-1700px) rotate(var(--spin))}
+  22%{opacity:.55}
+  70%{opacity:.28}
+  100%{opacity:0; transform:translateZ(640px) rotate(calc(var(--spin) * -1))}
+}
+
+/* the mark arriving out of the distance and settling */
+.intro-mark{
+  position:relative; width:104px; height:104px; color:#5fc0ad; z-index:2;
+  animation:markin 1.55s cubic-bezier(.22,.9,.24,1) .34s both;
+}
+.intro-mark svg{width:100%; height:100%}
+@keyframes markin{
+  0%{opacity:0; transform:translateZ(-1200px) scale(.5); filter:blur(6px)}
+  55%{opacity:1; filter:blur(0)}
+  100%{opacity:1; transform:translateZ(0) scale(1); filter:blur(0)}
+}
+.intro-word{
+  position:absolute; left:0; right:0; top:calc(50% + 86px); z-index:2;
+  text-align:center; color:#e7edf4; font-family:"Barlow Condensed",sans-serif;
+  font-weight:700; font-size:1.05rem; letter-spacing:.34em; text-transform:uppercase;
+  opacity:0; animation:wordin .8s var(--ease) 1.05s both;
+}
+@keyframes wordin{from{opacity:0; transform:translateY(10px)} to{opacity:.85; transform:none}}
+
+.intro-skip{
+  position:absolute; bottom:1.6rem; left:0; right:0; text-align:center;
+  color:#7d8c9d; font-size:.78rem; letter-spacing:.06em;
+  opacity:0; animation:wordin .6s var(--ease) 1.6s both;
+}
+
+/* the lift: the whole thing pulls toward the viewer and fades out */
+.intro.done{
+  animation:introout .62s cubic-bezier(.5,0,.2,1) both;
+  pointer-events:none;
+}
+@keyframes introout{
+  from{opacity:1; transform:scale(1)}
+  to{opacity:0; transform:scale(1.13)}
+}
+
+/* the card waits its turn, then arrives into the space the intro left */
+body.intro-running main,
+body.intro-running header.hud,
+body.intro-running footer{opacity:0}
+body.intro-done main,
+body.intro-done header.hud,
+body.intro-done footer{animation:settle .6s var(--ease) both}
+@keyframes settle{
+  from{opacity:0; transform:translateY(14px) scale(.985)}
+  to{opacity:1; transform:none}
+}
+
+@media (max-width:860px){
+  .intro-mark{width:82px; height:82px}
+  .intro-word{font-size:.88rem; letter-spacing:.26em; top:calc(50% + 70px)}
+  .intro-ring{width:200px; height:200px; margin:-100px 0 0 -100px}
+}
+
+/* Nobody who has asked for less motion gets flown through space. */
+@media (prefers-reduced-motion:reduce){
+  .intro{display:none !important}
+  body.intro-running main,
+  body.intro-running header.hud,
+  body.intro-running footer{opacity:1}
+  body.intro-done main,
+  body.intro-done header.hud,
+  body.intro-done footer{animation:none}
+}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1461,6 +1570,105 @@ function applyTheme(mode){
   var b = $('themeBtn');
   if (b){ b.setAttribute('data-shown', resolved);
           $('themeLabel').textContent = mode.charAt(0).toUpperCase() + mode.slice(1); }
+}
+
+/* ---------------------------------------------------------- the entrance */
+/* Runs before anything else is visible, and gets out of the way fast. Three
+   rules it has to obey or it stops being a nice touch and becomes a toll:
+   it never plays twice in a session, it never plays on the way back from
+   Google or Stripe, and any key or tap ends it. */
+
+var INTRO_KEY = 'ga-prep-intro';
+var INTRO_MS = 2350;
+
+function introWanted(){
+  if (HOME.preview) return false;
+  try {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+  } catch(e){}
+  /* Coming back from an external hop is not an arrival. */
+  var q = new URLSearchParams(location.search);
+  if (q.get('auth') || q.get('checkout') || q.get('pay') || q.get('gate')) return false;
+  try {
+    if (sessionStorage.getItem(INTRO_KEY)) return false;
+    sessionStorage.setItem(INTRO_KEY, '1');
+  } catch(e){ /* private window: play it, once, and move on */ }
+  return true;
+}
+
+function buildIntro(){
+  var wrap = el('div', 'intro');
+  wrap.id = 'intro';
+  wrap.setAttribute('aria-hidden', 'true');
+
+  var space = el('div', 'intro-space');
+  /* Positions are random so no two visits look identical, but the seed of
+     randomness is the only thing that changes -- the work per star is one
+     composited transform. */
+  for (var i = 0; i < 64; i++){
+    var st = el('span', 'intro-star');
+    var angle = Math.random() * Math.PI * 2;
+    var spread = 120 + Math.random() * 900;
+    st.style.setProperty('--x', Math.round(Math.cos(angle) * spread) + 'px');
+    st.style.setProperty('--y', Math.round(Math.sin(angle) * spread * .62) + 'px');
+    st.style.setProperty('--dur', (1.1 + Math.random() * 1.1).toFixed(2) + 's');
+    st.style.setProperty('--delay', (Math.random() * 1.15).toFixed(2) + 's');
+    var size = Math.random() < .18 ? 3 : 2;
+    st.style.width = size + 'px';
+    st.style.height = size + 'px';
+    space.appendChild(st);
+  }
+  for (var r = 0; r < 4; r++){
+    var ring = el('div', 'intro-ring');
+    ring.style.setProperty('--delay', (r * 0.17).toFixed(2) + 's');
+    ring.style.setProperty('--spin', (r % 2 ? 6 : -6) + 'deg');
+    space.appendChild(ring);
+  }
+  wrap.appendChild(space);
+
+  var mark = el('div', 'intro-mark');
+  mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
+    '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
+    'fill="none" stroke="currentColor" stroke-width="26" stroke-linejoin="round"/></svg>';
+  wrap.appendChild(mark);
+
+  wrap.appendChild(el('div', 'intro-word', 'Georgia Real Estate'));
+  wrap.appendChild(el('div', 'intro-skip', 'tap to skip'));
+  return wrap;
+}
+
+function playIntro(){
+  if (!introWanted()){ document.body.classList.add('intro-done'); return; }
+
+  var wrap = buildIntro();
+  document.body.classList.add('intro-running');
+  document.body.appendChild(wrap);
+
+  var finished = false;
+  function finish(){
+    if (finished) return;
+    finished = true;
+    clearTimeout(timer);
+    document.removeEventListener('keydown', onKey, true);
+    wrap.classList.add('done');
+    document.body.classList.remove('intro-running');
+    document.body.classList.add('intro-done');
+    /* Leave the node long enough for its own exit to play, then take it out
+       so nothing is sitting over the page swallowing clicks. */
+    setTimeout(function(){ if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 700);
+  }
+  function onKey(){ finish(); }
+
+  var timer = setTimeout(finish, INTRO_MS);
+  wrap.addEventListener('click', finish);
+  wrap.addEventListener('touchstart', finish, {passive: true});
+  document.addEventListener('keydown', onKey, true);
+
+  /* A tab backgrounded mid-flight comes back to a frozen animation, so end it
+     rather than leaving somebody staring at a stalled starfield. */
+  document.addEventListener('visibilitychange', function(){
+    if (document.visibilityState === 'hidden') finish();
+  });
 }
 
 /* ------------------------------------------------------------- buying */
@@ -2020,6 +2228,8 @@ function render(){
 
 /* ------------------------------------------------------------------ boot */
 (function(){
+  playIntro();
+
   /* Back out of the app and the browser may restore this page from bfcache
      exactly as it was left -- mid-fade, at opacity zero. Clear it on every
      show, or the front door comes back invisible. */

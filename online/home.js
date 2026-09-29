@@ -40,6 +40,105 @@ function applyTheme(mode){
           $('themeLabel').textContent = mode.charAt(0).toUpperCase() + mode.slice(1); }
 }
 
+/* ---------------------------------------------------------- the entrance */
+/* Runs before anything else is visible, and gets out of the way fast. Three
+   rules it has to obey or it stops being a nice touch and becomes a toll:
+   it never plays twice in a session, it never plays on the way back from
+   Google or Stripe, and any key or tap ends it. */
+
+var INTRO_KEY = 'ga-prep-intro';
+var INTRO_MS = 2350;
+
+function introWanted(){
+  if (HOME.preview) return false;
+  try {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+  } catch(e){}
+  /* Coming back from an external hop is not an arrival. */
+  var q = new URLSearchParams(location.search);
+  if (q.get('auth') || q.get('checkout') || q.get('pay') || q.get('gate')) return false;
+  try {
+    if (sessionStorage.getItem(INTRO_KEY)) return false;
+    sessionStorage.setItem(INTRO_KEY, '1');
+  } catch(e){ /* private window: play it, once, and move on */ }
+  return true;
+}
+
+function buildIntro(){
+  var wrap = el('div', 'intro');
+  wrap.id = 'intro';
+  wrap.setAttribute('aria-hidden', 'true');
+
+  var space = el('div', 'intro-space');
+  /* Positions are random so no two visits look identical, but the seed of
+     randomness is the only thing that changes -- the work per star is one
+     composited transform. */
+  for (var i = 0; i < 64; i++){
+    var st = el('span', 'intro-star');
+    var angle = Math.random() * Math.PI * 2;
+    var spread = 120 + Math.random() * 900;
+    st.style.setProperty('--x', Math.round(Math.cos(angle) * spread) + 'px');
+    st.style.setProperty('--y', Math.round(Math.sin(angle) * spread * .62) + 'px');
+    st.style.setProperty('--dur', (1.1 + Math.random() * 1.1).toFixed(2) + 's');
+    st.style.setProperty('--delay', (Math.random() * 1.15).toFixed(2) + 's');
+    var size = Math.random() < .18 ? 3 : 2;
+    st.style.width = size + 'px';
+    st.style.height = size + 'px';
+    space.appendChild(st);
+  }
+  for (var r = 0; r < 4; r++){
+    var ring = el('div', 'intro-ring');
+    ring.style.setProperty('--delay', (r * 0.17).toFixed(2) + 's');
+    ring.style.setProperty('--spin', (r % 2 ? 6 : -6) + 'deg');
+    space.appendChild(ring);
+  }
+  wrap.appendChild(space);
+
+  var mark = el('div', 'intro-mark');
+  mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
+    '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
+    'fill="none" stroke="currentColor" stroke-width="26" stroke-linejoin="round"/></svg>';
+  wrap.appendChild(mark);
+
+  wrap.appendChild(el('div', 'intro-word', 'Georgia Real Estate'));
+  wrap.appendChild(el('div', 'intro-skip', 'tap to skip'));
+  return wrap;
+}
+
+function playIntro(){
+  if (!introWanted()){ document.body.classList.add('intro-done'); return; }
+
+  var wrap = buildIntro();
+  document.body.classList.add('intro-running');
+  document.body.appendChild(wrap);
+
+  var finished = false;
+  function finish(){
+    if (finished) return;
+    finished = true;
+    clearTimeout(timer);
+    document.removeEventListener('keydown', onKey, true);
+    wrap.classList.add('done');
+    document.body.classList.remove('intro-running');
+    document.body.classList.add('intro-done');
+    /* Leave the node long enough for its own exit to play, then take it out
+       so nothing is sitting over the page swallowing clicks. */
+    setTimeout(function(){ if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 700);
+  }
+  function onKey(){ finish(); }
+
+  var timer = setTimeout(finish, INTRO_MS);
+  wrap.addEventListener('click', finish);
+  wrap.addEventListener('touchstart', finish, {passive: true});
+  document.addEventListener('keydown', onKey, true);
+
+  /* A tab backgrounded mid-flight comes back to a frozen animation, so end it
+     rather than leaving somebody staring at a stalled starfield. */
+  document.addEventListener('visibilitychange', function(){
+    if (document.visibilityState === 'hidden') finish();
+  });
+}
+
 /* ------------------------------------------------------------- buying */
 var BUYING = false;
 function buy(email){
@@ -597,6 +696,8 @@ function render(){
 
 /* ------------------------------------------------------------------ boot */
 (function(){
+  playIntro();
+
   /* Back out of the app and the browser may restore this page from bfcache
      exactly as it was left -- mid-fade, at opacity zero. Clear it on every
      show, or the front door comes back invisible. */
