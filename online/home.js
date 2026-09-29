@@ -41,102 +41,42 @@ function applyTheme(mode){
 }
 
 /* ---------------------------------------------------------- the entrance */
-/* Runs before anything else is visible, and gets out of the way fast. Three
-   rules it has to obey or it stops being a nice touch and becomes a toll:
-   it never plays twice in a session, it never plays on the way back from
-   Google or Stripe, and any key or tap ends it. */
+/* A short, quiet opening: the mark settles, the name appears, and it is gone
+   inside a second. It used to be a two-and-a-half second flight through a
+   corridor of houses and books, which was striking the first time and a toll
+   every time after. What is left reads as an app opening, not a title
+   sequence, and it never stands between anyone and the login form.
+
+   Same three rules as before: never twice in a session, never on the way back
+   from Google or Stripe, and any key or tap ends it. */
 
 var INTRO_KEY = 'ga-prep-intro';
-var INTRO_MS = 2750;
+var INTRO_MS = 900;
 
 function introWanted(){
   if (HOME.preview) return false;
   try {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
   } catch(e){}
-  /* Coming back from an external hop is not an arrival. */
   var q = new URLSearchParams(location.search);
   if (q.get('auth') || q.get('checkout') || q.get('pay') || q.get('gate')) return false;
   try {
     if (sessionStorage.getItem(INTRO_KEY)) return false;
     sessionStorage.setItem(INTRO_KEY, '1');
-  } catch(e){ /* private window: play it, once, and move on */ }
+  } catch(e){ /* private window: play it once and move on */ }
   return true;
-}
-
-/* The two things this site is about, drawn as outlines so they read at any
-   depth: a house and an open book. */
-var INTRO_SHAPES = {
-  house: '<path d="M32 9 L57 30 L51 30 L51 53 L13 53 L13 30 L7 30 Z" ' +
-         'fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/>',
-  book:  '<path d="M32 17 C25 11, 14 10, 7 12 L7 47 C14 45, 25 46, 32 52 ' +
-         'C39 46, 50 45, 57 47 L57 12 C50 10, 39 11, 32 17 Z" ' +
-         'fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/>' +
-         '<path d="M32 17 L32 52" fill="none" stroke="currentColor" stroke-width="3.4"/>',
-};
-
-function introObject(kind, i, total){
-  var o = el('div', 'intro-obj ' + kind);
-  /* Spread around the corridor wall rather than at random, so nothing
-     clumps in the middle and blocks the mark. */
-  var angle = (i / total) * Math.PI * 2 + Math.random() * 0.6;
-  var radius = 300 + Math.random() * 430;
-  o.style.setProperty('--x', Math.round(Math.cos(angle) * radius) + 'px');
-  o.style.setProperty('--y', Math.round(Math.sin(angle) * radius * 0.7) + 'px');
-  o.style.setProperty('--size', Math.round(96 + Math.random() * 54) + 'px');
-  o.style.setProperty('--dur', (2.2 + Math.random() * 0.9).toFixed(2) + 's');
-  o.style.setProperty('--delay', (Math.random() * 1.35).toFixed(2) + 's');
-  o.style.setProperty('--spin', Math.round(-120 + Math.random() * 240) + 'deg');
-  o.innerHTML = '<svg viewBox="0 0 64 64" aria-hidden="true">' +
-                INTRO_SHAPES[kind] + '</svg>';
-  return o;
 }
 
 function buildIntro(){
   var wrap = el('div', 'intro');
   wrap.id = 'intro';
   wrap.setAttribute('aria-hidden', 'true');
-
-  var space = el('div', 'intro-space');
-
-  /* dust first, so the objects sit in front of it */
-  for (var i = 0; i < 46; i++){
-    var st = el('span', 'intro-star');
-    var a = Math.random() * Math.PI * 2;
-    var spread = 120 + Math.random() * 920;
-    st.style.setProperty('--x', Math.round(Math.cos(a) * spread) + 'px');
-    st.style.setProperty('--y', Math.round(Math.sin(a) * spread * .62) + 'px');
-    st.style.setProperty('--dur', (1.2 + Math.random() * 1.2).toFixed(2) + 's');
-    st.style.setProperty('--delay', (Math.random() * 1.3).toFixed(2) + 's');
-    var size = Math.random() < .18 ? 3 : 2;
-    st.style.width = size + 'px';
-    st.style.height = size + 'px';
-    space.appendChild(st);
-  }
-
-  /* the corridor frames */
-  for (var r = 0; r < 5; r++){
-    var ring = el('div', 'intro-ring');
-    ring.style.setProperty('--delay', (r * 0.16).toFixed(2) + 's');
-    ring.style.setProperty('--rot', (r % 2 ? 7 : -7) + 'deg');
-    space.appendChild(ring);
-  }
-
-  /* houses and books, alternating so both read */
-  var TOTAL = 14;
-  for (var k = 0; k < TOTAL; k++){
-    space.appendChild(introObject(k % 2 ? 'book' : 'house', k, TOTAL));
-  }
-  wrap.appendChild(space);
-
   var mark = el('div', 'intro-mark');
   mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
     '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
     'fill="none" stroke="currentColor" stroke-width="26" stroke-linejoin="round"/></svg>';
   wrap.appendChild(mark);
-
   wrap.appendChild(el('div', 'intro-word', 'Georgia Real Estate'));
-  wrap.appendChild(el('div', 'intro-skip', 'tap to skip'));
   return wrap;
 }
 
@@ -152,23 +92,17 @@ function playIntro(){
     if (finished) return;
     finished = true;
     clearTimeout(timer);
-    document.removeEventListener('keydown', onKey, true);
+    document.removeEventListener('keydown', finish, true);
     wrap.classList.add('done');
     document.body.classList.remove('intro-running');
     document.body.classList.add('intro-done');
-    /* Leave the node long enough for its own exit to play, then take it out
-       so nothing is sitting over the page swallowing clicks. */
-    setTimeout(function(){ if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 700);
+    setTimeout(function(){ if (wrap.parentNode) wrap.parentNode.removeChild(wrap); }, 420);
   }
-  function onKey(){ finish(); }
 
   var timer = setTimeout(finish, INTRO_MS);
   wrap.addEventListener('click', finish);
   wrap.addEventListener('touchstart', finish, {passive: true});
-  document.addEventListener('keydown', onKey, true);
-
-  /* A tab backgrounded mid-flight comes back to a frozen animation, so end it
-     rather than leaving somebody staring at a stalled starfield. */
+  document.addEventListener('keydown', finish, true);
   document.addEventListener('visibilitychange', function(){
     if (document.visibilityState === 'hidden') finish();
   });
@@ -441,7 +375,6 @@ function noticeFor(q){
    HOME.layout picks this over the long welcome page; both are built from the
    same data, so switching back is one flag in the build. */
 function renderMinimal(v, q){
-  var t = HOME.totals;
   var wrap = el('div', 'gatewrap');
   var card = el('div', 'gatecard');
 
@@ -454,31 +387,22 @@ function renderMinimal(v, q){
     'fill="none" stroke="currentColor" stroke-width="30" stroke-linejoin="round"/></svg>';
   card.appendChild(mark);
 
-  card.appendChild(el('h1', null, 'Georgia Real Estate Exam Prep'));
+  card.appendChild(el('h1', null,
+    'Prepare for your Georgia real estate exam with a clear study plan.'));
   card.appendChild(el('p', 'gatelede',
-    t.total + ' practice questions, ' + t.terms + ' defined terms and worked ' +
-    'maths for the salesperson licensing exam.'));
+    'Study state-specific topics, practice exam-style questions, and track ' +
+    'your progress in one place.'));
 
   var acts = el('div', 'gateacts');
 
-  /* No payments behind this host, so there is nothing to sign into. */
-  if (HOME.openAccess){
-    var open = el('button', 'btn wide', 'Start studying');
-    open.onclick = openApp;
-    acts.appendChild(open);
-    card.appendChild(acts);
-    card.appendChild(el('p', 'gatefine',
-      'Free to use right now. Accounts and saved progress are on the way.'));
-    wrap.appendChild(card); v.appendChild(wrap);
-    return;
-  }
-
-  if (ME.signedIn && ME.paid){
+  /* Signed in and paid: nothing left to sell. */
+  if (!HOME.openAccess && ME.signedIn && ME.paid){
     card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
-    var go = el('button', 'btn wide', 'Open the app');
+    var go = el('button', 'btn wide', 'Continue studying');
     go.onclick = function(){ location.href = '/app'; };
     acts.appendChild(go);
     card.appendChild(acts);
+    card.appendChild(previewList());
     var out = el('button', 'linkish', 'Sign out');
     out.onclick = signOut;
     card.appendChild(out);
@@ -486,19 +410,21 @@ function renderMinimal(v, q){
     return;
   }
 
-  if (ME.signedIn && !ME.paid){
+  /* Signed in, not paid: one thing to do. */
+  if (!HOME.openAccess && ME.signedIn && !ME.paid){
     card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
     var price = el('div', 'gateprice');
     price.appendChild(el('span', 'amount', money(HOME.price)));
-    price.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
+    price.appendChild(el('span', 'once', 'one payment, no subscription'));
     card.appendChild(price);
     var pay = el('button', 'btn wide');
-    pay.textContent = 'Pay ' + money(HOME.price) + ' and start';
+    pay.textContent = 'Pay ' + money(HOME.price) + ' and start studying';
     pay.onclick = function(){ buy(); };
     acts.appendChild(pay);
     card.appendChild(acts);
+    card.appendChild(previewList());
     card.appendChild(el('p', 'gatefine',
-      'No subscription. Nothing renews. Full refund within 14 days.'));
+      'Full refund within 14 days. Nothing renews.'));
     var out2 = el('button', 'linkish', 'Use a different account');
     out2.onclick = signOut;
     card.appendChild(out2);
@@ -506,31 +432,49 @@ function renderMinimal(v, q){
     return;
   }
 
-  /* Not signed in. Two clearly separate doors, plus the one-tap shortcut. */
-  var price2 = el('div', 'gateprice');
-  price2.appendChild(el('span', 'amount', money(HOME.price)));
-  price2.appendChild(el('span', 'once', 'one payment \u00b7 lifetime access'));
-  card.appendChild(price2);
+  /* Open access: no accounts behind this host. */
+  if (HOME.openAccess){
+    var open = el('button', 'btn wide', 'Start studying');
+    open.onclick = openApp;
+    acts.appendChild(open);
+    card.appendChild(acts);
+    card.appendChild(previewList());
+    card.appendChild(el('p', 'gatefine',
+      'Free to use. Accounts and saved progress are on the way.'));
+    wrap.appendChild(card); v.appendChild(wrap);
+    return;
+  }
 
-  acts.appendChild(googleButton('Continue with Google'));
-  var orline = el('div', 'orline');
-  orline.appendChild(el('span', null, 'or'));
-  acts.appendChild(orline);
-
-  var pair = el('div', 'gatepair');
-  var up = el('button', 'btn', 'Sign up');
+  /* Not signed in. Two actions, named for what they do. */
+  var up = el('button', 'btn wide', 'Create account');
   up.onclick = function(){ openAuth('signup'); };
-  pair.appendChild(up);
-  var inb = el('button', 'btn ghost', 'Log in');
+  acts.appendChild(up);
+  var inb = el('button', 'btn ghost wide', 'Log in');
   inb.onclick = function(){ openAuth('login'); };
-  pair.appendChild(inb);
-  acts.appendChild(pair);
-
+  acts.appendChild(inb);
   card.appendChild(acts);
+  card.appendChild(previewList());
   card.appendChild(el('p', 'gatefine',
-    'Your progress saves to your account and follows you between devices.'));
+    money(HOME.price) + ' once for full access. No subscription, nothing ' +
+    'renews, full refund within 14 days.'));
   wrap.appendChild(card);
   v.appendChild(wrap);
+}
+
+/* What you get, in four lines. Not statistics, not cards, not a pitch. */
+function previewList(){
+  var list = el('ul', 'preview');
+  [['Study plan', 'paced to your test date'],
+   ['Lessons', 'every topic on the exam blueprint'],
+   ['Practice questions', 'scored National and Georgia separately'],
+   ['Saved progress', 'on every device you sign in to']
+  ].forEach(function(r){
+    var li = el('li');
+    li.appendChild(el('b', null, r[0]));
+    li.appendChild(el('span', null, r[1]));
+    list.appendChild(li);
+  });
+  return list;
 }
 
 /* ------------------------------------------------------- the welcome page */

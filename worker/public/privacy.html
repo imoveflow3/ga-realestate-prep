@@ -6,48 +6,62 @@
    stat tables. Tokens first: light is the base, both dark paths redefine only
    these. */
 :root{
-  --bg:#eef1f6;         --panel:#ffffff;      --panel-2:#f5f8fa;
-  --ink:#0e1720;        --ink-2:#48596c;      --ink-3:#7d8c9d;
-  --line:#e1e8ef;       --line-2:#c7d2de;
-  --accent:#0d7365;     --accent-ink:#ffffff; --accent-soft:#dff1ed;
-  --brass:#8d6111;      --brass-soft:#f8eed7;
-  --ok:#157f4a;         --ok-soft:#ddf3e6;
-  --no:#b4243c;         --no-soft:#fde4e8;
-  --caution:#8a6100;    --caution-soft:#fbf0d9;
-  --glow:rgba(13,115,101,.16);
-  --shadow:0 1px 2px rgba(14,23,32,.05), 0 8px 24px -8px rgba(14,23,32,.12);
-  --shadow-lift:0 2px 4px rgba(14,23,32,.06), 0 16px 40px -12px rgba(14,23,32,.20);
-  --r:14px;             --r-sm:10px;          --r-xs:7px;
+  /* Warm neutral paper, charcoal-navy ink, one forest accent, one amber for
+     progress and caution. Nothing else earns a colour. */
+  --bg:#f6f5f1;         --panel:#ffffff;      --panel-2:#faf9f5;
+  --ink:#18222c;        --ink-2:#4c5966;      --ink-3:#78838e;
+  --line:#e6e3da;       --line-2:#d3cec2;
+  --accent:#1d5c46;     --accent-ink:#ffffff; --accent-soft:#e7efea;
+  --brass:#8a6516;      --brass-soft:#f6efdd;
+  --ok:#1f6b47;         --ok-soft:#e5f0e9;
+  --no:#a32b33;         --no-soft:#f8e7e7;
+  --caution:#8a6516;    --caution-soft:#f6efdd;
+  --glow:rgba(29,92,70,.12);
+  --shadow:0 1px 2px rgba(24,34,44,.04);
+  --shadow-lift:0 1px 2px rgba(24,34,44,.05), 0 8px 20px -10px rgba(24,34,44,.14);
+  --r:8px;              --r-sm:6px;           --r-xs:4px;
   --r-pill:999px;
   --ease:cubic-bezier(.2,.7,.3,1);
+
+  /* one spacing scale, used everywhere */
+  --s1:.25rem; --s2:.5rem; --s3:.75rem; --s4:1rem;
+  --s5:1.5rem; --s6:2rem; --s7:3rem; --s8:4rem;
+
+  --sidebar:248px;
+
+  /* One interface sans. A serif for major headings only. Mono for figures,
+     because numbers in a table must line up. Nothing else. */
+  --ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif;
+  --display:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:var(--mono);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0a0e14;       --panel:#141b24;      --panel-2:#1b232e;
-    --ink:#e7edf4;      --ink-2:#a7b5c6;      --ink-3:#77869a;
-    --line:#242f3c;     --line-2:#354354;
-    --accent:#4fd1b8;   --accent-ink:#05231e; --accent-soft:#0f2f2a;
-    --brass:#e0b25a;    --brass-soft:#2c2417;
-    --ok:#4fd07f;       --ok-soft:#0f2a1b;
-    --no:#fb7f95;       --no-soft:#2f151d;
-    --caution:#e6b95c;  --caution-soft:#2b2314;
-    --glow:rgba(79,209,184,.20);
-    --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
-    --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
+    --bg:#12161b;       --panel:#181d24;      --panel-2:#1e242c;
+    --ink:#e8eaed;      --ink-2:#a8b1bb;      --ink-3:#7b858f;
+    --line:#2a313a;     --line-2:#3a424c;
+    --accent:#6fae94;   --accent-ink:#0d1a15; --accent-soft:#1a2a23;
+    --brass:#c9a566;    --brass-soft:#2a2418;
+    --ok:#6fae94;       --ok-soft:#1a2a23;
+    --no:#d98a8a;       --no-soft:#2c1c1e;
+    --caution:#c9a566;  --caution-soft:#2a2418;
+    --glow:rgba(111,174,148,.18);
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+    --shadow-lift:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -12px rgba(0,0,0,.6);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0a0e14;         --panel:#141b24;      --panel-2:#1b232e;
-  --ink:#e7edf4;        --ink-2:#a7b5c6;      --ink-3:#77869a;
-  --line:#242f3c;       --line-2:#354354;
-  --accent:#4fd1b8;     --accent-ink:#05231e; --accent-soft:#0f2f2a;
-  --brass:#e0b25a;      --brass-soft:#2c2417;
-  --ok:#4fd07f;         --ok-soft:#0f2a1b;
-  --no:#fb7f95;         --no-soft:#2f151d;
-  --caution:#e6b95c;    --caution-soft:#2b2314;
-  --glow:rgba(79,209,184,.20);
-  --shadow:0 1px 2px rgba(0,0,0,.55), 0 10px 30px -10px rgba(0,0,0,.55);
-  --shadow-lift:0 2px 6px rgba(0,0,0,.5), 0 22px 48px -14px rgba(0,0,0,.65);
+  --bg:#12161b;         --panel:#181d24;      --panel-2:#1e242c;
+  --ink:#e8eaed;        --ink-2:#a8b1bb;      --ink-3:#7b858f;
+  --line:#2a313a;       --line-2:#3a424c;
+  --accent:#6fae94;     --accent-ink:#0d1a15; --accent-soft:#1a2a23;
+  --brass:#c9a566;      --brass-soft:#2a2418;
+  --ok:#6fae94;         --ok-soft:#1a2a23;
+  --no:#d98a8a;         --no-soft:#2c1c1e;
+  --caution:#c9a566;    --caution-soft:#2a2418;
+  --glow:rgba(111,174,148,.18);
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+  --shadow-lift:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -12px rgba(0,0,0,.6);
 }
 
 /* The front door and the app are two documents on one origin. Without this,
@@ -64,65 +78,104 @@
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font-family:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-family:var(--ui);
   font-size:16px; line-height:1.55; -webkit-text-size-adjust:100%;
 }
-h1,h2,h3{font-family:"Barlow Condensed","Barlow",sans-serif; font-weight:600;
-  line-height:1.14; margin:0; text-wrap:balance; letter-spacing:.005em}
-h1{font-size:1.95rem} h2{font-size:1.4rem} h3{font-size:1.08rem}
+h1,h2,h3,h4{margin:0; color:var(--ink); text-wrap:balance}
+h1,h2{font-family:var(--display); font-weight:600; letter-spacing:-.011em;
+  line-height:1.2}
+h3,h4{font-family:var(--ui); font-weight:600; letter-spacing:-.004em; line-height:1.3}
+h1{font-size:1.75rem}
+h2{font-size:1.3rem}
+h3{font-size:1.02rem}
+h4{font-size:.94rem}
 p{margin:0}
-.num,td.num,th.num,.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+.num,td.num,th.num,.mono{font-family:var(--mono);
   font-variant-numeric:tabular-nums}
 :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
 @media (prefers-reduced-motion:reduce){*{animation:none !important; transition:none !important}}
 
-/* ---- status strip ---- */
+/* ================================ app shell ===========================
+   A persistent sidebar on a desktop, a drawer and a bottom bar on a phone.
+   The study area is the page; the navigation is furniture.
+   ===================================================================== */
+
+.shell{display:flex; min-height:100vh; align-items:stretch}
+.col{flex:1; min-width:0; display:flex; flex-direction:column}
+
+.side{
+  width:var(--sidebar); flex:0 0 var(--sidebar); background:var(--panel);
+  border-right:1px solid var(--line); display:flex; flex-direction:column;
+  position:sticky; top:0; height:100vh;
+}
+.side-head{display:flex; align-items:flex-start; gap:var(--s2);
+  padding:var(--s5) var(--s4) var(--s4)}
+.wordmark{background:none; border:0; padding:0; cursor:pointer; color:var(--ink);
+  display:flex; align-items:flex-start; gap:var(--s2); text-align:left; flex:1}
+.brandmark{width:1.5rem; height:1.5rem; flex:0 0 auto; color:var(--accent); margin-top:1px}
+.wordmark>span{display:flex; flex-direction:column; font-family:var(--display);
+  font-weight:600; font-size:1rem; line-height:1.2; letter-spacing:-.008em}
+.wordmark>span small{font-family:var(--ui); font-weight:400; font-size:.74rem;
+  color:var(--ink-3); letter-spacing:0; margin-top:2px}
+.drawerclose{display:none}
+
+.rail{flex:1; overflow-y:auto; padding:0 var(--s3) var(--s4)}
+.rail-in{display:flex; flex-direction:column; gap:1px}
+.navgroup{
+  font-family:var(--ui); font-size:.68rem; font-weight:600; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--ink-3); margin:var(--s4) 0 var(--s2);
+  padding:0 var(--s2);
+}
+.navgroup:first-child{margin-top:0}
+.rail button{
+  font-family:var(--ui); font-size:.92rem; font-weight:500; text-align:left;
+  background:none; border:0; border-radius:var(--r-sm); color:var(--ink-2);
+  padding:.46rem var(--s2); cursor:pointer; white-space:nowrap; width:100%;
+  transition:background .12s var(--ease), color .12s var(--ease);
+}
+.rail button:hover{background:var(--panel-2); color:var(--ink)}
+.rail button.on,.rail button[aria-current="page"]{
+  background:var(--accent-soft); color:var(--accent); font-weight:600;
+}
+
+.side-foot{
+  border-top:1px solid var(--line); padding:var(--s3);
+  display:flex; flex-wrap:wrap; gap:var(--s1);
+}
+.side-foot .iconbtn{border:0; padding:.34rem var(--s2); font-size:.78rem;
+  text-transform:none; letter-spacing:0; font-weight:500; min-height:32px}
+.side-foot .iconbtn:hover{background:var(--panel-2)}
+
+/* the top bar carries the phone menu button and the status figures */
 header.hud{position:sticky; top:0; z-index:20; background:var(--panel);
-  border-bottom:1px solid var(--line); box-shadow:var(--shadow)}
-.hud-in{max-width:1040px; margin:0 auto; padding:.5rem 1.1rem;
-  display:grid; grid-template-columns:1fr auto; align-items:center; gap:.5rem 1rem}
-.wordmark{grid-area:1/1} .hudacts{grid-area:1/2} .readouts{grid-area:2/1/3/3}
-.wordmark{font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
-  letter-spacing:.13em; text-transform:uppercase; white-space:nowrap; display:flex;
-  align-items:baseline; gap:.5rem}
-.wordmark small{font-family:"Barlow",sans-serif; font-weight:500; font-size:.7rem;
-  letter-spacing:.06em; color:var(--ink-3); text-transform:none}
-/* its own full-width row: five numbers never fit beside a wordmark and a
-   button cluster, and wrapping them made the header 190px tall */
-.readouts{grid-column:1/-1; display:flex; gap:1.35rem; flex-wrap:nowrap;
-  overflow-x:auto; scrollbar-width:none; padding-bottom:.1rem}
+  border-bottom:1px solid var(--line)}
+.hud-in{max-width:none; margin:0; padding:var(--s3) var(--s5);
+  display:flex; align-items:center; gap:var(--s4); min-height:56px}
+.menubtn{display:none}
+.readouts{display:flex; gap:var(--s5); flex-wrap:nowrap; overflow-x:auto;
+  scrollbar-width:none; margin-left:auto}
 .readouts::-webkit-scrollbar{display:none}
 .readouts[hidden]{display:none}
-.ro{display:flex; flex-direction:column; line-height:1.1}
-.ro .k{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
-  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
-.ro .v{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
-  font-size:1.12rem; font-weight:600}
-.ro.hero .v{font-size:1.34rem}
+.ro{display:flex; flex-direction:column; line-height:1.2}
+.ro .k{font-family:var(--ui); font-size:.68rem; font-weight:600; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--ink-3)}
+.ro .v{font-family:var(--mono); font-variant-numeric:tabular-nums;
+  font-size:1rem; font-weight:600}
+.ro.hero .v{font-size:1.1rem}
 .ro.hero .v.good{color:var(--ok)}
 .ro.hero .v.bad{color:var(--no)}
-.ro .v small{font-family:"Barlow",sans-serif; font-size:.7rem; font-weight:400;
+.ro .v small{font-family:var(--ui); font-size:.7rem; font-weight:400;
   color:var(--ink-3); margin-left:.34rem; letter-spacing:0}
 
-/* ---- tabs ---- */
-nav.rail{background:var(--panel); border-bottom:1px solid var(--line); position:sticky;
-  top:0; z-index:19}
-.rail-in{max-width:1040px; margin:0 auto; padding:0 .8rem; display:flex; gap:0;
-  overflow-x:auto; scrollbar-width:none}
-.rail-in::-webkit-scrollbar{display:none}
-.rail button{font-family:"Barlow Condensed",sans-serif; font-size:.92rem; font-weight:600;
-  letter-spacing:.09em; text-transform:uppercase; background:none; border:0;
-  border-bottom:2px solid transparent; color:var(--ink-3); padding:.62rem .85rem;
-  cursor:pointer; white-space:nowrap}
-.rail button:hover{color:var(--ink)}
-.rail button.on,.rail button[aria-current="page"]{color:var(--accent);
-  border-bottom-color:var(--accent)}
+main{max-width:none; margin:0; padding:var(--s6) var(--s5) var(--s7);
+  display:flex; flex-direction:column; gap:var(--s5); flex:1}
+main>section:not([hidden]){display:flex; flex-direction:column; gap:var(--s5);
+  max-width:64rem; width:100%}
+footer{max-width:64rem; margin:0; padding:0 var(--s5) var(--s6); display:flex;
+  gap:var(--s3); color:var(--ink-3); font-size:.8rem}
 
-main{max-width:1040px; margin:0 auto; padding:1.2rem 1.1rem 2rem;
-  display:flex; flex-direction:column; gap:1rem}
-footer{max-width:1040px; margin:0 auto; padding:.4rem 1.1rem 3rem; display:flex;
-  gap:1rem; justify-content:space-between; flex-wrap:wrap; color:var(--ink-3);
-  font-size:.78rem}
+/* the drawer scrim, phones only */
+.scrim{display:none}
 
 /* ---- surfaces ---- */
 .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
@@ -131,7 +184,7 @@ footer{max-width:1040px; margin:0 auto; padding:.4rem 1.1rem 3rem; display:flex;
 .cardhead{display:flex; justify-content:space-between; align-items:baseline;
   gap:1rem; flex-wrap:wrap}
 .cardhead h2{margin:0}
-.eyebrow,.hint{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+.eyebrow,.hint{font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3)}
 .sub,.lede{color:var(--ink-2); font-size:.94rem; max-width:66ch; margin:0}
 .muted{color:var(--ink-3); font-size:.82rem}
@@ -146,13 +199,13 @@ footer{max-width:1040px; margin:0 auto; padding:.4rem 1.1rem 3rem; display:flex;
   border-radius:var(--r); padding:.65rem .8rem; display:flex; flex-direction:column;
   gap:.12rem}
 .readout .eyebrow{margin:0}
-.stat{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+.stat{font-family:var(--mono); font-variant-numeric:tabular-nums;
   font-size:1.62rem; font-weight:600; line-height:1.1}
 .stat.small{font-size:1.25rem}
 .stat.good{color:var(--ok)} .stat.bad{color:var(--no)}
 
 /* ---- controls ---- */
-button.btn{font-family:"Barlow Condensed",sans-serif; font-size:.95rem; font-weight:600;
+button.btn{font-family:var(--ui); font-size:.95rem; font-weight:600;
   letter-spacing:.07em; text-transform:uppercase; padding:.5rem 1rem; cursor:pointer;
   border-radius:var(--r); border:1px solid var(--accent); background:var(--accent);
   color:var(--accent-ink)}
@@ -164,14 +217,14 @@ button.btn.mini{padding:.24rem .58rem; font-size:.8rem; letter-spacing:.05em;
 button.btn.mini.ghost{color:var(--ink-2); border-color:var(--line-2)}
 button.btn:disabled{opacity:.45; cursor:not-allowed; filter:none}
 
-label{display:block; font-family:"Barlow Condensed",sans-serif; font-size:.7rem;
+label{display:block; font-family:var(--ui); font-size:.7rem;
   font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3);
   margin-bottom:.25rem}
 input,select,textarea{font:inherit; font-size:.92rem; padding:.42rem .55rem;
   border:1px solid var(--line-2); border-radius:var(--r); background:var(--panel);
   color:var(--ink); width:100%}
-input[type=date],input[type=number]{font-family:"IBM Plex Mono",monospace}
-textarea{font-family:"IBM Plex Mono",monospace; font-size:.72rem; line-height:1.5}
+input[type=date],input[type=number]{font-family:var(--mono)}
+textarea{font-family:var(--mono); font-size:.72rem; line-height:1.5}
 .pick{display:flex; align-items:flex-start; gap:.5rem; background:var(--panel);
   border:1px solid var(--line); border-left:3px solid var(--line-2);
   border-radius:0 var(--r) var(--r) 0; padding:.5rem .65rem; cursor:pointer;
@@ -179,7 +232,7 @@ textarea{font-family:"IBM Plex Mono",monospace; font-size:.72rem; line-height:1.
 .pick:hover{border-color:var(--line-2)}
 .pick input{width:auto; margin:.2rem 0 0}
 
-.tag{font-family:"Barlow Condensed",sans-serif; font-size:.64rem; font-weight:700;
+.tag{font-family:var(--ui); font-size:.64rem; font-weight:700;
   letter-spacing:.11em; text-transform:uppercase; padding:.1rem .36rem; border-radius:2px;
   background:var(--accent-soft); color:var(--accent); white-space:nowrap;
   display:inline-block; vertical-align:1px}
@@ -196,7 +249,7 @@ textarea{font-family:"IBM Plex Mono",monospace; font-size:.72rem; line-height:1.
 /* ---- tables ---- */
 .scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
 table{border-collapse:collapse; width:100%; font-size:.9rem; min-width:min(100%,460px)}
-th{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+th{font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); text-align:left;
   padding:.4rem .5rem; border-bottom:1px solid var(--line-2); white-space:nowrap}
 td{padding:.44rem .5rem; border-bottom:1px solid var(--line); vertical-align:middle}
@@ -204,7 +257,7 @@ tr:last-child td{border-bottom:0}
 td.num,th.num{text-align:right; white-space:nowrap}
 td.up{color:var(--ok)} td.down{color:var(--no)}
 table.stats td:first-child,table.stats th:first-child{min-width:170px; white-space:normal}
-table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:.7rem;
+table.stats tr.grouprow td{font-family:var(--ui); font-size:.7rem;
   font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
   padding:.85rem .5rem .3rem; border-bottom:1px solid var(--line-2)}
 
@@ -214,7 +267,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .qhead{display:flex; justify-content:space-between; align-items:center; gap:1rem;
   flex-wrap:wrap; background:var(--panel); border:1px solid var(--line);
   border-radius:var(--r); padding:.55rem .9rem; box-shadow:var(--shadow)}
-.timer{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+.timer{font-family:var(--mono); font-variant-numeric:tabular-nums;
   font-size:1.3rem; font-weight:600}
 .timer.warn{color:var(--no)}
 .qtext{font-size:1.08rem; white-space:pre-wrap; max-width:68ch; margin:.35rem 0 .2rem}
@@ -226,7 +279,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .choice:hover:not(:disabled){border-color:var(--accent); border-left-color:var(--accent);
   background:var(--accent-soft)}
 .choice:disabled{cursor:default}
-.choice .k{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-3);
+.choice .k{font-family:var(--mono); font-weight:600; color:var(--ink-3);
   min-width:1.05rem; flex:0 0 auto}
 .choice.correct{border-color:var(--ok); border-left-color:var(--ok); background:var(--ok-soft)}
 .choice.wrong{border-color:var(--no); border-left-color:var(--no); background:var(--no-soft)}
@@ -236,24 +289,24 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   flex-direction:column; gap:.3rem; margin-top:.8rem}
 .feedback.ok{border-color:var(--ok); border-left-color:var(--ok); background:var(--ok-soft)}
 .feedback.no{border-color:var(--no); border-left-color:var(--no); background:var(--no-soft)}
-.feedback .verdict{font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1rem;
+.feedback .verdict{font-family:var(--ui); font-weight:700; font-size:1rem;
   letter-spacing:.04em; text-transform:uppercase}
 .feedback.ok .verdict{color:var(--ok)} .feedback.no .verdict{color:var(--no)}
 .concept{font-size:.82rem; color:var(--ink-3); margin-top:.35rem; padding-top:.35rem;
   border-top:1px solid var(--line)}
-.steps{margin:.4rem 0 0; padding-left:1.15rem; font-family:"IBM Plex Mono",monospace;
+.steps{margin:.4rem 0 0; padding-left:1.15rem; font-family:var(--mono);
   font-size:.82rem; line-height:1.7}
 
 /* ---- plan ---- */
 .week{border-left:3px solid var(--accent); padding-left:.9rem; display:flex;
   flex-direction:column; gap:.3rem}
-.week .when{font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--ink-3)}
+.week .when{font-family:var(--mono); font-size:.76rem; color:var(--ink-3)}
 .week ul{margin:.3rem 0 0; padding-left:1.1rem}
 .week li{margin:.15rem 0; font-size:.92rem}
 .focuslist{display:grid; gap:.4rem; margin-top:.5rem}
 .focus{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
   padding:.5rem .65rem; font-size:.85rem}
-.focus b{font-family:"Barlow Condensed",sans-serif; font-size:1rem; font-weight:600}
+.focus b{font-family:var(--ui); font-size:1rem; font-weight:600}
 
 /* ---- trends ---- */
 .trendrow{display:flex; gap:1rem; align-items:center; padding:.55rem 0;
@@ -262,7 +315,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .trendrow .who{flex:1; min-width:190px}
 .spark{color:var(--accent)}
 .spark .gl{stroke:var(--line-2)}
-.spark text{fill:var(--ink-3); font-family:"IBM Plex Mono",monospace; font-size:9px}
+.spark text{fill:var(--ink-3); font-family:var(--mono); font-size:9px}
 
 /* ------------------------------------------------------------- reading --
    The Study view is read, not scanned, so it gets its own typography: a text
@@ -277,7 +330,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .reading h3{font-size:1.16rem; margin-bottom:.25rem}
 
 .reading p, .reading li, .reading .vdef{
-  font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+  font-family:var(--display);
   font-size:1.09rem;
   line-height:1.78;
   max-width:var(--measure);
@@ -286,11 +339,11 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .reading p{margin:0 0 .55rem}
 .reading p:last-child{margin-bottom:0}
 .reading .sub{
-  font-family:"Source Serif 4", Georgia, serif;
+  font-family:var(--display);
   font-size:1.14rem; line-height:1.7; color:var(--ink-2);
   max-width:var(--measure); margin:.15rem 0 .9rem;
 }
-.reading .muted{font-family:"Barlow",sans-serif; font-size:.84rem; line-height:1.55}
+.reading .muted{font-family:var(--ui); font-size:.84rem; line-height:1.55}
 
 /* lists become breathing definition lists rather than a wall */
 .reading ul{
@@ -305,7 +358,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   width:5px; height:5px; border-radius:50%; background:var(--accent); opacity:.55;
 }
 .reading li .term{
-  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  font-family:var(--ui); font-weight:600; font-size:1.02rem;
   color:var(--ink); letter-spacing:.005em;
 }
 .reading li .term::after{content:" — "; color:var(--ink-3); font-weight:400}
@@ -318,7 +371,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 }
 .vocabitem:last-child{border-bottom:0; padding-bottom:0}
 .vterm{
-  font-family:"Barlow", sans-serif; font-weight:600; font-size:1.02rem;
+  font-family:var(--ui); font-weight:600; font-size:1.02rem;
   color:var(--accent); line-height:1.5;
 }
 .vocabitem .vdef{margin:0}
@@ -333,23 +386,23 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 }
 .example + .example{margin-top:1.5rem; padding-top:1.4rem; border-top:1px solid var(--line)}
 .example .setup{
-  font-family:"Source Serif 4", Georgia, serif; font-style:italic;
+  font-family:var(--display); font-style:italic;
   font-size:1.06rem; line-height:1.7; color:var(--ink-2); max-width:var(--measure);
 }
 .reading .steps{
   list-style:decimal; margin:.1rem 0 0; padding-left:1.5rem;
   display:flex; flex-direction:column; gap:.5rem;
-  font-family:"IBM Plex Mono", monospace; font-size:.9rem; line-height:1.65;
+  font-family:var(--mono); font-size:.9rem; line-height:1.65;
   max-width:var(--measure);
 }
 .reading .steps li{padding-left:.2rem; font-family:inherit; font-size:inherit; line-height:inherit}
 .reading .steps li::before{display:none}
 .takeaway{
   background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
-  padding:.7rem .9rem; font-family:"Source Serif 4", Georgia, serif;
+  padding:.7rem .9rem; font-family:var(--display);
   font-size:1.04rem; line-height:1.65; max-width:var(--measure);
 }
-.takeaway b{font-family:"Barlow",sans-serif; font-weight:600; font-size:.78rem;
+.takeaway b{font-family:var(--ui); font-weight:600; font-size:.78rem;
   letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); display:block;
   margin-bottom:.15rem}
 
@@ -357,7 +410,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .callouts{display:flex; flex-direction:column; gap:.8rem; margin-top:.2rem}
 .callout{
   border-left:3px solid var(--line-2); padding:.1rem 0 .1rem 1rem;
-  font-family:"Source Serif 4", Georgia, serif; font-size:1.06rem; line-height:1.72;
+  font-family:var(--display); font-size:1.06rem; line-height:1.72;
   max-width:var(--measure);
 }
 .callout.ga{border-left-color:var(--brass)}
@@ -371,10 +424,10 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 }
 .topicrow:last-child{border-bottom:0}
 .topicrow .who{flex:1; min-width:230px}
-.topicrow .nm{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.2rem}
+.topicrow .nm{font-family:var(--ui); font-weight:600; font-size:1.2rem}
 .topicrow .bl{font-size:.88rem; color:var(--ink-3); line-height:1.5; margin-top:.05rem}
 .topicrow .acts{display:flex; gap:.4rem; align-items:center}
-.topicrow .cnt{font-family:"IBM Plex Mono",monospace; font-size:.78rem; color:var(--ink-3);
+.topicrow .cnt{font-family:var(--mono); font-size:.78rem; color:var(--ink-3);
   white-space:nowrap; margin-right:.4rem}
 
 /* Runs of capitals - acronyms and the emphasis used throughout the notes -
@@ -382,7 +435,7 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
    running text. Without this they shout at reading size. */
 .reading .caps{
   font-size:.9em; letter-spacing:.045em; font-weight:600;
-  font-family:"Barlow", sans-serif;
+  font-family:var(--ui);
 }
 .reading .steps .caps, .reading .vterm .caps{font-family:inherit; font-weight:inherit}
 
@@ -395,18 +448,18 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 }
 .checkhead{
   display:flex; justify-content:space-between; align-items:baseline; gap:.8rem;
-  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  font-family:var(--ui); font-size:.72rem; font-weight:600;
   letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
 }
-.checkscore{font-family:"IBM Plex Mono",monospace; font-size:.72rem; letter-spacing:0}
+.checkscore{font-family:var(--mono); font-size:.72rem; letter-spacing:0}
 .checkq{display:flex; flex-direction:column; gap:.45rem}
 .reading .cq{
-  font-family:"Barlow",sans-serif; font-size:.98rem; line-height:1.5;
+  font-family:var(--ui); font-size:.98rem; line-height:1.5;
   font-weight:500; margin:0; max-width:var(--measure); color:var(--ink);
 }
 .copts{display:flex; flex-direction:column; gap:.3rem; max-width:var(--measure)}
 .copt{
-  text-align:left; font:inherit; font-family:"Barlow",sans-serif; font-size:.92rem;
+  text-align:left; font:inherit; font-family:var(--ui); font-size:.92rem;
   line-height:1.45; color:var(--ink); background:var(--panel);
   border:1px solid var(--line); border-radius:var(--r);
   padding:.4rem .6rem; cursor:pointer;
@@ -416,10 +469,10 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .copt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
 .copt.wrong{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
 .cwhy{
-  font-family:"Barlow",sans-serif; font-size:.87rem; line-height:1.55;
+  font-family:var(--ui); font-size:.87rem; line-height:1.55;
   color:var(--ink-2); max-width:var(--measure); padding-left:.1rem;
 }
-.cwhy b{font-family:"Barlow Condensed",sans-serif; letter-spacing:.06em;
+.cwhy b{font-family:var(--ui); letter-spacing:.06em;
   text-transform:uppercase; font-size:.72rem; margin-right:.35rem}
 .cwhy.ok b{color:var(--ok)} .cwhy.no b{color:var(--no)}
 
@@ -431,27 +484,27 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   flex-direction:column; gap:.6rem}
 .nbitem.done{border-left-color:var(--ok); opacity:.72}
 .nbmeta{display:flex; gap:.5rem; align-items:center; flex-wrap:wrap;
-  font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+  font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
-.reading .nbq{font-family:"Barlow",sans-serif; font-size:1.02rem; line-height:1.55;
+.reading .nbq{font-family:var(--ui); font-size:1.02rem; line-height:1.55;
   font-weight:500; margin:0; max-width:var(--measure); color:var(--ink)}
 .nbopts{display:flex; flex-direction:column; gap:.28rem; max-width:var(--measure)}
-.nbopt{display:flex; gap:.6rem; align-items:flex-start; font-family:"Barlow",sans-serif;
+.nbopt{display:flex; gap:.6rem; align-items:flex-start; font-family:var(--ui);
   font-size:.92rem; line-height:1.45; padding:.38rem .6rem; border-radius:var(--r);
   border:1px solid var(--line); background:var(--panel); color:var(--ink-2)}
-.nbopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-3);
+.nbopt .k{font-family:var(--mono); font-weight:600; color:var(--ink-3);
   min-width:1rem; flex:0 0 auto}
 .nbopt.right{border-color:var(--ok); background:var(--ok-soft); color:var(--ink)}
 .nbopt.right .k{color:var(--ok)}
 .nbopt.chose{border-color:var(--no); background:var(--no-soft); color:var(--ink)}
 .nbopt.chose .k{color:var(--no)}
-.nbopt .flag{margin-left:auto; font-family:"Barlow Condensed",sans-serif;
+.nbopt .flag{margin-left:auto; font-family:var(--ui);
   font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap}
 .nbopt.right .flag{color:var(--ok)} .nbopt.chose .flag{color:var(--no)}
 .nbwhy{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
   padding:.75rem .9rem; display:flex; flex-direction:column; gap:.4rem;
   max-width:var(--measure)}
-.nbwhy .lab{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+.nbwhy .lab{font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
 .reading .nbwhy p{font-size:1.02rem; line-height:1.7; margin:0}
 .nbacts{display:flex; gap:.4rem; flex-wrap:wrap; align-items:center}
@@ -464,11 +517,11 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   border-radius:0 var(--r) var(--r) 0; background:var(--panel); flex-wrap:wrap}
 .task.done{border-left-color:var(--ok); opacity:.6}
 .task .tw{flex:1; min-width:180px}
-.task .tn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.14rem}
+.task .tn{font-family:var(--ui); font-weight:600; font-size:1.14rem}
 .task .td{font-size:.85rem; color:var(--ink-3); line-height:1.5}
-.task .tick{font-family:"IBM Plex Mono",monospace; font-size:1.1rem; color:var(--ok)}
+.task .tick{font-family:var(--mono); font-size:1.1rem; color:var(--ok)}
 .ring{display:flex; align-items:baseline; gap:.4rem}
-.ring .big{font-family:"IBM Plex Mono",monospace; font-size:2.1rem; font-weight:600;
+.ring .big{font-family:var(--mono); font-size:2.1rem; font-weight:600;
   line-height:1}
 .ring .of{font-size:.85rem; color:var(--ink-3)}
 
@@ -479,15 +532,15 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   min-height:190px; padding:1.6rem 1.4rem; display:flex; flex-direction:column;
   align-items:center; justify-content:center; gap:.9rem; text-align:center; cursor:pointer;
 }
-.flip .side{font-family:"Barlow Condensed",sans-serif; font-size:.68rem; font-weight:600;
+.flip .side{font-family:var(--ui); font-size:.68rem; font-weight:600;
   letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
-.flip .term{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.9rem;
+.flip .term{font-family:var(--ui); font-weight:600; font-size:1.9rem;
   line-height:1.15; color:var(--ink)}
-.flip .def{font-family:"Source Serif 4",Georgia,serif; font-size:1.1rem; line-height:1.7;
+.flip .def{font-family:var(--display); font-size:1.1rem; line-height:1.7;
   max-width:44ch; color:var(--ink)}
 .flip .hintline{font-size:.8rem; color:var(--ink-3)}
 .cardmeta{display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
-  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  font-family:var(--ui); font-size:.72rem; font-weight:600;
   letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
 .cardacts{display:flex; gap:.5rem; flex-wrap:wrap}
 .cardacts .btn{flex:1; min-width:130px}
@@ -500,9 +553,9 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .searchbox input{flex:1; min-width:200px}
 .hit{border-left:3px solid var(--line-2); padding:.5rem 0 .5rem .9rem;
   display:flex; flex-direction:column; gap:.2rem}
-.hit .where{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+.hit .where{font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
-.hit .snip{font-family:"Source Serif 4",Georgia,serif; font-size:1rem; line-height:1.65}
+.hit .snip{font-family:var(--display); font-size:1rem; line-height:1.65}
 .hit mark{background:var(--accent-soft); color:var(--accent); padding:0 .12em;
   border-radius:2px}
 
@@ -515,21 +568,21 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   border-radius:0 var(--r) var(--r) 0; background:var(--panel-2);
   padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.5rem;
 }
-.defpanel .lab{font-family:"Barlow Condensed",sans-serif; font-size:.68rem;
+.defpanel .lab{font-family:var(--ui); font-size:.68rem;
   font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-3)}
-.defpanel .dtext{font-family:"Source Serif 4",Georgia,serif; font-size:1.25rem;
+.defpanel .dtext{font-family:var(--display); font-size:1.25rem;
   line-height:1.65; color:var(--ink); max-width:52ch}
 .termopts{display:flex; flex-direction:column; gap:.45rem; margin-top:.9rem}
 .termopt{
   display:flex; gap:.7rem; align-items:center; text-align:left; width:100%;
-  font-family:"Barlow Condensed",sans-serif; font-size:1.14rem; font-weight:600;
+  font-family:var(--ui); font-size:1.14rem; font-weight:600;
   letter-spacing:.01em; color:var(--ink); background:var(--panel);
   border:1px solid var(--line-2); border-radius:var(--r); padding:.6rem .85rem;
   cursor:pointer;
 }
 .termopt:hover:not(:disabled){border-color:var(--accent); background:var(--accent-soft)}
 .termopt:disabled{cursor:default}
-.termopt .k{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:.9rem;
+.termopt .k{font-family:var(--mono); font-weight:600; font-size:.9rem;
   color:var(--ink-3); min-width:1.1rem}
 .termopt.right{border-color:var(--ok); background:var(--ok-soft)}
 .termopt.right .k{color:var(--ok)}
@@ -546,8 +599,8 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
   padding:.65rem .8rem; cursor:pointer;
 }
 .cat:hover{border-color:var(--accent); border-left-color:var(--accent)}
-.cat .cn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.08rem}
-.cat .cs{font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-3)}
+.cat .cn{font-family:var(--ui); font-weight:600; font-size:1.08rem}
+.cat .cs{font-family:var(--mono); font-size:.74rem; color:var(--ink-3)}
 
 /* the task queued up next is the one the eye should land on */
 .task.next{border-left-color:var(--accent); background:var(--accent-soft)}
@@ -566,18 +619,15 @@ table.stats tr.grouprow td{font-family:"Barlow Condensed",sans-serif; font-size:
 .skip:focus{left:0}
 main:focus{outline:none}
 
-/* ---- header chrome ---- */
-.wordmark{background:none; border:0; padding:0; cursor:pointer; color:var(--ink);
-  display:flex; align-items:center; gap:.55rem; text-align:left}
-.brandmark{width:1.5rem; height:1.5rem; flex:0 0 auto; color:var(--accent)}
-.wordmark>span{display:flex; align-items:baseline; gap:.5rem;
-  font-family:"Barlow Condensed",sans-serif; font-weight:700; font-size:1.18rem;
-  letter-spacing:.13em; text-transform:uppercase; white-space:nowrap}
+/* ---- header chrome ----
+   The wordmark is defined once, up with the shell. A second copy lived here
+   and won on source order, setting it back to nowrap uppercase at 1.18rem --
+   which is what was clipping it against the sidebar. */
 
 .hudacts{display:flex; gap:.3rem; align-items:center; flex:0 0 auto}
 .iconbtn{display:inline-flex; align-items:center; gap:.35rem; background:transparent;
   border:1px solid var(--line); border-radius:var(--r); color:var(--ink-2);
-  font-family:"Barlow Condensed",sans-serif; font-size:.76rem; font-weight:600;
+  font-family:var(--ui); font-size:.76rem; font-weight:600;
   letter-spacing:.1em; text-transform:uppercase; padding:.38rem .6rem; cursor:pointer;
   min-height:38px}
 .iconbtn:hover{color:var(--accent); border-color:var(--accent)}
@@ -598,7 +648,7 @@ ul.plainlist li{font-size:.94rem; color:var(--ink-2); line-height:1.6;
 /* the keyboard hint under a quiz: useful once, invisible after */
 .kbhint{font-size:.78rem; color:var(--ink-3); margin-top:.6rem;
   display:flex; gap:.4rem; align-items:center; flex-wrap:wrap}
-.kbhint kbd{font-family:"IBM Plex Mono",monospace; font-size:.72rem;
+.kbhint kbd{font-family:var(--mono); font-size:.72rem;
   border:1px solid var(--line-2); border-bottom-width:2px; border-radius:3px;
   padding:.05rem .3rem; background:var(--panel-2); color:var(--ink-2)}
 @media (max-width:860px){ .kbhint{display:none} }
@@ -610,7 +660,7 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
 .footlinks{gap:1.1rem}
 .linkish,footer a{background:none; border:0; padding:0; font:inherit; color:var(--accent);
   cursor:pointer; text-decoration:underline; text-underline-offset:2px}
-.buildstamp{font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-3)}
+.buildstamp{font-family:var(--mono); font-size:.72rem; color:var(--ink-3)}
 
 /* ---- bottom tab bar (small screens only) ---- */
 .tabbar{display:none}
@@ -634,7 +684,7 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
   border-radius:0 var(--r) var(--r) 0; padding:.6rem .75rem; cursor:pointer;
   min-height:48px}
 .sheet-list button:hover,.sheet-list button.on{border-left-color:var(--accent)}
-.sheet-list .sn{font-family:"Barlow Condensed",sans-serif; font-weight:600;
+.sheet-list .sn{font-family:var(--ui); font-weight:600;
   font-size:1.05rem}
 .sheet-list .sd{font-size:.82rem; color:var(--ink-3); line-height:1.4}
 .btn.wide{width:100%; justify-content:center}
@@ -655,9 +705,9 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
   margin-top:.3rem}
 .fact{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
   padding:.6rem .7rem}
-.fact .fv{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+.fact .fv{font-family:var(--mono); font-variant-numeric:tabular-nums;
   font-size:1.35rem; font-weight:600; line-height:1.15; color:var(--accent)}
-.fact .fk{font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+.fact .fk{font-family:var(--ui); font-size:.7rem; font-weight:600;
   letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3)}
 
 .trustrow{display:flex; gap:.45rem; flex-wrap:wrap; margin-top:.2rem}
@@ -669,7 +719,7 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
 .steps3{display:grid; gap:.7rem; grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
 .step3{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r);
   padding:.85rem .9rem; display:flex; flex-direction:column; gap:.25rem}
-.step3 .sno{font-family:"IBM Plex Mono",monospace; font-size:.76rem; font-weight:600;
+.step3 .sno{font-family:var(--mono); font-size:.76rem; font-weight:600;
   color:var(--accent); letter-spacing:.12em}
 .step3 h3{font-size:1.06rem}
 .step3 p{font-size:.9rem; color:var(--ink-2); line-height:1.55}
@@ -680,7 +730,7 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
   border-radius:0 var(--r) var(--r) 0; padding:.75rem .85rem; cursor:pointer;
   display:flex; flex-direction:column; gap:.2rem; min-height:48px}
 .featcard:hover{background:var(--accent-soft)}
-.featcard .fn{font-family:"Barlow Condensed",sans-serif; font-weight:600; font-size:1.1rem}
+.featcard .fn{font-family:var(--ui); font-weight:600; font-size:1.1rem}
 .featcard .fd{font-size:.87rem; color:var(--ink-2); line-height:1.5}
 
 /* the wizard: one question on screen at a time */
@@ -707,7 +757,9 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
 
 /* ============================== small screens ========================== */
 @media (max-width:860px){
-  nav.rail{display:none}
+  /* `nav.rail{display:none}` used to live here, from when the rail was a row
+     of tabs across the top. It is the sidebar now, and on a phone the sidebar
+     IS the drawer -- so this was blanking the drawer's navigation entirely. */
   .tabbar{
     display:grid; grid-template-columns:repeat(5,1fr); position:fixed; z-index:40;
     left:0; right:0; bottom:0; background:var(--panel);
@@ -718,7 +770,7 @@ footer{flex-direction:column; align-items:flex-start; gap:.5rem; line-height:1.6
     background:none; border:0; border-top:2px solid transparent; cursor:pointer;
     color:var(--ink-3); display:flex; flex-direction:column; align-items:center;
     gap:.12rem; padding:.45rem .1rem .5rem; min-height:56px;
-    font-family:"Barlow Condensed",sans-serif; font-size:.7rem; font-weight:600;
+    font-family:var(--ui); font-size:.7rem; font-weight:600;
     letter-spacing:.06em; text-transform:uppercase;
   }
   .tabbar button svg{width:1.42rem; height:1.42rem; fill:none; stroke:currentColor;
@@ -802,7 +854,8 @@ h3{font-size:1.14rem}
 body{font-size:16.5px; line-height:1.6}
 
 /* eyebrows stay small caps, but lighter and less spaced than before */
-.eyebrow,.hint,label,th{letter-spacing:.09em; font-size:.68rem; opacity:.95}
+.eyebrow,.hint,label,th{letter-spacing:.06em; font-size:.7rem; font-weight:600;
+  text-transform:uppercase; color:var(--ink-3); opacity:1}
 .sub,.lede{font-size:.97rem; line-height:1.62}
 
 /* ---- surfaces: air and depth ---- */
@@ -820,7 +873,7 @@ main{gap:1.15rem; padding-top:1.5rem}
 
 /* ---- controls: things that respond ---- */
 button.btn{
-  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
+  font-family:var(--ui); text-transform:none; letter-spacing:0;
   font-size:.95rem; font-weight:600; padding:.62rem 1.15rem;
   border-radius:var(--r-sm); box-shadow:0 1px 2px rgba(0,0,0,.06);
   transition:transform .12s var(--ease), box-shadow .18s var(--ease),
@@ -837,19 +890,10 @@ input,select,textarea{border-radius:var(--r-sm); transition:border-color .16s,
   box-shadow .16s}
 input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--glow)}
 
-/* ---- navigation: a pill, not an underline ---- */
-nav.rail{border-bottom:1px solid var(--line); background:var(--panel)}
-.rail-in{padding:.42rem .8rem; gap:.12rem}
-.rail button{
-  font-family:"Barlow",sans-serif; text-transform:none; letter-spacing:0;
-  font-size:.93rem; font-weight:600; border-bottom:0; border-radius:var(--r-pill);
-  padding:.42rem .82rem; transition:background .16s var(--ease), color .16s var(--ease);
-}
-.rail button:hover{background:var(--panel-2); color:var(--ink)}
-.rail button.on,.rail button[aria-current="page"]{
-  background:var(--accent); color:var(--accent-ink); border-bottom-color:transparent;
-}
-.rail button.on:hover{background:var(--accent); color:var(--accent-ink)}
+/* ---- navigation ----
+   The pill-tab block that lived here belonged to the horizontal rail. The
+   sidebar defines its own list styling up top; a second, later definition
+   only fought it. */
 
 .iconbtn{border-radius:var(--r-pill); border-color:var(--line);
   transition:color .16s, border-color .16s, background .16s}
@@ -932,7 +976,7 @@ main>section:not([hidden]){animation:viewin .22s var(--ease)}
   transition:border-color .16s var(--ease), background .16s var(--ease),
              transform .12s var(--ease)}
 .task:hover{transform:translateY(-1px)}
-.task .tn{font-family:"Barlow",sans-serif; font-size:1.04rem; font-weight:600;
+.task .tn{font-family:var(--ui); font-size:1.04rem; font-weight:600;
   letter-spacing:0}
 .task .td{font-size:.88rem; color:var(--ink-2)}
 .task.done{opacity:.55}
@@ -1009,7 +1053,7 @@ body.landing footer{max-width:1120px}
 .hero2 .wrap{max-width:46rem; display:flex; flex-direction:column; gap:1.1rem}
 .kicker2{
   display:inline-flex; align-items:center; gap:.5rem; align-self:flex-start;
-  font-family:"Barlow",sans-serif; font-size:.78rem; font-weight:600;
+  font-family:var(--ui); font-size:.78rem; font-weight:600;
   letter-spacing:.04em; color:var(--accent); background:var(--accent-soft);
   border:1px solid color-mix(in srgb, var(--accent) 24%, transparent);
   padding:.32rem .85rem; border-radius:var(--r-pill);
@@ -1034,11 +1078,11 @@ body.landing footer{max-width:1120px}
 }
 .statband div{display:flex; flex-direction:column; gap:.1rem}
 .statband .n{
-  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-family:var(--mono); font-variant-numeric:tabular-nums;
   font-size:1.75rem; font-weight:600; line-height:1; letter-spacing:-.03em;
   color:var(--accent);
 }
-.statband .l{font-family:"Barlow Condensed",sans-serif; font-size:.72rem;
+.statband .l{font-family:var(--ui); font-size:.72rem;
   font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
 
 /* ---- section rhythm ---- */
@@ -1081,7 +1125,7 @@ body.landing footer{max-width:1120px}
 .sample .stop{
   display:flex; gap:.5rem; align-items:center; padding:.7rem 1.2rem;
   border-bottom:1px solid var(--line); background:var(--panel-2);
-  font-family:"Barlow Condensed",sans-serif; font-size:.72rem; font-weight:600;
+  font-family:var(--ui); font-size:.72rem; font-weight:600;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3);
 }
 .sample .sbody{padding:1.3rem 1.4rem; display:flex; flex-direction:column; gap:.75rem}
@@ -1092,13 +1136,13 @@ body.landing footer{max-width:1120px}
 .bpcol{background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
   padding:1.2rem 1.3rem; box-shadow:var(--shadow)}
 .bpcol h3{display:flex; align-items:baseline; gap:.5rem; margin-bottom:.15rem}
-.bpcol h3 span{font-family:"IBM Plex Mono",monospace; font-size:.82rem;
+.bpcol h3 span{font-family:var(--mono); font-size:.82rem;
   font-weight:600; color:var(--accent)}
 .bprow{display:flex; justify-content:space-between; gap:1rem; padding:.42rem 0;
   border-bottom:1px solid var(--line); font-size:.93rem}
 .bprow:last-child{border-bottom:0}
 .bprow b{font-weight:500; color:var(--ink-2)}
-.bprow i{font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:.85rem;
+.bprow i{font-style:normal; font-family:var(--mono); font-size:.85rem;
   color:var(--ink-3)}
 
 /* ---- faq ---- */
@@ -1167,7 +1211,7 @@ body.landing footer{max-width:1120px}
 }
 .pricetag{display:flex; flex-direction:column; line-height:1.1; margin-right:.2rem}
 .pricetag .amount{
-  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-family:var(--mono); font-variant-numeric:tabular-nums;
   font-size:2.6rem; font-weight:600; letter-spacing:-.04em; color:var(--ink);
 }
 .pricetag .once{font-size:.82rem; color:var(--ink-3); margin-top:.15rem}
@@ -1187,7 +1231,7 @@ body.landing footer{max-width:1120px}
 .incrow{display:flex; gap:.85rem; align-items:flex-start}
 .incrow .ico{width:2.1rem; height:2.1rem; flex:0 0 auto; margin:0}
 .incrow .ico svg{width:1.15rem; height:1.15rem}
-.incrow b{display:block; font-family:"Barlow",sans-serif; font-weight:600;
+.incrow b{display:block; font-family:var(--ui); font-weight:600;
   font-size:1.02rem; line-height:1.35}
 .incrow span{display:block; font-size:.9rem; color:var(--ink-2); line-height:1.45}
 
@@ -1238,7 +1282,7 @@ body.landing footer{max-width:1120px}
 .gatecard h1{font-size:1.85rem; line-height:1.12; max-width:16ch}
 .gatelede{font-size:.98rem; line-height:1.55; color:var(--ink-2); max-width:38ch}
 .gateprice{display:flex; flex-direction:column; gap:.1rem; margin:.35rem 0 .1rem}
-.gateprice .amount{font-family:"IBM Plex Mono",monospace;
+.gateprice .amount{font-family:var(--mono);
   font-variant-numeric:tabular-nums; font-size:2.9rem; font-weight:600;
   letter-spacing:-.04em; line-height:1}
 .gateprice .once{font-size:.82rem; color:var(--ink-3)}
@@ -1312,7 +1356,7 @@ body.leaving{
 .gmark{width:1.15rem; height:1.15rem; flex:0 0 auto}
 
 .whoami{
-  font-family:"IBM Plex Mono",monospace; font-size:.82rem; color:var(--ink-2);
+  font-family:var(--mono); font-size:.82rem; color:var(--ink-2);
   background:var(--panel-2); border:1px solid var(--line);
   border-radius:var(--r-pill); padding:.3rem .85rem; max-width:100%;
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
@@ -1335,149 +1379,161 @@ body.leaving{
 .sheet-card .muted{margin-top:.4rem; line-height:1.45}
 
 /* ======================================================================
-   The entrance.
-
-   A fall through a corridor of houses and books that resolves into the mark,
-   then lifts to reveal the card. Pure CSS 3D on transform and opacity only,
-   so it is the compositor's work and not the main thread's. No canvas, no
-   animation loop, nothing that can drop frames on a phone.
+   The entrance. A splash, not a title sequence: the mark settles, the name
+   appears, it lifts. Under a second, and skippable.
    ====================================================================== */
 
 .intro{
-  position:fixed; inset:0; z-index:100;
-  background:
-    radial-gradient(120% 90% at 50% 50%, #0d1620 0%, #06090d 58%, #04060a 100%);
-  display:grid; place-items:center; overflow:hidden;
-  perspective:720px; perspective-origin:50% 46%;
-  cursor:pointer;
+  position:fixed; inset:0; z-index:100; background:var(--bg);
+  display:grid; place-items:center; cursor:pointer;
 }
 .intro[hidden]{display:none !important}
 
-/* the corridor, drifting as if you are falling forward through it */
-.intro-space{
-  position:absolute; inset:0; transform-style:preserve-3d;
-  animation:drift 2.7s cubic-bezier(.4,0,.5,1) both;
-}
-@keyframes drift{
-  from{transform:translateY(-3%) rotateZ(-2.2deg)}
-  to{transform:translateY(2%) rotateZ(1.4deg)}
-}
-
-/* dust, for speed and depth */
-.intro-star{
-  position:absolute; top:50%; left:50%; width:2px; height:2px; border-radius:50%;
-  background:#cfe9e3; opacity:0;
-  animation:fly var(--dur) linear var(--delay) both;
-}
-@keyframes fly{
-  0%{opacity:0; transform:translate3d(var(--x), var(--y), -2000px) scale(.4)}
-  14%{opacity:.85}
-  82%{opacity:.85}
-  100%{opacity:0; transform:translate3d(var(--x), var(--y), 680px) scale(2)}
-}
-
-/* the world you are falling into: houses and books, coming past the camera */
-.intro-obj{
-  position:absolute; top:50%; left:50%; width:var(--size); height:var(--size);
-  margin:calc(var(--size) / -2) 0 0 calc(var(--size) / -2);
-  opacity:0; animation:sail var(--dur) cubic-bezier(.42,.02,.58,1) var(--delay) both;
-}
-.intro-obj svg{width:100%; height:100%; display:block}
-.intro-obj.house{color:#5fc0ad}
-.intro-obj.book{color:#d6a445}
-/* Depth range is chosen from the perspective, not by eye. At perspective
-   720 an element at translateZ(z) renders at 720/(720-z): starting at -2100
-   put them on screen at 26% and they read as dust for most of the flight,
-   then explode in the last instant while fading out. -900 to +420 keeps them
-   between 44% and 240% -- legible the whole way, and a real sweep past. */
-@keyframes sail{
-  0%{opacity:0;
-     transform:translate3d(var(--x), var(--y), -900px) rotate3d(1,.6,.3, var(--spin))}
-  16%{opacity:.85}
-  70%{opacity:.7}
-  88%{opacity:.34}
-  100%{opacity:0;
-       transform:translate3d(calc(var(--x) * 1.45), calc(var(--y) * 1.45), 420px)
-                 rotate3d(1,.6,.3, calc(var(--spin) * 2))}
-}
-
-/* the tunnel frames, receding then rushing past */
-.intro-ring{
-  position:absolute; top:50%; left:50%; width:300px; height:300px; margin:-150px 0 0 -150px;
-  border:1px solid color-mix(in srgb, #5fc0ad 48%, transparent);
-  border-radius:38px; opacity:0;
-  animation:ring 2.35s cubic-bezier(.36,.02,.2,1) var(--delay) both;
-}
-@keyframes ring{
-  0%{opacity:0; transform:translateZ(-1900px) rotate(var(--rot))}
-  24%{opacity:.5}
-  72%{opacity:.22}
-  100%{opacity:0; transform:translateZ(700px) rotate(calc(var(--rot) * -1))}
-}
-
-/* the mark arriving out of the distance and settling */
 .intro-mark{
-  position:relative; width:106px; height:106px; color:#5fc0ad; z-index:3;
-  animation:markin 1.7s cubic-bezier(.2,.92,.24,1) .5s both;
-  filter:drop-shadow(0 0 22px rgba(95,192,173,.35));
+  width:64px; height:64px; color:var(--accent);
+  animation:markin .62s cubic-bezier(.22,.9,.24,1) both;
 }
 .intro-mark svg{width:100%; height:100%}
 @keyframes markin{
-  0%{opacity:0; transform:translateZ(-1300px) scale(.45); filter:blur(7px)}
-  60%{opacity:1; filter:blur(0)}
-  100%{opacity:1; transform:translateZ(0) scale(1); filter:blur(0)}
+  from{opacity:0; transform:scale(.88)}
+  to{opacity:1; transform:none}
 }
 .intro-word{
-  position:absolute; left:0; right:0; top:calc(50% + 88px); z-index:3;
-  text-align:center; color:#e7edf4; font-family:"Barlow Condensed",sans-serif;
-  font-weight:700; font-size:1.05rem; letter-spacing:.34em; text-transform:uppercase;
-  opacity:0; animation:wordin .85s var(--ease) 1.25s both;
+  position:absolute; left:0; right:0; top:calc(50% + 58px); text-align:center;
+  color:var(--ink-3); font-family:var(--ui); font-weight:500; font-size:.86rem;
+  letter-spacing:.1em;
+  opacity:0; animation:wordin .5s var(--ease) .26s both;
 }
-@keyframes wordin{from{opacity:0; transform:translateY(12px)} to{opacity:.88; transform:none}}
+@keyframes wordin{from{opacity:0} to{opacity:.9}}
 
-.intro-skip{
-  position:absolute; bottom:1.6rem; left:0; right:0; text-align:center;
-  color:#7d8c9d; font-size:.78rem; letter-spacing:.06em; z-index:3;
-  opacity:0; animation:wordin .6s var(--ease) 1.9s both;
-}
+.intro.done{animation:introout .4s var(--ease) both; pointer-events:none}
+@keyframes introout{from{opacity:1} to{opacity:0}}
 
-/* the lift: the corridor pulls past you and the card is underneath */
-.intro.done{
-  animation:introout .66s cubic-bezier(.5,0,.2,1) both;
-  pointer-events:none;
-}
-@keyframes introout{
-  from{opacity:1; transform:scale(1)}
-  to{opacity:0; transform:scale(1.16)}
-}
-
-/* the card waits its turn, then arrives into the space the intro left */
 body.intro-running main,
 body.intro-running header.hud,
+body.intro-running .side,
 body.intro-running footer{opacity:0}
 body.intro-done main,
 body.intro-done header.hud,
-body.intro-done footer{animation:settle .6s var(--ease) both}
-@keyframes settle{
-  from{opacity:0; transform:translateY(14px) scale(.985)}
-  to{opacity:1; transform:none}
-}
-
-@media (max-width:860px){
-  .intro-mark{width:84px; height:84px}
-  .intro-word{font-size:.88rem; letter-spacing:.26em; top:calc(50% + 72px)}
-  .intro-ring{width:212px; height:212px; margin:-106px 0 0 -106px}
-}
+body.intro-done footer{animation:settle .42s var(--ease) both}
+@keyframes settle{from{opacity:0} to{opacity:1}}
 
 /* Nobody who has asked for less motion gets flown through space. */
 @media (prefers-reduced-motion:reduce){
   .intro{display:none !important}
   body.intro-running main,
   body.intro-running header.hud,
+  body.intro-running .side,
   body.intro-running footer{opacity:1}
   body.intro-done main,
   body.intro-done header.hud,
   body.intro-done footer{animation:none}
+}
+
+/* ---- shell on small screens: drawer plus bottom bar ---- */
+@media (max-width:1000px){
+  .shell{display:block}
+  .side{
+    position:fixed; top:0; bottom:0; left:0; z-index:60; height:100dvh;
+    transform:translateX(-100%); transition:transform .22s var(--ease);
+    box-shadow:none;
+  }
+  body.drawer-open .side{transform:none; box-shadow:var(--shadow-lift)}
+  body.drawer-open .scrim{display:block; position:fixed; inset:0; z-index:55;
+    background:rgba(24,34,44,.38)}
+  .drawerclose{display:block; background:none; border:0; font-size:1.6rem;
+    line-height:1; color:var(--ink-3); cursor:pointer; padding:0 .2rem}
+  .menubtn{
+    display:inline-grid; place-items:center; width:38px; height:38px;
+    background:none; border:1px solid var(--line); border-radius:var(--r-sm);
+    color:var(--ink-2); cursor:pointer;
+  }
+  .menubtn svg{width:1.15rem; height:1.15rem; fill:none; stroke:currentColor;
+    stroke-width:1.8; stroke-linecap:round}
+  .hud-in{padding:var(--s2) var(--s4); gap:var(--s3)}
+  main{padding:var(--s5) var(--s4) var(--s6); gap:var(--s4)}
+  footer{padding:0 var(--s4) var(--s5)}
+  body{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+}
+
+/* ======================================================================
+   Shared components. One page header, one list row, one empty state, one
+   bookmark control -- reused everywhere rather than restyled per page.
+   ====================================================================== */
+
+.pagehead{
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:var(--s4); flex-wrap:wrap; padding-bottom:var(--s4);
+  border-bottom:1px solid var(--line);
+}
+.ph-text{display:flex; flex-direction:column; gap:var(--s2); min-width:0}
+.ph-sub{font-size:.95rem; line-height:1.6; color:var(--ink-2); max-width:60ch}
+.ph-acts{display:flex; gap:var(--s2); flex-wrap:wrap; flex:0 0 auto}
+
+.emptystate{
+  display:flex; flex-direction:column; align-items:flex-start; gap:var(--s3);
+  padding:var(--s5) 0;
+}
+.emptystate h3{font-size:1.05rem}
+.emptystate p{font-size:.94rem; line-height:1.6; color:var(--ink-2); max-width:56ch}
+
+/* a list of things to open: the shape most of this app should be */
+.rowlist{display:flex; flex-direction:column}
+.listrow{
+  display:flex; align-items:center; justify-content:space-between; gap:var(--s4);
+  padding:var(--s3) 0; border-bottom:1px solid var(--line); flex-wrap:wrap;
+}
+.listrow:last-child{border-bottom:0}
+.lr-main{flex:1; min-width:min(100%,16rem)}
+.lr-title{display:flex; align-items:center; gap:var(--s2); font-weight:600;
+  font-size:.98rem; color:var(--ink)}
+.lr-sub{font-size:.85rem; color:var(--ink-3); margin-top:2px; line-height:1.5}
+.lr-acts{display:flex; gap:var(--s2); align-items:center; flex:0 0 auto}
+
+.bookmark{
+  display:inline-flex; align-items:center; gap:.35rem; background:none;
+  border:1px solid var(--line-2); border-radius:var(--r-sm); cursor:pointer;
+  color:var(--ink-3); font-family:var(--ui); font-size:.8rem; font-weight:500;
+  padding:.3rem .55rem; min-height:32px;
+  transition:color .12s var(--ease), border-color .12s var(--ease);
+}
+.bookmark svg{width:.95rem; height:.95rem}
+.bookmark:hover{color:var(--accent); border-color:var(--accent)}
+.bookmark.on{color:var(--accent); border-color:var(--accent); background:var(--accent-soft)}
+
+/* breadcrumbs: where you are, said plainly */
+.crumbs{display:flex; align-items:center; gap:var(--s2); font-size:.82rem;
+  color:var(--ink-3); margin-bottom:var(--s1)}
+.crumbs .linkish{font-size:.82rem; color:var(--ink-3); text-decoration:none}
+.crumbs .linkish:hover{color:var(--accent); text-decoration:underline}
+.crumbs .sep{color:var(--line-2)}
+
+/* ---- the welcome card, restrained ---- */
+.gatecard{
+  max-width:34rem; text-align:left; align-items:flex-start; gap:var(--s3);
+  padding:var(--s6) var(--s6) var(--s5); box-shadow:var(--shadow-lift);
+}
+.gatecard::before{display:none}
+.gatemark{width:2.2rem; height:2.2rem; margin-bottom:var(--s1)}
+.gatecard h1{font-size:1.6rem; line-height:1.25; max-width:26ch}
+.gatelede{font-size:1rem; line-height:1.6; max-width:52ch; color:var(--ink-2)}
+.gateacts{align-items:stretch; max-width:22rem; margin-top:var(--s2)}
+.gateprice{align-items:flex-start; text-align:left}
+.gateprice .amount{font-size:2rem}
+.gatefine{text-align:left; max-width:46ch}
+
+/* what you get: four lines, no cards */
+.preview{
+  list-style:none; margin:var(--s4) 0 0; padding:var(--s4) 0 0;
+  border-top:1px solid var(--line); display:grid; gap:var(--s2); width:100%;
+}
+.preview li{display:flex; gap:var(--s2); align-items:baseline; font-size:.9rem}
+.preview b{font-weight:600; color:var(--ink); min-width:9.5rem; flex:0 0 auto}
+.preview span{color:var(--ink-3); line-height:1.5}
+@media (max-width:560px){
+  .gatecard{padding:var(--s5) var(--s4)}
+  .preview li{flex-direction:column; gap:1px}
+  .preview b{min-width:0}
 }
 </style></head><body>
 <main id="main" style="padding-top:2.5rem">

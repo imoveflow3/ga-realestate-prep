@@ -23,7 +23,7 @@ function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
 var VIEWS = ['welcome','today','dash','study','cards','vocab','home','math',
-             'notebook','weak','quiz','result','plan','setup','about'];
+             'notebook','saved','weak','quiz','result','plan','setup','about'];
 
 /* Served from behind the paywall, this build has no reason to sell itself:
    the reader has already bought. It skips the front door and drops the
@@ -50,6 +50,7 @@ var NAV = [
   {v:'cards',    name:'Flashcards', desc:'Spaced repetition on what you keep missing'},
   {v:'math',     name:'Math',       desc:'Every calculation, worked step by step'},
   {v:'notebook', name:'Notebook',   desc:'Every question you have got wrong'},
+  {v:'saved',    name:'Bookmarks',  desc:'Lessons you saved to come back to'},
   {v:'weak',     name:'Weak spots', desc:'Drill the narrow topics dragging you down'},
   {v:'plan',     name:'Study plan', desc:'A week-by-week schedule to your test date'},
   {v:'setup',    name:'Your data',  desc:'Move progress between devices, or start over'},
@@ -73,6 +74,7 @@ var RENDERERS = {
   vocab: function(){ renderVocab(); },
   study: function(){ renderStudy(); },
   notebook: function(){ renderNotebook(); },
+  saved: function(){ renderSaved(); },
   math: function(){ renderMath(); },
   weak: function(){ renderWeak(); },
   dash: function(){ renderDash(); },
@@ -130,6 +132,7 @@ function navTo(v){
   if (QUIZ && !confirm('Leave this quiz? It will not be scored.')) return false;
   if (QUIZ){ stopTimer(); QUIZ = null; document.body.classList.remove('inquiz'); }
   closeSheet();
+  closeDrawer();
   show(v);
   return true;
 }
@@ -161,7 +164,7 @@ document.querySelectorAll('#rail button').forEach(function(b){
 });
 document.querySelectorAll('#tabbar button').forEach(function(b){
   b.onclick = function(){
-    if (b.dataset.view === '__more'){ openSheet(); return; }
+    if (b.dataset.view === '__more'){ openDrawer(); return; }
     navTo(b.dataset.view);
   };
 });
@@ -200,10 +203,31 @@ function openSheet(){
   $('sheetClose').focus();
 }
 function closeSheet(){ $('moreSheet').hidden = true; }
+
+/* ---- the phone drawer ---- */
+function openDrawer(){
+  document.body.classList.add('drawer-open');
+  var s = $('drawerScrim'); if (s) s.hidden = false;
+}
+function closeDrawer(){
+  document.body.classList.remove('drawer-open');
+  var s = $('drawerScrim'); if (s) s.hidden = true;
+}
 $('sheetScrim').onclick = function(){
   if (strayClick($('sheetScrim'))) return;   // the tap that opened it
   closeSheet();
 };
+
+/* The drawer's three controls: open it, close it, dismiss it. */
+(function(){
+  var open = $('menuBtn'), shut = $('drawerClose'), scrim = $('drawerScrim');
+  if (open) open.onclick = openDrawer;
+  if (shut) shut.onclick = closeDrawer;
+  if (scrim) scrim.onclick = function(){
+    if (strayClick(scrim)) return;           // the tap that opened it
+    closeDrawer();
+  };
+})();
 $('sheetClose').onclick = closeSheet;
 
 /* ---------------------------------------------------------------- toast */
@@ -1466,6 +1490,11 @@ function studyFor(topicKey){
   return (DATA.study && DATA.study.topics) ? DATA.study.topics[topicKey] : null;
 }
 
+function savedCountLabel(){
+  var n = savedList(D).length;
+  return n ? (n + (n === 1 ? ' saved lesson' : ' saved lessons')) : null;
+}
+
 function studyButton(topicKey, label){
   var b = el('button', 'btn mini ghost', label || 'STUDY');
   b.onclick = function(){ STUDY_TOPIC = topicKey; show('study'); };
@@ -1708,6 +1737,18 @@ function renderStudyTopic(v, n){
   var box = $('studyBody');
 
   var head = el('div', 'card');
+
+  /* Where you are, in words, before the title tells you what you are reading. */
+  var crumbs = el('nav', 'crumbs');
+  var c1 = el('button', 'linkish', 'Lessons');
+  c1.onclick = function(){ STUDY_TOPIC = null; renderStudy(); };
+  crumbs.appendChild(c1);
+  crumbs.appendChild(el('span', 'sep', '/'));
+  crumbs.appendChild(el('span', null,
+    n.portion === 'georgia' ? 'Georgia portion'
+      : (n.portion === 'comprehensive' ? 'Practice topics' : 'National portion')));
+  head.appendChild(crumbs);
+
   var hd = el('div', 'cardhead');
   var left = el('div');
   left.appendChild(el('h1', null, n.label));
@@ -1715,7 +1756,7 @@ function renderStudyTopic(v, n){
     n.counts_on_exam ? (n.exam_questions + ' of the 132 scored questions come from this topic')
                      : 'A drill topic — not a scored section of the exam'));
   hd.appendChild(left);
-  var back = el('button', 'btn mini ghost', 'ALL TOPICS');
+  var back = el('button', 'btn mini ghost', 'All lessons');
   back.onclick = function(){ STUDY_TOPIC = null; renderStudy(); };
   hd.appendChild(back);
   head.appendChild(hd);
@@ -1730,6 +1771,7 @@ function renderStudyTopic(v, n){
     };
     d.appendChild(b); acts.appendChild(d);
   });
+  acts.appendChild(bookmarkButton(n.topic));
   head.appendChild(acts);
   box.appendChild(head);
 
@@ -1987,6 +2029,35 @@ function sparkline(points, w, h){
     });
   }
   return svg;
+}
+
+/* A page header: title, one line of purpose, optional actions. Every page
+   gets the same one, so the eye always lands in the same place. */
+function pageHead(title, blurb, actions){
+  var h = el('header', 'pagehead');
+  var t = el('div', 'ph-text');
+  t.appendChild(el('h1', null, title));
+  if (blurb) t.appendChild(el('p', 'ph-sub', blurb));
+  h.appendChild(t);
+  if (actions && actions.length){
+    var a = el('div', 'ph-acts');
+    actions.forEach(function(x){ a.appendChild(x); });
+    h.appendChild(a);
+  }
+  return h;
+}
+
+/* An empty state that says what to do about it rather than apologising. */
+function emptyState(title, body, actionLabel, onAction){
+  var box = el('div', 'emptystate');
+  box.appendChild(el('h3', null, title));
+  box.appendChild(el('p', null, body));
+  if (actionLabel){
+    var b = el('button', 'btn', actionLabel);
+    b.onclick = onAction;
+    box.appendChild(b);
+  }
+  return box;
 }
 
 function cardHead(title, hint){
@@ -2536,6 +2607,7 @@ function standalone(){
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Escape') return;
   if (!$('moreSheet').hidden){ closeSheet(); return; }
+  if (document.body.classList.contains('drawer-open')){ closeDrawer(); return; }
 });
 
 /* 1-4 alongside a-d: people reach for the number row on a numeric question. */
@@ -3177,3 +3249,81 @@ function renderAbout(){
     });
   }
 })();
+
+/* ====================================================================== */
+/* Bookmarks.                                                             */
+/*                                                                        */
+/* A lesson you meant to come back to. Saved against the account, so it is */
+/* there on the next device, and empty until you save something -- which   */
+/* the empty state says plainly rather than pretending to be a feature.    */
+/* ====================================================================== */
+
+function bookmarkButton(topicKey, onChange){
+  var b = el('button', 'bookmark' + (isSaved(D, topicKey) ? ' on' : ''));
+  function paint(){
+    var on = isSaved(D, topicKey);
+    b.className = 'bookmark' + (on ? ' on' : '');
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.title = on ? 'Remove bookmark' : 'Save this lesson for later';
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path d="M6 3.5h12v17l-6-4.2-6 4.2Z" fill="' + (on ? 'currentColor' : 'none') +
+      '" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>' +
+      '<span>' + (on ? 'Saved' : 'Save') + '</span>';
+  }
+  paint();
+  b.onclick = function(e){
+    e.stopPropagation();
+    toggleSaved(D, topicKey);
+    persist();
+    paint();
+    toast(isSaved(D, topicKey) ? 'Saved to bookmarks' : 'Removed from bookmarks');
+    if (onChange) onChange();
+  };
+  return b;
+}
+
+function renderSaved(){
+  var v = $('view-saved');
+  v.innerHTML = '';
+  v.appendChild(pageHead('Bookmarks',
+    'Lessons you saved to come back to. They stay on your account.'));
+
+  var rows = savedList(D);
+  if (!rows.length){
+    var box = el('div', 'card');
+    box.appendChild(emptyState(
+      'No bookmarks yet',
+      'Open a lesson and choose Save to keep it here. Useful for the handful ' +
+      'of topics you know you will need to read twice.',
+      'Browse lessons', function(){ navTo('study'); }));
+    v.appendChild(box);
+    return;
+  }
+
+  var card = el('div', 'card');
+  card.appendChild(cardHead('Saved lessons',
+                            rows.length + (rows.length === 1 ? ' lesson' : ' lessons')));
+  var list = el('div', 'rowlist');
+  rows.forEach(function(r){
+    var row = el('div', 'listrow');
+    var who = el('div', 'lr-main');
+    var nm = el('div', 'lr-title');
+    nm.appendChild(document.createTextNode(r.label));
+    nm.appendChild(tagFor(r.portion));
+    who.appendChild(nm);
+    who.appendChild(el('div', 'lr-sub',
+      countsOnExam(r.key) ? (r.weight + ' questions on the exam')
+                          : 'Practice topic, not a section of the exam'));
+    row.appendChild(who);
+
+    var acts = el('div', 'lr-acts');
+    var open = el('button', 'btn mini', 'Open lesson');
+    open.onclick = function(){ STUDY_TOPIC = r.key; navTo('study'); };
+    acts.appendChild(open);
+    acts.appendChild(bookmarkButton(r.key, renderSaved));
+    row.appendChild(acts);
+    list.appendChild(row);
+  });
+  card.appendChild(list);
+  v.appendChild(card);
+}

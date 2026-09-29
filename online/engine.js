@@ -24,7 +24,8 @@ function countsOnExam(k){ return !PRACTICE_ONLY[k]; }
 
 /* ------------------------------------------------------------- storage */
 var EMPTY = {version:1, profile:{}, attempts:[], topics:{}, subs:{},
-             items:{}, generators:{}, misses:{}, srs:{}, dayLog:{}};
+             items:{}, generators:{}, misses:{}, srs:{}, dayLog:{},
+             saved:{}};
 
 function load(){
   var raw;
@@ -1200,4 +1201,28 @@ function buildPlan(d){
     weighting: {national:EXAM.national, georgia:EXAM.georgia},
     buffer_plan: bufferPlan(Math.max(0, dayDiff(exam, mastery)))
   };
+}
+
+
+/* ------------------------------------------------------------ bookmarks */
+/* Topic key -> when it was saved. Kept in the same record as everything
+   else, so it syncs to the account with no extra plumbing. */
+function isSaved(d, key){ return !!(d.saved && d.saved[key]); }
+
+function toggleSaved(d, key){
+  d.saved = d.saved || {};
+  if (d.saved[key]) delete d.saved[key];
+  else d.saved[key] = Date.now();
+  return isSaved(d, key);
+}
+
+function savedList(d){
+  var out = [];
+  Object.keys(d.saved || {}).forEach(function(k){
+    if (!TOPIC[k]) return;                 // a topic that no longer exists
+    out.push({key: k, at: d.saved[k], label: label(k), portion: TOPIC[k].portion,
+              weight: weight(k)});
+  });
+  out.sort(function(a, b){ return b.at - a.at; });
+  return out;
 }
