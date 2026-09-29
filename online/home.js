@@ -47,7 +47,7 @@ function applyTheme(mode){
    Google or Stripe, and any key or tap ends it. */
 
 var INTRO_KEY = 'ga-prep-intro';
-var INTRO_MS = 2350;
+var INTRO_MS = 2750;
 
 function introWanted(){
   if (HOME.preview) return false;
@@ -64,33 +64,68 @@ function introWanted(){
   return true;
 }
 
+/* The two things this site is about, drawn as outlines so they read at any
+   depth: a house and an open book. */
+var INTRO_SHAPES = {
+  house: '<path d="M32 9 L57 30 L51 30 L51 53 L13 53 L13 30 L7 30 Z" ' +
+         'fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/>',
+  book:  '<path d="M32 17 C25 11, 14 10, 7 12 L7 47 C14 45, 25 46, 32 52 ' +
+         'C39 46, 50 45, 57 47 L57 12 C50 10, 39 11, 32 17 Z" ' +
+         'fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/>' +
+         '<path d="M32 17 L32 52" fill="none" stroke="currentColor" stroke-width="3.4"/>',
+};
+
+function introObject(kind, i, total){
+  var o = el('div', 'intro-obj ' + kind);
+  /* Spread around the corridor wall rather than at random, so nothing
+     clumps in the middle and blocks the mark. */
+  var angle = (i / total) * Math.PI * 2 + Math.random() * 0.6;
+  var radius = 300 + Math.random() * 430;
+  o.style.setProperty('--x', Math.round(Math.cos(angle) * radius) + 'px');
+  o.style.setProperty('--y', Math.round(Math.sin(angle) * radius * 0.7) + 'px');
+  o.style.setProperty('--size', Math.round(96 + Math.random() * 54) + 'px');
+  o.style.setProperty('--dur', (2.2 + Math.random() * 0.9).toFixed(2) + 's');
+  o.style.setProperty('--delay', (Math.random() * 1.35).toFixed(2) + 's');
+  o.style.setProperty('--spin', Math.round(-120 + Math.random() * 240) + 'deg');
+  o.innerHTML = '<svg viewBox="0 0 64 64" aria-hidden="true">' +
+                INTRO_SHAPES[kind] + '</svg>';
+  return o;
+}
+
 function buildIntro(){
   var wrap = el('div', 'intro');
   wrap.id = 'intro';
   wrap.setAttribute('aria-hidden', 'true');
 
   var space = el('div', 'intro-space');
-  /* Positions are random so no two visits look identical, but the seed of
-     randomness is the only thing that changes -- the work per star is one
-     composited transform. */
-  for (var i = 0; i < 64; i++){
+
+  /* dust first, so the objects sit in front of it */
+  for (var i = 0; i < 46; i++){
     var st = el('span', 'intro-star');
-    var angle = Math.random() * Math.PI * 2;
-    var spread = 120 + Math.random() * 900;
-    st.style.setProperty('--x', Math.round(Math.cos(angle) * spread) + 'px');
-    st.style.setProperty('--y', Math.round(Math.sin(angle) * spread * .62) + 'px');
-    st.style.setProperty('--dur', (1.1 + Math.random() * 1.1).toFixed(2) + 's');
-    st.style.setProperty('--delay', (Math.random() * 1.15).toFixed(2) + 's');
+    var a = Math.random() * Math.PI * 2;
+    var spread = 120 + Math.random() * 920;
+    st.style.setProperty('--x', Math.round(Math.cos(a) * spread) + 'px');
+    st.style.setProperty('--y', Math.round(Math.sin(a) * spread * .62) + 'px');
+    st.style.setProperty('--dur', (1.2 + Math.random() * 1.2).toFixed(2) + 's');
+    st.style.setProperty('--delay', (Math.random() * 1.3).toFixed(2) + 's');
     var size = Math.random() < .18 ? 3 : 2;
     st.style.width = size + 'px';
     st.style.height = size + 'px';
     space.appendChild(st);
   }
-  for (var r = 0; r < 4; r++){
+
+  /* the corridor frames */
+  for (var r = 0; r < 5; r++){
     var ring = el('div', 'intro-ring');
-    ring.style.setProperty('--delay', (r * 0.17).toFixed(2) + 's');
-    ring.style.setProperty('--spin', (r % 2 ? 6 : -6) + 'deg');
+    ring.style.setProperty('--delay', (r * 0.16).toFixed(2) + 's');
+    ring.style.setProperty('--rot', (r % 2 ? 7 : -7) + 'deg');
     space.appendChild(ring);
+  }
+
+  /* houses and books, alternating so both read */
+  var TOTAL = 14;
+  for (var k = 0; k < TOTAL; k++){
+    space.appendChild(introObject(k % 2 ? 'book' : 'house', k, TOTAL));
   }
   wrap.appendChild(space);
 

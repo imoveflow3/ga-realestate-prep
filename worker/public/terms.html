@@ -1337,81 +1337,118 @@ body.leaving{
 /* ======================================================================
    The entrance.
 
-   A short flight through space that resolves into the mark, then lifts to
-   reveal the card. Pure CSS 3D on composited properties -- transform and
-   opacity only -- so it is the GPU's problem and not the main thread's.
-   No canvas, no loop, nothing to drop frames.
+   A fall through a corridor of houses and books that resolves into the mark,
+   then lifts to reveal the card. Pure CSS 3D on transform and opacity only,
+   so it is the compositor's work and not the main thread's. No canvas, no
+   animation loop, nothing that can drop frames on a phone.
    ====================================================================== */
 
 .intro{
-  position:fixed; inset:0; z-index:100; background:#06090d;
+  position:fixed; inset:0; z-index:100;
+  background:
+    radial-gradient(120% 90% at 50% 50%, #0d1620 0%, #06090d 58%, #04060a 100%);
   display:grid; place-items:center; overflow:hidden;
-  perspective:760px; perspective-origin:50% 50%;
+  perspective:720px; perspective-origin:50% 46%;
   cursor:pointer;
 }
 .intro[hidden]{display:none !important}
 
-/* the flight itself */
-.intro-space{position:absolute; inset:0; transform-style:preserve-3d}
+/* the corridor, drifting as if you are falling forward through it */
+.intro-space{
+  position:absolute; inset:0; transform-style:preserve-3d;
+  animation:drift 2.7s cubic-bezier(.4,0,.5,1) both;
+}
+@keyframes drift{
+  from{transform:translateY(-3%) rotateZ(-2.2deg)}
+  to{transform:translateY(2%) rotateZ(1.4deg)}
+}
+
+/* dust, for speed and depth */
 .intro-star{
   position:absolute; top:50%; left:50%; width:2px; height:2px; border-radius:50%;
   background:#cfe9e3; opacity:0;
   animation:fly var(--dur) linear var(--delay) both;
 }
 @keyframes fly{
-  0%{opacity:0; transform:translate3d(var(--x), var(--y), -1900px) scale(.4)}
-  12%{opacity:.9}
-  80%{opacity:.9}
-  100%{opacity:0; transform:translate3d(var(--x), var(--y), 620px) scale(1.9)}
+  0%{opacity:0; transform:translate3d(var(--x), var(--y), -2000px) scale(.4)}
+  14%{opacity:.85}
+  82%{opacity:.85}
+  100%{opacity:0; transform:translate3d(var(--x), var(--y), 680px) scale(2)}
 }
 
-/* the portal: frames receding, then rushing past the camera */
+/* the world you are falling into: houses and books, coming past the camera */
+.intro-obj{
+  position:absolute; top:50%; left:50%; width:var(--size); height:var(--size);
+  margin:calc(var(--size) / -2) 0 0 calc(var(--size) / -2);
+  opacity:0; animation:sail var(--dur) cubic-bezier(.42,.02,.58,1) var(--delay) both;
+}
+.intro-obj svg{width:100%; height:100%; display:block}
+.intro-obj.house{color:#5fc0ad}
+.intro-obj.book{color:#d6a445}
+/* Depth range is chosen from the perspective, not by eye. At perspective
+   720 an element at translateZ(z) renders at 720/(720-z): starting at -2100
+   put them on screen at 26% and they read as dust for most of the flight,
+   then explode in the last instant while fading out. -900 to +420 keeps them
+   between 44% and 240% -- legible the whole way, and a real sweep past. */
+@keyframes sail{
+  0%{opacity:0;
+     transform:translate3d(var(--x), var(--y), -900px) rotate3d(1,.6,.3, var(--spin))}
+  16%{opacity:.85}
+  70%{opacity:.7}
+  88%{opacity:.34}
+  100%{opacity:0;
+       transform:translate3d(calc(var(--x) * 1.45), calc(var(--y) * 1.45), 420px)
+                 rotate3d(1,.6,.3, calc(var(--spin) * 2))}
+}
+
+/* the tunnel frames, receding then rushing past */
 .intro-ring{
-  position:absolute; top:50%; left:50%; width:280px; height:280px; margin:-140px 0 0 -140px;
-  border:1px solid color-mix(in srgb, #5fc0ad 55%, transparent);
-  border-radius:34px; opacity:0;
-  animation:ring 2.05s cubic-bezier(.36,.02,.2,1) var(--delay) both;
+  position:absolute; top:50%; left:50%; width:300px; height:300px; margin:-150px 0 0 -150px;
+  border:1px solid color-mix(in srgb, #5fc0ad 48%, transparent);
+  border-radius:38px; opacity:0;
+  animation:ring 2.35s cubic-bezier(.36,.02,.2,1) var(--delay) both;
 }
 @keyframes ring{
-  0%{opacity:0; transform:translateZ(-1700px) rotate(var(--spin))}
-  22%{opacity:.55}
-  70%{opacity:.28}
-  100%{opacity:0; transform:translateZ(640px) rotate(calc(var(--spin) * -1))}
+  0%{opacity:0; transform:translateZ(-1900px) rotate(var(--rot))}
+  24%{opacity:.5}
+  72%{opacity:.22}
+  100%{opacity:0; transform:translateZ(700px) rotate(calc(var(--rot) * -1))}
 }
 
 /* the mark arriving out of the distance and settling */
 .intro-mark{
-  position:relative; width:104px; height:104px; color:#5fc0ad; z-index:2;
-  animation:markin 1.55s cubic-bezier(.22,.9,.24,1) .34s both;
+  position:relative; width:106px; height:106px; color:#5fc0ad; z-index:3;
+  animation:markin 1.7s cubic-bezier(.2,.92,.24,1) .5s both;
+  filter:drop-shadow(0 0 22px rgba(95,192,173,.35));
 }
 .intro-mark svg{width:100%; height:100%}
 @keyframes markin{
-  0%{opacity:0; transform:translateZ(-1200px) scale(.5); filter:blur(6px)}
-  55%{opacity:1; filter:blur(0)}
+  0%{opacity:0; transform:translateZ(-1300px) scale(.45); filter:blur(7px)}
+  60%{opacity:1; filter:blur(0)}
   100%{opacity:1; transform:translateZ(0) scale(1); filter:blur(0)}
 }
 .intro-word{
-  position:absolute; left:0; right:0; top:calc(50% + 86px); z-index:2;
+  position:absolute; left:0; right:0; top:calc(50% + 88px); z-index:3;
   text-align:center; color:#e7edf4; font-family:"Barlow Condensed",sans-serif;
   font-weight:700; font-size:1.05rem; letter-spacing:.34em; text-transform:uppercase;
-  opacity:0; animation:wordin .8s var(--ease) 1.05s both;
+  opacity:0; animation:wordin .85s var(--ease) 1.25s both;
 }
-@keyframes wordin{from{opacity:0; transform:translateY(10px)} to{opacity:.85; transform:none}}
+@keyframes wordin{from{opacity:0; transform:translateY(12px)} to{opacity:.88; transform:none}}
 
 .intro-skip{
   position:absolute; bottom:1.6rem; left:0; right:0; text-align:center;
-  color:#7d8c9d; font-size:.78rem; letter-spacing:.06em;
-  opacity:0; animation:wordin .6s var(--ease) 1.6s both;
+  color:#7d8c9d; font-size:.78rem; letter-spacing:.06em; z-index:3;
+  opacity:0; animation:wordin .6s var(--ease) 1.9s both;
 }
 
-/* the lift: the whole thing pulls toward the viewer and fades out */
+/* the lift: the corridor pulls past you and the card is underneath */
 .intro.done{
-  animation:introout .62s cubic-bezier(.5,0,.2,1) both;
+  animation:introout .66s cubic-bezier(.5,0,.2,1) both;
   pointer-events:none;
 }
 @keyframes introout{
   from{opacity:1; transform:scale(1)}
-  to{opacity:0; transform:scale(1.13)}
+  to{opacity:0; transform:scale(1.16)}
 }
 
 /* the card waits its turn, then arrives into the space the intro left */
@@ -1427,9 +1464,9 @@ body.intro-done footer{animation:settle .6s var(--ease) both}
 }
 
 @media (max-width:860px){
-  .intro-mark{width:82px; height:82px}
-  .intro-word{font-size:.88rem; letter-spacing:.26em; top:calc(50% + 70px)}
-  .intro-ring{width:200px; height:200px; margin:-100px 0 0 -100px}
+  .intro-mark{width:84px; height:84px}
+  .intro-word{font-size:.88rem; letter-spacing:.26em; top:calc(50% + 72px)}
+  .intro-ring{width:212px; height:212px; margin:-106px 0 0 -106px}
 }
 
 /* Nobody who has asked for less motion gets flown through space. */
