@@ -113,7 +113,7 @@ await it('a stranger cannot read or write progress', async () => {
 
 await it('/api/me says not signed in', async () => {
   const me = await (await worker.fetch(req('/api/me'), env, {})).json();
-  assert.deepEqual(me, { signedIn: false, paid: false, verified: false });
+  assert.deepEqual(me, { signedIn: false, paid: false, verified: false, google: true });
 });
 
 await it('a forged webhook signature is rejected and grants nothing', async () => {
@@ -379,7 +379,7 @@ await it('signed in but unpaid still cannot reach the questions', async () => {
 await it('/api/me reports signed in, not paid', async () => {
   const me = await (await worker.fetch(req('/api/me', {
     headers: { Cookie: gCookie } }), env, {})).json();
-  assert.deepEqual(me, { signedIn: true, paid: false, verified: true,
+  assert.deepEqual(me, { signedIn: true, paid: false, verified: true, google: true,
                          email: 'gmail.user@gmail.com', name: '' });
 });
 

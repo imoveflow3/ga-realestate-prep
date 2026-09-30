@@ -136,7 +136,7 @@ function buy(email){
 
 /* ------------------------------------------------------------ signing in */
 var AUTH = {email: '', stage: 'email'};
-var ME = {signedIn: false, paid: false, email: null};
+var ME = {signedIn: false, paid: false, email: null, google: false};
 
 var GOOGLE_G =
   '<svg viewBox="0 0 48 48" aria-hidden="true" class="gmark">' +
@@ -206,13 +206,14 @@ function renderAuth(){
         'account, on every device you use.'
       : 'Welcome back. Everything you have done is waiting.'));
 
-    var g = googleButton(isNew ? 'Sign up with Google' : 'Continue with Google');
-    g.classList.remove('wide');
-    g.classList.add('wide');
-    b.appendChild(g);
-    var div = el('div', 'orline');
-    div.appendChild(el('span', null, 'or use an email address'));
-    b.appendChild(div);
+    if (ME.google){
+      var g = googleButton(isNew ? 'Sign up with Google' : 'Continue with Google');
+      g.classList.add('wide');
+      b.appendChild(g);
+      var div = el('div', 'orline');
+      div.appendChild(el('span', null, 'or use an email address'));
+      b.appendChild(div);
+    }
 
     var email = field(b, 'authEmail', 'Email address', 'email',
                       {autocomplete: 'email', placeholder: 'you@example.com',
@@ -432,13 +433,15 @@ function renderAuthPage(){
   });
   card.appendChild(tabs);
 
-  var g = googleButton(FORM.tab === 'signup' ? 'Sign up with Google'
-                                             : 'Continue with Google');
-  g.classList.add('wide');
-  card.appendChild(g);
-  var or = el('div', 'orline');
-  or.appendChild(el('span', null, 'or use an email address'));
-  card.appendChild(or);
+  if (ME.google){
+    var g = googleButton(FORM.tab === 'signup' ? 'Sign up with Google'
+                                               : 'Continue with Google');
+    g.classList.add('wide');
+    card.appendChild(g);
+    var or = el('div', 'orline');
+    or.appendChild(el('span', null, 'or use an email address'));
+    card.appendChild(or);
+  }
 
   var form = el('form', 'authform');
   form.noValidate = true;
@@ -1005,6 +1008,7 @@ function render(){
   var q0 = new URLSearchParams(location.search);
   if (q0.get('tab') === 'login') FORM.tab = 'login';
   if (HOME.openAccess || HOME.preview){ render(); return; }
+  /* Including on /auth, which needs to know before it decides what to show. */
   fetch('/api/me', {credentials: 'same-origin'})
     .then(function(r){ return r.json(); })
     .then(function(me){ if (me) ME = me; })

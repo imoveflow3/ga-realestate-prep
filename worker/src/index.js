@@ -463,9 +463,14 @@ export default {
 
     if (path === '/api/me') {
       const me = await currentUser(request, env);
-      return json(me ? { signedIn: true, paid: me.paid, email: me.email,
-                         verified: me.verified, name: me.name }
-                     : { signedIn: false, paid: false, verified: false });
+      /* The page needs to know whether to offer a button that works. An
+         unconfigured Google button is a dead end dressed as a shortcut. */
+      const base = { google: google.configured(env) };
+      return json(me ? Object.assign(base, { signedIn: true, paid: me.paid,
+                                             email: me.email, verified: me.verified,
+                                             name: me.name })
+                     : Object.assign(base, { signedIn: false, paid: false,
+                                             verified: false }));
     }
 
     /* ------------------------------------------------------ gated below */
