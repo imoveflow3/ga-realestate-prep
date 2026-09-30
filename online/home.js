@@ -445,7 +445,7 @@ function renderAuthPage(){
 
   if (FORM.tab === 'signup'){
     fieldRow(form, {name: 'name', label: 'Full name', type: 'text',
-                    autocomplete: 'name', placeholder: 'Zamir Bracey'});
+                    autocomplete: 'name', placeholder: 'First Last'});
     fieldRow(form, {name: 'email', label: 'Email address', type: 'email',
                     autocomplete: 'email', placeholder: 'you@example.com'});
     fieldRow(form, {name: 'phone', label: 'Mobile number', type: 'tel',
