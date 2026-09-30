@@ -8,7 +8,8 @@
     "dev": "npm run build && wrangler dev",
     "deploy": "npm run build && npm test && wrangler deploy",
     "db:init": "wrangler d1 execute ga-prep --remote --file=./schema.sql",
-    "db:local": "wrangler d1 execute ga-prep --local --file=./schema.sql"
+    "db:local": "wrangler d1 execute ga-prep --local --file=./schema.sql",
+    "db:reset": "wrangler d1 execute ga-prep --local --file=./reset-local.sql"
   },
   "devDependencies": {
     "wrangler": "^3"
