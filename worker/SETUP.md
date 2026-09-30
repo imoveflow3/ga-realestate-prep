@@ -173,3 +173,71 @@ redeploy — the bundle is compiled into the Worker.
 
 `paid` is read from the database on every single request. It is never taken
 from the cookie, the URL, or anything else the browser can edit.
+
+---
+
+# What the server needs
+
+## Secrets (`wrangler secret put NAME`)
+
+| Name | What it is | Without it |
+|---|---|---|
+| `SESSION_SECRET` | Any long random string. Signs session cookies and hashes tokens. | The Worker refuses every request. |
+| `STRIPE_SECRET_KEY` | Stripe API key (`sk_test_…`, then `sk_live_…`). | Checkout returns 503. |
+| `STRIPE_WEBHOOK_SECRET` | The endpoint's signing secret (`whsec_…`). | Payments never mark anyone paid. |
+| `GOOGLE_CLIENT_ID` | OAuth client id. | Continue with Google shows "not set up". |
+| `GOOGLE_CLIENT_SECRET` | OAuth client secret. | Same. |
+| `RESEND_API_KEY` | Email provider key. | No verification, reset or sign-in emails. Unverified accounts are then **not** held at the gate, because there would be no way through it. |
+
+Changing `SESSION_SECRET` signs everybody out and voids every outstanding
+verification and reset link. Generate it once:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+```
+
+## Plain settings (`[vars]` in wrangler.toml)
+
+`SITE_URL`, `FROM_EMAIL`, `PRICE_CENTS`, `PRODUCT_NAME`.
+
+## Database
+
+One D1 database bound as `DB`. `schema.sql` creates it all:
+
+| Table | Holds |
+|---|---|
+| `users` | id, email, name, phone, password hash, `email_verified`, `terms_at`, `paid`, Stripe and Google ids |
+| `sessions` | signed-in sessions, so one can be revoked |
+| `progress` | the whole study record, one row per user |
+| `tokens` | hashed, single-use, expiring links for verification and password reset |
+| `sends` | how often an address has asked for an email, for rate limiting |
+| `auth_attempts` | failed logins per address, for lockout |
+| `login_codes` | six-digit sign-in codes, hashed |
+| `stripe_events` | events already handled, so a replay cannot double-credit |
+
+```bash
+cd worker
+wrangler d1 execute ga-prep --remote --file=./schema.sql
+```
+
+Re-running it is safe: every statement is `IF NOT EXISTS`. **Adding columns to
+an existing database is not** — `CREATE TABLE IF NOT EXISTS` will skip a
+`users` table that already exists and leave the new columns off. If you have
+already created the database, run these once:
+
+```sql
+ALTER TABLE users ADD COLUMN name TEXT;
+ALTER TABLE users ADD COLUMN phone TEXT;
+ALTER TABLE users ADD COLUMN email_verified INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE users ADD COLUMN terms_at INTEGER;
+```
+
+## What is stored, and what is not
+
+Stored against the account: email, name, phone, when the terms were accepted,
+whether the address is confirmed, and the whole study record — lessons read,
+quiz results, accuracy, flags, bookmarks, preferences, streak.
+
+Never stored: the password itself. Only a PBKDF2 hash with a per-account salt.
+Never sent to the browser: hashes, tokens, or any other account's anything.
+`/api/account` returns one user's own row and is refused without a session.

@@ -207,6 +207,10 @@ def main():
         "Get access \u2014 Georgia Real Estate Exam Prep",
         "One payment for the full Georgia salesperson exam question bank.")
 
+    public_page("auth.html", "auth",
+                "Create your account \u2014 Georgia Real Estate Exam Prep",
+                "Create an account or log in to your Georgia exam prep.")
+
     # A single self-contained file carrying both pages, for looking at the
     # design before any of it is deployed. Nothing in it calls a server.
     public_page("preview.html", "welcome",
@@ -262,6 +266,7 @@ def main():
         shutil.copy2(os.path.join(src, name), os.path.join(PUBLIC, "assets", name))
 
     for name, label in (("index.html", "welcome page"), ("buy.html", "buy page"),
+                        ("auth.html", "auth page"),
                         ("preview.html", "preview"), ("terms.html", "terms"),
                         ("privacy.html", "privacy")):
         assert_no_leak(os.path.join(PUBLIC, name), label)

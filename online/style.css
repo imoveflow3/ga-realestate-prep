@@ -1531,3 +1531,83 @@ body.intro-done footer{animation:settle .42s var(--ease) both}
   .preview li{flex-direction:column; gap:1px}
   .preview b{min-width:0}
 }
+
+/* ======================================================================
+   The authentication page. One card, two tabs, visible labels, and every
+   error sitting under the field it belongs to.
+   ====================================================================== */
+
+.authwrap{display:grid; place-items:center; min-height:min(72vh,40rem); padding:var(--s5) 0}
+.authcard{
+  width:100%; max-width:27rem; background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow-lift); padding:var(--s6) var(--s5) var(--s5);
+  display:flex; flex-direction:column; gap:var(--s3);
+}
+.authcard .gatemark{width:2rem; height:2rem; color:var(--accent); margin:0 0 var(--s1)}
+.authcard h1{font-size:1.35rem}
+
+.authtabs{display:grid; grid-template-columns:1fr 1fr; gap:2px; padding:3px;
+  background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r-sm)}
+.authtab{
+  font-family:var(--ui); font-size:.9rem; font-weight:600; padding:.5rem;
+  background:none; border:0; border-radius:var(--r-xs); color:var(--ink-3);
+  cursor:pointer; transition:background .14s var(--ease), color .14s var(--ease);
+}
+.authtab:hover{color:var(--ink)}
+.authtab.on{background:var(--panel); color:var(--accent); box-shadow:var(--shadow)}
+
+.authform{display:flex; flex-direction:column; gap:var(--s3)}
+.field{display:flex; flex-direction:column; gap:.3rem}
+.field label{margin:0; text-transform:none; letter-spacing:0; font-size:.85rem;
+  font-weight:600; color:var(--ink)}
+.inputwrap{position:relative; display:flex}
+.inputwrap input{flex:1; padding:.6rem .7rem; font-size:.95rem; min-height:44px}
+.field.bad input{border-color:var(--no)}
+.field.bad input:focus{box-shadow:0 0 0 3px rgba(163,43,51,.16)}
+.fieldhint{font-size:.8rem; color:var(--ink-3); line-height:1.45}
+.fielderr{font-size:.82rem; color:var(--no); line-height:1.45; font-weight:500}
+
+.peek{
+  position:absolute; right:4px; top:50%; transform:translateY(-50%);
+  background:none; border:0; color:var(--ink-3); font-family:var(--ui);
+  font-size:.78rem; font-weight:600; cursor:pointer; padding:.35rem .5rem;
+  border-radius:var(--r-xs); min-height:34px;
+}
+.peek:hover{color:var(--accent); background:var(--panel-2)}
+
+.checkfield{margin-top:var(--s1)}
+.checkline{display:flex; align-items:flex-start; gap:.6rem; cursor:pointer;
+  font-size:.88rem; font-weight:400; line-height:1.5; color:var(--ink-2);
+  text-transform:none; letter-spacing:0}
+.checkline input{width:1.05rem; height:1.05rem; margin-top:.15rem; flex:0 0 auto}
+.checkline a{color:var(--accent)}
+
+.authbanner{
+  border-radius:var(--r-sm); padding:.7rem .85rem; font-size:.88rem; line-height:1.5;
+  border:1px solid var(--line); background:var(--panel-2);
+  display:flex; flex-direction:column; gap:var(--s2); align-items:flex-start;
+}
+.authbanner.good{border-color:color-mix(in srgb,var(--ok) 40%,transparent);
+  background:var(--ok-soft); color:var(--ink)}
+.authbanner.warn{border-color:color-mix(in srgb,var(--caution) 45%,transparent);
+  background:var(--caution-soft); color:var(--ink)}
+.authbanner.bad{border-color:color-mix(in srgb,var(--no) 40%,transparent);
+  background:var(--no-soft); color:var(--ink)}
+.authform .linkish{align-self:flex-start; font-size:.85rem}
+
+@media (max-width:560px){
+  .authwrap{min-height:auto; padding:var(--s4) 0}
+  .authcard{padding:var(--s5) var(--s4) var(--s4); max-width:none}
+}
+
+/* verification status, shown as a state not a decoration */
+.statuspill{
+  font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.02em;
+  padding:.2rem .6rem; border-radius:var(--r-pill); white-space:nowrap;
+  border:1px solid transparent;
+}
+.statuspill.ok{background:var(--ok-soft); color:var(--ok);
+  border-color:color-mix(in srgb,var(--ok) 30%,transparent)}
+.statuspill.warn{background:var(--caution-soft); color:var(--caution);
+  border-color:color-mix(in srgb,var(--caution) 35%,transparent)}

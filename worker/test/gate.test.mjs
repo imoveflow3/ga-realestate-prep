@@ -14,7 +14,7 @@ const ORIGIN = 'https://prep.test';
 /* Nothing here is allowed to touch the network. The email provider is
    intercepted so the test can read the code it would have sent, and Stripe
    answers with the shape the Worker expects. */
-const SENT = { code: null, to: null };
+const SENT = { code: null, to: null, verifyToken: null, resetToken: null };
 const GOOGLE = { email: 'gmail.user@gmail.com', verified: true };
 let LAST_CHECKOUT = new URLSearchParams();
 const realFetch = globalThis.fetch;
@@ -24,6 +24,11 @@ globalThis.fetch = async (input, init = {}) => {
     const body = JSON.parse(init.body);
     SENT.to = body.to[0];
     SENT.code = (body.text.match(/\b(\d{6})\b/) || [])[1] || null;
+    SENT.verifyToken = (body.text.match(/\/auth\/verify\?token=([\w-]+)/) || [])[1]
+                       || SENT.verifyToken;
+    SENT.resetToken = (body.text.match(/\/auth\?reset=([\w-]+)/) || [])[1]
+                      || SENT.resetToken;
+    SENT.subject = body.subject;
     return new Response('{"id":"stub"}', { status: 200 });
   }
   if (url === 'https://oauth2.googleapis.com/token') {
@@ -90,7 +95,7 @@ const env = makeEnv(db);
 await it('a stranger asking for /app is bounced to the sales page', async () => {
   const res = await worker.fetch(req('/app'), env, {});
   assert.equal(res.status, 302);
-  assert.equal(res.headers.get('Location'), '/?gate=1');
+  assert.equal(res.headers.get('Location'), '/auth?gate=1');
 });
 
 await it('a stranger asking for the question bank gets 402, not questions', async () => {
@@ -108,7 +113,7 @@ await it('a stranger cannot read or write progress', async () => {
 
 await it('/api/me says not signed in', async () => {
   const me = await (await worker.fetch(req('/api/me'), env, {})).json();
-  assert.deepEqual(me, { signedIn: false, paid: false });
+  assert.deepEqual(me, { signedIn: false, paid: false, verified: false });
 });
 
 await it('a forged webhook signature is rejected and grants nothing', async () => {
@@ -369,7 +374,8 @@ await it('signed in but unpaid still cannot reach the questions', async () => {
 await it('/api/me reports signed in, not paid', async () => {
   const me = await (await worker.fetch(req('/api/me', {
     headers: { Cookie: gCookie } }), env, {})).json();
-  assert.deepEqual(me, { signedIn: true, paid: false, email: 'gmail.user@gmail.com' });
+  assert.deepEqual(me, { signedIn: true, paid: false, verified: true,
+                         email: 'gmail.user@gmail.com', name: '' });
 });
 
 await it('checkout refuses a stranger and points them at Google', async () => {
@@ -416,8 +422,11 @@ const PW = 'a long enough passphrase';
 await it('a short password is refused', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'pw@example.com', password: 'short' }) }), env, {});
+    body: JSON.stringify({ email: 'pw@example.com', name: 'Test Person',
+                           phone: '4045551234', password: 'short', password2: 'short',
+                           terms: true }) }), env, {});
   assert.equal(res.status, 400);
+  assert.ok((await res.json()).fields.password, 'the error did not name the field');
   assert.ok(!db._tables.users.find(u => u.email === 'pw@example.com'),
             'a rejected signup still made an account');
 });
@@ -427,9 +436,11 @@ let pwCookie = null;
 await it('signing up creates an account, signs you in, and pays for nothing', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'PW@Example.com ', password: PW }) }), env, {});
+    body: JSON.stringify({ email: 'PW@Example.com ', name: 'Test Person',
+                           phone: '(404) 555-1234', password: PW, password2: PW,
+                           terms: true }) }), env, {});
   assert.equal(res.status, 200);
-  assert.deepEqual(await res.json(), { ok: true, paid: false });
+  assert.deepEqual(await res.json(), { ok: true, paid: false, verified: false });
   pwCookie = cookieOf(res);
   const u = db._tables.users.find(u => u.email === 'pw@example.com');
   assert.ok(u, 'no account');
@@ -446,7 +457,9 @@ await it('a signed-up user still cannot reach the questions', async () => {
 await it('signing up twice on the same address is refused', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'pw@example.com', password: PW }) }), env, {});
+    body: JSON.stringify({ email: 'pw@example.com', name: 'Test Person',
+                           phone: '4045551234', password: PW, password2: PW,
+                           terms: true }) }), env, {});
   assert.equal(res.status, 409);
 });
 
@@ -487,6 +500,7 @@ await it('the right password works once the lock is cleared', async () => {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'pw@example.com', password: PW }) }), env, {});
   assert.equal(res.status, 200);
+  assert.equal((await res.json()).verified, false, 'signing up must not self-verify');
   assert.ok(cookieOf(res).startsWith('ga_session='));
   assert.equal(db._tables.auth_attempts.length, 0, 'failures not cleared on success');
 });
@@ -495,10 +509,177 @@ await it('a Google account can add a password and stay one account', async () =>
   const before = db._tables.users.length;
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'gmail.user@gmail.com', password: PW }) }), env, {});
+    body: JSON.stringify({ email: 'gmail.user@gmail.com', name: 'Gmail Person',
+                           phone: '4045559999', password: PW, password2: PW,
+                           terms: true }) }), env, {});
   assert.equal(res.status, 200);
   assert.equal((await res.json()).paid, true, 'lost their paid status');
   assert.equal(db._tables.users.length, before, 'a duplicate account was made');
+});
+
+
+console.log('\nSIGN-UP FIELDS, VERIFICATION AND RESET');
+
+const FULL = { name: 'Zamir Bracey', phone: '(404) 555-0182',
+               password: 'a long enough passphrase', password2: 'a long enough passphrase',
+               terms: true };
+
+function signup(extra) {
+  return worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(Object.assign({}, FULL, extra)) }), env, {});
+}
+
+await it('every missing field is named, and named separately', async () => {
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'nope', name: 'x', phone: '12',
+                           password: 'short', password2: 'other', terms: false })
+  }), env, {});
+  assert.equal(res.status, 400);
+  const f = (await res.json()).fields;
+  for (const k of ['email', 'name', 'phone', 'password', 'terms']) {
+    assert.ok(f[k], 'no message for ' + k);
+  }
+});
+
+await it('mismatched passwords are caught on the second field', async () => {
+  const res = await signup({ email: 'mismatch@example.com', password2: 'something else' });
+  assert.equal(res.status, 400);
+  assert.ok((await res.json()).fields.password2);
+});
+
+await it('the terms box is not optional', async () => {
+  const res = await signup({ email: 'noterms@example.com', terms: false });
+  assert.equal(res.status, 400);
+  assert.ok((await res.json()).fields.terms);
+});
+
+let newCookie = null;
+
+await it('a full sign-up stores name and a normalised phone', async () => {
+  const res = await signup({ email: 'zamir@example.com' });
+  assert.equal(res.status, 200);
+  const body = await res.json();
+  assert.equal(body.verified, false, 'a new account must not be self-verified');
+  newCookie = cookieOf(res);
+  const u = db._tables.users.find(u => u.email === 'zamir@example.com');
+  assert.equal(u.name, 'Zamir Bracey');
+  assert.equal(u.phone, '+14045550182', 'phone not normalised to E.164');
+  assert.ok(u.terms_at, 'terms acceptance not recorded');
+  assert.equal(u.email_verified, 0);
+});
+
+await it('the account endpoint returns the fields and never the password', async () => {
+  const me = await (await worker.fetch(req('/api/account', {
+    headers: { Cookie: newCookie } }), env, {})).json();
+  assert.equal(me.name, 'Zamir Bracey');
+  assert.equal(me.phone, '+14045550182');
+  assert.equal(me.verified, false);
+  assert.ok(!('password_hash' in me) && !JSON.stringify(me).includes('pbkdf2'),
+            'the account endpoint leaked credential material');
+});
+
+await it('name and phone can be corrected, bad ones cannot', async () => {
+  const bad = await worker.fetch(req('/api/account', {
+    method: 'PUT', headers: { Cookie: newCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'Z', phone: '123' }) }), env, {});
+  assert.equal(bad.status, 400);
+  const f = (await bad.json()).fields;
+  assert.ok(f.name && f.phone);
+
+  const ok = await worker.fetch(req('/api/account', {
+    method: 'PUT', headers: { Cookie: newCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'Zamir B', phone: '+1 404 555 0199' }) }), env, {});
+  assert.equal(ok.status, 200);
+  assert.equal(db._tables.users.find(u => u.email === 'zamir@example.com').phone,
+               '+14045550199');
+});
+
+await it('a stranger cannot read anybody\u2019s account', async () => {
+  assert.equal((await worker.fetch(req('/api/account'), env, {})).status, 401);
+});
+
+await it('the verification link proves the address, once', async () => {
+  const u = db._tables.users.find(u => u.email === 'zamir@example.com');
+  const raw = SENT.verifyToken;
+  assert.ok(raw, 'no verification link was sent at sign-up');
+  const res = await worker.fetch(req('/auth/verify?token=' + raw), env, {});
+  assert.equal(res.status, 302);
+  assert.equal(res.headers.get('Location'), '/auth?verify=ok');
+  assert.equal(u.email_verified, 1);
+
+  const again = await worker.fetch(req('/auth/verify?token=' + raw), env, {});
+  assert.equal(again.headers.get('Location'), '/auth?verify=bad',
+               'a verification link worked twice');
+});
+
+await it('a forged verification token does nothing', async () => {
+  const res = await worker.fetch(req('/auth/verify?token=not-a-real-token'), env, {});
+  assert.equal(res.headers.get('Location'), '/auth?verify=bad');
+});
+
+await it('forgot-password answers the same for a stranger and a customer', async () => {
+  db._tables.sends = [];
+  const known = await worker.fetch(req('/api/auth/forgot', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'zamir@example.com' }) }), env, {});
+  db._tables.sends = [];
+  const unknown = await worker.fetch(req('/api/auth/forgot', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'ghost@example.com' }) }), env, {});
+  assert.equal(known.status, unknown.status);
+  assert.deepEqual(await known.json(), await unknown.json());
+});
+
+await it('a reset sets the password and signs every old session out', async () => {
+  db._tables.sends = [];
+  await worker.fetch(req('/api/auth/forgot', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'zamir@example.com' }) }), env, {});
+  const token = SENT.resetToken;
+  assert.ok(token, 'no reset link was sent');
+  const u2 = db._tables.users.find(u => u.email === 'zamir@example.com');
+  const before = db._tables.sessions.filter(s => s.user_id === u2.id).length;
+  assert.ok(before >= 1, 'no session to invalidate');
+
+  const res = await worker.fetch(req('/api/auth/reset', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: token, password: 'a brand new passphrase',
+                           password2: 'a brand new passphrase' }) }), env, {});
+  assert.equal(res.status, 200);
+  /* Exactly one session for them afterwards: the fresh one. A reset is often
+     somebody shutting an intruder out, so the old ones must not survive. */
+  assert.equal(db._tables.sessions.filter(s => s.user_id === u2.id).length, 1,
+               'old sessions survived a reset');
+
+  const relog = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'zamir@example.com', password: 'a brand new passphrase' })
+  }), env, {});
+  assert.equal(relog.status, 200, 'the new password does not work');
+});
+
+await it('a used reset token cannot be replayed', async () => {
+  const res = await worker.fetch(req('/api/auth/reset', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: SENT.resetToken, password: 'yet another passphrase',
+                           password2: 'yet another passphrase' }) }), env, {});
+  assert.equal(res.status, 400);
+});
+
+await it('resend is rate limited rather than a free email cannon', async () => {
+  db._tables.sends = [];
+  const u = db._tables.users.find(u => u.email === 'pw@example.com');
+  const { createSession } = await import('../src/auth.js');
+  const { cookie } = await createSession(env, u.id);
+  const c = cookie.split(';')[0];
+  const first = await worker.fetch(req('/api/auth/resend', {
+    method: 'POST', headers: { Cookie: c } }), env, {});
+  assert.equal(first.status, 200);
+  const second = await worker.fetch(req('/api/auth/resend', {
+    method: 'POST', headers: { Cookie: c } }), env, {});
+  assert.equal(second.status, 429, 'a second resend went straight out');
 });
 
 globalThis.fetch = realFetch;

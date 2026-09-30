@@ -2394,6 +2394,117 @@ function drawPlan(){
 }
 
 /* ---------------------------------------------------------------- setup */
+/* ---------------------------------------------------------- account ----
+   Only exists behind the paywall build, where there is a server holding the
+   account. The static build has no account to show. */
+function accountCard(into){
+  if (!PAID) return;
+  var card = el('div', 'card');
+  card.appendChild(cardHead('Your account', 'name, contact and sign-in'));
+  var body = el('div'); body.id = 'acctBody';
+  body.appendChild(el('p', 'muted', 'Loading\u2026'));
+  card.appendChild(body);
+  into.insertBefore(card, into.firstChild.nextSibling);
+
+  fetch('/api/account', {credentials: 'same-origin'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(a){
+      if (!a){ body.innerHTML = ''; body.appendChild(el('p', 'muted',
+        'Could not load your account just now.')); return; }
+      drawAccount(body, a);
+    })['catch'](function(){
+      body.innerHTML = '';
+      body.appendChild(el('p', 'muted', 'Could not reach the server.'));
+    });
+}
+
+function drawAccount(body, a){
+  body.innerHTML = '';
+
+  var em = el('div', 'listrow');
+  var emMain = el('div', 'lr-main');
+  emMain.appendChild(el('div', 'lr-title', a.email));
+  emMain.appendChild(el('div', 'lr-sub', a.verified
+    ? 'Email confirmed'
+    : 'Email not confirmed yet \u2014 confirm it so you can recover this account'));
+  em.appendChild(emMain);
+  var badge = el('span', 'statuspill ' + (a.verified ? 'ok' : 'warn'),
+                 a.verified ? 'Verified' : 'Unverified');
+  em.appendChild(badge);
+  body.appendChild(em);
+
+  if (!a.verified){
+    var resend = el('button', 'btn mini', 'Send the confirmation email again');
+    resend.onclick = function(){
+      resend.disabled = true;
+      fetch('/api/auth/resend', {method: 'POST', credentials: 'same-origin'})
+        .then(function(r){ return r.json().then(function(d){ return {s: r.status, d: d}; }); })
+        .then(function(x){
+          resend.disabled = false;
+          toast(x.d.error || 'Sent. Check your inbox.');
+        })['catch'](function(){ resend.disabled = false; toast('Could not send that.'); });
+    };
+    body.appendChild(resend);
+  }
+
+  var form = el('div', 'authform');
+  form.style.marginTop = '1rem';
+  var nameIn = accountField(form, 'acctName', 'Full name', 'text', 'name', a.name);
+  var phoneIn = accountField(form, 'acctPhone', 'Mobile number', 'tel', 'tel', a.phone);
+  var note = el('p', 'fieldhint'); note.id = 'acctNote';
+  form.appendChild(note);
+  var save = el('button', 'btn', 'Save changes');
+  save.onclick = function(){
+    save.disabled = true; note.className = 'fieldhint'; note.textContent = 'Saving\u2026';
+    fetch('/api/account', {method: 'PUT', credentials: 'same-origin',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({name: nameIn.value, phone: phoneIn.value})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        save.disabled = false;
+        if (d.fields){
+          note.className = 'fielderr';
+          note.textContent = d.fields.name || d.fields.phone;
+          return;
+        }
+        note.className = 'fieldhint';
+        note.textContent = 'Saved.';
+        phoneIn.value = d.phone || '';
+      })['catch'](function(){
+        save.disabled = false;
+        note.className = 'fielderr'; note.textContent = 'Could not save that.';
+      });
+  };
+  form.appendChild(save);
+  body.appendChild(form);
+
+  var out = el('button', 'btn ghost', 'Sign out');
+  out.style.marginTop = '1rem';
+  out.onclick = function(){
+    if (!confirm('Sign out on this device? Your progress is saved to your account.')) return;
+    fetch('/api/logout', {method: 'POST', credentials: 'same-origin'})
+      .then(function(){ location.href = '/'; })['catch'](function(){ location.href = '/'; });
+  };
+  body.appendChild(out);
+
+  body.appendChild(el('p', 'muted',
+    'To change the email address on this account, contact support so we can ' +
+    'confirm the new one belongs to you.'));
+}
+
+function accountField(parent, id, label, type, autocomplete, value){
+  var wrap = el('div', 'field');
+  var l = el('label', null, label); l.setAttribute('for', id);
+  wrap.appendChild(l);
+  var i = el('input');
+  i.id = id; i.type = type; i.autocomplete = autocomplete;
+  if (type === 'tel') i.inputMode = 'tel';
+  i.value = value || '';
+  wrap.appendChild(i);
+  parent.appendChild(wrap);
+  return i;
+}
+
 function renderSetup(){
   var v = $('view-setup');
   v.innerHTML =
@@ -2508,6 +2619,7 @@ function renderSetup(){
     t.appendChild(tr);
   });
   wrap.appendChild(t); box.appendChild(wrap);
+  accountCard(v);
 }
 
 /* ============================================================ app chrome */

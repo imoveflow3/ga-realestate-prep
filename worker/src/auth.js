@@ -57,12 +57,13 @@ export async function currentUser(request, env) {
   if (!timingSafeEqual(sig, expected)) return null;
 
   const row = await env.DB.prepare(
-    `SELECT u.id, u.email, u.paid, s.expires_at
+    `SELECT u.id, u.email, u.paid, u.email_verified, u.name, s.expires_at
        FROM sessions s JOIN users u ON u.id = s.user_id
       WHERE s.id = ?`
   ).bind(id).first();
   if (!row || row.expires_at < now()) return null;
-  return { id: row.id, email: row.email, paid: !!row.paid, sessionId: id };
+  return { id: row.id, email: row.email, paid: !!row.paid,
+           verified: !!row.email_verified, name: row.name || '', sessionId: id };
 }
 
 export async function endSession(env, sessionId) {

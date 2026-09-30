@@ -8,6 +8,7 @@ import GATED from '../assets/gated.js';
 import { createCheckout, fetchCheckout, verifyWebhook } from './stripe.js';
 import * as google from './google.js';
 import * as password from './password.js';
+import * as accounts from './accounts.js';
 import {
   currentUser, createSession, endSession, cookieHeader, readCookie,
   normalizeEmail, findOrCreateUser, issueLoginCode, verifyLoginCode, now,
@@ -38,6 +39,18 @@ const redirect = (to, headers = {}) =>
 
 async function readJson(request) {
   try { return await request.json(); } catch (e) { return {}; }
+}
+
+async function sendMail(env, to, subject, text) {
+  if (!env.RESEND_API_KEY) return { error: 'email-not-configured' };
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`,
+               'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: env.FROM_EMAIL || 'login@example.com',
+                           to: [to], subject, text }),
+  });
+  return res.ok ? {} : { error: 'email-send-failed' };
 }
 
 async function sendCode(env, email, code) {
@@ -150,34 +163,56 @@ export default {
 
     if (path === '/api/auth/signup' && request.method === 'POST') {
       const body = await readJson(request);
+      /* Every field is checked, and every failure names the field it belongs
+         to, so the page can put the message under the right input instead of
+         throwing the whole form away. */
+      const fields = {};
       const email = normalizeEmail(body.email);
-      if (!email) return json({ error: 'That does not look like an email address.' }, 400);
+      if (!email) fields.email = 'That does not look like an email address.';
+      const name = accounts.cleanName(body.name);
+      if (name.error) fields.name = name.error;
+      const phone = accounts.cleanPhone(body.phone, true);
+      if (phone.error) fields.phone = phone.error;
       const bad = password.problemWith(body.password);
-      if (bad) return json({ error: bad }, 400);
+      if (bad) fields.password = bad;
+      else if (body.password !== body.password2) {
+        fields.password2 = 'Those two passwords are not the same.';
+      }
+      if (!body.terms) fields.terms = 'You need to accept the terms to continue.';
+      if (Object.keys(fields).length) return json({ fields }, 400);
 
       const existing = await env.DB.prepare(
         'SELECT id, password_hash FROM users WHERE email = ?').bind(email).first();
       if (existing && existing.password_hash) {
-        return json({ error: 'There is already an account on that address. ' +
-                             'Log in instead.' }, 409);
+        return json({ fields: { email: 'There is already an account on that ' +
+                                       'address. Log in instead.' } }, 409);
       }
       const hashed = await password.hash(body.password);
-      let user;
-      if (existing) {
-        /* Bought through Google first, now adding a password: same account. */
-        user = { id: existing.id };
-        await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
-          .bind(hashed, user.id).run();
-      } else {
-        user = await findOrCreateUser(env, email);
-        await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
-          .bind(hashed, user.id).run();
-      }
-      const fresh = await env.DB.prepare('SELECT paid FROM users WHERE id = ?')
-        .bind(user.id).first();
+      const user = existing ? { id: existing.id } : await findOrCreateUser(env, email);
+      await env.DB.prepare(
+        `UPDATE users SET password_hash = ?, name = ?, phone = ?, terms_at = ?
+         WHERE id = ?`
+      ).bind(hashed, name.value, phone.value, now(), user.id).run();
+
+      const row = await env.DB.prepare(
+        'SELECT paid, email_verified FROM users WHERE id = ?').bind(user.id).first();
       const { cookie } = await createSession(env, user.id);
-      return json({ ok: true, paid: !!(fresh && fresh.paid) }, 200,
-                  { 'Set-Cookie': cookie });
+
+      /* The account exists but is not proven. Send the link; a failure to send
+         is not a failure to sign up. */
+      const gate = await accounts.maySend(env, email, 'verify');
+      if (gate.ok) {
+        const token = await accounts.issueToken(env, user.id, 'verify',
+                                                accounts.VERIFY_HOURS * 60);
+        await sendMail(env, email, 'Confirm your email address',
+          `Confirm your email address for Georgia Real Estate Exam Prep:\n\n` +
+          `${origin}/auth/verify?token=${token}\n\n` +
+          `The link works for ${accounts.VERIFY_HOURS} hours. If you did not ` +
+          `create an account, ignore this.`);
+      }
+      return json({ ok: true, paid: !!(row && row.paid),
+                    verified: !!(row && row.email_verified) },
+                  200, { 'Set-Cookie': cookie });
     }
 
     if (path === '/api/auth/login' && request.method === 'POST') {
@@ -191,7 +226,8 @@ export default {
                              'or use Continue with Google.' }, 429);
       }
       const row = await env.DB.prepare(
-        'SELECT id, paid, password_hash FROM users WHERE email = ?').bind(email).first();
+        'SELECT id, paid, password_hash, email_verified FROM users WHERE email = ?'
+      ).bind(email).first();
       /* The check runs even with no account so the reply takes the same time
          either way, and says the same thing either way. */
       const checked = await password.verify(body.password, row && row.password_hash);
@@ -205,7 +241,108 @@ export default {
       }
       await clearFailures(email);
       const { cookie } = await createSession(env, row.id);
-      return json({ ok: true, paid: !!row.paid }, 200, { 'Set-Cookie': cookie });
+      return json({ ok: true, paid: !!row.paid, verified: !!row.email_verified },
+                  200, { 'Set-Cookie': cookie });
+    }
+
+    /* --------------------------------- verification, reset, account ---- */
+
+    if (path === '/auth/verify') {
+      const used = await accounts.useToken(env, 'verify', url.searchParams.get('token'));
+      if (used.error) return redirect('/auth?verify=bad');
+      await env.DB.prepare('UPDATE users SET email_verified = 1 WHERE id = ?')
+        .bind(used.userId).run();
+      const { cookie } = await createSession(env, used.userId);
+      return redirect('/auth?verify=ok', { 'Set-Cookie': cookie });
+    }
+
+    if (path === '/api/auth/resend' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'Sign in first.' }, 401);
+      if (who.verified) return json({ ok: true, already: true });
+      const gate = await accounts.maySend(env, who.email, 'verify');
+      if (gate.error) return json({ error: gate.error }, 429);
+      const token = await accounts.issueToken(env, who.id, 'verify',
+                                              accounts.VERIFY_HOURS * 60);
+      const sent = await sendMail(env, who.email, 'Confirm your email address',
+        `Confirm your email address for Georgia Real Estate Exam Prep:\n\n` +
+        `${origin}/auth/verify?token=${token}\n\n` +
+        `The link works for ${accounts.VERIFY_HOURS} hours.`);
+      if (sent.error) return json({ error: 'Could not send that just now.' }, 502);
+      return json({ ok: true });
+    }
+
+    /* Always the same answer, whether or not the address is registered. */
+    if (path === '/api/auth/forgot' && request.method === 'POST') {
+      const body = await readJson(request);
+      const email = normalizeEmail(body.email);
+      const same = { ok: true, sent: true };
+      if (!email) return json(same);
+      const gate = await accounts.maySend(env, email, 'reset');
+      if (gate.error) return json(same);
+      const row = await env.DB.prepare(
+        'SELECT id, password_hash FROM users WHERE email = ?').bind(email).first();
+      if (row && row.password_hash) {
+        const token = await accounts.issueToken(env, row.id, 'reset',
+                                                accounts.RESET_MINUTES);
+        await sendMail(env, email, 'Reset your password',
+          `Set a new password for Georgia Real Estate Exam Prep:\n\n` +
+          `${origin}/auth?reset=${token}\n\n` +
+          `The link works for ${accounts.RESET_MINUTES} minutes. If you did ` +
+          `not ask for this, ignore it -- nothing has changed.`);
+      }
+      return json(same);
+    }
+
+    if (path === '/api/auth/reset' && request.method === 'POST') {
+      const body = await readJson(request);
+      const bad = password.problemWith(body.password);
+      if (bad) return json({ fields: { password: bad } }, 400);
+      if (body.password !== body.password2) {
+        return json({ fields: { password2: 'Those two passwords are not the same.' } }, 400);
+      }
+      const used = await accounts.useToken(env, 'reset', body.token);
+      if (used.error) return json({ error: used.error }, 400);
+      const hashed = await password.hash(body.password);
+      /* Proving control of the inbox proves the address, and every old
+         session goes -- a reset is often somebody locking an intruder out. */
+      await env.DB.prepare(
+        'UPDATE users SET password_hash = ?, email_verified = 1 WHERE id = ?'
+      ).bind(hashed, used.userId).run();
+      await env.DB.prepare('DELETE FROM sessions WHERE user_id = ?')
+        .bind(used.userId).run();
+      const row = await env.DB.prepare('SELECT paid FROM users WHERE id = ?')
+        .bind(used.userId).first();
+      const { cookie } = await createSession(env, used.userId);
+      return json({ ok: true, paid: !!(row && row.paid) }, 200, { 'Set-Cookie': cookie });
+    }
+
+    if (path === '/api/account') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'Sign in first.' }, 401);
+
+      if (request.method === 'GET') {
+        const row = await env.DB.prepare(
+          `SELECT email, name, phone, email_verified, paid, created_at
+           FROM users WHERE id = ?`).bind(who.id).first();
+        return json({ email: row.email, name: row.name || '', phone: row.phone || '',
+                      verified: !!row.email_verified, paid: !!row.paid,
+                      created_at: row.created_at });
+      }
+
+      if (request.method === 'PUT') {
+        const body = await readJson(request);
+        const fields = {};
+        const name = accounts.cleanName(body.name);
+        if (name.error) fields.name = name.error;
+        const phone = accounts.cleanPhone(body.phone, false);
+        if (phone.error) fields.phone = phone.error;
+        if (Object.keys(fields).length) return json({ fields }, 400);
+        await env.DB.prepare('UPDATE users SET name = ?, phone = ? WHERE id = ?')
+          .bind(name.value, phone.value, who.id).run();
+        return json({ ok: true, name: name.value, phone: phone.value || '' });
+      }
+      return json({ error: 'method not allowed' }, 405);
     }
 
     /* ------------------------------------------------- sign in with Google */
@@ -234,6 +371,10 @@ export default {
       const email = normalizeEmail(got.email);
       if (!email) return redirect('/?auth=failed', { 'Set-Cookie': clear });
       const user = await findOrCreateUser(env, email);
+      /* Google only hands back an address it has verified, and we refuse the
+         ones it marks unverified. Asking again would be theatre. */
+      await env.DB.prepare('UPDATE users SET email_verified = 1 WHERE id = ?')
+        .bind(user.id).run();
       const { cookie } = await createSession(env, user.id);
       /* Two cookies on one response: the new session, and the state cookie
          being cleared. Headers.append, because set() would drop one. */
@@ -322,8 +463,9 @@ export default {
 
     if (path === '/api/me') {
       const me = await currentUser(request, env);
-      return json(me ? { signedIn: true, paid: me.paid, email: me.email }
-                     : { signedIn: false, paid: false });
+      return json(me ? { signedIn: true, paid: me.paid, email: me.email,
+                         verified: me.verified, name: me.name }
+                     : { signedIn: false, paid: false, verified: false });
     }
 
     /* ------------------------------------------------------ gated below */
@@ -331,8 +473,17 @@ export default {
     const gated = path === '/app' || path === '/api/bundle' || path === '/api/progress';
 
     if (gated && (!me || !me.paid)) {
-      if (path === '/app') return redirect('/?gate=1');
+      if (path === '/app') return redirect(me ? '/auth?pay=1' : '/auth?gate=1');
       return json({ error: 'payment required' }, 402);
+    }
+    /* An unproven address is held at the verification screen -- but never
+       somebody who has paid. If their email never lands, or sending is not
+       configured at all, locking them out of what they bought would be the
+       worse failure by a distance. They get in, and the app nags them. */
+    const mustVerify = gated && me && !me.verified && !me.paid && !!env.RESEND_API_KEY;
+    if (mustVerify) {
+      if (path === '/app') return redirect('/auth?verify=needed');
+      return json({ error: 'email not verified' }, 403);
     }
 
     if (path === '/app') return html(GATED.appHtml);
@@ -360,7 +511,7 @@ export default {
     }
 
     /* ------------------------------------------------- everything public */
-    const PAGES = { '/': '/index.html', '/buy': '/buy.html',
+    const PAGES = { '/': '/index.html', '/buy': '/buy.html', '/auth': '/auth.html',
                     '/terms': '/terms.html', '/privacy': '/privacy.html' };
     const wanted = PAGES[path]
       ? new Request(new URL(PAGES[path], url.origin), request)

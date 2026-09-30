@@ -6,6 +6,10 @@ CREATE TABLE IF NOT EXISTS users (
   stripe_id     TEXT,
   google_sub    TEXT,
   password_hash TEXT,
+  name          TEXT,
+  phone         TEXT,
+  email_verified INTEGER NOT NULL DEFAULT 0,
+  terms_at      INTEGER,
   created_at  INTEGER NOT NULL,
   paid_at     INTEGER
 );
@@ -49,4 +53,27 @@ CREATE TABLE IF NOT EXISTS auth_attempts (
   email       TEXT PRIMARY KEY,
   fails       INTEGER NOT NULL DEFAULT 0,
   locked_till INTEGER NOT NULL DEFAULT 0
+);
+
+-- Single-use, hashed, expiring tokens. `kind` is 'verify' for proving an
+-- address, 'reset' for setting a new password, 'change' for moving an account
+-- to a new address. Hashed because a leaked table must not be a set of keys.
+CREATE TABLE IF NOT EXISTS tokens (
+  hash        TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL,
+  kind        TEXT NOT NULL,
+  payload     TEXT,
+  expires_at  INTEGER NOT NULL,
+  created_at  INTEGER NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+CREATE INDEX IF NOT EXISTS tokens_user ON tokens(user_id, kind);
+
+-- How often an address has asked for a verification email, a reset, or an
+-- SMS code. One row per address per action.
+CREATE TABLE IF NOT EXISTS sends (
+  key         TEXT PRIMARY KEY,
+  count       INTEGER NOT NULL DEFAULT 0,
+  window_from INTEGER NOT NULL,
+  last_at     INTEGER NOT NULL
 );

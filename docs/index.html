@@ -1569,6 +1569,86 @@ body.intro-done footer{animation:settle .42s var(--ease) both}
   .preview li{flex-direction:column; gap:1px}
   .preview b{min-width:0}
 }
+
+/* ======================================================================
+   The authentication page. One card, two tabs, visible labels, and every
+   error sitting under the field it belongs to.
+   ====================================================================== */
+
+.authwrap{display:grid; place-items:center; min-height:min(72vh,40rem); padding:var(--s5) 0}
+.authcard{
+  width:100%; max-width:27rem; background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--r);
+  box-shadow:var(--shadow-lift); padding:var(--s6) var(--s5) var(--s5);
+  display:flex; flex-direction:column; gap:var(--s3);
+}
+.authcard .gatemark{width:2rem; height:2rem; color:var(--accent); margin:0 0 var(--s1)}
+.authcard h1{font-size:1.35rem}
+
+.authtabs{display:grid; grid-template-columns:1fr 1fr; gap:2px; padding:3px;
+  background:var(--panel-2); border:1px solid var(--line); border-radius:var(--r-sm)}
+.authtab{
+  font-family:var(--ui); font-size:.9rem; font-weight:600; padding:.5rem;
+  background:none; border:0; border-radius:var(--r-xs); color:var(--ink-3);
+  cursor:pointer; transition:background .14s var(--ease), color .14s var(--ease);
+}
+.authtab:hover{color:var(--ink)}
+.authtab.on{background:var(--panel); color:var(--accent); box-shadow:var(--shadow)}
+
+.authform{display:flex; flex-direction:column; gap:var(--s3)}
+.field{display:flex; flex-direction:column; gap:.3rem}
+.field label{margin:0; text-transform:none; letter-spacing:0; font-size:.85rem;
+  font-weight:600; color:var(--ink)}
+.inputwrap{position:relative; display:flex}
+.inputwrap input{flex:1; padding:.6rem .7rem; font-size:.95rem; min-height:44px}
+.field.bad input{border-color:var(--no)}
+.field.bad input:focus{box-shadow:0 0 0 3px rgba(163,43,51,.16)}
+.fieldhint{font-size:.8rem; color:var(--ink-3); line-height:1.45}
+.fielderr{font-size:.82rem; color:var(--no); line-height:1.45; font-weight:500}
+
+.peek{
+  position:absolute; right:4px; top:50%; transform:translateY(-50%);
+  background:none; border:0; color:var(--ink-3); font-family:var(--ui);
+  font-size:.78rem; font-weight:600; cursor:pointer; padding:.35rem .5rem;
+  border-radius:var(--r-xs); min-height:34px;
+}
+.peek:hover{color:var(--accent); background:var(--panel-2)}
+
+.checkfield{margin-top:var(--s1)}
+.checkline{display:flex; align-items:flex-start; gap:.6rem; cursor:pointer;
+  font-size:.88rem; font-weight:400; line-height:1.5; color:var(--ink-2);
+  text-transform:none; letter-spacing:0}
+.checkline input{width:1.05rem; height:1.05rem; margin-top:.15rem; flex:0 0 auto}
+.checkline a{color:var(--accent)}
+
+.authbanner{
+  border-radius:var(--r-sm); padding:.7rem .85rem; font-size:.88rem; line-height:1.5;
+  border:1px solid var(--line); background:var(--panel-2);
+  display:flex; flex-direction:column; gap:var(--s2); align-items:flex-start;
+}
+.authbanner.good{border-color:color-mix(in srgb,var(--ok) 40%,transparent);
+  background:var(--ok-soft); color:var(--ink)}
+.authbanner.warn{border-color:color-mix(in srgb,var(--caution) 45%,transparent);
+  background:var(--caution-soft); color:var(--ink)}
+.authbanner.bad{border-color:color-mix(in srgb,var(--no) 40%,transparent);
+  background:var(--no-soft); color:var(--ink)}
+.authform .linkish{align-self:flex-start; font-size:.85rem}
+
+@media (max-width:560px){
+  .authwrap{min-height:auto; padding:var(--s4) 0}
+  .authcard{padding:var(--s5) var(--s4) var(--s4); max-width:none}
+}
+
+/* verification status, shown as a state not a decoration */
+.statuspill{
+  font-family:var(--ui); font-size:.72rem; font-weight:600; letter-spacing:.02em;
+  padding:.2rem .6rem; border-radius:var(--r-pill); white-space:nowrap;
+  border:1px solid transparent;
+}
+.statuspill.ok{background:var(--ok-soft); color:var(--ok);
+  border-color:color-mix(in srgb,var(--ok) 30%,transparent)}
+.statuspill.warn{background:var(--caution-soft); color:var(--caution);
+  border-color:color-mix(in srgb,var(--caution) 35%,transparent)}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -1913,6 +1993,288 @@ function renderAuth(){
   }
 }
 
+/* ====================================================================== */
+/* The authentication page.                                               */
+/*                                                                        */
+/* Two tabs over one card. Every field has a visible label, its own error  */
+/* line underneath, and keeps what was typed when a sibling fails -- the   */
+/* thing that makes forms infuriating is being made to type it all again.  */
+/* ====================================================================== */
+
+var FORM = {tab: 'signup', values: {}, errors: {}, busy: false, notice: null};
+
+function fieldRow(parent, opts){
+  var wrap = el('div', 'field' + (FORM.errors[opts.name] ? ' bad' : ''));
+  var lab = el('label', null, opts.label);
+  lab.setAttribute('for', 'f_' + opts.name);
+  wrap.appendChild(lab);
+
+  var inputWrap = el('div', 'inputwrap');
+  var i = el('input');
+  i.id = 'f_' + opts.name;
+  i.name = opts.name;
+  i.type = opts.type || 'text';
+  if (opts.autocomplete) i.autocomplete = opts.autocomplete;
+  if (opts.inputMode) i.inputMode = opts.inputMode;
+  if (opts.placeholder) i.placeholder = opts.placeholder;
+  i.value = FORM.values[opts.name] || '';
+  i.oninput = function(){ FORM.values[opts.name] = i.value; };
+  if (FORM.errors[opts.name]){
+    i.setAttribute('aria-invalid', 'true');
+    i.setAttribute('aria-describedby', 'e_' + opts.name);
+  }
+  inputWrap.appendChild(i);
+
+  /* Show/hide, so a long passphrase can be checked before it is submitted. */
+  if (opts.type === 'password'){
+    var eye = el('button', 'peek', 'Show');
+    eye.type = 'button';
+    eye.setAttribute('aria-label', 'Show password');
+    eye.onclick = function(){
+      var showing = i.type === 'text';
+      i.type = showing ? 'password' : 'text';
+      eye.textContent = showing ? 'Show' : 'Hide';
+      eye.setAttribute('aria-label', (showing ? 'Show' : 'Hide') + ' password');
+      i.focus();
+    };
+    inputWrap.appendChild(eye);
+  }
+  wrap.appendChild(inputWrap);
+
+  if (opts.hint && !FORM.errors[opts.name]) wrap.appendChild(el('p', 'fieldhint', opts.hint));
+  if (FORM.errors[opts.name]){
+    var e = el('p', 'fielderr', FORM.errors[opts.name]);
+    e.id = 'e_' + opts.name;
+    wrap.appendChild(e);
+  }
+  parent.appendChild(wrap);
+  return i;
+}
+
+function authNotice(kind, text, actionLabel, onAction){
+  var n = el('div', 'authbanner ' + (kind || ''));
+  n.appendChild(el('p', null, text));
+  if (actionLabel){
+    var b = el('button', 'btn mini', actionLabel);
+    b.onclick = onAction;
+    n.appendChild(b);
+  }
+  return n;
+}
+
+function submitForm(url, payload, onOk){
+  if (FORM.busy) return;
+  FORM.busy = true;
+  FORM.errors = {};
+  renderAuthPage();
+  post(url, payload).then(function(x){
+    FORM.busy = false;
+    if (x.d.fields){ FORM.errors = x.d.fields; renderAuthPage(); focusFirstError(); return; }
+    if (x.d.error){ FORM.notice = {kind: 'bad', text: x.d.error}; renderAuthPage(); return; }
+    onOk(x.d);
+  })['catch'](function(){
+    FORM.busy = false;
+    FORM.notice = {kind: 'bad', text: 'Could not reach the server. Try again.'};
+    renderAuthPage();
+  });
+}
+
+function focusFirstError(){
+  var first = document.querySelector('.field.bad input');
+  if (first) first.focus();
+}
+
+function afterAuthed(d){
+  if (d.paid) { location.href = '/app'; return; }
+  if (d.verified === false){ location.href = '/auth?verify=sent'; return; }
+  location.href = '/?pay=1';
+}
+
+function renderAuthPage(){
+  var v = $('page');
+  v.innerHTML = '';
+  var q = new URLSearchParams(location.search);
+
+  var wrap = el('div', 'authwrap');
+  var card = el('div', 'authcard');
+
+  var mark = el('div', 'gatemark');
+  mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
+    '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
+    'fill="none" stroke="currentColor" stroke-width="30" stroke-linejoin="round"/></svg>';
+  card.appendChild(mark);
+
+  /* things the server sent us back with */
+  var said = {
+    'ok': ['good', 'Your email is confirmed. You can log in.'],
+    'bad': ['bad', 'That confirmation link is not valid or has expired. ' +
+                   'Log in and we will send a new one.'],
+    'needed': ['warn', 'Confirm your email address to carry on. ' +
+                       'Check your inbox for the link.'],
+    'sent': ['good', 'Account created. Check your email for the confirmation ' +
+                     'link, then log in.']
+  }[q.get('verify')];
+  if (said) card.appendChild(authNotice(said[0], said[1]));
+  if (q.get('gate')) card.appendChild(authNotice('warn',
+    'That part of the site needs an account. Create one or log in below.'));
+  if (FORM.notice) card.appendChild(authNotice(FORM.notice.kind, FORM.notice.text));
+
+  if (q.get('reset')) return resetForm(card, wrap, v, q.get('reset'));
+  if (FORM.tab === 'forgot') return forgotForm(card, wrap, v);
+
+  /* ---- the two tabs ---- */
+  var tabs = el('div', 'authtabs');
+  tabs.setAttribute('role', 'tablist');
+  [['signup', 'Create account'], ['login', 'Log in']].forEach(function(t){
+    var b = el('button', 'authtab' + (FORM.tab === t[0] ? ' on' : ''), t[1]);
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', FORM.tab === t[0] ? 'true' : 'false');
+    b.onclick = function(){ FORM.tab = t[0]; FORM.errors = {}; FORM.notice = null;
+                            renderAuthPage(); };
+    tabs.appendChild(b);
+  });
+  card.appendChild(tabs);
+
+  var g = googleButton(FORM.tab === 'signup' ? 'Sign up with Google'
+                                             : 'Continue with Google');
+  g.classList.add('wide');
+  card.appendChild(g);
+  var or = el('div', 'orline');
+  or.appendChild(el('span', null, 'or use an email address'));
+  card.appendChild(or);
+
+  var form = el('form', 'authform');
+  form.noValidate = true;
+
+  if (FORM.tab === 'signup'){
+    fieldRow(form, {name: 'name', label: 'Full name', type: 'text',
+                    autocomplete: 'name', placeholder: 'Zamir Bracey'});
+    fieldRow(form, {name: 'email', label: 'Email address', type: 'email',
+                    autocomplete: 'email', placeholder: 'you@example.com'});
+    fieldRow(form, {name: 'phone', label: 'Mobile number', type: 'tel',
+                    autocomplete: 'tel', inputMode: 'tel',
+                    placeholder: '(404) 555-0182',
+                    hint: 'United States (+1). Used for account recovery.'});
+    fieldRow(form, {name: 'password', label: 'Password', type: 'password',
+                    autocomplete: 'new-password',
+                    hint: 'At least 10 characters. Length matters more than symbols.'});
+    fieldRow(form, {name: 'password2', label: 'Confirm password', type: 'password',
+                    autocomplete: 'new-password'});
+
+    var termsWrap = el('div', 'field checkfield' + (FORM.errors.terms ? ' bad' : ''));
+    var lab = el('label', 'checkline');
+    var cb = el('input'); cb.type = 'checkbox'; cb.id = 'f_terms';
+    cb.checked = !!FORM.values.terms;
+    cb.onchange = function(){ FORM.values.terms = cb.checked; };
+    lab.appendChild(cb);
+    var txt = el('span');
+    txt.appendChild(document.createTextNode('I agree to the '));
+    var t1 = el('a', null, 'Terms of Service'); t1.href = '/terms'; t1.target = '_blank';
+    txt.appendChild(t1);
+    txt.appendChild(document.createTextNode(' and '));
+    var t2 = el('a', null, 'Privacy Policy'); t2.href = '/privacy'; t2.target = '_blank';
+    txt.appendChild(t2);
+    txt.appendChild(document.createTextNode('.'));
+    lab.appendChild(txt);
+    termsWrap.appendChild(lab);
+    if (FORM.errors.terms) termsWrap.appendChild(el('p', 'fielderr', FORM.errors.terms));
+    form.appendChild(termsWrap);
+
+    var go = el('button', 'btn wide', FORM.busy ? 'Creating your account…'
+                                                : 'Create account');
+    go.type = 'submit';
+    go.disabled = FORM.busy;
+    form.appendChild(go);
+    form.onsubmit = function(e){
+      e.preventDefault();
+      submitForm('/api/auth/signup', {
+        name: FORM.values.name, email: FORM.values.email, phone: FORM.values.phone,
+        password: FORM.values.password, password2: FORM.values.password2,
+        terms: !!FORM.values.terms
+      }, afterAuthed);
+    };
+  } else {
+    fieldRow(form, {name: 'email', label: 'Email address', type: 'email',
+                    autocomplete: 'email', placeholder: 'you@example.com'});
+    fieldRow(form, {name: 'password', label: 'Password', type: 'password',
+                    autocomplete: 'current-password'});
+
+    var forgot = el('button', 'linkish', 'Forgot your password?');
+    forgot.type = 'button';
+    forgot.onclick = function(){ FORM.tab = 'forgot'; FORM.errors = {};
+                                 FORM.notice = null; renderAuthPage(); };
+    form.appendChild(forgot);
+
+    var go2 = el('button', 'btn wide', FORM.busy ? 'Signing in…' : 'Log in');
+    go2.type = 'submit';
+    go2.disabled = FORM.busy;
+    form.appendChild(go2);
+    form.onsubmit = function(e){
+      e.preventDefault();
+      submitForm('/api/auth/login',
+                 {email: FORM.values.email, password: FORM.values.password},
+                 afterAuthed);
+    };
+  }
+
+  card.appendChild(form);
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+  setTimeout(focusFirstError, 30);
+}
+
+function forgotForm(card, wrap, v){
+  card.appendChild(el('h1', null, 'Reset your password'));
+  card.appendChild(el('p', 'gatelede',
+    'Put in your email address and we will send you a link. It works for an hour.'));
+  var form = el('form', 'authform');
+  form.noValidate = true;
+  fieldRow(form, {name: 'email', label: 'Email address', type: 'email',
+                  autocomplete: 'email', placeholder: 'you@example.com'});
+  var go = el('button', 'btn wide', FORM.busy ? 'Sending…' : 'Send the link');
+  go.type = 'submit'; go.disabled = FORM.busy;
+  form.appendChild(go);
+  var back = el('button', 'linkish', 'Back to log in');
+  back.type = 'button';
+  back.onclick = function(){ FORM.tab = 'login'; FORM.notice = null; renderAuthPage(); };
+  form.appendChild(back);
+  form.onsubmit = function(e){
+    e.preventDefault();
+    submitForm('/api/auth/forgot', {email: FORM.values.email}, function(){
+      /* The same answer whether or not that address is registered. */
+      FORM.tab = 'login';
+      FORM.notice = {kind: 'good', text: 'If that address has an account, a reset ' +
+                                         'link is on its way. Check your inbox.'};
+      renderAuthPage();
+    });
+  };
+  card.appendChild(form);
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+}
+
+function resetForm(card, wrap, v, token){
+  card.appendChild(el('h1', null, 'Choose a new password'));
+  var form = el('form', 'authform');
+  form.noValidate = true;
+  fieldRow(form, {name: 'password', label: 'New password', type: 'password',
+                  autocomplete: 'new-password',
+                  hint: 'At least 10 characters.'});
+  fieldRow(form, {name: 'password2', label: 'Confirm new password', type: 'password',
+                  autocomplete: 'new-password'});
+  var go = el('button', 'btn wide', FORM.busy ? 'Saving…' : 'Save and sign in');
+  go.type = 'submit'; go.disabled = FORM.busy;
+  form.appendChild(go);
+  form.onsubmit = function(e){
+    e.preventDefault();
+    submitForm('/api/auth/reset', {token: token, password: FORM.values.password,
+                                   password2: FORM.values.password2}, afterAuthed);
+  };
+  card.appendChild(form);
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+}
+
 /* ----------------------------------------------------------- the page */
 /* One screen. What it is, what it costs, a button, and a way back in for
    people who have already bought. Everything a buyer is paying for -- the
@@ -2068,13 +2430,13 @@ function renderMinimal(v, q){
     return;
   }
 
-  /* Not signed in. Two actions, named for what they do. */
-  var up = el('button', 'btn wide', 'Create account');
-  up.onclick = function(){ openAuth('signup'); };
-  acts.appendChild(up);
-  var inb = el('button', 'btn ghost wide', 'Log in');
-  inb.onclick = function(){ openAuth('login'); };
-  acts.appendChild(inb);
+  /* Not signed in: one primary way in, which is the auth page. */
+  var start = el('button', 'btn wide', 'Start studying');
+  start.onclick = function(){ location.href = '/auth'; };
+  acts.appendChild(start);
+  var already = el('button', 'btn ghost wide', 'I already have an account');
+  already.onclick = function(){ location.href = '/auth?tab=login'; };
+  acts.appendChild(already);
   card.appendChild(acts);
   card.appendChild(previewList());
   card.appendChild(el('p', 'gatefine',
@@ -2291,6 +2653,7 @@ function render(){
   var q = new URLSearchParams(location.search);
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
+  if (HOME.page === 'auth') return renderAuthPage();
   if (HOME.page === 'buy') return renderBuy(v, q);
   if (HOME.layout === 'minimal') return renderMinimal(v, q);
   return renderWelcome(v, q);
@@ -2322,10 +2685,13 @@ function render(){
   }
   /* The price is all over the page already; in the header it only forces a
      wrap on a phone. */
-  $('buyBtn').textContent = HOME.openAccess ? 'Open the app'
-    : (onBuyPage ? ('Pay ' + money(HOME.price)) : 'Get access');
+  $('buyBtn').textContent = HOME.openAccess ? 'Start studying'
+    : (onBuyPage ? ('Pay ' + money(HOME.price))
+                 : (ME.signedIn ? 'Continue studying' : 'Start studying'));
   $('buyBtn').onclick = function(){
     if (HOME.openAccess) return openApp();
+    if (ME.signedIn && ME.paid){ location.href = '/app'; return; }
+    if (!ME.signedIn){ location.href = '/auth'; return; }
     if (HOME.page === 'buy') return buy();
     if (HOME.preview){ HOME.page = 'buy'; render(); window.scrollTo(0, 0); return; }
     location.href = '/buy';
@@ -2339,6 +2705,8 @@ function render(){
   /* The card says something different to a stranger, to somebody signed in
      who has not paid, and to somebody who has. Only the server knows which,
      so ask before drawing rather than drawing twice. */
+  var q0 = new URLSearchParams(location.search);
+  if (q0.get('tab') === 'login') FORM.tab = 'login';
   if (HOME.openAccess || HOME.preview){ render(); return; }
   fetch('/api/me', {credentials: 'same-origin'})
     .then(function(r){ return r.json(); })
