@@ -283,12 +283,17 @@ await it('/activate without a session_id just goes home', async () => {
   assert.equal(res.headers.get('Location'), '/');
 });
 
-await it('the extensionless public pages resolve to real files', async () => {
-  for (const [asked, file] of [['/', '/index.html'], ['/buy', '/buy.html'],
-                               ['/terms', '/terms.html'], ['/privacy', '/privacy.html']]) {
+/* This used to assert that the Worker rewrote /auth to /auth.html, which it
+   did, and which was wrong -- the real asset server bounces .html back to the
+   clean path and the two fought in a loop. A stub that answers whatever it is
+   asked can only ever confirm the code does what the code does. The check
+   that matters is that the path is passed through untouched; the loop itself
+   is caught by scripts/smoke.mjs against a running server. */
+await it('public paths are handed to the asset server unchanged', async () => {
+  for (const asked of ['/', '/buy', '/auth', '/terms', '/privacy']) {
     const res = await worker.fetch(req(asked), env, {});
     assert.equal(res.status, 200, asked + ' did not resolve');
-    assert.equal(await res.text(), file, asked + ' served the wrong file');
+    assert.equal(await res.text(), asked, asked + ' was rewritten before dispatch');
   }
 });
 

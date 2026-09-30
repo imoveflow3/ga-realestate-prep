@@ -511,12 +511,11 @@ export default {
     }
 
     /* ------------------------------------------------- everything public */
-    const PAGES = { '/': '/index.html', '/buy': '/buy.html', '/auth': '/auth.html',
-                    '/terms': '/terms.html', '/privacy': '/privacy.html' };
-    const wanted = PAGES[path]
-      ? new Request(new URL(PAGES[path], url.origin), request)
-      : request;
-    const asset = await env.ASSETS.fetch(wanted);
+    /* Hand the request over as it came in. Rewriting /auth to /auth.html here
+       looked sensible and was a redirect loop: the asset server's default
+       html_handling bounces /auth.html straight back to /auth, which this
+       rewrote again, forever. It maps the clean path to the file itself. */
+    const asset = await env.ASSETS.fetch(request);
     if (asset.status !== 404) {
       const out = new Response(asset.body, asset);
       for (const [k, v] of Object.entries(SECURITY)) out.headers.set(k, v);
