@@ -41,6 +41,25 @@ LAYOUT = "minimal"      # "minimal" = sign up / sign in / pay only;
 from tools._homecopy import (ICONS, FEATURES, AUDIENCE, WHY, STEPS,  # noqa: E402
                              HONEST)
 
+
+# The markers that mean a question actually shipped. "steps" is deliberately
+# not here: the how-it-works copy uses that key too, and a check that cries
+# wolf is a check nobody reads.
+LEAK_MARKERS = ('"choices"', '"answer":', '"explain":', '"concept":',
+                '"vocab"', '"sections"', '"exam_questions"')
+
+
+def assert_no_leak(path, label):
+    """A public page may not contain a question, an answer or a note."""
+    with io.open(path, encoding="utf-8") as f:
+        text = f.read()
+    found = [m for m in LEAK_MARKERS if m in text]
+    if found:
+        raise SystemExit("LEAK: %s (%s) contains %s"
+                         % (label, os.path.relpath(path, HERE), ", ".join(found)))
+    return len(text)
+
+
 def read(name):
     with io.open(os.path.join(ONLINE, name), encoding="utf-8") as f:
         return f.read()
@@ -242,6 +261,11 @@ def main():
     for name in os.listdir(src):
         shutil.copy2(os.path.join(src, name), os.path.join(PUBLIC, "assets", name))
 
+    for name, label in (("index.html", "welcome page"), ("buy.html", "buy page"),
+                        ("preview.html", "preview"), ("terms.html", "terms"),
+                        ("privacy.html", "privacy")):
+        assert_no_leak(os.path.join(PUBLIC, name), label)
+
     gsize = os.path.getsize(os.path.join(GATED, "gated.js"))
     psize = os.path.getsize(os.path.join(PUBLIC, "index.html"))
     bsize = os.path.getsize(os.path.join(PUBLIC, "buy.html"))
@@ -254,6 +278,7 @@ def main():
           % (os.path.getsize(os.path.join(PUBLIC, "preview.html")) / 1e3))
     print("public worker/public/terms.html, privacy.html, assets/")
     print("price  $%d one-time   support %s" % (PRICE_CENTS // 100, SUPPORT_EMAIL))
+    print("leak   every public page checked: no questions, answers or notes")
 
 
 if __name__ == "__main__":

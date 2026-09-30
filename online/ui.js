@@ -758,7 +758,7 @@ function renderToday(){
     d.style.cssText = 'border-left-color:var(--ok);font-family:"Barlow",sans-serif;' +
       'font-size:.95rem;line-height:1.55';
     d.textContent = 'Everything for today is done. Anything further is a bonus — ' +
-      'the Practice and Vocab tabs are open.';
+      'Practice questions and Vocabulary are open.';
     head.appendChild(d);
   } else {
     var nextTask = plan.tasks.filter(function(t){ return t.key === plan.nextKey; })[0];
@@ -1128,7 +1128,7 @@ function renderVocab(){
   head.appendChild(el('p', 'sub',
     'You are shown a definition and choose the term it belongs to, from four ' +
     'options drawn from the same topic. Pick a category below, or drill the whole ' +
-    'bank. Recognising a term is easier than recalling it, so use the Cards tab too.'));
+    'bank. Recognising a term is easier than recalling it, so use Flashcards too.'));
   var row = el('div', 'row');
   [['Everything (15)', {count: 15}],
    ['National only (15)', {portion: 'national', count: 15}],
@@ -1872,7 +1872,7 @@ function renderWeak(){
   v.innerHTML =
     '<h1>Weak spots</h1>' +
     '<p class="sub">The small things you have actually gotten wrong, each with its own ' +
-    'drill. Broad topic quizzes live on the Practice tab and the Dashboard.</p>' +
+    'drill. Broad topic quizzes live under Practice questions and Progress.</p>' +
     '<div id="weakBody"></div>';
   var box = $('weakBody');
 
