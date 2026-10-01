@@ -429,7 +429,7 @@ await it('a short password is refused', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'pw@example.com', name: 'Test Person',
-                           phone: '4045551234', password: 'short', password2: 'short',
+                           phone: '4045551234', password: 'tiny', password2: 'tiny',
                            terms: true }) }), env, {});
   assert.equal(res.status, 400);
   assert.ok((await res.json()).fields.password, 'the error did not name the field');

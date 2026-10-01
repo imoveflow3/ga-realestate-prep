@@ -220,7 +220,7 @@ function renderAuth(){
                        value: AUTH.email});
     var pw = field(b, 'authPassword', 'Password', 'password',
                    {autocomplete: isNew ? 'new-password' : 'current-password',
-                    placeholder: isNew ? 'at least 10 characters' : ''});
+                    placeholder: isNew ? 'at least 8 characters' : ''});
     if (isNew){
       b.appendChild(el('p', 'muted',
         'Ten characters or more. Length beats symbols — a short password ' +
@@ -457,7 +457,7 @@ function renderAuthPage(){
                     hint: 'United States (+1). Used for account recovery.'});
     fieldRow(form, {name: 'password', label: 'Password', type: 'password',
                     autocomplete: 'new-password',
-                    hint: 'At least 10 characters. Length matters more than symbols.'});
+                    hint: 'At least 8 characters. Length matters more than symbols.'});
     fieldRow(form, {name: 'password2', label: 'Confirm password', type: 'password',
                     autocomplete: 'new-password'});
 
@@ -559,7 +559,7 @@ function resetForm(card, wrap, v, token){
   form.noValidate = true;
   fieldRow(form, {name: 'password', label: 'New password', type: 'password',
                   autocomplete: 'new-password',
-                  hint: 'At least 10 characters.'});
+                  hint: 'At least 8 characters.'});
   fieldRow(form, {name: 'password2', label: 'Confirm new password', type: 'password',
                   autocomplete: 'new-password'});
   var go = el('button', 'btn wide', FORM.busy ? 'Saving…' : 'Save and sign in');

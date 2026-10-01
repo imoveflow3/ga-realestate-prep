@@ -15,7 +15,7 @@ import { b64url, timingSafeEqual } from './crypto.js';
 const ITERATIONS = 100000;
 const KEY_BITS = 256;
 const SALT_BYTES = 16;
-export const MIN_LENGTH = 10;
+export const MIN_LENGTH = 8;
 
 const enc = new TextEncoder();
 
