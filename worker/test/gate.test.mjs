@@ -425,16 +425,36 @@ console.log('\nEMAIL AND PASSWORD');
 
 const PW = 'a long enough passphrase';
 
-await it('a short password is refused', async () => {
+/* There is no minimum length any more. What must still hold is that a blank
+   password cannot create an account -- that is an unfilled form, not a
+   choice -- and that a short one is genuinely accepted rather than accepted
+   in name and refused at login. */
+await it('a blank password is refused', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'pw@example.com', name: 'Test Person',
-                           phone: '4045551234', password: 'tiny', password2: 'tiny',
+                           phone: '4045551234', password: '', password2: '',
                            terms: true }) }), env, {});
   assert.equal(res.status, 400);
   assert.ok((await res.json()).fields.password, 'the error did not name the field');
   assert.ok(!db._tables.users.find(u => u.email === 'pw@example.com'),
             'a rejected signup still made an account');
+});
+
+await it('a short password works all the way through', async () => {
+  const made = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'tiny@example.com', name: 'Tiny Person',
+                           phone: '4045557777', password: 'abc', password2: 'abc',
+                           terms: true }) }), env, {});
+  assert.equal(made.status, 200);
+  const back = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'tiny@example.com', password: 'abc' }) }), env, {});
+  assert.equal(back.status, 200, 'accepted at sign-up but refused at login');
+  const u = db._tables.users.find(x => x.email === 'tiny@example.com');
+  assert.ok(u.password_hash.startsWith('pbkdf2$'), 'short passwords skipped hashing');
+  assert.ok(!u.password_hash.includes('abc'), 'the password is in the hash');
 });
 
 let pwCookie = null;
@@ -539,8 +559,10 @@ function signup(extra) {
 await it('every missing field is named, and named separately', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
+    /* Blank rather than short: short is legal now, so it would produce no
+       password error and this test would be asserting the wrong thing. */
     body: JSON.stringify({ email: 'nope', name: 'x', phone: '12',
-                           password: 'short', password2: 'other', terms: false })
+                           password: '', password2: 'other', terms: false })
   }), env, {});
   assert.equal(res.status, 400);
   const f = (await res.json()).fields;

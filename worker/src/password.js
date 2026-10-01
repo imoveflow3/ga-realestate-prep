@@ -15,7 +15,11 @@ import { b64url, timingSafeEqual } from './crypto.js';
 const ITERATIONS = 100000;
 const KEY_BITS = 256;
 const SALT_BYTES = 16;
-export const MIN_LENGTH = 8;
+/* No minimum length, by choice. Empty is still refused -- a blank password
+   is a form that did not get filled in, not a password somebody picked --
+   and the upper bound stays so a single request cannot ask the worker to
+   hash a megabyte. */
+export const MIN_LENGTH = 0;
 
 const enc = new TextEncoder();
 
@@ -63,10 +67,7 @@ export async function verify(password, stored) {
 
 export function problemWith(password) {
   const p = String(password || '');
-  if (p.length < MIN_LENGTH) {
-    return `Use at least ${MIN_LENGTH} characters. Length is what makes a ` +
-           'password hard to guess; mixing in symbols barely moves the needle.';
-  }
+  if (!p.length) return 'Choose a password.';
   if (p.length > 200) return 'That is longer than 200 characters.';
   if (/^\s|\s$/.test(p)) return 'Remove the space at the start or end.';
   return null;
