@@ -69,6 +69,7 @@ function makeEnv(db) {
     STRIPE_WEBHOOK_SECRET: 'whsec_test',
     SITE_URL: ORIGIN,
     RESEND_API_KEY: 're_test',
+    ADMIN_EMAILS: 'boss@example.com, Second.Admin@Example.com',
     GOOGLE_CLIENT_ID: 'test-client-id',
     GOOGLE_CLIENT_SECRET: 'test-client-secret',
     FROM_EMAIL: 'login@prep.test',
@@ -380,7 +381,7 @@ await it('/api/me reports signed in, not paid', async () => {
   const me = await (await worker.fetch(req('/api/me', {
     headers: { Cookie: gCookie } }), env, {})).json();
   assert.deepEqual(me, { signedIn: true, paid: false, verified: true, google: true,
-                         email: 'gmail.user@gmail.com', name: '' });
+                         email: 'gmail.user@gmail.com', name: '', role: 'user' });
 });
 
 await it('checkout refuses a stranger and points them at Google', async () => {
@@ -685,6 +686,112 @@ await it('resend is rate limited rather than a free email cannon', async () => {
   const second = await worker.fetch(req('/api/auth/resend', {
     method: 'POST', headers: { Cookie: c } }), env, {});
   assert.equal(second.status, 429, 'a second resend went straight out');
+});
+
+
+console.log('\nADMIN ROLE');
+
+function signupAs(email, extra) {
+  return worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(Object.assign({
+      email, name: 'A Person', phone: '4045550001',
+      password: 'a long enough passphrase', password2: 'a long enough passphrase',
+      terms: true }, extra || {})) }), env, {});
+}
+
+await it('an ordinary sign-up is an ordinary user', async () => {
+  const res = await signupAs('ordinary@example.com');
+  assert.equal(res.status, 200);
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'user');
+});
+
+await it('asking to be an admin in the sign-up body does nothing', async () => {
+  const res = await signupAs('sneaky@example.com', { role: 'admin', isAdmin: true });
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'user', 'the client talked itself into being an admin');
+  assert.equal(db._tables.users.find(u => u.email === 'sneaky@example.com').role, 'user');
+});
+
+await it('the configured address is an admin from the moment it signs up', async () => {
+  const res = await signupAs('boss@example.com');
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'admin');
+});
+
+await it('the list is matched without regard to case', async () => {
+  const res = await signupAs('second.admin@example.com');
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'admin');
+});
+
+await it('an existing account is promoted on its next sign-in', async () => {
+  const u = db._tables.users.find(x => x.email === 'ordinary@example.com');
+  assert.equal(u.role, 'user');
+  env.ADMIN_EMAILS = 'boss@example.com, ordinary@example.com';
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'ordinary@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  assert.equal(res.status, 200);
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'admin');
+});
+
+await it('and demoted again when taken off the list', async () => {
+  env.ADMIN_EMAILS = 'boss@example.com';
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'ordinary@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), env, {})).json();
+  assert.equal(me.role, 'user');
+});
+
+await it('editing the cookie cannot make anybody an admin', async () => {
+  const res = await signupAs('forger@example.com');
+  const real = cookieOf(res);
+  /* The role never travels in the cookie -- it is read from the row every
+     time -- so the only thing a tampered cookie can do is stop working. */
+  const forged = real.replace('ga_session=', 'ga_session=') + 'admin';
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: forged } }), env, {})).json();
+  assert.ok(!me.signedIn || me.role === 'user',
+            'a tampered cookie produced an admin');
+});
+
+await it('no route hands out the role', async () => {
+  /* Poke at every name an admin endpoint might plausibly have, as an
+     ordinary signed-in user, and check that none of them changes what that
+     user is. Matching on the response body is useless here -- the asset stub
+     echoes the path, and "/api/admin" contains the word. What matters is the
+     row afterwards. */
+  const res = await signupAs('prodder@example.com');
+  const c = cookieOf(res);
+  const row = () => db._tables.users.find(u => u.email === 'prodder@example.com').role;
+  assert.equal(row(), 'user');
+
+  for (const path of ['/api/admin', '/api/role', '/api/users', '/api/promote',
+                      '/api/account', '/api/me']) {
+    for (const method of ['GET', 'POST', 'PUT']) {
+      await worker.fetch(req(path, {
+        method,
+        headers: { Cookie: c, 'Content-Type': 'application/json' },
+        body: method === 'GET' ? undefined
+                               : JSON.stringify({ role: 'admin', isAdmin: true,
+                                                  name: 'Still Ordinary',
+                                                  phone: '4045550002' })
+      }), env, {});
+      assert.equal(row(), 'user', path + ' ' + method + ' changed the role');
+    }
+  }
 });
 
 globalThis.fetch = realFetch;

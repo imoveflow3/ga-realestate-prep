@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
   name          TEXT,
   phone         TEXT,
   email_verified INTEGER NOT NULL DEFAULT 0,
+  role          TEXT NOT NULL DEFAULT 'user',
   terms_at      INTEGER,
   created_at  INTEGER NOT NULL,
   paid_at     INTEGER

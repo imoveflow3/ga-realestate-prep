@@ -28,7 +28,8 @@ export function makeDB() {
     }
     if (like(q, 'INSERT INTO USERS')) {
       t.users.push({ id: args[0], email: args[1], paid: 0, created_at: args[2],
-                     email_verified: 0, name: null, phone: null, terms_at: null });
+                     email_verified: 0, name: null, phone: null, terms_at: null,
+                     role: 'user' });
       return null;
     }
     if (like(q, 'UPDATE USERS SET PAID = 1')) {
@@ -101,7 +102,7 @@ export function makeDB() {
       if (!u) return null;
       return { id: u.id, email: u.email, paid: u.paid,
                email_verified: u.email_verified || 0, name: u.name || '',
-               expires_at: ses.expires_at };
+               role: u.role || 'user', expires_at: ses.expires_at };
     }
     if (like(q, 'SELECT EMAIL, NAME, PHONE, EMAIL_VERIFIED, PAID, CREATED_AT')) {
       const u = t.users.find(x => x.id === args[0]);
@@ -162,6 +163,15 @@ export function makeDB() {
     if (like(q, 'INSERT INTO SENDS')) {
       t.sends = t.sends.filter(x => x.key !== args[0]);
       t.sends.push({ key: args[0], count: args[1], window_from: args[2], last_at: args[3] });
+      return null;
+    }
+    if (like(q, 'SELECT ROLE FROM USERS WHERE ID')) {
+      const u = t.users.find(x => x.id === args[0]);
+      return u ? { role: u.role || 'user' } : null;
+    }
+    if (like(q, 'UPDATE USERS SET ROLE')) {
+      const u = t.users.find(x => x.id === args[1]);
+      if (u) u.role = args[0];
       return null;
     }
     if (like(q, 'SELECT ID FROM STRIPE_EVENTS'))

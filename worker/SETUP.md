@@ -232,6 +232,24 @@ ALTER TABLE users ADD COLUMN email_verified INTEGER NOT NULL DEFAULT 0;
 ALTER TABLE users ADD COLUMN terms_at INTEGER;
 ```
 
+## Administrators
+
+`ADMIN_EMAILS` is a comma-separated list of addresses. An address on it is
+given the `admin` role when its account is created, and again on every
+sign-in, so adding somebody takes effect the next time they log in and
+removing somebody takes effect the same way. Case does not matter.
+
+```bash
+cd worker && ./set-admin.sh you@gmail.com            # local
+wrangler secret put ADMIN_EMAILS                      # production
+```
+
+There is deliberately no endpoint that grants the role. Editing the list is
+the only way in, and the role is read from the database on every request --
+never from the cookie, which the browser could edit. Tested: a sign-up body
+asking for `role: admin` is ignored, a tampered cookie grants nothing, and
+poking every plausible admin URL as an ordinary user leaves their row alone.
+
 ## What is stored, and what is not
 
 Stored against the account: email, name, phone, when the terms were accepted,

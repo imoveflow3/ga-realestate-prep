@@ -2421,6 +2421,20 @@ function accountCard(into){
 function drawAccount(body, a){
   body.innerHTML = '';
 
+  /* Confirmation that the role took, and nothing more. Everything an
+     administrator can actually do is checked on the server; this badge is
+     only a readout. */
+  if (a.role === 'admin'){
+    var who = el('div', 'listrow');
+    var whoMain = el('div', 'lr-main');
+    whoMain.appendChild(el('div', 'lr-title', 'Administrator'));
+    whoMain.appendChild(el('div', 'lr-sub',
+      'This account can reach things a studying account cannot.'));
+    who.appendChild(whoMain);
+    who.appendChild(el('span', 'statuspill ok', 'Admin'));
+    body.appendChild(who);
+  }
+
   var em = el('div', 'listrow');
   var emMain = el('div', 'lr-main');
   emMain.appendChild(el('div', 'lr-title', a.email));

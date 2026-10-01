@@ -88,3 +88,34 @@ export function cleanPhone(raw, required) {
   return { error: 'That does not look like a mobile number. ' +
                   'US numbers are ten digits.' };
 }
+
+
+/* ---------------------------------------------------------------- roles --
+   Who is an administrator is decided by configuration on the server, never
+   by anything the browser sends. ADMIN_EMAILS is a comma-separated list; an
+   address on it is promoted when the account is made and again on every
+   sign-in, so adding somebody later takes effect the next time they log in,
+   and resetting the database does not lose it.
+
+   There is deliberately no route that grants this. Editing the list and
+   redeploying is the only way in. */
+
+export function isAdminEmail(env, email) {
+  const list = String(env.ADMIN_EMAILS || '')
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+  return list.indexOf(String(email || '').toLowerCase()) >= 0;
+}
+
+/* Called wherever a session is about to be handed out. Promotes, and also
+   demotes if an address has been taken off the list. */
+export async function syncRole(env, userId, email) {
+  const want = isAdminEmail(env, email) ? 'admin' : 'user';
+  const row = await env.DB.prepare('SELECT role FROM users WHERE id = ?')
+    .bind(userId).first();
+  if (!row || row.role === want) return want;
+  await env.DB.prepare('UPDATE users SET role = ? WHERE id = ?')
+    .bind(want, userId).run();
+  return want;
+}

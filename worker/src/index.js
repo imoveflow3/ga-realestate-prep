@@ -14,6 +14,12 @@ import {
   normalizeEmail, findOrCreateUser, issueLoginCode, verifyLoginCode, now,
 } from './auth.js';
 
+/* Every future admin route goes through this and nothing else. It takes the
+   already-resolved user, which came from the database, not the cookie. */
+function requireAdmin(me) {
+  return me && me.isAdmin ? null : json({ error: 'not allowed' }, 403);
+}
+
 const SECURITY = {
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
@@ -194,6 +200,7 @@ export default {
          WHERE id = ?`
       ).bind(hashed, name.value, phone.value, now(), user.id).run();
 
+      await accounts.syncRole(env, user.id, email);
       const row = await env.DB.prepare(
         'SELECT paid, email_verified FROM users WHERE id = ?').bind(user.id).first();
       const { cookie } = await createSession(env, user.id);
@@ -240,6 +247,7 @@ export default {
           .bind(await password.hash(body.password), row.id).run();
       }
       await clearFailures(email);
+      await accounts.syncRole(env, row.id, email);
       const { cookie } = await createSession(env, row.id);
       return json({ ok: true, paid: !!row.paid, verified: !!row.email_verified },
                   200, { 'Set-Cookie': cookie });
@@ -327,7 +335,7 @@ export default {
            FROM users WHERE id = ?`).bind(who.id).first();
         return json({ email: row.email, name: row.name || '', phone: row.phone || '',
                       verified: !!row.email_verified, paid: !!row.paid,
-                      created_at: row.created_at });
+                      role: who.role, created_at: row.created_at });
       }
 
       if (request.method === 'PUT') {
@@ -375,6 +383,7 @@ export default {
          ones it marks unverified. Asking again would be theatre. */
       await env.DB.prepare('UPDATE users SET email_verified = 1 WHERE id = ?')
         .bind(user.id).run();
+      await accounts.syncRole(env, user.id, email);
       const { cookie } = await createSession(env, user.id);
       /* Two cookies on one response: the new session, and the state cookie
          being cleared. Headers.append, because set() would drop one. */
@@ -451,6 +460,7 @@ export default {
       const user = await env.DB.prepare('SELECT id, paid FROM users WHERE email = ?')
         .bind(email).first();
       if (!user || !user.paid) return json({ error: 'No access on that address.' }, 403);
+      await accounts.syncRole(env, user.id, email);
       const { cookie } = await createSession(env, user.id);
       return json({ ok: true }, 200, { 'Set-Cookie': cookie });
     }
@@ -468,7 +478,7 @@ export default {
       const base = { google: google.configured(env) };
       return json(me ? Object.assign(base, { signedIn: true, paid: me.paid,
                                              email: me.email, verified: me.verified,
-                                             name: me.name })
+                                             name: me.name, role: me.role })
                      : Object.assign(base, { signedIn: false, paid: false,
                                              verified: false }));
     }
