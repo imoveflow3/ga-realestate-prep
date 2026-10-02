@@ -2507,6 +2507,126 @@ function drawAccount(body, a){
   body.appendChild(el('p', 'muted',
     'To change the email address on this account, contact support so we can ' +
     'confirm the new one belongs to you.'));
+
+  passwordBlock(body, a);
+  dataBlock(body, a);
+}
+
+/* ---- changing the password without leaving the page ------------------- */
+function passwordBlock(body, a){
+  var wrap = el('details', 'acctfold');
+  var sum = el('summary', null, a.hasPassword === false
+    ? 'Set a password' : 'Change your password');
+  wrap.appendChild(sum);
+  var inner = el('div', 'authform');
+  var cur = null;
+  if (a.hasPassword !== false){
+    cur = accountField(inner, 'pwCur', 'Current password', 'password',
+                       'current-password', '');
+  } else {
+    inner.appendChild(el('p', 'fieldhint',
+      'You signed in with Google, so there is no current password to confirm. ' +
+      'Setting one gives you a second way in.'));
+  }
+  var a1 = accountField(inner, 'pwNew', 'New password', 'password',
+                        'new-password', '');
+  var a2 = accountField(inner, 'pwNew2', 'Confirm new password', 'password',
+                        'new-password', '');
+  var note = el('p', 'fieldhint');
+  inner.appendChild(note);
+  var go = el('button', 'btn', 'Save the new password');
+  go.onclick = function(){
+    note.className = 'fieldhint'; note.textContent = 'Saving\u2026';
+    go.disabled = true;
+    fetch('/api/account/password', {method: 'POST', credentials: 'same-origin',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({current: cur ? cur.value : '',
+                            password: a1.value, password2: a2.value})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        go.disabled = false;
+        if (d.fields){
+          note.className = 'fielderr';
+          note.textContent = d.fields.current || d.fields.password || d.fields.password2;
+          return;
+        }
+        if (d.error){ note.className = 'fielderr'; note.textContent = d.error; return; }
+        note.className = 'fieldhint';
+        note.textContent = 'Saved. Any other device signed in to this account ' +
+                           'has been signed out.';
+        if (cur) cur.value = '';
+        a1.value = ''; a2.value = '';
+      })['catch'](function(){
+        go.disabled = false;
+        note.className = 'fielderr'; note.textContent = 'Could not reach the server.';
+      });
+  };
+  inner.appendChild(go);
+  wrap.appendChild(inner);
+  body.appendChild(wrap);
+}
+
+/* ---- taking it with you, or taking it away ---------------------------- */
+function dataBlock(body, a){
+  var wrap = el('details', 'acctfold');
+  wrap.appendChild(el('summary', null, 'Your data'));
+  var inner = el('div');
+
+  inner.appendChild(el('p', 'fieldhint',
+    'Download every row this site holds about you \u2014 your details, your ' +
+    'progress and your sign-in history \u2014 as a JSON file. Your password is ' +
+    'not in it, because it is stored only as a hash and cannot be read back.'));
+  var dl = el('button', 'btn ghost', 'Export my data');
+  dl.onclick = function(){
+    /* A plain navigation, so the browser's own download machinery handles
+       the file rather than us building a blob and hoping. */
+    location.href = '/api/account/export';
+  };
+  inner.appendChild(dl);
+
+  inner.appendChild(el('hr', 'acctrule'));
+  inner.appendChild(el('h3', 'acctdanger', 'Delete this account'));
+  inner.appendChild(el('p', 'fieldhint',
+    'This removes your account, your progress and every device you are signed ' +
+    'in on. It happens immediately and it cannot be undone. ' +
+    (a.paid ? 'It does not refund your payment \u2014 ask for that separately ' +
+              'before you delete, because afterwards we cannot match you to it.'
+            : '')));
+  var form = el('div', 'authform');
+  var pw = null;
+  if (a.hasPassword !== false){
+    pw = accountField(form, 'delPw', 'Your password', 'password',
+                      'current-password', '');
+  }
+  var word = accountField(form, 'delWord', 'Type DELETE to confirm', 'text',
+                          'off', '');
+  var note = el('p', 'fieldhint');
+  form.appendChild(note);
+  var go = el('button', 'btn danger', 'Delete my account permanently');
+  go.onclick = function(){
+    if (!confirm('Delete this account and all of your progress? ' +
+                 'This cannot be undone.')) return;
+    note.className = 'fieldhint'; note.textContent = 'Deleting\u2026';
+    go.disabled = true;
+    fetch('/api/account/delete', {method: 'POST', credentials: 'same-origin',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({password: pw ? pw.value : '', confirm: word.value})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d.ok){ location.href = '/?deleted=1'; return; }
+        go.disabled = false;
+        note.className = 'fielderr';
+        note.textContent = (d.fields && (d.fields.password || d.fields.confirm))
+                           || d.error || 'Could not delete that.';
+      })['catch'](function(){
+        go.disabled = false;
+        note.className = 'fielderr'; note.textContent = 'Could not reach the server.';
+      });
+  };
+  form.appendChild(go);
+  inner.appendChild(form);
+  wrap.appendChild(inner);
+  body.appendChild(wrap);
 }
 
 function accountField(parent, id, label, type, autocomplete, value){
@@ -2524,12 +2644,25 @@ function accountField(parent, id, label, type, autocomplete, value){
 
 function renderSetup(){
   var v = $('view-setup');
+  /* Two different truths, and saying the wrong one is worse than saying
+     nothing. Behind the paywall the account carries the progress and it
+     follows you to any device you sign in on. In the free static build
+     there is no server, so the browser really is the only copy. */
+  var lede = PAID
+    ? 'Your progress is saved to your account, so it follows you to any device ' +
+      'you sign in on. The export below is for keeping your own copy.'
+    : 'Your progress is stored in this browser only, so each device keeps its ' +
+      'own history. Use export and import to move it between them.';
+  var moveHead = PAID ? 'Keep your own copy' : 'Move progress between devices';
+  var moveSub = PAID
+    ? 'Export copies your history as text you can paste anywhere. Importing ' +
+      'replaces what is on this account, on every device.'
+    : 'Export copies your history as text. On the other device, paste it below ' +
+      'and choose Import.';
   v.innerHTML =
-    '<h1>Setup</h1><p class="sub">Your progress is stored in this browser only, so each ' +
-    'device keeps its own history. Use export and import to move it between them.</p>' +
-    '<div class="card"><h2>Move progress between devices</h2>' +
-      '<p class="muted">Export copies your history as text. On the other device, ' +
-      'paste it below and choose Import. <b>Export settings only</b> moves your ' +
+    '<h1>Setup</h1><p class="sub">' + lede + '</p>' +
+    '<div class="card"><h2>' + moveHead + '</h2>' +
+      '<p class="muted">' + moveSub + ' <b>Export settings only</b> moves your ' +
       'exam date, study hours and weak areas without the scores.</p>' +
       '<div class="row" style="margin-bottom:12px">' +
         '<div style="flex:0 0 auto"><button class="btn" id="doExport">Export everything</button></div>' +
@@ -2541,7 +2674,8 @@ function renderSetup(){
       '<div class="muted" id="ioNote" style="margin-top:8px"></div></div>' +
     '<div class="card"><h2>Start over</h2>' +
       '<p class="muted">Clears every attempt and score. Your exam date and weak-area ' +
-      'choices are kept.</p>' +
+      'choices are kept.' + (PAID ? ' This clears it on your account, so it ' +
+      'goes on every device you are signed in on.' : '') + '</p>' +
       '<button class="btn danger" id="doReset">Erase my history</button></div>' +
     '<div class="card"><h2>What is in here</h2><div id="bankBox"></div></div>';
 

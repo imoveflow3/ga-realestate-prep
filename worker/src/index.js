@@ -76,6 +76,12 @@ async function sendCode(env, email, code) {
   return res.ok ? {} : { error: 'email-send-failed' };
 }
 
+/* Timestamps are stored as unix seconds, which is right for the database
+   and useless to a person reading their own export. */
+function stamp(sec) {
+  return sec ? new Date(sec * 1000).toISOString() : null;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -347,10 +353,15 @@ export default {
 
       if (request.method === 'GET') {
         const row = await env.DB.prepare(
-          `SELECT email, name, phone, email_verified, paid, created_at
-           FROM users WHERE id = ?`).bind(who.id).first();
+          `SELECT email, name, phone, email_verified, paid, created_at,
+                  password_hash FROM users WHERE id = ?`).bind(who.id).first();
         return json({ email: row.email, name: row.name || '', phone: row.phone || '',
                       verified: !!row.email_verified, paid: !!row.paid,
+                      entitled: who.entitled,
+                      /* Whether one exists, never the thing itself: a Google
+                         account has none, and the page must offer to set one
+                         rather than to confirm one that is not there. */
+                      hasPassword: !!row.password_hash,
                       role: who.role, created_at: row.created_at });
       }
 
@@ -367,6 +378,109 @@ export default {
         return json({ ok: true, name: name.value, phone: phone.value || '' });
       }
       return json({ error: 'method not allowed' }, 405);
+    }
+
+    /* ---- changing a password from inside the account ----------------------
+       Distinct from the reset flow, which proves ownership with an emailed
+       token. Here the proof is the current password, so a borrowed open
+       session cannot quietly take the account over. */
+    if (path === '/api/account/password' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'Sign in first.' }, 401);
+      const body = await readJson(request);
+      const row = await env.DB.prepare(
+        'SELECT password_hash FROM users WHERE id = ?').bind(who.id).first();
+
+      /* An account created through Google has no password to confirm. It is
+         setting one for the first time, not changing one. */
+      const hasOne = !!(row && row.password_hash);
+      if (hasOne) {
+        const ok = await password.verify(body.current, row.password_hash);
+        if (!ok.ok) {
+          return json({ fields: { current: 'That is not your current password.' } }, 400);
+        }
+      }
+      const problem = password.problemWith(body.password);
+      if (problem) return json({ fields: { password: problem } }, 400);
+      if (body.password !== body.password2) {
+        return json({ fields: { password2: 'Those two do not match.' } }, 400);
+      }
+      await env.DB.prepare('UPDATE users SET password_hash = ? WHERE id = ?')
+        .bind(await password.hash(body.password), who.id).run();
+      /* Changing a password is how somebody reacts to being compromised, so
+         every other session ends. Theirs survives, or they would be thrown
+         out of the page they are standing on. */
+      await env.DB.prepare('DELETE FROM sessions WHERE user_id = ? AND id != ?')
+        .bind(who.id, who.sessionId).run();
+      return json({ ok: true, had: hasOne });
+    }
+
+    /* ---- taking your data with you ---------------------------------------
+       The privacy policy says every row held about you is yours on request,
+       with no request. This is that. */
+    if (path === '/api/account/export' && request.method === 'GET') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'Sign in first.' }, 401);
+      const row = await env.DB.prepare(
+        `SELECT email, name, phone, email_verified, paid, role, terms_at,
+                created_at, paid_at FROM users WHERE id = ?`).bind(who.id).first();
+      const prog = await env.DB.prepare(
+        'SELECT data, updated_at FROM progress WHERE user_id = ?').bind(who.id).first();
+      const sessions = await env.DB.prepare(
+        'SELECT created_at, expires_at FROM sessions WHERE user_id = ?')
+        .bind(who.id).all();
+      const out = {
+        exported_at: new Date().toISOString(),
+        note: 'Every row this site holds about you. Your password is not here ' +
+              'because it is stored only as a hash and cannot be read back.',
+        account: {
+          email: row.email, name: row.name || null, phone: row.phone || null,
+          email_confirmed: !!row.email_verified, paid: !!row.paid,
+          role: row.role || 'user',
+          agreed_to_terms_at: stamp(row.terms_at),
+          account_created_at: stamp(row.created_at),
+          paid_at: stamp(row.paid_at),
+        },
+        study_progress: prog ? JSON.parse(prog.data) : null,
+        study_progress_updated_at: prog ? stamp(prog.updated_at) : null,
+        sign_in_sessions: ((sessions && sessions.results) || []).map(r => ({
+          started_at: stamp(r.created_at), expires_at: stamp(r.expires_at) })),
+      };
+      return new Response(JSON.stringify(out, null, 2), { status: 200, headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Disposition': 'attachment; filename="ga-prep-my-data.json"',
+        'Cache-Control': 'no-store',
+      } });
+    }
+
+    /* ---- deleting the account --------------------------------------------
+       Permanent, and said so twice: the password here, and a typed
+       confirmation in the page. Rows go in foreign-key order, because D1
+       enforces them. */
+    if (path === '/api/account/delete' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'Sign in first.' }, 401);
+      const body = await readJson(request);
+      const row = await env.DB.prepare(
+        'SELECT password_hash FROM users WHERE id = ?').bind(who.id).first();
+      if (row && row.password_hash) {
+        const ok = await password.verify(body.password, row.password_hash);
+        if (!ok.ok) {
+          return json({ fields: { password: 'That is not your password.' } }, 400);
+        }
+      }
+      if (String(body.confirm || '').trim().toUpperCase() !== 'DELETE') {
+        return json({ fields: { confirm: 'Type DELETE to confirm.' } }, 400);
+      }
+      for (const sql of ['DELETE FROM tokens WHERE user_id = ?',
+                         'DELETE FROM progress WHERE user_id = ?',
+                         'DELETE FROM sessions WHERE user_id = ?']) {
+        await env.DB.prepare(sql).bind(who.id).run();
+      }
+      await env.DB.prepare('DELETE FROM login_codes WHERE email = ?')
+        .bind(who.email).run();
+      await env.DB.prepare('DELETE FROM users WHERE id = ?').bind(who.id).run();
+      return json({ ok: true }, 200, { 'Set-Cookie': cookieHeader('', 0) });
     }
 
     /* ------------------------------------------------- sign in with Google */

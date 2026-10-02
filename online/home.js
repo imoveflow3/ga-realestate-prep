@@ -735,6 +735,12 @@ function noticeFor(q){
   if (q.get('auth') === 'expired') return 'That sign-in took too long. Try again.';
   if (q.get('auth') === 'failed') return 'Google could not sign you in. Try again.';
   if (q.get('auth') === 'unavailable') return 'Google sign-in is not switched on yet.';
+  /* Somebody who has just deleted their account lands here signed out. Saying
+     nothing would look like the button had failed. */
+  if (q.get('deleted')) return 'Your account and everything on it have been ' +
+                               'deleted. Nothing is kept.';
+  if (q.get('cancelled')) return 'Payment cancelled. Nothing was charged, and ' +
+                                 'your account is still here.';
   return null;
 }
 

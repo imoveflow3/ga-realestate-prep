@@ -1003,6 +1003,149 @@ await it('public files are served, not swallowed', async () => {
     assert.equal(res.status, 200, p + ' was not served');
   }
 });
+
+/* ------------------------------------------------------------------------
+   WHAT THE PRIVACY POLICY PROMISES
+
+   The policy says you can export every row held about you and delete the
+   account yourself. These tests are what stop that becoming another
+   "check your email".
+   ------------------------------------------------------------------------ */
+console.log('\nYOUR ACCOUNT IS YOURS');
+
+await it('changing a password needs the current one', async () => {
+  const made = await signupAs('changer@example.com');
+  const c = cookieOf(made);
+  const bad = await worker.fetch(req('/api/account/password', {
+    method: 'POST', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ current: 'not it', password: 'a new passphrase',
+                           password2: 'a new passphrase' }) }), env, {});
+  assert.equal(bad.status, 400, 'a wrong current password was accepted');
+  const login = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'changer@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  assert.equal(login.status, 200, 'the password changed anyway');
+});
+
+await it('a changed password works, and the old one stops working', async () => {
+  const made = await signupAs('changer2@example.com');
+  const c = cookieOf(made);
+  const res = await worker.fetch(req('/api/account/password', {
+    method: 'POST', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ current: 'a long enough passphrase',
+                           password: 'a different passphrase',
+                           password2: 'a different passphrase' }) }), env, {});
+  assert.equal(res.status, 200);
+  const old = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'changer2@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  assert.equal(old.status, 401, 'the old password still worked');
+  const fresh = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'changer2@example.com',
+                           password: 'a different passphrase' }) }), env, {});
+  assert.equal(fresh.status, 200, 'the new password did not work');
+});
+
+await it('changing a password ends other sessions but not this one', async () => {
+  const made = await signupAs('multi@example.com');
+  const here = cookieOf(made);
+  const elsewhere = cookieOf(await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'multi@example.com',
+                           password: 'a long enough passphrase' }) }), env, {}));
+  assert.equal((await worker.fetch(req('/api/account',
+    { headers: { Cookie: elsewhere } }), env, {})).status, 200);
+
+  await worker.fetch(req('/api/account/password', {
+    method: 'POST', headers: { Cookie: here, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ current: 'a long enough passphrase',
+                           password: 'yet another passphrase',
+                           password2: 'yet another passphrase' }) }), env, {});
+
+  assert.equal((await worker.fetch(req('/api/account',
+    { headers: { Cookie: elsewhere } }), env, {})).status, 401,
+    'the other session survived a password change');
+  assert.equal((await worker.fetch(req('/api/account',
+    { headers: { Cookie: here } }), env, {})).status, 200,
+    'the session doing the changing was thrown out');
+});
+
+await it('the export hands over every row, and never the password', async () => {
+  const made = await signupAs('exporter@example.com');
+  const c = cookieOf(made);
+  /* Progress is behind the gate, so there is none to export until they have
+     bought the thing. */
+  db._tables.users.find(u => u.email === 'exporter@example.com').paid = 1;
+  await worker.fetch(req('/api/progress', {
+    method: 'PUT', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ answered: 12 }) }), env, {});
+  const res = await worker.fetch(req('/api/account/export',
+    { headers: { Cookie: c } }), env, {});
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get('Content-Disposition') || '', /attachment/);
+  const text = await res.text();
+  assert.ok(!/pbkdf2|password_hash/i.test(text), 'the export carried the password');
+  const d = JSON.parse(text);
+  assert.equal(d.account.email, 'exporter@example.com');
+  assert.equal(d.account.name, 'A Person');
+  assert.deepEqual(d.study_progress, { answered: 12 });
+  assert.match(d.account.account_created_at, /^\d{4}-\d\d-\d\dT/,
+               'timestamps were handed over as raw unix seconds');
+});
+
+await it('a stranger cannot export anybody', async () => {
+  assert.equal((await worker.fetch(req('/api/account/export'), env, {})).status, 401);
+});
+
+await it('deleting needs the password and the typed word', async () => {
+  const made = await signupAs('deleter@example.com');
+  const c = cookieOf(made);
+  const noWord = await worker.fetch(req('/api/account/delete', {
+    method: 'POST', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: 'a long enough passphrase', confirm: 'yes' }) }),
+    env, {});
+  assert.equal(noWord.status, 400, 'deleted without the confirmation word');
+  const wrongPw = await worker.fetch(req('/api/account/delete', {
+    method: 'POST', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: 'nope', confirm: 'DELETE' }) }), env, {});
+  assert.equal(wrongPw.status, 400, 'deleted with the wrong password');
+  assert.ok(db._tables.users.find(u => u.email === 'deleter@example.com'),
+            'the account went anyway');
+});
+
+await it('deleting really removes the account and everything hanging off it', async () => {
+  const made = await signupAs('goodbye@example.com');
+  const c = cookieOf(made);
+  const row = db._tables.users.find(u => u.email === 'goodbye@example.com');
+  const id = row.id;
+  row.paid = 1;
+  await worker.fetch(req('/api/progress', {
+    method: 'PUT', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ answered: 3 }) }), env, {});
+
+  const res = await worker.fetch(req('/api/account/delete', {
+    method: 'POST', headers: { Cookie: c, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ password: 'a long enough passphrase',
+                           confirm: 'delete' }) }), env, {});
+  assert.equal(res.status, 200);
+  assert.ok(!db._tables.users.find(u => u.email === 'goodbye@example.com'),
+            'the account row survived');
+  assert.equal(db._tables.progress.filter(p => p.user_id === id).length, 0,
+               'progress rows were left behind');
+  assert.equal(db._tables.sessions.filter(x => x.user_id === id).length, 0,
+               'sessions were left behind');
+  assert.equal((await worker.fetch(req('/api/account',
+    { headers: { Cookie: c } }), env, {})).status, 401,
+    'the cookie still worked after the account was deleted');
+});
+
+await it('the deleted address can sign up again', async () => {
+  const again = await signupAs('goodbye@example.com');
+  assert.equal(again.status, 200, 'a deleted address was left unusable');
+});
 console.log('\nADMIN SURFACES');
 
 await it('a stranger gets 403 from every admin route', async () => {

@@ -92,6 +92,42 @@ export function makeDB() {
     /* Specific, because a bare 'UPDATE USERS SET PASSWORD_HASH' also matches
        the longer signup statement and was quietly eating it -- binding the
        name as the id, so the account never got a password at all. */
+    if (like(q, 'SELECT PASSWORD_HASH FROM USERS WHERE ID')) {
+      const u = t.users.find(x => x.id === args[0]);
+      return u ? { password_hash: u.password_hash || null } : null;
+    }
+    if (like(q, 'SELECT EMAIL, NAME, PHONE, EMAIL_VERIFIED, PAID, CREATED_AT,')) {
+      const u = t.users.find(x => x.id === args[0]);
+      return u ? { email: u.email, name: u.name || null, phone: u.phone || null,
+                   email_verified: u.email_verified || 0, paid: u.paid,
+                   created_at: u.created_at,
+                   password_hash: u.password_hash || null } : null;
+    }
+    if (like(q, 'SELECT EMAIL, NAME, PHONE, EMAIL_VERIFIED, PAID, ROLE, TERMS_AT')) {
+      const u = t.users.find(x => x.id === args[0]);
+      return u ? { email: u.email, name: u.name || null, phone: u.phone || null,
+                   email_verified: u.email_verified || 0, paid: u.paid,
+                   role: u.role || 'user', terms_at: u.terms_at || null,
+                   created_at: u.created_at, paid_at: u.paid_at || null } : null;
+    }
+    if (like(q, 'SELECT DATA, UPDATED_AT FROM PROGRESS WHERE USER_ID')) {
+      const r = t.progress.find(x => x.user_id === args[0]);
+      return r ? { data: r.data, updated_at: r.updated_at || null } : null;
+    }
+    if (like(q, 'SELECT CREATED_AT, EXPIRES_AT FROM SESSIONS WHERE USER_ID')) {
+      return t.sessions.filter(x => x.user_id === args[0])
+        .map(x => ({ created_at: x.created_at || null, expires_at: x.expires_at }));
+    }
+    if (like(q, 'DELETE FROM PROGRESS WHERE USER_ID')) {
+      t.progress = t.progress.filter(x => x.user_id !== args[0]); return null;
+    }
+    if (like(q, 'DELETE FROM LOGIN_CODES WHERE EMAIL')) {
+      t.login_codes = (t.login_codes || []).filter(x => x.email !== args[0]);
+      return null;
+    }
+    if (like(q, 'DELETE FROM USERS WHERE ID')) {
+      t.users = t.users.filter(x => x.id !== args[0]); return null;
+    }
     if (like(q, 'UPDATE USERS SET PASSWORD_HASH = ? WHERE ID')) {
       const u = t.users.find(u => u.id === args[1]);
       if (u) u.password_hash = args[0];
@@ -157,11 +193,23 @@ export function makeDB() {
       if (u) { u.name = args[0]; u.phone = args[1]; }
       return null;
     }
+    /* Above the plain by-user delete, which is a substring of this one and
+       would otherwise swallow it -- and would then kill the current session
+       too, hiding the fact that a password change is supposed to spare it. */
+    if (like(q, 'DELETE FROM SESSIONS WHERE USER_ID = ? AND ID !=')) {
+      t.sessions = t.sessions.filter(
+        x => !(x.user_id === args[0] && x.id !== args[1]));
+      return null;
+    }
     if (like(q, 'DELETE FROM SESSIONS WHERE USER_ID')) {
       t.sessions = t.sessions.filter(x => x.user_id !== args[0]); return null;
     }
     if (like(q, 'DELETE FROM TOKENS WHERE USER_ID')) {
-      t.tokens = t.tokens.filter(x => !(x.user_id === args[0] && x.kind === args[1]));
+      /* Two callers: one narrows by kind, one clears the lot for an account
+         being deleted. Without this the second would match nothing and the
+         stub would quietly report a clean delete over rows still there. */
+      t.tokens = t.tokens.filter(x => !(x.user_id === args[0] &&
+        (args.length < 2 || args[1] === undefined || x.kind === args[1])));
       return null;
     }
     if (like(q, 'DELETE FROM TOKENS WHERE HASH')) {
