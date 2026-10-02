@@ -64,10 +64,17 @@ export async function currentUser(request, env) {
   if (!row || row.expires_at < now()) return null;
   /* The role is read from the database on every request, never from the
      cookie. A cookie the browser holds is a cookie the browser can edit. */
+  const isAdmin = row.role === 'admin';
   return { id: row.id, email: row.email, paid: !!row.paid,
+           /* Two different questions, and conflating them would cost us the
+              books. `paid` is whether money changed hands. `entitled` is
+              whether this person may use the thing. The owner of the site is
+              the second without ever being the first, so the gates ask about
+              entitlement and the revenue figures keep asking about payment. */
+           entitled: !!row.paid || isAdmin,
            verified: !!row.email_verified, name: row.name || '',
-           role: row.role === 'admin' ? 'admin' : 'user',
-           isAdmin: row.role === 'admin', sessionId: id };
+           role: isAdmin ? 'admin' : 'user',
+           isAdmin: isAdmin, sessionId: id };
 }
 
 export async function endSession(env, sessionId) {

@@ -128,12 +128,17 @@ export default {
 
     /* --------------------------------------------------------- buy flow */
     if (path === '/api/checkout' && request.method === 'POST') {
-      if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
       /* Signing in comes first, so the payment attaches to an account we
          already know rather than to whatever address Stripe collects. */
       const who = await currentUser(request, env);
       if (!who) return json({ error: 'sign in first', signin: '/api/auth/google' }, 401);
-      if (who.paid) return json({ url: `${origin}/app` });
+      /* Anybody who already has access is sent straight in -- including an
+         admin, who has it without having bought it and should not be able to
+         buy it by accident. This is answered before the Stripe check, because
+         somebody who does not need to pay does not need a card processor to
+         exist. */
+      if (who.entitled) return json({ url: `${origin}/app` });
+      if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
       try {
         const link = await createCheckout(env, {
           email: who.email, origin, userId: who.id,
@@ -202,7 +207,7 @@ export default {
 
       await accounts.syncRole(env, user.id, email);
       const row = await env.DB.prepare(
-        'SELECT paid, email_verified FROM users WHERE id = ?').bind(user.id).first();
+        'SELECT paid, email_verified, role FROM users WHERE id = ?').bind(user.id).first();
       const { cookie } = await createSession(env, user.id);
 
       /* The account exists but is not proven. Send the link; a failure to send
@@ -220,6 +225,7 @@ export default {
         emailSent = !sent.error;
       }
       return json({ ok: true, paid: !!(row && row.paid),
+                    entitled: !!(row && (row.paid || row.role === 'admin')),
                     verified: !!(row && row.email_verified),
                     /* Lets the next screen greet a new account differently
                        from a returning log-in. */
@@ -256,7 +262,9 @@ export default {
       await clearFailures(email);
       await accounts.syncRole(env, row.id, email);
       const { cookie } = await createSession(env, row.id);
-      return json({ ok: true, paid: !!row.paid, verified: !!row.email_verified,
+      return json({ ok: true, paid: !!row.paid,
+                    entitled: !!row.paid || accounts.isAdminEmail(env, email),
+                    verified: !!row.email_verified,
                     canPay: !!env.STRIPE_SECRET_KEY },
                   200, { 'Set-Cookie': cookie });
     }
@@ -395,7 +403,8 @@ export default {
       const { cookie } = await createSession(env, user.id);
       /* Two cookies on one response: the new session, and the state cookie
          being cleared. Headers.append, because set() would drop one. */
-      const out = redirect(user.paid ? '/app' : '/?pay=1');
+      const out = redirect(
+        (user.paid || accounts.isAdminEmail(env, email)) ? '/app' : '/auth');
       out.headers.append('Set-Cookie', cookie);
       out.headers.append('Set-Cookie', clear);
       return out;
@@ -436,11 +445,11 @@ export default {
       const email = normalizeEmail(body.email);
       if (!email) return json({ error: 'That does not look like an email address.' }, 400);
 
-      const known = await env.DB.prepare('SELECT paid FROM users WHERE email = ?')
+      const known = await env.DB.prepare('SELECT paid, role FROM users WHERE email = ?')
         .bind(email).first();
       /* Same answer either way: whether an address has bought is not something
          a stranger gets to probe for. */
-      if (!known || !known.paid) {
+      if (!known || !(known.paid || known.role === 'admin')) {
         return json({ ok: true, sent: true });
       }
       const issued = await issueLoginCode(env, email);
@@ -465,9 +474,11 @@ export default {
       if (!email) return json({ error: 'That does not look like an email address.' }, 400);
       const check = await verifyLoginCode(env, email, body.code);
       if (check.error) return json({ error: check.error }, 401);
-      const user = await env.DB.prepare('SELECT id, paid FROM users WHERE email = ?')
+      const user = await env.DB.prepare('SELECT id, paid, role FROM users WHERE email = ?')
         .bind(email).first();
-      if (!user || !user.paid) return json({ error: 'No access on that address.' }, 403);
+      if (!user || !(user.paid || user.role === 'admin')) {
+        return json({ error: 'No access on that address.' }, 403);
+      }
       await accounts.syncRole(env, user.id, email);
       const { cookie } = await createSession(env, user.id);
       return json({ ok: true }, 200, { 'Set-Cookie': cookie });
@@ -493,9 +504,11 @@ export default {
                      canEmail: !!env.RESEND_API_KEY,
                      canPay: !!env.STRIPE_SECRET_KEY };
       return json(me ? Object.assign(base, { signedIn: true, paid: me.paid,
+                                             entitled: me.entitled,
                                              email: me.email, verified: me.verified,
                                              name: me.name, role: me.role })
                      : Object.assign(base, { signedIn: false, paid: false,
+                                             entitled: false,
                                              verified: false }));
     }
 
@@ -575,7 +588,7 @@ export default {
     const me = await currentUser(request, env);
     const gated = path === '/app' || path === '/api/bundle' || path === '/api/progress';
 
-    if (gated && (!me || !me.paid)) {
+    if (gated && (!me || !me.entitled)) {
       if (path === '/app') return redirect(me ? '/auth?pay=1' : '/auth?gate=1');
       return json({ error: 'payment required' }, 402);
     }
@@ -583,7 +596,8 @@ export default {
        somebody who has paid. If their email never lands, or sending is not
        configured at all, locking them out of what they bought would be the
        worse failure by a distance. They get in, and the app nags them. */
-    const mustVerify = gated && me && !me.verified && !me.paid && !!env.RESEND_API_KEY;
+    const mustVerify = gated && me && !me.verified && !me.entitled &&
+                       !!env.RESEND_API_KEY;
     if (mustVerify) {
       if (path === '/app') return redirect('/auth?verify=needed');
       return json({ error: 'email not verified' }, 403);

@@ -18,6 +18,23 @@ export function makeDB() {
     }
     if (like(q, 'SELECT ID, EMAIL, PAID FROM USERS WHERE EMAIL'))
       return t.users.find(u => u.email === args[0]) || null;
+    /* These three carry the role alongside the payment flag, because access
+       is `paid OR admin`. They sit above their narrower siblings; `like` is a
+       substring test, and a shorter pattern placed first would swallow the
+       longer statement and answer it with a row missing the role. */
+    if (like(q, 'SELECT PAID, ROLE FROM USERS WHERE EMAIL')) {
+      const u = t.users.find(u => u.email === args[0]);
+      return u ? { paid: u.paid, role: u.role || 'user' } : null;
+    }
+    if (like(q, 'SELECT ID, PAID, ROLE FROM USERS WHERE EMAIL')) {
+      const u = t.users.find(u => u.email === args[0]);
+      return u ? { id: u.id, paid: u.paid, role: u.role || 'user' } : null;
+    }
+    if (like(q, 'SELECT PAID, EMAIL_VERIFIED, ROLE FROM USERS WHERE ID')) {
+      const u = t.users.find(x => x.id === args[0]);
+      return u ? { paid: u.paid, email_verified: u.email_verified || 0,
+                   role: u.role || 'user' } : null;
+    }
     if (like(q, 'SELECT PAID FROM USERS WHERE EMAIL')) {
       const u = t.users.find(u => u.email === args[0]);
       return u ? { paid: u.paid } : null;

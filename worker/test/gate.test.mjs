@@ -114,7 +114,8 @@ await it('a stranger cannot read or write progress', async () => {
 
 await it('/api/me says not signed in', async () => {
   const me = await (await worker.fetch(req('/api/me'), env, {})).json();
-  assert.deepEqual(me, { signedIn: false, paid: false, verified: false, google: true,
+  assert.deepEqual(me, { signedIn: false, paid: false, entitled: false,
+                         verified: false, google: true,
                          canEmail: true, canPay: true });
 });
 
@@ -362,7 +363,7 @@ let gCookie = null;
 await it('a real sign-in creates the account but does not pay for it', async () => {
   const res = await signInWithGoogle();
   assert.equal(res.status, 302);
-  assert.equal(res.headers.get('Location'), '/?pay=1', 'unpaid user was let in');
+  assert.equal(res.headers.get('Location'), '/auth', 'unpaid user was let in');
   const all = res.headers.getSetCookie ? res.headers.getSetCookie() : [];
   gCookie = (all.find(c => c.startsWith('ga_session=')) || '').split(';')[0];
   assert.ok(gCookie, 'no session cookie');
@@ -381,7 +382,8 @@ await it('signed in but unpaid still cannot reach the questions', async () => {
 await it('/api/me reports signed in, not paid', async () => {
   const me = await (await worker.fetch(req('/api/me', {
     headers: { Cookie: gCookie } }), env, {})).json();
-  assert.deepEqual(me, { signedIn: true, paid: false, verified: true, google: true,
+  assert.deepEqual(me, { signedIn: true, paid: false, entitled: false,
+                         verified: true, google: true,
                          canEmail: true, canPay: true,
                          email: 'gmail.user@gmail.com', name: '', role: 'user' });
 });
@@ -468,8 +470,9 @@ await it('signing up creates an account, signs you in, and pays for nothing', as
                            phone: '(404) 555-1234', password: PW, password2: PW,
                            terms: true }) }), env, {});
   assert.equal(res.status, 200);
-  assert.deepEqual(await res.json(), { ok: true, paid: false, verified: false,
-                                      created: true, emailSent: true, canPay: true });
+  assert.deepEqual(await res.json(), { ok: true, paid: false, entitled: false,
+                                      verified: false, created: true,
+                                      emailSent: true, canPay: true });
   pwCookie = cookieOf(res);
   const u = db._tables.users.find(u => u.email === 'pw@example.com');
   assert.ok(u, 'no account');
@@ -865,6 +868,100 @@ await it('an account still works when no confirmation email could be sent', asyn
     headers: { Cookie: cookieOf(res) } }), bare, {})).json();
   assert.equal(me.signedIn, true);
   assert.equal(me.paid, false, 'signing up paid for itself');
+});
+
+/* ------------------------------------------------------------------------
+   THE OWNER DOES NOT BUY HIS OWN PRODUCT
+
+   Access is `paid OR admin`. Two things have to stay true at once: the
+   owner gets in without paying, and the revenue figures never count him as
+   a customer. Flipping paid=1 on his row would have bought the first by
+   quietly selling the second.
+   ------------------------------------------------------------------------ */
+console.log('\nACCESS WITHOUT PAYMENT, FOR THE OWNER ONLY');
+
+let ownerCookie = null;
+
+await it('an admin reaches the app without ever having paid', async () => {
+  await signupAs('owner@example.com');
+  env.ADMIN_EMAILS = 'owner@example.com';
+  const relog = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'owner@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  assert.equal(relog.status, 200);
+  const d = await relog.json();
+  assert.equal(d.paid, false, 'the owner was recorded as having paid');
+  assert.equal(d.entitled, true, 'the owner was not granted access');
+  ownerCookie = cookieOf(relog);
+
+  const row = db._tables.users.find(u => u.email === 'owner@example.com');
+  assert.equal(row.paid, 0, 'granting access wrote a payment to the database');
+
+  const app = await worker.fetch(req('/app', { headers: { Cookie: ownerCookie } }), env, {});
+  assert.equal(app.status, 200, 'the owner was sent to the checkout page');
+});
+
+await it('an admin gets the question bank, not a 402', async () => {
+  const res = await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: ownerCookie } }), env, {});
+  assert.equal(res.status, 200, 'the owner was asked to pay for the questions');
+  assert.ok(await res.text(), 'empty bundle');
+});
+
+await it('an admin can save progress', async () => {
+  const res = await worker.fetch(req('/api/progress', {
+    method: 'PUT', headers: { Cookie: ownerCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ seen: 3 }) }), env, {});
+  assert.equal(res.status, 200, 'the owner could not save his own progress');
+});
+
+await it('/api/me tells the page he has access but has not paid', async () => {
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: ownerCookie } }), env, {})).json();
+  assert.equal(me.entitled, true);
+  assert.equal(me.paid, false);
+  assert.equal(me.role, 'admin');
+});
+
+await it('checkout refuses to charge an admin', async () => {
+  const res = await worker.fetch(req('/api/checkout', {
+    method: 'POST', headers: { Cookie: ownerCookie } }), env, {});
+  assert.equal(res.status, 200);
+  const d = await res.json();
+  assert.ok(/\/app$/.test(d.url || ''), 'an admin was sent to pay: ' + d.url);
+});
+
+await it('the paid figure does not count the owner', async () => {
+  const d = await (await worker.fetch(req('/api/admin/stats', {
+    headers: { Cookie: ownerCookie } }), env, {})).json();
+  const reallyPaid = db._tables.users.filter(u => u.paid).length;
+  assert.equal(d.paid, reallyPaid, 'the revenue count included a free admin');
+  const row = db._tables.users.find(u => u.email === 'owner@example.com');
+  assert.equal(row.paid, 0);
+});
+
+await it('an ordinary unpaid account is still kept out', async () => {
+  const made = await signupAs('stillpaying@example.com');
+  const c = cookieOf(made);
+  assert.equal((await worker.fetch(req('/api/bundle',
+    { headers: { Cookie: c } }), env, {})).status, 402,
+    'the entitlement rule let a non-admin in free');
+  const app = await worker.fetch(req('/app', { headers: { Cookie: c } }), env, {});
+  assert.equal(app.status, 302, 'an unpaid stranger got the app');
+});
+
+await it('taking the role away closes the app again', async () => {
+  env.ADMIN_EMAILS = '';
+  const relog = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'owner@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  const d = await relog.json();
+  assert.equal(d.entitled, false, 'a demoted admin kept free access');
+  const res = await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: cookieOf(relog) } }), env, {});
+  assert.equal(res.status, 402, 'a demoted admin still had the questions');
 });
 console.log('\nADMIN SURFACES');
 

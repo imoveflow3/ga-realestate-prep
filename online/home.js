@@ -241,7 +241,7 @@ function renderAuth(){
         .then(function(x){
           go.disabled = false;
           if (x.d.error){ note.className = 'authnote bad'; note.textContent = x.d.error; return; }
-          afterAuth(x.d.paid);
+          afterAuth(x.d.entitled || x.d.paid);
         })['catch'](function(){
           go.disabled = false;
           note.className = 'authnote bad'; note.textContent = 'Network problem. Try again.';
@@ -386,7 +386,7 @@ function focusFirstError(){
    into the app. Everybody else stays exactly where they are: signing in and
    paying are two steps of one card, not two pages. */
 function afterAuthed(d){
-  if (d.paid) { location.href = '/app'; return; }
+  if (d.entitled || d.paid) { location.href = '/app'; return; }
   ME.signedIn = true;
   if (FORM.values.email) ME.email = FORM.values.email;
   ME.verified = (d.verified !== false);
@@ -404,6 +404,15 @@ function afterAuthed(d){
 }
 
 var PAY = {justMade: false, emailSent: false};
+
+/* Whether this person may use the app, which is not the same question as
+   whether they paid for it: the owner of the site has access without ever
+   having bought it. The server decides and sends `entitled`; older
+   deployments only send `paid`, so fall back to that. */
+function hasAccess(){
+  if (typeof ME.entitled === 'boolean') return ME.entitled;
+  return !!ME.paid;
+}
 
 /* The second half of the one page: signed in, not paid yet, one button. */
 function payStep(card, wrap, v){
@@ -493,8 +502,8 @@ function renderAuthPage(){
   if (FORM.tab === 'forgot') return forgotForm(card, wrap, v);
   /* Already signed in and unpaid, whether from a moment ago or a week ago:
      the till is this page. */
-  if (FORM.tab === 'pay' || (ME.signedIn && !ME.paid)) return payStep(card, wrap, v);
-  if (ME.signedIn && ME.paid){ location.href = '/app'; return; }
+  if (ME.signedIn && hasAccess()){ location.href = '/app'; return; }
+  if (FORM.tab === 'pay' || ME.signedIn) return payStep(card, wrap, v);
 
   /* ---- the two tabs ---- */
   var tabs = el('div', 'authtabs');
@@ -754,8 +763,8 @@ function renderMinimal(v, q){
 
   var acts = el('div', 'gateacts');
 
-  /* Signed in and paid: nothing left to sell. */
-  if (!HOME.openAccess && ME.signedIn && ME.paid){
+  /* Signed in with access: nothing left to sell. */
+  if (!HOME.openAccess && ME.signedIn && hasAccess()){
     card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
     var go = el('button', 'btn wide', 'Continue studying');
     go.onclick = function(){ location.href = '/app'; };
@@ -770,7 +779,7 @@ function renderMinimal(v, q){
   }
 
   /* Signed in, not paid: one thing to do. */
-  if (!HOME.openAccess && ME.signedIn && !ME.paid){
+  if (!HOME.openAccess && ME.signedIn && !hasAccess()){
     card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
     var price = el('div', 'gateprice');
     price.appendChild(el('span', 'amount', money(HOME.price)));
@@ -1064,7 +1073,7 @@ function render(){
                  : (ME.signedIn ? 'Continue studying' : 'Start studying'));
   $('buyBtn').onclick = function(){
     if (HOME.openAccess) return openApp();
-    if (ME.signedIn && ME.paid){ location.href = '/app'; return; }
+    if (ME.signedIn && hasAccess()){ location.href = '/app'; return; }
     if (!ME.signedIn){ location.href = '/auth'; return; }
     if (HOME.page === 'buy') return buy();
     if (HOME.preview){ HOME.page = 'buy'; render(); window.scrollTo(0, 0); return; }
