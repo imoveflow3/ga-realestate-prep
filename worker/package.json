@@ -9,7 +9,9 @@
     "deploy": "npm run build && npm test && wrangler deploy",
     "db:init": "wrangler d1 execute ga-prep --remote --file=./schema.sql",
     "db:local": "wrangler d1 execute ga-prep --local --file=./schema.sql",
-    "db:reset": "wrangler d1 execute ga-prep --local --file=./reset-local.sql"
+    "db:reset": "wrangler d1 execute ga-prep --local --file=./reset-local.sql",
+    "db:migrate": "./migrate.sh",
+    "db:migrate:remote": "./migrate.sh --remote"
   },
   "devDependencies": {
     "wrangler": "^3"

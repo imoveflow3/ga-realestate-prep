@@ -220,17 +220,24 @@ cd worker
 wrangler d1 execute ga-prep --remote --file=./schema.sql
 ```
 
-Re-running it is safe: every statement is `IF NOT EXISTS`. **Adding columns to
-an existing database is not** — `CREATE TABLE IF NOT EXISTS` will skip a
-`users` table that already exists and leave the new columns off. If you have
-already created the database, run these once:
+Re-running it is safe: every statement is `IF NOT EXISTS`. **That is also the
+trap.** `CREATE TABLE IF NOT EXISTS users` skips the whole statement on a
+database that already has the table, so any column added later never appears.
+It bit this project's own development database: the `role` column was in
+`schema.sql` and missing from the actual table, and nothing complained until
+a query asked for it.
 
-```sql
-ALTER TABLE users ADD COLUMN name TEXT;
-ALTER TABLE users ADD COLUMN phone TEXT;
-ALTER TABLE users ADD COLUMN email_verified INTEGER NOT NULL DEFAULT 0;
-ALTER TABLE users ADD COLUMN terms_at INTEGER;
+So after pulling changes, migrate rather than re-running the schema:
+
+```bash
+cd worker
+npm run db:migrate            # the local development database
+npm run db:migrate:remote     # the deployed one
 ```
+
+`migrate.sh` reads `PRAGMA table_info(users)`, adds only the columns that are
+genuinely absent, and then applies `schema.sql` for any whole tables that are
+new. Safe to run repeatedly.
 
 ## Administrators
 
