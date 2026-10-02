@@ -3,12 +3,23 @@
 'use strict';
 
 var KEY = 'ga-prep-v1';
-var EXAM = DATA.exam;                       // {national:80, georgia:52}
+var EXAM = DATA.exam;                       // counted from the blueprint
 var TOTAL_Q = EXAM.national + EXAM.georgia;
 
 var TOPIC = {};                             // key -> catalog row
 DATA.topics.forEach(function(t){ TOPIC[t.key] = t; });
 var ORDER = DATA.topics.map(function(t){ return t.key; });
+
+/* Counted from the blueprint, never typed into a sentence: the exam size
+   changed once and every hardcoded copy of it went stale at the same time. */
+function scoredTotal(){
+  var n = 0;
+  for (var k in DATA.portions){
+    if (!DATA.portions.hasOwnProperty(k)) continue;
+    if (!DATA.portions[k].practice_only) n += (DATA.portions[k].scored || 0);
+  }
+  return n;
+}
 
 function label(k){ return (TOPIC[k] || {}).label || k; }
 function weight(k){ return (TOPIC[k] || {}).exam_questions || 1; }
@@ -1117,7 +1128,8 @@ function ranked(d){
 function bufferPlan(days){
   if (days <= 0) return [];
   var out = ['Light review only -- no new material.'];
-  if (days >= 2) out.push('One 132-question mock exam, timed, at your real exam time of day.');
+  if (days >= 2) out.push('One ' + scoredTotal() +
+    '-question mock exam, timed, at your real exam time of day.');
   if (days >= 3) out.push('Re-read every explanation you missed on the last two mocks.');
   out.push('Day before: 20-question math sprint, then stop. Sleep beats cramming.');
   return out;
@@ -1162,7 +1174,7 @@ function buildPlan(d){
     var phase = phases[i], focus = [], tasks;
     if (phase === 'Mock exams & review'){
       focus = nat.slice(0,2).concat(ga.slice(0,2));
-      tasks = ['Take one FULL mock exam (132 questions, National + Georgia).',
+      tasks = ['Take one FULL mock exam (' + scoredTotal() + ' questions, National + Georgia).',
                'Review every miss and write the rule in your own words.',
                'Run Weak-spot mode twice on whatever the mock exposes.',
                'Do one 15-question math sprint daily.'];

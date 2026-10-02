@@ -67,6 +67,38 @@ var STUDY_TOPIC = null;
 var HASHLOCK = false;
 var CURRENT = null;
 
+/* The size of the real exam, counted from the blueprint rather than typed
+   into sentences. It was typed into sentences, the blueprint changed, and
+   six different places went on claiming 132 for a 152-question exam. */
+function examScored(portion){
+  var p = DATA.portions[portion];
+  return (p && !p.practice_only) ? (p.scored || 0) : 0;
+}
+function examTotal(){
+  var n = 0;
+  for (var k in DATA.portions) if (DATA.portions.hasOwnProperty(k)) n += examScored(k);
+  return n;
+}
+function examMinutes(){
+  var n = 0;
+  for (var k in DATA.portions){
+    if (!DATA.portions.hasOwnProperty(k)) continue;
+    var p = DATA.portions[k];
+    if (!p.practice_only) n += (p.minutes || 0);
+  }
+  return n;
+}
+/* Seconds a real candidate gets per question, rounded to something a person
+   would say out loud. */
+function examPace(){
+  var t = examTotal();
+  return DATA.spq || (t ? Math.round(examMinutes() * 60 / t / 5) * 5 : 75);
+}
+function hoursPhrase(mins){
+  var h = Math.floor(mins / 60), m = mins % 60;
+  return m ? (h + ' h ' + m + ' m') : (h + ' hours');
+}
+
 var RENDERERS = {
   welcome: function(){ renderWelcome(); },
   home: function(){ renderHome(); },
@@ -310,8 +342,10 @@ function renderHome(){
     'explained the moment you answer it.</p>' +
     '<div class="card"><div class="row">' +
       '<div><label for="portion">Portion</label><select id="portion">' +
-        '<option value="national">National (80 of 132 exam questions)</option>' +
-        '<option value="georgia">Georgia state (52 of 132)</option>' +
+        '<option value="national">National (' + examScored('national') + ' of ' +
+          examTotal() + ' exam questions)</option>' +
+        '<option value="georgia">Georgia state (' + examScored('georgia') + ' of ' +
+          examTotal() + ')</option>' +
         '<option value="mixed">Mixed, exam-weighted</option>' +
         '<option value="comprehensive">Comprehensive subtest (drill)</option></select></div>' +
       '<div><label for="topic">Topic</label><select id="topic"></select></div>' +
@@ -320,7 +354,8 @@ function renderHome(){
       '</select></div>' +
     '</div><div class="row" style="margin-top:14px">' +
       '<div style="max-width:215px"><label for="timed">Timer</label><select id="timed">' +
-        '<option value="1" selected>Timed (75 s/question)</option>' +
+        '<option value="1" selected>Exam pace (' + examPace() + ' s/question)</option>' +
+        '<option value="tight">Tight (60 s/question)</option>' +
         '<option value="0">Untimed</option></select></div>' +
       '<div style="max-width:225px"><label for="difficulty">Difficulty</label><select id="difficulty">' +
         '<option value="harder" selected>Harder mix (default)</option>' +
@@ -330,7 +365,7 @@ function renderHome(){
         '<option value="core">Core only</option></select></div>' +
       '<div style="flex:0 0 auto"><button class="btn" id="start">Start quiz</button></div>' +
       '<div style="flex:0 0 auto"><button class="btn ghost" id="startWeak">Weak-spot quiz</button></div>' +
-      '<div style="flex:0 0 auto"><button class="btn ghost" id="startExam">Full mock exam (132)</button></div>' +
+      '<div style="flex:0 0 auto"><button class="btn ghost" id="startExam">Full mock exam (' + examTotal() + ')</button></div>' +
     '</div>' +
     '<p class="muted" style="margin:13px 0 0"><b>Weak-spot mode</b> draws more heavily from ' +
     'topics and individual questions you have missed before. <b>Harder mix</b> pulls about ' +
@@ -344,19 +379,26 @@ function renderHome(){
   $('portion').onchange = fillTopics;
   $('start').onclick = function(){
     startQuiz({portion:$('portion').value, count:+$('count').value,
-               topic:$('topic').value||null, timed:$('timed').value==='1',
-               difficulty:$('difficulty').value});
+               topic:$('topic').value||null, timed:$('timed').value!=='0',
+               spq:paceChosen(), difficulty:$('difficulty').value});
   };
   $('startWeak').onclick = function(){
     startQuiz({portion:$('portion').value, count:+$('count').value,
-               weak_spot:true, timed:$('timed').value==='1',
-               difficulty:$('difficulty').value});
+               weak_spot:true, timed:$('timed').value!=='0',
+               spq:paceChosen(), difficulty:$('difficulty').value});
   };
   $('startExam').onclick = function(){
-    if (!confirm('Full mock exam: 132 questions, about 2 h 45 m. Start?')) return;
+    if (!confirm('Full mock exam: ' + examTotal() + ' questions, ' +
+                 hoursPhrase(examMinutes()) + ' at exam pace. Start?')) return;
     startQuiz({mode:'exam', timed:true, difficulty:$('difficulty').value});
   };
   renderHomeWeak();
+}
+
+/* Untimed, exam pace, or deliberately tighter than the real thing. */
+function paceChosen(){
+  var v = $('timed') ? $('timed').value : '1';
+  return v === 'tight' ? 60 : null;
 }
 
 function fillTopics(){
@@ -459,7 +501,7 @@ function startQuizWith(qs, opts){
           mode: opts.mode || (opts.topic ? 'topic' : 'quiz'),
           dayTask: opts.dayTask || null,
           weak: !!opts.weak_spot, locked:false,
-          limit: opts.timed === false ? 0 : qs.length*DATA.spq,
+          limit: opts.timed === false ? 0 : qs.length*(opts.spq || DATA.spq),
           started: Date.now(), qStart: Date.now()};
   $('view-quiz').innerHTML =
     '<div class="progressbar"><div id="qprog" style="width:0"></div></div>' +
@@ -1756,7 +1798,8 @@ function renderStudyTopic(v, n){
   var left = el('div');
   left.appendChild(el('h1', null, n.label));
   left.appendChild(el('div', 'muted',
-    n.counts_on_exam ? (n.exam_questions + ' of the 132 scored questions come from this topic')
+    n.counts_on_exam ? ('about ' + n.exam_questions + ' of the ' + examTotal() +
+                        ' scored questions come from this topic')
                      : 'A drill topic — not a scored section of the exam'));
   hd.appendChild(left);
   var back = el('button', 'btn mini ghost', 'All lessons');

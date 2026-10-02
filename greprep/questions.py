@@ -208,7 +208,12 @@ def select(portion, count, weak_spot=False, progress=None, topic=None, rng=None,
         return mathgen.batch(count, kinds)
 
     if portion == "mixed":
-        n_nat = int(round(count * 80 / 132.0))
+        # The exam's own ratio, read from the blueprint. Hardcoding 80/132
+        # here meant a "mixed, exam-weighted" quiz stayed weighted to an exam
+        # that no longer existed.
+        nat = topics.PORTIONS["national"]["scored"]
+        tot = sum(topics.PORTIONS[p]["scored"] for p in topics.exam_portions())
+        n_nat = int(round(count * nat / float(tot))) if tot else count // 2
         return (select("national", n_nat, weak_spot, progress, None, rng, difficulty) +
                 select("georgia", count - n_nat, weak_spot, progress, None, rng, difficulty))
 

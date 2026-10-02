@@ -40,6 +40,15 @@ BLURB = ("Free practice for the Georgia real estate salesperson licensing exam. 
 ASSETS = "assets/"                      # icons and the link-preview card
 
 
+def _exam_pace():
+    """Seconds a real candidate gets per scored question, to the nearest 5."""
+    total = sum(topics.PORTIONS[p]["scored"] for p in topics.exam_portions())
+    mins = sum(topics.PORTIONS[p]["minutes"] for p in topics.exam_portions())
+    if not total:
+        return 75
+    return int(round(mins * 60.0 / total / 5.0) * 5)
+
+
 def head(questions, terms, site=None, title=None, blurb=None,
          price_cents=0, canonical=None, noindex=False, social=None,
          manifest="manifest.webmanifest"):
@@ -269,8 +278,11 @@ def build_data():
                   "georgia": questions.bank("georgia"),
                   "comprehensive": questions.bank("comprehensive")},
         "math": build_math(),
-        "spq": 75,
-        "exam": {"national": 80, "georgia": 52},
+        # Seconds per question at real exam pace, and the size of each scored
+        # portion. Both were typed in by hand and both went stale when the
+        # blueprint was corrected, so both are now counted from it.
+        "spq": _exam_pace(),
+        "exam": {p: topics.PORTIONS[p]["scored"] for p in topics.exam_portions()},
         "study": json.load(io.open(os.path.join(HERE, "greprep", "banks", "study.json"),
                                    encoding="utf-8")),
         "practice_only": sorted(topics.PRACTICE_ONLY),

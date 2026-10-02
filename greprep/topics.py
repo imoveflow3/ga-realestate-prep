@@ -1,16 +1,26 @@
 """Exam structure: portions, topics, and how many questions each is worth.
 
-Counts mirror the PSI Georgia salesperson exam: 80 scored national questions
-and 52 scored state questions (152 total including unscored pretest items).
-The per-topic counts are the published content outline weights; they drive
-both the mock-exam blueprint and the study scheduler's priorities.
+The PSI Georgia salesperson exam is 152 scored questions: 100 national and
+52 Georgia, four hours, and 75% is needed on each portion separately (75/100
+and 39/52). A handful of unscored experimental items may be added on top of
+those 152; they are not part of the count and not part of your score.
+
+This file used to say 80 national and 152 "including unscored pretest items",
+which put the scored total at 132. That was wrong in the direction that
+matters: it under-stated the national portion by twenty questions, so the
+mock exam was short and the study plan under-weighted national topics.
+
+The per-portion totals above are sourced. The per-topic split below is not
+published as a question-by-question table, so these are proportional weights
+carrying the relative emphasis of the content outline, scaled to sum to the
+real totals. The UI calls them "about N", because that is what they are.
 """
 
 PORTIONS = {
     "national": {
         "name": "National",
         "blurb": "Principles and practices tested in every state.",
-        "scored": 80,
+        "scored": 100,
         "minutes": 150,
     },
     "georgia": {
@@ -31,25 +41,25 @@ PORTIONS = {
 
 # topic key -> (portion, label, questions on the real exam, study blurb)
 TOPICS = {
-    "national/ownership": ("national", "Property ownership", 8,
+    "national/ownership": ("national", "Property ownership", 10,
         "Estates, tenancy, condos/co-ops, fixtures, water and air rights."),
-    "national/landuse": ("national", "Land use controls", 5,
+    "national/landuse": ("national", "Land use controls", 6,
         "Zoning, deed restrictions, eminent domain, police power, CC&Rs."),
-    "national/valuation": ("national", "Valuation & market analysis", 7,
+    "national/valuation": ("national", "Valuation & market analysis", 9,
         "The three approaches to value, CMA, appraisal principles."),
-    "national/financing": ("national", "Financing", 10,
+    "national/financing": ("national", "Financing", 12,
         "Loan types, points, amortization, TRID/RESPA, qualifying ratios."),
-    "national/agency": ("national", "Principles of agency", 8,
+    "national/agency": ("national", "Principles of agency", 10,
         "Fiduciary duties, agency creation and termination, dual agency."),
-    "national/disclosures": ("national", "Property condition & disclosures", 6,
+    "national/disclosures": ("national", "Property condition & disclosures", 8,
         "Material facts, latent defects, lead paint, environmental hazards."),
-    "national/contracts": ("national", "Contracts", 13,
+    "national/contracts": ("national", "Contracts", 16,
         "Formation, contingencies, breach and remedies, assignment."),
-    "national/transfer": ("national", "Transfer of title", 8,
+    "national/transfer": ("national", "Transfer of title", 10,
         "Deeds, title insurance, recording, closing, adverse possession."),
-    "national/practice": ("national", "Practice of real estate", 10,
+    "national/practice": ("national", "Practice of real estate", 13,
         "Advertising, fair housing, antitrust, licensing, trust funds."),
-    "national/math": ("national", "Real estate math", 5,
+    "national/math": ("national", "Real estate math", 6,
         "Commissions, prorations, LTV, points, area, appreciation."),
 
     "georgia/license-law": ("georgia", "GREC license law & rules", 14,

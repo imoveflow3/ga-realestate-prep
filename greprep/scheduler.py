@@ -15,6 +15,14 @@ GEORGIA_Q = 52
 TOTAL_Q = NATIONAL_Q + GEORGIA_Q
 
 
+def _scored_total():
+    """The real exam size, counted from the blueprint rather than typed in.
+
+    It was typed in, the blueprint was corrected from 132 to 152, and this
+    went on telling people to sit a mock twenty questions short."""
+    return sum(topics.PORTIONS[p]["scored"] for p in topics.exam_portions())
+
+
 def _date(value):
     if not value:
         return None
@@ -109,7 +117,8 @@ def generate(progress, exam_date, mastery_date=None, declared_weak=None,
         if phase == "Mock exams & review":
             focus = (nat[:2] + ga[:2])          # weakest overall, revisited
             tasks = [
-                "Take one FULL mock exam (132 questions, National + Georgia).",
+                "Take one FULL mock exam (%d questions, National + Georgia)."
+                % _scored_total(),
                 "Review every miss and write the rule in your own words.",
                 "Run Weak-spot mode twice on whatever the mock exposes.",
                 "Do one 15-question math sprint daily.",
@@ -192,7 +201,8 @@ def _buffer_plan(days):
         return []
     out = ["Light review only -- no new material."]
     if days >= 2:
-        out.append("One 132-question mock exam, timed, at your real exam time of day.")
+        out.append("One %d-question mock exam, timed, at your real exam time of day."
+                   % _scored_total())
     if days >= 3:
         out.append("Re-read every explanation you missed on the last two mocks.")
     out.append("Day before: 20-question math sprint, then stop. Sleep beats cramming.")

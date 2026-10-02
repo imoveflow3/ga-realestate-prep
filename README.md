@@ -94,7 +94,7 @@ entirety; attorney-conducted closings; $1.00/$1,000 transfer tax.
   single topic or let it weight topics the way the real exam does.
 - **Weak-spot quiz** — draws more heavily from topics *and* individual
   questions you have missed before, instead of random selection.
-- **Full mock exam** — 132 questions built to the real blueprint, timed.
+- **Full mock exam** — 152 questions built to the real blueprint (100 National + 52 Georgia), timed at the real four-hour pace.
 - **Math practice** — 15 problem generators (commission splits, tax and rent
   proration, LTV, points, area, acreage, appreciation, interest, seller's net,
   Georgia transfer tax, qualifying ratios, buyer's cash to close, seller's net

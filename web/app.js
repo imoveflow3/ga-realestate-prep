@@ -204,7 +204,7 @@ $('startWeak').onclick = function(){
              difficulty: diffValue()});
 };
 $('startExam').onclick = function(){
-  if (!confirm('Full mock exam: 132 questions, about 2 h 45 m. Start?')) return;
+  if (!confirm('Full mock exam: 152 questions, about 4 hours. Start?')) return;
   startQuiz({mode: 'exam', timed: true, difficulty: diffValue()});
 };
 $('startMath').onclick = function(){
@@ -674,7 +674,7 @@ function renderStudyTopic(n){
   var head = el('div','card'), hd = el('div','cardhead'), left = el('div');
   left.appendChild(el('h1', null, n.label));
   left.appendChild(el('div','muted',
-    n.counts_on_exam ? (n.exam_questions + ' of the 132 scored questions come from this topic')
+    n.counts_on_exam ? ('about ' + n.exam_questions + ' of the 152 scored questions come from this topic')
                      : 'A drill topic — not a scored section of the exam'));
   hd.appendChild(left);
   var back = el('button','btn mini ghost','ALL TOPICS');
