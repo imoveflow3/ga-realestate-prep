@@ -529,10 +529,14 @@ function startQuizWith(qs, opts){
   QUIZ.flagged = {};
   $('qflag').onclick = function(){ toggleFlag(); };
   $('qnext').onclick = function(){
+    /* finish() clears QUIZ, and the button survives long enough for a fast
+       second click or a held Enter to land on it. */
+    if (!QUIZ) return;
     if (QUIZ.i >= QUIZ.qs.length-1) return finish();
     QUIZ.i++; renderQuestion();
   };
   $('qquit').onclick = function(){
+    if (!QUIZ) return;
     if (confirm('End the quiz now and score what you have answered?')) finish();
   };
   show('quiz'); startTimer(); renderQuestion();

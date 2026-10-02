@@ -1905,6 +1905,21 @@ button.btn.danger:hover:not(:disabled){background:#73271c; border-color:#73271c}
 }
 :root[data-theme="dark"] .sc-val.low{color:#f0a496}
 :root[data-theme="dark"] .sc-fill.low{background:#a8402f}
+
+/* ---- a link that is really a button ----------------------------------
+   The 404 page's "go home" control is an anchor, because it navigates.
+   Every .btn rule is scoped to button elements, so it was rendering as
+   a bare underlined link in the middle of a card. */
+a.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family:var(--ui); font-size:.95rem; font-weight:600;
+  letter-spacing:.07em; text-transform:uppercase;
+  padding:.5rem 1rem; border-radius:var(--r);
+  border:1px solid var(--accent); background:var(--accent);
+  color:var(--accent-ink); text-decoration:none;
+}
+a.btn:hover{filter:brightness(1.08); text-decoration:none}
+a.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
