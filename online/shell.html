@@ -35,6 +35,10 @@
         <button data-view="notebook" aria-current="false">Notebook</button>
         <button data-view="saved" aria-current="false">Bookmarks</button>
 
+        <p class="navgroup adminonly" hidden>Admin</p>
+        <button data-view="admin" class="adminonly" hidden aria-current="false">Overview</button>
+        <button data-view="users" class="adminonly" hidden aria-current="false">Users</button>
+
         <p class="navgroup">Account</p>
         <button data-view="setup" aria-current="false">Account settings</button>
         <button data-view="about" aria-current="false">About</button>
@@ -67,6 +71,15 @@
         </button>
         <button class="btn" id="appBtn" hidden>Open the app</button>
         <div class="readouts" id="readouts"></div>
+        <div class="profile" id="profile" hidden>
+          <button class="profilebtn" id="profileBtn" aria-haspopup="menu"
+                  aria-expanded="false">
+            <span class="avatar" id="profileInitials">?</span>
+            <span class="profilename" id="profileName">Account</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="chev"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="profilemenu" id="profileMenu" role="menu" hidden></div>
+        </div>
       </div>
     </header>
 
@@ -85,6 +98,8 @@
       <section id="view-quiz" hidden></section>
       <section id="view-result" hidden></section>
       <section id="view-plan" hidden></section>
+      <section id="view-admin" hidden></section>
+      <section id="view-users" hidden></section>
       <section id="view-setup" hidden></section>
       <section id="view-about" hidden></section>
     </main>

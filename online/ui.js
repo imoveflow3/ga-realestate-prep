@@ -23,7 +23,8 @@ function persist(){ save(D); }
 
 /* -------------------------------------------------------------- routing */
 var VIEWS = ['welcome','today','dash','study','cards','vocab','home','math',
-             'notebook','saved','weak','quiz','result','plan','setup','about'];
+             'notebook','saved','weak','quiz','result','plan','setup','about',
+             'admin','users'];
 
 /* Served from behind the paywall, this build has no reason to sell itself:
    the reader has already bought. It skips the front door and drops the
@@ -53,7 +54,7 @@ var NAV = [
   {v:'saved',    name:'Bookmarks',  desc:'Lessons you saved to come back to'},
   {v:'weak',     name:'Weak spots', desc:'Drill the narrow topics dragging you down'},
   {v:'plan',     name:'Study plan', desc:'A week-by-week schedule to your test date'},
-  {v:'setup',    name:'Your data',  desc:'Move progress between devices, or start over'},
+  {v:'setup',    name:'Account settings', desc:'Your details, devices and sign-out'},
   {v:'about',    name:'About',      desc:'What this is, who made it, what it is not'}
 ];
 if (NO_LANDING) NAV = NAV.filter(function(n){ return n.v !== 'welcome'; });
@@ -80,6 +81,8 @@ var RENDERERS = {
   dash: function(){ renderDash(); },
   plan: function(){ renderPlan(); },
   setup: function(){ renderSetup(); },
+  admin: function(){ renderAdmin(); },
+  users: function(){ renderUsers(); },
   about: function(){ renderAbout(); }
 };
 
@@ -3367,6 +3370,7 @@ function renderAbout(){
     ' math problems + study notes on ' + t.topics + ' topics (' + t.terms + ' terms)';
 
   countdown();
+  loadAccount();
   show(routeFromHash(), true);
 
   if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0){
@@ -3452,4 +3456,230 @@ function renderSaved(){
   });
   card.appendChild(list);
   v.appendChild(card);
+}
+
+/* ======================================================================
+   Who you are, and what that lets you see.
+
+   ACCOUNT is filled from /api/me once at boot. Nothing here decides
+   permission -- the server does that on every request. This only decides
+   what is worth putting on screen, and hiding a button is not security.
+   ====================================================================== */
+
+var ACCOUNT = null;
+
+function initials(name, email){
+  var n = (name || '').trim();
+  if (n){
+    var parts = n.split(/\s+/);
+    return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
+  }
+  return (email || '?').slice(0, 2).toUpperCase();
+}
+
+function loadAccount(){
+  if (!PAID) return;                       // the static build has no account
+  fetch('/api/me', {credentials: 'same-origin'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(me){
+      if (!me || !me.signedIn) return;
+      ACCOUNT = me;
+      paintProfile();
+      if (me.role === 'admin') revealAdmin();
+    })['catch'](function(){});
+}
+
+function paintProfile(){
+  var box = $('profile');
+  if (!box || !ACCOUNT) return;
+  box.hidden = false;
+  $('profileInitials').textContent = initials(ACCOUNT.name, ACCOUNT.email);
+  $('profileName').textContent = ACCOUNT.name || ACCOUNT.email;
+
+  var menu = $('profileMenu');
+  menu.innerHTML = '';
+  var head = el('div', 'pm-head');
+  head.appendChild(el('div', 'pm-name', ACCOUNT.name || 'Your account'));
+  head.appendChild(el('div', 'pm-email', ACCOUNT.email));
+  if (ACCOUNT.role === 'admin'){
+    head.appendChild(el('span', 'statuspill ok pm-role', 'Administrator'));
+  } else if (!ACCOUNT.verified){
+    head.appendChild(el('span', 'statuspill warn pm-role', 'Email unconfirmed'));
+  }
+  menu.appendChild(head);
+
+  function item(label, fn, cls){
+    var b = el('button', cls || '', label);
+    b.setAttribute('role', 'menuitem');
+    b.onclick = function(){ closeProfile(); fn(); };
+    menu.appendChild(b);
+  }
+  if (ACCOUNT.role === 'admin'){
+    item('Admin overview', function(){ navTo('admin'); });
+    item('Users', function(){ navTo('users'); });
+  }
+  item('Account settings', function(){ navTo('setup'); });
+  item('Sign out', function(){
+    if (!confirm('Sign out on this device? Your progress is saved.')) return;
+    fetch('/api/logout', {method: 'POST', credentials: 'same-origin'})
+      .then(function(){ location.href = '/'; })['catch'](function(){ location.href = '/'; });
+  }, 'danger');
+
+  var btn = $('profileBtn');
+  btn.onclick = function(e){
+    e.stopPropagation();
+    menu.hidden ? openProfile() : closeProfile();
+  };
+}
+
+function openProfile(){
+  $('profileMenu').hidden = false;
+  $('profileBtn').setAttribute('aria-expanded', 'true');
+}
+function closeProfile(){
+  var m = $('profileMenu');
+  if (m) m.hidden = true;
+  var b = $('profileBtn');
+  if (b) b.setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('click', function(e){
+  var box = $('profile');
+  if (box && !box.contains(e.target)) closeProfile();
+});
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') closeProfile();
+});
+
+function revealAdmin(){
+  document.querySelectorAll('.adminonly').forEach(function(n){ n.hidden = false; });
+  document.querySelectorAll('#rail button.adminonly').forEach(function(b){
+    b.onclick = function(){ navTo(b.dataset.view); };
+  });
+}
+
+/* ------------------------------------------------------------- admin ---- */
+
+function adminFetch(path, into, draw){
+  into.innerHTML = '';
+  into.appendChild(el('p', 'muted', 'Loading…'));
+  fetch(path, {credentials: 'same-origin'})
+    .then(function(r){
+      if (r.status === 403){ throw new Error('This account is not an administrator.'); }
+      if (!r.ok) throw new Error('Could not load that.');
+      return r.json();
+    })
+    .then(function(d){ into.innerHTML = ''; draw(d); })
+    ['catch'](function(e){
+      into.innerHTML = '';
+      into.appendChild(el('p', 'muted', e.message));
+    });
+}
+
+function when(ts){
+  if (!ts) return '—';
+  var d = new Date(ts * 1000);
+  return d.toISOString().slice(0, 10);
+}
+
+function renderAdmin(){
+  var v = $('view-admin');
+  v.innerHTML = '';
+  v.appendChild(pageHead('Admin overview',
+    'Everything on this page is visible only to administrators, and is ' +
+    'checked on the server rather than hidden in the interface.'));
+  var card = el('div', 'card');
+  card.appendChild(cardHead('Accounts', 'all time'));
+  var body = el('div');
+  card.appendChild(body);
+  v.appendChild(card);
+
+  adminFetch('/api/admin/stats', body, function(d){
+    var grid = el('div', 'adminstats');
+    [[d.total, 'total accounts'],
+     [d.last7, 'signed up this week'],
+     [d.last30, 'signed up this month'],
+     [d.paid, 'have paid'],
+     [d.verified, 'confirmed their email'],
+     [d.activeLast7, 'studied this week']
+    ].forEach(function(r){
+      var c = el('div', 'astat');
+      c.appendChild(el('div', 'n', String(r[0])));
+      c.appendChild(el('div', 'l', r[1]));
+      grid.appendChild(c);
+    });
+    body.appendChild(grid);
+    var go = el('button', 'btn ghost', 'See every account');
+    go.style.marginTop = '1rem';
+    go.onclick = function(){ navTo('users'); };
+    body.appendChild(go);
+  });
+}
+
+var USER_QUERY = '';
+
+function renderUsers(){
+  var v = $('view-users');
+  v.innerHTML = '';
+  v.appendChild(pageHead('Users', 'Everyone who has created an account.'));
+
+  var card = el('div', 'card');
+  var row = el('div', 'searchrow');
+  var q = el('input');
+  q.type = 'search'; q.placeholder = 'Search name or email'; q.value = USER_QUERY;
+  row.appendChild(q);
+  var find = el('button', 'btn mini', 'Search');
+  find.onclick = function(){ USER_QUERY = q.value.trim(); load(); };
+  q.onkeydown = function(e){ if (e.key === 'Enter') find.click(); };
+  row.appendChild(find);
+  if (USER_QUERY){
+    var clear = el('button', 'btn mini ghost', 'Clear');
+    clear.onclick = function(){ USER_QUERY = ''; renderUsers(); };
+    row.appendChild(clear);
+  }
+  card.appendChild(row);
+  var body = el('div');
+  card.appendChild(body);
+  v.appendChild(card);
+
+  function load(){
+    adminFetch('/api/admin/users?limit=200' +
+               (USER_QUERY ? '&q=' + encodeURIComponent(USER_QUERY) : ''),
+               body, function(d){
+      if (!d.users.length){
+        body.appendChild(emptyState(
+          USER_QUERY ? 'Nobody matches that' : 'No accounts yet',
+          USER_QUERY ? 'Try a different name or email address.'
+                     : 'Accounts appear here as soon as people sign up.'));
+        return;
+      }
+      body.appendChild(el('p', 'muted',
+        d.total + (d.total === 1 ? ' account' : ' accounts') +
+        (USER_QUERY ? ' matching "' + USER_QUERY + '"' : '')));
+      var wrap = el('div', 'scroll'), t = el('table', 'usertable');
+      t.innerHTML = '<tr><th>Name</th><th>Email</th><th>Joined</th>' +
+                    '<th>Last studied</th><th>Status</th></tr>';
+      d.users.forEach(function(u){
+        var tr = el('tr');
+        var who = el('td', 'who');
+        who.appendChild(el('div', null, u.name || '—'));
+        if (u.phone) who.appendChild(el('div', 'uemail', u.phone));
+        tr.appendChild(who);
+        var em = el('td');
+        em.appendChild(el('div', 'uemail', u.email));
+        tr.appendChild(em);
+        tr.appendChild(el('td', null, when(u.created_at)));
+        tr.appendChild(el('td', null, when(u.last_active)));
+        var st = el('td');
+        if (u.role === 'admin') st.appendChild(el('span', 'statuspill ok', 'Admin'));
+        else if (u.paid) st.appendChild(el('span', 'statuspill ok', 'Paid'));
+        else st.appendChild(el('span', 'statuspill warn',
+                               u.verified ? 'Free' : 'Unconfirmed'));
+        tr.appendChild(st);
+        t.appendChild(tr);
+      });
+      wrap.appendChild(t);
+      body.appendChild(wrap);
+    });
+  }
+  load();
 }

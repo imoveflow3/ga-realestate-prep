@@ -165,6 +165,37 @@ export function makeDB() {
       t.sends.push({ key: args[0], count: args[1], window_from: args[2], last_at: args[3] });
       return null;
     }
+    /* ---- admin reporting ---- */
+    if (like(q, 'SELECT COUNT(*) AS TOTAL')) {
+      const t7 = args[0], t30 = args[1];
+      return {
+        total: t.users.length,
+        paid: t.users.filter(u => u.paid).length,
+        verified: t.users.filter(u => u.email_verified).length,
+        last7: t.users.filter(u => u.created_at >= t7).length,
+        last30: t.users.filter(u => u.created_at >= t30).length,
+      };
+    }
+    if (like(q, 'SELECT COUNT(*) AS N FROM PROGRESS WHERE UPDATED_AT'))
+      return { n: t.progress.filter(p => p.updated_at >= args[0]).length };
+    if (like(q, 'SELECT COUNT(*) AS N FROM USERS WHERE LOWER(EMAIL) LIKE')) {
+      const needle = String(args[0]).replace(/%/g, '').toLowerCase();
+      return { n: t.users.filter(u => (u.email + ' ' + (u.name || ''))
+                                        .toLowerCase().includes(needle)).length };
+    }
+    if (like(q, 'SELECT COUNT(*) AS N FROM USERS')) return { n: t.users.length };
+    if (like(q, 'FROM USERS U LEFT JOIN PROGRESS P')) {
+      let rows = t.users.slice();
+      if (args.length) {
+        const needle = String(args[0]).replace(/%/g, '').toLowerCase();
+        rows = rows.filter(u => (u.email + ' ' + (u.name || ''))
+                                  .toLowerCase().includes(needle));
+      }
+      rows.sort((a, b) => b.created_at - a.created_at);
+      return rows.map(u => Object.assign({}, u, {
+        last_active: (t.progress.find(p => p.user_id === u.id) || {}).updated_at || null,
+      }));
+    }
     if (like(q, 'SELECT ROLE FROM USERS WHERE ID')) {
       const u = t.users.find(x => x.id === args[0]);
       return u ? { role: u.role || 'user' } : null;
@@ -195,7 +226,14 @@ export function makeDB() {
       let args = [];
       const api = {
         bind(...a) { args = a; return api; },
-        async first() { return run(sql, args); },
+        async first() {
+          const out = run(sql, args);
+          return Array.isArray(out) ? (out[0] || null) : out;
+        },
+        async all() {
+          const out = run(sql, args);
+          return { results: Array.isArray(out) ? out : (out ? [out] : []), success: true };
+        },
         async run() { return { success: true, meta: {} }; },
       };
       // statements that mutate must still execute on .run()

@@ -483,6 +483,78 @@ export default {
                                              verified: false }));
     }
 
+    /* ------------------------------------------------------------ admin --
+       Everything here goes through requireAdmin, which reads the role from
+       the database row, not from anything the browser sent. A non-admin gets
+       the same 403 whether or not the route exists. */
+
+    if (path.indexOf('/api/admin/') === 0) {
+      const who = await currentUser(request, env);
+      const no = requireAdmin(who);
+      if (no) return no;
+
+      if (path === '/api/admin/stats') {
+        const t = now();
+        const day = 86400;
+        const row = await env.DB.prepare(
+          `SELECT COUNT(*) AS total,
+                  SUM(CASE WHEN paid = 1 THEN 1 ELSE 0 END) AS paid,
+                  SUM(CASE WHEN email_verified = 1 THEN 1 ELSE 0 END) AS verified,
+                  SUM(CASE WHEN created_at >= ? THEN 1 ELSE 0 END) AS last7,
+                  SUM(CASE WHEN created_at >= ? THEN 1 ELSE 0 END) AS last30
+             FROM users`
+        ).bind(t - 7 * day, t - 30 * day).first();
+        const active = await env.DB.prepare(
+          'SELECT COUNT(*) AS n FROM progress WHERE updated_at >= ?'
+        ).bind(t - 7 * day).first();
+        return json({
+          total: row.total || 0, paid: row.paid || 0, verified: row.verified || 0,
+          last7: row.last7 || 0, last30: row.last30 || 0,
+          activeLast7: (active && active.n) || 0,
+        });
+      }
+
+      if (path === '/api/admin/users') {
+        const limit = Math.min(200, Math.max(1, Number(url.searchParams.get('limit')) || 50));
+        const offset = Math.max(0, Number(url.searchParams.get('offset')) || 0);
+        const q = (url.searchParams.get('q') || '').trim().toLowerCase();
+        const like = '%' + q.replace(/[%_]/g, '') + '%';
+
+        /* Left join so somebody who has signed up and never studied still
+           appears, with no activity rather than no row. */
+        const sql =
+          `SELECT u.id, u.email, u.name, u.phone, u.role, u.paid, u.email_verified,
+                  u.created_at, p.updated_at AS last_active
+             FROM users u LEFT JOIN progress p ON p.user_id = u.id
+            ${q ? 'WHERE lower(u.email) LIKE ?1 OR lower(COALESCE(u.name,\'\')) LIKE ?1' : ''}
+            ORDER BY u.created_at DESC
+            LIMIT ${limit} OFFSET ${offset}`;
+        const stmt = q ? env.DB.prepare(sql).bind(like) : env.DB.prepare(sql);
+        const res = await stmt.all();
+        const countRow = q
+          ? await env.DB.prepare(
+              `SELECT COUNT(*) AS n FROM users
+                WHERE lower(email) LIKE ?1 OR lower(COALESCE(name,'')) LIKE ?1`
+            ).bind(like).first()
+          : await env.DB.prepare('SELECT COUNT(*) AS n FROM users').first();
+
+        /* Named one field at a time. A SELECT * here would start shipping
+           password hashes the next time a column is added. */
+        return json({
+          total: (countRow && countRow.n) || 0,
+          limit, offset,
+          users: (res.results || []).map(r => ({
+            id: r.id, email: r.email, name: r.name || '', phone: r.phone || '',
+            role: r.role === 'admin' ? 'admin' : 'user',
+            paid: !!r.paid, verified: !!r.email_verified,
+            created_at: r.created_at, last_active: r.last_active || null,
+          })),
+        });
+      }
+
+      return json({ error: 'not found' }, 404);
+    }
+
     /* ------------------------------------------------------ gated below */
     const me = await currentUser(request, env);
     const gated = path === '/app' || path === '/api/bundle' || path === '/api/progress';

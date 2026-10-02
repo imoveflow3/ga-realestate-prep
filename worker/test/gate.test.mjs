@@ -816,6 +816,80 @@ await it('no route hands out the role', async () => {
   }
 });
 
+
+console.log('\nADMIN SURFACES');
+
+await it('a stranger gets 403 from every admin route', async () => {
+  for (const p of ['/api/admin/stats', '/api/admin/users']) {
+    const res = await worker.fetch(req(p), env, {});
+    assert.equal(res.status, 403, p + ' let a stranger in');
+  }
+});
+
+await it('an ordinary signed-in user gets 403 too', async () => {
+  const made = await signupAs('plain@example.com');
+  const c = cookieOf(made);
+  for (const p of ['/api/admin/stats', '/api/admin/users']) {
+    const res = await worker.fetch(req(p, { headers: { Cookie: c } }), env, {});
+    assert.equal(res.status, 403, p + ' let an ordinary user in');
+    const body = await res.text();
+    assert.ok(!body.includes('@'), p + ' leaked an address in its refusal');
+  }
+});
+
+let bossCookie = null;
+
+await it('an admin can see the counts', async () => {
+  const made = await signupAs('boss2@example.com');
+  env.ADMIN_EMAILS = 'boss2@example.com';
+  const relog = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'boss2@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  bossCookie = cookieOf(relog);
+  const d = await (await worker.fetch(req('/api/admin/stats', {
+    headers: { Cookie: bossCookie } }), env, {})).json();
+  assert.equal(d.total, db._tables.users.length);
+  assert.ok(typeof d.last7 === 'number' && typeof d.activeLast7 === 'number');
+});
+
+await it('an admin can list accounts, and never sees a password hash', async () => {
+  const d = await (await worker.fetch(req('/api/admin/users', {
+    headers: { Cookie: bossCookie } }), env, {})).json();
+  assert.ok(d.users.length > 1);
+  const raw = JSON.stringify(d);
+  assert.ok(!raw.includes('pbkdf2'), 'a password hash was sent to the browser');
+  assert.ok(!raw.includes('password'), 'something password-shaped was sent');
+  const one = d.users[0];
+  for (const k of ['email', 'name', 'role', 'paid', 'verified', 'created_at']) {
+    assert.ok(k in one, 'missing ' + k);
+  }
+});
+
+await it('the search finds by name and by address', async () => {
+  const byMail = await (await worker.fetch(req('/api/admin/users?q=plain', {
+    headers: { Cookie: bossCookie } }), env, {})).json();
+  assert.equal(byMail.users.length, 1);
+  assert.equal(byMail.users[0].email, 'plain@example.com');
+});
+
+await it('an unknown admin route is 404, not a door', async () => {
+  const res = await worker.fetch(req('/api/admin/everything', {
+    headers: { Cookie: bossCookie } }), env, {});
+  assert.equal(res.status, 404);
+});
+
+await it('losing the role closes the door again', async () => {
+  env.ADMIN_EMAILS = '';
+  const relog = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'boss2@example.com',
+                           password: 'a long enough passphrase' }) }), env, {});
+  const c = cookieOf(relog);
+  const res = await worker.fetch(req('/api/admin/users', { headers: { Cookie: c } }), env, {});
+  assert.equal(res.status, 403, 'a demoted admin kept their access');
+});
+
 globalThis.fetch = realFetch;
 console.log(`\n${PASS} passed, ${FAIL} failed\n`);
 process.exit(FAIL ? 1 : 0);
