@@ -32,8 +32,11 @@ WORKER = os.path.join(HERE, "worker")
 PUBLIC = os.path.join(WORKER, "public")
 GATED = os.path.join(WORKER, "assets")
 
-PRICE_CENTS = 1900
-SUPPORT_EMAIL = "support@example.com"          # change before you take money
+from tools import siteconfig                             # noqa: E402
+
+PRICE_CENTS = siteconfig.PRICE_CENTS
+SUPPORT_EMAIL = siteconfig.support_email()
+PAID_SITE = siteconfig.paid_site()
 SAMPLE_COUNT = 0        # the sales page hands out nothing
 LAYOUT = "minimal"      # "minimal" = sign up / sign in / pay only;
                         # "full" = the long welcome page
@@ -119,18 +122,25 @@ def build_app_html(css, data_free_shell):
     return head + shell[:cut] + "</head>\n<body>\n" + shell[cut:] + "\n</body>\n</html>\n"
 
 
-def legal_page(title, body, css, stamp):
+def ONLINE_HEAD(title, desc, canonical):
+    return online.head(0, 0, site=PAID_SITE, title=title, blurb=desc,
+                       canonical=canonical, price_cents=PRICE_CENTS,
+                       manifest=None)
+
+
+def legal_page(title, body, css, stamp, slug, desc):
+    """A legal page is a public page: it gets a description, a canonical and
+       an icon like every other one, not a bare <title>."""
     paras = "\n".join("<p>%s</p>" % p for p in body)
-    return ("""<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark"><title>%s</title>
-<style>%s</style></head><body>
+    full = "%s \u2014 Georgia Real Estate Exam Prep" % title
+    return (ONLINE_HEAD(full, desc, PAID_SITE + slug) +
+            """<style>%s</style></head><body>
+<a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
 <div class="card reading"><h1>%s</h1>%s
 <p class="muted">Last updated %s. <a href="/">Back to the home page</a>.</p></div>
 </main></body></html>
-""" % (title, css, title, paras, stamp))
+""" % (css, title, paras, stamp))
 
 
 def main():
@@ -174,7 +184,8 @@ def main():
     homejs = read("home.js")
     head = online.head(sum(len(v) for v in data["banks"].values()), totals["terms"])
 
-    def public_page(name, page, title, desc, preview=False):
+    def public_page(name, page, title, desc, preview=False, noindex=False,
+                    canonical=None, social=None):
         blob = json.dumps(dict(home, page=page, preview=preview,
                                     layout=LAYOUT),
                           separators=(",", ":"),
@@ -185,38 +196,55 @@ def main():
                      .replace("__SUPPORT__", SUPPORT_EMAIL)
                      .replace("__BUILD__", stamp))
         cut = body.index("<header")
-        h = head.replace("<title>Georgia Real Estate Exam Prep \u2014 free "
-                         "salesperson practice tests</title>",
-                         "<title>%s</title>" % title)
-        if desc:
-            h = h.replace('<meta property="og:title" content="Pass the Georgia '
-                          'salesperson exam. Free.">',
-                          '<meta property="og:title" content="%s">' % title)
+        """A paid page that borrows the free site's <head> tells search
+           engines it is a copy of a free thing, and tells a reader it costs
+           nothing. Each page describes itself instead."""
+        h = online.head(
+            sum(len(v) for v in data["banks"].values()), totals["terms"],
+            site=PAID_SITE, title=title, blurb=desc,
+            canonical=canonical or (PAID_SITE if name == "index.html"
+                                    else PAID_SITE + name.replace(".html", "")),
+            price_cents=PRICE_CENTS, noindex=noindex,
+            social=social or title, manifest=None)
         page_html = (h + body[:cut].replace(
                         "<title>Georgia Real Estate Exam Prep</title>\n", "")
                      + "</head>\n<body>\n" + body[cut:] + "\n</body>\n</html>\n")
         write(os.path.join(PUBLIC, name), page_html)
         return len(page_html)
 
+    sell = ("Practice for the Georgia real estate salesperson licensing exam: "
+            "%d exam-style questions scored National and Georgia separately, "
+            "real estate math worked step by step, study notes covering %d "
+            "topics with %d defined terms, and a study plan built around your "
+            "test date. One payment of $%d, nothing renews."
+            % (totals["total"], totals["topics"], totals["terms"],
+               PRICE_CENTS // 100))
+
     welcome_n = public_page(
         "index.html", "welcome",
         "Georgia Real Estate Exam Prep \u2014 %d practice questions" % totals["total"],
-        "Practice for the Georgia real estate salesperson licensing exam.")
+        sell,
+        social="Pass the Georgia salesperson exam.")
+    # In the minimal layout the home page already is the sales page, so this
+    # one is the same offer at a second address. Point it home rather than
+    # competing with itself in search results.
     buy_n = public_page(
         "buy.html", "buy",
         "Get access \u2014 Georgia Real Estate Exam Prep",
-        "One payment for the full Georgia salesperson exam question bank.")
+        sell, noindex=True, canonical=PAID_SITE)
 
+    # Nobody should arrive at a sign-in form from a search engine.
     public_page("auth.html", "auth",
                 "Create your account \u2014 Georgia Real Estate Exam Prep",
-                "Create an account or log in to your Georgia exam prep.")
+                "Create an account or log in to your Georgia exam prep.",
+                noindex=True, canonical=PAID_SITE)
 
     # A single self-contained file carrying both pages, for looking at the
     # design before any of it is deployed. Nothing in it calls a server.
     public_page("preview.html", "welcome",
                 "Preview \u2014 Georgia Real Estate Exam Prep",
                 "Preview of the Georgia salesperson exam prep site.",
-                preview=True)
+                preview=True, noindex=True, canonical=PAID_SITE)
 
     write(os.path.join(PUBLIC, "terms.html"), legal_page(
         "Terms and refunds", [
@@ -239,27 +267,92 @@ def main():
             "pre-licence course Georgia requires.",
             "<b>Access.</b> Access is intended to last indefinitely. If the "
             "site ever shuts down, you will be given notice and a way to export "
-            "your progress.",
-        ], css, stamp))
+            "your progress. You can export it yourself at any time from "
+            "Account settings, without asking.",
+            "<b>Who runs this.</b> %s. Questions and complaints go to %s, "
+            "which is read by a person." % (siteconfig.operator(), SUPPORT_EMAIL),
+        ], css, stamp, "terms",
+           "The terms of use and refund policy for Georgia Real Estate Exam Prep."))
 
     write(os.path.join(PUBLIC, "privacy.html"), legal_page(
         "Privacy", [
             "<b>What is collected.</b> Your email address, so you can sign in "
-            "and so we know what you bought, and your study progress -- scores, "
-            "which questions you have answered, and your plan settings.",
-            "<b>What is not.</b> No name, no address, no tracking pixels, no "
-            "advertising, and no analytics of any kind.",
+            "and so we know what you bought. Your name and mobile number, "
+            "because the sign-up form asks for them -- the name is used to "
+            "greet you, the number is kept so an account can be recovered, and "
+            "neither is required to be real for the site to work. Your study "
+            "progress: scores, which questions you have answered, and your "
+            "plan settings. The date you agreed to the terms.",
+            "<b>What is not.</b> No postal address, no date of birth, no "
+            "licence number, no card details, no tracking pixels, no "
+            "advertising, and no analytics of any kind. Nothing is collected "
+            "about you from anywhere other than this site.",
+            "<b>Your password.</b> Stored only as a PBKDF2-SHA256 hash with a "
+            "salt unique to your account. It cannot be read back, by anybody, "
+            "including whoever runs this site.",
             "<b>Payments.</b> Card details are handled entirely by Stripe and "
             "never touch this site. We store only Stripe's reference for your "
             "payment.",
             "<b>Sharing.</b> Your data is not sold, rented, or shared. Stripe "
             "processes the payment; an email provider delivers your sign-in "
             "code. Nobody else sees any of it.",
-            "<b>Deleting it.</b> Email %s and your account and every row of "
-            "your progress will be deleted. That is permanent." % SUPPORT_EMAIL,
+            "<b>Taking it with you.</b> Account settings has an Export "
+            "button that hands you every row held about you as a JSON file. "
+            "No request, no waiting.",
+            "<b>Deleting it.</b> Account settings has a Delete account button. "
+            "It removes your account, your progress, and your sessions "
+            "immediately and permanently, and it cannot be undone. You can "
+            "also email %s and ask, if you would rather. Deleting your account "
+            "does not refund a payment -- ask for that separately, and see the "
+            "refund terms." % SUPPORT_EMAIL,
             "<b>Cookies.</b> One, holding your signed-in session. No tracking "
             "cookies, so there is no banner to click.",
-        ], css, stamp))
+            "<b>Children.</b> This is study material for a professional "
+            "licence. It is not directed at anyone under 16, and no account "
+            "should be created for one.",
+            "<b>Changes.</b> If what is collected ever changes, this page "
+            "changes with it and the date below moves.",
+        ], css, stamp, "privacy",
+           "What Georgia Real Estate Exam Prep collects, what it does not, "
+           "and how to export or delete it."))
+
+    # A crawler should find the sales page and nothing else. /app is behind
+    # the gate anyway, but saying so costs one line and saves the crawl.
+    write(os.path.join(PUBLIC, "robots.txt"),
+          "User-agent: *\n"
+          "Allow: /$\n"
+          "Allow: /terms\n"
+          "Allow: /privacy\n"
+          "Disallow: /app\n"
+          "Disallow: /auth\n"
+          "Disallow: /buy\n"
+          "Disallow: /preview\n"
+          "Disallow: /api/\n"
+          "\n"
+          "Sitemap: %ssitemap.xml\n" % PAID_SITE)
+
+    write(os.path.join(PUBLIC, "sitemap.xml"),
+          '<?xml version="1.0" encoding="UTF-8"?>\n'
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+          + "".join('  <url><loc>%s%s</loc><lastmod>%s</lastmod>'
+                    '<changefreq>%s</changefreq><priority>%s</priority></url>\n'
+                    % (PAID_SITE, slug, stamp, freq, pri)
+                    for slug, freq, pri in (("", "weekly", "1.0"),
+                                            ("terms", "yearly", "0.3"),
+                                            ("privacy", "yearly", "0.3")))
+          + "</urlset>\n")
+
+    write(os.path.join(PUBLIC, "404.html"), legal_page(
+        "Page not found", [
+            "There is nothing at that address. It may have been a typo, or a "
+            "link that pointed somewhere this site never had.",
+            "<a class=\"btn\" href=\"/\" style=\"display:inline-flex\">"
+            "Go to the home page</a>",
+            "<span class=\"muted\">If you followed a link from inside the "
+            "site and landed here, that is a bug worth telling us about: "
+            "<a href=\"mailto:%s\">%s</a>.</span>" % (SUPPORT_EMAIL, SUPPORT_EMAIL),
+        ], css, stamp, "404",
+           "That page does not exist on Georgia Real Estate Exam Prep."))
 
     src = os.path.join(HERE, "docs", "assets")
     for name in os.listdir(src):
@@ -284,6 +377,8 @@ def main():
     print("public worker/public/terms.html, privacy.html, assets/")
     print("price  $%d one-time   support %s" % (PRICE_CENTS // 100, SUPPORT_EMAIL))
     print("leak   every public page checked: no questions, answers or notes")
+    print("seo    robots.txt, sitemap.xml, 404.html; app and auth noindex")
+    siteconfig.check()
 
 
 if __name__ == "__main__":

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /$
+Allow: /terms
+Allow: /privacy
+Disallow: /app
+Disallow: /auth
+Disallow: /buy
+Disallow: /preview
+Disallow: /api/
+
+Sitemap: https://example.invalid/sitemap.xml

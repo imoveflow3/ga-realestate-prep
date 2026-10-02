@@ -74,8 +74,20 @@ function makeEnv(db) {
     GOOGLE_CLIENT_SECRET: 'test-client-secret',
     FROM_EMAIL: 'login@prep.test',
     PRICE_CENTS: '1900',
-    ASSETS: { fetch: async (r) => new Response(new URL(r.url).pathname, {
-      status: 200, headers: { 'Content-Type': 'text/html' } }) },
+    /* Behaves like the real asset server: it serves what exists and answers
+       404 with the site's own 404 page. A stub that answers 200 to
+       everything cannot tell a working link from a broken one. */
+    ASSETS: { fetch: async (r) => {
+      const p = new URL(r.url).pathname;
+      const known = ['/', '/terms', '/privacy', '/auth', '/buy', '/preview',
+                     '/robots.txt', '/sitemap.xml'];
+      if (known.includes(p) || p.startsWith('/assets/')) {
+        return new Response(p, { status: 200,
+                                 headers: { 'Content-Type': 'text/html' } });
+      }
+      return new Response('Page not found', { status: 404,
+                                 headers: { 'Content-Type': 'text/html' } });
+    } },
   };
 }
 
@@ -300,9 +312,14 @@ await it('public paths are handed to the asset server unchanged', async () => {
   }
 });
 
-await it('an unknown path goes home rather than 404ing into nothing', async () => {
+await it('an unknown path does not leak past the gate', async () => {
+  /* It used to be asserted that this went home. It should not: see
+     "an address that does not exist says so" below. What matters here is
+     only that an unknown path never reaches anything gated. */
   const res = await worker.fetch(req('/nope'), env, {});
-  assert.ok([200, 302].includes(res.status));
+  assert.equal(res.status, 404);
+  const body = await res.text();
+  assert.ok(!body.includes('"answer"'), 'a 404 carried question data');
 });
 
 
@@ -962,6 +979,29 @@ await it('taking the role away closes the app again', async () => {
   const res = await worker.fetch(req('/api/bundle', {
     headers: { Cookie: cookieOf(relog) } }), env, {});
   assert.equal(res.status, 402, 'a demoted admin still had the questions');
+});
+
+console.log('\nTHE EDGES OF THE SITE');
+
+await it('an address that does not exist says so, and does not redirect', async () => {
+  const res = await worker.fetch(req('/no-such-page'), env, {});
+  assert.equal(res.status, 404, 'a missing page did not answer 404');
+  assert.ok(!res.headers.get('Location'),
+            'a missing page redirected instead of answering');
+  assert.match(await res.text(), /not found/i);
+});
+
+await it('a missing page still carries the security headers', async () => {
+  const res = await worker.fetch(req('/no-such-page'), env, {});
+  assert.ok(res.headers.get('X-Content-Type-Options'),
+            'the 404 page shipped without the security headers');
+});
+
+await it('public files are served, not swallowed', async () => {
+  for (const p of ['/', '/terms', '/privacy', '/robots.txt', '/sitemap.xml']) {
+    const res = await worker.fetch(req(p), env, {});
+    assert.equal(res.status, 200, p + ' was not served');
+  }
 });
 console.log('\nADMIN SURFACES');
 

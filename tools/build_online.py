@@ -40,9 +40,25 @@ BLURB = ("Free practice for the Georgia real estate salesperson licensing exam. 
 ASSETS = "assets/"                      # icons and the link-preview card
 
 
-def head(questions, terms):
-    """The <head> for the standalone build: findable, shareable, installable."""
-    blurb = BLURB % {"q": questions, "v": terms}
+def head(questions, terms, site=None, title=None, blurb=None,
+         price_cents=0, canonical=None, noindex=False, social=None,
+         manifest="manifest.webmanifest"):
+    """The <head> for a page: findable, shareable, installable.
+
+    Defaults describe the free build. The paid build passes its own site,
+    title and blurb, because a page that calls itself free while charging
+    $19, and points its canonical at a different site, is asking search
+    engines to treat it as a duplicate of something it is not.
+    """
+    site = site or SITE
+    title = title or TITLE
+    blurb = blurb or (BLURB % {"q": questions, "v": terms})
+    social = social or title
+    canonical = canonical or site
+    robots = ('<meta name="robots" content="noindex,nofollow">\n'
+              if noindex else
+              '<meta name="robots" content="index,follow,max-image-preview:large">\n')
+    manifest_link = ('<link rel="manifest" href="%s">\n' % manifest) if manifest else ""
     return """<!doctype html>
 <html lang="en">
 <head>
@@ -51,49 +67,53 @@ def head(questions, terms):
 <meta name="color-scheme" content="light dark">
 <title>%(title)s</title>
 <meta name="description" content="%(blurb)s">
-<link rel="canonical" href="%(site)s">
+<link rel="canonical" href="%(canonical)s">
+%(robots)s
 <meta name="theme-color" content="#1a6459" media="(prefers-color-scheme:light)">
 <meta name="theme-color" content="#0e1319" media="(prefers-color-scheme:dark)">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Georgia Real Estate Exam Prep">
-<meta property="og:title" content="Pass the Georgia salesperson exam. Free.">
+<meta property="og:title" content="%(social)s">
 <meta property="og:description" content="%(blurb)s">
-<meta property="og:url" content="%(site)s">
+<meta property="og:url" content="%(canonical)s">
 <meta property="og:image" content="%(site)s%(a)scard.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Georgia Real Estate Exam Prep">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pass the Georgia salesperson exam. Free.">
+<meta name="twitter:title" content="%(social)s">
 <meta name="twitter:description" content="%(blurb)s">
 <meta name="twitter:image" content="%(site)s%(a)scard.png">
 
 <link rel="icon" href="%(a)sicon-192.png" sizes="192x192">
 <link rel="icon" href="%(a)sicon-512.png" sizes="512x512">
 <link rel="apple-touch-icon" href="%(a)sicon-180.png">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="apple-mobile-web-app-capable" content="yes">
+%(manifest)s<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="GA Prep">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <script type="application/ld+json">%(jsonld)s</script>
-""" % {"title": TITLE, "blurb": blurb, "site": SITE, "a": ASSETS,
+""" % {"title": title, "blurb": blurb, "site": site, "a": ASSETS,
+       "canonical": canonical, "robots": robots, "social": social,
+       "manifest": manifest_link,
        "jsonld": json.dumps({
            "@context": "https://schema.org",
            "@type": "LearningResource",
            "name": "Georgia Real Estate Exam Prep",
            "description": blurb,
-           "url": SITE,
+           "url": canonical,
            "inLanguage": "en-US",
-           "isAccessibleForFree": True,
+           "isAccessibleForFree": price_cents == 0,
            "learningResourceType": "Practice test",
            "educationalLevel": "Professional licensing",
            "teaches": "Georgia real estate salesperson licensing exam",
            "about": {"@type": "Thing",
                      "name": "Georgia real estate salesperson licence"},
-           "offers": {"@type": "Offer", "price": "0",
-                      "priceCurrency": "USD"},
+           "offers": {"@type": "Offer",
+                      "price": "%.2f" % (price_cents / 100.0),
+                      "priceCurrency": "USD",
+                      "availability": "https://schema.org/InStock"},
        }, separators=(",", ":"))}
 
 

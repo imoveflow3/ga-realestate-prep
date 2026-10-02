@@ -633,11 +633,12 @@ export default {
        html_handling bounces /auth.html straight back to /auth, which this
        rewrote again, forever. It maps the clean path to the file itself. */
     const asset = await env.ASSETS.fetch(request);
-    if (asset.status !== 404) {
-      const out = new Response(asset.body, asset);
-      for (const [k, v] of Object.entries(SECURITY)) out.headers.set(k, v);
-      return out;
-    }
-    return redirect('/');
+    /* Including a 404. Bouncing unknown paths to the home page was a soft
+       404: the reader loses the address they typed and never learns it was
+       wrong, and a crawler is told every broken link is a valid page. The
+       asset server is configured to answer with the site's own 404 page. */
+    const out = new Response(asset.body, asset);
+    for (const [k, v] of Object.entries(SECURITY)) out.headers.set(k, v);
+    return out;
   },
 };
