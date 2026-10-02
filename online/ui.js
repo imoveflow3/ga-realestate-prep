@@ -509,14 +509,23 @@ function startQuizWith(qs, opts){
       '<span class="tag hard" id="qhard" hidden>Hard</span> ' +
       '<span class="muted" id="qcount"></span></div>' +
       '<div class="timer" id="qtimer"></div></div>' +
-    '<div class="card"><div class="eyebrow" id="qtopic"></div>' +
+    '<div class="card"><div class="qtoprow">' +
+      '<div class="eyebrow" id="qtopic"></div>' +
+      '<button class="flagbtn" id="qflag" aria-pressed="false">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14">' +
+        '<path d="M5 3v18M5 4h11l-2 4 2 4H5" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linejoin="round"/></svg>' +
+        '<span id="qflagtext">Flag</span></button></div>' +
       '<div class="qtext" id="qtext"></div><div class="choices" id="qchoices"></div>' +
       '<div id="qfeedback"></div></div>' +
     '<div class="kbhint"><span>Keyboard:</span><kbd>A</kbd><kbd>B</kbd><kbd>C</kbd>' +
       '<kbd>D</kbd><span>or</span><kbd>1</kbd>&ndash;<kbd>4</kbd><span>to answer, ' +
-      '</span><kbd>Enter</kbd><span>for the next one.</span></div>' +
+      '</span><kbd>Enter</kbd><span>for the next one, </span><kbd>F</kbd>' +
+      '<span>to flag one to come back to.</span></div>' +
     '<div class="qacts"><button class="btn" id="qnext" disabled>Next</button>' +
       '<button class="btn ghost" id="qquit">End &amp; score</button></div>';
+  QUIZ.flagged = {};
+  $('qflag').onclick = function(){ toggleFlag(); };
   $('qnext').onclick = function(){
     if (QUIZ.i >= QUIZ.qs.length-1) return finish();
     QUIZ.i++; renderQuestion();
@@ -554,6 +563,7 @@ function renderQuestion(){
   $('qhard').textContent = (tier === 3) ? 'Exam' : 'Hard';
   $('qhard').className = 'tag hard' + (tier === 3 ? ' exam' : '');
   $('qtopic').textContent = label(q.topic);
+  paintFlag();
   $('qtext').textContent = q.q;
   $('qfeedback').innerHTML = '';
   $('qnext').disabled = true;
@@ -568,6 +578,27 @@ function renderQuestion(){
   });
 }
 
+/* Marking a question to come back to. It is deliberately independent of
+   whether the answer was right: the ones worth revisiting are often the ones
+   guessed correctly, and those are exactly the ones a score hides. */
+function toggleFlag(){
+  var q = QUIZ.qs[QUIZ.i];
+  if (QUIZ.flagged[q.id]) delete QUIZ.flagged[q.id];
+  else QUIZ.flagged[q.id] = true;
+  paintFlag();
+}
+
+function paintFlag(){
+  var q = QUIZ.qs[QUIZ.i], on = !!QUIZ.flagged[q.id];
+  var b = $('qflag');
+  if (!b) return;
+  b.className = 'flagbtn' + (on ? ' on' : '');
+  b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  b.setAttribute('aria-label', on ? 'Flagged for review. Click to unflag.'
+                                  : 'Flag this question for review');
+  $('qflagtext').textContent = on ? 'Flagged' : 'Flag';
+}
+
 function answer(choice){
   if (QUIZ.locked) return;
   QUIZ.locked = true;
@@ -576,6 +607,7 @@ function answer(choice){
   QUIZ.answers[QUIZ.i] = {qid:q.id, topic:q.topic, sub:q.sub||null,
                           generator:q.generator||null,
                           choice:choice, correct:correct, q:q,
+                          flagged: !!QUIZ.flagged[q.id],
                           seconds:(Date.now()-QUIZ.qStart)/1000};
   var btns = $('qchoices').children;
   for (var k = 0; k < btns.length; k++){
@@ -615,6 +647,12 @@ document.addEventListener('keydown', function(e){
     }
   }
   if (!QUIZ || $('view-quiz').hidden) return;
+  /* F flags, and unlike answering it works after the question is locked --
+     you often only decide to revisit one once you have seen why you were
+     wrong. */
+  if ((e.key || '').toLowerCase() === 'f' && !e.metaKey && !e.ctrlKey){
+    e.preventDefault(); toggleFlag(); return;
+  }
   var k = 'abcd'.indexOf((e.key||'').toLowerCase());
   if (k >= 0 && k < QUIZ.qs[QUIZ.i].choices.length && !QUIZ.locked){ answer(k); return; }
   if ((e.key === 'Enter' || e.key === ' ') && !$('qnext').disabled){
@@ -635,6 +673,10 @@ function finish(){
                     choice:null, correct:false, q:x, seconds:0});
     }
   });
+  /* The results screen needs the answers, and QUIZ is already null by the
+     time it renders. Hand them over rather than reaching for a global that
+     has been cleared. */
+  LAST_ANSWERS = answers;
   var att = recordAttempt(D, q.portion, q.mode, answers,
                           (Date.now()-q.started)/1000, q.weak);
   if (q.dayTask) markDone(D, q.dayTask);
@@ -643,6 +685,7 @@ function finish(){
 }
 
 var MISSED_CARD = null;
+var LAST_ANSWERS = [];
 function renderResult(a){
   MISSED_CARD = null;
   var v = $('view-result');
@@ -706,6 +749,84 @@ function renderResult(a){
         });
     wrap.appendChild(t); card.appendChild(wrap); box.appendChild(card);
   }
+
+  flaggedCard(box);
+  reviewLessonCard(box, a);
+}
+
+/* ---- the questions you marked to come back to ------------------------- */
+function flaggedCard(box){
+  var marked = (LAST_ANSWERS || []).filter(function(x){ return x && x.flagged; });
+  if (!marked.length) return;
+  var c = el('div', 'card');
+  c.appendChild(cardHead('Flagged to come back to',
+                         marked.length + (marked.length === 1 ? ' question' : ' questions')));
+  c.appendChild(el('p', 'muted',
+    'You marked these during the quiz. A right answer you were not sure of is ' +
+    'worth more of your time than a wrong one you already understand.'));
+  marked.forEach(function(x){
+    var row = el('div', 'listrow');
+    var main = el('div', 'lr-main');
+    main.appendChild(el('div', 'lr-title', x.q.q));
+    var sub = el('div', 'lr-sub');
+    sub.appendChild(document.createTextNode(label(x.topic) + ' \u2014 '));
+    sub.appendChild(document.createTextNode(
+      'you answered ' + 'ABCD'[x.choice] + ', ' +
+      (x.correct ? 'which was right' : 'the answer was ' + 'ABCD'[x.q.answer])));
+    main.appendChild(sub);
+    row.appendChild(main);
+    row.appendChild(el('span', 'statuspill ' + (x.correct ? 'ok' : 'warn'),
+                       x.correct ? 'Right' : 'Wrong'));
+    c.appendChild(row);
+  });
+  box.appendChild(c);
+}
+
+/* ---- the one lesson most worth rereading ------------------------------
+   Pointing at the weakest topic is only useful if there is something to
+   read: a topic with no written lesson gets a drill instead. */
+function reviewLessonCard(box, a){
+  var keys = Object.keys(a.topics || {});
+  if (!keys.length) return;
+  var worst = keys.map(function(k){
+      var v = a.topics[k];
+      return {k: k, seen: v.seen, pct: v.correct / v.seen};
+    })
+    .filter(function(r){ return r.seen >= 2 && r.pct < 0.75; })
+    .sort(function(x, y){ return x.pct - y.pct || y.seen - x.seen; })[0];
+  if (!worst) return;
+
+  var note = studyFor(worst.k);
+  var c = el('div', 'card');
+  c.appendChild(cardHead('Read this next', 'the topic that cost you most'));
+  var row = el('div', 'listrow');
+  var main = el('div', 'lr-main');
+  main.appendChild(el('div', 'lr-title', label(worst.k)));
+  main.appendChild(el('div', 'lr-sub',
+    'You got ' + Math.round(worst.pct * 100) + '% of these right in this quiz' +
+    (note ? '. The lesson covers it in ' + note.sections.length + ' sections.'
+          : '. There is no written lesson for this one, so drill it instead.')));
+  row.appendChild(main);
+  c.appendChild(row);
+
+  var acts = el('div', 'row');
+  if (note){
+    var d = el('div'); d.style.flex = '0 0 auto';
+    var b = el('button', 'btn', 'Read the lesson');
+    b.onclick = function(){ STUDY_TOPIC = worst.k; show('study'); };
+    d.appendChild(b); acts.appendChild(d);
+  }
+  var d2 = el('div'); d2.style.flex = '0 0 auto';
+  var portion = (a.topics[worst.k] && a.topics[worst.k].portion) ||
+                (worst.k.indexOf('georgia/') === 0 ? 'georgia' : 'national');
+  var b2 = el('button', 'btn' + (note ? ' ghost' : ''), 'Drill 10 on this');
+  b2.onclick = function(){
+    startQuiz({portion: portion, count: 10, topic: worst.k, timed: false,
+               difficulty: 'harder'});
+  };
+  d2.appendChild(b2); acts.appendChild(d2);
+  c.appendChild(acts);
+  box.appendChild(c);
 }
 
 /* ---------------------------------------------------------------- today */
@@ -1819,10 +1940,48 @@ function renderStudyTopic(v, n){
   });
   acts.appendChild(bookmarkButton(n.topic));
   head.appendChild(acts);
+
+  /* A lesson runs to a dozen screens. Without this the only way to reach the
+     part you came back for is to scroll past everything else. */
+  if (n.sections && n.sections.length > 2){
+    var toc = el('nav', 'toc');
+    toc.setAttribute('aria-label', 'Sections in this lesson');
+    toc.appendChild(el('div', 'toclabel', 'In this lesson'));
+    var tl = el('ol', 'toclist');
+    n.sections.forEach(function(sec, i){
+      var li = el('li');
+      var a = el('a', null, sec.h);
+      a.href = '#sec-' + i;
+      a.onclick = function(e){
+        e.preventDefault();
+        var t = document.getElementById('sec-' + i);
+        if (t){ t.scrollIntoView({behavior: 'smooth', block: 'start'});
+                t.setAttribute('tabindex', '-1'); t.focus({preventScroll: true}); }
+      };
+      li.appendChild(a); tl.appendChild(li);
+    });
+    [['Vocabulary', n.vocab], ['Worked examples', n.examples],
+     ['Georgia differences', n.ga], ['Common traps', n.traps]
+    ].forEach(function(extra){
+      if (!extra[1] || !extra[1].length) return;
+      var li = el('li');
+      var a = el('a', null, extra[0]);
+      a.href = '#blk-' + extra[0].replace(/\W+/g, '');
+      a.onclick = function(e){
+        e.preventDefault();
+        var t = document.getElementById('blk-' + extra[0].replace(/\W+/g, ''));
+        if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'});
+      };
+      li.appendChild(a); tl.appendChild(li);
+    });
+    toc.appendChild(tl);
+    head.appendChild(toc);
+  }
   box.appendChild(head);
 
-  n.sections.forEach(function(sec){
+  n.sections.forEach(function(sec, i){
     var c = el('div', 'card');
+    c.id = 'sec-' + i;
     c.appendChild(el('h2', null, sec.h));
     (sec.p || []).forEach(function(para){ c.appendChild(el('p', null, para)); });
     if (sec.l && sec.l.length){
@@ -1837,6 +1996,7 @@ function renderStudyTopic(v, n){
 
   if (n.vocab.length){
     var vc = el('div', 'card');
+    vc.id = 'blk-Vocabulary';
     vc.appendChild(cardHead('Vocabulary', n.vocab.length + ' terms'));
     var vl = el('div', 'vocablist');
     n.vocab.forEach(function(pair){
@@ -1852,6 +2012,7 @@ function renderStudyTopic(v, n){
 
   if (n.examples.length){
     var ec = el('div', 'card');
+    ec.id = 'blk-Workedexamples';
     ec.appendChild(cardHead('Worked examples', 'follow the steps'));
     n.examples.forEach(function(ex){
       var w = el('div', 'example');
@@ -1874,6 +2035,7 @@ function renderStudyTopic(v, n){
    ['Common traps', 'where marks get lost', n.traps, 'trap']].forEach(function(blk){
     if (!blk[2] || !blk[2].length) return;
     var c = el('div', 'card');
+    c.id = 'blk-' + blk[0].replace(/\W+/g, '');
     c.appendChild(cardHead(blk[0], blk[1]));
     var l = el('div', 'callouts');
     blk[2].forEach(function(item){
@@ -1900,7 +2062,48 @@ function renderStudyTopic(v, n){
   d2.appendChild(b2); frow.appendChild(d2);
   foot.appendChild(frow);
   box.appendChild(foot);
+
+  /* Lessons are a sequence, and every one of them used to dead-end at "back
+     to all topics". Reading straight through should not require going out to
+     an index and finding your place again. */
+  var order = lessonOrder();
+  var at = order.indexOf(n.topic);
+  if (at >= 0 && order.length > 1){
+    var nav = el('nav', 'lessonnav');
+    nav.setAttribute('aria-label', 'Other lessons');
+    [[order[at - 1], 'Previous', 'prev'],
+     [order[at + 1], 'Next', 'next']].forEach(function(side){
+      if (!side[0]) return;
+      var note = studyFor(side[0]);
+      if (!note) return;
+      var b = el('button', 'lessonstep ' + side[2]);
+      b.appendChild(el('span', 'ls-dir', side[1]));
+      b.appendChild(el('span', 'ls-name', note.label));
+      b.onclick = function(){ STUDY_TOPIC = side[0]; renderStudy(); };
+      nav.appendChild(b);
+    });
+    if (nav.childNodes.length) box.appendChild(nav);
+  }
   window.scrollTo(0, 0);
+}
+
+/* The order lessons are meant to be read in: the blueprint's order, with the
+   drill topics last because they are not a section of the exam. */
+function lessonOrder(){
+  if (!DATA.study || !DATA.study.topics) return [];
+  var keys = Object.keys(DATA.study.topics);
+  var rank = {national: 0, georgia: 1, comprehensive: 2};
+  var pos = {};
+  (DATA.topics || []).forEach(function(t, i){ pos[t.key] = i; });
+  return keys.sort(function(a, b){
+    var ta = DATA.study.topics[a], tb = DATA.study.topics[b];
+    var ra = rank[ta.portion] === undefined ? 9 : rank[ta.portion];
+    var rb = rank[tb.portion] === undefined ? 9 : rank[tb.portion];
+    if (ra !== rb) return ra - rb;
+    var pa = pos[a] === undefined ? 999 : pos[a];
+    var pb = pos[b] === undefined ? 999 : pos[b];
+    return pa - pb;
+  });
 }
 
 /* ----------------------------------------------------------- weak spots */

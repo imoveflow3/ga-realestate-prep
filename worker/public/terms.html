@@ -1751,6 +1751,80 @@ button.btn.danger:hover:not(:disabled){background:#73271c; border-color:#73271c}
 }
 :root[data-theme="dark"] .acctdanger{color:#f0a496}
 :root[data-theme="dark"] button.btn.danger{background:#a8402f; border-color:#a8402f}
+
+/* ---- lesson contents and the step from one lesson to the next --------
+   A lesson runs long. The contents list turns it into something you can
+   navigate, and the pair of steps at the bottom means reading straight
+   through never goes back out to an index. */
+.toc{
+  margin-top:var(--s4); padding-top:var(--s4);
+  border-top:1px solid var(--line);
+}
+.toclabel{
+  font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:var(--s2);
+}
+.toclist{
+  margin:0; padding:0; list-style:none;
+  display:grid; gap:var(--s1) var(--s4);
+  grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+  counter-reset:toc;
+}
+.toclist li{counter-increment:toc}
+.toclist a{
+  display:block; padding:var(--s1) 0; color:var(--ink-2);
+  text-decoration:none; font-size:.92rem; line-height:1.35;
+}
+.toclist a::before{
+  content:counter(toc) ". "; color:var(--ink-3); font-variant-numeric:tabular-nums;
+}
+.toclist a:hover{color:var(--accent); text-decoration:underline}
+.toclist a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+.lessonnav{
+  display:grid; gap:var(--s3); margin-top:var(--s4);
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+}
+.lessonstep{
+  display:flex; flex-direction:column; gap:var(--s1);
+  padding:var(--s3) var(--s4); text-align:left;
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--r); cursor:pointer; font:inherit; color:inherit;
+}
+.lessonstep:hover{border-color:var(--accent); background:var(--panel-2)}
+.lessonstep:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.lessonstep.next{text-align:right}
+.ls-dir{
+  font-size:.72rem; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3);
+}
+.ls-name{font-family:var(--display); font-size:1.02rem; color:var(--ink); line-height:1.3}
+
+/* ---- flagging a question to come back to ----------------------------- */
+.qtoprow{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:var(--s3); margin-bottom:var(--s2);
+}
+.flagbtn{
+  display:inline-flex; align-items:center; gap:var(--s1); flex:none;
+  padding:.3rem .55rem; font:inherit; font-size:.78rem;
+  color:var(--ink-3); background:transparent; cursor:pointer;
+  border:1px solid var(--line); border-radius:var(--r-sm);
+}
+.flagbtn:hover{color:var(--accent); border-color:var(--accent)}
+.flagbtn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.flagbtn.on{
+  color:#8a5a00; border-color:#d9a441; background:#fdf4e0;
+}
+.flagbtn.on svg{fill:#d9a441}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .flagbtn.on{
+    color:#f0c777; border-color:#8a6a2a; background:#2b2416;
+  }
+}
+:root[data-theme="dark"] .flagbtn.on{
+  color:#f0c777; border-color:#8a6a2a; background:#2b2416;
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
