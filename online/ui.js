@@ -307,10 +307,12 @@ function countdown(){
   box.appendChild(hero);
   box.appendChild(ro('National',
                      (st.national && st.national.recent_pct != null)
-                       ? pct(st.national.recent_pct) : '\u2014', '80 q'));
+                       ? pct(st.national.recent_pct) : '\u2014',
+                     examScored('national') + ' q'));
   box.appendChild(ro('Georgia',
                      (st.georgia && st.georgia.recent_pct != null)
-                       ? pct(st.georgia.recent_pct) : '\u2014', '52 q'));
+                       ? pct(st.georgia.recent_pct) : '\u2014',
+                     examScored('georgia') + ' q'));
   box.appendChild(ro('Answered', String(h.answered),
                      h.sets + (h.sets === 1 ? ' set' : ' sets')));
   box.appendChild(examReadout(h.days_out));
@@ -1730,7 +1732,7 @@ function renderStudy(){
     var card = el('div', 'card');
     card.appendChild(cardHead(NAMES[portion],
       portion === 'comprehensive' ? 'cross-cutting drill'
-                                  : (portion === 'national' ? '80 questions' : '52 questions')));
+                                  : (examScored(portion) + ' questions')));
     var list = el('div', 'topiclist');
     keys.forEach(function(k){
       var n = DATA.study.topics[k];
@@ -2347,6 +2349,75 @@ function statRow(cells){
   return tr;
 }
 
+/* ---- the one thing this page is for ----------------------------------
+   Georgia scores the two portions separately and needs 75% on each, so
+   "am I ready" is two questions, and an average of the two can sit above
+   75% while you fail. The tables below answered it by implication; this
+   says it. */
+function standingCard(box){
+  var r = readiness(D);
+  var card = el('div', 'card standing');
+  card.appendChild(cardHead('Where you stand',
+                            'Georgia needs 75% on each portion, separately'));
+
+  var grid = el('div', 'standgrid');
+  [['National', r.national, examScored('national')],
+   ['Georgia',  r.georgia,  examScored('georgia')]].forEach(function(row){
+    var name = row[0], p = row[1], onExam = row[2];
+    var cell = el('div', 'standcell');
+    var top = el('div', 'sc-top');
+    top.appendChild(el('span', 'sc-name', name));
+    top.appendChild(el('span', 'sc-of', onExam + ' questions'));
+    cell.appendChild(top);
+
+    var val = (p && p.current !== null) ? p.current : null;
+    var fig = el('div', 'sc-val' + (val === null ? ' none'
+                 : (val >= 0.75 ? ' ok' : ' low')));
+    fig.textContent = (val === null) ? 'no data' : Math.round(val * 100) + '%';
+    cell.appendChild(fig);
+
+    /* The bar carries a mark at 75, so the pass line is a place on the bar
+       rather than a number to hold in your head. */
+    var track = el('div', 'sc-track');
+    var fill = el('div', 'sc-fill ' + (val === null ? 'none'
+                 : (val >= 0.75 ? 'ok' : 'low')));
+    fill.style.width = Math.round((val || 0) * 100) + '%';
+    track.appendChild(fill);
+    var mark = el('div', 'sc-mark');
+    mark.title = 'The 75% pass mark';
+    track.appendChild(mark);
+    cell.appendChild(track);
+
+    cell.appendChild(el('div', 'sc-note',
+      val === null ? 'No questions answered on this portion yet.'
+      : (val >= 0.75 ? 'Clearing the pass mark on recent questions.'
+                     : 'Short of 75% by ' + Math.round((0.75 - val) * 100) +
+                       ' points on recent questions.')));
+    grid.appendChild(cell);
+  });
+  card.appendChild(grid);
+
+  var verdict = el('p', 'standverdict');
+  if (r.national.current === null && r.georgia.current === null){
+    verdict.textContent = 'Nothing answered yet. Take a quiz on each portion ' +
+      'and this fills in.';
+  } else if (r.national.current === null || r.georgia.current === null){
+    var missing = (r.national.current === null) ? 'National' : 'Georgia';
+    verdict.textContent = 'You have not touched the ' + missing + ' portion yet. ' +
+      'It is scored on its own, so a strong score on the other half does not ' +
+      'carry it.';
+  } else if (r.bothOnTrack){
+    verdict.textContent = 'Both portions are above the line on recent questions. ' +
+      'Keep them there and widen your coverage.';
+  } else {
+    verdict.textContent = 'The ' + (r.blocker === 'national' ? 'National' : 'Georgia') +
+      ' portion is the one holding you back. You can pass one half and still ' +
+      'resit the other, so that is where the next hour should go.';
+  }
+  card.appendChild(verdict);
+  box.appendChild(card);
+}
+
 function renderDash(){
   var v = $('view-dash');
   v.innerHTML = '<div id="dashBody"></div>';
@@ -2359,6 +2430,8 @@ function renderDash(){
     box.appendChild(empty);
     return;
   }
+
+  standingCard(box);
 
   var sec = el('div', 'card');
   sec.appendChild(cardHead('Sections', 'recent accuracy'));
@@ -2521,7 +2594,8 @@ function renderDash(){
 function renderPlan(){
   var v = $('view-plan'), p = D.profile || {};
   v.innerHTML =
-    '<h1>Study plan</h1><p class="sub">Weighted for the real exam: 80 national ' +
+    '<h1>Study plan</h1><p class="sub">Weighted for the real exam: ' +
+    examScored('national') + ' national ' +
     'questions, 52 Georgia.</p>' +
     '<div class="card"><div class="row">' +
       '<div><label for="examDate">Exam date</label><input type="date" id="examDate"></div>' +
@@ -2609,10 +2683,26 @@ function drawPlan(){
   });
   head.appendChild(g); box.appendChild(head);
 
+  /* A list of week cards reads as a pile of homework. The same weeks on a
+     rail read as a route with a beginning and an end, and the marker for
+     the week you are actually in tells you whether you are behind. */
+  var line = el('div', 'timeline');
+  var today = todayISO();
   p.weeks.forEach(function(w){
-    var c = el('div','card'), wk = el('div','week');
-    wk.appendChild(el('h3', null, 'Week '+w.week+' -- '+w.phase));
-    wk.appendChild(el('div','when', w.start+' to '+w.end+'  |  target '+w.target_questions+
+    var c = el('div','card tl-item'), wk = el('div','week');
+    var isNow = (w.start <= today && today <= w.end);
+    var isPast = (w.end < today);
+    c.className = 'card tl-item' + (isNow ? ' now' : (isPast ? ' past' : ''));
+    var dot = el('div', 'tl-dot');
+    dot.setAttribute('aria-hidden', 'true');
+    c.appendChild(dot);
+    var hrow = el('div', 'tl-head');
+    hrow.appendChild(el('h3', null, 'Week '+w.week+' \u2014 '+w.phase));
+    if (isNow) hrow.appendChild(el('span', 'statuspill ok', 'This week'));
+    else if (isPast) hrow.appendChild(el('span', 'statuspill', 'Done'));
+    wk.appendChild(hrow);
+    wk.appendChild(el('div','when', niceDate(w.start)+' to '+niceDate(w.end)+
+      '  |  target '+w.target_questions+
       ' questions ('+w.national_questions+' national, '+w.georgia_questions+' Georgia)'));
     var ul = el('ul');
     w.tasks.forEach(function(t){ ul.appendChild(el('li', null, t)); });
@@ -2630,8 +2720,9 @@ function drawPlan(){
       });
       wk.appendChild(fl);
     }
-    c.appendChild(wk); box.appendChild(c);
+    c.appendChild(wk); line.appendChild(c);
   });
+  box.appendChild(line);
 
   if (p.buffer_plan.length){
     var b = el('div','card');
@@ -2640,6 +2731,26 @@ function drawPlan(){
     p.buffer_plan.forEach(function(t){ ul2.appendChild(el('li', null, t)); });
     b.appendChild(ul2); box.appendChild(b);
   }
+}
+
+/* Dates in the plan were ISO strings, which are unambiguous and unreadable.
+   "Thu 2 Oct" is what somebody checking a schedule actually wants. */
+function niceDate(iso){
+  if (!iso) return '';
+  var parts = String(iso).split('-');
+  if (parts.length !== 3) return iso;
+  var d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+  if (isNaN(d.getTime())) return iso;
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var mon = ['Jan','Feb','Mar','Apr','May','Jun',
+             'Jul','Aug','Sep','Oct','Nov','Dec'];
+  return days[d.getDay()] + ' ' + d.getDate() + ' ' + mon[d.getMonth()];
+}
+
+function todayISO(){
+  var d = new Date();
+  function two(n){ return (n < 10 ? '0' : '') + n; }
+  return d.getFullYear() + '-' + two(d.getMonth() + 1) + '-' + two(d.getDate());
 }
 
 /* ---------------------------------------------------------------- setup */
