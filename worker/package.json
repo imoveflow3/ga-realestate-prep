@@ -11,7 +11,8 @@
     "db:local": "wrangler d1 execute ga-prep --local --file=./schema.sql",
     "db:reset": "wrangler d1 execute ga-prep --local --file=./reset-local.sql",
     "db:migrate": "./migrate.sh",
-    "db:migrate:remote": "./migrate.sh --remote"
+    "db:migrate:remote": "./migrate.sh --remote",
+    "set-password": "node set-password.js"
   },
   "devDependencies": {
     "wrangler": "^3"
