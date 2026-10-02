@@ -2148,10 +2148,81 @@ function focusFirstError(){
   if (first) first.focus();
 }
 
+/* Where somebody lands the moment they are authenticated. Paid people go
+   into the app. Everybody else stays exactly where they are: signing in and
+   paying are two steps of one card, not two pages. */
 function afterAuthed(d){
   if (d.paid) { location.href = '/app'; return; }
-  if (d.verified === false){ location.href = '/auth?verify=sent'; return; }
-  location.href = '/?pay=1';
+  ME.signedIn = true;
+  if (FORM.values.email) ME.email = FORM.values.email;
+  ME.verified = (d.verified !== false);
+  if (typeof d.canPay === 'boolean') ME.canPay = d.canPay;
+  /* Whether an address was actually confirmed by email is a fact about this
+     deployment, not about the person. Carry it so the card can tell the
+     truth about it. */
+  PAY.justMade  = (d.created === true);
+  PAY.emailSent = (d.emailSent === true);
+  FORM.tab = 'pay';
+  FORM.notice = null;
+  FORM.errors = {};
+  renderAuthPage();
+  window.scrollTo(0, 0);
+}
+
+var PAY = {justMade: false, emailSent: false};
+
+/* The second half of the one page: signed in, not paid yet, one button. */
+function payStep(card, wrap, v){
+  /* The tab was baked at build time as "Create your account", which stops
+     being true the moment the card moves on. */
+  document.title = 'Checkout \u2014 Georgia Real Estate Exam Prep';
+  card.appendChild(el('h1', null, PAY.justMade ? 'Your account is ready'
+                                               : 'One payment left'));
+  card.appendChild(el('p', 'gatelede',
+    'Full access to the notes, the question bank and your progress. ' +
+    'One payment, nothing renews.'));
+  card.appendChild(el('p', 'whoami', 'Signed in as ' + (ME.email || 'your account')));
+
+  /* Say what is true about email confirmation on this deployment rather than
+     telling somebody to check an inbox nothing was sent to. */
+  if (PAY.justMade && !ME.verified){
+    card.appendChild(PAY.emailSent
+      ? authNotice('good', 'We sent a confirmation link to ' + (ME.email || 'your email') +
+                           '. You do not need it to carry on \u2014 it just secures ' +
+                           'your account for later.')
+      : authNotice('warn', 'Email confirmation is not switched on for this site yet, ' +
+                           'so there is nothing to check for in your inbox. Your ' +
+                           'account works now.'));
+  }
+
+  var price = el('div', 'gateprice');
+  price.appendChild(el('span', 'amount', money(HOME.price)));
+  price.appendChild(el('span', 'once', 'one payment, no subscription'));
+  card.appendChild(price);
+
+  var acts = el('div', 'gateacts');
+  if (ME.canPay === false){
+    /* A button that cannot take money is worse than no button. */
+    card.appendChild(authNotice('warn',
+      'Card payments are not connected on this site yet, so checkout cannot ' +
+      'open. Nothing is wrong with your account \u2014 it is waiting for you.'));
+  } else {
+    var pay = el('button', 'btn wide');
+    pay.textContent = 'Pay ' + money(HOME.price) + ' and start studying';
+    pay.disabled = BUYING;
+    pay.onclick = function(){ buy(ME.email); };
+    acts.appendChild(pay);
+    card.appendChild(acts);
+    card.appendChild(el('p', 'gatefine',
+      'Secure checkout by Stripe. Full refund within 14 days.'));
+  }
+
+  card.appendChild(previewList());
+  var out = el('button', 'linkish', 'Use a different account');
+  out.onclick = signOut;
+  card.appendChild(out);
+  wrap.appendChild(card);
+  v.appendChild(wrap);
 }
 
 function renderAuthPage(){
@@ -2175,8 +2246,9 @@ function renderAuthPage(){
                    'Log in and we will send a new one.'],
     'needed': ['warn', 'Confirm your email address to carry on. ' +
                        'Check your inbox for the link.'],
-    'sent': ['good', 'Account created. Check your email for the confirmation ' +
-                     'link, then log in.']
+    'sent': ['good', 'Account created. If a confirmation link reaches your ' +
+                     'inbox it will secure the account; you can log in now ' +
+                     'either way.']
   }[q.get('verify')];
   if (said) card.appendChild(authNotice(said[0], said[1]));
   if (q.get('gate')) card.appendChild(authNotice('warn',
@@ -2185,6 +2257,10 @@ function renderAuthPage(){
 
   if (q.get('reset')) return resetForm(card, wrap, v, q.get('reset'));
   if (FORM.tab === 'forgot') return forgotForm(card, wrap, v);
+  /* Already signed in and unpaid, whether from a moment ago or a week ago:
+     the till is this page. */
+  if (FORM.tab === 'pay' || (ME.signedIn && !ME.paid)) return payStep(card, wrap, v);
+  if (ME.signedIn && ME.paid){ location.href = '/app'; return; }
 
   /* ---- the two tabs ---- */
   var tabs = el('div', 'authtabs');

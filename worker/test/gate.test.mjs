@@ -114,7 +114,8 @@ await it('a stranger cannot read or write progress', async () => {
 
 await it('/api/me says not signed in', async () => {
   const me = await (await worker.fetch(req('/api/me'), env, {})).json();
-  assert.deepEqual(me, { signedIn: false, paid: false, verified: false, google: true });
+  assert.deepEqual(me, { signedIn: false, paid: false, verified: false, google: true,
+                         canEmail: true, canPay: true });
 });
 
 await it('a forged webhook signature is rejected and grants nothing', async () => {
@@ -381,6 +382,7 @@ await it('/api/me reports signed in, not paid', async () => {
   const me = await (await worker.fetch(req('/api/me', {
     headers: { Cookie: gCookie } }), env, {})).json();
   assert.deepEqual(me, { signedIn: true, paid: false, verified: true, google: true,
+                         canEmail: true, canPay: true,
                          email: 'gmail.user@gmail.com', name: '', role: 'user' });
 });
 
@@ -466,7 +468,8 @@ await it('signing up creates an account, signs you in, and pays for nothing', as
                            phone: '(404) 555-1234', password: PW, password2: PW,
                            terms: true }) }), env, {});
   assert.equal(res.status, 200);
-  assert.deepEqual(await res.json(), { ok: true, paid: false, verified: false });
+  assert.deepEqual(await res.json(), { ok: true, paid: false, verified: false,
+                                      created: true, emailSent: true, canPay: true });
   pwCookie = cookieOf(res);
   const u = db._tables.users.find(u => u.email === 'pw@example.com');
   assert.ok(u, 'no account');
@@ -817,6 +820,52 @@ await it('no route hands out the role', async () => {
 });
 
 
+
+/* ------------------------------------------------------------------------
+   TELLING THE TRUTH ABOUT WHAT IS CONFIGURED
+
+   The sign-in card decides what to promise from these flags. If they lie,
+   the page tells somebody to check an inbox nothing was sent to -- which is
+   exactly the bug these tests exist to prevent.
+   ------------------------------------------------------------------------ */
+console.log('\nWHAT THIS DEPLOYMENT CAN ACTUALLY DO');
+
+await it('with no mail service, /api/me admits it cannot send email', async () => {
+  const bare = Object.assign({}, env, { RESEND_API_KEY: '' });
+  const me = await (await worker.fetch(req('/api/me'), bare, {})).json();
+  assert.equal(me.canEmail, false, 'claimed it could send email with no key');
+});
+
+await it('with no card processor, /api/me admits it cannot take money', async () => {
+  const bare = Object.assign({}, env, { STRIPE_SECRET_KEY: '' });
+  const me = await (await worker.fetch(req('/api/me'), bare, {})).json();
+  assert.equal(me.canPay, false, 'claimed it could take payment with no key');
+});
+
+await it('signing up with no mail service does not claim an email was sent', async () => {
+  const bare = Object.assign({}, env, { RESEND_API_KEY: '' });
+  const res = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'nomail@example.com', name: 'No Mail',
+                           phone: '(404) 555-9000', password: PW, password2: PW,
+                           terms: true }) }), bare, {});
+  assert.equal(res.status, 200, 'signup failed without a mail service');
+  const d = await res.json();
+  assert.equal(d.created, true, 'did not report the account as new');
+  assert.equal(d.emailSent, false, 'claimed to have sent a confirmation email');
+});
+
+await it('an account still works when no confirmation email could be sent', async () => {
+  const bare = Object.assign({}, env, { RESEND_API_KEY: '' });
+  const res = await worker.fetch(req('/api/auth/login', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'nomail@example.com', password: PW }) }), bare, {});
+  assert.equal(res.status, 200, 'an unverifiable account was locked out');
+  const me = await (await worker.fetch(req('/api/me', {
+    headers: { Cookie: cookieOf(res) } }), bare, {})).json();
+  assert.equal(me.signedIn, true);
+  assert.equal(me.paid, false, 'signing up paid for itself');
+});
 console.log('\nADMIN SURFACES');
 
 await it('a stranger gets 403 from every admin route', async () => {

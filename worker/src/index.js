@@ -207,18 +207,25 @@ export default {
 
       /* The account exists but is not proven. Send the link; a failure to send
          is not a failure to sign up. */
+      let emailSent = false;
       const gate = await accounts.maySend(env, email, 'verify');
       if (gate.ok) {
         const token = await accounts.issueToken(env, user.id, 'verify',
                                                 accounts.VERIFY_HOURS * 60);
-        await sendMail(env, email, 'Confirm your email address',
+        const sent = await sendMail(env, email, 'Confirm your email address',
           `Confirm your email address for Georgia Real Estate Exam Prep:\n\n` +
           `${origin}/auth/verify?token=${token}\n\n` +
           `The link works for ${accounts.VERIFY_HOURS} hours. If you did not ` +
           `create an account, ignore this.`);
+        emailSent = !sent.error;
       }
       return json({ ok: true, paid: !!(row && row.paid),
-                    verified: !!(row && row.email_verified) },
+                    verified: !!(row && row.email_verified),
+                    /* Lets the next screen greet a new account differently
+                       from a returning log-in. */
+                    created: true,
+                    emailSent: emailSent,
+                    canPay: !!env.STRIPE_SECRET_KEY },
                   200, { 'Set-Cookie': cookie });
     }
 
@@ -249,7 +256,8 @@ export default {
       await clearFailures(email);
       await accounts.syncRole(env, row.id, email);
       const { cookie } = await createSession(env, row.id);
-      return json({ ok: true, paid: !!row.paid, verified: !!row.email_verified },
+      return json({ ok: true, paid: !!row.paid, verified: !!row.email_verified,
+                    canPay: !!env.STRIPE_SECRET_KEY },
                   200, { 'Set-Cookie': cookie });
     }
 
@@ -475,7 +483,15 @@ export default {
       const me = await currentUser(request, env);
       /* The page needs to know whether to offer a button that works. An
          unconfigured Google button is a dead end dressed as a shortcut. */
-      const base = { google: google.configured(env) };
+      const base = { google: google.configured(env),
+                     /* What this deployment can actually do. A page that
+                        promises an email nobody configured is worse than a
+                        page that says so. */
+                     /* Not `email` -- that name is the signed-in user's
+                        address four lines down, and the flag would have
+                        quietly replaced it. */
+                     canEmail: !!env.RESEND_API_KEY,
+                     canPay: !!env.STRIPE_SECRET_KEY };
       return json(me ? Object.assign(base, { signedIn: true, paid: me.paid,
                                              email: me.email, verified: me.verified,
                                              name: me.name, role: me.role })
