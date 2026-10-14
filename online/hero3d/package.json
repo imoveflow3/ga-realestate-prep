@@ -1,0 +1,13 @@
+{
+  "name": "ga-prep-hero3d",
+  "private": true,
+  "description": "Builds docs/assets/hero3d.js, the front page's 3D study machine. Only needed to change the scene; the site build uses the committed bundle.",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild hero3d.src.js --bundle --minify --format=esm --target=es2020 --legal-comments=eof --outfile=../../docs/assets/hero3d.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1"
+  }
+}

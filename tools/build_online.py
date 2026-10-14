@@ -402,6 +402,10 @@ def main():
     for name in ("icon-192.png", "icon-512.png", "icon-180.png", "card.png"):
         if not os.path.exists(os.path.join(assets, name)):
             raise SystemExit("missing docs/assets/%s -- run tools/make_icons.py" % name)
+    # The front page's 3D machine; home.js loads it once the stage is on screen.
+    if not os.path.exists(os.path.join(assets, "hero3d.js")):
+        raise SystemExit("missing docs/assets/hero3d.js -- "
+                         "cd online/hero3d && npm install && npm run build")
     manifest = dict(MANIFEST, start_url="app/", scope="./")
     write(os.path.join(DOCS, "manifest.webmanifest"), json.dumps(manifest, indent=2) + "\n")
     write(os.path.join(DOCS, "sw.js"), SW % {"version": stamp})

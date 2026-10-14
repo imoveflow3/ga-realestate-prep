@@ -10,3 +10,4 @@ __pycache__/
 worker/node_modules/
 worker/.wrangler/
 .dev.vars
+online/hero3d/node_modules/

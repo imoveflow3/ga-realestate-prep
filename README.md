@@ -36,6 +36,15 @@ cd ~/ga-realestate-prep && python3 tools/build_online.py && git add -A && git co
 GitHub Pages redeploys in about a minute. To update the claude.ai page as well,
 republish `online/ga-real-estate.html` to the same artifact URL.
 
+The 3D study machine beside the front-page card is a prebuilt bundle,
+`docs/assets/hero3d.js`, so the build above still needs only Python. To change
+the scene, edit `online/hero3d/hero3d.src.js` and rebuild the bundle (this one
+step needs Node):
+
+```bash
+cd ~/ga-realestate-prep/online/hero3d && npm install && npm run build
+```
+
 **Locally:**
 
 ```bash

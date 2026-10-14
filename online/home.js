@@ -761,11 +761,12 @@ function renderMinimal(v, q){
     'fill="none" stroke="currentColor" stroke-width="30" stroke-linejoin="round"/></svg>';
   card.appendChild(mark);
 
-  card.appendChild(el('h1', null,
-    'Prepare for your Georgia real estate exam with a clear study plan.'));
+  card.appendChild(el('h1', null, 'Pass the real estate exam.'));
   card.appendChild(el('p', 'gatelede',
-    'Study state-specific topics, practice exam-style questions, and track ' +
-    'your progress in one place.'));
+    'A study plan built around your test date, ' +
+    HOME.totals.total.toLocaleString('en-US') + ' practice questions, and ' +
+    'mock exams scored the way the real one is — national and Georgia parts ' +
+    'separately.'));
 
   var acts = el('div', 'gateacts');
 
@@ -833,6 +834,123 @@ function renderMinimal(v, q){
     'renews, full refund within 14 days.'));
   wrap.appendChild(card);
   v.appendChild(wrap);
+}
+
+/* --------------------------------------------------- the 3D study machine */
+/* The path a student takes, as a machine filling the first screen: study plan,
+   lessons, practice, mock exam, pass. Pure garnish -- the card works the
+   moment the page paints, and three.js (assets/hero3d.js, ~160 KB gzipped)
+   only loads once the stage is on screen. No WebGL, a data-saver connection
+   or a failed load and the stage removes itself, leaving the card alone. */
+var HERO = null;
+var HERO_STEPS = ['Study plan', 'Lessons', 'Practice', 'Mock exam', 'Pass'];
+
+function dropHero(){
+  if (HERO && HERO.dispose) HERO.dispose();
+  HERO = null;
+}
+
+function mountHero(v){
+  var wrap = v.querySelector('.gatewrap');
+  var conn = navigator.connection;
+  if (!wrap || (conn && conn.saveData) || !window.IntersectionObserver) return;
+
+  var stage = el('div', 'hero3d');
+  var scene = el('div', 'hero3d-scene');
+  scene.setAttribute('role', 'img');
+  scene.setAttribute('aria-label', 'A model of the study path as a machine: ' +
+    'study plan, lessons, practice, mock exam, pass. A card rides the belt ' +
+    'from one station to the next.');
+  stage.appendChild(scene);
+
+  var nav = el('div', 'hero3d-steps');
+  nav.setAttribute('role', 'group');
+  nav.setAttribute('aria-label', 'Look at a step');
+  var buttons = HERO_STEPS.map(function(name, i){
+    var b = el('button', 'hero3d-step');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', 'false');
+    b.appendChild(el('span', 'no', String(i + 1).padStart(2, '0')));
+    b.appendChild(document.createTextNode(name));
+    nav.appendChild(b);
+    return b;
+  });
+  stage.appendChild(nav);
+  wrap.classList.add('has3d');
+  wrap.appendChild(stage);
+
+  var token = HERO = {};
+  var focused = -1;
+  function showFocus(i){
+    focused = i;
+    buttons.forEach(function(b, j){ b.setAttribute('aria-pressed', String(j === i)); });
+  }
+  function showStep(i){
+    buttons.forEach(function(b, j){ b.classList.toggle('live', j === i); });
+  }
+  /* One screen, no scrolling. Wide screens always: the CSS sheds the extras
+     (feature list, icon, fine print) as the window gets shorter. A phone too
+     short for even the headline and button scrolls instead of cutting them
+     off -- and then the wheel and a finger go back to the page. */
+  var sceneApi = null;
+  function fit(){
+    var body = document.body;
+    body.classList.add('onescreen');
+    if (matchMedia('(max-width: 980px)').matches &&
+        wrap.scrollHeight > wrap.clientHeight + 1)
+      body.classList.remove('onescreen');
+    if (sceneApi) sceneApi.setInteractive(body.classList.contains('onescreen'));
+  }
+  var fitQueued = false;
+  function refit(){
+    if (fitQueued) return;
+    fitQueued = true;
+    requestAnimationFrame(function(){ fitQueued = false; fit(); });
+  }
+  function unfit(){
+    window.removeEventListener('resize', refit);
+    document.body.classList.remove('onescreen');
+  }
+  fit();
+  window.addEventListener('resize', refit);
+
+  function giveUp(){
+    if (HERO !== token) return;
+    HERO = null;
+    unfit();
+    stage.remove();
+    wrap.classList.remove('has3d');
+  }
+
+  var seen = new IntersectionObserver(function(entries){
+    if (!entries[0].isIntersecting) return;
+    seen.disconnect();
+    var src = new URL('assets/hero3d.js', document.baseURI).href;
+    import(src).then(function(mod){
+      if (HERO !== token) return;           // the page re-rendered meanwhile
+      if (!mod.supported()) return giveUp();
+      var api = mod.mount(scene, {
+        onStep: showStep,
+        onFocus: showFocus,
+        onReady: function(){ stage.classList.add('ready'); },
+        /* matches the CSS breakpoint where the words sit on the scene */
+        frameRight: function(){ return matchMedia('(min-width: 981px)').matches; },
+        interactive: function(){ return document.body.classList.contains('onescreen'); }
+      });
+      if (!api) return giveUp();
+      sceneApi = api;
+      token.dispose = function(){ unfit(); api.dispose(); };
+      buttons.forEach(function(b, i){
+        b.onclick = function(){
+          var next = (focused === i) ? -1 : i;  // a second press goes back out
+          api.focus(next);
+          showFocus(next);
+        };
+      });
+    })['catch'](giveUp);
+  }, {rootMargin: '200px'});
+  seen.observe(stage);
+  token.dispose = function(){ unfit(); seen.disconnect(); };
 }
 
 /* What you get, in four lines. Not statistics, not cards, not a pitch. */
@@ -1030,6 +1148,7 @@ function renderBuy(v, q){
 
 function render(){
   var v = $('page');
+  dropHero();
   v.innerHTML = '';
   if (HOME.preview){
     var pv = el('div', 'previewbar');
@@ -1044,7 +1163,7 @@ function render(){
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
   if (HOME.page === 'auth') return renderAuthPage();
   if (HOME.page === 'buy') return renderBuy(v, q);
-  if (HOME.layout === 'minimal') return renderMinimal(v, q);
+  if (HOME.layout === 'minimal'){ renderMinimal(v, q); mountHero(v); return; }
   return renderWelcome(v, q);
 }
 
