@@ -27,7 +27,7 @@ FREE_SITE = os.environ.get(
 # The address a buyer writes to when something goes wrong. It appears in the
 # footer of every page, in the terms, and in the privacy policy as the way to
 # have an account deleted -- so it has to be an address somebody reads.
-SUPPORT_EMAIL = os.environ.get("GA_SUPPORT_EMAIL", "").strip()
+SUPPORT_EMAIL = os.environ.get("GA_SUPPORT_EMAIL", "allrealwebsite@gmail.com").strip()
 
 # One payment, in cents.
 PRICE_CENTS = int(os.environ.get("GA_PRICE_CENTS", "1900"))
