@@ -8,4 +8,4 @@ Disallow: /buy
 Disallow: /preview
 Disallow: /api/
 
-Sitemap: https://example.invalid/sitemap.xml
+Sitemap: https://ga-prep.zamirbracey3.workers.dev/sitemap.xml

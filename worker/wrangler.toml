@@ -27,10 +27,10 @@ not_found_handling = "404-page"
 [[d1_databases]]
 binding = "DB"
 database_name = "ga-prep"
-database_id = "PASTE_YOUR_DATABASE_ID_HERE"
+database_id = "3067caf5-0aab-4f2d-bf28-4bbab4bd4524"
 
 [vars]
 PRICE_CENTS = "1900"
 PRODUCT_NAME = "Real Estate Exam Prep"
-SITE_URL = "https://ga-prep.YOUR-SUBDOMAIN.workers.dev"
+SITE_URL = "https://ga-prep.zamirbracey3.workers.dev"
 FROM_EMAIL = "login@yourdomain.com"

@@ -17,7 +17,8 @@ import os
 # Where the paid site is served from. A Cloudflare Worker is published at
 # <name>.<subdomain>.workers.dev until a real domain is pointed at it, so this
 # stays a placeholder until the first deploy tells us the truth.
-PAID_SITE = os.environ.get("GA_PAID_SITE", "").strip()
+PAID_SITE = os.environ.get(
+    "GA_PAID_SITE", "https://ga-prep.zamirbracey3.workers.dev/").strip()
 
 # The free, public study tool on GitHub Pages. This one is already real.
 FREE_SITE = os.environ.get(
