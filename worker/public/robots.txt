@@ -8,4 +8,4 @@ Disallow: /buy
 Disallow: /preview
 Disallow: /api/
 
-Sitemap: https://ga-prep.zamirbracey3.workers.dev/sitemap.xml
+Sitemap: https://study.realestateexamprep.workers.dev/sitemap.xml

@@ -12,7 +12,7 @@
 #   wrangler secret put RESEND_API_KEY      # optional: sign-in codes by email
 #   wrangler deploy
 
-name = "ga-prep"
+name = "study"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
@@ -32,5 +32,5 @@ database_id = "3067caf5-0aab-4f2d-bf28-4bbab4bd4524"
 [vars]
 PRICE_CENTS = "1900"
 PRODUCT_NAME = "Real Estate Exam Prep"
-SITE_URL = "https://ga-prep.zamirbracey3.workers.dev"
+SITE_URL = "https://study.realestateexamprep.workers.dev"
 FROM_EMAIL = "login@yourdomain.com"
