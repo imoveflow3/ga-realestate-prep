@@ -69,7 +69,7 @@ async function sendCode(env, email, code) {
       from: env.FROM_EMAIL || 'login@example.com',
       to: [email],
       subject: `${code} is your sign-in code`,
-      text: `Your sign-in code for Georgia Real Estate Exam Prep is ${code}.\n` +
+      text: `Your sign-in code for Real Estate Exam Prep is ${code}.\n` +
             `It expires in 15 minutes. If you did not ask for it, ignore this.`,
     }),
   });
@@ -224,7 +224,7 @@ export default {
         const token = await accounts.issueToken(env, user.id, 'verify',
                                                 accounts.VERIFY_HOURS * 60);
         const sent = await sendMail(env, email, 'Confirm your email address',
-          `Confirm your email address for Georgia Real Estate Exam Prep:\n\n` +
+          `Confirm your email address for Real Estate Exam Prep:\n\n` +
           `${origin}/auth/verify?token=${token}\n\n` +
           `The link works for ${accounts.VERIFY_HOURS} hours. If you did not ` +
           `create an account, ignore this.`);
@@ -295,7 +295,7 @@ export default {
       const token = await accounts.issueToken(env, who.id, 'verify',
                                               accounts.VERIFY_HOURS * 60);
       const sent = await sendMail(env, who.email, 'Confirm your email address',
-        `Confirm your email address for Georgia Real Estate Exam Prep:\n\n` +
+        `Confirm your email address for Real Estate Exam Prep:\n\n` +
         `${origin}/auth/verify?token=${token}\n\n` +
         `The link works for ${accounts.VERIFY_HOURS} hours.`);
       if (sent.error) return json({ error: 'Could not send that just now.' }, 502);
@@ -316,7 +316,7 @@ export default {
         const token = await accounts.issueToken(env, row.id, 'reset',
                                                 accounts.RESET_MINUTES);
         await sendMail(env, email, 'Reset your password',
-          `Set a new password for Georgia Real Estate Exam Prep:\n\n` +
+          `Set a new password for Real Estate Exam Prep:\n\n` +
           `${origin}/auth?reset=${token}\n\n` +
           `The link works for ${accounts.RESET_MINUTES} minutes. If you did ` +
           `not ask for this, ignore it -- nothing has changed.`);

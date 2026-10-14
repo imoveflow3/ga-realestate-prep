@@ -30,7 +30,7 @@ OUT_STANDALONE = os.path.join(APP_DIR, "index.html")   # full document, for any 
 OUT_HOME = os.path.join(DOCS, "index.html")            # the welcome page owns /
 
 SITE = "https://imoveflow3.github.io/ga-realestate-prep/"
-TITLE = "Georgia Real Estate Exam Prep \u2014 free salesperson practice tests"
+TITLE = "Real Estate Exam Prep \u2014 free salesperson practice tests"
 BLURB = ("Free practice for the Georgia real estate salesperson licensing exam. "
          "%(q)d exam-style questions scored National and Georgia separately, "
          "real estate math worked step by step, study notes with %(v)d defined "
@@ -81,14 +81,14 @@ def head(questions, terms, site=None, title=None, blurb=None,
 <meta name="theme-color" content="#faf7f0">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Georgia Real Estate Exam Prep">
+<meta property="og:site_name" content="Real Estate Exam Prep">
 <meta property="og:title" content="%(social)s">
 <meta property="og:description" content="%(blurb)s">
 <meta property="og:url" content="%(canonical)s">
 <meta property="og:image" content="%(site)s%(a)scard.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Georgia Real Estate Exam Prep">
+<meta property="og:image:alt" content="Real Estate Exam Prep">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="%(social)s">
 <meta name="twitter:description" content="%(blurb)s">
@@ -108,7 +108,7 @@ def head(questions, terms, site=None, title=None, blurb=None,
        "jsonld": json.dumps({
            "@context": "https://schema.org",
            "@type": "LearningResource",
-           "name": "Georgia Real Estate Exam Prep",
+           "name": "Real Estate Exam Prep",
            "description": blurb,
            "url": canonical,
            "inLanguage": "en-US",
@@ -126,7 +126,7 @@ def head(questions, terms, site=None, title=None, blurb=None,
 
 
 MANIFEST = {
-    "name": "Georgia Real Estate Exam Prep",
+    "name": "Real Estate Exam Prep",
     "short_name": "GA Prep",
     "description": ("Free practice tests, math and study notes for the Georgia "
                     "real estate salesperson licensing exam."),
@@ -337,10 +337,10 @@ def build_home(stamp, css, totals, price_cents=1900):
     body = body.replace('<a href="mailto:">Support</a>\n', "")
     cut = body.index("<header")
     h = head(totals["written"], totals["terms"]).replace(
-        "<title>Georgia Real Estate Exam Prep \u2014 free salesperson practice tests</title>",
-        "<title>Georgia Real Estate Exam Prep \u2014 free practice for the "
+        "<title>Real Estate Exam Prep \u2014 free salesperson practice tests</title>",
+        "<title>Real Estate Exam Prep \u2014 free practice for the "
         "salesperson exam</title>")
-    return (h + body[:cut].replace("<title>Georgia Real Estate Prep</title>\n", "")
+    return (h + body[:cut].replace("<title>Real Estate Exam Prep</title>\n", "")
             + "</head>\n<body>\n" + body[cut:] + "\n</body>\n</html>\n")
 
 
@@ -380,7 +380,7 @@ def main():
     if marker not in html:
         raise SystemExit("shell.html no longer starts its body with a <header> element")
     cut = html.index(marker)
-    shell_head = html[:cut].replace("<title>Georgia Real Estate Prep</title>\n", "", 1)
+    shell_head = html[:cut].replace("<title>Real Estate Exam Prep</title>\n", "", 1)
     standalone = (head(fixed_n, vocab_n) + shell_head +
                   "</head>\n<body>\n" + html[cut:] + "\n</body>\n</html>\n")
     # the app sits one level down; its asset and manifest links move with it

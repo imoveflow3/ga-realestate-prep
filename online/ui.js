@@ -3180,7 +3180,7 @@ function cycleTheme(){
 /* ---- share ---- */
 function doShare(){
   var url = location.origin + location.pathname;
-  var payload = {title: 'Georgia Real Estate Exam Prep',
+  var payload = {title: 'Real Estate Exam Prep',
                  text: 'Free practice for the Georgia salesperson exam — ' +
                        'no signup, works offline.',
                  url: url};

@@ -51,7 +51,7 @@ def og_svg(questions, terms):
         fill="none" stroke="%(ac)s" stroke-width="30" stroke-linejoin="round"/>
 </g>
 <text x="212" y="186" font-family=%(f)s font-size="34" font-weight="700"
-      letter-spacing="8" fill="%(dim)s">GEORGIA REAL ESTATE</text>
+      letter-spacing="8" fill="%(dim)s">REAL ESTATE EXAM PREP</text>
 <text x="92" y="318" font-family=%(f)s font-size="94" font-weight="700"
       letter-spacing="-1" fill="%(ink)s">Pass the salesperson</text>
 <text x="92" y="418" font-family=%(f)s font-size="94" font-weight="700"

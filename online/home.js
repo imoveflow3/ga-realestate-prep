@@ -77,7 +77,7 @@ function buildIntro(){
     '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
     'fill="none" stroke="currentColor" stroke-width="26" stroke-linejoin="round"/></svg>';
   wrap.appendChild(mark);
-  wrap.appendChild(el('div', 'intro-word', 'Georgia Real Estate'));
+  wrap.appendChild(el('div', 'intro-word', 'Real Estate'));
   return wrap;
 }
 
@@ -419,7 +419,7 @@ function hasAccess(){
 function payStep(card, wrap, v){
   /* The tab was baked at build time as "Create your account", which stops
      being true the moment the card moves on. */
-  document.title = 'Checkout \u2014 Georgia Real Estate Exam Prep';
+  document.title = 'Checkout \u2014 Real Estate Exam Prep';
   card.appendChild(el('h1', null, PAY.justMade ? 'Your account is ready'
                                                : 'One payment left'));
   card.appendChild(el('p', 'gatelede',

@@ -39,7 +39,7 @@ export async function createCheckout(env, { email, origin, userId }) {
     'line_items[0][price_data][currency]': 'usd',
     'line_items[0][price_data][unit_amount]': String(env.PRICE_CENTS || '1900'),
     'line_items[0][price_data][product_data][name]':
-      env.PRODUCT_NAME || 'Georgia Real Estate Exam Prep',
+      env.PRODUCT_NAME || 'Real Estate Exam Prep',
     'line_items[0][price_data][product_data][description]':
       'Lifetime access. One payment, no subscription.',
     success_url: `${origin}/activate?session_id={CHECKOUT_SESSION_ID}`,

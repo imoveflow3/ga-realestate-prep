@@ -25,7 +25,7 @@ PAGE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Georgia Real Estate Exam Prep</title>
+<title>Real Estate Exam Prep</title>
 <meta name="description" content="Practice tests, worked real estate math and
 study notes for the Georgia salesperson licensing exam.">
 <link rel="canonical" href="%(url)s">

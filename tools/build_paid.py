@@ -132,7 +132,7 @@ def legal_page(title, body, css, stamp, slug, desc):
     """A legal page is a public page: it gets a description, a canonical and
        an icon like every other one, not a bare <title>."""
     paras = "\n".join("<p>%s</p>" % p for p in body)
-    full = "%s \u2014 Georgia Real Estate Exam Prep" % title
+    full = "%s \u2014 Real Estate Exam Prep" % title
     return (ONLINE_HEAD(full, desc, PAID_SITE + slug) +
             """<style>%s</style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
@@ -207,7 +207,7 @@ def main():
             price_cents=PRICE_CENTS, noindex=noindex,
             social=social or title, manifest=None)
         page_html = (h + body[:cut].replace(
-                        "<title>Georgia Real Estate Exam Prep</title>\n", "")
+                        "<title>Real Estate Exam Prep</title>\n", "")
                      + "</head>\n<body>\n" + body[cut:] + "\n</body>\n</html>\n")
         write(os.path.join(PUBLIC, name), page_html)
         return len(page_html)
@@ -222,7 +222,7 @@ def main():
 
     welcome_n = public_page(
         "index.html", "welcome",
-        "Georgia Real Estate Exam Prep \u2014 %d practice questions" % totals["total"],
+        "Real Estate Exam Prep \u2014 %d practice questions" % totals["total"],
         sell,
         social="Pass the Georgia salesperson exam.")
     # In the minimal layout the home page already is the sales page, so this
@@ -230,19 +230,19 @@ def main():
     # competing with itself in search results.
     buy_n = public_page(
         "buy.html", "buy",
-        "Get access \u2014 Georgia Real Estate Exam Prep",
+        "Get access \u2014 Real Estate Exam Prep",
         sell, noindex=True, canonical=PAID_SITE)
 
     # Nobody should arrive at a sign-in form from a search engine.
     public_page("auth.html", "auth",
-                "Create your account \u2014 Georgia Real Estate Exam Prep",
+                "Create your account \u2014 Real Estate Exam Prep",
                 "Create an account or log in to your Georgia exam prep.",
                 noindex=True, canonical=PAID_SITE)
 
     # A single self-contained file carrying both pages, for looking at the
     # design before any of it is deployed. Nothing in it calls a server.
     public_page("preview.html", "welcome",
-                "Preview \u2014 Georgia Real Estate Exam Prep",
+                "Preview \u2014 Real Estate Exam Prep",
                 "Preview of the Georgia salesperson exam prep site.",
                 preview=True, noindex=True, canonical=PAID_SITE)
 
@@ -272,7 +272,7 @@ def main():
             "<b>Who runs this.</b> %s. Questions and complaints go to %s, "
             "which is read by a person." % (siteconfig.operator(), SUPPORT_EMAIL),
         ], css, stamp, "terms",
-           "The terms of use and refund policy for Georgia Real Estate Exam Prep."))
+           "The terms of use and refund policy for Real Estate Exam Prep."))
 
     write(os.path.join(PUBLIC, "privacy.html"), legal_page(
         "Privacy", [
@@ -313,7 +313,7 @@ def main():
             "<b>Changes.</b> If what is collected ever changes, this page "
             "changes with it and the date below moves.",
         ], css, stamp, "privacy",
-           "What Georgia Real Estate Exam Prep collects, what it does not, "
+           "What Real Estate Exam Prep collects, what it does not, "
            "and how to export or delete it."))
 
     # A crawler should find the sales page and nothing else. /app is behind
@@ -352,7 +352,7 @@ def main():
             "site and landed here, that is a bug worth telling us about: "
             "<a href=\"mailto:%s\">%s</a>.</span>" % (SUPPORT_EMAIL, SUPPORT_EMAIL),
         ], css, stamp, "404",
-           "That page does not exist on Georgia Real Estate Exam Prep."))
+           "That page does not exist on Real Estate Exam Prep."))
 
     src = os.path.join(HERE, "docs", "assets")
     for name in os.listdir(src):
