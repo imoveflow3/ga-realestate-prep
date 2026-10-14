@@ -53,12 +53,12 @@ def og_svg(questions, terms):
 <text x="212" y="186" font-family=%(f)s font-size="34" font-weight="700"
       letter-spacing="8" fill="%(dim)s">REAL ESTATE EXAM PREP</text>
 <text x="92" y="318" font-family=%(f)s font-size="94" font-weight="700"
-      letter-spacing="-1" fill="%(ink)s">Pass the salesperson</text>
+      letter-spacing="-1" fill="%(ink)s">Pass the real estate</text>
 <text x="92" y="418" font-family=%(f)s font-size="94" font-weight="700"
-      letter-spacing="-1" fill="%(ac)s">exam. Free.</text>
+      letter-spacing="-1" fill="%(ac)s">exam.</text>
 <rect x="92" y="470" width="1016" height="1" fill="%(dim)s" opacity=".3"/>
 <text x="92" y="534" font-family=%(f)s font-size="34" font-weight="500"
-      fill="%(dim)s">%(q)s practice questions  &#183;  %(t)s defined terms  &#183;  worked math  &#183;  no signup</text>
+      fill="%(dim)s">%(q)s practice questions  &#183;  %(t)s defined terms  &#183;  worked math  &#183;  a study plan</text>
 <text x="92" y="586" font-family=%(f)s font-size="27" font-weight="600"
       letter-spacing="2" fill="%(br)s">imoveflow3.github.io/ga-realestate-prep</text>
 </g>

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>Real Estate Exam Prep — free practice for the salesperson exam</title>
-<meta name="description" content="Free practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
+<title>Real Estate Exam Prep — practice for the salesperson exam</title>
+<meta name="description" content="Practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
 <link rel="canonical" href="https://imoveflow3.github.io/ga-realestate-prep/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
@@ -13,16 +13,16 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Real Estate Exam Prep">
-<meta property="og:title" content="Real Estate Exam Prep — free salesperson practice tests">
-<meta property="og:description" content="Free practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
+<meta property="og:title" content="Real Estate Exam Prep — salesperson practice tests">
+<meta property="og:description" content="Practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
 <meta property="og:url" content="https://imoveflow3.github.io/ga-realestate-prep/">
 <meta property="og:image" content="https://imoveflow3.github.io/ga-realestate-prep/assets/card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Real Estate Exam Prep">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Real Estate Exam Prep — free salesperson practice tests">
-<meta name="twitter:description" content="Free practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
+<meta name="twitter:title" content="Real Estate Exam Prep — salesperson practice tests">
+<meta name="twitter:description" content="Practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.">
 <meta name="twitter:image" content="https://imoveflow3.github.io/ga-realestate-prep/assets/card.png">
 
 <link rel="icon" href="assets/icon-192.png" sizes="192x192">
@@ -33,7 +33,7 @@
 <meta name="apple-mobile-web-app-title" content="GA Prep">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Real Estate Exam Prep","description":"Free practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.","url":"https://imoveflow3.github.io/ga-realestate-prep/","inLanguage":"en-US","isAccessibleForFree":true,"learningResourceType":"Practice test","educationalLevel":"Professional licensing","teaches":"Georgia real estate salesperson licensing exam","about":{"@type":"Thing","name":"Georgia real estate salesperson licence"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Real Estate Exam Prep","description":"Practice for the Georgia real estate salesperson licensing exam. 404 exam-style questions scored National and Georgia separately, real estate math worked step by step, study notes with 436 defined terms, and a study plan built around your test date. No signup, works offline.","url":"https://imoveflow3.github.io/ga-realestate-prep/","inLanguage":"en-US","isAccessibleForFree":true,"learningResourceType":"Practice test","educationalLevel":"Professional licensing","teaches":"Georgia real estate salesperson licensing exam","about":{"@type":"Thing","name":"Georgia real estate salesperson licence"},"offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
 <style>/* Georgia Real Estate Prep -- condensed display type, mono figures, flat
@@ -2432,7 +2432,7 @@ function renderAuth(){
         .then(function(x){
           ok.disabled = false;
           if (x.d.error){ note2.className = 'authnote bad'; note2.textContent = x.d.error; return; }
-          location.href = '/app';
+          location.href = savedState() ? '/app' : '/#state';
         })['catch'](function(){ ok.disabled = false; note2.textContent = 'Network problem.'; });
     };
     acts2.appendChild(ok);
@@ -2539,6 +2539,7 @@ function focusFirstError(){
    into the app. Everybody else stays exactly where they are: signing in and
    paying are two steps of one card, not two pages. */
 function afterAuthed(d){
+  if (!savedState()) { location.href = '/#state'; return; }
   if (d.entitled || d.paid) { location.href = '/app'; return; }
   ME.signedIn = true;
   if (FORM.values.email) ME.email = FORM.values.email;
@@ -2623,6 +2624,10 @@ function payStep(card, wrap, v){
 
 function renderAuthPage(){
   var v = $('page');
+  if (!HOME.preview && ME.signedIn && !savedState()){
+    location.replace('/#state');
+    return;
+  }
   v.innerHTML = '';
   var q = new URLSearchParams(location.search);
 
@@ -2895,6 +2900,12 @@ function openApp(){
 }
 
 function renderState(v){
+  /* With accounts, the order is sign up, then state, then the app: nobody
+     reaches this screen without an account. */
+  if (!HOME.openAccess && !HOME.preview && !ME.signedIn){
+    location.replace('/auth');
+    return;
+  }
   var wrap = el('div', 'gatewrap statewrap');
   var card = el('div', 'gatecard statecard');
   var mark = el('div', 'gatemark');
@@ -2951,7 +2962,9 @@ function renderState(v){
   go.onclick = function(){
     if (!pick.value) return;
     try { localStorage.setItem(STATE_KEY, pick.value); } catch(e){}
-    goToApp();
+    if (HOME.openAccess) return goToApp();
+    /* Signed in: into the app if they have it, otherwise on to paying. */
+    location.href = hasAccess() ? '/app' : '/auth?pay=1';
   };
   back.onclick = function(){
     /* Arrived from the front page: step back through history. Arrived on
@@ -3078,8 +3091,6 @@ function renderMinimal(v, q){
     acts.appendChild(open);
     card.appendChild(acts);
     card.appendChild(previewList());
-    card.appendChild(el('p', 'gatefine',
-      'Free to use. Accounts and saved progress are on the way.'));
     wrap.appendChild(card); v.appendChild(wrap);
     return;
   }
@@ -3242,7 +3253,7 @@ function renderWelcome(v, q){
   if (note) w.appendChild(el('div', 'gatenote', note));
 
   w.appendChild(el('div', 'kicker2', HOME.openAccess
-    ? 'Georgia salesperson licence \u00b7 Free while it is open'
+    ? 'Georgia salesperson licence \u00b7 Built to the real exam blueprint'
     : 'Georgia salesperson licence \u00b7 Built to the real exam blueprint'));
   var h1 = el('h1');
   h1.appendChild(document.createTextNode('Pass the Georgia real estate exam. '));
@@ -3262,7 +3273,7 @@ function renderWelcome(v, q){
   }
   w.appendChild(cta);
   w.appendChild(el('p', 'fineprint', HOME.openAccess
-    ? 'Free to use right now. Accounts and saved progress are on the way.'
+    ? 'Accounts and saved progress are on the way.'
     : 'One payment. No subscription, nothing renews, and a full refund within ' +
       '14 days if it is not for you.'));
   hero.appendChild(w);
@@ -3447,9 +3458,9 @@ function render(){
   applyTheme(readTheme());
   /* #state is the state screen: it survives a reload, and the browser's
      Back leaves it for the front page. */
-  if (location.hash === '#state' && HOME.openAccess) HOME.page = 'state';
+  if (location.hash === '#state') HOME.page = 'state';
   window.addEventListener('popstate', function(){
-    var want = (location.hash === '#state' && HOME.openAccess) ? 'state' : 'welcome';
+    var want = (location.hash === '#state') ? 'state' : 'welcome';
     if (HOME.page === want) return;
     HOME.page = want;
     render();

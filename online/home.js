@@ -280,7 +280,7 @@ function renderAuth(){
         .then(function(x){
           ok.disabled = false;
           if (x.d.error){ note2.className = 'authnote bad'; note2.textContent = x.d.error; return; }
-          location.href = '/app';
+          location.href = savedState() ? '/app' : '/#state';
         })['catch'](function(){ ok.disabled = false; note2.textContent = 'Network problem.'; });
     };
     acts2.appendChild(ok);
@@ -387,6 +387,7 @@ function focusFirstError(){
    into the app. Everybody else stays exactly where they are: signing in and
    paying are two steps of one card, not two pages. */
 function afterAuthed(d){
+  if (!savedState()) { location.href = '/#state'; return; }
   if (d.entitled || d.paid) { location.href = '/app'; return; }
   ME.signedIn = true;
   if (FORM.values.email) ME.email = FORM.values.email;
@@ -471,6 +472,10 @@ function payStep(card, wrap, v){
 
 function renderAuthPage(){
   var v = $('page');
+  if (!HOME.preview && ME.signedIn && !savedState()){
+    location.replace('/#state');
+    return;
+  }
   v.innerHTML = '';
   var q = new URLSearchParams(location.search);
 
@@ -743,6 +748,12 @@ function openApp(){
 }
 
 function renderState(v){
+  /* With accounts, the order is sign up, then state, then the app: nobody
+     reaches this screen without an account. */
+  if (!HOME.openAccess && !HOME.preview && !ME.signedIn){
+    location.replace('/auth');
+    return;
+  }
   var wrap = el('div', 'gatewrap statewrap');
   var card = el('div', 'gatecard statecard');
   var mark = el('div', 'gatemark');
@@ -799,7 +810,9 @@ function renderState(v){
   go.onclick = function(){
     if (!pick.value) return;
     try { localStorage.setItem(STATE_KEY, pick.value); } catch(e){}
-    goToApp();
+    if (HOME.openAccess) return goToApp();
+    /* Signed in: into the app if they have it, otherwise on to paying. */
+    location.href = hasAccess() ? '/app' : '/auth?pay=1';
   };
   back.onclick = function(){
     /* Arrived from the front page: step back through history. Arrived on
@@ -926,8 +939,6 @@ function renderMinimal(v, q){
     acts.appendChild(open);
     card.appendChild(acts);
     card.appendChild(previewList());
-    card.appendChild(el('p', 'gatefine',
-      'Free to use. Accounts and saved progress are on the way.'));
     wrap.appendChild(card); v.appendChild(wrap);
     return;
   }
@@ -1090,7 +1101,7 @@ function renderWelcome(v, q){
   if (note) w.appendChild(el('div', 'gatenote', note));
 
   w.appendChild(el('div', 'kicker2', HOME.openAccess
-    ? 'Georgia salesperson licence \u00b7 Free while it is open'
+    ? 'Georgia salesperson licence \u00b7 Built to the real exam blueprint'
     : 'Georgia salesperson licence \u00b7 Built to the real exam blueprint'));
   var h1 = el('h1');
   h1.appendChild(document.createTextNode('Pass the Georgia real estate exam. '));
@@ -1110,7 +1121,7 @@ function renderWelcome(v, q){
   }
   w.appendChild(cta);
   w.appendChild(el('p', 'fineprint', HOME.openAccess
-    ? 'Free to use right now. Accounts and saved progress are on the way.'
+    ? 'Accounts and saved progress are on the way.'
     : 'One payment. No subscription, nothing renews, and a full refund within ' +
       '14 days if it is not for you.'));
   hero.appendChild(w);
@@ -1295,9 +1306,9 @@ function render(){
   applyTheme(readTheme());
   /* #state is the state screen: it survives a reload, and the browser's
      Back leaves it for the front page. */
-  if (location.hash === '#state' && HOME.openAccess) HOME.page = 'state';
+  if (location.hash === '#state') HOME.page = 'state';
   window.addEventListener('popstate', function(){
-    var want = (location.hash === '#state' && HOME.openAccess) ? 'state' : 'welcome';
+    var want = (location.hash === '#state') ? 'state' : 'welcome';
     if (HOME.page === want) return;
     HOME.page = want;
     render();

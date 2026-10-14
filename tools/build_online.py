@@ -30,8 +30,8 @@ OUT_STANDALONE = os.path.join(APP_DIR, "index.html")   # full document, for any 
 OUT_HOME = os.path.join(DOCS, "index.html")            # the welcome page owns /
 
 SITE = "https://imoveflow3.github.io/ga-realestate-prep/"
-TITLE = "Real Estate Exam Prep \u2014 free salesperson practice tests"
-BLURB = ("Free practice for the Georgia real estate salesperson licensing exam. "
+TITLE = "Real Estate Exam Prep \u2014 salesperson practice tests"
+BLURB = ("Practice for the Georgia real estate salesperson licensing exam. "
          "%(q)d exam-style questions scored National and Georgia separately, "
          "real estate math worked step by step, study notes with %(v)d defined "
          "terms, and a study plan built around your test date. No signup, "
@@ -127,8 +127,8 @@ def head(questions, terms, site=None, title=None, blurb=None,
 
 MANIFEST = {
     "name": "Real Estate Exam Prep",
-    "short_name": "GA Prep",
-    "description": ("Free practice tests, math and study notes for the Georgia "
+    "short_name": "Exam Prep",
+    "description": ("Practice tests, math and study notes for the Georgia "
                     "real estate salesperson licensing exam."),
     "start_url": ".",
     "scope": ".",
@@ -337,8 +337,8 @@ def build_home(stamp, css, totals, price_cents=1900):
     body = body.replace('<a href="mailto:">Support</a>\n', "")
     cut = body.index("<header")
     h = head(totals["written"], totals["terms"]).replace(
-        "<title>Real Estate Exam Prep \u2014 free salesperson practice tests</title>",
-        "<title>Real Estate Exam Prep \u2014 free practice for the "
+        "<title>Real Estate Exam Prep \u2014 salesperson practice tests</title>",
+        "<title>Real Estate Exam Prep \u2014 practice for the "
         "salesperson exam</title>")
     return (h + body[:cut].replace("<title>Real Estate Exam Prep</title>\n", "")
             + "</head>\n<body>\n" + body[cut:] + "\n</body>\n</html>\n")

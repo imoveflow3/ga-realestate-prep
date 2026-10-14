@@ -1,6 +1,16 @@
 /* Views. Renders into the empty <section>s in the shell. */
 'use strict';
 
+/* Studying starts with picking a state (the front page's #state screen,
+   saved as a two-letter code). Only where there is a front page to send
+   people to -- /app on the site -- not the single-file copy. */
+(function(){
+  if (!/\/app\/?$/.test(location.pathname)) return;
+  var code = null;
+  try { code = localStorage.getItem('ga-prep-state'); } catch(e){ return; }
+  if (!/^[A-Z]{2}$/.test(code || '')) location.replace(new URL('../#state', location.href).href);
+})();
+
 var D = load();              // the whole progress record, kept in memory
 var QUIZ = null, TICK = null, LAST = null;
 
