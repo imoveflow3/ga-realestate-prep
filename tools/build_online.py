@@ -78,8 +78,7 @@ def head(questions, terms, site=None, title=None, blurb=None,
 <meta name="description" content="%(blurb)s">
 <link rel="canonical" href="%(canonical)s">
 %(robots)s
-<meta name="theme-color" content="#1a6459" media="(prefers-color-scheme:light)">
-<meta name="theme-color" content="#0e1319" media="(prefers-color-scheme:dark)">
+<meta name="theme-color" content="#faf7f0">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Georgia Real Estate Exam Prep">
@@ -135,8 +134,8 @@ MANIFEST = {
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "background_color": "#0e1319",
-    "theme_color": "#1a6459",
+    "background_color": "#faf7f0",
+    "theme_color": "#8a6516",
     "categories": ["education", "books"],
     "icons": [
         {"src": ASSETS + "icon-192.png", "sizes": "192x192", "type": "image/png",

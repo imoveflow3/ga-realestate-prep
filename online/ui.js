@@ -3152,12 +3152,13 @@ function readTheme(){
   if (THEMES.indexOf(fromAccount) >= 0) return fromAccount;
   var t;
   try { t = localStorage.getItem(THEME_KEY); } catch(e){ t = null; }
-  return THEMES.indexOf(t) >= 0 ? t : 'auto';
+  return THEMES.indexOf(t) >= 0 ? t : 'light';
 }
 function applyTheme(mode){
   var root = document.documentElement;
-  if (mode === 'auto') root.removeAttribute('data-theme');
-  else root.setAttribute('data-theme', mode);
+  /* Always set: with no attribute the page is light, so a first visit (and
+     the first paint, before this runs) is light whatever the system says. */
+  root.setAttribute('data-theme', mode);
   var resolved = (mode === 'auto') ? (systemDark() ? 'dark' : 'light') : mode;
   var b = $('themeBtn');
   if (b){

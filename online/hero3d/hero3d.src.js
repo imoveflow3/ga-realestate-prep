@@ -79,7 +79,7 @@ export function mount(host, opts = {}) {
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches
   const coarse = matchMedia('(pointer: coarse)').matches
   const BRASS = 0xc9a566,
-    GREEN = 0x6fae94
+    GREEN = 0xe6c27a // the pass station: a brighter gold
   const scene = new THREE.Scene()
   const camera = new THREE.PerspectiveCamera(33, (frameWidth() || 1) / (frameHeight() || 1), 0.1, 150)
   let renderer
@@ -123,7 +123,7 @@ export function mount(host, opts = {}) {
   scene.environmentIntensity = 0.62
   room.dispose()
   pmrem.dispose()
-  scene.add(new THREE.HemisphereLight(0xdbe5f4, 0x29211a, 2))
+  scene.add(new THREE.HemisphereLight(0xf4ecdc, 0x29211a, 2))
   const key = new THREE.DirectionalLight(0xfff1d8, 4.2)
   key.position.set(-4, 12, 7)
   key.castShadow = true
@@ -133,7 +133,7 @@ export function mount(host, opts = {}) {
   key.shadow.bias = -0.0002
   key.shadow.radius = 4
   scene.add(key)
-  const rim = new THREE.DirectionalLight(0xc4d4ed, 3.1)
+  const rim = new THREE.DirectionalLight(0xeadcc4, 3.1)
   rim.position.set(3, 7, -8)
   scene.add(rim)
   const warm = new THREE.PointLight(0xffd58a, 24, 20, 2)
@@ -146,18 +146,18 @@ export function mount(host, opts = {}) {
   const mat = (color, metalness = 0.1, roughness = 0.4, extra = {}) =>
     new THREE.MeshStandardMaterial({ color, metalness, roughness, ...extra })
   const M = {
-    body: mat(0x30363f, 0.75, 0.29),
-    base: mat(0x292f37, 0.85, 0.32),
-    edge: mat(0x707986, 0.85, 0.24),
-    chrome: mat(0xc3cad0, 0.92, 0.18),
-    dark: mat(0x12171d, 0.45, 0.38),
-    rubber: mat(0x0b1015, 0.1, 0.6),
+    body: mat(0x3a342c, 0.75, 0.29),
+    base: mat(0x2f2a24, 0.85, 0.32),
+    edge: mat(0x8a8172, 0.85, 0.24),
+    chrome: mat(0xd6ccb9, 0.92, 0.18),
+    dark: mat(0x1a1612, 0.45, 0.38),
+    rubber: mat(0x110e0b, 0.1, 0.6),
     amber: mat(BRASS, 0.55, 0.28),
     ivory: mat(0xe0ded4, 0.48, 0.26),
     copper: mat(0xb08a4e, 0.85, 0.3),
     light: mat(BRASS, 0.2, 0.25, { emissive: 0xd9a84e, emissiveIntensity: 1.4 }),
-    pass: mat(GREEN, 0.35, 0.3, { emissive: 0x4f9a7b, emissiveIntensity: 0.9 }),
-    green: mat(0xc6d9a1, 0.1, 0.3, { emissive: 0x91b364, emissiveIntensity: 0.7 }),
+    pass: mat(GREEN, 0.35, 0.3, { emissive: 0xd9a84e, emissiveIntensity: 0.9 }),
+    green: mat(0xf0d9a0, 0.1, 0.3, { emissive: 0xd9a84e, emissiveIntensity: 0.7 }),
   }
   const geometries = new Map()
   function boxGeo(w, h, d, r = 0.04) {
@@ -256,11 +256,11 @@ export function mount(host, opts = {}) {
   const C = {
     brass: '#c9a566',
     brassDeep: '#8a6516',
-    green: '#6fae94',
-    greenDeep: '#1d5c46',
+    green: '#d4ac5a',
+    greenDeep: '#7a5a14',
     ink: '#18222c',
     paper: '#f4f1ea',
-    glass: '#121b1f',
+    glass: '#1d1913',
   }
 
   const machine = new THREE.Group()
@@ -300,14 +300,14 @@ export function mount(host, opts = {}) {
     }
   for (const x of [-6.02, 6.02]) for (const z of [-3.73, 3.73]) screw(machine, x, 0.255, z)
   const engraving = stateTexture(1536, 176, (c, w, h) => {
-    c.fillStyle = '#252b32'
+    c.fillStyle = '#2e2a24'
     c.fillRect(0, 0, w, h)
-    c.strokeStyle = '#4d545c'
+    c.strokeStyle = '#5a5246'
     c.lineWidth = 2
     c.strokeRect(2, 2, w - 4, h - 4)
     const nameW = printFit(c, stateName().toUpperCase(), 45, 79, 430, 40, '#d9d8cd', 650)
-    print(c, '·  salesperson exam  ·  study to pass', 45 + nameW + 30, 79, 34, '#b8bdc1', 450)
-    print(c, 'NATIONAL PART    /    STATE PART    /    SCORED SEPARATELY', 47, 133, 19, '#737e88', 500)
+    print(c, '·  salesperson exam  ·  study to pass', 45 + nameW + 30, 79, 34, '#cfc6b6', 450)
+    print(c, 'NATIONAL PART    /    STATE PART    /    SCORED SEPARATELY', 47, 133, 19, '#8a8072', 500)
     print(c, 'No. 001', 1360, 130, 23, C.brass)
   })
   const plate = screen(machine, 7.35, 0.84, -0.4, 0.25, 3.51, engraving)
@@ -368,10 +368,10 @@ export function mount(host, opts = {}) {
       d.step === 4 ? M.pass : M.light
     )
     const plaque = canvasTexture(512, 116, (c, w, h) => {
-      c.fillStyle = '#151a20'
+      c.fillStyle = '#1d1914'
       c.fillRect(0, 0, w, h)
       print(c, String(d.step + 1).padStart(2, '0'), 24, 76, 42, d.step === 4 ? C.green : C.brass, 550)
-      print(c, info.name.toUpperCase(), 111, 73, 35, '#d7d9d7', 550)
+      print(c, info.name.toUpperCase(), 111, 73, 35, '#e6dfd2', 550)
     })
     screen(group, 1.54, 0.345, 0, 0.27, 0.891, plaque)
     stations.push({ ...info, step: d.step, group, base: new THREE.Vector3(...d.pos), glowMat })
@@ -452,7 +452,7 @@ export function mount(host, opts = {}) {
     c.arc(330, 205, 210, 0, TAU)
     c.fill()
     // An open book, gently turning a page.
-    c.strokeStyle = '#171b20'
+    c.strokeStyle = '#1d1914'
     c.lineWidth = 12
     c.lineJoin = 'round'
     const lift = Math.sin(t * 0.9) * 26
@@ -477,7 +477,7 @@ export function mount(host, opts = {}) {
     c.stroke()
     print(c, 'LESSON 04', 28, 57, 24, '#242320', 650)
     print(c, 'AGENCY.', 24, 103, 42, '#242320', 700)
-    c.fillStyle = '#171b20'
+    c.fillStyle = '#1d1914'
     c.beginPath()
     c.roundRect(25, 465, 334, 123, 12)
     c.fill()
@@ -515,7 +515,7 @@ export function mount(host, opts = {}) {
     const c = queue.ctx
     c.fillStyle = C.glass
     c.fillRect(0, 0, 640, 340)
-    print(c, 'PRACTICE QUIZ', 25, 45, 21, '#acb9b8', 550)
+    print(c, 'PRACTICE QUIZ', 25, 45, 21, '#bfb39c', 550)
     print(c, '12 / 20', 510, 45, 20, C.brass, 500)
     const rows = [
       ['Agency', 'IN PROGRESS'],
@@ -524,17 +524,17 @@ export function mount(host, opts = {}) {
     ]
     for (let i = 0; i < 3; i++) {
       const y = 74 + i * 76
-      c.fillStyle = '#202c30'
+      c.fillStyle = '#2c261d'
       c.beginPath()
       c.roundRect(21, y, 598, 61, 6)
       c.fill()
-      c.fillStyle = i === 0 ? C.brass : '#626f69'
+      c.fillStyle = i === 0 ? C.brass : '#6b6152'
       c.fillRect(34, y + 10, 27, 41)
-      print(c, rows[i][0], 77, y + 29, 19, '#d4d8cc')
-      print(c, rows[i][1], 77, y + 49, 11, i === 0 ? C.brass : '#81948f')
-      c.fillStyle = '#334348'
+      print(c, rows[i][0], 77, y + 29, 19, '#e4dccb')
+      print(c, rows[i][1], 77, y + 49, 11, i === 0 ? C.brass : '#a89c86')
+      c.fillStyle = '#3d362b'
       c.fillRect(377, y + 26, 214, 7)
-      c.fillStyle = i === 0 ? C.green : '#607475'
+      c.fillStyle = i === 0 ? C.green : '#6b6152'
       c.fillRect(377, y + 26, i === 0 ? ((t * 0.15) % 1) * 214 : 41 + i * 27, 7)
     }
     queue.texture.needsUpdate = true
@@ -564,18 +564,18 @@ export function mount(host, opts = {}) {
   box(mock, 2.42, 1.72, 0.2, 0, 1.94, -0.17, M.ivory, 0.08)
   box(mock, 2.28, 1.59, 0.1, 0, 1.94, -0.044, M.dark, 0.045)
   const examTex = stateTexture(896, 592, (c, w, h) => {
-    c.fillStyle = '#edece3'
+    c.fillStyle = '#f7f2e8'
     c.fillRect(0, 0, w, h)
-    c.fillStyle = '#dedfd7'
+    c.fillStyle = '#ebe3d3'
     c.fillRect(0, 0, w, 56)
-    c.fillStyle = '#adaeaa'
+    c.fillStyle = '#c4b9a4'
     for (let i = 0; i < 3; i++) {
       c.beginPath()
       c.arc(26 + i * 19, 27, 4, 0, TAU)
       c.fill()
     }
     print(c, 'MOCK EXAM', 33, 100, 22, C.ink, 650)
-    print(c, 'Practice result', 690, 98, 14, '#6a7271')
+    print(c, 'Practice result', 690, 98, 14, '#7a7062')
     // Two score panels: the exam is passed only when both clear the pass mark.
     const parts = [
       ['NATIONAL', '91%', 0.91],
@@ -583,30 +583,30 @@ export function mount(host, opts = {}) {
     ]
     parts.forEach(([label, pct, f], i) => {
       const x = 32 + i * 300
-      c.fillStyle = i ? '#e7efea' : '#f6efdd'
+      c.fillStyle = i ? '#f6eedc' : '#f6efdd'
       c.beginPath()
       c.roundRect(x, 131, 280, 250, 10)
       c.fill()
       printFit(c, label, x + 22, 172, 236, 18, i ? C.greenDeep : C.brassDeep, 650)
       print(c, pct, x + 20, 270, 84, C.ink, 650)
-      c.fillStyle = '#d1d5cd'
+      c.fillStyle = '#e0d7c6'
       c.fillRect(x + 22, 318, 236, 10)
       c.fillStyle = i ? C.greenDeep : C.brassDeep
       c.fillRect(x + 22, 318, 236 * f, 10)
       c.fillStyle = C.ink
       c.fillRect(x + 22 + 236 * 0.72, 310, 2, 26)
-      print(c, 'Pass mark', x + 22, 360, 14, '#6a7271')
+      print(c, 'Pass mark', x + 22, 360, 14, '#7a7062')
     })
     print(c, 'Scored', 652, 197, 36, C.ink, 600)
     print(c, 'twice.', 652, 243, 36, C.ink, 600)
-    print(c, 'Each part', 654, 290, 18, '#77807b')
-    print(c, 'on its own.', 654, 316, 18, '#77807b')
+    print(c, 'Each part', 654, 290, 18, '#7e7464')
+    print(c, 'on its own.', 654, 316, 18, '#7e7464')
     c.fillStyle = C.greenDeep
     c.beginPath()
     c.roundRect(32, 420, 300, 62, 7)
     c.fill()
     print(c, 'Review answers  ↗', 60, 459, 22, C.paper, 500)
-    print(c, 'BUILT TO THE EXAM BLUEPRINT', 33, 560, 12, '#879088')
+    print(c, 'BUILT TO THE EXAM BLUEPRINT', 33, 560, 12, '#958b7a')
   })
   screen(mock, 2.16, 1.43, 0, 1.95, 0.011, examTex)
   ball(mock, 0.024, 0, 2.747, -0.05, M.dark)
@@ -618,7 +618,7 @@ export function mount(host, opts = {}) {
   const scoreTex = canvasTexture(220, 290, (c, w, h) => {
     c.fillStyle = C.paper
     c.fillRect(0, 0, w, h)
-    c.fillStyle = '#e7efea'
+    c.fillStyle = '#f6eedc'
     c.fillRect(15, 16, 190, 168)
     c.strokeStyle = C.greenDeep
     c.lineWidth = 14
@@ -629,8 +629,8 @@ export function mount(host, opts = {}) {
     c.lineTo(100, 130)
     c.lineTo(154, 70)
     c.stroke()
-    print(c, 'SCORED', 17, 225, 23, '#283030', 600)
-    c.fillStyle = '#b0b5b0'
+    print(c, 'SCORED', 17, 225, 23, '#352f26', 600)
+    c.fillStyle = '#c4b9a4'
     c.fillRect(17, 244, 153, 6)
     c.fillRect(17, 258, 104, 5)
   })
@@ -644,15 +644,15 @@ export function mount(host, opts = {}) {
   const planTex = canvasTexture(480, 460, (c, w, h) => {
     c.fillStyle = C.glass
     c.fillRect(0, 0, w, h)
-    print(c, 'YOUR PLAN', 30, 51, 27, '#e8e8d8', 550)
-    print(c, '21 days to your test', 30, 81, 16, '#869991')
+    print(c, 'YOUR PLAN', 30, 51, 27, '#efe8da', 550)
+    print(c, '21 days to your test', 30, 81, 16, '#a89c86')
     ;[
       ['1', 'Agency', 'Today'],
       ['2', 'Contracts', 'Tomorrow'],
       ['18', 'Mock exam', 'Day 18'],
     ].forEach(([n, topic, when], i) => {
       const y = 110 + i * 100
-      c.fillStyle = '#22302f'
+      c.fillStyle = '#2c261d'
       c.beginPath()
       c.roundRect(22, y, 436, 83, 8)
       c.fill()
@@ -661,10 +661,10 @@ export function mount(host, opts = {}) {
       c.arc(58, y + 40, 21, 0, TAU)
       c.fill()
       c.textAlign = 'center'
-      print(c, n, 58, y + 47, 18, '#1b2828', 650)
+      print(c, n, 58, y + 47, 18, '#1a1408', 650)
       c.textAlign = 'left'
-      print(c, topic, 93, y + 33, 23, '#e6e8dc', 550)
-      print(c, when, 93, y + 58, 15, '#94a59b')
+      print(c, topic, 93, y + 33, 23, '#efe8da', 550)
+      print(c, when, 93, y + 58, 15, '#a89c86')
       print(c, '↗', 410, y + 49, 25, C.brass)
     })
   })
@@ -689,7 +689,7 @@ export function mount(host, opts = {}) {
   const dateTex = canvasTexture(432, 204, (c, w, h) => {
     c.fillStyle = C.brass
     c.fillRect(0, 0, w, h)
-    c.fillStyle = '#2a2e26'
+    c.fillStyle = '#352f26'
     c.beginPath()
     c.roundRect(28, 56, 62, 76, 8)
     c.fill()
@@ -698,7 +698,7 @@ export function mount(host, opts = {}) {
     c.textAlign = 'center'
     print(c, '21', 59, 118, 28, C.brass, 650)
     c.textAlign = 'left'
-    print(c, 'Test date set', 108, 91, 34, '#222822', 600)
+    print(c, 'Test date set', 108, 91, 34, '#352f26', 600)
     print(c, 'Plan built  +', 108, 138, 23, '#5b4c22', 500)
   })
   screen(incoming, 0.82, 0.39, 0, 0, 0.026, dateTex)
@@ -718,10 +718,10 @@ export function mount(host, opts = {}) {
   cyl(pass, 0.06, 0.65, -0.35, 1.6, -0.56, M.chrome)
   box(pass, 1.13, 0.46, 0.19, -0.35, 1.98, -0.56, M.body, 0.045)
   const resultTex = canvasTexture(512, 176, (c) => {
-    c.fillStyle = '#10221b'
+    c.fillStyle = '#1e1912'
     c.fillRect(0, 0, 512, 176)
-    print(c, 'EXAM RESULT', 22, 44, 23, '#9cbfae', 500)
-    print(c, 'PASS', 26, 131, 70, '#d9efe4', 650)
+    print(c, 'EXAM RESULT', 22, 44, 23, '#d8c39a', 500)
+    print(c, 'PASS', 26, 131, 70, '#f6ead0', 650)
     c.strokeStyle = C.green
     c.lineWidth = 10
     c.lineCap = 'round'
@@ -741,25 +741,25 @@ export function mount(host, opts = {}) {
     c.fillStyle = C.paper
     c.fillRect(0, 0, w, h)
     c.setLineDash([])
-    print(c, 'SCORE REPORT', 25, 52, 24, '#333d36', 650)
-    printFit(c, stateName().toUpperCase(), 25, 87, 230, 19, '#566059')
-    c.strokeStyle = '#8a9189'
+    print(c, 'SCORE REPORT', 25, 52, 24, '#3a342b', 650)
+    printFit(c, stateName().toUpperCase(), 25, 87, 230, 19, '#5e5649')
+    c.strokeStyle = '#958b7a'
     c.setLineDash([5, 6])
     c.beginPath()
     c.moveTo(22, 115)
     c.lineTo(258, 115)
     c.stroke()
-    print(c, 'National', 25, 154, 22, '#333d36')
+    print(c, 'National', 25, 154, 22, '#3a342b')
     print(c, 'PASS', 190, 154, 20, C.greenDeep, 650)
-    printFit(c, stateName(), 25, 190, 155, 22, '#333d36')
+    printFit(c, stateName(), 25, 190, 155, 22, '#3a342b')
     print(c, 'PASS', 190, 190, 20, C.greenDeep, 650)
     print(c, 'PASSED', 25, 263, 31, C.greenDeep, 650)
-    print(c, 'Next: your licence.', 25, 317, 20, '#687067')
+    print(c, 'Next: your licence.', 25, 317, 20, '#6e6555')
     for (let i = 0; i < 44; i++) {
-      c.fillStyle = '#333d36'
+      c.fillStyle = '#3a342b'
       c.fillRect(25 + i * 5, 370, 1 + (i % 3), 83)
     }
-    print(c, 'No. 0001', 81, 496, 17, '#59635b')
+    print(c, 'No. 0001', 81, 496, 17, '#5e5649')
   })
   const rp = screen(report, 0.41, 0.83, 0, 0.415, 0.01, reportTex)
   rp.material.side = THREE.DoubleSide
@@ -774,7 +774,7 @@ export function mount(host, opts = {}) {
   badge.add(badgeRing)
   const tickTex = canvasTexture(128, 128, (c, w, h) => {
     c.clearRect(0, 0, w, h)
-    c.strokeStyle = '#0d1a15'
+    c.strokeStyle = '#1a1408'
     c.lineWidth = 13
     c.lineCap = 'round'
     c.lineJoin = 'round'
@@ -863,10 +863,10 @@ export function mount(host, opts = {}) {
   const notesTex = canvasTexture(256, 352, (c, w, h) => {
     c.fillStyle = '#eeeae0'
     c.fillRect(0, 0, w, h)
-    print(c, 'NOTES', 24, 47, 22, '#3b403a', 650)
-    print(c, '04 / Agency', 24, 85, 15, '#8b8d80')
+    print(c, 'NOTES', 24, 47, 22, '#352f26', 650)
+    print(c, '04 / Agency', 24, 85, 15, '#8f8574')
     for (let i = 0; i < 9; i++) {
-      c.fillStyle = i === 4 ? C.brass : '#aeb2a5'
+      c.fillStyle = i === 4 ? C.brass : '#c4b9a4'
       c.fillRect(24, 111 + i * 21, 190 - (i % 3) * 24, 6)
     }
     print(c, 'READ  ✓', 24, 327, 17, C.greenDeep, 600)
@@ -874,27 +874,27 @@ export function mount(host, opts = {}) {
   const planCardTex = stateTexture(256, 352, (c) => {
     c.fillStyle = C.brass
     c.fillRect(0, 0, 256, 352)
-    print(c, 'YOUR', 21, 48, 24, '#30362d', 650)
-    print(c, 'PLAN', 21, 79, 24, '#30362d', 650)
+    print(c, 'YOUR', 21, 48, 24, '#352f26', 650)
+    print(c, 'PLAN', 21, 79, 24, '#352f26', 650)
     c.strokeStyle = '#6f5a2a'
     c.lineWidth = 2
     c.strokeRect(23, 112, 210, 139)
-    print(c, 'Day 1', 42, 196, 40, '#30362d', 550)
+    print(c, 'Day 1', 42, 196, 40, '#352f26', 550)
     printFit(c, stateName().toUpperCase() + ' / 01', 23, 320, 210, 17, '#5b4c22')
   })
   const quizTex = canvasTexture(256, 352, (c) => {
     c.fillStyle = C.glass
     c.fillRect(0, 0, 256, 352)
-    print(c, 'QUIZ', 21, 48, 24, '#e8e8d8', 650)
-    print(c, 'Q 12 / 20', 21, 78, 16, '#869991')
+    print(c, 'QUIZ', 21, 48, 24, '#efe8da', 650)
+    print(c, 'Q 12 / 20', 21, 78, 16, '#a89c86')
     ;['A', 'B', 'C', 'D'].forEach((l, i) => {
       const y = 106 + i * 56
-      c.fillStyle = i === 2 ? C.green : '#22302f'
+      c.fillStyle = i === 2 ? C.green : '#2c261d'
       c.beginPath()
       c.roundRect(21, y, 214, 42, 6)
       c.fill()
-      print(c, l, 36, y + 28, 18, i === 2 ? '#0d1a15' : '#9aa7a0', 650)
-      c.fillStyle = i === 2 ? '#0d1a15' : '#4a5a58'
+      print(c, l, 36, y + 28, 18, i === 2 ? '#1a1408' : '#a89c86', 650)
+      c.fillStyle = i === 2 ? '#1a1408' : '#6b6152'
       c.fillRect(66, y + 18, 120 - i * 14, 6)
     })
   })

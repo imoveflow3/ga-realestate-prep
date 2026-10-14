@@ -16,11 +16,12 @@ import tempfile
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(HERE, "docs", "assets")
 
-INK = "#e8eef4"
-DIM = "#8fa3b5"
-BG = "#0e1319"
-ACCENT = "#5fc0ad"
-BRASS = "#d6a445"
+# Warm white paper, near-black ink, gold: the site's own palette.
+INK = "#211c15"
+DIM = "#71675a"
+BG = "#faf7f0"
+ACCENT = "#8a6516"
+BRASS = "#a07a22"
 SANS = "'Helvetica Neue',Helvetica,Arial,sans-serif"
 
 
