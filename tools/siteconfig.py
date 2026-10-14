@@ -34,7 +34,7 @@ PRICE_CENTS = int(os.environ.get("GA_PRICE_CENTS", "1900"))
 
 # The legal entity behind the site, as it should appear in the terms. A sole
 # trader can put their own name here.
-OPERATOR = os.environ.get("GA_OPERATOR", "").strip()
+OPERATOR = os.environ.get("GA_OPERATOR", "Real Estate Exam Prep").strip()
 
 
 PLACEHOLDER = "— not set —"
