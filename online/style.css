@@ -1290,6 +1290,24 @@ body.landing footer{max-width:1120px}
 .gatefine{font-size:.85rem; color:var(--ink-3); max-width:34ch; line-height:1.5}
 .gatecard .gatenote{text-align:left; margin-bottom:.4rem}
 
+/* The state screen: Start studying asks which state before the app opens. */
+.statecard .statefield{width:100%; max-width:22rem; text-align:left; margin-top:.4rem}
+.statecard select{width:100%; min-height:48px; padding:.6rem .8rem; font-size:1rem;
+  background:var(--panel); color:var(--ink); border:1px solid var(--line-2);
+  border-radius:var(--r-sm); cursor:pointer}
+.statecard select:focus{outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--glow)}
+.statenote{margin:0; max-width:22rem; font-size:.84rem; line-height:1.5;
+  color:var(--ink-2); text-align:left}
+.statenote:empty{display:none}
+.statecard .gateacts .btn{min-height:48px}
+.statecard .btn:disabled{opacity:.45; cursor:not-allowed}
+body.onescreen .statewrap{flex:1 1 auto; min-height:0; width:100%;
+  padding:1rem var(--s5) 5rem}
+@media (max-width:980px){
+  body.onescreen .statewrap{padding:1rem .85rem}
+}
+
 /* The 3D study machine as the front page itself (home.js mountHero): the
    scene fills the first screen edge to edge and the card's words sit on it,
    left, with the machine framed into the right of the frame. On a phone the

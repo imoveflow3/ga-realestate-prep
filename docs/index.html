@@ -1329,6 +1329,24 @@ body.landing footer{max-width:1120px}
 .gatefine{font-size:.85rem; color:var(--ink-3); max-width:34ch; line-height:1.5}
 .gatecard .gatenote{text-align:left; margin-bottom:.4rem}
 
+/* The state screen: Start studying asks which state before the app opens. */
+.statecard .statefield{width:100%; max-width:22rem; text-align:left; margin-top:.4rem}
+.statecard select{width:100%; min-height:48px; padding:.6rem .8rem; font-size:1rem;
+  background:var(--panel); color:var(--ink); border:1px solid var(--line-2);
+  border-radius:var(--r-sm); cursor:pointer}
+.statecard select:focus{outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--glow)}
+.statenote{margin:0; max-width:22rem; font-size:.84rem; line-height:1.5;
+  color:var(--ink-2); text-align:left}
+.statenote:empty{display:none}
+.statecard .gateacts .btn{min-height:48px}
+.statecard .btn:disabled{opacity:.45; cursor:not-allowed}
+body.onescreen .statewrap{flex:1 1 auto; min-height:0; width:100%;
+  padding:1rem var(--s5) 5rem}
+@media (max-width:980px){
+  body.onescreen .statewrap{padding:1rem .85rem}
+}
+
 /* The 3D study machine as the front page itself (home.js mountHero): the
    scene fills the first screen edge to edge and the card's words sit on it,
    left, with the machine framed into the right of the frame. On a phone the
@@ -2840,7 +2858,118 @@ function reducedMotion(){
    runs one if the incoming page reaches first paint inside its budget, and a
    1.17 MB document does not. Measured: pageswap reported "plain". So do the
    fade here rather than trusting a transition that silently declines. */
+/* ------------------------------------------------------ choosing a state */
+/* Start studying asks one thing first: which state's exam. The choice is
+   kept on this device (STATE_KEY, a two-letter code) for the app to read.
+   Only Georgia has its own state-law material so far; any other state gets
+   the national material, which every state's exam shares, and says so. */
+var STATE_KEY = 'ga-prep-state';
+var US_STATES = [
+  ['AL','Alabama'],['AK','Alaska'],['AZ','Arizona'],['AR','Arkansas'],
+  ['CA','California'],['CO','Colorado'],['CT','Connecticut'],['DE','Delaware'],
+  ['FL','Florida'],['GA','Georgia'],['HI','Hawaii'],['ID','Idaho'],
+  ['IL','Illinois'],['IN','Indiana'],['IA','Iowa'],['KS','Kansas'],
+  ['KY','Kentucky'],['LA','Louisiana'],['ME','Maine'],['MD','Maryland'],
+  ['MA','Massachusetts'],['MI','Michigan'],['MN','Minnesota'],
+  ['MS','Mississippi'],['MO','Missouri'],['MT','Montana'],['NE','Nebraska'],
+  ['NV','Nevada'],['NH','New Hampshire'],['NJ','New Jersey'],
+  ['NM','New Mexico'],['NY','New York'],['NC','North Carolina'],
+  ['ND','North Dakota'],['OH','Ohio'],['OK','Oklahoma'],['OR','Oregon'],
+  ['PA','Pennsylvania'],['RI','Rhode Island'],['SC','South Carolina'],
+  ['SD','South Dakota'],['TN','Tennessee'],['TX','Texas'],['UT','Utah'],
+  ['VT','Vermont'],['VA','Virginia'],['WA','Washington'],
+  ['WV','West Virginia'],['WI','Wisconsin'],['WY','Wyoming']
+];
+var STATES_READY = ['GA'];              // states with their own law material
+
+function savedState(){
+  var c; try { c = localStorage.getItem(STATE_KEY); } catch(e){ c = null; }
+  return US_STATES.some(function(r){ return r[0] === c; }) ? c : '';
+}
+
+/* Start studying lands here first; Back (or the browser's back) returns home. */
 function openApp(){
+  HOME.page = 'state';
+  try { history.pushState({page: 'state'}, '', '#state'); } catch(e){}
+  render();
+  window.scrollTo(0, 0);
+}
+
+function renderState(v){
+  var wrap = el('div', 'gatewrap statewrap');
+  var card = el('div', 'gatecard statecard');
+  var mark = el('div', 'gatemark');
+  mark.innerHTML = '<svg viewBox="0 0 512 512" aria-hidden="true">' +
+    '<path d="M256 96 L432 236 L400 236 L400 404 L112 404 L112 236 L80 236 Z" ' +
+    'fill="none" stroke="currentColor" stroke-width="30" stroke-linejoin="round"/></svg>';
+  card.appendChild(mark);
+  card.appendChild(el('h1', null, 'Which state are you studying for?'));
+  card.appendChild(el('p', 'gatelede',
+    'Pick the state where you will take your licensing exam.'));
+
+  var field = el('div', 'field statefield');
+  var label = el('label', null, 'Your state');
+  label.htmlFor = 'statePick';
+  var pick = el('select');
+  pick.id = 'statePick';
+  var none = el('option', null, 'Choose your state');
+  none.value = '';
+  pick.appendChild(none);
+  US_STATES.forEach(function(r){
+    var o = el('option', null, r[1]);
+    o.value = r[0];
+    pick.appendChild(o);
+  });
+  pick.value = savedState();
+  field.appendChild(label);
+  field.appendChild(pick);
+  card.appendChild(field);
+
+  var note = el('p', 'statenote');
+  note.setAttribute('aria-live', 'polite');
+  card.appendChild(note);
+
+  var acts = el('div', 'gateacts');
+  var go = el('button', 'btn wide', 'Continue');
+  var back = el('button', 'btn ghost wide', 'Back');
+  acts.appendChild(go);
+  acts.appendChild(back);
+  card.appendChild(acts);
+
+  function sync(){
+    var code = pick.value;
+    go.disabled = !code;
+    var name = '';
+    US_STATES.forEach(function(r){ if (r[0] === code) name = r[1]; });
+    note.textContent = (!code || STATES_READY.indexOf(code) >= 0) ? '' :
+      name + '\u2019s own state-law questions are on the way. For now, study ' +
+      'the national sections \u2014 they are on every state\u2019s exam. The ' +
+      'state sections in the app are Georgia\u2019s.';
+  }
+  pick.onchange = sync;
+  sync();
+
+  go.onclick = function(){
+    if (!pick.value) return;
+    try { localStorage.setItem(STATE_KEY, pick.value); } catch(e){}
+    goToApp();
+  };
+  back.onclick = function(){
+    /* Arrived from the front page: step back through history. Arrived on
+       #state directly: there is nothing behind it, so swap in the front page. */
+    if (history.state && history.state.page === 'state') return history.back();
+    HOME.page = 'welcome';
+    try { history.replaceState(null, '', location.pathname + location.search); } catch(e){}
+    render();
+  };
+
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+  document.body.classList.add('onescreen');   // one screen, like the front page
+  pick.focus();
+}
+
+function goToApp(){
   var href = HOME.appHref || '/buy';
   if (reducedMotion()){ location.href = href; return; }
   document.body.classList.add('leaving');
@@ -3285,6 +3414,7 @@ function renderBuy(v, q){
 function render(){
   var v = $('page');
   dropHero();
+  document.body.classList.remove('onescreen');
   v.innerHTML = '';
   if (HOME.preview){
     var pv = el('div', 'previewbar');
@@ -3298,6 +3428,7 @@ function render(){
   if (q.get('checkout') === 'cancelled') toast('Checkout cancelled — nothing was charged.');
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
   if (HOME.page === 'auth') return renderAuthPage();
+  if (HOME.page === 'state') return renderState(v);
   if (HOME.page === 'buy') return renderBuy(v, q);
   if (HOME.layout === 'minimal'){ renderMinimal(v, q); mountHero(v); return; }
   return renderWelcome(v, q);
@@ -3315,6 +3446,15 @@ function render(){
   });
 
   applyTheme(readTheme());
+  /* #state is the state screen: it survives a reload, and the browser's
+     Back leaves it for the front page. */
+  if (location.hash === '#state' && HOME.openAccess) HOME.page = 'state';
+  window.addEventListener('popstate', function(){
+    var want = (location.hash === '#state' && HOME.openAccess) ? 'state' : 'welcome';
+    if (HOME.page === want) return;
+    HOME.page = want;
+    render();
+  });
   $('themeBtn').onclick = function(){
     var next = THEMES[(THEMES.indexOf(readTheme()) + 1) % THEMES.length];
     try { localStorage.setItem(THEME_KEY, next); } catch(e){}
