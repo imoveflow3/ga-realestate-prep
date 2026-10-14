@@ -179,6 +179,7 @@ def main():
         "why": WHY,
         "steps": STEPS,
         "honest": HONEST,
+        "states": online.state_facts(),
     }
     shell = read("home.html")
     homejs = read("home.js")

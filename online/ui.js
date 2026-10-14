@@ -883,6 +883,62 @@ function taskAction(t, plan){
   return null;
 }
 
+/* The student's own state's exam, from the state picked on the front page
+   and greprep/states.json. Official figures only; nothing is filled in. Only
+   Georgia has its own state-law material so far, and the card says so. */
+var STATE_NAMES = {AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',
+  CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',
+  ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',
+  ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',
+  MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',
+  NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',
+  OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',
+  SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',
+  WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'};
+function stateExamCard(box){
+  var code = null;
+  try { code = localStorage.getItem('ga-prep-state'); } catch(e){}
+  var f = code && DATA.states && DATA.states[code];
+  if (!f) return;
+  var name = STATE_NAMES[code] || code;
+  var card = el('div', 'card stateexam');
+  var change = el('a', 'linkish', 'Change state');
+  change.href = new URL('../#state', location.href).href;
+  card.appendChild(cardHead('Your exam: ' + name, ''));
+  card.querySelector('.cardhead').appendChild(change);
+  var dl = el('dl', 'stategrid');
+  function row(k, v, sub){
+    if (v === undefined || v === null || v === '') return;
+    var dd = el('dd', null, v);
+    if (sub) dd.appendChild(el('small', null, sub));
+    dl.appendChild(el('dt', null, k)); dl.appendChild(dd);
+  }
+  var exam = f.single ? ('One ' + f.state + '-question exam')
+    : (f.national && f.state) ? (f.national + ' national + ' + f.state + ' state questions')
+    : f.national ? (f.national + ' national questions') : null;
+  row('The exam', exam || f.note);
+  row('To pass', f.pass || 'See the official handbook');
+  if (f.minutes){
+    var h = Math.floor(f.minutes / 60), m = f.minutes % 60;
+    row('Time', (h ? h + ' hr' : '') + (h && m ? ' ' : '') + (m ? m + ' min' : ''));
+  }
+  row('Course first', f.hours ? f.hours + ' hours' : null, f.hours_note);
+  row('Given by', f.vendor);
+  if (f.license) row('License', f.license);
+  card.appendChild(dl);
+  var links = el('p', 'muted');
+  var a1 = el('a', null, f.regulator); a1.href = f.regulator_url; a1.target = '_blank'; a1.rel = 'noopener';
+  var a2 = el('a', null, 'official source'); a2.href = f.src; a2.target = '_blank'; a2.rel = 'noopener';
+  links.appendChild(a1); links.appendChild(document.createTextNode(' \u00b7 ')); links.appendChild(a2);
+  card.appendChild(links);
+  if (code !== 'GA'){
+    card.appendChild(el('div', 'callout', name + '\u2019s own state-law lessons and ' +
+      'questions are on the way. Study the National sections now \u2014 they are on ' +
+      'every state\u2019s exam. The state sections here are Georgia\u2019s.'));
+  }
+  box.appendChild(card);
+}
+
 function renderToday(){
   var v = $('view-today');
   v.className = '';
@@ -955,6 +1011,7 @@ function renderToday(){
     }
   }
   box.appendChild(head);
+  stateExamCard(box);
 
   /* ---- the queue ---- */
   var work = el('div', 'card');
@@ -3665,8 +3722,11 @@ function welcomeWizard(v){
   ['national','georgia'].forEach(function(portion){
     var rows = DATA.topics.filter(function(t){ return t.portion === portion; });
     if (!rows.length) return;
-    var h = el('div','eyebrow', portion === 'georgia'
-      ? 'Georgia portion · 52 questions' : 'National portion · 80 questions');
+    /* counted from the blueprint, like every other portion size in the app --
+       this was typed in as 80 and went stale when the national portion was
+       corrected to 100 */
+    var h = el('div','eyebrow', (portion === 'georgia' ? 'Georgia portion' : 'National portion') +
+      ' · ' + examScored(portion) + ' questions');
     h.style.marginTop = '.6rem';
     card.appendChild(h);
     var grid = el('div','pickgrid');

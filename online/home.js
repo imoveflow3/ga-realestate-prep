@@ -739,6 +739,46 @@ function savedState(){
   return US_STATES.some(function(r){ return r[0] === c; }) ? c : '';
 }
 
+/* The exam at a glance for one state, from greprep/states.json. Only what an
+   official source states; anything it does not is left out, never guessed. */
+function stateFacts(code){
+  var f = (HOME.states || {})[code];
+  if (!f) return null;
+  var box = el('div', 'statefacts');
+  var dl = el('dl');
+  function row(k, v, sub){
+    if (v === undefined || v === null || v === '') return;
+    var dt = el('dt', null, k), dd = el('dd');
+    if (typeof v === 'string') dd.textContent = v; else dd.appendChild(v);
+    if (sub) dd.appendChild(el('small', null, sub));
+    dl.appendChild(dt); dl.appendChild(dd);
+  }
+  var exam = f.single ? ('One ' + f.state + '-question exam')
+    : (f.national && f.state) ? (f.national + ' national + ' + f.state + ' state questions')
+    : f.national ? (f.national + ' national questions') : null;
+  row('The exam', exam || f.note, (exam && f.note && !f.single) ? f.note : null);
+  row('To pass', f.pass || 'See the official handbook');
+  if (f.minutes) {
+    var h = Math.floor(f.minutes / 60), m = f.minutes % 60;
+    row('Time', (h ? h + ' hr' : '') + (h && m ? ' ' : '') + (m ? m + ' min' : ''));
+  }
+  row('Course first', f.hours ? f.hours + ' hours' : null, f.hours_note);
+  row('Given by', f.vendor);
+  if (f.license) row('License', f.license);
+  if (f.fee) row('Exam fee', '$' + f.fee, f.fee_note || null);
+  box.appendChild(dl);
+  var links = el('p', 'statelinks');
+  var a1 = el('a', null, f.regulator); a1.href = f.regulator_url;
+  a1.target = '_blank'; a1.rel = 'noopener';
+  var a2 = el('a', null, 'official source'); a2.href = f.src;
+  a2.target = '_blank'; a2.rel = 'noopener';
+  links.appendChild(a1);
+  links.appendChild(document.createTextNode(' \u00b7 '));
+  links.appendChild(a2);
+  box.appendChild(links);
+  return box;
+}
+
 /* Start studying lands here first; Back (or the browser's back) returns home. */
 function openApp(){
   HOME.page = 'state';
@@ -783,8 +823,10 @@ function renderState(v){
   field.appendChild(pick);
   card.appendChild(field);
 
+  var facts = el('div', 'statefactswrap');
+  facts.setAttribute('aria-live', 'polite');
+  card.appendChild(facts);
   var note = el('p', 'statenote');
-  note.setAttribute('aria-live', 'polite');
   card.appendChild(note);
 
   var acts = el('div', 'gateacts');
@@ -797,6 +839,9 @@ function renderState(v){
   function sync(){
     var code = pick.value;
     go.disabled = !code;
+    facts.innerHTML = '';
+    var fx = code ? stateFacts(code) : null;
+    if (fx) facts.appendChild(fx);
     var name = '';
     US_STATES.forEach(function(r){ if (r[0] === code) name = r[1]; });
     note.textContent = (!code || STATES_READY.indexOf(code) >= 0) ? '' :

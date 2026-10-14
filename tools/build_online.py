@@ -268,8 +268,15 @@ def default_profile():
     return {}
 
 
+def state_facts():
+    """Exam facts for every state, from greprep/states.json (official sources)."""
+    with io.open(os.path.join(HERE, "greprep", "states.json"), encoding="utf-8") as f:
+        return json.load(f)["states"]
+
+
 def build_data():
     return {
+        "states": state_facts(),
         "profile_default": default_profile(),
         "portions": topics.PORTIONS,
         "topics": topics.catalog(),
@@ -323,6 +330,7 @@ def build_home(stamp, css, totals, price_cents=1900):
         "why": WHY,
         "steps": STEPS,
         "honest": HONEST,
+        "states": state_facts(),
     }
     blob = json.dumps(home, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
     body = (read("home.html")

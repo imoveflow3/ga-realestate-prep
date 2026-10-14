@@ -1337,6 +1337,29 @@ body.landing footer{max-width:1120px}
 .statenote:empty{display:none}
 .statecard .gateacts .btn{min-height:48px}
 .statecard .btn:disabled{opacity:.45; cursor:not-allowed}
+.statefactswrap:empty{display:none}
+.statefactswrap{width:100%; max-width:22rem}
+.statefacts{text-align:left; background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--r-sm); padding:.75rem .9rem .6rem}
+.statefacts dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:.35rem .9rem}
+.statefacts dt{font-size:.74rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--ink-3); padding-top:.12rem; white-space:nowrap}
+.statefacts dd{margin:0; font-size:.88rem; line-height:1.4; color:var(--ink)}
+.statefacts dd small{display:block; font-size:.76rem; color:var(--ink-3); margin-top:.1rem}
+.statelinks{margin:.55rem 0 0; font-size:.78rem; color:var(--ink-3)}
+.statelinks a{color:var(--accent)}
+/* A tall fact card scrolls inside the screen, never off it: auto margins
+   centre the card when it fits and let it start at the top when it does not
+   (plain centring would push its top out of reach). */
+body.onescreen .statewrap{overflow-y:auto; display:flex; flex-direction:column}
+body.onescreen .statewrap .statecard{margin:auto; flex:0 0 auto}
+.statecard{gap:.7rem}
+.statecard h1{font-size:1.6rem}
+/* On the state screen the small print takes its own strip under the card
+   instead of floating over it, so it can never sit on top of Continue. */
+body.onescreen:has(.statewrap) footer{position:static; flex:0 0 auto; max-width:none;
+  padding:.5rem var(--s5) .6rem; border-top:1px solid var(--line); background:var(--bg)}
+body.onescreen .statewrap{padding-bottom:1.2rem}
 body.onescreen .statewrap{flex:1 1 auto; min-height:0; width:100%;
   padding:1rem var(--s5) 5rem}
 @media (max-width:980px){
@@ -2095,11 +2118,20 @@ a.btn{
 }
 a.btn:hover{filter:brightness(1.08); text-decoration:none}
 a.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+/* The app's "Your exam" card: the student's state, official figures only. */
+.stateexam .cardhead .linkish{margin-left:auto; font-size:.82rem}
+.stategrid{margin:.2rem 0 .4rem; display:grid; grid-template-columns:auto 1fr; gap:.35rem 1rem}
+.stategrid dt{font-size:.74rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--ink-3); padding-top:.15rem; white-space:nowrap}
+.stategrid dd{margin:0; font-size:.92rem; color:var(--ink)}
+.stategrid dd small{display:block; font-size:.78rem; color:var(--ink-3)}
+.stateexam .muted a{color:var(--accent)}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
 <div class="card reading"><h1>Page not found</h1><p>There is nothing at that address. It may have been a typo, or a link that pointed somewhere this site never had.</p>
 <p><a class="btn" href="/" style="display:inline-flex">Go to the home page</a></p>
 <p><span class="muted">If you followed a link from inside the site and landed here, that is a bug worth telling us about: <a href="mailto:— not set —">— not set —</a>.</span></p>
-<p class="muted">Last updated 2026-10-13. <a href="/">Back to the home page</a>.</p></div>
+<p class="muted">Last updated 2026-10-14. <a href="/">Back to the home page</a>.</p></div>
 </main></body></html>
