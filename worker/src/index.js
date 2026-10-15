@@ -200,7 +200,12 @@ export default {
 
       const existing = await env.DB.prepare(
         'SELECT id, password_hash FROM users WHERE email = ?').bind(email).first();
-      if (existing && existing.password_hash) {
+      /* Signing up hands out a session for the address typed in, so an
+         address that already has an account -- made here, by Google, or by a
+         purchase -- is never signed up again. Otherwise typing someone else's
+         email (with or without a password) would be a way into their
+         account. They log in with a code instead. */
+      if (existing) {
         return json({ fields: { email: 'There is already an account on that ' +
                                        'address. Log in instead.' } }, 409);
       }

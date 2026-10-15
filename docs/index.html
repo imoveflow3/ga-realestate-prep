@@ -2464,7 +2464,7 @@ function renderAuth(){
         .then(function(x){
           ok.disabled = false;
           if (x.d.error){ note2.className = 'authnote bad'; note2.textContent = x.d.error; return; }
-          location.href = savedState() ? '/app' : '/#state';
+          location.href = '/app';
         })['catch'](function(){ ok.disabled = false; note2.textContent = 'Network problem.'; });
     };
     acts2.appendChild(ok);
@@ -2571,7 +2571,8 @@ function focusFirstError(){
    into the app. Everybody else stays exactly where they are: signing in and
    paying are two steps of one card, not two pages. */
 function afterAuthed(d){
-  if (!savedState()) { location.href = '/#state'; return; }
+  /* Sign up, then pay, then pick a state: the app sends anyone without a
+     state to the picker on the way in, so paid people can go straight there. */
   if (d.entitled || d.paid) { location.href = '/app'; return; }
   ME.signedIn = true;
   if (FORM.values.email) ME.email = FORM.values.email;
@@ -2656,10 +2657,6 @@ function payStep(card, wrap, v){
 
 function renderAuthPage(){
   var v = $('page');
-  if (!HOME.preview && ME.signedIn && !savedState()){
-    location.replace('/#state');
-    return;
-  }
   v.innerHTML = '';
   var q = new URLSearchParams(location.search);
 
@@ -2722,8 +2719,8 @@ function renderAuthPage(){
   form.noValidate = true;
 
   if (FORM.tab === 'signup'){
-    fieldRow(form, {name: 'name', label: 'Full name', type: 'text',
-                    autocomplete: 'name', placeholder: 'First Last'});
+    fieldRow(form, {name: 'name', label: 'First name', type: 'text',
+                    autocomplete: 'given-name', placeholder: 'First name'});
     fieldRow(form, {name: 'email', label: 'Email address', type: 'email',
                     autocomplete: 'email', placeholder: 'you@example.com'});
     fieldRow(form, {name: 'phone', label: 'Mobile number', type: 'tel',

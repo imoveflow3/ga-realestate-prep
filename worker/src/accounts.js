@@ -67,7 +67,7 @@ export async function useToken(env, kind, raw) {
 
 export function cleanName(raw) {
   const n = String(raw || '').replace(/\s+/g, ' ').trim();
-  if (n.length < 2) return { error: 'Put in your full name.' };
+  if (n.length < 2) return { error: 'Put in your first name.' };
   if (n.length > 80) return { error: 'That name is too long.' };
   return { value: n };
 }

@@ -453,12 +453,12 @@ const PW = 'a long enough passphrase';
 await it('a blank password is refused', async () => {
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'pw@example.com', name: 'Test Person',
+    body: JSON.stringify({ email: 'blank@example.com', name: 'Jo',
                            phone: '4045551234', password: '', password2: '',
                            terms: true }) }), env, {});
   assert.equal(res.status, 400);
   assert.ok((await res.json()).fields.password, 'the error did not name the field');
-  assert.ok(!db._tables.users.find(u => u.email === 'pw@example.com'),
+  assert.ok(!db._tables.users.find(u => u.email === 'blank@example.com'),
             'a rejected signup still made an account');
 });
 
@@ -554,16 +554,22 @@ await it('the right password works once the lock is cleared', async () => {
   assert.equal(db._tables.auth_attempts.length, 0, 'failures not cleared on success');
 });
 
-await it('a Google account can add a password and stay one account', async () => {
+/* This used to be how a Google account added a password: sign up again on
+   the same address. But that handed a session to whoever typed the address,
+   which is a way into somebody else's paid account. Now refused; the owner
+   signs in (Google or a code) instead. */
+await it('signing up on a Google account\u2019s address is refused, not merged', async () => {
   const before = db._tables.users.length;
   const res = await worker.fetch(req('/api/auth/signup', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'gmail.user@gmail.com', name: 'Gmail Person',
                            phone: '4045559999', password: PW, password2: PW,
                            terms: true }) }), env, {});
-  assert.equal(res.status, 200);
-  assert.equal((await res.json()).paid, true, 'lost their paid status');
+  assert.equal(res.status, 409);
+  assert.ok(!cookieOf(res), 'handed out a session to an address it does not own');
   assert.equal(db._tables.users.length, before, 'a duplicate account was made');
+  const u = db._tables.users.find(x => x.email === 'gmail.user@gmail.com');
+  assert.equal(u.paid, 1, 'lost their paid status');
 });
 
 
