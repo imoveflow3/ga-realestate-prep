@@ -492,30 +492,14 @@ function hasAccess(){
 
 /* The second half of the one page: signed in, not paid yet, one button. */
 function payStep(card, wrap, v){
-  /* The tab was baked at build time as "Create your account", which stops
-     being true the moment the card moves on. */
+  /* Just the plans: a heading and the four cards, nothing else to read.
+     Renewal and refund terms are on Stripe's checkout page and in /terms. */
   document.title = 'Checkout \u2014 Real Estate Exam Prep';
   wrap.classList.add('planwrap');
   card.classList.add('plancardwrap');
-  card.appendChild(el('h1', null, PAY.justMade ? 'Your account is ready \u2014 choose a plan'
-                                               : 'Choose your plan'));
-  card.appendChild(el('p', 'gatelede',
-    'Full access to the notes, the question bank and your progress. ' +
-    'Cancel any time.'));
-  card.appendChild(el('p', 'whoami', 'Signed in as ' + (ME.email || 'your account')));
-
-  /* Say what is true about email confirmation on this deployment rather than
-     telling somebody to check an inbox nothing was sent to. */
-  if (PAY.justMade && !ME.verified){
-    card.appendChild(PAY.emailSent
-      ? authNotice('good', 'We sent a confirmation link to ' + (ME.email || 'your email') +
-                           '. You do not need it to carry on \u2014 it just secures ' +
-                           'your account for later.')
-      : authNotice('warn', 'Email confirmation is not switched on for this site yet, ' +
-                           'so there is nothing to check for in your inbox. Your ' +
-                           'account works now.'));
-  }
-
+  var mark = card.querySelector('.gatemark');
+  if (mark) mark.remove();
+  card.appendChild(el('h1', null, 'Choose your plan'));
   if (ME.canPay === false){
     /* A button that cannot take money is worse than no button. */
     card.appendChild(authNotice('warn',
@@ -523,13 +507,6 @@ function payStep(card, wrap, v){
       'open. Nothing is wrong with your account \u2014 it is waiting for you.'));
   }
   card.appendChild(planCards());
-  card.appendChild(el('p', 'gatefine',
-    'Secure checkout by Stripe. Plans renew automatically until you cancel, ' +
-    'and you can cancel any time. Full refund within 14 days of your first payment.'));
-
-  var out = el('button', 'linkish', 'Use a different account');
-  out.onclick = signOut;
-  card.appendChild(out);
   wrap.appendChild(card);
   v.appendChild(wrap);
 }
