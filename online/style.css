@@ -2162,3 +2162,33 @@ main:has(.statewrap)>section{max-width:none}
 .affsteps p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
 .affcard .gateacts a.btn{text-decoration:none; display:inline-flex;
   align-items:center; justify-content:center}
+
+/* Affiliate code page, and a code applied on the plans. */
+.affcard.affhome{max-width:46rem; align-items:stretch; text-align:left}
+.affcard.affhome h1, .affcard.affhome > .gatelede{text-align:left}
+.affcopy{display:flex; flex-direction:column; gap:.3rem; width:100%}
+.afflabel{font-size:.74rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-3)}
+.affbox{display:flex; gap:.5rem; align-items:stretch}
+.affbox code{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font:500 .92rem/1.2 var(--mono); padding:.75rem .85rem; border-radius:var(--r-sm);
+  background:var(--panel-2); border:1px dashed var(--line-2); color:var(--ink)}
+.affcopy.big .affbox code{font-size:1.5rem; font-weight:700; letter-spacing:.06em;
+  color:var(--accent); text-align:center; background:var(--accent-soft);
+  border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.affbox .btn{flex:0 0 auto; min-width:5.2rem}
+.affearn{width:100%; display:flex; flex-direction:column; gap:.4rem}
+.affearngrid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem}
+.affearngrid div{display:flex; flex-direction:column; gap:.15rem; padding:.7rem .8rem;
+  border:1px solid var(--line); border-radius:var(--r-sm); background:var(--panel)}
+.affearngrid b{font-size:.92rem}
+.affearngrid span{font-size:.82rem; color:var(--ink-2)}
+.affideas, .affwhy{width:100%; display:flex; flex-direction:column; gap:.65rem;
+  border-top:1px solid var(--line); padding-top:1rem}
+.affideas h2, .affwhy h2{font-size:1.1rem; margin:0}
+.affidea b{display:block; font-size:.95rem}
+.affidea p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
+@media (max-width:560px){ .affearngrid{grid-template-columns:minmax(0,1fr)} }
+.refbanner{align-self:center; margin:0 0 .4rem; padding:.5rem .9rem; border-radius:var(--r-pill);
+  background:var(--accent-soft); color:var(--accent); font-weight:600; font-size:.88rem}
+.reffirst{margin:-.2rem 0 .2rem; font-size:.84rem; font-weight:600; color:var(--accent)}

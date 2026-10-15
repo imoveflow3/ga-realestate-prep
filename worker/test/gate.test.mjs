@@ -17,6 +17,8 @@ const ORIGIN = 'https://prep.test';
 const SENT = { code: null, to: null, verifyToken: null, resetToken: null };
 const GOOGLE = { email: 'gmail.user@gmail.com', verified: true };
 let LAST_CHECKOUT = new URLSearchParams();
+const STRIPE_COUPONS = new Set();
+const STRIPE_PROMOS = new Map();     // code -> promotion code id
 const realFetch = globalThis.fetch;
 globalThis.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input.url;
@@ -46,6 +48,32 @@ globalThis.fetch = async (input, init = {}) => {
     return new Response(JSON.stringify({
       payment_status: 'paid', customer: 'cus_activate',
       customer_details: { email: 'activated@example.com' } }), { status: 200 });
+  }
+  /* A pretend Stripe that keeps coupons and promotion codes. */
+  if (url.startsWith('https://api.stripe.com/v1/coupons')) {
+    if ((init.method || 'GET') === 'POST') {
+      STRIPE_COUPONS.add(new URLSearchParams(init.body).get('id'));
+      return new Response('{"id":"AFFILIATE40"}', { status: 200 });
+    }
+    const id = url.split('/').pop();
+    return STRIPE_COUPONS.has(id) ? new Response('{"id":"' + id + '"}', { status: 200 })
+      : new Response('{"error":{"message":"No such coupon"}}', { status: 404 });
+  }
+  if (url === 'https://api.stripe.com/v1/promotion_codes') {
+    const b = new URLSearchParams(init.body);
+    if (!STRIPE_COUPONS.has(b.get('coupon'))) {
+      return new Response('{"error":{"message":"No such coupon"}}', { status: 400 });
+    }
+    if (STRIPE_PROMOS.has(b.get('code'))) {
+      return new Response('{"error":{"message":"This code already exists"}}', { status: 400 });
+    }
+    STRIPE_PROMOS.set(b.get('code'), 'promo_' + b.get('code'));
+    return new Response(JSON.stringify({ id: 'promo_' + b.get('code') }), { status: 200 });
+  }
+  if (url.startsWith('https://api.stripe.com/v1/promotion_codes?')) {
+    const code = new URL(url).searchParams.get('code');
+    const id = STRIPE_PROMOS.get(code);
+    return new Response(JSON.stringify({ data: id ? [{ id, code }] : [] }), { status: 200 });
   }
   if (url === 'https://api.stripe.com/v1/checkout/sessions') {
     LAST_CHECKOUT = new URLSearchParams(init.body);
@@ -427,7 +455,47 @@ await it('checkout for a signed-in user carries their account id', async () => {
   assert.ok(LAST_CHECKOUT.get('client_reference_id'), 'account id not sent to Stripe');
   assert.equal(LAST_CHECKOUT.get('mode'), 'subscription', 'not a subscription');
   assert.equal(LAST_CHECKOUT.get('line_items[0][price_data][recurring][interval]'), 'month');
-  assert.equal(LAST_CHECKOUT.get('line_items[0][price_data][unit_amount]'), '2400');
+  assert.equal(LAST_CHECKOUT.get('line_items[0][price_data][unit_amount]'), '3500');
+  assert.equal(LAST_CHECKOUT.get('allow_promotion_codes'), 'true',
+               'with no code, the buyer cannot type one at Stripe');
+});
+
+/* The affiliate program: join for a code, and a code applies at checkout. */
+await it('joining the affiliate program needs an account', async () => {
+  const res = await worker.fetch(req('/api/affiliate/join', { method: 'POST' }), env, {});
+  assert.equal(res.status, 401);
+});
+let AFF_CODE = null;
+await it('joining makes a promo code from the first name, once', async () => {
+  const first = await worker.fetch(req('/api/affiliate/join', {
+    method: 'POST', headers: { Cookie: gCookie } }), env, {});
+  assert.equal(first.status, 200);
+  AFF_CODE = (await first.json()).code;
+  assert.match(AFF_CODE, /^[A-Z]+\d{2}$/, 'not a NAME00 code: ' + AFF_CODE);
+  assert.ok(STRIPE_COUPONS.has('AFFILIATE40'), 'the 40% coupon was never made');
+  assert.ok(STRIPE_PROMOS.has(AFF_CODE), 'the code was never created at Stripe');
+  const again = await worker.fetch(req('/api/affiliate/join', {
+    method: 'POST', headers: { Cookie: gCookie } }), env, {});
+  assert.equal((await again.json()).code, AFF_CODE, 'joining twice made a second code');
+  assert.equal(db._tables.affiliates.length, 1);
+});
+await it('a live code checks out; a made-up one does not', async () => {
+  const ok = await (await worker.fetch(req('/api/affiliate/check?code=' +
+    AFF_CODE.toLowerCase()), env, {})).json();
+  assert.equal(ok.ok, true); assert.equal(ok.discount, 40);
+  const no = await (await worker.fetch(req('/api/affiliate/check?code=NOBODY99'), env, {})).json();
+  assert.equal(no.ok, false);
+});
+await it('checkout with a code applies it and tags the subscription', async () => {
+  const res = await worker.fetch(req('/api/checkout', {
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ plan: 'yearly', code: AFF_CODE }) }), env, {});
+  assert.equal(res.status, 200);
+  assert.equal(LAST_CHECKOUT.get('discounts[0][promotion_code]'), 'promo_' + AFF_CODE);
+  assert.equal(LAST_CHECKOUT.get('subscription_data[metadata][ref]'), AFF_CODE,
+               'the subscription does not say whose code it was');
+  assert.equal(LAST_CHECKOUT.get('allow_promotion_codes'), null,
+               'Stripe refuses discounts and the code box together');
 });
 
 await it('the webhook pays the account the checkout was started from', async () => {

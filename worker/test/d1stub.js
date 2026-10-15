@@ -1,7 +1,7 @@
 /* A minimum D1 good enough to exercise the gate: the handful of statements
    the Worker actually issues, backed by plain objects. */
 export function makeDB() {
-  const t = { users: [], sessions: [], login_codes: [], progress: [], stripe_events: [], auth_attempts: [], tokens: [], sends: [] };
+  const t = { affiliates: [], users: [], sessions: [], login_codes: [], progress: [], stripe_events: [], auth_attempts: [], tokens: [], sends: [] };
   const like = (sql, s) => sql.replace(/\s+/g, ' ').toUpperCase().includes(s);
 
   function run(sql, args) {
@@ -58,6 +58,18 @@ export function makeDB() {
     /* a subscription changing state, keyed by the Stripe customer */
     if (like(q, 'UPDATE USERS SET PAID = ? WHERE STRIPE_ID')) {
       t.users.filter(u => u.stripe_id === args[1]).forEach(u => { u.paid = args[0]; });
+      return null;
+    }
+    if (like(q, 'SELECT CODE FROM AFFILIATES WHERE USER_ID')) {
+      const a = t.affiliates.find(x => x.user_id === args[0]);
+      return a ? { code: a.code } : null;
+    }
+    if (like(q, 'SELECT USER_ID FROM AFFILIATES WHERE CODE')) {
+      const a = t.affiliates.find(x => x.code === args[0]);
+      return a ? { user_id: a.user_id } : null;
+    }
+    if (like(q, 'INSERT INTO AFFILIATES')) {
+      t.affiliates.push({ user_id: args[0], code: args[1], promo_id: args[2], created_at: args[3] });
       return null;
     }
     if (like(q, 'SELECT STRIPE_ID FROM USERS WHERE ID')) {

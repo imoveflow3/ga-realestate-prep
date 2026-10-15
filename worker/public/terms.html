@@ -2197,13 +2197,45 @@ main:has(.statewrap)>section{max-width:none}
 .affsteps p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
 .affcard .gateacts a.btn{text-decoration:none; display:inline-flex;
   align-items:center; justify-content:center}
+
+/* Affiliate code page, and a code applied on the plans. */
+.affcard.affhome{max-width:46rem; align-items:stretch; text-align:left}
+.affcard.affhome h1, .affcard.affhome > .gatelede{text-align:left}
+.affcopy{display:flex; flex-direction:column; gap:.3rem; width:100%}
+.afflabel{font-size:.74rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-3)}
+.affbox{display:flex; gap:.5rem; align-items:stretch}
+.affbox code{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font:500 .92rem/1.2 var(--mono); padding:.75rem .85rem; border-radius:var(--r-sm);
+  background:var(--panel-2); border:1px dashed var(--line-2); color:var(--ink)}
+.affcopy.big .affbox code{font-size:1.5rem; font-weight:700; letter-spacing:.06em;
+  color:var(--accent); text-align:center; background:var(--accent-soft);
+  border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.affbox .btn{flex:0 0 auto; min-width:5.2rem}
+.affearn{width:100%; display:flex; flex-direction:column; gap:.4rem}
+.affearngrid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem}
+.affearngrid div{display:flex; flex-direction:column; gap:.15rem; padding:.7rem .8rem;
+  border:1px solid var(--line); border-radius:var(--r-sm); background:var(--panel)}
+.affearngrid b{font-size:.92rem}
+.affearngrid span{font-size:.82rem; color:var(--ink-2)}
+.affideas, .affwhy{width:100%; display:flex; flex-direction:column; gap:.65rem;
+  border-top:1px solid var(--line); padding-top:1rem}
+.affideas h2, .affwhy h2{font-size:1.1rem; margin:0}
+.affidea b{display:block; font-size:.95rem}
+.affidea p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
+@media (max-width:560px){ .affearngrid{grid-template-columns:minmax(0,1fr)} }
+.refbanner{align-self:center; margin:0 0 .4rem; padding:.5rem .9rem; border-radius:var(--r-pill);
+  background:var(--accent-soft); color:var(--accent); font-weight:600; font-size:.88rem}
+.reffirst{margin:-.2rem 0 .2rem; font-size:.84rem; font-weight:600; color:var(--accent)}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
-<div class="card reading"><h1>Terms and refunds</h1><p>This site sells access to a practice question bank and study notes for the real estate salesperson licensing exam, as a subscription: $9 a week, $24 a month, $149 a year.</p>
+<div class="card reading"><h1>Terms and refunds</h1><p>This site sells access to a practice question bank and study notes for the real estate salesperson licensing exam, as a subscription: $12 a week, $35 a month, $199 a year.</p>
 <p><b>Renewal.</b> A subscription renews automatically at the end of each week, month or year, and the card on file is charged the same price, until you cancel.</p>
 <p><b>Cancelling.</b> Cancel any time with <i>Manage subscription</i> on the front page while signed in. It stops the next renewal; you keep access until the end of the period already paid for.</p>
 <p><b>Refunds.</b> Email allrealwebsite@gmail.com within 14 days of your first payment and you will be refunded in full. You do not have to give a reason. Renewals are not refunded, but you can cancel before the next one.</p>
+<p><b>Promo codes.</b> An affiliate's promo code takes 40% off the first payment of any plan. Renewals after that are at the regular price.</p>
+<p><b>Affiliates.</b> Affiliates earn 25% of every payment made by a customer who signed up with their code, renewals included, for as long as that subscription continues, paid out monthly. Affiliates must say they earn from their code when they share it, may not use their own code, and may not spam or make false claims; a code used that way can be switched off.</p>
 <p><b>What you may do.</b> Use the material to study, on as many of your own devices as you like. Accounts are for one person.</p>
 <p><b>What you may not do.</b> Republish, resell, or redistribute the questions, notes or explanations. They are original work.</p>
 <p><b>No guarantee.</b> This is practice material. Nobody can promise you a pass, and nothing here is legal advice or an official statement of Georgia law. Verify current rules at grec.state.ga.us.</p>

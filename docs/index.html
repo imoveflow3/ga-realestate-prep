@@ -2200,6 +2200,36 @@ main:has(.statewrap)>section{max-width:none}
 .affsteps p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
 .affcard .gateacts a.btn{text-decoration:none; display:inline-flex;
   align-items:center; justify-content:center}
+
+/* Affiliate code page, and a code applied on the plans. */
+.affcard.affhome{max-width:46rem; align-items:stretch; text-align:left}
+.affcard.affhome h1, .affcard.affhome > .gatelede{text-align:left}
+.affcopy{display:flex; flex-direction:column; gap:.3rem; width:100%}
+.afflabel{font-size:.74rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-3)}
+.affbox{display:flex; gap:.5rem; align-items:stretch}
+.affbox code{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font:500 .92rem/1.2 var(--mono); padding:.75rem .85rem; border-radius:var(--r-sm);
+  background:var(--panel-2); border:1px dashed var(--line-2); color:var(--ink)}
+.affcopy.big .affbox code{font-size:1.5rem; font-weight:700; letter-spacing:.06em;
+  color:var(--accent); text-align:center; background:var(--accent-soft);
+  border-color:color-mix(in srgb, var(--accent) 40%, var(--line))}
+.affbox .btn{flex:0 0 auto; min-width:5.2rem}
+.affearn{width:100%; display:flex; flex-direction:column; gap:.4rem}
+.affearngrid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:.6rem}
+.affearngrid div{display:flex; flex-direction:column; gap:.15rem; padding:.7rem .8rem;
+  border:1px solid var(--line); border-radius:var(--r-sm); background:var(--panel)}
+.affearngrid b{font-size:.92rem}
+.affearngrid span{font-size:.82rem; color:var(--ink-2)}
+.affideas, .affwhy{width:100%; display:flex; flex-direction:column; gap:.65rem;
+  border-top:1px solid var(--line); padding-top:1rem}
+.affideas h2, .affwhy h2{font-size:1.1rem; margin:0}
+.affidea b{display:block; font-size:.95rem}
+.affidea p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
+@media (max-width:560px){ .affearngrid{grid-template-columns:minmax(0,1fr)} }
+.refbanner{align-self:center; margin:0 0 .4rem; padding:.5rem .9rem; border-radius:var(--r-pill);
+  background:var(--accent-soft); color:var(--accent); font-weight:600; font-size:.88rem}
+.reffirst{margin:-.2rem 0 .2rem; font-size:.84rem; font-weight:600; color:var(--accent)}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -2367,6 +2397,12 @@ function playIntro(){
 var BUYING = false;
 /* Start Stripe checkout for one plan. With no plan (old buttons), go and
    pick one first. */
+function refCode(){
+  var c = null;
+  try { c = localStorage.getItem(REF_KEY); } catch(e){}
+  return /^[A-Z0-9]{3,24}$/.test(c || '') ? c : '';
+}
+
 function buy(plan){
   if (HOME.preview){
     toast('Preview only \u2014 payments are not connected until this is deployed.');
@@ -2379,7 +2415,7 @@ function buy(plan){
   fetch('/api/checkout', {
     method: 'POST', credentials: 'same-origin',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({plan: plan})
+    body: JSON.stringify({plan: plan, code: refCode() || null})
   }).then(function(r){ return r.json(); })
     .then(function(d){
       if (d.url){ location.href = d.url; return; }
@@ -2473,6 +2509,11 @@ function planCards(){
       pr.appendChild(el('span', 'amount', money(p.cents)));
       pr.appendChild(el('span', 'per', '/ ' + p.per));
       c.appendChild(pr);
+      if (refCode() && REF.ok){
+        var off = HOME.affiliate ? HOME.affiliate.discount : 40;
+        c.appendChild(el('p', 'reffirst', 'First ' + p.per + ' ' +
+          money(Math.round(p.cents * (100 - off) / 100)) + ' with your code'));
+      }
       btn = el('button', 'btn wide' + (p.badge === 'Most popular' ? '' : ' ghost'),
                'Choose ' + p.name.toLowerCase());
       btn.disabled = BUYING || ME.canPay === false;
@@ -2748,6 +2789,10 @@ function focusFirstError(){
    into the app. Everybody else stays exactly where they are: signing in and
    paying are two steps of one card, not two pages. */
 function afterAuthed(d){
+  var next = null;
+  try { next = sessionStorage.getItem('ga-prep-after-auth');
+        sessionStorage.removeItem('ga-prep-after-auth'); } catch(e){}
+  if (next === 'affiliate'){ location.href = '/#affiliate'; return; }
   /* Sign up, then pay, then pick a state: the app sends anyone without a
      state to the picker on the way in, so paid people can go straight there. */
   if (d.entitled || d.paid) { location.href = '/app'; return; }
@@ -2788,6 +2833,18 @@ function payStep(card, wrap, v){
   var mark = card.querySelector('.gatemark');
   if (mark) mark.remove();
   card.appendChild(el('h1', null, 'Choose your plan'));
+  var code = refCode();
+  if (code && REF.ok === null && !REF.checking){
+    REF.checking = true;
+    fetch('/api/affiliate/check?code=' + encodeURIComponent(code))
+      .then(function(r){ return r.json(); })
+      .then(function(d){ REF.ok = !!d.ok; })['catch'](function(){ REF.ok = false; })
+      .then(function(){ REF.checking = false; renderAuthPage(); });
+  }
+  if (code && REF.ok){
+    card.appendChild(el('div', 'refbanner', 'Code ' + code + ' applied \u2014 ' +
+      (HOME.affiliate ? HOME.affiliate.discount : 40) + '% off your first payment'));
+  }
   if (ME.canPay === false){
     /* A button that cannot take money is worse than no button. */
     card.appendChild(authNotice('warn',
@@ -3105,12 +3162,32 @@ function stateFacts(code){
 }
 
 /* ------------------------------------------------- the affiliate program */
-/* Reached from "Join program" on the plans. How it works, then a way to
-   apply. No rates are stated here: there are none yet, and a number on the
-   page would be a promise. The discount and the commission go out by email. */
+/* Reached from "Join program" on the plans. Three states: how it works with
+   a way to sign up; signed in, one tap to get a code; and the code itself,
+   with a share link and ideas for spreading it. */
+var AFF = {loaded: false, info: null, busy: false, error: ''};
+var REF_KEY = 'ga-prep-ref';          // an affiliate code brought in by a link
+var REF = {ok: null, checking: false};  // is that code live? asked once
+
 function renderAffiliate(v){
   var wrap = el('div', 'gatewrap statewrap affwrap');
   var card = el('div', 'gatecard affcard');
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+  document.body.classList.add('onescreen');
+
+  if (!AFF.loaded){
+    card.appendChild(el('p', 'gatelede', 'Loading…'));
+    fetch('/api/affiliate', {credentials: 'same-origin'})
+      .then(function(r){ return r.json(); })
+      .then(function(d){ AFF.info = d; })['catch'](function(){ AFF.info = null; })
+      .then(function(){ AFF.loaded = true; if (HOME.page === 'affiliate') render(); });
+    return;
+  }
+  var info = AFF.info || {};
+  var aff = HOME.affiliate || {discount: 40, share: 25};
+  if (info.code) return affiliateHome(card, info.code, aff);
+
   var mark = el('div', 'gatemark');
   mark.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" ' +
     'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' +
@@ -3119,17 +3196,16 @@ function renderAffiliate(v){
   card.appendChild(el('h1', null, 'Become an affiliate'));
   card.appendChild(el('p', 'gatelede',
     'Share the site with people studying for their real estate exam, and earn ' +
-    'money when they sign up.'));
-
+    'money every time they sign up with your code.'));
   var steps = el('ol', 'affsteps');
   [['Get your own promo code',
-    'When you join, we give you a promo code that is yours alone.'],
+    'Join below and your code is made on the spot — it is yours alone.'],
    ['Share it',
-    'Anyone who enters your code at checkout gets a discount on the weekly, ' +
-    'monthly or yearly plan.'],
-   ['Earn money',
-    'Every time someone buys a plan with your code, you earn a share of the ' +
-    'payment.']].forEach(function(r, i){
+    'Anyone who uses your code gets ' + aff.discount + '% off their first payment ' +
+    'on the weekly, monthly or yearly plan.'],
+   ['Earn ' + aff.share + '% of every payment',
+    'Not just the first one — you earn on every renewal for as long as they ' +
+    'stay subscribed.']].forEach(function(r, i){
     var li = el('li');
     li.appendChild(el('span', 'affno', String(i + 1)));
     var body = el('div');
@@ -3139,27 +3215,138 @@ function renderAffiliate(v){
     steps.appendChild(li);
   });
   card.appendChild(steps);
+  if (AFF.error) card.appendChild(authNotice('bad', AFF.error));
 
   var acts = el('div', 'gateacts');
-  var apply = el('a', 'btn wide', 'Apply to join');
-  apply.href = 'mailto:' + (HOME.support || '') + '?subject=' +
-    encodeURIComponent('Affiliate application \u2014 Real Estate Exam Prep') +
-    '&body=' + encodeURIComponent('Name:\nHow I would share my code (social, ' +
-    'school, brokerage, etc.):\n');
-  acts.appendChild(apply);
-  var back = el('button', 'btn ghost wide', 'Back');
-  back.onclick = function(){
-    if (history.length > 1) history.back(); else location.href = '/';
+  var join = el('button', 'btn wide', AFF.busy ? 'Making your code…'
+    : (info.signedIn ? 'Get my promo code' : 'Sign up and get my code'));
+  join.disabled = AFF.busy;
+  join.onclick = function(){
+    if (!info.signedIn){
+      /* back here after signing up, not on to the plans */
+      try { sessionStorage.setItem('ga-prep-after-auth', 'affiliate'); } catch(e){}
+      location.href = '/auth';
+      return;
+    }
+    AFF.busy = true; AFF.error = ''; render();
+    fetch('/api/affiliate/join', {method: 'POST', credentials: 'same-origin'})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        AFF.busy = false;
+        if (d.code){ AFF.info = Object.assign({}, info, {code: d.code}); }
+        else AFF.error = d.error || 'Could not make your code. Try again.';
+        render();
+      })['catch'](function(){
+        AFF.busy = false; AFF.error = 'Could not reach the server. Try again.'; render();
+      });
   };
+  acts.appendChild(join);
+  var back = el('button', 'btn ghost wide', 'Back');
+  back.onclick = function(){ if (history.length > 1) history.back(); else location.href = '/'; };
   acts.appendChild(back);
   card.appendChild(acts);
-  card.appendChild(el('p', 'gatefine',
-    'We reply by email with your promo code, the discount it gives, and what ' +
-    'you earn on each plan.'));
+}
 
-  wrap.appendChild(card);
-  v.appendChild(wrap);
-  document.body.classList.add('onescreen');
+/* The affiliate's own page: the code, the link, the money, the ideas. */
+function affiliateHome(card, code, aff){
+  card.classList.add('affhome');
+  card.appendChild(el('h1', null, 'Your promo code'));
+  card.appendChild(el('p', 'gatelede', 'Anyone who uses it gets ' + aff.discount +
+    '% off their first payment. You earn ' + aff.share + '% of every payment they ' +
+    'make, renewals included.'));
+
+  function copyRow(label, value, cls){
+    var row = el('div', 'affcopy ' + (cls || ''));
+    row.appendChild(el('span', 'afflabel', label));
+    var box = el('div', 'affbox');
+    box.appendChild(el('code', null, value));
+    var b = el('button', 'btn', 'Copy');
+    b.type = 'button';
+    b.onclick = function(){
+      var done = function(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1600); };
+      try { navigator.clipboard.writeText(value).then(done, done); } catch(e){ done(); }
+    };
+    box.appendChild(b);
+    row.appendChild(box);
+    return row;
+  }
+  var link = location.origin + '/?code=' + encodeURIComponent(code);
+  card.appendChild(copyRow('Your code', code, 'big'));
+  card.appendChild(copyRow('Your link — applies the code for them', link));
+
+  /* What one referral is worth, from the real prices. */
+  var earn = el('div', 'affearn');
+  earn.appendChild(el('span', 'afflabel', 'What one sign-up earns you'));
+  var tbl = el('div', 'affearngrid');
+  (HOME.plans || []).forEach(function(p){
+    if (!p.cents) return;
+    var first = p.cents * (100 - aff.discount) / 100 * aff.share / 100;
+    var later = p.cents * aff.share / 100;
+    var d = el('div');
+    d.appendChild(el('b', null, p.name));
+    d.appendChild(el('span', null, money(Math.round(first)) + ' on the first ' + p.per));
+    d.appendChild(el('span', null, money(Math.round(later)) + ' every ' + p.per + ' after'));
+    tbl.appendChild(d);
+  });
+  earn.appendChild(tbl);
+  card.appendChild(earn);
+
+  /* Ideas for bringing people in. */
+  var ideas = el('div', 'affideas');
+  ideas.appendChild(el('h2', null, 'Ways to get people using your code'));
+  [['TikTok and Instagram Reels',
+    'Film a quick "studying for my real estate exam" video: show a practice question, ' +
+    'guess the answer, reveal the explanation. Put your code on screen and in the caption.'],
+   ['Post your study routine',
+    'A day-in-the-life, your study plan counting down to test day, or your mock exam ' +
+    'score going up. People studying for the same exam relate to it.'],
+   ['Put it in your bio',
+    'Add your link to your Instagram, TikTok and YouTube bios so every video sends people to it.'],
+   ['YouTube and YouTube Shorts',
+    'Short tips on tricky topics — agency, contracts, real estate math — then point to the ' +
+    'site for practice questions with every answer explained.'],
+   ['Tell your classmates',
+    'Anyone in your pre-licensing course is studying for the same test. Share your code in ' +
+    'the class group chat.'],
+   ['Refer friends and family',
+    'Know someone thinking about getting their license? Send them your link.'],
+   ['Brokerages and new agents',
+    'If you work with a brokerage, share it with people they are bringing on who still have ' +
+    'to pass the exam.'],
+   ['Real estate groups',
+    'Facebook groups and forums for new agents and exam takers — where the rules allow, ' +
+    'answer questions and share your link.']].forEach(function(r){
+    var d = el('div', 'affidea');
+    d.appendChild(el('b', null, r[0]));
+    d.appendChild(el('p', null, r[1]));
+    ideas.appendChild(d);
+  });
+  card.appendChild(ideas);
+
+  var why = el('div', 'affwhy');
+  why.appendChild(el('h2', null, 'What to say about the site'));
+  var ul = el('ul', 'planlist');
+  [(HOME.totals ? HOME.totals.total.toLocaleString('en-US') + '+' : 'Hundreds of') +
+     ' practice questions, every answer explained the moment you answer',
+   'Mock exams scored the way the real exam is, national and state parts separately',
+   'A study plan built around your test date, so you always know what to do next',
+   'Lessons on every topic, flashcards, vocabulary and real estate math step by step',
+   'Works on any phone, and your progress is saved on every device',
+   'Your code gets them ' + aff.discount + '% off their first payment'].forEach(function(t){
+    ul.appendChild(el('li', null, t));
+  });
+  why.appendChild(ul);
+  card.appendChild(why);
+
+  card.appendChild(el('p', 'gatefine',
+    'When you share, say you earn from your code (for example "#ad" or "I earn a ' +
+    'commission") — it is required by law. Payouts are monthly; we will email you ' +
+    'at your account address to set up how you get paid.'));
+  var acts = el('div', 'gateacts');
+  var home = el('button', 'btn ghost wide', 'Back to the site');
+  home.onclick = function(){ location.href = '/'; };
+  acts.appendChild(home);
+  card.appendChild(acts);
 }
 
 /* Start studying lands here first; Back (or the browser's back) returns home. */
@@ -3738,6 +3925,16 @@ function render(){
   applyTheme(readTheme());
   /* #state is the state screen: it survives a reload, and the browser's
      Back leaves it for the front page. */
+  /* Arrived through an affiliate's link (?code=JORDAN27): keep the code for
+     checkout and tidy the address bar. */
+  try {
+    var qc = new URLSearchParams(location.search).get('code');
+    if (qc && /^[A-Za-z0-9]{3,24}$/.test(qc)){
+      localStorage.setItem(REF_KEY, qc.toUpperCase());
+      var u = new URL(location.href); u.searchParams.delete('code');
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+    }
+  } catch(e){}
   if (location.hash === '#state') HOME.page = 'state';
   if (location.hash === '#affiliate') HOME.page = 'affiliate';
   window.addEventListener('popstate', function(){

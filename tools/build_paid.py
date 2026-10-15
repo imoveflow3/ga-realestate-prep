@@ -40,11 +40,11 @@ PRICE_CENTS = siteconfig.PRICE_CENTS
 # keep the two in step. "affiliate" is not sold: its card opens an email
 # to support to apply.
 PLANS = [
-    {"id": "weekly",  "name": "Weekly",  "cents": 900,   "per": "week",
+    {"id": "weekly",  "name": "Weekly",  "cents": 1200,  "per": "week",
      "desc": "Try it for a week, cancel any time."},
-    {"id": "monthly", "name": "Monthly", "cents": 2400,  "per": "month",
+    {"id": "monthly", "name": "Monthly", "cents": 3500,  "per": "month",
      "desc": "The usual way to study for the exam.", "badge": "Most popular"},
-    {"id": "yearly",  "name": "Yearly",  "cents": 14900, "per": "year",
+    {"id": "yearly",  "name": "Yearly",  "cents": 19900, "per": "year",
      "desc": "Best value if you are taking your time.", "badge": "Best value"},
     {"id": "affiliate", "name": "Become an affiliate",
      "desc": "Refer students to the site and earn with us."},
@@ -185,6 +185,8 @@ def main():
     home = {
         "price": PRICE_CENTS,
         "plans": PLANS,
+        # Must match worker/src/stripe.js AFFILIATE_DISCOUNT / AFFILIATE_SHARE.
+        "affiliate": {"discount": 40, "share": 25},
         "support": SUPPORT_EMAIL,
         "totals": totals,
         "features": [{"icon": i, "name": n,
@@ -278,6 +280,15 @@ def main():
             "you will be refunded in full. You do not have to give a reason. "
             "Renewals are not refunded, but you can cancel before the next one."
             % SUPPORT_EMAIL,
+            "<b>Promo codes.</b> An affiliate's promo code takes 40% off the "
+            "first payment of any plan. Renewals after that are at the regular "
+            "price.",
+            "<b>Affiliates.</b> Affiliates earn 25% of every payment made by a "
+            "customer who signed up with their code, renewals included, for as "
+            "long as that subscription continues, paid out monthly. Affiliates "
+            "must say they earn from their code when they share it, may not use "
+            "their own code, and may not spam or make false claims; a code used "
+            "that way can be switched off.",
             "<b>What you may do.</b> Use the material to study, on as many of "
             "your own devices as you like. Accounts are for one person.",
             "<b>What you may not do.</b> Republish, resell, or redistribute the "

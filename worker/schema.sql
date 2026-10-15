@@ -79,3 +79,13 @@ CREATE TABLE IF NOT EXISTS sends (
   window_from INTEGER NOT NULL,
   last_at     INTEGER NOT NULL
 );
+
+-- Affiliates: one promo code each, made at Stripe when they join. Purchases
+-- made with it carry the code on the subscription's metadata as `ref`.
+CREATE TABLE IF NOT EXISTS affiliates (
+  user_id     TEXT PRIMARY KEY,
+  code        TEXT NOT NULL UNIQUE,
+  promo_id    TEXT,
+  created_at  INTEGER NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);

@@ -6,7 +6,8 @@
 
 import GATED from '../assets/gated.js';
 import { createCheckout, createPortal, fetchCheckout, verifyWebhook,
-         PLANS, subscriptionActive } from './stripe.js';
+         PLANS, subscriptionActive, createPromotionCode, findPromotionCode,
+         AFFILIATE_DISCOUNT, AFFILIATE_SHARE } from './stripe.js';
 import * as google from './google.js';
 import * as password from './password.js';
 import * as accounts from './accounts.js';
@@ -43,6 +44,12 @@ const html = (body, status = 200, headers = {}) =>
 
 const redirect = (to, headers = {}) =>
   new Response(null, { status: 302, headers: { Location: to, ...headers } });
+
+/* Promo codes are letters and digits; anything else is not one. */
+function cleanCode(raw) {
+  const c = String(raw || '').trim().toUpperCase();
+  return /^[A-Z0-9]{3,24}$/.test(c) ? c : '';
+}
 
 async function readJson(request) {
   try { return await request.json(); } catch (e) { return {}; }
@@ -147,6 +154,62 @@ export default {
       return json({ ok: true });
     }
 
+    /* --------------------------------------------- the affiliate program */
+    if (path === '/api/affiliate' && request.method === 'GET') {
+      const who = await currentUser(request, env);
+      const base = { discount: AFFILIATE_DISCOUNT, share: AFFILIATE_SHARE };
+      if (!who) return json(Object.assign({ signedIn: false }, base));
+      const row = await env.DB.prepare('SELECT code FROM affiliates WHERE user_id = ?')
+        .bind(who.id).first();
+      return json(Object.assign({ signedIn: true, code: row ? row.code : null,
+                                  name: who.name || '' }, base));
+    }
+
+    if (path === '/api/affiliate/join' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'sign in first' }, 401);
+      const have = await env.DB.prepare('SELECT code FROM affiliates WHERE user_id = ?')
+        .bind(who.id).first();
+      if (have) return json({ code: have.code });
+      if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
+      /* Their first name and two digits: JORDAN27. Tried a few times in case
+         that exact code is already somebody's. */
+      const stem = (String(who.name || '').split(/\s+/)[0] || who.email.split('@')[0])
+        .toUpperCase().replace(/[^A-Z]/g, '').slice(0, 10) || 'STUDY';
+      for (let i = 0; i < 6; i++) {
+        const code = stem + String(10 + Math.floor(Math.random() * 90));
+        const clash = await env.DB.prepare('SELECT user_id FROM affiliates WHERE code = ?')
+          .bind(code).first();
+        if (clash) continue;
+        let made;
+        try {
+          made = await createPromotionCode(env, { code, userId: who.id });
+        } catch (e) {
+          return json({ error: e.message }, 502);
+        }
+        if (made.taken) continue;
+        await env.DB.prepare(
+          'INSERT INTO affiliates (user_id, code, promo_id, created_at) VALUES (?, ?, ?, ?)'
+        ).bind(who.id, code, made.id, now()).run();
+        return json({ code });
+      }
+      return json({ error: 'Could not make a code just now. Try again.' }, 503);
+    }
+
+    /* Is this a live affiliate code? For the plans page, to show the price
+       with the discount before checkout. Says nothing about whose it is. */
+    if (path === '/api/affiliate/check' && request.method === 'GET') {
+      const code = cleanCode(url.searchParams.get('code'));
+      if (!code || !env.STRIPE_SECRET_KEY) return json({ ok: false });
+      try {
+        const found = await findPromotionCode(env, code);
+        return json(found ? { ok: true, code: found.code, discount: AFFILIATE_DISCOUNT }
+                          : { ok: false });
+      } catch (e) {
+        return json({ ok: false });
+      }
+    }
+
     /* ------------------------------------------- manage the subscription */
     if (path === '/api/billing' && request.method === 'POST') {
       const who = await currentUser(request, env);
@@ -181,8 +244,16 @@ export default {
         const body = await readJson(request);
         const plan = String((body && body.plan) || '');
         if (!PLANS[plan]) return json({ error: 'Pick a plan.' }, 400);
+        /* An affiliate code, if one came with them. A code that is not live
+           is dropped quietly: they can still type one at Stripe. */
+        let promo = null, ref = null;
+        const code = cleanCode(body && body.code);
+        if (code) {
+          const found = await findPromotionCode(env, code);
+          if (found) { promo = found.id; ref = found.code; }
+        }
         const link = await createCheckout(env, {
-          email: who.email, origin, userId: who.id, plan,
+          email: who.email, origin, userId: who.id, plan, promo, ref,
         });
         return json({ url: link });
       } catch (e) {
