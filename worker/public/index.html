@@ -2176,6 +2176,15 @@ a.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
   border:1px solid var(--line-2); text-transform:none; letter-spacing:0}
 .plancard a.btn.ghost:hover{border-color:var(--accent)}
 .authcard.plancardwrap h1{font-size:1.6rem; text-align:center; margin-bottom:.8rem}
+
+/* Sign-up, plans and state screens use the whole width and sit in the
+   middle. The page column is capped at 64rem and anchored left, which on a
+   wide screen pushed these single cards over to the left-hand side. */
+main:has(.authwrap)>section,
+main:has(.statewrap)>section{max-width:none}
+.authwrap, .statewrap{width:100%; justify-items:center}
+.authwrap.planwrap{padding:var(--s6) 0}
+.authwrap.planwrap .authcard.plancardwrap{max-width:78rem; margin:0 auto}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
