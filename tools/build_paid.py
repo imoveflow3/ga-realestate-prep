@@ -35,6 +35,20 @@ GATED = os.path.join(WORKER, "assets")
 from tools import siteconfig                             # noqa: E402
 
 PRICE_CENTS = siteconfig.PRICE_CENTS
+
+# The plans on sale. The Worker charges from worker/src/stripe.js PLANS --
+# keep the two in step. "contact" is not sold online: its card opens an
+# email to support.
+PLANS = [
+    {"id": "weekly",  "name": "Weekly",  "cents": 900,   "per": "week",
+     "desc": "Try it for a week, cancel any time."},
+    {"id": "monthly", "name": "Monthly", "cents": 2400,  "per": "month",
+     "desc": "The usual way to study for the exam.", "badge": "Most popular"},
+    {"id": "yearly",  "name": "Yearly",  "cents": 14900, "per": "year",
+     "desc": "Best value if you are taking your time.", "badge": "Best value"},
+    {"id": "contact", "name": "Contact us",
+     "desc": "Schools, teams and anything else."},
+]
 SUPPORT_EMAIL = siteconfig.support_email()
 PAID_SITE = siteconfig.paid_site()
 SAMPLE_COUNT = 0        # the sales page hands out nothing
@@ -170,6 +184,8 @@ def main():
     }
     home = {
         "price": PRICE_CENTS,
+        "plans": PLANS,
+        "support": SUPPORT_EMAIL,
         "totals": totals,
         "features": [{"icon": i, "name": n,
                       "desc": d % {"terms": totals["terms"]} if "%(" in d else d}
@@ -217,9 +233,8 @@ def main():
             "%d exam-style questions scored National and Georgia separately, "
             "real estate math worked step by step, study notes covering %d "
             "topics with %d defined terms, and a study plan built around your "
-            "test date. One payment of $%d, nothing renews."
-            % (totals["total"], totals["topics"], totals["terms"],
-               PRICE_CENTS // 100))
+            "test date. Weekly, monthly or yearly plans; cancel any time."
+            % (totals["total"], totals["topics"], totals["terms"]))
 
     welcome_n = public_page(
         "index.html", "welcome",
@@ -249,11 +264,19 @@ def main():
 
     write(os.path.join(PUBLIC, "terms.html"), legal_page(
         "Terms and refunds", [
-            "This site sells one thing: lifetime access to a practice question "
-            "bank and study notes for the Georgia real estate salesperson "
-            "licensing exam, for a single payment of $%d." % (PRICE_CENTS // 100),
-            "<b>Refunds.</b> Email %s within 14 days of your purchase and you "
-            "will be refunded in full. You do not have to give a reason."
+            "This site sells access to a practice question bank and study notes "
+            "for the real estate salesperson licensing exam, as a subscription: "
+            "%s." % ", ".join("$%d a %s" % (p["cents"] // 100, p["per"])
+                              for p in PLANS if p.get("cents")),
+            "<b>Renewal.</b> A subscription renews automatically at the end of "
+            "each week, month or year, and the card on file is charged the same "
+            "price, until you cancel.",
+            "<b>Cancelling.</b> Cancel any time with <i>Manage subscription</i> "
+            "on the front page while signed in. It stops the next renewal; you "
+            "keep access until the end of the period already paid for.",
+            "<b>Refunds.</b> Email %s within 14 days of your first payment and "
+            "you will be refunded in full. You do not have to give a reason. "
+            "Renewals are not refunded, but you can cancel before the next one."
             % SUPPORT_EMAIL,
             "<b>What you may do.</b> Use the material to study, on as many of "
             "your own devices as you like. Accounts are for one person.",
@@ -376,7 +399,9 @@ def main():
     print("       worker/public/preview.html %.0f KB  (both pages, no server needed)"
           % (os.path.getsize(os.path.join(PUBLIC, "preview.html")) / 1e3))
     print("public worker/public/terms.html, privacy.html, assets/")
-    print("price  $%d one-time   support %s" % (PRICE_CENTS // 100, SUPPORT_EMAIL))
+    print("plans  %s   support %s" % (", ".join("$%d/%s" % (p["cents"] // 100, p["per"])
+                                                for p in PLANS if p.get("cents")),
+                                       SUPPORT_EMAIL))
     print("leak   every public page checked: no questions, answers or notes")
     print("seo    robots.txt, sitemap.xml, 404.html; app and auth noindex")
     siteconfig.check()

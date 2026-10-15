@@ -111,18 +111,21 @@ function playIntro(){
 
 /* ------------------------------------------------------------- buying */
 var BUYING = false;
-function buy(email){
+/* Start Stripe checkout for one plan. With no plan (old buttons), go and
+   pick one first. */
+function buy(plan){
   if (HOME.preview){
     toast('Preview only \u2014 payments are not connected until this is deployed.');
     return;
   }
+  if (typeof plan !== 'string' || !plan){ location.href = '/auth?pay=1'; return; }
   if (BUYING) return;
   BUYING = true;
   toast('Opening secure checkout…');
   fetch('/api/checkout', {
     method: 'POST', credentials: 'same-origin',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email || null})
+    body: JSON.stringify({plan: plan})
   }).then(function(r){ return r.json(); })
     .then(function(d){
       if (d.url){ location.href = d.url; return; }
@@ -133,6 +136,76 @@ function buy(email){
       BUYING = false;
       toast('Could not reach the payment service.');
     });
+}
+
+/* "$9 a week": the cheapest plan, for the line under the button. */
+function fromPrice(){
+  var best = null;
+  (HOME.plans || []).forEach(function(p){
+    if (p.cents && (!best || p.cents < best.cents)) best = p;
+  });
+  return best ? money(best.cents) + ' a ' + best.per : money(HOME.price);
+}
+
+/* Stripe's own page for cancelling, switching plan or changing the card. */
+function manageSubscription(){
+  toast('Opening your subscription…');
+  fetch('/api/billing', {method: 'POST', credentials: 'same-origin'})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.url){ location.href = d.url; return; }
+      toast(d.error || 'Could not open your subscription. Try again shortly.');
+    })['catch'](function(){ toast('Could not reach the payment service.'); });
+}
+
+/* The plans, as cards: weekly, monthly, yearly and "contact us". Prices come
+   from the build (HOME.plans); the server charges from its own copy. */
+var PLAN_ICONS = {
+  weekly:  '<path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>',
+  monthly: '<path d="M4 19V9l8-5 8 5v10a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/>',
+  yearly:  '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+  contact: '<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>'
+};
+var PLAN_INCLUDES = ['Study plan for your test date', 'Every lesson and topic',
+                     'All practice questions', 'Progress saved on every device'];
+function planCards(){
+  var grid = el('div', 'plangrid');
+  (HOME.plans || []).forEach(function(p){
+    var c = el('div', 'plancard' + (p.badge === 'Most popular' ? ' featured' : ''));
+    if (p.badge) c.appendChild(el('div', 'planbadge', p.badge));
+    var ic = el('div', 'planicon');
+    ic.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (PLAN_ICONS[p.id] || '') + '</svg>';
+    c.appendChild(ic);
+    c.appendChild(el('h3', null, p.name));
+    c.appendChild(el('p', 'plandesc', p.desc));
+    var btn;
+    if (p.cents){
+      var pr = el('div', 'planprice');
+      pr.appendChild(el('span', 'amount', money(p.cents)));
+      pr.appendChild(el('span', 'per', '/ ' + p.per));
+      c.appendChild(pr);
+      btn = el('button', 'btn wide' + (p.badge === 'Most popular' ? '' : ' ghost'),
+               'Choose ' + p.name.toLowerCase());
+      btn.disabled = BUYING || ME.canPay === false;
+      btn.onclick = function(){ buy(p.id); };
+    } else {
+      var pr2 = el('div', 'planprice');
+      pr2.appendChild(el('span', 'amount talk', 'Let\u2019s talk'));
+      c.appendChild(pr2);
+      btn = el('a', 'btn wide ghost', 'Contact us');
+      btn.href = 'mailto:' + (HOME.support || '') + '?subject=' +
+                 encodeURIComponent('Plan enquiry \u2014 Real Estate Exam Prep');
+    }
+    c.appendChild(btn);
+    var ul = el('ul', 'planlist');
+    (p.cents ? PLAN_INCLUDES : ['Group or school pricing', 'Custom setups',
+                                'Questions before you buy']).forEach(function(t){
+      ul.appendChild(el('li', null, t));
+    });
+    c.appendChild(ul);
+    grid.appendChild(c);
+  });
+  return grid;
 }
 
 /* ------------------------------------------------------------ signing in */
@@ -422,11 +495,13 @@ function payStep(card, wrap, v){
   /* The tab was baked at build time as "Create your account", which stops
      being true the moment the card moves on. */
   document.title = 'Checkout \u2014 Real Estate Exam Prep';
-  card.appendChild(el('h1', null, PAY.justMade ? 'Your account is ready'
-                                               : 'One payment left'));
+  wrap.classList.add('planwrap');
+  card.classList.add('plancardwrap');
+  card.appendChild(el('h1', null, PAY.justMade ? 'Your account is ready \u2014 choose a plan'
+                                               : 'Choose your plan'));
   card.appendChild(el('p', 'gatelede',
     'Full access to the notes, the question bank and your progress. ' +
-    'One payment, nothing renews.'));
+    'Cancel any time.'));
   card.appendChild(el('p', 'whoami', 'Signed in as ' + (ME.email || 'your account')));
 
   /* Say what is true about email confirmation on this deployment rather than
@@ -441,29 +516,17 @@ function payStep(card, wrap, v){
                            'account works now.'));
   }
 
-  var price = el('div', 'gateprice');
-  price.appendChild(el('span', 'amount', money(HOME.price)));
-  price.appendChild(el('span', 'once', 'one payment, no subscription'));
-  card.appendChild(price);
-
-  var acts = el('div', 'gateacts');
   if (ME.canPay === false){
     /* A button that cannot take money is worse than no button. */
     card.appendChild(authNotice('warn',
       'Card payments are not connected on this site yet, so checkout cannot ' +
       'open. Nothing is wrong with your account \u2014 it is waiting for you.'));
-  } else {
-    var pay = el('button', 'btn wide');
-    pay.textContent = 'Pay ' + money(HOME.price) + ' and start studying';
-    pay.disabled = BUYING;
-    pay.onclick = function(){ buy(ME.email); };
-    acts.appendChild(pay);
-    card.appendChild(acts);
-    card.appendChild(el('p', 'gatefine',
-      'Secure checkout by Stripe. Full refund within 14 days.'));
   }
+  card.appendChild(planCards());
+  card.appendChild(el('p', 'gatefine',
+    'Secure checkout by Stripe. Plans renew automatically until you cancel, ' +
+    'and you can cancel any time. Full refund within 14 days of your first payment.'));
 
-  card.appendChild(previewList());
   var out = el('button', 'linkish', 'Use a different account');
   out.onclick = signOut;
   card.appendChild(out);
@@ -943,6 +1006,11 @@ function renderMinimal(v, q){
     var go = el('button', 'btn wide', 'Continue studying');
     go.onclick = function(){ location.href = '/app'; };
     acts.appendChild(go);
+    if (ME.paid){
+      var manage = el('button', 'btn ghost wide', 'Manage subscription');
+      manage.onclick = manageSubscription;
+      acts.appendChild(manage);
+    }
     card.appendChild(acts);
     card.appendChild(previewList());
     var out = el('button', 'linkish', 'Sign out');
@@ -955,18 +1023,13 @@ function renderMinimal(v, q){
   /* Signed in, not paid: one thing to do. */
   if (!HOME.openAccess && ME.signedIn && !hasAccess()){
     card.appendChild(el('p', 'whoami', 'Signed in as ' + ME.email));
-    var price = el('div', 'gateprice');
-    price.appendChild(el('span', 'amount', money(HOME.price)));
-    price.appendChild(el('span', 'once', 'one payment, no subscription'));
-    card.appendChild(price);
-    var pay = el('button', 'btn wide');
-    pay.textContent = 'Pay ' + money(HOME.price) + ' and start studying';
-    pay.onclick = function(){ buy(); };
+    var pay = el('button', 'btn wide', 'Choose a plan');
+    pay.onclick = function(){ location.href = '/auth?pay=1'; };
     acts.appendChild(pay);
     card.appendChild(acts);
     card.appendChild(previewList());
-    card.appendChild(el('p', 'gatefine',
-      'Full refund within 14 days. Nothing renews.'));
+    card.appendChild(el('p', 'gatefine', 'Plans from ' + fromPrice() +
+      '. Cancel any time.'));
     var out2 = el('button', 'linkish', 'Use a different account');
     out2.onclick = signOut;
     card.appendChild(out2);
@@ -994,9 +1057,8 @@ function renderMinimal(v, q){
   acts.appendChild(already);
   card.appendChild(acts);
   card.appendChild(previewList());
-  card.appendChild(el('p', 'gatefine',
-    money(HOME.price) + ' once for full access. No subscription, nothing ' +
-    'renews, full refund within 14 days.'));
+  card.appendChild(el('p', 'gatefine', 'Plans from ' + fromPrice() +
+    '. Cancel any time.'));
   wrap.appendChild(card);
   v.appendChild(wrap);
 }
@@ -1329,6 +1391,10 @@ function render(){
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
   if (HOME.page === 'auth') return renderAuthPage();
   if (HOME.page === 'state') return renderState(v);
+  if (HOME.page === 'buy' && !HOME.preview){
+    location.replace(ME.signedIn ? '/auth?pay=1' : '/auth');
+    return;
+  }
   if (HOME.page === 'buy') return renderBuy(v, q);
   if (HOME.layout === 'minimal'){ renderMinimal(v, q); mountHero(v); return; }
   return renderWelcome(v, q);

@@ -1,4 +1,4 @@
-/* Stripe: one $19 charge, and a webhook we can trust.
+/* Stripe: a weekly, monthly or yearly subscription, and a webhook we can trust.
 
    The client is never allowed to say "I paid". It says "start a checkout",
    and the only thing that flips `paid` to 1 is a webhook whose signature we
@@ -32,24 +32,53 @@ async function stripe(env, path, { method = 'GET', form } = {}) {
   return body;
 }
 
-export async function createCheckout(env, { email, origin, userId }) {
+/* The plans on sale. The prices shown on the payment page come from
+   tools/build_paid.py PLANS -- keep the two in step. Prices are sent to
+   Stripe inline, so there is nothing to set up in the Stripe dashboard. */
+export const PLANS = {
+  weekly:  { cents: 900,   interval: 'week',  name: 'Weekly' },
+  monthly: { cents: 2400,  interval: 'month', name: 'Monthly' },
+  yearly:  { cents: 14900, interval: 'year',  name: 'Yearly' },
+};
+
+/* Statuses that mean the subscription is being paid for. past_due keeps
+   access while Stripe retries a failed card; anything else (canceled,
+   unpaid, incomplete_expired, paused) does not. */
+export function subscriptionActive(status) {
+  return status === 'active' || status === 'trialing' || status === 'past_due';
+}
+
+export async function createCheckout(env, { email, origin, userId, plan }) {
+  const p = PLANS[plan];
+  if (!p) throw new Error('Unknown plan.');
+  const product = env.PRODUCT_NAME || 'Real Estate Exam Prep';
   const form = {
-    mode: 'payment',
+    mode: 'subscription',
     'line_items[0][quantity]': '1',
     'line_items[0][price_data][currency]': 'usd',
-    'line_items[0][price_data][unit_amount]': String(env.PRICE_CENTS || '1900'),
-    'line_items[0][price_data][product_data][name]':
-      env.PRODUCT_NAME || 'Real Estate Exam Prep',
-    'line_items[0][price_data][product_data][description]':
-      'Lifetime access. One payment, no subscription.',
+    'line_items[0][price_data][unit_amount]': String(p.cents),
+    'line_items[0][price_data][recurring][interval]': p.interval,
+    'line_items[0][price_data][product_data][name]': `${product} \u2014 ${p.name}`,
+    'metadata[plan]': plan,
+    'subscription_data[metadata][plan]': plan,
     success_url: `${origin}/activate?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${origin}/?checkout=cancelled`,
+    cancel_url: `${origin}/auth?pay=1&checkout=cancelled`,
     allow_promotion_codes: 'true',
   };
   if (email) form.customer_email = email;
   // our own account id travels with the payment and comes back on the webhook
-  if (userId) form.client_reference_id = userId;
+  if (userId) {
+    form.client_reference_id = userId;
+    form['subscription_data[metadata][user_id]'] = userId;
+  }
   const session = await stripe(env, '/checkout/sessions', { method: 'POST', form });
+  return session.url;
+}
+
+/* Stripe's own page for cancelling, switching plan or changing the card. */
+export async function createPortal(env, { customer, origin }) {
+  const session = await stripe(env, '/billing_portal/sessions', {
+    method: 'POST', form: { customer, return_url: `${origin}/` } });
   return session.url;
 }
 

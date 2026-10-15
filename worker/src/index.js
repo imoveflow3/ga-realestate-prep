@@ -5,7 +5,8 @@
    only to a signed-in session whose user row says paid = 1. */
 
 import GATED from '../assets/gated.js';
-import { createCheckout, fetchCheckout, verifyWebhook } from './stripe.js';
+import { createCheckout, createPortal, fetchCheckout, verifyWebhook,
+         PLANS, subscriptionActive } from './stripe.js';
 import * as google from './google.js';
 import * as password from './password.js';
 import * as accounts from './accounts.js';
@@ -124,12 +125,43 @@ export default {
           }
           if (userId) {
             await env.DB.prepare(
-              'UPDATE users SET paid = 1, stripe_id = ?, paid_at = ? WHERE id = ?'
-            ).bind(s.customer || s.id, now(), userId).run();
+              'UPDATE users SET paid = 1, stripe_id = ?, paid_at = ?, plan = ? WHERE id = ?'
+            ).bind(s.customer || s.id, now(), (s.metadata && s.metadata.plan) || null,
+                   userId).run();
           }
         }
       }
+      /* A subscription changing state: renewed, switched, card failing for
+         good, or cancelled. Access follows it. Admins keep access through
+         their role whatever this says. */
+      if (event.type === 'customer.subscription.updated' ||
+          event.type === 'customer.subscription.deleted') {
+        const sub = event.data.object;
+        const on = event.type === 'customer.subscription.updated' &&
+                   subscriptionActive(sub.status);
+        if (sub.customer) {
+          await env.DB.prepare('UPDATE users SET paid = ? WHERE stripe_id = ?')
+            .bind(on ? 1 : 0, sub.customer).run();
+        }
+      }
       return json({ ok: true });
+    }
+
+    /* ------------------------------------------- manage the subscription */
+    if (path === '/api/billing' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'sign in first' }, 401);
+      const row = await env.DB.prepare('SELECT stripe_id FROM users WHERE id = ?')
+        .bind(who.id).first();
+      if (!row || !row.stripe_id || !String(row.stripe_id).startsWith('cus_')) {
+        return json({ error: 'There is no subscription on this account.' }, 404);
+      }
+      if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
+      try {
+        return json({ url: await createPortal(env, { customer: row.stripe_id, origin }) });
+      } catch (e) {
+        return json({ error: e.message }, 502);
+      }
     }
 
     /* --------------------------------------------------------- buy flow */
@@ -146,8 +178,11 @@ export default {
       if (who.entitled) return json({ url: `${origin}/app` });
       if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
       try {
+        const body = await readJson(request);
+        const plan = String((body && body.plan) || '');
+        if (!PLANS[plan]) return json({ error: 'Pick a plan.' }, 400);
         const link = await createCheckout(env, {
-          email: who.email, origin, userId: who.id,
+          email: who.email, origin, userId: who.id, plan,
         });
         return json({ url: link });
       } catch (e) {
@@ -549,8 +584,9 @@ export default {
           user = await findOrCreateUser(env, email);
         }
         await env.DB.prepare(
-          'UPDATE users SET paid = 1, stripe_id = ?, paid_at = COALESCE(paid_at, ?) WHERE id = ?'
-        ).bind(s.customer || s.id, now(), user.id).run();
+          'UPDATE users SET paid = 1, stripe_id = ?, paid_at = COALESCE(paid_at, ?), plan = ? WHERE id = ?'
+        ).bind(s.customer || s.id, now(), (s.metadata && s.metadata.plan) || null,
+               user.id).run();
         const { cookie } = await createSession(env, user.id);
         return redirect('/app?welcome=1', { 'Set-Cookie': cookie });
       } catch (e) {

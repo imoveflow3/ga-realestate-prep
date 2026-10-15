@@ -2127,11 +2127,59 @@ a.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 .stategrid dd{margin:0; font-size:.92rem; color:var(--ink)}
 .stategrid dd small{display:block; font-size:.78rem; color:var(--ink-3)}
 .stateexam .muted a{color:var(--accent)}
+
+/* ======================================================================
+   Plans on the payment step: weekly, monthly, yearly, and "contact us".
+   ====================================================================== */
+.authwrap.planwrap .authcard.plancardwrap{max-width:68rem; width:100%}
+.plangrid{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:1rem;
+  margin:.6rem 0 .2rem; text-align:left}
+.plancard{position:relative; display:flex; flex-direction:column; gap:.55rem;
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+  padding:1.5rem 1.1rem 1.1rem; transition:box-shadow .2s, border-color .2s, transform .2s}
+.plancard:hover{box-shadow:var(--shadow-lift);
+  border-color:color-mix(in srgb, var(--accent) 35%, var(--line))}
+.plancard.featured{border-color:var(--accent);
+  box-shadow:0 0 0 1px var(--accent), var(--shadow-lift)}
+@media (min-width:1101px){ .plancard.featured{transform:scale(1.03)} }
+.planbadge{position:absolute; top:-.7rem; left:50%; transform:translateX(-50%);
+  white-space:nowrap; font:600 .72rem/1 var(--ui); letter-spacing:.02em;
+  padding:.38rem .7rem; border-radius:var(--r-pill);
+  background:var(--accent); color:var(--accent-ink)}
+.planicon{width:2.4rem; height:2.4rem; border-radius:.7rem; display:grid; place-items:center;
+  background:var(--accent-soft); color:var(--accent)}
+.planicon svg{width:1.3rem; height:1.3rem; fill:none; stroke:currentColor;
+  stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+.plancard h3{margin:.15rem 0 0; font-size:1.15rem}
+.plandesc{margin:0; font-size:.86rem; line-height:1.45; color:var(--ink-2); min-height:2.5em}
+.planprice{display:flex; align-items:baseline; gap:.35rem; margin:.2rem 0 .3rem}
+.planprice .amount{font-family:var(--mono); font-variant-numeric:tabular-nums;
+  font-size:2rem; font-weight:600; letter-spacing:-.03em; line-height:1}
+.planprice .amount.talk{font-family:var(--ui); font-size:1.35rem; letter-spacing:-.01em}
+.planprice .per{font-size:.85rem; color:var(--ink-3)}
+.plancard .btn{min-height:44px; text-align:center; text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center}
+.planlist{list-style:none; margin:.35rem 0 0; padding:.7rem 0 0;
+  border-top:1px solid var(--line); display:flex; flex-direction:column; gap:.4rem}
+.planlist li{position:relative; padding-left:1.4rem; font-size:.84rem;
+  line-height:1.4; color:var(--ink-2)}
+.planlist li::before{content:""; position:absolute; left:0; top:.28rem; width:.8rem; height:.45rem;
+  border-left:2px solid var(--accent); border-bottom:2px solid var(--accent);
+  transform:rotate(-45deg)}
+@media (max-width:1100px){ .plangrid{grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.3rem 1rem} }
+@media (max-width:560px){ .plangrid{grid-template-columns:minmax(0,1fr)} }
+/* "Contact us" is a link styled as a button; keep it outlined like its
+   neighbours so the gold stays on the recommended plan. */
+.plancard a.btn.ghost{background:var(--panel); color:var(--accent);
+  border:1px solid var(--line-2); text-transform:none; letter-spacing:0}
+.plancard a.btn.ghost:hover{border-color:var(--accent)}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
-<div class="card reading"><h1>Terms and refunds</h1><p>This site sells one thing: lifetime access to a practice question bank and study notes for the Georgia real estate salesperson licensing exam, for a single payment of $19.</p>
-<p><b>Refunds.</b> Email allrealwebsite@gmail.com within 14 days of your purchase and you will be refunded in full. You do not have to give a reason.</p>
+<div class="card reading"><h1>Terms and refunds</h1><p>This site sells access to a practice question bank and study notes for the real estate salesperson licensing exam, as a subscription: $9 a week, $24 a month, $149 a year.</p>
+<p><b>Renewal.</b> A subscription renews automatically at the end of each week, month or year, and the card on file is charged the same price, until you cancel.</p>
+<p><b>Cancelling.</b> Cancel any time with <i>Manage subscription</i> on the front page while signed in. It stops the next renewal; you keep access until the end of the period already paid for.</p>
+<p><b>Refunds.</b> Email allrealwebsite@gmail.com within 14 days of your first payment and you will be refunded in full. You do not have to give a reason. Renewals are not refunded, but you can cancel before the next one.</p>
 <p><b>What you may do.</b> Use the material to study, on as many of your own devices as you like. Accounts are for one person.</p>
 <p><b>What you may not do.</b> Republish, resell, or redistribute the questions, notes or explanations. They are original work.</p>
 <p><b>No guarantee.</b> This is practice material. Nobody can promise you a pass, and nothing here is legal advice or an official statement of Georgia law. Verify current rules at grec.state.ga.us.</p>

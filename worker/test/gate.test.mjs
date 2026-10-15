@@ -411,12 +411,23 @@ await it('checkout refuses a stranger and points them at Google', async () => {
   assert.equal((await res.json()).signin, '/api/auth/google');
 });
 
+await it('checkout without a plan is refused', async () => {
+  const res = await worker.fetch(req('/api/checkout', {
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ plan: 'lifetime' }) }), env, {});
+  assert.equal(res.status, 400);
+});
+
 await it('checkout for a signed-in user carries their account id', async () => {
   const res = await worker.fetch(req('/api/checkout', {
-    method: 'POST', headers: { Cookie: gCookie } }), env, {});
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ plan: 'monthly' }) }), env, {});
   assert.equal(res.status, 200);
   assert.ok((await res.json()).url.startsWith('https://checkout.stripe.com/'));
   assert.ok(LAST_CHECKOUT.get('client_reference_id'), 'account id not sent to Stripe');
+  assert.equal(LAST_CHECKOUT.get('mode'), 'subscription', 'not a subscription');
+  assert.equal(LAST_CHECKOUT.get('line_items[0][price_data][recurring][interval]'), 'month');
+  assert.equal(LAST_CHECKOUT.get('line_items[0][price_data][unit_amount]'), '2400');
 });
 
 await it('the webhook pays the account the checkout was started from', async () => {
@@ -440,6 +451,30 @@ await it('and now they get in', async () => {
   assert.equal(bundle.status, 200);
   assert.ok((await bundle.json()).banks.national.length > 100);
 });
+/* A subscription that ends closes the door; one that comes back opens it. */
+async function subEvent(env, id, type, status) {
+  const body = JSON.stringify({ id, type, data: { object: { customer: 'cus_g', status } } });
+  return worker.fetch(req('/api/stripe-webhook', {
+    method: 'POST', body, headers: await signedWebhook(env, body) }), env, {});
+}
+await it('a cancelled subscription takes access away', async () => {
+  const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
+  assert.equal((await subEvent(env, 'evt_sub_del', 'customer.subscription.deleted',
+                               'canceled')).status, 200);
+  assert.equal(u.paid, 0, 'still paid after the subscription ended');
+  assert.equal((await worker.fetch(req('/api/bundle', {
+    headers: { Cookie: gCookie } }), env, {})).status, 402);
+});
+await it('a renewed subscription gives it back', async () => {
+  const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
+  await subEvent(env, 'evt_sub_upd', 'customer.subscription.updated', 'active');
+  assert.equal(u.paid, 1, 'not paid after renewing');
+});
+await it('the manage-subscription page needs a signed-in account', async () => {
+  const res = await worker.fetch(req('/api/billing', { method: 'POST' }), env, {});
+  assert.equal(res.status, 401);
+});
+
 
 
 console.log('\nEMAIL AND PASSWORD');

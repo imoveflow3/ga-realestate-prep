@@ -51,8 +51,18 @@ export function makeDB() {
     }
     if (like(q, 'UPDATE USERS SET PAID = 1')) {
       const u = t.users.find(u => u.id === args[args.length - 1]);
-      if (u) { u.paid = 1; u.stripe_id = args[0]; u.paid_at = args[1]; }
+      if (u) { u.paid = 1; u.stripe_id = args[0]; u.paid_at = args[1];
+                if (args.length === 4) u.plan = args[2]; }
       return null;
+    }
+    /* a subscription changing state, keyed by the Stripe customer */
+    if (like(q, 'UPDATE USERS SET PAID = ? WHERE STRIPE_ID')) {
+      t.users.filter(u => u.stripe_id === args[1]).forEach(u => { u.paid = args[0]; });
+      return null;
+    }
+    if (like(q, 'SELECT STRIPE_ID FROM USERS WHERE ID')) {
+      const u = t.users.find(u => u.id === args[0]);
+      return u ? { stripe_id: u.stripe_id || null } : null;
     }
     if (like(q, 'INSERT INTO SESSIONS')) {
       t.sessions.push({ id: args[0], user_id: args[1], created_at: args[2], expires_at: args[3] });

@@ -26,6 +26,7 @@ google_sub|TEXT
 password_hash|TEXT
 stripe_id|TEXT
 paid_at|INTEGER
+plan|TEXT
 "
 
 HAVE=$(npx wrangler d1 execute ga-prep $WHERE --command "PRAGMA table_info(users);" --json 2>/dev/null \

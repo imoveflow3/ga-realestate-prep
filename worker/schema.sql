@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS users (
   role          TEXT NOT NULL DEFAULT 'user',
   terms_at      INTEGER,
   created_at  INTEGER NOT NULL,
-  paid_at     INTEGER
+  paid_at     INTEGER,
+  plan        TEXT          -- weekly | monthly | yearly; paid follows the subscription
 );
 
 -- Signed cookies carry the session id; this table lets us revoke one.
