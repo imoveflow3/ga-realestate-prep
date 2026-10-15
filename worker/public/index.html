@@ -2408,8 +2408,43 @@ var PLAN_ICONS = {
   yearly:  '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
   contact: '<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>'
 };
-var PLAN_INCLUDES = ['Study plan for your test date', 'Every lesson and topic',
-                     'All practice questions', 'Progress saved on every device'];
+/* What each plan costs over time, and what it saves against the others --
+   worked out from the prices, so changing a price keeps every line true.
+   A year is 52 weeks or 12 months. */
+var PER_YEAR = {week: 52, month: 12, year: 1};
+function planPoints(p){
+  var plans = (HOME.plans || []).filter(function(x){ return x.cents && PER_YEAR[x.per]; });
+  var yearly = function(x){ return x.cents * PER_YEAR[x.per]; };
+  var cents = function(c){ return money(Math.round(c)); };
+  var pts = [];
+  var every = {week: 'every week', month: 'every month', year: 'once a year'}[p.per];
+  pts.push('Billed ' + money(p.cents) + ' ' + every + ', all features included');
+  if (p.per === 'week'){
+    pts.push('About ' + cents(p.cents * 52 / 12) + ' a month if you keep it going');
+    pts.push('Best for a final week of review before your test');
+  } else if (p.per === 'month'){
+    pts.push('Works out to about ' + cents(p.cents * 12 / 52) + ' a week');
+    pts.push('Enough time for most people to finish the course');
+  } else if (p.per === 'year'){
+    pts.push('Works out to about ' + cents(p.cents / 12) + ' a month (' +
+             cents(p.cents / 52) + ' a week)');
+  }
+  /* savings against every plan that costs more over a year, nearest first */
+  plans.slice().sort(function(a, b){ return yearly(a) - yearly(b); }).forEach(function(o){
+    if (o.id === p.id || yearly(o) <= yearly(p)) return;
+    var save = yearly(o) - yearly(p);
+    var pct = Math.round(save / yearly(o) * 100);
+    if (p.per === 'month' && o.per === 'week'){
+      pts.push('Save ' + cents(save / 12) + ' a month vs. weekly (' + pct + '% less)');
+    } else {
+      pts.push('Save ' + cents(save) + ' a year vs. ' + o.name.toLowerCase() +
+               ' (' + pct + '% less)');
+    }
+  });
+  if (p.per === 'year') pts.push('Room for a slower pace or a retake');
+  pts.push('Cancel any time');
+  return pts;
+}
 function planCards(){
   var grid = el('div', 'plangrid');
   (HOME.plans || []).forEach(function(p){
@@ -2440,7 +2475,7 @@ function planCards(){
     }
     c.appendChild(btn);
     var ul = el('ul', 'planlist');
-    (p.cents ? PLAN_INCLUDES : ['Group or school pricing', 'Custom setups',
+    (p.cents ? planPoints(p) : ['Group or school pricing', 'Custom setups',
                                 'Questions before you buy']).forEach(function(t){
       ul.appendChild(el('li', null, t));
     });
