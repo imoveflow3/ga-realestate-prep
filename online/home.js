@@ -164,7 +164,7 @@ var PLAN_ICONS = {
   weekly:  '<path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>',
   monthly: '<path d="M4 19V9l8-5 8 5v10a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/>',
   yearly:  '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
-  contact: '<path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/>'
+  affiliate: '<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M17 8v6M14 11h6"/>'
 };
 /* What each plan costs over time, and what it saves against the others --
    worked out from the prices, so changing a price keeps every line true.
@@ -225,16 +225,17 @@ function planCards(){
       btn.onclick = function(){ buy(p.id); };
     } else {
       var pr2 = el('div', 'planprice');
-      pr2.appendChild(el('span', 'amount talk', 'Let\u2019s talk'));
+      pr2.appendChild(el('span', 'amount talk', 'Earn with us'));
       c.appendChild(pr2);
-      btn = el('a', 'btn wide ghost', 'Contact us');
+      btn = el('a', 'btn wide ghost', 'Apply to join');
       btn.href = 'mailto:' + (HOME.support || '') + '?subject=' +
-                 encodeURIComponent('Plan enquiry \u2014 Real Estate Exam Prep');
+                 encodeURIComponent('Affiliate application \u2014 Real Estate Exam Prep');
     }
     c.appendChild(btn);
     var ul = el('ul', 'planlist');
-    (p.cents ? planPoints(p) : ['Group or school pricing', 'Custom setups',
-                                'Questions before you buy']).forEach(function(t){
+    (p.cents ? planPoints(p) : ['Refer students preparing for their exam',
+                                'For agents, brokers, schools and creators',
+                                'We email you the details when you apply']).forEach(function(t){
       ul.appendChild(el('li', null, t));
     });
     c.appendChild(ul);

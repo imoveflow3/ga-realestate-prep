@@ -37,8 +37,8 @@ from tools import siteconfig                             # noqa: E402
 PRICE_CENTS = siteconfig.PRICE_CENTS
 
 # The plans on sale. The Worker charges from worker/src/stripe.js PLANS --
-# keep the two in step. "contact" is not sold online: its card opens an
-# email to support.
+# keep the two in step. "affiliate" is not sold: its card opens an email
+# to support to apply.
 PLANS = [
     {"id": "weekly",  "name": "Weekly",  "cents": 900,   "per": "week",
      "desc": "Try it for a week, cancel any time."},
@@ -46,8 +46,8 @@ PLANS = [
      "desc": "The usual way to study for the exam.", "badge": "Most popular"},
     {"id": "yearly",  "name": "Yearly",  "cents": 14900, "per": "year",
      "desc": "Best value if you are taking your time.", "badge": "Best value"},
-    {"id": "contact", "name": "Contact us",
-     "desc": "Schools, teams and anything else."},
+    {"id": "affiliate", "name": "Become an affiliate",
+     "desc": "Refer students to the site and earn with us."},
 ]
 SUPPORT_EMAIL = siteconfig.support_email()
 PAID_SITE = siteconfig.paid_site()
