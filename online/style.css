@@ -2148,3 +2148,17 @@ main:has(.statewrap)>section{max-width:none}
 .authwrap, .statewrap{width:100%; justify-items:center}
 .authwrap.planwrap{padding:var(--s6) 0}
 .authwrap.planwrap .authcard.plancardwrap{max-width:78rem; margin:0 auto}
+
+/* The affiliate page: how it works in three steps, then apply. */
+.affcard{max-width:34rem}
+.affcard .gatemark svg{width:100%; height:100%}
+.affsteps{list-style:none; margin:.4rem 0 .2rem; padding:0; width:100%;
+  display:flex; flex-direction:column; gap:.85rem; text-align:left}
+.affsteps li{display:flex; gap:.85rem; align-items:flex-start}
+.affno{flex:0 0 auto; width:1.9rem; height:1.9rem; border-radius:50%;
+  display:grid; place-items:center; font:600 .9rem/1 var(--mono);
+  background:var(--accent-soft); color:var(--accent)}
+.affsteps b{display:block; font-size:.98rem; color:var(--ink)}
+.affsteps p{margin:.15rem 0 0; font-size:.88rem; line-height:1.5; color:var(--ink-2)}
+.affcard .gateacts a.btn{text-decoration:none; display:inline-flex;
+  align-items:center; justify-content:center}

@@ -227,14 +227,12 @@ function planCards(){
       var pr2 = el('div', 'planprice');
       pr2.appendChild(el('span', 'amount talk', 'Earn with us'));
       c.appendChild(pr2);
-      btn = el('a', 'btn wide ghost', 'Apply to join');
-      btn.href = 'mailto:' + (HOME.support || '') + '?subject=' +
-                 encodeURIComponent('Affiliate application \u2014 Real Estate Exam Prep');
+      btn = el('a', 'btn wide ghost', 'Join program');
+      btn.href = '/#affiliate';
     }
     c.appendChild(btn);
     var ul = el('ul', 'planlist');
     (p.cents ? planPoints(p) : ['Refer students preparing for their exam',
-                                'For agents, brokers, schools and creators',
                                 'We email you the details when you apply']).forEach(function(t){
       ul.appendChild(el('li', null, t));
     });
@@ -852,6 +850,64 @@ function stateFacts(code){
   return box;
 }
 
+/* ------------------------------------------------- the affiliate program */
+/* Reached from "Join program" on the plans. How it works, then a way to
+   apply. No rates are stated here: there are none yet, and a number on the
+   page would be a promise. The discount and the commission go out by email. */
+function renderAffiliate(v){
+  var wrap = el('div', 'gatewrap statewrap affwrap');
+  var card = el('div', 'gatecard affcard');
+  var mark = el('div', 'gatemark');
+  mark.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' +
+    '<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M17 8v6M14 11h6"/></svg>';
+  card.appendChild(mark);
+  card.appendChild(el('h1', null, 'Become an affiliate'));
+  card.appendChild(el('p', 'gatelede',
+    'Share the site with people studying for their real estate exam, and earn ' +
+    'money when they sign up.'));
+
+  var steps = el('ol', 'affsteps');
+  [['Get your own promo code',
+    'When you join, we give you a promo code that is yours alone.'],
+   ['Share it',
+    'Anyone who enters your code at checkout gets a discount on the weekly, ' +
+    'monthly or yearly plan.'],
+   ['Earn money',
+    'Every time someone buys a plan with your code, you earn a share of the ' +
+    'payment.']].forEach(function(r, i){
+    var li = el('li');
+    li.appendChild(el('span', 'affno', String(i + 1)));
+    var body = el('div');
+    body.appendChild(el('b', null, r[0]));
+    body.appendChild(el('p', null, r[1]));
+    li.appendChild(body);
+    steps.appendChild(li);
+  });
+  card.appendChild(steps);
+
+  var acts = el('div', 'gateacts');
+  var apply = el('a', 'btn wide', 'Apply to join');
+  apply.href = 'mailto:' + (HOME.support || '') + '?subject=' +
+    encodeURIComponent('Affiliate application \u2014 Real Estate Exam Prep') +
+    '&body=' + encodeURIComponent('Name:\nHow I would share my code (social, ' +
+    'school, brokerage, etc.):\n');
+  acts.appendChild(apply);
+  var back = el('button', 'btn ghost wide', 'Back');
+  back.onclick = function(){
+    if (history.length > 1) history.back(); else location.href = '/';
+  };
+  acts.appendChild(back);
+  card.appendChild(acts);
+  card.appendChild(el('p', 'gatefine',
+    'We reply by email with your promo code, the discount it gives, and what ' +
+    'you earn on each plan.'));
+
+  wrap.appendChild(card);
+  v.appendChild(wrap);
+  document.body.classList.add('onescreen');
+}
+
 /* Start studying lands here first; Back (or the browser's back) returns home. */
 function openApp(){
   HOME.page = 'state';
@@ -1404,6 +1460,7 @@ function render(){
   if (q.get('checkout') === 'error') toast('Something went wrong with that payment.');
   if (HOME.page === 'auth') return renderAuthPage();
   if (HOME.page === 'state') return renderState(v);
+  if (HOME.page === 'affiliate') return renderAffiliate(v);
   if (HOME.page === 'buy' && !HOME.preview){
     location.replace(ME.signedIn ? '/auth?pay=1' : '/auth');
     return;
@@ -1428,8 +1485,10 @@ function render(){
   /* #state is the state screen: it survives a reload, and the browser's
      Back leaves it for the front page. */
   if (location.hash === '#state') HOME.page = 'state';
+  if (location.hash === '#affiliate') HOME.page = 'affiliate';
   window.addEventListener('popstate', function(){
-    var want = (location.hash === '#state') ? 'state' : 'welcome';
+    var want = (location.hash === '#state') ? 'state'
+             : (location.hash === '#affiliate') ? 'affiliate' : 'welcome';
     if (HOME.page === want) return;
     HOME.page = want;
     render();
