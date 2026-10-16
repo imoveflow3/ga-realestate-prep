@@ -5,6 +5,7 @@
    only to a signed-in session whose user row says paid = 1. */
 
 import GATED from '../assets/gated.js';
+import PAGES from '../assets/pages.js';
 import { createCheckout, createPortal, fetchCheckout, verifyWebhook,
          PLANS, subscriptionActive, createPromotionCode, findPromotionCode,
          deactivatePromotionCode,
@@ -899,6 +900,17 @@ export default {
        looked sensible and was a redirect loop: the asset server's default
        html_handling bounces /auth.html straight back to /auth, which this
        rewrote again, forever. It maps the clean path to the file itself. */
+    /* The public pages come from this deploy's own bundle, not the asset
+       store: the store was found answering browsers (which ask for brotli)
+       with the previous deploy's compressed front page. Images, scripts and
+       the 404 page still come from the store. */
+    if (request.method === 'GET' || request.method === 'HEAD') {
+      const name = path === '/' || path === '/index.html' ? 'index'
+        : path.replace(/^\//, '').replace(/\.html$/, '');
+      if (Object.prototype.hasOwnProperty.call(PAGES, name)) {
+        return html(PAGES[name], 200, { 'Cache-Control': 'no-cache' });
+      }
+    }
     const asset = await env.ASSETS.fetch(request);
     /* Including a 404. Bouncing unknown paths to the home page was a soft
        404: the reader loses the address they typed and never learns it was

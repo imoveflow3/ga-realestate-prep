@@ -339,10 +339,20 @@ await it('/activate without a session_id just goes home', async () => {
    asked can only ever confirm the code does what the code does. The check
    that matters is that the path is passed through untouched; the loop itself
    is caught by scripts/smoke.mjs against a running server. */
-await it('public paths are handed to the asset server unchanged', async () => {
-  for (const asked of ['/', '/buy', '/auth', '/terms', '/privacy']) {
+/* The public pages are served from this deploy's own bundle (the asset
+   store once answered browsers with the previous deploy's front page); every
+   other file still goes to the asset server with its path untouched. */
+await it('public pages come from this deploy, everything else from the asset server', async () => {
+  const PAGES = (await import('../assets/pages.js')).default;
+  for (const [asked, name] of [['/', 'index'], ['/index.html', 'index'], ['/buy', 'buy'],
+                               ['/auth', 'auth'], ['/terms', 'terms'], ['/privacy', 'privacy']]) {
     const res = await worker.fetch(req(asked), env, {});
     assert.equal(res.status, 200, asked + ' did not resolve');
+    assert.equal(await res.text(), PAGES[name], asked + ' did not get this deploy\u2019s ' + name);
+    assert.equal(res.headers.get('Cache-Control'), 'no-cache', asked + ' may be cached stale');
+  }
+  for (const asked of ['/assets/icon-192.png', '/robots.txt']) {
+    const res = await worker.fetch(req(asked), env, {});
     assert.equal(await res.text(), asked, asked + ' was rewritten before dispatch');
   }
 });
