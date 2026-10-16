@@ -164,7 +164,7 @@ def main():
 
     stamp = datetime.date.today().isoformat()
     css = read("style.css")
-    data = online.build_data()
+    data = online.build_data(packs=True)
     data["profile_default"] = {}
 
     # ---- gated: the app and everything in it -------------------------------
@@ -198,6 +198,7 @@ def main():
         "steps": STEPS,
         "honest": HONEST,
         "states": online.state_facts(),
+        "ready": sorted(online.state_packs()),
     }
     shell = read("home.html")
     homejs = read("home.js")

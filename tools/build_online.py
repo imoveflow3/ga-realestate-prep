@@ -274,9 +274,26 @@ def state_facts():
         return json.load(f)["states"]
 
 
-def build_data():
+def state_packs():
+    """State-portion content for states other than Georgia (greprep/packs).
+
+    The app swaps one in for the Georgia portion when the student picked
+    that state; built by tools/states/<code>.py from the official texts."""
+    d = os.path.join(HERE, "greprep", "packs")
+    out = {}
+    for name in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if name.endswith(".json"):
+            with io.open(os.path.join(d, name), encoding="utf-8") as f:
+                out[name[:-5]] = json.load(f)
+    return out
+
+
+def build_data(packs=False):
+    # Other states' content is paid material: only the Worker's bundle, which
+    # is served behind the paywall, carries it -- never the open GitHub copy.
     return {
         "states": state_facts(),
+        "packs": state_packs() if packs else {},
         "profile_default": default_profile(),
         "portions": topics.PORTIONS,
         "topics": topics.catalog(),

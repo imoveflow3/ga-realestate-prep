@@ -3148,7 +3148,9 @@ var US_STATES = [
   ['VT','Vermont'],['VA','Virginia'],['WA','Washington'],
   ['WV','West Virginia'],['WI','Wisconsin'],['WY','Wyoming']
 ];
-var STATES_READY = ['GA'];              // states with their own law material
+// States with their own law material: Georgia, plus the packs this build
+// carries (only the paid build does).
+var STATES_READY = ['GA'].concat((typeof HOME !== 'undefined' && HOME.ready) || []);
 
 function savedState(){
   var c; try { c = localStorage.getItem(STATE_KEY); } catch(e){ c = null; }

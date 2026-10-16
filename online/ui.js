@@ -12,6 +12,18 @@
 })();
 
 var D = load();              // the whole progress record, kept in memory
+
+/* The footer is written for Georgia; another state's student gets their own
+   commission named and linked instead. */
+(function(){
+  if (STATE.code === 'GA' || typeof document === 'undefined') return;
+  var f = (DATA.states || {})[STATE.code] || {};
+  var a = document.getElementById('footreg'), n = document.getElementById('footnote');
+  if (a && f.regulator_url){ a.href = f.regulator_url; a.textContent = STATE.regulator + ' (official)'; }
+  if (n) n.textContent = 'Practice material, not an official statement of ' + STATE.name +
+    ' law and not legal advice. Not affiliated with the ' + (f.regulator || 'state commission') +
+    ' or with any exam vendor. Verify current rules with the Commission.';
+})();
 var QUIZ = null, TICK = null, LAST = null;
 
 function $(id){ return document.getElementById(id); }
@@ -26,7 +38,7 @@ function band(p){ return (p===null||p===undefined) ? '' : (p<0.6?'low':(p<0.8?'m
 function mmss(s){ s = Math.max(0, Math.round(s)); return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
 function tagFor(portion){
   var cls = portion === 'georgia' ? ' ga' : (portion === 'comprehensive' ? ' comp' : '');
-  var txt = portion === 'georgia' ? 'GA' : (portion === 'comprehensive' ? 'COMP' : 'NAT');
+  var txt = portion === 'georgia' ? STATE.abbr : (portion === 'comprehensive' ? 'COMP' : 'NAT');
   return el('span', 'tag' + cls, txt);
 }
 function persist(){ save(D); }
@@ -56,7 +68,7 @@ var NAV = [
   {v:'today',    name:'Today',      desc:'Five things to do right now'},
   {v:'study',    name:'Study',      desc:'Read the material, topic by topic'},
   {v:'home',     name:'Practice',   desc:'Timed quizzes and the full mock exam'},
-  {v:'dash',     name:'Progress',   desc:'Where you stand against the 75% pass mark'},
+  {v:'dash',     name:'Progress',   desc:'Where you stand against the ' + PASS_PCT + ' pass mark'},
   {v:'vocab',    name:'Vocab',      desc:'See the definition, name the term'},
   {v:'cards',    name:'Flashcards', desc:'Spaced repetition on what you keep missing'},
   {v:'math',     name:'Math',       desc:'Every calculation, worked step by step'},
@@ -311,7 +323,7 @@ function countdown(){
   box.hidden = false;
   var h = headline(D), st = portionStats(D);
   var hero = ro('Readiness', h.exam_pct === null ? '\u2014' : pct(h.exam_pct),
-                h.exam_pct === null ? 'no data' : (h.passing ? 'passing' : 'need 75%'), true);
+                h.exam_pct === null ? 'no data' : (h.passing ? 'passing' : 'need ' + PASS_PCT), true);
   if (h.exam_pct !== null)
     hero.querySelector('.v').className = 'v ' + (h.passing ? 'good' : 'bad');
   box.appendChild(hero);
@@ -319,7 +331,7 @@ function countdown(){
                      (st.national && st.national.recent_pct != null)
                        ? pct(st.national.recent_pct) : '\u2014',
                      examScored('national') + ' q'));
-  box.appendChild(ro('Georgia',
+  box.appendChild(ro(STATE.name,
                      (st.georgia && st.georgia.recent_pct != null)
                        ? pct(st.georgia.recent_pct) : '\u2014',
                      examScored('georgia') + ' q'));
@@ -356,7 +368,7 @@ function renderHome(){
       '<div><label for="portion">Portion</label><select id="portion">' +
         '<option value="national">National (' + examScored('national') + ' of ' +
           examTotal() + ' exam questions)</option>' +
-        '<option value="georgia">Georgia state (' + examScored('georgia') + ' of ' +
+        '<option value="georgia">'+STATE.name+' state (' + examScored('georgia') + ' of ' +
           examTotal() + ')</option>' +
         '<option value="mixed">Mixed, exam-weighted</option>' +
         '<option value="comprehensive">Comprehensive subtest (drill)</option></select></div>' +
@@ -383,7 +395,7 @@ function renderHome(){
     'topics and individual questions you have missed before. <b>Harder mix</b> pulls about ' +
     'two thirds of its questions from the hard and exam-realistic tiers; ' +
     '<b>Exam realistic</b> is the hardest set, written at PSI difficulty. <b>Comprehensive</b> is a cross-cutting ' +
-    'drill (vocabulary, judgment calls, GREC detail, closing math) rather than a section of ' +
+    'drill (vocabulary, judgment calls, closing math) rather than a section of ' +
     'the real exam.</p></div>' +
     '<div id="homeWeak"></div>';
 
@@ -572,7 +584,7 @@ function renderQuestion(){
   $('qcount').textContent = 'Question '+(QUIZ.i+1)+' of '+QUIZ.qs.length;
   var ga = q.portion === 'georgia', comp = q.portion === 'comprehensive';
   $('qtag').textContent = comp ? 'Comprehensive'
-                        : (q.generator ? 'Math' : (ga ? 'Georgia' : 'National'));
+                        : (q.generator ? 'Math' : (ga ? STATE.name : 'National'));
   $('qtag').className = 'tag' + (ga ? ' ga' : (comp ? ' comp' : ''));
   var tier = q.difficulty || 1;
   $('qhard').hidden = (tier < 2);
@@ -742,9 +754,9 @@ function renderResult(a){
       g.appendChild(d);
     });
   head.appendChild(g);
-  head.appendChild(el('p','muted', a.pct >= 0.75
-    ? 'At or above 75% -- that is roughly the zone you want to be in before exam day.'
-    : 'Georgia requires 75% to pass. Keep drilling the topics below.'));
+  head.appendChild(el('p','muted', a.pct >= PASS
+    ? 'At or above ' + PASS_PCT + ' -- that is roughly the zone you want to be in before exam day.'
+    : STATE.name + ' requires ' + PASS_PCT + ' to pass. Keep drilling the topics below.'));
   box.appendChild(head);
   if (MISSED_CARD) box.appendChild(MISSED_CARD);
 
@@ -808,7 +820,7 @@ function reviewLessonCard(box, a){
       var v = a.topics[k];
       return {k: k, seen: v.seen, pct: v.correct / v.seen};
     })
-    .filter(function(r){ return r.seen >= 2 && r.pct < 0.75; })
+    .filter(function(r){ return r.seen >= 2 && r.pct < PASS; })
     .sort(function(x, y){ return x.pct - y.pct || y.seen - x.seen; })[0];
   if (!worst) return;
 
@@ -931,7 +943,7 @@ function stateExamCard(box){
   var a2 = el('a', null, 'official source'); a2.href = f.src; a2.target = '_blank'; a2.rel = 'noopener';
   links.appendChild(a1); links.appendChild(document.createTextNode(' \u00b7 ')); links.appendChild(a2);
   card.appendChild(links);
-  if (code !== 'GA'){
+  if (code !== 'GA' && !(DATA.packs || {})[code]){
     card.appendChild(el('div', 'callout', name + '\u2019s own state-law lessons and ' +
       'questions are on the way. Study the National sections now \u2014 they are on ' +
       'every state\u2019s exam. The state sections here are Georgia\u2019s.'));
@@ -971,22 +983,22 @@ function renderToday(){
     var d = el('div', 'metric');
     d.appendChild(el('div', 'eyebrow', label));
     d.appendChild(el('div', 'stat' + (pr.current === null ? ''
-      : (pr.current >= 0.75 ? ' good' : ' bad')),
+      : (pr.current >= PASS ? ' good' : ' bad')),
       pr.current === null ? '—' : pct(pr.current)));
     d.appendChild(el('div', 'muted', pr.current === null ? 'no data yet'
-      : (pr.current >= 0.75 ? 'clearing 75%' : 'below 75%')));
+      : (pr.current >= PASS ? 'clearing ' + PASS_PCT : 'below ' + PASS_PCT)));
     return d;
   }
   g.appendChild(portionMetric('National', r.national));
-  g.appendChild(portionMetric('Georgia', r.georgia));
+  g.appendChild(portionMetric(STATE.name, r.georgia));
   head.appendChild(g);
 
   if (r.national.current !== null && r.georgia.current !== null &&
-      (r.national.current < 0.75) !== (r.georgia.current < 0.75)){
+      (r.national.current < PASS) !== (r.georgia.current < PASS)){
     var warn = el('div', 'callout trap');
     warn.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.92rem;line-height:1.55';
-    warn.textContent = 'The two portions are scored separately and you must clear 75% ' +
-      'on each. Your ' + (r.blocker === 'georgia' ? 'Georgia' : 'National') +
+    warn.textContent = 'The two portions are scored separately and you must clear ' + PASS_PCT + ' ' +
+      'on each. Your ' + (r.blocker === 'georgia' ? STATE.name : 'National') +
       ' portion is below the mark, so a healthy average does not mean a pass.';
     head.appendChild(warn);
   }
@@ -1371,7 +1383,7 @@ function renderVocab(){
   var row = el('div', 'row');
   [['Everything (15)', {count: 15}],
    ['National only (15)', {portion: 'national', count: 15}],
-   ['Georgia only (15)', {portion: 'georgia', count: 15}],
+   [STATE.name + ' only (15)', {portion: 'georgia', count: 15}],
    ['Ones I keep missing', {mode: 'weak', count: 15}]].forEach(function(o, i){
     var d = el('div'); d.style.flex = '0 0 auto';
     var b = el('button', 'btn' + (i ? ' ghost' : ''), o[0]);
@@ -1381,7 +1393,7 @@ function renderVocab(){
   head.appendChild(row);
   box.appendChild(head);
 
-  var NAMES = {national: 'National portion', georgia: 'Georgia state portion',
+  var NAMES = {national: 'National portion', georgia: STATE.name + ' state portion',
                comprehensive: 'Comprehensive subtest'};
   var rows = vocabTopics(D);
   ['national', 'georgia', 'comprehensive'].forEach(function(portion){
@@ -1773,7 +1785,7 @@ function renderStudy(){
   intro.appendChild(cardHead('Study', 'read it, then quiz it'));
   intro.appendChild(el('p', 'sub',
     'Notes for every topic you are quizzed on — the rules, the vocabulary, worked ' +
-    'examples, where Georgia differs from the national rule, and the mistakes that ' +
+    'examples, where ' + STATE.name + ' differs from the national rule, and the mistakes that ' +
     'cost people marks. Open a topic to read it, then quiz yourself without leaving ' +
     'the page.'));
   var sc = el('div', 'card');
@@ -1793,7 +1805,7 @@ function renderStudy(){
 
   box.appendChild(intro);
 
-  var NAMES = {national: 'National portion', georgia: 'Georgia state portion',
+  var NAMES = {national: 'National portion', georgia: STATE.name + ' state portion',
                comprehensive: 'Comprehensive subtest'};
   ['national', 'georgia', 'comprehensive'].forEach(function(portion){
     var keys = Object.keys(DATA.study.topics).filter(function(k){
@@ -1834,8 +1846,9 @@ function renderStudy(){
   var src = el('div', 'card');
   src.appendChild(cardHead('Where this comes from', 'sources'));
   src.appendChild(el('p', null,
-    'These notes were written for this app. Georgia facts are checked against the ' +
-    'Commission’s own published reference and the code sections it quotes; federal ' +
+    'These notes were written for this app. ' + STATE.name + ' facts are checked against ' +
+    (STATE.code === 'GA' ? 'the Commission’s own published reference and the code sections it quotes'
+                         : 'the state’s own statutes and the Commission’s rules') + '; federal ' +
     'rules against the agencies that issue them. No commercial exam-prep book is ' +
     'reproduced here.'));
   var slist = el('div', 'callouts');
@@ -1984,7 +1997,7 @@ function renderStudyTopic(v, n){
   crumbs.appendChild(c1);
   crumbs.appendChild(el('span', 'sep', '/'));
   crumbs.appendChild(el('span', null,
-    n.portion === 'georgia' ? 'Georgia portion'
+    n.portion === 'georgia' ? STATE.name + ' portion'
       : (n.portion === 'comprehensive' ? 'Practice topics' : 'National portion')));
   head.appendChild(crumbs);
 
@@ -2034,7 +2047,7 @@ function renderStudyTopic(v, n){
       li.appendChild(a); tl.appendChild(li);
     });
     [['Vocabulary', n.vocab], ['Worked examples', n.examples],
-     ['Georgia differences', n.ga], ['Common traps', n.traps]
+     [STATE.name + ' differences', n.ga], ['Common traps', n.traps]
     ].forEach(function(extra){
       if (!extra[1] || !extra[1].length) return;
       var li = el('li');
@@ -2104,7 +2117,7 @@ function renderStudyTopic(v, n){
     box.appendChild(ec);
   }
 
-  [['Georgia differences', 'where Georgia departs from the national rule', n.ga, 'ga'],
+  [[STATE.name + ' differences', 'where ' + STATE.name + ' departs from the national rule', n.ga, 'ga'],
    ['Common traps', 'where marks get lost', n.traps, 'trap']].forEach(function(blk){
     if (!blk[2] || !blk[2].length) return;
     var c = el('div', 'card');
@@ -2212,7 +2225,7 @@ function renderWeak(){
     (missedCount ? ' You currently have ' + missedCount + ' previously missed question' +
      (missedCount === 1 ? '' : 's') + ' in the pool.' : '')));
   var row = el('div', 'row');
-  [['National', 'national'], ['Georgia', 'georgia'], ['Both portions', 'mixed']]
+  [['National', 'national'], [STATE.name, 'georgia'], ['Both portions', 'mixed']]
     .forEach(function(p){
       var d = el('div'); d.style.flex = '0 0 auto';
       var b = el('button', 'btn' + (p[1] === 'mixed' ? ' ghost' : ''), p[0] + ' (20)');
@@ -2319,13 +2332,13 @@ function sparkline(points, w, h){
   svg.setAttribute('viewBox','0 0 '+w+' '+h);
   svg.setAttribute('width', w); svg.setAttribute('height', h);
   svg.setAttribute('class','spark'); svg.setAttribute('role','img');
-  [0.5,0.75,1].forEach(function(y){
+  [0.5,PASS,1].forEach(function(y){
     var yy = h - y*(h-14) - 7;
     var ln = document.createElementNS(ns,'line');
     ln.setAttribute('x1',26); ln.setAttribute('x2',w);
     ln.setAttribute('y1',yy); ln.setAttribute('y2',yy);
     ln.setAttribute('class','gl');
-    if (y === 0.75) ln.setAttribute('stroke-dasharray','3 3');
+    if (y === PASS) ln.setAttribute('stroke-dasharray','3 3');
     svg.appendChild(ln);
     var tx = document.createElementNS(ns,'text');
     tx.setAttribute('x',0); tx.setAttribute('y',yy+3);
@@ -2429,11 +2442,11 @@ function standingCard(box){
   var r = readiness(D);
   var card = el('div', 'card standing');
   card.appendChild(cardHead('Where you stand',
-                            'Georgia needs 75% on each portion, separately'));
+                            STATE.name + ' needs ' + PASS_PCT + ' on each portion, separately'));
 
   var grid = el('div', 'standgrid');
   [['National', r.national, examScored('national')],
-   ['Georgia',  r.georgia,  examScored('georgia')]].forEach(function(row){
+   [STATE.name,  r.georgia,  examScored('georgia')]].forEach(function(row){
     var name = row[0], p = row[1], onExam = row[2];
     var cell = el('div', 'standcell');
     var top = el('div', 'sc-top');
@@ -2443,7 +2456,7 @@ function standingCard(box){
 
     var val = (p && p.current !== null) ? p.current : null;
     var fig = el('div', 'sc-val' + (val === null ? ' none'
-                 : (val >= 0.75 ? ' ok' : ' low')));
+                 : (val >= PASS ? ' ok' : ' low')));
     fig.textContent = (val === null) ? 'no data' : Math.round(val * 100) + '%';
     cell.appendChild(fig);
 
@@ -2451,18 +2464,18 @@ function standingCard(box){
        rather than a number to hold in your head. */
     var track = el('div', 'sc-track');
     var fill = el('div', 'sc-fill ' + (val === null ? 'none'
-                 : (val >= 0.75 ? 'ok' : 'low')));
+                 : (val >= PASS ? 'ok' : 'low')));
     fill.style.width = Math.round((val || 0) * 100) + '%';
     track.appendChild(fill);
     var mark = el('div', 'sc-mark');
-    mark.title = 'The 75% pass mark';
+    mark.title = 'The ' + PASS_PCT + ' pass mark';
     track.appendChild(mark);
     cell.appendChild(track);
 
     cell.appendChild(el('div', 'sc-note',
       val === null ? 'No questions answered on this portion yet.'
-      : (val >= 0.75 ? 'Clearing the pass mark on recent questions.'
-                     : 'Short of 75% by ' + Math.round((0.75 - val) * 100) +
+      : (val >= PASS ? 'Clearing the pass mark on recent questions.'
+                     : 'Short of ' + PASS_PCT + ' by ' + Math.round((PASS - val) * 100) +
                        ' points on recent questions.')));
     grid.appendChild(cell);
   });
@@ -2473,7 +2486,7 @@ function standingCard(box){
     verdict.textContent = 'Nothing answered yet. Take a quiz on each portion ' +
       'and this fills in.';
   } else if (r.national.current === null || r.georgia.current === null){
-    var missing = (r.national.current === null) ? 'National' : 'Georgia';
+    var missing = (r.national.current === null) ? 'National' : STATE.name;
     verdict.textContent = 'You have not touched the ' + missing + ' portion yet. ' +
       'It is scored on its own, so a strong score on the other half does not ' +
       'carry it.';
@@ -2481,7 +2494,7 @@ function standingCard(box){
     verdict.textContent = 'Both portions are above the line on recent questions. ' +
       'Keep them there and widen your coverage.';
   } else {
-    verdict.textContent = 'The ' + (r.blocker === 'national' ? 'National' : 'Georgia') +
+    verdict.textContent = 'The ' + (r.blocker === 'national' ? 'National' : STATE.name) +
       ' portion is the one holding you back. You can pass one half and still ' +
       'resit the other, so that is where the next hour should go.';
   }
@@ -2545,7 +2558,7 @@ function renderDash(){
       lastPortion = r.portion;
       var head = el('tr', 'grouprow');
       var cell = el('td', null, {national: 'National portion',
-                                 georgia: 'Georgia state portion',
+                                 georgia: STATE.name + ' state portion',
                                  comprehensive: 'Comprehensive subtest'}[r.portion]);
       cell.colSpan = 8;
       head.appendChild(cell);
@@ -2641,7 +2654,7 @@ function renderDash(){
   var hasTrend = Object.keys(series).some(function(k){ return series[k].length >= 2; });
   if (hasTrend){
     var trc = el('div', 'card');
-    trc.appendChild(cardHead('Score trend over time', 'dashed line is the 75% pass mark'));
+    trc.appendChild(cardHead('Score trend over time', 'dashed line is the ' + PASS_PCT + ' pass mark'));
     topicReport(D).forEach(function(t){
       var sdata = series[t.topic];
       if (!sdata || sdata.length < 2) return;
@@ -2667,7 +2680,7 @@ function renderPlan(){
   v.innerHTML =
     '<h1>Study plan</h1><p class="sub">Weighted for the real exam: ' +
     examScored('national') + ' national ' +
-    'questions, 52 Georgia.</p>' +
+    'questions, ' + examScored('georgia') + ' ' + STATE.name + '.</p>' +
     '<div class="card"><div class="row">' +
       '<div><label for="examDate">Exam date</label><input type="date" id="examDate"></div>' +
       '<div><label for="masteryDate">Want to be done by</label><input type="date" id="masteryDate"></div>' +
@@ -2745,7 +2758,7 @@ function drawPlan(){
   [[p.rolling ? 'Days in this block' : 'Days to exam', String(p.days_to_exam)],
    [p.rolling ? 'Days of study planned' : 'Days to your mastery date',
     String(p.days_to_mastery)],
-   ['Exam split',p.weighting.national+' national / '+p.weighting.georgia+' Georgia']
+   ['Exam split',p.weighting.national+' national / '+p.weighting.georgia+' ' + STATE.name]
   ].forEach(function(r){
     var d = el('div');
     d.appendChild(el('div','muted',r[0]));
@@ -2774,7 +2787,7 @@ function drawPlan(){
     wk.appendChild(hrow);
     wk.appendChild(el('div','when', niceDate(w.start)+' to '+niceDate(w.end)+
       '  |  target '+w.target_questions+
-      ' questions ('+w.national_questions+' national, '+w.georgia_questions+' Georgia)'));
+      ' questions ('+w.national_questions+' national, '+w.georgia_questions+' ' + STATE.name + ')'));
     var ul = el('ul');
     w.tasks.forEach(function(t){ ul.appendChild(el('li', null, t)); });
     wk.appendChild(ul);
@@ -3188,7 +3201,7 @@ function renderSetup(){
   var box = $('bankBox'), wrap = el('div','scroll'), t = el('table');
   t.innerHTML = '<tr><th>Bank</th><th class="num">Questions</th></tr>';
   [['National portion (' + count('national', true) + ' hard)', count('national')],
-   ['Georgia portion (' + count('georgia', true) + ' hard)', count('georgia')],
+   [STATE.name + ' portion (' + count('georgia', true) + ' hard)', count('georgia')],
    ['Comprehensive subtest (all hard)', count('comprehensive')],
    ['Math problems (' + Object.keys(DATA.math).length + ' types)', mathN],
    ['Attempts recorded on this device', D.attempts.length]].forEach(function(r){
@@ -3561,7 +3574,7 @@ function welcomeIntro(v){
     'A strong average will not save a weak half, so this app tracks them apart.');
   var bp = el('div', 'blueprint');
   [['national', 'National portion', DATA.exam.national],
-   ['georgia', 'Georgia portion', DATA.exam.georgia]].forEach(function(r){
+   ['georgia', STATE.name + ' portion', DATA.exam.georgia]].forEach(function(r){
     var col = el('div', 'bpcol');
     var h = el('h3');
     h.appendChild(document.createTextNode(r[1]));
@@ -3725,7 +3738,7 @@ function welcomeWizard(v){
     /* counted from the blueprint, like every other portion size in the app --
        this was typed in as 80 and went stale when the national portion was
        corrected to 100 */
-    var h = el('div','eyebrow', (portion === 'georgia' ? 'Georgia portion' : 'National portion') +
+    var h = el('div','eyebrow', (portion === 'georgia' ? STATE.name + ' portion' : 'National portion') +
       ' · ' + examScored(portion) + ' questions');
     h.style.marginTop = '.6rem';
     card.appendChild(h);
@@ -3796,7 +3809,13 @@ function renderAbout(){
   var v = $('view-about'), t = totals();
   v.innerHTML = '';
   v.appendChild(el('h1', null, 'About this site'));
-  v.appendChild(el('p','sub', PAID
+  var SF = (DATA.states || {})[STATE.code] || {};
+  var OTHER = STATE.code !== 'GA';
+  v.appendChild(el('p','sub', OTHER
+    ? 'A study tool for the ' + STATE.name + ' real estate licensing exam. Every ' +
+      STATE.name + ' rule in it was read from the state\u2019s own law and the ' +
+      'Commission\u2019s rules, not from a commercial cram guide.'
+    : PAID
     ? 'A study tool for the Georgia real estate salesperson licensing exam, ' +
       'built by one person preparing for that exam and kept going afterwards ' +
       'because it worked. You bought it once; it is yours.'
@@ -3821,7 +3840,17 @@ function renderAbout(){
   v.appendChild(what);
 
   var src = el('div','card');
-  src.appendChild(cardHead('Where the Georgia material comes from', 'sourcing'));
+  src.appendChild(cardHead('Where the ' + STATE.name + ' material comes from', 'sourcing'));
+  if (OTHER){
+    var sl = el('ul'); sl.className = 'plainlist';
+    (DATA.study.sources || []).forEach(function(s2){
+      var li = el('li'), a = el('a', null, s2.name);
+      a.href = s2.url; a.target = '_blank'; a.rel = 'noopener';
+      li.appendChild(a); li.appendChild(document.createTextNode(' \u2014 ' + s2.note));
+      sl.appendChild(li);
+    });
+    src.appendChild(sl);
+  } else
   src.appendChild(el('p','sub',
     'The Georgia rules in these notes were taken from the Georgia Real Estate ' +
     'Commission’s own InfoBase and from the Georgia Code, chapter by ' +
@@ -3838,16 +3867,22 @@ function renderAbout(){
   var warn = el('div','card');
   warn.appendChild(cardHead('What this is not', 'read this bit'));
   var ul = el('ul'); ul.className = 'plainlist';
-  ['Not affiliated with, endorsed by, or connected to the Georgia Real Estate ' +
+  (OTHER ? ['Not affiliated with, endorsed by, or connected to the ' + (SF.regulator || 'state commission') +
+   ', ' + (SF.vendor || 'the exam vendor') + ', or any school.',
+   'Not legal advice, and not an official statement of ' + STATE.name + ' law. Rules ' +
+   'change; the Commission is the authority, not this page.',
+   'Not a substitute for the qualifying courses ' + STATE.name + ' requires before ' +
+   'you may sit the exam.']
+  : ['Not affiliated with, endorsed by, or connected to the Georgia Real Estate ' +
    'Commission, PSI, or any school or exam vendor.',
    'Not legal advice, and not an official statement of Georgia law. Rules ' +
    'change; grec.state.ga.us is the authority, not this page.',
    'Not a substitute for the 75-hour pre-licence course Georgia requires before ' +
-   'you may sit the exam.',
+   'you may sit the exam.']).concat([
    (PAID ? 'Not a guarantee of anything. You bought practice material, and ' +
            'practice is only worth what you put into it.'
          : 'Not a guarantee of anything. It is practice, and practice is ' +
-           'only worth what you put into it.')].forEach(function(x){
+           'only worth what you put into it.')]).forEach(function(x){
     ul.appendChild(el('li', null, x));
   });
   warn.appendChild(ul);

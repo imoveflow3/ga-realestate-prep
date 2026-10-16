@@ -1,0 +1,3282 @@
+{
+ "abbr": "TX",
+ "bank": [
+  {
+   "answer": 2,
+   "choices": [
+    "Seven members elected by license holders",
+    "Twelve members appointed by the senate",
+    "Nine members appointed by the governor",
+    "Nine members elected statewide"
+   ],
+   "concept": "Texas composition",
+   "difficulty": 1,
+   "explain": "Nine members appointed by the governor with the advice and consent of the senate (Occ. Code 1101.051).",
+   "id": "tx-c167a450",
+   "portion": "georgia",
+   "q": "The Texas Real Estate Commission consists of:",
+   "sub": "tx/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Six",
+    "Three",
+    "Five",
+    "Nine"
+   ],
+   "concept": "Texas composition",
+   "difficulty": 1,
+   "explain": "Six broker members and three public members (1101.051(a)).",
+   "id": "tx-e0011e1f",
+   "portion": "georgia",
+   "q": "How many TREC members must be licensed brokers?",
+   "sub": "tx/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Two years",
+    "Three years",
+    "Five years",
+    "Ten years"
+   ],
+   "concept": "Texas composition",
+   "difficulty": 2,
+   "explain": "1101.051(a)(1). All members must also be qualified voters.",
+   "id": "tx-6c7a7a40",
+   "portion": "georgia",
+   "q": "A broker member of TREC must have been engaged in brokerage as a major occupation for the preceding:",
+   "sub": "tx/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$1,000 per violation",
+    "$5,000 per case regardless of length",
+    "$5,000 for each violation, and each day may be a separate violation",
+    "$10,000 per year"
+   ],
+   "concept": "Texas penalties",
+   "difficulty": 1,
+   "explain": "1101.702(a).",
+   "id": "tx-5d453126",
+   "portion": "georgia",
+   "q": "The maximum administrative penalty TREC may assess is:",
+   "sub": "tx/commission|Penalties",
+   "subtopic": "Penalties",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A Class A misdemeanor",
+    "A Class C misdemeanor",
+    "A state jail felony",
+    "A civil matter only"
+   ],
+   "concept": "Texas penalties",
+   "difficulty": 1,
+   "explain": "1101.758(b).",
+   "id": "tx-45ab2aa7",
+   "portion": "georgia",
+   "q": "Acting as a real estate broker in Texas without a license is:",
+   "sub": "tx/commission|Penalties",
+   "subtopic": "Penalties",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$50,000",
+    "$100,000",
+    "$250,000",
+    "$125,000"
+   ],
+   "concept": "Texas recovery trust account",
+   "difficulty": 2,
+   "explain": "Including attorney's fees, interest and costs, regardless of the number of claimants (1101.610(a)).",
+   "id": "tx-e6d1f43b",
+   "portion": "georgia",
+   "q": "The most the Recovery Trust Account pays for claims arising out of a single transaction is:",
+   "sub": "tx/commission|Recovery Trust Account",
+   "subtopic": "Recovery Trust Account",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$125,000",
+    "$500,000",
+    "$1,000,000",
+    "$250,000"
+   ],
+   "concept": "Texas recovery trust account",
+   "difficulty": 2,
+   "explain": "1101.610(b).",
+   "id": "tx-96fef098",
+   "portion": "georgia",
+   "q": "The most the Recovery Trust Account pays on judgments against one license holder, until repaid, is:",
+   "sub": "tx/commission|Recovery Trust Account",
+   "subtopic": "Recovery Trust Account",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One year",
+    "Four years",
+    "Five years",
+    "Two years after the cause of action accrues"
+   ],
+   "concept": "Texas recovery trust account",
+   "difficulty": 2,
+   "explain": "1101.605(a).",
+   "id": "tx-751c40c2",
+   "portion": "georgia",
+   "q": "An action that may lead to payment from the Recovery Trust Account must be brought within:",
+   "sub": "tx/commission|Recovery Trust Account",
+   "subtopic": "Recovery Trust Account",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Two license holders with separate limits",
+    "A single license holder",
+    "Exempt from the fund",
+    "Subject to double limits"
+   ],
+   "concept": "Texas recovery trust account",
+   "difficulty": 3,
+   "explain": "1101.610(e).",
+   "id": "tx-e6740ae7",
+   "portion": "georgia",
+   "q": "For the Recovery Trust Account limits, a business entity and its designated broker are treated as:",
+   "sub": "tx/commission|Recovery Trust Account",
+   "subtopic": "Recovery Trust Account",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Holds a license today",
+    "Has been licensed at least five years",
+    "Held the license when the act was committed",
+    "Is a broker, not a sales agent"
+   ],
+   "concept": "Texas recovery trust account",
+   "difficulty": 3,
+   "explain": "1101.601(b).",
+   "id": "tx-9d54f655",
+   "portion": "georgia",
+   "q": "A consumer can be reimbursed from the Recovery Trust Account only for conduct by a license holder who:",
+   "sub": "tx/commission|Recovery Trust Account",
+   "subtopic": "Recovery Trust Account",
+   "topic": "tx/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "17 years old",
+    "18 years old",
+    "19 years old",
+    "21 years old"
+   ],
+   "concept": "Texas eligibility",
+   "difficulty": 1,
+   "explain": "And a U.S. citizen or lawfully admitted alien (1101.354).",
+   "id": "tx-e88c1043",
+   "portion": "georgia",
+   "q": "To be eligible for a Texas license, an applicant must be at least:",
+   "sub": "tx/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "6 semester hours",
+    "18 semester hours",
+    "60 semester hours",
+    "12 semester hours of qualifying courses"
+   ],
+   "concept": "Texas education",
+   "difficulty": 1,
+   "explain": "1101.358. The handbook counts it as 180 classroom hours. 18 semester hours is for the first renewal.",
+   "id": "tx-15b5c77b",
+   "portion": "georgia",
+   "q": "The qualifying education for a Texas sales agent license is:",
+   "sub": "tx/licensing|Education",
+   "subtopic": "Education",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "15 hours of continuing education",
+    "12 semester hours",
+    "Nothing beyond the fee",
+    "18 semester hours of qualifying courses"
+   ],
+   "concept": "Texas renewal",
+   "difficulty": 1,
+   "explain": "1101.454; TREC may not waive it.",
+   "id": "tx-4542e019",
+   "portion": "georgia",
+   "q": "To renew a sales agent license for the first time, the agent must complete:",
+   "sub": "tx/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "18 hours, 3 legal",
+    "30 hours, 15 legal",
+    "8 hours total",
+    "15 classroom hours, including at least 8 on legal topics"
+   ],
+   "concept": "Texas renewal",
+   "difficulty": 2,
+   "explain": "1101.455(b), (e).",
+   "id": "tx-a63e2995",
+   "portion": "georgia",
+   "q": "After the first renewal, continuing education each license term must be at least:",
+   "sub": "tx/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "24 months",
+    "12 months",
+    "36 months",
+    "48 months"
+   ],
+   "concept": "Texas renewal",
+   "difficulty": 1,
+   "explain": "1101.451(a).",
+   "id": "tx-e6fe1a47",
+   "portion": "georgia",
+   "q": "A Texas real estate license is issued for:",
+   "sub": "tx/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The normal fee",
+    "Twice the renewal fee",
+    "It cannot be renewed",
+    "1-1/2 times the renewal fee"
+   ],
+   "concept": "Texas renewal",
+   "difficulty": 2,
+   "explain": "90 days or less: 1.5x (1101.451(e)).",
+   "id": "tx-a0cdc5b9",
+   "portion": "georgia",
+   "q": "A license that has been expired for 60 days may be renewed by paying:",
+   "sub": "tx/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "May be renewed for twice the fee",
+    "Cannot be renewed; the person must qualify for a new license",
+    "May be renewed for 1.5 times the fee",
+    "May be renewed only with TREC's approval"
+   ],
+   "concept": "Texas renewal",
+   "difficulty": 2,
+   "explain": "Six months or longer (1101.451(f)).",
+   "id": "tx-0b6befc3",
+   "portion": "georgia",
+   "q": "A license that has been expired for seven months:",
+   "sub": "tx/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Four years during the 60 months before applying",
+    "Two years in the last three",
+    "Five years at any time",
+    "One year as a sales agent"
+   ],
+   "concept": "Texas broker license",
+   "difficulty": 2,
+   "explain": "Plus qualifying courses and the broker responsibility course (1101.356).",
+   "id": "tx-814093d0",
+   "portion": "georgia",
+   "q": "A broker applicant generally needs active experience of at least:",
+   "sub": "tx/licensing|Broker license",
+   "subtopic": "Broker license",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A Texas-licensed attorney",
+    "An on-site apartment manager",
+    "A person who finds buyers for a neighbor's land in exchange for a fee",
+    "An owner leasing the owner's own house"
+   ],
+   "concept": "Texas exemptions",
+   "difficulty": 1,
+   "explain": "Procuring prospects for another for compensation is brokerage. The others are exempt under 1101.005.",
+   "id": "tx-1a803446",
+   "portion": "georgia",
+   "q": "Which person needs a Texas real estate license?",
+   "sub": "tx/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any number of transactions",
+    "One transaction in a lifetime",
+    "Only transactions for relatives",
+    "Not more than three real estate transactions a year"
+   ],
+   "concept": "Texas exemptions",
+   "difficulty": 2,
+   "explain": "1101.005(2).",
+   "id": "tx-36aa3421",
+   "portion": "georgia",
+   "q": "An attorney-in-fact under a power of attorney is exempt from licensing for:",
+   "sub": "tx/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Leasing an apartment for a landlord for a fee",
+    "Selling a cemetery lot",
+    "Selling a ranch for a commission",
+    "Finding a tenant for an office for a fee"
+   ],
+   "concept": "Texas exemptions",
+   "difficulty": 2,
+   "explain": "Cemetery lots, minerals, timber, hotel leasing and deed-of-trust foreclosure sales are exempt (1101.005(9)).",
+   "id": "tx-f90a73de",
+   "portion": "georgia",
+   "q": "Which transaction is exempt from the License Act?",
+   "sub": "tx/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Does it no more than three times a year",
+    "Discloses the nature of the equitable interest in writing",
+    "Uses a TREC-promulgated assignment form",
+    "Has the seller's verbal approval"
+   ],
+   "concept": "Texas equitable interest",
+   "difficulty": 3,
+   "explain": "Without written disclosure it is brokerage (1101.0045).",
+   "id": "tx-edf40aa8",
+   "portion": "georgia",
+   "q": "A person with a contract to buy a house assigns the contract to an investor without a license. This is lawful only if the person:",
+   "sub": "tx/licensing|Equitable interest",
+   "subtopic": "Equitable interest",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is revoked",
+    "Goes on inactive status until a new broker sponsors it",
+    "Stays active for 30 days",
+    "Transfers automatically to the next firm"
+   ],
+   "concept": "Texas sponsorship",
+   "difficulty": 2,
+   "explain": "The terminating party notifies the other party and TREC in writing (1101.367).",
+   "id": "tx-77c1d2ec",
+   "portion": "georgia",
+   "q": "When a sales agent leaves the sponsoring broker, the license:",
+   "sub": "tx/licensing|Sponsorship",
+   "subtopic": "Sponsorship",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "30 days",
+    "60 days",
+    "At the next renewal",
+    "10 days"
+   ],
+   "concept": "Texas place of business",
+   "difficulty": 2,
+   "explain": "1101.552(b).",
+   "id": "tx-2057cde1",
+   "portion": "georgia",
+   "q": "A resident broker who moves the office must apply for a license showing the new address within:",
+   "sub": "tx/licensing|Place of business",
+   "subtopic": "Place of business",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "60 hours",
+    "30 hours",
+    "15 hours",
+    "None; just wait 30 days"
+   ],
+   "concept": "Texas examination",
+   "difficulty": 3,
+   "explain": "30 hours if one portion was failed, 60 if both (Pearson VUE Texas handbook).",
+   "id": "tx-b3c2c7e7",
+   "portion": "georgia",
+   "q": "A Texas applicant who fails both portions of the exam three times must complete how many additional hours before retesting?",
+   "sub": "tx/licensing|Examination",
+   "subtopic": "Examination",
+   "topic": "tx/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Deposit it in the agent's trust account",
+    "Hold it until the contract closes",
+    "Give it to the seller",
+    "Deliver it immediately to the sponsoring broker"
+   ],
+   "concept": "Texas trust money",
+   "difficulty": 1,
+   "explain": "Sales agents may not maintain trust accounts (rule 535.146(b)(2)).",
+   "id": "tx-2f940bed",
+   "portion": "georgia",
+   "q": "A sales agent receives an earnest money check. The agent must:",
+   "sub": "tx/conduct|Trust money",
+   "subtopic": "Trust money",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Midnight the same day",
+    "The fifth calendar day",
+    "Within ten business days",
+    "The close of business of the second working day after receiving it"
+   ],
+   "concept": "Texas trust money",
+   "difficulty": 1,
+   "explain": "Rule 535.146(b)(3).",
+   "id": "tx-baba67e5",
+   "portion": "georgia",
+   "q": "Unless the principals agree otherwise in writing, a broker must deposit trust money by:",
+   "sub": "tx/conduct|Trust money",
+   "subtopic": "Trust money",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Four years",
+    "Two years",
+    "Five years",
+    "Seven years"
+   ],
+   "concept": "Texas trust money",
+   "difficulty": 2,
+   "explain": "Rule 535.146(e).",
+   "id": "tx-ae162a19",
+   "portion": "georgia",
+   "q": "Trust account records must be kept for:",
+   "sub": "tx/conduct|Trust money",
+   "subtopic": "Trust money",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Up to $1,000 for any purpose",
+    "Never, any amount is commingling",
+    "Up to 10% of the balance",
+    "A reasonable amount to cover bank service fees"
+   ],
+   "concept": "Texas trust money",
+   "difficulty": 2,
+   "explain": "Rule 535.146(c)(4).",
+   "id": "tx-890c4f45",
+   "portion": "georgia",
+   "q": "A broker may keep some of the broker's own money in the trust account:",
+   "sub": "tx/conduct|Trust money",
+   "subtopic": "Trust money",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "10 days",
+    "Two working days",
+    "90 days",
+    "30 days"
+   ],
+   "concept": "Texas trust money",
+   "difficulty": 2,
+   "explain": "TREC's measure of a reasonable time (rule 535.146(d)(2)).",
+   "id": "tx-a4d221b1",
+   "portion": "georgia",
+   "q": "After a proper written demand for trust money, the broker must pay it within:",
+   "sub": "tx/conduct|Trust money",
+   "subtopic": "Trust money",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A listing that is exclusive",
+    "A listing with a 6% commission",
+    "A listing agreement with no definite termination date",
+    "A listing signed electronically"
+   ],
+   "concept": "Texas grounds for discipline",
+   "difficulty": 1,
+   "explain": "1101.652(b)(12). Property management contracts are the exception.",
+   "id": "tx-2600ea00",
+   "portion": "georgia",
+   "q": "Which is grounds for discipline?",
+   "sub": "tx/conduct|Grounds for discipline",
+   "subtopic": "Grounds for discipline",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Violates the Act; written consent is required",
+    "Is fine",
+    "Is fine if the house is in MLS",
+    "Is fine for 30 days"
+   ],
+   "concept": "Texas grounds for discipline",
+   "difficulty": 1,
+   "explain": "1101.652(b)(18).",
+   "id": "tx-b025abc3",
+   "portion": "georgia",
+   "q": "A license holder places a For Sale sign on a house with the owner's verbal OK. This:",
+   "sub": "tx/conduct|Grounds for discipline",
+   "subtopic": "Grounds for discipline",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Grounds for discipline for guaranteeing future profits",
+    "Acceptable puffing",
+    "Allowed if in writing",
+    "Allowed for investors"
+   ],
+   "concept": "Texas grounds for discipline",
+   "difficulty": 2,
+   "explain": "1101.652(b)(17).",
+   "id": "tx-6f9a11ca",
+   "portion": "georgia",
+   "q": "A license holder tells a buyer, \"This house will be worth 20% more in two years - guaranteed.\" This is:",
+   "sub": "tx/conduct|Grounds for discipline",
+   "subtopic": "Grounds for discipline",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Allowed if the seller asked for silence",
+    "Allowed if the house is sold as-is",
+    "Only the seller's problem",
+    "Grounds for discipline for failing to disclose a known significant defect"
+   ],
+   "concept": "Texas grounds for discipline",
+   "difficulty": 2,
+   "explain": "1101.652(b)(3)-(4).",
+   "id": "tx-07585bd7",
+   "portion": "georgia",
+   "q": "A license holder knows of a latent structural defect and says nothing to the buyer. This is:",
+   "sub": "tx/conduct|Grounds for discipline",
+   "subtopic": "Grounds for discipline",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Allowed",
+    "Allowed if the price is fair",
+    "Intermediary practice",
+    "Acting as broker and undisclosed principal"
+   ],
+   "concept": "Texas grounds for discipline",
+   "difficulty": 2,
+   "explain": "1101.652(b)(16).",
+   "id": "tx-b4a239b8",
+   "portion": "georgia",
+   "q": "A license holder buys property through a relative without disclosing the license holder's own interest, acting as broker in the deal. This is:",
+   "sub": "tx/conduct|Grounds for discipline",
+   "subtopic": "Grounds for discipline",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A broker licensed in another state who does no negotiating in Texas",
+    "An unlicensed friend who referred the buyer",
+    "The buyer's lender for the referral",
+    "A home inspector"
+   ],
+   "concept": "Texas fee splitting",
+   "difficulty": 1,
+   "explain": "1101.651(a).",
+   "id": "tx-fb86caf7",
+   "portion": "georgia",
+   "q": "A broker may pay part of a commission to:",
+   "sub": "tx/conduct|Fee splitting",
+   "subtopic": "Fee splitting",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The seller directly",
+    "The title company",
+    "Only the sponsoring broker",
+    "The cooperating broker"
+   ],
+   "concept": "Texas fee splitting",
+   "difficulty": 1,
+   "explain": "1101.651(b).",
+   "id": "tx-a4bd1389",
+   "portion": "georgia",
+   "q": "A sales agent may accept a commission from:",
+   "sub": "tx/conduct|Fee splitting",
+   "subtopic": "Fee splitting",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Tell TREC",
+    "Get the title company's approval",
+    "Nothing; it is routine",
+    "Disclose it to the client and get the client's consent"
+   ],
+   "concept": "Texas rebates",
+   "difficulty": 2,
+   "explain": "Rule 535.148(a); undisclosed rebates are also 1101.652(b)(13).",
+   "id": "tx-39d4ae4b",
+   "portion": "georgia",
+   "q": "Before accepting a fee from a non-client in a transaction, a license holder must:",
+   "sub": "tx/conduct|Rebates",
+   "subtopic": "Rebates",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Allowed if disclosed",
+    "Allowed under $500",
+    "Prohibited",
+    "Allowed for brokers only"
+   ],
+   "concept": "Texas rebates",
+   "difficulty": 2,
+   "explain": "Referral fees to or from settlement service providers are prohibited (rule 535.148(d)).",
+   "id": "tx-5b0f785c",
+   "portion": "georgia",
+   "q": "A lender offers an agent $200 for every buyer referred. Under TREC rules this is:",
+   "sub": "tx/conduct|Rebates",
+   "subtopic": "Rebates",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The same size as the agent's name",
+    "Half the size of the largest contact information for any sales agent",
+    "In bold",
+    "Twice the size of the team name"
+   ],
+   "concept": "Texas advertising",
+   "difficulty": 1,
+   "explain": "Rule 535.155(a)(2).",
+   "id": "tx-bdc997d9",
+   "portion": "georgia",
+   "q": "In every advertisement, the broker's name must appear at least:",
+   "sub": "tx/conduct|Advertising",
+   "subtopic": "Advertising",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed if registered",
+    "Misleading, because it implies an independent brokerage",
+    "Allowed if the broker approves",
+    "Required"
+   ],
+   "concept": "Texas advertising",
+   "difficulty": 2,
+   "explain": "Terms like company, brokerage, or associates imply a separate brokerage (rule 535.155).",
+   "id": "tx-790333e5",
+   "portion": "georgia",
+   "q": "A team calls itself \"Smith Realty Company.\" Under TREC rules this is:",
+   "sub": "tx/conduct|Advertising",
+   "subtopic": "Advertising",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "TREC Information About Brokerage Services",
+    "The agent's license renewal date",
+    "The MLS rules",
+    "The broker's trust account balance"
+   ],
+   "concept": "Texas advertising",
+   "difficulty": 2,
+   "explain": "Rule 531.20: 10-point font for the long label, 12-point for the short one.",
+   "id": "tx-011ba1cc",
+   "portion": "georgia",
+   "q": "A broker's website homepage must have a readily noticeable link to:",
+   "sub": "tx/conduct|Advertising",
+   "subtopic": "Advertising",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Draft a deed for a client",
+    "Advise a buyer whether title is valid",
+    "Write a custom lease from scratch",
+    "Fill in a TREC-promulgated contract form"
+   ],
+   "concept": "Texas unauthorized practice of law",
+   "difficulty": 1,
+   "explain": "1101.654.",
+   "id": "tx-3dee15e0",
+   "portion": "georgia",
+   "q": "A sales agent who is not an attorney may:",
+   "sub": "tx/conduct|Unauthorized practice of law",
+   "subtopic": "Unauthorized practice of law",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Suspend or revoke the license",
+    "Issue a warning",
+    "Do nothing if no fee was charged",
+    "Require more education"
+   ],
+   "concept": "Texas unauthorized practice of law",
+   "difficulty": 2,
+   "explain": "1101.654(a) says shall suspend or revoke.",
+   "id": "tx-3feb0012",
+   "portion": "georgia",
+   "q": "A license holder drafts a warranty deed for a client. TREC must:",
+   "sub": "tx/conduct|Unauthorized practice of law",
+   "subtopic": "Unauthorized practice of law",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Unlock a listing for a buyer",
+    "Schedule showing appointments",
+    "Host an open house",
+    "Negotiate the price"
+   ],
+   "concept": "Texas unlicensed assistants",
+   "difficulty": 1,
+   "explain": "Unlocking or providing access and hosting an open house are showing (rule 535.4(c)).",
+   "id": "tx-810e0449",
+   "portion": "georgia",
+   "q": "An unlicensed assistant may:",
+   "sub": "tx/conduct|Unlicensed assistants",
+   "subtopic": "Unlicensed assistants",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Marital status",
+    "Income",
+    "Age",
+    "Ancestry"
+   ],
+   "concept": "Texas fair housing",
+   "difficulty": 2,
+   "explain": "1101.652(b)(32): race, color, religion, sex, disability, familial status, national origin, or ancestry.",
+   "id": "tx-fb1fbcb9",
+   "portion": "georgia",
+   "q": "Texas license law lists a protected class beyond the federal seven:",
+   "sub": "tx/conduct|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "tx/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At closing",
+    "Only when asked",
+    "At the first contact with another party or that party's agent",
+    "Only in writing at contract"
+   ],
+   "concept": "Texas disclosure",
+   "difficulty": 1,
+   "explain": "Orally or in writing (1101.558(b)).",
+   "id": "tx-88d04ada",
+   "portion": "georgia",
+   "q": "A license holder who represents a party must disclose that representation:",
+   "sub": "tx/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At the first substantive communication with a party about specific property",
+    "At closing",
+    "Before any phone call",
+    "With the contract"
+   ],
+   "concept": "Texas iabs",
+   "difficulty": 1,
+   "explain": "1101.558(b-1), in at least 10-point font.",
+   "id": "tx-5fd5d8f1",
+   "portion": "georgia",
+   "q": "The Information About Brokerage Services notice must be provided:",
+   "sub": "tx/agency|IABS",
+   "subtopic": "IABS",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A first meeting with an unrepresented buyer about a listing",
+    "A seller interviewing an agent about a listing",
+    "A buyer asking about a specific house on the phone",
+    "A residential lease under one year with no sale being considered"
+   ],
+   "concept": "Texas iabs",
+   "difficulty": 2,
+   "explain": "1101.558(c)(1).",
+   "id": "tx-956d4615",
+   "portion": "georgia",
+   "q": "Which situation does NOT require the IABS notice?",
+   "sub": "tx/agency|IABS",
+   "subtopic": "IABS",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "8-point font",
+    "10-point font",
+    "12-point bold",
+    "14-point font"
+   ],
+   "concept": "Texas iabs",
+   "difficulty": 2,
+   "explain": "1101.558(b-1).",
+   "id": "tx-de621bef",
+   "portion": "georgia",
+   "q": "The IABS notice must be in at least:",
+   "sub": "tx/agency|IABS",
+   "subtopic": "IABS",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Present all offers and answer the seller's questions",
+    "Hold weekly open houses",
+    "Advertise in print",
+    "Pay for photography"
+   ],
+   "concept": "Texas minimum services",
+   "difficulty": 1,
+   "explain": "1101.557(b).",
+   "id": "tx-24b6f8d1",
+   "portion": "georgia",
+   "q": "A listing broker must, at a minimum:",
+   "sub": "tx/agency|Minimum services",
+   "subtopic": "Minimum services",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Act as a dual agent",
+    "Act as an intermediary",
+    "Represent only the seller",
+    "Refer one party out"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 1,
+   "explain": "1101.561(b). Texas uses intermediary, not dual agency.",
+   "id": "tx-8903b74f",
+   "portion": "georgia",
+   "q": "A broker who agrees to represent both the buyer and the seller in the same transaction must:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Written consent from each party stating the source of compensation",
+    "Verbal consent from the seller",
+    "TREC approval",
+    "A court order"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 1,
+   "explain": "1101.559(a).",
+   "id": "tx-c909c287",
+   "portion": "georgia",
+   "q": "To act as an intermediary, the broker needs:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the seller's best interest",
+    "In the buyer's best interest",
+    "Fairly and impartially",
+    "As the higher bidder directs"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 2,
+   "explain": "1101.559(c).",
+   "id": "tx-e6a27949",
+   "portion": "georgia",
+   "q": "An intermediary must act:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "May give opinions and advice to the party they are appointed to",
+    "May not give advice to anyone",
+    "Represent both parties equally",
+    "Must be from different brokerages"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 2,
+   "explain": "1101.560(c).",
+   "id": "tx-26f6f258",
+   "portion": "georgia",
+   "q": "Appointed license holders in an intermediary transaction:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the broker's decision",
+    "TREC approval",
+    "Authority in the written consent and written notice to all parties",
+    "An attorney's review"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 2,
+   "explain": "1101.560(b).",
+   "id": "tx-dd212cd1",
+   "portion": "georgia",
+   "q": "Appointments in an intermediary transaction require:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "That the foundation has a crack",
+    "That the seller will accept less than the asking price",
+    "The listing price",
+    "The property's square footage"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 2,
+   "explain": "1101.651(d)(1). Condition information may be disclosed.",
+   "id": "tx-281fff92",
+   "portion": "georgia",
+   "q": "Without separate written instructions, an intermediary may NOT tell the buyer:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must keep it confidential",
+    "May disclose it, because it materially relates to the property's condition",
+    "Must withdraw",
+    "May disclose it only after closing"
+   ],
+   "concept": "Texas intermediary",
+   "difficulty": 3,
+   "explain": "1101.651(d)(3)(C).",
+   "id": "tx-a5fedc7b",
+   "portion": "georgia",
+   "q": "The seller told the intermediary in writing to keep a known roof leak confidential. The intermediary:",
+   "sub": "tx/agency|Intermediary",
+   "subtopic": "Intermediary",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Get the buyer's prequalification letter",
+    "Give the seller's disclosure notice",
+    "Register the buyer with TREC",
+    "Sign a written agreement with the buyer"
+   ],
+   "concept": "Texas buyer agreements",
+   "difficulty": 1,
+   "explain": "1101.563(b).",
+   "id": "tx-2ae2c9ef",
+   "portion": "georgia",
+   "q": "Since January 1, 2026, before showing residential property to a buyer the license holder works for, the license holder must:",
+   "sub": "tx/agency|Buyer agreements",
+   "subtopic": "Buyer agreements",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Commission is 3%",
+    "Broker compensation is not set by law and is fully negotiable",
+    "The seller always pays",
+    "TREC sets the rate"
+   ],
+   "concept": "Texas buyer agreements",
+   "difficulty": 2,
+   "explain": "1101.563(c)(2).",
+   "id": "tx-2fb1ea90",
+   "portion": "georgia",
+   "q": "The written buyer agreement must state conspicuously that:",
+   "sub": "tx/agency|Buyer agreements",
+   "subtopic": "Buyer agreements",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Be exclusive or last more than 14 days",
+    "Be in writing",
+    "Include a termination date",
+    "Be signed electronically"
+   ],
+   "concept": "Texas buyer agreements",
+   "difficulty": 2,
+   "explain": "1101.563(e).",
+   "id": "tx-97f0ca7e",
+   "portion": "georgia",
+   "q": "An agreement only for showing property without representation may NOT:",
+   "sub": "tx/agency|Buyer agreements",
+   "subtopic": "Buyer agreements",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Confirm the size, price and terms of the property",
+    "Advise on what to offer",
+    "Negotiate repairs",
+    "Give an opinion of value"
+   ],
+   "concept": "Texas buyer agreements",
+   "difficulty": 3,
+   "explain": "1101.562(c).",
+   "id": "tx-0b0e6673",
+   "portion": "georgia",
+   "q": "A broker showing a buyer homes without representing the buyer may still:",
+   "sub": "tx/agency|Buyer agreements",
+   "subtopic": "Buyer agreements",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Ends once the agent is licensed",
+    "Extends to TREC, the public, and the broker's clients",
+    "Applies only to trust money",
+    "Applies only if the broker was present"
+   ],
+   "concept": "Texas broker liability",
+   "difficulty": 2,
+   "explain": "1101.803.",
+   "id": "tx-442b7d36",
+   "portion": "georgia",
+   "q": "A broker's liability for the conduct of the broker's sales agents:",
+   "sub": "tx/agency|Broker liability",
+   "subtopic": "Broker liability",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Notarized",
+    "Recorded",
+    "Witnessed by two people",
+    "In writing and signed by the party to be charged"
+   ],
+   "concept": "Texas commission",
+   "difficulty": 1,
+   "explain": "1101.806(c). The plaintiff must also have been licensed when the act began.",
+   "id": "tx-267743a9",
+   "portion": "georgia",
+   "q": "To sue for a commission in Texas, the agreement must be:",
+   "sub": "tx/agency|Commission",
+   "subtopic": "Commission",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not liable, because the agent did not know it was false",
+    "Liable for repeating it",
+    "Liable for triple damages",
+    "Liable only if paid"
+   ],
+   "concept": "Texas misrepresentation",
+   "difficulty": 3,
+   "explain": "1101.805(e).",
+   "id": "tx-8002334e",
+   "portion": "georgia",
+   "q": "A seller lies to the listing agent about a past flood, and the agent repeats it, not knowing it is false. The agent is:",
+   "sub": "tx/agency|Misrepresentation",
+   "subtopic": "Misrepresentation",
+   "topic": "tx/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Written by the listing agent",
+    "Provided by the MLS",
+    "Adopted by TREC and prepared by the Broker-Lawyer Committee",
+    "Approved by the county clerk"
+   ],
+   "concept": "Texas promulgated forms",
+   "difficulty": 1,
+   "explain": "1101.155(a).",
+   "id": "tx-e7471be6",
+   "portion": "georgia",
+   "q": "Texas license holders generally must use contract forms:",
+   "sub": "tx/contracts|Promulgated forms",
+   "subtopic": "Promulgated forms",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The owner's attorney prepared it and the owner requires it",
+    "The agent prefers it",
+    "The buyer requests it",
+    "It was used in another state"
+   ],
+   "concept": "Texas promulgated forms",
+   "difficulty": 2,
+   "explain": "Or the owner prepared it (1101.155(b)).",
+   "id": "tx-53003434",
+   "portion": "georgia",
+   "q": "A license holder may use a contract not promulgated by TREC if:",
+   "sub": "tx/contracts|Promulgated forms",
+   "subtopic": "Promulgated forms",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Real estate commissions are negotiable",
+    "The commission is 6%",
+    "The buyer pays the commission",
+    "TREC guarantees the listing"
+   ],
+   "concept": "Texas promulgated forms",
+   "difficulty": 2,
+   "explain": "1101.155(c)(1).",
+   "id": "tx-e60973ba",
+   "portion": "georgia",
+   "q": "A TREC-adopted listing form must tell the parties that:",
+   "sub": "tx/contracts|Promulgated forms",
+   "subtopic": "Promulgated forms",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A two-year lease",
+    "A one-year lease",
+    "A month-to-month lease",
+    "A six-month lease"
+   ],
+   "concept": "Texas statute of frauds",
+   "difficulty": 1,
+   "explain": "A lease for longer than one year (Bus. & Com. Code 26.01(b)(5)).",
+   "id": "tx-9d2618dc",
+   "portion": "georgia",
+   "q": "Which agreement must be in writing to be enforceable in Texas?",
+   "sub": "tx/contracts|Statute of frauds",
+   "subtopic": "Statute of frauds",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Notarized",
+    "Recorded within 30 days",
+    "Witnessed",
+    "In writing and signed by the person to be charged"
+   ],
+   "concept": "Texas statute of frauds",
+   "difficulty": 1,
+   "explain": "26.01(a)-(b)(4).",
+   "id": "tx-e70dc2d6",
+   "portion": "georgia",
+   "q": "A contract for the sale of real estate must be:",
+   "sub": "tx/contracts|Statute of frauds",
+   "subtopic": "Statute of frauds",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any commercial property",
+    "Fourplexes only",
+    "Residential property with not more than one dwelling unit",
+    "Vacant land"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 1,
+   "explain": "Property Code 5.008(a).",
+   "id": "tx-f0d30c3c",
+   "portion": "georgia",
+   "q": "The Texas seller's disclosure notice applies to the sale of:",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At closing",
+    "On or before the effective date of the contract",
+    "Within 30 days after the contract",
+    "Only if the buyer asks"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 1,
+   "explain": "5.008(f).",
+   "id": "tx-80380d0b",
+   "portion": "georgia",
+   "q": "The seller's disclosure notice must be delivered:",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Terminate within 30 days",
+    "Terminate for any reason within seven days after receiving it",
+    "Only sue for damages",
+    "Do nothing"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 2,
+   "explain": "5.008(f).",
+   "id": "tx-fa441615",
+   "portion": "georgia",
+   "q": "A buyer who received the seller's disclosure notice after the contract was signed may:",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "An owner-occupant selling a house",
+    "A landlord selling a rented house",
+    "An investor selling a renovated house",
+    "A sale by an executor administering an estate"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 2,
+   "explain": "Fiduciaries of estates, trusts, guardianships are exempt (5.008(e)(5)).",
+   "id": "tx-1f806eb4",
+   "portion": "georgia",
+   "q": "Which transfer is exempt from the seller's disclosure notice?",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Guess",
+    "Leave the notice unsigned",
+    "Mark it unknown, which complies",
+    "Refuse to sell"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 2,
+   "explain": "5.008(d).",
+   "id": "tx-a4155425",
+   "portion": "georgia",
+   "q": "A seller does not know whether the house has a septic system. On the notice the seller should:",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A cracked foundation",
+    "Past flooding",
+    "That a prior occupant died of natural causes in the home",
+    "A known termite infestation"
+   ],
+   "concept": "Texas seller's disclosure",
+   "difficulty": 2,
+   "explain": "Deaths by natural causes, suicide, or accident unrelated to condition, and HIV/AIDS (5.008(c); 1101.556).",
+   "id": "tx-27cc4272",
+   "portion": "georgia",
+   "q": "A Texas seller or agent has no duty to disclose:",
+   "sub": "tx/contracts|Seller's disclosure",
+   "subtopic": "Seller's disclosure",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Buy a home warranty",
+    "Get a survey",
+    "Have the abstract examined by an attorney or obtain a title policy",
+    "Hire an inspector"
+   ],
+   "concept": "Texas title notice",
+   "difficulty": 1,
+   "explain": "1101.555.",
+   "id": "tx-2896641a",
+   "portion": "georgia",
+   "q": "When an offer is signed, the license holder must advise the buyer in writing to:",
+   "sub": "tx/contracts|Title notice",
+   "subtopic": "Title notice",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "May not receive or recover the commission",
+    "Must pay a $100 fine",
+    "Must give it at closing instead",
+    "Faces no consequence"
+   ],
+   "concept": "Texas title notice",
+   "difficulty": 2,
+   "explain": "1101.806(d).",
+   "id": "tx-de55ce13",
+   "portion": "georgia",
+   "q": "A license holder who fails to give the written abstract or title advice:",
+   "sub": "tx/contracts|Title notice",
+   "subtopic": "Title notice",
+   "topic": "tx/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Separate property",
+    "Community property",
+    "Joint tenancy property",
+    "Homestead by law"
+   ],
+   "concept": "Texas community property",
+   "difficulty": 1,
+   "explain": "Family Code 3.001(1).",
+   "id": "tx-e9a6ebb7",
+   "portion": "georgia",
+   "q": "Property a spouse owned before marriage is:",
+   "sub": "tx/special|Community property",
+   "subtopic": "Community property",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "That spouse's separate property",
+    "Community property",
+    "Half community",
+    "Owned by the giver until death"
+   ],
+   "concept": "Texas community property",
+   "difficulty": 1,
+   "explain": "Gift, devise, or descent (3.001(2)).",
+   "id": "tx-18fccab5",
+   "portion": "georgia",
+   "q": "Property acquired during marriage by gift to one spouse is:",
+   "sub": "tx/special|Community property",
+   "subtopic": "Community property",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Separate property",
+    "Community property",
+    "The husband's property",
+    "Joint tenancy"
+   ],
+   "concept": "Texas community property",
+   "difficulty": 2,
+   "explain": "Rebuttable only by clear and convincing evidence (3.003).",
+   "id": "tx-bf3a3d91",
+   "portion": "georgia",
+   "q": "Property possessed by either spouse during marriage is presumed to be:",
+   "sub": "tx/special|Community property",
+   "subtopic": "Community property",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the owner-spouse signs",
+    "A court order is needed",
+    "Both spouses must join",
+    "The children must consent"
+   ],
+   "concept": "Texas homestead",
+   "difficulty": 1,
+   "explain": "Family Code 5.001.",
+   "id": "tx-950ea681",
+   "portion": "georgia",
+   "q": "To sell the family homestead, even if it is one spouse's separate property:",
+   "sub": "tx/special|Homestead",
+   "subtopic": "Homestead",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "10 acres",
+    "1 acre",
+    "100 acres",
+    "200 acres"
+   ],
+   "concept": "Texas homestead",
+   "difficulty": 1,
+   "explain": "Property Code 41.002(a).",
+   "id": "tx-1fe44624",
+   "portion": "georgia",
+   "q": "An urban homestead may consist of up to:",
+   "sub": "tx/special|Homestead",
+   "subtopic": "Homestead",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "10 acres",
+    "200 acres",
+    "100 acres",
+    "50 acres"
+   ],
+   "concept": "Texas homestead",
+   "difficulty": 2,
+   "explain": "200 acres for a family (41.002(b)).",
+   "id": "tx-ccfdab51",
+   "portion": "georgia",
+   "q": "A rural homestead for a single adult may consist of up to:",
+   "sub": "tx/special|Homestead",
+   "subtopic": "Homestead",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Purchase money",
+    "A credit card company's judgment",
+    "Property taxes",
+    "A written contract for improvements"
+   ],
+   "concept": "Texas homestead",
+   "difficulty": 3,
+   "explain": "Property Code 41.001(b) lists the permitted encumbrances; ordinary creditors are not on it.",
+   "id": "tx-ad046d8c",
+   "portion": "georgia",
+   "q": "Which lien may NOT be fixed on a Texas homestead?",
+   "sub": "tx/special|Homestead",
+   "subtopic": "Homestead",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three times economic damages, plus mental anguish",
+    "Ten times damages",
+    "Only actual damages",
+    "$100 per day"
+   ],
+   "concept": "Texas dtpa",
+   "difficulty": 2,
+   "explain": "Bus. & Com. Code 17.50(b)(1).",
+   "id": "tx-8c33267e",
+   "portion": "georgia",
+   "q": "Under the DTPA, if a defendant acted knowingly, a consumer may recover up to:",
+   "sub": "tx/special|DTPA",
+   "subtopic": "DTPA",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Expressly misrepresents a material fact",
+    "Gives an honest opinion of value",
+    "Gives a judgment about pricing strategy",
+    "Offers advice on timing"
+   ],
+   "concept": "Texas dtpa",
+   "difficulty": 3,
+   "explain": "17.49(c)(1).",
+   "id": "tx-e391db9f",
+   "portion": "georgia",
+   "q": "The DTPA's professional services exemption does NOT protect a license holder who:",
+   "sub": "tx/special|DTPA",
+   "subtopic": "DTPA",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One year",
+    "Four years",
+    "Ten years",
+    "Two years"
+   ],
+   "concept": "Texas dtpa",
+   "difficulty": 2,
+   "explain": "Of the act, or of when it was or should have been discovered (17.565).",
+   "id": "tx-b65b09f4",
+   "portion": "georgia",
+   "q": "A DTPA suit must generally be filed within:",
+   "sub": "tx/special|DTPA",
+   "subtopic": "DTPA",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Needs two witnesses",
+    "Is valid without witnesses",
+    "Needs a notary",
+    "Is not valid in Texas"
+   ],
+   "concept": "Texas wills",
+   "difficulty": 1,
+   "explain": "Holographic will (Estates Code 251.052).",
+   "id": "tx-d65c0819",
+   "portion": "georgia",
+   "q": "A will written entirely in the testator's own handwriting:",
+   "sub": "tx/special|Wills",
+   "subtopic": "Wills",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One notary",
+    "Two or more credible witnesses at least 14 years old",
+    "Three witnesses over 21",
+    "The executor"
+   ],
+   "concept": "Texas wills",
+   "difficulty": 2,
+   "explain": "251.051.",
+   "id": "tx-c0529de5",
+   "portion": "georgia",
+   "q": "A typed will must be attested by:",
+   "sub": "tx/special|Wills",
+   "subtopic": "Wills",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "On or before the 30th day after the tenant surrenders the premises",
+    "Within 10 days",
+    "Within 60 days",
+    "At the next rent date"
+   ],
+   "concept": "Texas landlord-tenant",
+   "difficulty": 1,
+   "explain": "Property Code 92.103.",
+   "id": "tx-70a8bf3d",
+   "portion": "georgia",
+   "q": "A Texas landlord must refund a security deposit:",
+   "sub": "tx/special|Landlord-tenant",
+   "subtopic": "Landlord-tenant",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The deposit only",
+    "Twice the deposit",
+    "$100 plus three times the amount wrongfully withheld plus attorney's fees",
+    "$500 flat"
+   ],
+   "concept": "Texas landlord-tenant",
+   "difficulty": 2,
+   "explain": "92.109(a).",
+   "id": "tx-38c4a45b",
+   "portion": "georgia",
+   "q": "A landlord who in bad faith keeps a security deposit is liable for:",
+   "sub": "tx/special|Landlord-tenant",
+   "subtopic": "Landlord-tenant",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Normal wear and tear",
+    "Repainting after ten years",
+    "Damage the tenant is liable for, but not normal wear and tear",
+    "Any cleaning the landlord chooses"
+   ],
+   "concept": "Texas landlord-tenant",
+   "difficulty": 2,
+   "explain": "92.104.",
+   "id": "tx-81dfd51d",
+   "portion": "georgia",
+   "q": "A landlord may deduct from the security deposit for:",
+   "sub": "tx/special|Landlord-tenant",
+   "subtopic": "Landlord-tenant",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "On any business day",
+    "On the last Friday of the month",
+    "On the first Tuesday of the month between 10 a.m. and 4 p.m.",
+    "Only on court order"
+   ],
+   "concept": "Texas foreclosure",
+   "difficulty": 1,
+   "explain": "Property Code 51.002(a).",
+   "id": "tx-91fed77d",
+   "portion": "georgia",
+   "q": "A Texas nonjudicial foreclosure sale is held:",
+   "sub": "tx/special|Foreclosure",
+   "subtopic": "Foreclosure",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "10 days",
+    "30 days",
+    "21 days before the sale",
+    "90 days"
+   ],
+   "concept": "Texas foreclosure",
+   "difficulty": 2,
+   "explain": "51.002(b).",
+   "id": "tx-e172d95d",
+   "portion": "georgia",
+   "q": "Notice of a nonjudicial foreclosure sale must be given at least:",
+   "sub": "tx/special|Foreclosure",
+   "subtopic": "Foreclosure",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "10 days",
+    "30 days",
+    "20 days",
+    "60 days"
+   ],
+   "concept": "Texas foreclosure",
+   "difficulty": 3,
+   "explain": "51.002(d).",
+   "id": "tx-74148ee2",
+   "portion": "georgia",
+   "q": "Before notice of sale on a residence, the servicer must give the debtor at least how long to cure the default?",
+   "sub": "tx/special|Foreclosure",
+   "subtopic": "Foreclosure",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The grantor",
+    "The grantor's heirs",
+    "A later buyer who knew about it",
+    "A later purchaser for value without notice"
+   ],
+   "concept": "Texas recording",
+   "difficulty": 2,
+   "explain": "Property Code 13.001.",
+   "id": "tx-2503cc00",
+   "portion": "georgia",
+   "q": "An unrecorded deed is void as to:",
+   "sub": "tx/special|Recording",
+   "subtopic": "Recording",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Written, signed before work begins (by both spouses if married), and filed with the county clerk",
+    "Oral",
+    "Signed after the work is finished",
+    "Approved by TREC"
+   ],
+   "concept": "Texas liens",
+   "difficulty": 3,
+   "explain": "Property Code 53.254.",
+   "id": "tx-2bdd7d94",
+   "portion": "georgia",
+   "q": "To fix a mechanic's lien on a homestead, the contract must be:",
+   "sub": "tx/special|Liens",
+   "subtopic": "Liens",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "3 days",
+    "30 days",
+    "60 days",
+    "10 business days"
+   ],
+   "concept": "Texas hoa",
+   "difficulty": 2,
+   "explain": "Property Code 207.003(a).",
+   "id": "tx-f2863fa0",
+   "portion": "georgia",
+   "q": "A property owners' association must deliver a resale certificate within how long of a proper request?",
+   "sub": "tx/special|HOA",
+   "subtopic": "HOA",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Free land to all residents",
+    "Low-interest land and home loans to veterans and military members",
+    "Tax-free sales for veterans",
+    "Licenses for veteran agents"
+   ],
+   "concept": "Texas veterans land board",
+   "difficulty": 1,
+   "explain": "It is part of the Texas General Land Office.",
+   "id": "tx-ade96aae",
+   "portion": "georgia",
+   "q": "The Texas Veterans Land Board offers:",
+   "sub": "tx/special|Veterans Land Board",
+   "subtopic": "Veterans Land Board",
+   "topic": "tx/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A dual agent",
+    "An intermediary, which requires both parties' written consent",
+    "The seller's agent only",
+    "Not involved, since two agents are"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "The broker represents both sides (1101.561).",
+   "id": "tx-3c39a859",
+   "portion": "georgia",
+   "q": "Agent Lee and Agent Park both work for Broker Ruiz. Lee lists the Garcias' home; Park's buyer client wants to buy it. Ruiz is now:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Get TREC's approval",
+    "Have the buyer sign a new listing",
+    "Have authority in the written consents and give written notice to all parties",
+    "Do nothing more"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "1101.560(b).",
+   "id": "tx-143eaecc",
+   "portion": "georgia",
+   "q": "Continuing: Ruiz appoints Lee to the Garcias and Park to the buyer. To do this Ruiz must:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must tell Park",
+    "May not disclose it without the Garcias' separate written instruction",
+    "May tell Park verbally",
+    "May disclose it after the option period"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 3,
+   "explain": "1101.651(d)(1).",
+   "id": "tx-7ed147d8",
+   "portion": "georgia",
+   "q": "Continuing: The Garcias tell Lee they would take $15,000 less than the list price. Park asks Ruiz whether they would. Ruiz:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Deposit it Monday in the agent's account",
+    "Give it immediately to the sponsoring broker",
+    "Keep it in the file until closing",
+    "Cash it and hold the funds"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "Rule 535.146(b)(2).",
+   "id": "tx-7b37a5c2",
+   "portion": "georgia",
+   "q": "A buyer hands a sales agent a $5,000 earnest money check on Thursday. The agent should:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is bound by the contract",
+    "Must prove a defect",
+    "May terminate, because it is within seven days of receiving the notice",
+    "Must pay the seller's damages"
+   ],
+   "concept": "Texas contract",
+   "difficulty": 2,
+   "explain": "Property Code 5.008(f).",
+   "id": "tx-0f712055",
+   "portion": "georgia",
+   "q": "A single-family seller signs a contract effective March 3 and gives the buyer the disclosure notice March 8. On March 12 the buyer wants out. The buyer:",
+   "sub": "tx/cases|Contract",
+   "subtopic": "Contract",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Can close, since it is separate property",
+    "Can close with TREC's permission",
+    "Cannot close, because the homestead requires the spouse's joinder",
+    "Can close if the buyer pays cash"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 3,
+   "explain": "Family Code 5.001.",
+   "id": "tx-27c1c280",
+   "portion": "georgia",
+   "q": "A married seller wants to sell the home the couple lives in, which the seller inherited before the marriage. The spouse refuses to sign. The sale:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must give IABS before speaking",
+    "Must sign a buyer agreement first",
+    "Need not give the IABS notice for that conversation",
+    "Must refer the buyer to another broker"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "1101.558(c)(3).",
+   "id": "tx-67f4ad32",
+   "portion": "georgia",
+   "q": "A buyer at an open house asks the listing agent questions about that house only. The agent:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Sign a written buyer agreement covering services, term, exclusivity, and compensation",
+    "Get a lender letter",
+    "Show the homes and sign later",
+    "Register the buyer with the MLS"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 3,
+   "explain": "1101.563.",
+   "id": "tx-009790aa",
+   "portion": "georgia",
+   "q": "A broker wants to show a buyer three homes this weekend and represent the buyer in making an offer. First the broker must:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Prepare it from a template",
+    "Prepare it and charge a fee",
+    "Prepare it if the broker approves",
+    "Decline and refer the seller to an attorney"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "Drafting an instrument is the unauthorized practice of law (1101.654).",
+   "id": "tx-f2674773",
+   "portion": "georgia",
+   "q": "A seller asks the listing agent to prepare a special warranty deed to save on attorney's fees. The agent should:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Presumed to have acted in bad faith",
+    "Within the deadline",
+    "Excused if busy",
+    "Liable only for the deposit"
+   ],
+   "concept": "Texas narrative",
+   "difficulty": 2,
+   "explain": "Past the 30th day (Property Code 92.109(d)).",
+   "id": "tx-dd56e4ff",
+   "portion": "georgia",
+   "q": "A tenant moves out May 31 and the landlord sends nothing until July 15. The landlord is:",
+   "sub": "tx/cases|Narrative",
+   "subtopic": "Narrative",
+   "topic": "tx/cases"
+  }
+ ],
+ "code": "TX",
+ "diffs": {
+  "national/agency": [
+   "Texas has no dual agency. A broker on both sides must be an INTERMEDIARY with written consent, and may appoint an associate to each party (Occ. Code 1101.559-1101.561).",
+   "Since January 1, 2026, a written buyer agreement is required before showing a home to a buyer the license holder works for (1101.563)."
+  ],
+  "national/contracts": [
+   "License holders must use TREC-promulgated forms; a lease longer than one year and any real estate sale must be in writing (Occ. Code 1101.155; Bus. & Com. Code 26.01)."
+  ],
+  "national/disclosures": [
+   "One-unit residential sellers give the Seller's Disclosure Notice on or before the contract's effective date, or the buyer may terminate within seven days of getting it (Property Code 5.008).",
+   "No duty to disclose a death by natural causes, suicide, or accident unrelated to the property's condition, or HIV/AIDS (Occ. Code 1101.556)."
+  ],
+  "national/financing": [
+   "Texas uses the deed of trust and nonjudicial foreclosure: sale on the first Tuesday of the month, 10 a.m. to 4 p.m., at the courthouse, after 21 days' notice and, for a residence, at least 20 days to cure (Property Code 51.002)."
+  ],
+  "national/ownership": [
+   "Texas IS a community property state. Separate property is what a spouse owned before marriage or received by gift, devise, or descent; everything else acquired during marriage is presumed community (Family Code 3.001-3.003).",
+   "Homestead: up to 10 urban acres; up to 200 rural acres for a family or 100 for a single adult (Property Code 41.002)."
+  ],
+  "national/practice": [
+   "Trust money goes into the broker's trust account by the close of business of the second working day; sales agents never hold it (TREC rule 535.146).",
+   "Ads must show the broker's name at least half the size of the largest sales agent contact information (TREC rule 535.155)."
+  ],
+  "national/transfer": [
+   "An unrecorded conveyance is void against a creditor or later buyer for value without notice; a recorded one is notice to everyone (Property Code 13.001-13.002).",
+   "When an offer is signed, the license holder must advise the buyer in writing to have the abstract examined by an attorney or get a title policy (Occ. Code 1101.555)."
+  ]
+ },
+ "name": "Texas",
+ "pass": 0.7,
+ "portions": {
+  "georgia": {
+   "blurb": "The License Act, TREC rules, agency, contracts, and Texas property law.",
+   "minutes": 90,
+   "name": "Texas state",
+   "scored": 40
+  },
+  "national": {
+   "minutes": 150,
+   "scored": 80
+  }
+ },
+ "regulator": "TREC",
+ "sources": [
+  {
+   "by": "Texas Legislature",
+   "name": "Real Estate License Act (Occupations Code ch. 1101)",
+   "note": "The Texas license law. Every rule in these notes about TREC, licensing, agency and conduct was read from it.",
+   "url": "https://statutes.capitol.texas.gov/?tab=1&code=OC&chapter=OC.1101"
+  },
+  {
+   "by": "Texas Real Estate Commission",
+   "name": "TREC Rules (22 Tex. Admin. Code ch. 531, 535)",
+   "note": "Trust money, advertising, IABS, unlicensed persons.",
+   "url": "https://www.trec.texas.gov/agency-information/rules-and-laws/trec-rules"
+  },
+  {
+   "by": "Texas Legislature",
+   "name": "Texas Property Code",
+   "note": "Seller's disclosure (ch. 5), recording (13), homestead (41), foreclosure (51), liens (53), leases (92), HOAs (207).",
+   "url": "https://statutes.capitol.texas.gov/?tab=1&code=PR"
+  },
+  {
+   "by": "Texas Legislature",
+   "name": "Family, Business & Commerce, and Estates Codes",
+   "note": "Community property, the DTPA, the statute of frauds, and wills.",
+   "url": "https://statutes.capitol.texas.gov/"
+  },
+  {
+   "by": "Pearson VUE",
+   "name": "Texas Real Estate Candidate Handbook",
+   "note": "Exam size, timing, passing rules and the state content outline (effective Jan 1, 2026).",
+   "url": "https://www.pearsonvue.com/content/dam/VUE/vue/en/documents/publications/094400.pdf"
+  },
+  {
+   "by": "Texas General Land Office",
+   "name": "Texas Veterans Land Board",
+   "note": "Low-interest land and home loans for veterans and military members.",
+   "url": "https://www.glo.texas.gov/veterans/index.html"
+  }
+ ],
+ "study": {
+  "tx/agency": {
+   "blurb": "Disclosure, IABS, intermediary, minimum services, buyer agreements.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [
+    {
+     "k": "With appointments, A and B can each advise their own client; X stays impartial.",
+     "s": "Agent A lists a house with Broker X. Agent B, also with Broker X, has a buyer client who wants it.",
+     "t": "In-house sale",
+     "w": [
+      "The broker now represents both sides, so 1101.561 makes it an intermediary.",
+      "Each party must have consented in writing, with the source of compensation stated.",
+      "X may appoint A to the seller and B to the buyer with written notice to both."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency & brokerage",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The first substantive communication about specific property",
+        "Closing",
+        "Signing the listing"
+       ],
+       "q": "The IABS notice is given at:",
+       "why": "In writing, at least 10-point font."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A first phone call with a prospective seller about their home",
+        "Talking with a visitor at an open house about that property",
+        "Meeting a buyer to discuss a specific house"
+       ],
+       "q": "Which situation does NOT require the IABS notice?",
+       "why": "1101.558(c)(3)."
+      }
+     ],
+     "h": "Disclosing who you represent (1101.558)",
+     "l": [
+      "A license holder who represents a party must disclose that representation, orally or in writing, at the FIRST CONTACT with another party or that party's agent.",
+      "At the FIRST SUBSTANTIVE COMMUNICATION with a party about specific property, give the written IABS notice in at least 10-POINT font.",
+      "No IABS notice is required for: a residential lease of less than one year when no sale is considered; a meeting with a party you know is represented by another license holder; or a conversation at an open house about that property."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Hold an open house",
+        "Present offers and answer the client's questions",
+        "Pay for a home inspection"
+       ],
+       "q": "Under minimum services, a listing broker must:",
+       "why": "1101.557(b)."
+      }
+     ],
+     "h": "Minimum services (1101.557)",
+     "p": [
+      "A broker who represents a party, or holds an exclusive listing, is that party's agent and must at a minimum: tell the party about material information received, including any offer; answer the party's questions; and present any offer to or from the party. A broker may not tell another broker to negotiate with a party who has an exclusive agreement with someone else."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Act as a dual agent",
+        "Withdraw from both",
+        "Act as an intermediary with written consent"
+       ],
+       "q": "A broker who represents the buyer and the seller in the same deal must:",
+       "why": "Texas uses intermediary, not dual agency."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "That the seller will take less",
+        "A known defect in the roof",
+        "That the buyer will pay more"
+       ],
+       "q": "An intermediary may disclose without written permission:",
+       "why": "Condition information is not protected."
+      }
+     ],
+     "h": "Intermediary (1101.559-.561, 1101.651(d))",
+     "l": [
+      "A broker who agrees to represent BOTH a buyer or tenant AND a seller or landlord in the same transaction MUST act as an intermediary.",
+      "Requires WRITTEN CONSENT from each party, stating the source of any expected compensation. A listing or buyer agreement can serve if it sets out the prohibited conduct in conspicuous bold or underlined print.",
+      "The intermediary must act FAIRLY AND IMPARTIALLY. Its duties override common law.",
+      "With written consent, the broker may APPOINT one associated license holder to each party, giving written notice to all parties. Appointed agents MAY give opinions and advice to their own party.",
+      "An intermediary may not disclose, without separate written instructions: that the seller will accept less than the asking price; that the buyer will pay more than the written offer; or confidential information - unless the law or a court requires it or it materially relates to the property's condition."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "30 days",
+        "90 days",
+        "14 days"
+       ],
+       "q": "A showing-only buyer agreement may last no more than:",
+       "why": "And it cannot be exclusive."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Closing",
+        "Showing the buyer any residential property",
+        "The option period ends"
+       ],
+       "q": "The written buyer agreement must be signed before:",
+       "why": "1101.563(b)."
+      }
+     ],
+     "h": "Buyer agreements and showings (new for 2026)",
+     "l": [
+      "From January 1, 2026, a license holder doing brokerage for a buyer of residential property (house, duplex to fourplex, condo or co-op unit) must sign a WRITTEN AGREEMENT before SHOWING any home, or before presenting an offer if nothing is shown (1101.563).",
+      "It must state the services, a termination date, whether it is exclusive, whether the agent represents the buyer, and the compensation - and say conspicuously that broker compensation is NOT set by law and is FULLY NEGOTIABLE.",
+      "A broker may show property WITHOUT representing the buyer, giving no advice and doing nothing else for them (1101.562). A showing-only agreement may not be exclusive and may not run more than FOURTEEN DAYS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "It was made in front of a witness",
+        "It is in writing and signed by the party charged",
+        "The broker is a REALTOR"
+       ],
+       "q": "A commission agreement is enforceable in Texas court only if:",
+       "why": "1101.806(c)."
+      }
+     ],
+     "h": "The broker and the sales agent",
+     "l": [
+      "A broker is liable to TREC, the public and clients for the conduct of sales agents associated with or acting for the broker (1101.803).",
+      "A license holder is not liable for a party's misrepresentation unless the license holder KNEW it was false and failed to disclose that (1101.805).",
+      "To sue for a commission, you must have been licensed when the act began, and the agreement must be in writing and signed by the party being charged (1101.806)."
+     ]
+    }
+   ],
+   "summary": "Texas has no dual agency. A broker who represents both sides is an INTERMEDIARY, with written consent and a short list of things it may never reveal. Add the IABS notice, the minimum services every client gets, and the 2026 rule that a buyer's agent needs a written agreement before showing a home.",
+   "topic": "tx/agency",
+   "traps": [
+    "Texas has no dual agency. Representing both sides = intermediary, and it is mandatory.",
+    "Appointed license holders MAY advise their own party; the intermediary broker may not take sides.",
+    "Price confidentiality protects both directions; property condition is never confidential.",
+    "IABS: first SUBSTANTIVE communication; representation disclosure: first CONTACT.",
+    "Showing-only agreements: non-exclusive, 14 days max."
+   ],
+   "vocab": [
+    [
+     "Intermediary",
+     "A broker representing both parties with written consent; must be fair and impartial."
+    ],
+    [
+     "Appointed license holder",
+     "An associate assigned by the intermediary broker to one party."
+    ],
+    [
+     "Minimum services",
+     "Inform of offers and material information, answer questions, present offers."
+    ],
+    [
+     "First substantive communication",
+     "When IABS must be provided."
+    ],
+    [
+     "Buyer representation agreement",
+     "The written agreement 1101.563 requires before showing."
+    ]
+   ]
+  },
+  "tx/cases": {
+   "blurb": "Putting the rules together in realistic Texas transactions.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [],
+   "ga": [],
+   "label": "Case studies",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Whom does each license holder represent?",
+        "What is the sale price?",
+        "What is the closing date?"
+       ],
+       "q": "The first question to ask in any case study is usually:",
+       "why": "Agency drives nearly everything else."
+      }
+     ],
+     "h": "How to read a case",
+     "l": [
+      "Who does each license holder represent? Has the broker ended up on both sides (intermediary)?",
+      "Was the IABS notice due, and was representation disclosed at first contact?",
+      "Is there a written buyer agreement before any showing?",
+      "Whose money is it, who must hold it, and by when must it be deposited?",
+      "Is the property residential with one dwelling unit (seller's disclosure)? Was the notice timely?",
+      "Is anyone married (homestead joinder, community property)?",
+      "Is anyone being asked to draft a document or give legal advice?"
+     ]
+    }
+   ],
+   "summary": "The case-study section mixes rules from every topic into one story. Read for the trigger: who represents whom, what was disclosed and when, whose money it is, and what form or deadline applies.",
+   "topic": "tx/cases",
+   "traps": [
+    "If the same BROKER has both parties, it is intermediary even when two different agents are involved.",
+    "Condition of the property is never confidential.",
+    "Look for the date the disclosure notice arrived compared with the effective date."
+   ],
+   "vocab": [
+    [
+     "Effective date",
+     "The date the contract becomes binding; disclosure is due by then."
+    ],
+    [
+     "Narrative case",
+     "A story followed by several questions."
+    ],
+    [
+     "Contract case",
+     "Questions based on TREC-promulgated contract forms."
+    ]
+   ]
+  },
+  "tx/commission": {
+   "blurb": "The Commission, penalties, and the Recovery Trust Account.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [
+    {
+     "k": "Together they can recover at most $125,000 from the fund, split in proportion.",
+     "s": "Two buyers in the same transaction each win $90,000 judgments against a license holder and cannot collect.",
+     "t": "Two buyers, one deal",
+     "w": [
+      "The single-transaction cap is $125,000 regardless of claimants.",
+      "Claims total $180,000, which is over the cap.",
+      "The court reduces each claim proportionately (1101.610(c))."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "TREC: duties & powers",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Seven",
+        "Nine",
+        "Twelve"
+       ],
+       "q": "How many members does TREC have?",
+       "why": "Six brokers plus three public members."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Five years",
+        "Three years",
+        "Ten years"
+       ],
+       "q": "A broker member must have been in brokerage for the preceding:",
+       "why": "As licensed brokers, as their major occupation."
+      }
+     ],
+     "h": "Who sits on the Commission",
+     "l": [
+      "SIX are brokers who have been in the brokerage business as licensed brokers as their major occupation for the FIVE years before appointment.",
+      "THREE represent the public.",
+      "Every member must be a qualified voter."
+     ],
+     "p": [
+      "The Texas Real Estate Commission has NINE members appointed by the governor with the advice and consent of the senate (Occ. Code 1101.051)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "$5,000 per violation, each day possibly a separate violation",
+        "$5,000 total per case",
+        "$1,000 per violation"
+       ],
+       "q": "The maximum administrative penalty is:",
+       "why": "1101.702(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A Class A misdemeanor",
+        "A Class C misdemeanor",
+        "Only a civil matter"
+       ],
+       "q": "Unlicensed brokerage in Texas is:",
+       "why": "1101.758(b)."
+      }
+     ],
+     "h": "Penalties",
+     "l": [
+      "Administrative penalty: up to $5,000 for EACH violation, and each day a violation continues may be a separate violation (1101.702).",
+      "Acting as a broker or sales agent without a license is a CLASS A MISDEMEANOR (1101.758).",
+      "TREC may also suspend or revoke a license in addition to or instead of a penalty (1101.702(c))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "$125,000",
+        "$50,000",
+        "$250,000"
+       ],
+       "q": "The fund's limit for one transaction is:",
+       "why": "Regardless of the number of claimants."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "$125,000 for life",
+        "$250,000 until the holder reimburses the fund",
+        "$1,000,000"
+       ],
+       "q": "The limit against one license holder is:",
+       "why": "1101.610(b)."
+      }
+     ],
+     "h": "The Real Estate Recovery Trust Account",
+     "l": [
+      "Up to $125,000 total for claims arising out of a SINGLE TRANSACTION, however many claimants (1101.610(a)).",
+      "Up to $250,000 total against a SINGLE license holder until that holder repays the fund (1101.610(b)).",
+      "A business entity and its designated broker count as ONE license holder for these limits (1101.610(e)).",
+      "The lawsuit must be brought within TWO YEARS after the cause of action accrues (1101.605).",
+      "The claimant must first win a final judgment and be unable to collect it, then apply to the court (1101.606)."
+     ],
+     "p": [
+      "TREC keeps a fund to reimburse people who suffer ACTUAL damages from certain conduct by a license holder (or an unlicensed employee or agent of one). The license holder must have held the license when the act happened (1101.601)."
+     ]
+    }
+   ],
+   "summary": "TREC is nine people appointed by the governor. It licenses, investigates, disciplines, and runs a fund that pays consumers who win judgments against license holders. Questions here are almost all numbers: members, penalties, and the Recovery Trust Account limits.",
+   "topic": "tx/commission",
+   "traps": [
+    "6 + 3 = 9. Brokers are the majority; public members are three.",
+    "$125,000 is per TRANSACTION; $250,000 is per LICENSE HOLDER.",
+    "The fund pays ACTUAL damages after a judgment that could not be collected - it is not a first stop.",
+    "$5,000 is per violation, and each day can count again."
+   ],
+   "vocab": [
+    [
+     "TREC",
+     "Texas Real Estate Commission, the licensing and enforcement agency."
+    ],
+    [
+     "The Act",
+     "The Real Estate License Act, Occupations Code chapter 1101."
+    ],
+    [
+     "Administrative penalty",
+     "A fine TREC imposes, up to $5,000 per violation."
+    ],
+    [
+     "Recovery Trust Account",
+     "TREC's fund that reimburses consumers for uncollectable judgments against license holders."
+    ],
+    [
+     "Class A misdemeanor",
+     "The criminal grade of practicing brokerage without a license."
+    ]
+   ]
+  },
+  "tx/conduct": {
+   "blurb": "Grounds for discipline, trust money, fees, rebates, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "Deposit it, or deliver it to the escrow agent, by close of business Tuesday.",
+     "s": "A broker receives earnest money on Friday. Monday is a working day; no written agreement says otherwise.",
+     "t": "Friday earnest money",
+     "w": [
+      "Count working days: Monday is the first, Tuesday the second.",
+      "The deadline is the close of business on Tuesday."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Standards of conduct",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Is fine if the seller agrees",
+        "Automatically ends in 90 days",
+        "Is grounds for discipline"
+       ],
+       "q": "A listing agreement without a definite termination date:",
+       "why": "1101.652(b)(12)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Verbal consent",
+        "No consent if listed in MLS",
+        "The owner's written consent"
+       ],
+       "q": "Placing a For Sale sign requires:",
+       "why": "1101.652(b)(18)."
+      }
+     ],
+     "h": "Grounds for discipline (1101.652)",
+     "l": [
+      "Acts negligently or incompetently, or dishonestly or in bad faith.",
+      "Misrepresents, or FAILS TO DISCLOSE, a known significant defect to a potential buyer, including a latent structural defect.",
+      "Fails to make clear to all parties which party they are acting for.",
+      "Takes pay from more than one party without the full knowledge and consent of all parties.",
+      "Commingles another person's money with their own, or fails to account for it.",
+      "Splits a fee with anyone other than a license holder or an out-of-state broker or agent.",
+      "Signs a services contract with no definite termination date (property management excepted).",
+      "Accepts an undisclosed commission, rebate, or profit on a principal's expenditure.",
+      "Guarantees future profits from a resale, or sells by lottery or deceptive practice.",
+      "Puts a sign on property without the owner's written consent.",
+      "Induces a party to break a contract to substitute a new one, or negotiates with someone under an exclusive agreement with another broker.",
+      "Publishes misleading advertising, or advertising without the broker's name.",
+      "Discriminates on the basis of race, color, religion, sex, disability, familial status, national origin, or ancestry.",
+      "Fails to sign a written agreement with a prospective buyer when 1101.563 requires one."
+     ],
+     "p": [
+      "TREC may suspend or revoke a license if, while doing brokerage, the license holder:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Not practicing law",
+        "Practicing law",
+        "Allowed only with an attorney present"
+       ],
+       "q": "A sales agent filling in a TREC-promulgated contract is:",
+       "why": "1101.654(b)."
+      }
+     ],
+     "h": "Unauthorized practice of law (1101.654)",
+     "p": [
+      "A license holder who is not a Texas attorney may not draft an instrument that transfers or affects an interest in real property (other than filling in TREC-adopted forms), and may not advise anyone on the validity or legal sufficiency of an instrument or of title. Doing so means mandatory suspension or revocation. Completing a promulgated form incidental to brokerage is NOT the practice of law."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Deliver it immediately to the sponsoring broker",
+        "Deposit it in the agent's own trust account",
+        "Hold it until closing"
+       ],
+       "q": "A sales agent receives an earnest money check. The agent must:",
+       "why": "Sales agents may not maintain trust accounts."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Close of business on the second working day after receipt",
+        "The next calendar day",
+        "Within ten days"
+       ],
+       "q": "Trust money must be deposited by:",
+       "why": "Unless the principals agree otherwise in writing."
+      }
+     ],
+     "h": "Trust money (TREC rule 535.146)",
+     "l": [
+      "Trust money includes earnest money, rent, security deposits, unearned fees, or any money held for another.",
+      "A SALES AGENT may not keep a trust account; trust money must go IMMEDIATELY to the sponsoring broker.",
+      "The broker deposits it in a trust account or delivers it to an authorized escrow agent by the close of business of the SECOND WORKING DAY after receiving it, unless the principals agree otherwise in writing.",
+      "No commingling, and never in a personal account. A broker may keep a reasonable amount of own money in the account to cover bank fees.",
+      "After a written demand, pay out within a reasonable time, which TREC defines as not later than the 30th day.",
+      "Keep trust-account records for FOUR YEARS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Only the sponsoring broker",
+        "The seller directly",
+        "The title company"
+       ],
+       "q": "A sales agent can be paid a commission by:",
+       "why": "1101.651(b)."
+      }
+     ],
+     "h": "Splitting fees and rebates",
+     "l": [
+      "A broker may compensate for brokerage only a license holder, or a broker licensed in another state who does none of the negotiating in Texas (1101.651(a)).",
+      "A sales agent may accept pay only from the sponsoring broker, and may pay a commission only through that broker (1101.651(b)-(c)).",
+      "A license holder may not take a commission, rebate, or fee from a non-client without first disclosing it to the client and getting consent (rule 535.148(a)).",
+      "Referral fees to or from other settlement service providers - inspectors, lenders, mortgage brokers, title companies - are prohibited (rule 535.148(d))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The same size as the agent's name",
+        "Half the size of the largest sales agent contact information",
+        "Any size, as long as present"
+       ],
+       "q": "The broker's name in an ad must be at least:",
+       "why": "Rule 535.155(a)(2)."
+      }
+     ],
+     "h": "Advertising (rule 535.155; rule 531.20)",
+     "l": [
+      "Every advertisement must show the name of the license holder or team placing it AND the BROKER's name in at least HALF THE SIZE of the largest contact information for any sales agent.",
+      "On social media or text, the required information may be one direct link away if it is readily noticeable there.",
+      "A team name that implies an independent brokerage (\"brokerage\", \"company\", \"associates\") is misleading.",
+      "Each business website's homepage needs a readily noticeable link labelled \"Texas Real Estate Commission Information About Brokerage Services\" (10-point font or larger) or \"TREC Information About Brokerage Services\" (12-point or larger)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Unlock the door for buyers",
+        "Host an open house",
+        "Schedule a showing appointment"
+       ],
+       "q": "An unlicensed assistant may:",
+       "why": "Providing access is showing, and showing needs a license."
+      }
+     ],
+     "h": "Unlicensed assistants",
+     "p": [
+      "Showing a property needs a license - that includes unlocking or providing access for a prospect and hosting an open house (rule 535.4(c)). TREC's guidance: unlicensed assistants may do clerical work, schedule showings, and confirm information already advertised such as size or price. They may not solicit, show, host open houses, review contracts or facilitate the deal, or move trust money."
+     ]
+    }
+   ],
+   "summary": "The Act lists what gets a license suspended or revoked, and TREC's rules fill in trust money and advertising. The exam favours specific numbers (two working days, four years, half the size) and the practices that are flatly prohibited: commingling, paying unlicensed people, undisclosed fees, and drafting legal documents.",
+   "topic": "tx/conduct",
+   "traps": [
+    "Sales agents NEVER hold trust money - straight to the broker.",
+    "Two WORKING days, not calendar days, and only unless the principals agree otherwise in writing.",
+    "Records are kept four years.",
+    "Half the size of the largest SALES AGENT contact info - the broker's name, not the team's.",
+    "Filling in TREC forms is not practising law; drafting a deed is.",
+    "Fees to unlicensed people for brokerage are prohibited, and referral fees from lenders, inspectors or title companies are too."
+   ],
+   "vocab": [
+    [
+     "Commingling",
+     "Mixing trust money with the license holder's own money."
+    ],
+    [
+     "Trust money",
+     "Earnest money, rent, deposits, unearned fees, or any money held for another."
+    ],
+    [
+     "Rebate",
+     "Money returned to a party; must be disclosed to the client and consented to."
+    ],
+    [
+     "IABS",
+     "Information About Brokerage Services, the TREC notice."
+    ],
+    [
+     "Unauthorized practice of law",
+     "Drafting real property instruments or advising on title or legal sufficiency."
+    ]
+   ]
+  },
+  "tx/contracts": {
+   "blurb": "Promulgated forms, statute of frauds, seller's disclosure notice.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "The buyer has until June 17 to terminate.",
+     "s": "Contract effective June 1. Seller delivers the disclosure notice June 10.",
+     "t": "Late disclosure",
+     "w": [
+      "It was due on or before June 1.",
+      "The buyer may terminate for any reason within seven days of receiving it."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Contracts & disclosures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The agent prefers it",
+        "The buyer is from out of state",
+        "The owner's attorney prepared it and the owner requires it"
+       ],
+       "q": "A license holder may use a non-TREC contract when:",
+       "why": "1101.155(b)."
+      }
+     ],
+     "h": "Promulgated forms",
+     "p": [
+      "TREC may require license holders to use contract forms prepared by the Texas Real Estate Broker-Lawyer Committee and adopted by TREC (1101.155). Failing to use a required form is grounds for discipline (1101.652(a-1)(3)). A license holder may still use a form prepared by the property owner, or prepared by an attorney and required by the owner. TREC-adopted listing forms must say commissions are negotiable."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A six-month lease",
+        "A month-to-month lease",
+        "An 18-month lease"
+       ],
+       "q": "Which must be in writing to be enforceable?",
+       "why": "Longer than one year."
+      }
+     ],
+     "h": "Statute of frauds (Bus. & Com. Code 26.01)",
+     "l": [
+      "A contract for the sale of real estate.",
+      "A lease of real estate for longer than ONE YEAR.",
+      "An agreement that cannot be performed within one year.",
+      "A promise to answer for another's debt.",
+      "And separately, a commission agreement for selling or buying real estate (Occ. Code 1101.806)."
+     ],
+     "p": [
+      "These must be in writing and signed by the person to be charged:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Is bound",
+        "May sue for triple damages",
+        "May terminate for any reason within seven days after receiving it"
+       ],
+       "q": "The buyer received the seller's disclosure two days after signing the contract. The buyer:",
+       "why": "5.008(f)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A foreclosure sale",
+        "An owner selling the house they have lived in",
+        "An executor selling for an estate"
+       ],
+       "q": "Which sale needs a seller's disclosure notice?",
+       "why": "Fiduciary and foreclosure transfers are exempt."
+      }
+     ],
+     "h": "Seller's disclosure notice (Property Code 5.008)",
+     "l": [
+      "A seller of residential property of not more than ONE dwelling unit must give the buyer a written disclosure notice.",
+      "It is given on or before the EFFECTIVE DATE of the contract. If it is not, the buyer may terminate for ANY reason within SEVEN DAYS after receiving it.",
+      "Completed to the seller's best knowledge; marking an item unknown complies.",
+      "No duty to disclose deaths by natural causes, suicide, or accident unrelated to the property's condition, or that an occupant had AIDS or HIV (also 1101.556).",
+      "Exempt transfers include court-ordered and foreclosure sales, transfers by a bankruptcy trustee, by a fiduciary of an estate or trust, between co-owners, to a spouse or lineal relative, in a divorce, to or from a governmental entity, and a new home never occupied."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The commission",
+        "Nothing, it is optional",
+        "Only a warning"
+       ],
+       "q": "Failing to give the written abstract/title advice can cost the agent:",
+       "why": "1101.806(d)."
+      }
+     ],
+     "h": "Title notice (1101.555)",
+     "p": [
+      "When an offer is signed, the license holder must advise each buyer IN WRITING to have the abstract examined by an attorney of the buyer's choosing OR to be provided with or obtain a title insurance policy. A license holder who fails to may not receive the commission (1101.806(d))."
+     ]
+    }
+   ],
+   "summary": "Texas license holders must use TREC's promulgated forms, real estate contracts must be in writing, and a home seller owes the buyer a written disclosure notice before the contract - or the buyer gets seven days to walk away.",
+   "topic": "tx/contracts",
+   "traps": [
+    "Disclosure notice: on or before the effective date; late = 7-day walk-away right for ANY reason.",
+    "It applies to one dwelling unit residential property; duplexes and up are outside 5.008(a).",
+    "Lease over ONE year needs writing; one year or less does not.",
+    "Abstract-or-title advice is IN WRITING, and missing it forfeits the commission."
+   ],
+   "vocab": [
+    [
+     "Promulgated form",
+     "A contract form TREC adopted and requires license holders to use."
+    ],
+    [
+     "Broker-Lawyer Committee",
+     "The committee that drafts TREC's forms."
+    ],
+    [
+     "Statute of frauds",
+     "The rule that certain agreements must be written and signed."
+    ],
+    [
+     "Seller's Disclosure Notice",
+     "Property Code 5.008 condition notice for one-unit homes."
+    ],
+    [
+     "Abstract of title",
+     "The history of recorded documents; an attorney should examine it."
+    ]
+   ]
+  },
+  "tx/licensing": {
+   "blurb": "Who needs a license, exemptions, education, renewal, inactive status.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [
+    {
+     "k": "Renew now for 1.5x. At day 91 it becomes 2x; at six months it cannot be renewed at all.",
+     "s": "A sales agent's license expired 75 days ago.",
+     "t": "Late renewal",
+     "w": [
+      "90 days or less late is the first tier.",
+      "The fee is 1-1/2 times the renewal fee."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Licensing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "For yourself, for profit",
+        "For another person, for or expecting compensation",
+        "Only on sales, not leases"
+       ],
+       "q": "The definition of broker turns on acting:",
+       "why": "Leasing and procuring prospects count too."
+      }
+     ],
+     "h": "Who needs a license",
+     "p": [
+      "A broker is a person who, for a commission or other valuable consideration, or expecting one, does an act like selling, buying, leasing, listing, negotiating, auctioning, or procuring prospects for real estate FOR ANOTHER PERSON (1101.002(1))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "One",
+        "Ten",
+        "Three"
+       ],
+       "q": "An attorney-in-fact is exempt for up to how many transactions a year?",
+       "why": "1101.005(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A friend who finds buyers for others in exchange for a fee",
+        "An on-site apartment manager",
+        "An owner leasing the owner's own house"
+       ],
+       "q": "Which person needs a license?",
+       "why": "Procuring prospects for a fee is brokerage."
+      }
+     ],
+     "h": "Exemptions (1101.005)",
+     "l": [
+      "An attorney licensed in Texas.",
+      "An attorney-in-fact under a power of attorney for NOT MORE THAN THREE transactions a year.",
+      "A public official doing official duties.",
+      "A licensed auctioneer selling real estate at auction who does no other act of a broker.",
+      "A person acting under a court order, a will, or a written trust.",
+      "An owner's employee selling structures the owner built in the owner's business.",
+      "An on-site apartment manager.",
+      "An owner, or the owner's employee, leasing the owner's own property.",
+      "Mineral, timber or energy interests; cemetery lots; leasing or managing a hotel or motel; and a foreclosure sale under a deed of trust."
+     ],
+     "p": [
+      "The Act does not apply to:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Discloses the equitable interest in writing",
+        "Assigns no more than three a year",
+        "Uses a TREC form"
+       ],
+       "q": "Assigning a purchase contract without a license is allowed if the person:",
+       "why": "No written disclosure means it is brokerage."
+      }
+     ],
+     "h": "Equitable interests (wholesaling)",
+     "p": [
+      "Someone may sell an option or assign a purchase contract without a license only if they do not use it to engage in brokerage AND they disclose IN WRITING the nature of their equitable interest to any seller or potential buyer. Without that written disclosure it IS brokerage (1101.0045)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "12 semester hours",
+        "18 semester hours",
+        "60 semester hours"
+       ],
+       "q": "Qualifying education for a sales agent license is:",
+       "why": "18 is the FIRST RENEWAL."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Four years in the preceding 60 months",
+        "Two years in the preceding 36 months",
+        "Five years ever"
+       ],
+       "q": "A broker applicant needs active experience of:",
+       "why": "1101.356(a)(1)."
+      }
+     ],
+     "h": "Getting licensed",
+     "l": [
+      "Be at least 18, and a U.S. citizen or lawfully admitted alien (1101.354).",
+      "Satisfy TREC as to honesty, trustworthiness and integrity, and pass the exam.",
+      "Sales agent: 12 semester hours of qualifying courses, which the handbook lists as 180 classroom hours (1101.358).",
+      "A sales agent must be sponsored by a licensed broker to act; when sponsorship ends the license goes INACTIVE (1101.367).",
+      "Broker: at least FOUR years of active experience in the 60 months before applying, qualifying courses up to 60 semester hours, and the broker responsibility course (1101.356).",
+      "Exam retakes: three attempts; after three failures you need 30 more hours if you failed one portion, 60 if you failed both (handbook)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "1.5 times the fee",
+        "It cannot be renewed",
+        "Twice the renewal fee"
+       ],
+       "q": "A license expired 4 months ago can be renewed for:",
+       "why": "Over 90 days but under six months."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "18 hours",
+        "30 hours, 3 legal",
+        "15 hours, 8 of them legal topics"
+       ],
+       "q": "Continuing education after the first renewal is at least:",
+       "why": "1101.455."
+      }
+     ],
+     "h": "Keeping the license",
+     "l": [
+      "Licenses run 24 MONTHS (1101.451).",
+      "First renewal of a sales agent license: 18 semester hours of courses (SAE). TREC may NOT waive it (1101.454).",
+      "After that: at least 15 classroom hours of CE per license term, at least 8 of them on legal topics such as TREC rules, fair housing, and Property Code issues (1101.455).",
+      "Expired 90 days or less: renew for 1.5 times the fee. More than 90 days but under six months: 2 times. Six months or longer: cannot renew; start over as a new applicant (1101.451).",
+      "Brokers keep a fixed office in Texas, and apply for a new license within 10 days of moving it (1101.552).",
+      "When a sales agent and sponsoring broker part, the one ending it must immediately notify the other AND TREC in writing; a new sponsoring broker can reactivate the license (1101.367)."
+     ]
+    }
+   ],
+   "summary": "Anyone who, for a fee or the expectation of one, does brokerage for another needs a license unless an exemption applies. Learn the exemption list, the eligibility basics, and the renewal numbers: 12 hours to get in, 18 for the first renewal, 15 CE after that, 24-month licenses.",
+   "topic": "tx/licensing",
+   "traps": [
+    "12 hours to get the license, 18 for the FIRST renewal, then 15 CE (8 legal). Do not swap them.",
+    "1.5x up to 90 days, 2x up to six months, then a new license.",
+    "A power of attorney exempts only up to three transactions a year.",
+    "A sales agent cannot act without a sponsoring broker; termination puts the license on inactive status.",
+    "The wholesaler exemption needs WRITTEN disclosure of the equitable interest."
+   ],
+   "vocab": [
+    [
+     "Sponsoring broker",
+     "The licensed broker a sales agent acts for and through."
+    ],
+    [
+     "Inactive status",
+     "A sales agent license with no sponsoring broker; the agent cannot practice."
+    ],
+    [
+     "SAE",
+     "Sales Agent Apprentice Education, the 18 hours required for the first renewal."
+    ],
+    [
+     "Equitable interest",
+     "An option or contract right to buy, which can be assigned with written disclosure."
+    ],
+    [
+     "Attorney-in-fact",
+     "A person acting under a power of attorney."
+    ]
+   ]
+  },
+  "tx/special": {
+   "blurb": "Community property, homestead, DTPA, wills, leases, foreclosure, liens.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "$2,500 plus attorney's fees.",
+     "s": "A landlord keeps a $1,200 deposit in bad faith; $800 of it was wrongfully withheld.",
+     "t": "Deposit math",
+     "w": [
+      "$100",
+      "+ 3 x $800 = $2,400",
+      "+ reasonable attorney's fees"
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Special topics",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Community property",
+        "That spouse's separate property",
+        "Jointly owned by law"
+       ],
+       "q": "A house inherited by one spouse during marriage is:",
+       "why": "Descent is separate."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Both spouses to join",
+        "Only the owning spouse",
+        "A court order"
+       ],
+       "q": "Selling a homestead that is one spouse's separate property requires:",
+       "why": "Family Code 5.001."
+      }
+     ],
+     "h": "Community property (Family Code 3.001-3.003; 5.001)",
+     "l": [
+      "Texas is a community property state. Community property is what either spouse acquires during marriage, other than separate property.",
+      "Separate property: owned or claimed before marriage; acquired during marriage by gift, devise, or descent; and a personal-injury recovery (except lost earning capacity).",
+      "Property possessed during marriage is PRESUMED community; separate property must be proved by clear and convincing evidence.",
+      "Neither spouse may sell, convey, or encumber the HOMESTEAD without the joinder of the other - even if it is one spouse's separate property."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "100 acres",
+        "200 acres",
+        "10 acres"
+       ],
+       "q": "A rural homestead for a family may be up to:",
+       "why": "100 for a single adult."
+      }
+     ],
+     "h": "Homestead (Property Code 41.001-41.002)",
+     "l": [
+      "A homestead is protected from creditors' claims except for purchase money, taxes, written contracts for improvements, refinances, home equity loans and reverse mortgages meeting the Constitution, and owelty of partition.",
+      "URBAN homestead: up to 10 acres in one or more contiguous lots.",
+      "RURAL homestead: up to 200 acres for a family; up to 100 acres for a single adult.",
+      "Proceeds of selling a homestead are protected for six months after the sale."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Exempt from the DTPA as professional opinion",
+        "Always a DTPA violation if wrong",
+        "Subject to triple damages"
+       ],
+       "q": "A licensee's honest opinion of value is generally:",
+       "why": "17.49(c). A misstated fact is not exempt."
+      }
+     ],
+     "h": "Deceptive Trade Practices Act (Bus. & Com. Code 17.41 ff.)",
+     "l": [
+      "A consumer may sue for false, misleading, or deceptive acts relied on, breach of warranty, or unconscionable action.",
+      "Economic damages; if KNOWING, up to THREE TIMES economic damages plus mental anguish; if intentional, up to three times economic and mental anguish damages.",
+      "Professional services advice, judgment or opinion are exempt - but NOT an express misrepresentation of material fact, or a failure to disclose.",
+      "Sue within TWO years of the act or its discovery."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Needs two witnesses",
+        "Needs no witnesses",
+        "Is invalid in Texas"
+       ],
+       "q": "A will entirely in the testator's handwriting:",
+       "why": "251.052."
+      }
+     ],
+     "h": "Wills (Estates Code 251)",
+     "l": [
+      "A person of sound mind may make a will if 18 or older, married or formerly married, or in the armed forces.",
+      "A will must be in writing, signed, and attested by TWO or more credible witnesses at least 14 years old.",
+      "A HOLOGRAPHIC will - wholly in the testator's handwriting - needs no witnesses."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "10 days",
+        "60 days",
+        "30 days after surrender"
+       ],
+       "q": "A security deposit must be refunded within:",
+       "why": "92.103."
+      }
+     ],
+     "h": "Landlord and tenant (Property Code 92)",
+     "l": [
+      "Refund the security deposit on or before the 30TH DAY after the tenant surrenders the premises, with a written itemized list of deductions.",
+      "No deduction for normal wear and tear.",
+      "Bad faith retention: $100 + three times the amount wrongfully withheld + attorney's fees. Missing the 30-day deadline presumes bad faith.",
+      "A landlord may not lock out a tenant except by judicial process, with narrow exceptions such as repairs, emergencies, or changing locks of a delinquent tenant under the statute's notice rules."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Any weekday",
+        "The first Tuesday of the month",
+        "The last Friday of the month"
+       ],
+       "q": "Texas nonjudicial foreclosure sales happen on:",
+       "why": "Between 10 a.m. and 4 p.m."
+      }
+     ],
+     "h": "Foreclosure (Property Code 51.002)",
+     "l": [
+      "Nonjudicial sales under a deed of trust are public auctions at the county courthouse between 10 a.m. and 4 p.m. on the FIRST TUESDAY of the month (first Wednesday if Tuesday is Jan 1 or July 4).",
+      "Notice of sale at least 21 DAYS before the sale: posted at the courthouse, filed with the county clerk, and sent by certified mail.",
+      "For a residence, the servicer must first give at least 20 DAYS to cure the default."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "A later buyer for value without notice",
+        "The grantor",
+        "The grantee's heirs"
+       ],
+       "q": "An unrecorded deed is void against:",
+       "why": "13.001."
+      }
+     ],
+     "h": "Recording, liens, HOAs, VLB",
+     "l": [
+      "Recording (Property Code 13.001-.002): an unrecorded deed or deed of trust is void against a creditor or later buyer for value WITHOUT NOTICE, but binds the parties, their heirs, and anyone with notice or who paid nothing. Recording gives notice to all.",
+      "Mechanic's liens (Property Code 53): an original contractor on a residential project files the lien affidavit by the 15th day of the THIRD month after work is completed. A lien on a homestead needs a written contract signed before work begins, by both spouses if married, and filed with the county clerk.",
+      "HOAs (Property Code 207.003): within 10 BUSINESS DAYS of a request, the association delivers the restrictions, bylaws and rules, and a resale certificate.",
+      "Veterans Land Board: part of the General Land Office; offers low-interest land and home loans to Texas veterans and military members."
+     ]
+    }
+   ],
+   "summary": "Texas law outside the License Act that the exam treats as yours to know: community property and homestead, the DTPA, wills, landlord-tenant, foreclosure, recording, liens, the VLB, HOAs.",
+   "topic": "tx/special",
+   "traps": [
+    "Gift, inheritance, and property owned before marriage are separate; everything else acquired during marriage is presumed community.",
+    "Homestead: both spouses sign, even if separate property.",
+    "Urban 10 acres; rural 200 family, 100 single.",
+    "Deposit refund: 30 days; bad faith = $100 + 3x + fees.",
+    "Foreclosure: first Tuesday, 10-4, 21 days' notice, 20 days to cure first.",
+    "A holographic will needs no witnesses; a typed will needs two aged 14+."
+   ],
+   "vocab": [
+    [
+     "Community property",
+     "Property acquired during marriage other than separate property."
+    ],
+    [
+     "Separate property",
+     "Owned before marriage, or received by gift, devise, or descent."
+    ],
+    [
+     "Joinder",
+     "Both spouses signing a conveyance or encumbrance."
+    ],
+    [
+     "Homestead",
+     "Protected residence: 10 urban acres, 200/100 rural acres."
+    ],
+    [
+     "DTPA",
+     "Deceptive Trade Practices-Consumer Protection Act."
+    ],
+    [
+     "Holographic will",
+     "A will wholly in the testator's handwriting."
+    ],
+    [
+     "Resale certificate",
+     "HOA document of dues, fees and restrictions for a buyer."
+    ],
+    [
+     "Owelty of partition",
+     "A lien to equalize a division of property, allowed on a homestead."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "The Commission, penalties, and the Recovery Trust Account.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "tx/commission",
+   "label": "TREC: duties & powers",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a license, exemptions, education, renewal, inactive status.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "tx/licensing",
+   "label": "Licensing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Grounds for discipline, trust money, fees, rebates, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "tx/conduct",
+   "label": "Standards of conduct",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Disclosure, IABS, intermediary, minimum services, buyer agreements.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "tx/agency",
+   "label": "Agency & brokerage",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Promulgated forms, statute of frauds, seller's disclosure notice.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "tx/contracts",
+   "label": "Contracts & disclosures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Community property, homestead, DTPA, wills, leases, foreclosure, liens.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "tx/special",
+   "label": "Special topics",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Putting the rules together in realistic Texas transactions.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "tx/cases",
+   "label": "Case studies",
+   "portion": "georgia"
+  }
+ ]
+}

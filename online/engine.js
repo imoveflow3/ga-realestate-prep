@@ -2,6 +2,83 @@
    A port of greprep/{store,questions,scheduler}.py -- same rules, no server. */
 'use strict';
 
+/* The state portion. DATA carries Georgia's as the default and other states'
+   as packs (greprep/packs); a student who picked one of those states gets it
+   swapped in under the same "georgia" portion key, which from here on just
+   means "the state portion". Runs first, before anything reads DATA. */
+var GA_ONLY = /Georgia|GREC|BRRETA|O\.C\.G\.A/i;
+var STATE = (function(){
+  var code = null;
+  try { code = localStorage.getItem('ga-prep-state'); } catch(e){}
+  var pack = (DATA.packs || {})[code];
+  if (!pack) return {code: 'GA', name: 'Georgia', abbr: 'GA', regulator: 'GREC', pass: 0.75};
+  applyStatePack(pack);
+  return {code: pack.code, name: pack.name, abbr: pack.abbr,
+          regulator: pack.regulator, pass: pack.pass};
+})();
+/* The lessons repeat each topic's exam weight; the catalog is the one kept
+   current, so the lessons take theirs from it. */
+(DATA.topics || []).forEach(function(t){
+  var n = DATA.study && DATA.study.topics && DATA.study.topics[t.key];
+  if (n) n.exam_questions = t.exam_questions;
+});
+var PASS = STATE.pass;
+var PASS_PCT = Math.round(PASS * 100) + '%';
+
+function applyStatePack(pack){
+  var gaTopic = function(k){ return k.indexOf('georgia/') === 0 || k === 'comp/grec-deep'; };
+  var keep = function(x){ return !GA_ONLY.test(typeof x === 'string' ? x : JSON.stringify(x)); };
+
+  var nat = DATA.portions.national, st = DATA.portions.georgia;
+  /* The national topics' "about N on the exam" scale with the portion. */
+  var scale = pack.portions.national.scored / (nat.scored || 1);
+  var rescale = function(t){
+    if (t.portion === 'national') t.exam_questions = Math.max(1, Math.round(t.exam_questions * scale));
+  };
+  DATA.topics.forEach(rescale);
+  nat.scored = pack.portions.national.scored;
+  nat.minutes = pack.portions.national.minutes;
+  for (var f in pack.portions.georgia) st[f] = pack.portions.georgia[f];
+  if (DATA.portions.comprehensive)
+    DATA.portions.comprehensive.blurb = 'Cross-cutting drill: vocabulary, judgment calls, and closing ' +
+      'math. Not a section of the real exam.';
+  DATA.exam = {national: nat.scored, georgia: st.scored};
+  DATA.spq = Math.round((nat.minutes + st.minutes) * 60 / (nat.scored + st.scored) / 5) * 5;
+
+  var topics = DATA.topics.filter(function(t){ return !gaTopic(t.key); });
+  var at = 0;
+  topics.forEach(function(t, i){ if (t.portion === 'national') at = i + 1; });
+  DATA.topics = topics.slice(0, at).concat(pack.topics, topics.slice(at));
+  DATA.practice_only = (DATA.practice_only || []).filter(function(k){ return !gaTopic(k); });
+
+  DATA.banks.georgia = pack.bank;
+  ['national', 'comprehensive'].forEach(function(p){
+    DATA.banks[p] = (DATA.banks[p] || []).filter(function(r){ return !gaTopic(r.topic) && keep(r); });
+  });
+  for (var m in DATA.math) if (DATA.math.hasOwnProperty(m) && !keep(DATA.math[m].label)) delete DATA.math[m];
+
+  /* The national lessons carry Georgia asides; those go, and the state's
+     own differences take the place of the Georgia notes. */
+  var tops = DATA.study.topics, out = {};
+  Object.keys(tops).forEach(function(k){
+    if (gaTopic(k)) return;
+    var t = tops[k];
+    t.ga = (pack.diffs || {})[k] || [];
+    ['traps', 'vocab', 'examples'].forEach(function(f){ if (t[f]) t[f] = t[f].filter(keep); });
+    (t.sections || []).forEach(function(s){
+      if (s.l) s.l = s.l.filter(keep);
+      if (s.check) s.check = s.check.filter(keep);
+      if (s.p) s.p = s.p.map(function(par){
+        return (par.match(/[^.!?]+[.!?]*\s*/g) || [par]).filter(keep).join('').trim();
+      }).filter(function(par){ return par; });
+    });
+    out[k] = t;
+  });
+  for (var k in pack.study) out[k] = pack.study[k];
+  DATA.study.topics = out;
+  DATA.study.sources = pack.sources.concat((DATA.study.sources || []).filter(keep));
+}
+
 var KEY = 'ga-prep-v1';
 var EXAM = DATA.exam;                       // counted from the blueprint
 var TOTAL_Q = EXAM.national + EXAM.georgia;
@@ -631,7 +708,7 @@ function sectionTable(d){
     });
     var st = _sliceStats(rows);
     st.portion = p;
-    st.name = {national: 'National', georgia: 'Georgia state',
+    st.name = {national: 'National', georgia: STATE.name + ' state',
                comprehensive: 'Comprehensive'}[p];
     st.scored = (DATA.portions[p] || {}).scored || 0;
     out.push(st);
@@ -665,7 +742,7 @@ function headline(d){
   return {exam_pct: overall.recent_pct, sets: d.attempts.length,
           answered: answered, days_out: days,
           trend: overall.trend, passing: overall.recent_pct !== null
-                                          && overall.recent_pct >= 0.75};
+                                          && overall.recent_pct >= PASS};
 }
 
 /* ------------------------------------------------------- spaced repetition
@@ -944,7 +1021,7 @@ function readinessFor(d, portionKeys){
   out.perDay = slope;
   // a straight line through a handful of quizzes should not claim certainty
   out.projected = Math.max(0.05, Math.min(0.95, proj));
-  out.onTrack = out.projected >= 0.75;
+  out.onTrack = out.projected >= PASS;
   return out;
 }
 
@@ -1174,7 +1251,7 @@ function buildPlan(d){
     var phase = phases[i], focus = [], tasks;
     if (phase === 'Mock exams & review'){
       focus = nat.slice(0,2).concat(ga.slice(0,2));
-      tasks = ['Take one FULL mock exam (' + scoredTotal() + ' questions, National + Georgia).',
+      tasks = ['Take one FULL mock exam (' + scoredTotal() + ' questions, National + ' + STATE.name + ').',
                'Review every miss and write the rule in your own words.',
                'Run Weak-spot mode twice on whatever the mock exposes.',
                'Do one 15-question math sprint daily.'];
