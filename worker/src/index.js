@@ -6,6 +6,7 @@
 
 import GATED from '../assets/gated.js';
 import PAGES from '../assets/pages.js';
+import { sendMail, emailConfigured } from './mail.js';
 import { createCheckout, createPortal, fetchCheckout, verifyWebhook,
          PLANS, subscriptionActive, createPromotionCode, findPromotionCode,
          deactivatePromotionCode,
@@ -57,33 +58,37 @@ async function readJson(request) {
   try { return await request.json(); } catch (e) { return {}; }
 }
 
-async function sendMail(env, to, subject, text) {
-  if (!env.RESEND_API_KEY) return { error: 'email-not-configured' };
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`,
-               'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: env.FROM_EMAIL || 'login@example.com',
-                           to: [to], subject, text }),
-  });
-  return res.ok ? {} : { error: 'email-send-failed' };
+async function sendCode(env, email, code) {
+  return sendMail(env, email, `${code} is your sign-in code`,
+    `Your sign-in code for Real Estate Exam Prep is ${code}.\n` +
+    `It expires in 15 minutes. If you did not ask for it, ignore this.`);
 }
 
-async function sendCode(env, email, code) {
-  if (!env.RESEND_API_KEY) return { error: 'email-not-configured' };
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`,
-               'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: env.FROM_EMAIL || 'login@example.com',
-      to: [email],
-      subject: `${code} is your sign-in code`,
-      text: `Your sign-in code for Real Estate Exam Prep is ${code}.\n` +
-            `It expires in 15 minutes. If you did not ask for it, ignore this.`,
-    }),
-  });
-  return res.ok ? {} : { error: 'email-send-failed' };
+/* The confirmation an affiliate was promised on the page. Never blocks
+   anything: a code works whether or not this arrives. */
+async function sendAffiliateCode(env, origin, to, code, changed) {
+  const link = `${origin}/?code=${encodeURIComponent(code)}`;
+  const lines = [
+    changed ? `Your affiliate promo code is now ${code}.` :
+              `Welcome to the Real Estate Exam Prep affiliate program.`,
+    '',
+    `Your promo code: ${code}`,
+    `Your share link: ${link}`,
+    '',
+    `Anyone who uses your code gets ${AFFILIATE_DISCOUNT}% off their first payment on ` +
+      `the weekly, monthly or yearly plan. You earn ${AFFILIATE_SHARE}% of every payment ` +
+      `they make, renewals included.`,
+  ];
+  if (changed) lines.push('', 'Your old code no longer works. People who already ' +
+                          'signed up with it still count for you.');
+  lines.push('',
+    'Ideas: short TikTok or Instagram Reels videos of you studying, your code in your ' +
+      'bio, your pre-licensing class group chat, and friends thinking about getting ' +
+      'their license. When you share it, say you earn from your code (for example "#ad").',
+    '', 'Save this email. We will be in touch about payouts.',
+    '', '\u2014 Real Estate Exam Prep');
+  return sendMail(env, to, changed ? `Your new promo code: ${code}`
+                                   : `Your promo code: ${code}`, lines.join('\n'));
 }
 
 /* Timestamps are stored as unix seconds, which is right for the database
@@ -195,7 +200,8 @@ export default {
         await env.DB.prepare(
           'INSERT INTO affiliates (user_id, code, promo_id, created_at) VALUES (?, ?, ?, ?)'
         ).bind(who.id, code, made.id, now()).run();
-        return json({ code });
+        const sent = await sendAffiliateCode(env, origin, who.email, code, false);
+        return json({ code, emailed: !sent.error });
       }
       return json({ error: 'Could not make a code just now. Try again.' }, 503);
     }
@@ -230,7 +236,8 @@ export default {
         .bind(code, made.id, who.id).run();
       try { await deactivatePromotionCode(env, mine.promo_id); }
       catch (e) { console.error('affiliate code change: old code still active:', e.message); }
-      return json({ code });
+      const sent = await sendAffiliateCode(env, origin, who.email, code, true);
+      return json({ code, emailed: !sent.error });
     }
 
     /* Is this a live affiliate code? For the plans page, to show the price
@@ -769,7 +776,7 @@ export default {
                      /* Not `email` -- that name is the signed-in user's
                         address four lines down, and the flag would have
                         quietly replaced it. */
-                     canEmail: !!env.RESEND_API_KEY,
+                     canEmail: emailConfigured(env),
                      canPay: !!env.STRIPE_SECRET_KEY };
       return json(me ? Object.assign(base, { signedIn: true, paid: me.paid,
                                              entitled: me.entitled,
@@ -865,7 +872,7 @@ export default {
        configured at all, locking them out of what they bought would be the
        worse failure by a distance. They get in, and the app nags them. */
     const mustVerify = gated && me && !me.verified && !me.entitled &&
-                       !!env.RESEND_API_KEY;
+                       emailConfigured(env);
     if (mustVerify) {
       if (path === '/app') return redirect('/auth?verify=needed');
       return json({ error: 'email not verified' }, 403);

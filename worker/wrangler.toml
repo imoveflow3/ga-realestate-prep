@@ -34,3 +34,7 @@ PRICE_CENTS = "1900"
 PRODUCT_NAME = "Real Estate Exam Prep"
 SITE_URL = "https://study.realestateexamprep.workers.dev"
 FROM_EMAIL = "login@yourdomain.com"
+# Free email: sent through this Gmail account with an app password
+# (wrangler secret put GMAIL_APP_PASSWORD). See src/mail.js.
+GMAIL_USER = "allrealwebsite@gmail.com"
+MAIL_FROM_NAME = "Real Estate Exam Prep"

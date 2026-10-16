@@ -509,6 +509,7 @@ await it('joining makes a promo code from the email address, once', async () => 
   assert.match(AFF_CODE, /^GMAILUSER\d{2}$/, 'not made from gmail.user@: ' + AFF_CODE);
   assert.ok(STRIPE_COUPONS.has('AFFILIATE40'), 'the 40% coupon was never made');
   assert.ok(STRIPE_PROMOS.has(AFF_CODE), 'the code was never created at Stripe');
+  assert.match(SENT.subject || '', /promo code/i, 'no confirmation email went out');
   const again = await worker.fetch(req('/api/affiliate/join', {
     method: 'POST', headers: { Cookie: gCookie } }), env, {});
   assert.equal((await again.json()).code, AFF_CODE, 'joining twice made a second code');
