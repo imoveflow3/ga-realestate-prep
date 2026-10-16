@@ -48,6 +48,26 @@ const html = (body, status = 200, headers = {}) =>
 const redirect = (to, headers = {}) =>
   new Response(null, { status: 302, headers: { Location: to, ...headers } });
 
+/* Totals for one affiliate's referral rows. With `recent`, their latest
+   payments too -- dates and amounts only, never who the customer is. */
+function summarise(rows, recent) {
+  let earned = 0, paidOut = 0, sales = 0;
+  const customers = new Set();
+  for (const r of rows) {
+    earned += r.commission; sales += r.amount;
+    if (r.paid_out_at) paidOut += r.commission;
+    if (r.customer) customers.add(r.customer);
+  }
+  const out = { signups: customers.size, payments: rows.length, sales,
+                earned, paidOut, owed: earned - paidOut };
+  if (recent) {
+    out.recent = rows.slice().sort((a, b) => b.created_at - a.created_at).slice(0, 10)
+      .map(r => ({ at: r.created_at, amount: r.amount, commission: r.commission,
+                   paid: !!r.paid_out_at }));
+  }
+  return out;
+}
+
 /* Promo codes are letters and digits; anything else is not one. */
 function cleanCode(raw) {
   const c = String(raw || '').trim().toUpperCase();
@@ -145,6 +165,23 @@ export default {
           }
         }
       }
+      /* Every paid invoice from a referred customer -- the first payment and
+         each renewal -- earns the affiliate their share. Not when the
+         customer is the affiliate themselves. */
+      if (event.type === 'invoice.paid') {
+        const inv = event.data.object;
+        const meta = (inv.subscription_details && inv.subscription_details.metadata) || {};
+        const refUser = meta.ref_user || null;
+        if (refUser && inv.amount_paid > 0 && meta.user_id !== refUser) {
+          await env.DB.prepare(
+            `INSERT OR IGNORE INTO referrals
+               (invoice_id, affiliate_user_id, customer, amount, commission, created_at)
+             VALUES (?, ?, ?, ?, ?, ?)`
+          ).bind(inv.id, refUser, inv.customer || null, inv.amount_paid,
+                 Math.round(inv.amount_paid * AFFILIATE_SHARE / 100), now()).run();
+        }
+      }
+
       /* A subscription changing state: renewed, switched, card failing for
          good, or cancelled. Access follows it. Admins keep access through
          their role whatever this says. */
@@ -240,6 +277,16 @@ export default {
       return json({ code, emailed: !sent.error });
     }
 
+    /* An affiliate's own numbers: sign-ups, earned, paid out, still owed. */
+    if (path === '/api/affiliate/stats' && request.method === 'GET') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'sign in first' }, 401);
+      const rows = (await env.DB.prepare(
+        `SELECT commission, amount, customer, created_at, paid_out_at
+           FROM referrals WHERE affiliate_user_id = ?`).bind(who.id).all()).results || [];
+      return json(summarise(rows, true));
+    }
+
     /* Is this a live affiliate code? For the plans page, to show the price
        with the discount before checkout. Says nothing about whose it is. */
     if (path === '/api/affiliate/check' && request.method === 'GET') {
@@ -290,14 +337,19 @@ export default {
         if (!PLANS[plan]) return json({ error: 'Pick a plan.' }, 400);
         /* An affiliate code, if one came with them. A code that is not live
            is dropped quietly: they can still type one at Stripe. */
-        let promo = null, ref = null;
+        let promo = null, ref = null, refUser = null;
         const code = cleanCode(body && body.code);
         if (code) {
           const found = await findPromotionCode(env, code);
-          if (found) { promo = found.id; ref = found.code; }
+          if (found) {
+            promo = found.id; ref = found.code;
+            const owner = await env.DB.prepare('SELECT user_id FROM affiliates WHERE code = ?')
+              .bind(found.code).first();
+            refUser = owner ? owner.user_id : null;
+          }
         }
         const link = await createCheckout(env, {
-          email: who.email, origin, userId: who.id, plan, promo, ref,
+          email: who.email, origin, userId: who.id, plan, promo, ref, refUser,
         });
         return json({ url: link });
       } catch (e) {
@@ -796,6 +848,30 @@ export default {
       const who = await currentUser(request, env);
       const no = requireAdmin(who);
       if (no) return no;
+
+      /* Who is owed what, for paying affiliates out by hand. */
+      if (path === '/api/admin/affiliates' && request.method === 'GET') {
+        const affs = (await env.DB.prepare(
+          `SELECT a.user_id, a.code, u.email FROM affiliates a
+             JOIN users u ON u.id = a.user_id`).all()).results || [];
+        const refs = (await env.DB.prepare(
+          `SELECT affiliate_user_id, commission, amount, customer, created_at, paid_out_at
+             FROM referrals`).all()).results || [];
+        const out = affs.map(a => Object.assign(
+          { user_id: a.user_id, code: a.code, email: a.email },
+          summarise(refs.filter(r => r.affiliate_user_id === a.user_id), false)));
+        out.sort((x, y) => y.owed - x.owed);
+        return json({ affiliates: out });
+      }
+      if (path === '/api/admin/affiliates/paid' && request.method === 'POST') {
+        const body = await readJson(request);
+        const id = String((body && body.user_id) || '');
+        if (!id) return json({ error: 'which affiliate?' }, 400);
+        await env.DB.prepare(
+          'UPDATE referrals SET paid_out_at = ? WHERE affiliate_user_id = ? AND paid_out_at IS NULL'
+        ).bind(now(), id).run();
+        return json({ ok: true });
+      }
 
       if (path === '/api/admin/stats') {
         const t = now();

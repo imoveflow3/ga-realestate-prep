@@ -1051,6 +1051,96 @@ function makeCode(info){
     .then(function(){ render(); });
 }
 
+/* What this affiliate has earned so far, from /api/affiliate/stats. */
+var STATS = {loaded: false, data: null};
+function earningsBox(){
+  var box = el('div', 'affstats');
+  box.appendChild(el('span', 'afflabel', 'Your earnings'));
+  if (!STATS.loaded){
+    box.appendChild(el('p', 'muted', 'Loading…'));
+    fetch('/api/affiliate/stats', {credentials: 'same-origin'})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){ STATS.data = d; })['catch'](function(){})
+      .then(function(){ STATS.loaded = true; if (HOME.page === 'affiliate') render(); });
+    return box;
+  }
+  var d = STATS.data || {signups: 0, earned: 0, paidOut: 0, owed: 0, recent: []};
+  var grid = el('div', 'affstatgrid');
+  [[String(d.signups), 'sign-ups'], [money(d.earned), 'earned'],
+   [money(d.paidOut), 'paid to you'], [money(d.owed), 'owed to you']].forEach(function(r){
+    var c = el('div');
+    c.appendChild(el('b', null, r[0]));
+    c.appendChild(el('span', null, r[1]));
+    grid.appendChild(c);
+  });
+  box.appendChild(grid);
+  if (d.recent && d.recent.length){
+    var ul = el('ul', 'affrecent');
+    d.recent.forEach(function(r){
+      var li = el('li');
+      li.appendChild(el('span', null, new Date(r.at * 1000).toLocaleDateString()));
+      li.appendChild(el('span', null, 'Payment ' + money(r.amount)));
+      li.appendChild(el('b', null, '+' + money(r.commission) + (r.paid ? ' paid' : '')));
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  } else {
+    box.appendChild(el('p', 'muted', 'Nothing yet — every payment from someone who used ' +
+      'your code shows up here, renewals included.'));
+  }
+  return box;
+}
+
+/* The owner's payout list: every affiliate, what they are owed, and a way
+   to record that it has been paid. Admins only; the server checks. */
+var PAYOUTS = {loaded: false, list: null, error: ''};
+function renderPayouts(v){
+  var wrap = el('div', 'gatewrap statewrap affwrap');
+  var card = el('div', 'gatecard affcard affhome');
+  wrap.appendChild(card); v.appendChild(wrap);
+  document.body.classList.add('onescreen');
+  card.appendChild(el('h1', null, 'Affiliate payouts'));
+  if (!PAYOUTS.loaded){
+    card.appendChild(el('p', 'gatelede', 'Loading…'));
+    fetch('/api/admin/affiliates', {credentials: 'same-origin'})
+      .then(function(r){ return r.json().then(function(d){ return {ok: r.ok, d: d}; }); })
+      .then(function(x){ if (x.ok) PAYOUTS.list = x.d.affiliates;
+                         else PAYOUTS.error = 'Only the site owner can see this page.'; })
+      ['catch'](function(){ PAYOUTS.error = 'Could not reach the server.'; })
+      .then(function(){ PAYOUTS.loaded = true; render(); });
+    return;
+  }
+  if (PAYOUTS.error){ card.appendChild(authNotice('bad', PAYOUTS.error)); return; }
+  card.appendChild(el('p', 'gatelede', 'Send each affiliate what they are owed (PayPal, ' +
+    'Zelle, Cash App…), then tap Mark paid so it is recorded.'));
+  var list = PAYOUTS.list || [];
+  if (!list.length) card.appendChild(el('p', 'muted', 'No affiliates yet.'));
+  list.forEach(function(a){
+    var row = el('div', 'payrow');
+    var who = el('div');
+    who.appendChild(el('b', null, a.code));
+    who.appendChild(el('span', null, a.email));
+    who.appendChild(el('span', null, a.signups + ' sign-ups · ' + money(a.earned) +
+      ' earned · ' + money(a.paidOut) + ' paid'));
+    row.appendChild(who);
+    var owed = el('div', 'payowed');
+    owed.appendChild(el('b', null, money(a.owed)));
+    owed.appendChild(el('span', null, 'owed'));
+    row.appendChild(owed);
+    var btn = el('button', 'btn' + (a.owed ? '' : ' ghost'), a.owed ? 'Mark paid' : 'Paid up');
+    btn.disabled = !a.owed;
+    btn.onclick = function(){
+      if (!confirm('Mark ' + money(a.owed) + ' as paid to ' + a.email + '?')) return;
+      btn.disabled = true;
+      post('/api/admin/affiliates/paid', {user_id: a.user_id})
+        .then(function(){ PAYOUTS.loaded = false; render(); })
+        ['catch'](function(){ btn.disabled = false; toast('Could not reach the server.'); });
+    };
+    row.appendChild(btn);
+    card.appendChild(row);
+  });
+}
+
 /* The affiliate's own page: the code, the link, the money, the ideas. */
 function affiliateHome(card, code, aff){
   card.classList.add('affhome');
@@ -1129,6 +1219,12 @@ function affiliateHome(card, code, aff){
   var top = el('button', 'btn wide affcontinue', 'Continue');
   top.onclick = function(){ location.href = hasAccess() ? '/' : '/auth?pay=1'; };
   card.appendChild(top);
+  card.appendChild(earningsBox());
+  if (ME.role === 'admin'){
+    var pay = el('a', 'linkish affadmin', 'Affiliate payouts (owner only) \u2192');
+    pay.href = '/#payouts';
+    card.appendChild(pay);
+  }
 
   /* What one referral is worth, from the real prices. */
   var earn = el('div', 'affearn');
@@ -1760,6 +1856,7 @@ function render(){
   if (HOME.page === 'auth') return renderAuthPage();
   if (HOME.page === 'state') return renderState(v);
   if (HOME.page === 'affiliate') return renderAffiliate(v);
+  if (HOME.page === 'payouts') return renderPayouts(v);
   if (HOME.page === 'buy' && !HOME.preview){
     location.replace(ME.signedIn ? '/auth?pay=1' : '/auth');
     return;
@@ -1795,9 +1892,11 @@ function render(){
   } catch(e){}
   if (location.hash === '#state') HOME.page = 'state';
   if (location.hash === '#affiliate') HOME.page = 'affiliate';
+  if (location.hash === '#payouts') HOME.page = 'payouts';
   window.addEventListener('popstate', function(){
     var want = (location.hash === '#state') ? 'state'
-             : (location.hash === '#affiliate') ? 'affiliate' : 'welcome';
+             : (location.hash === '#affiliate') ? 'affiliate'
+             : (location.hash === '#payouts') ? 'payouts' : 'welcome';
     if (HOME.page === want) return;
     HOME.page = want;
     render();

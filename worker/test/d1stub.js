@@ -1,7 +1,7 @@
 /* A minimum D1 good enough to exercise the gate: the handful of statements
    the Worker actually issues, backed by plain objects. */
 export function makeDB() {
-  const t = { affiliates: [], users: [], sessions: [], login_codes: [], progress: [], stripe_events: [], auth_attempts: [], tokens: [], sends: [] };
+  const t = { referrals: [], affiliates: [], users: [], sessions: [], login_codes: [], progress: [], stripe_events: [], auth_attempts: [], tokens: [], sends: [] };
   const like = (sql, s) => sql.replace(/\s+/g, ' ').toUpperCase().includes(s);
 
   function run(sql, args) {
@@ -299,6 +299,28 @@ export function makeDB() {
     if (like(q, 'UPDATE USERS SET ROLE')) {
       const u = t.users.find(x => x.id === args[1]);
       if (u) u.role = args[0];
+      return null;
+    }
+    /* affiliate earnings */
+    if (like(q, 'INSERT OR IGNORE INTO REFERRALS')) {
+      if (!t.referrals.find(r => r.invoice_id === args[0])) {
+        t.referrals.push({ invoice_id: args[0], affiliate_user_id: args[1], customer: args[2],
+                           amount: args[3], commission: args[4], created_at: args[5],
+                           paid_out_at: null });
+      }
+      return null;
+    }
+    if (like(q, 'FROM REFERRALS WHERE AFFILIATE_USER_ID')) {
+      return t.referrals.filter(r => r.affiliate_user_id === args[0]);
+    }
+    if (like(q, 'SELECT A.USER_ID, A.CODE, U.EMAIL FROM AFFILIATES')) {
+      return t.affiliates.map(a => ({ user_id: a.user_id, code: a.code,
+        email: (t.users.find(u => u.id === a.user_id) || {}).email }))
+        .filter(a => a.email);
+    }
+    if (like(q, 'SELECT AFFILIATE_USER_ID, COMMISSION')) return t.referrals.slice();
+    if (like(q, 'UPDATE REFERRALS SET PAID_OUT_AT')) {
+      t.referrals.forEach(r => { if (r.affiliate_user_id === args[1] && !r.paid_out_at) r.paid_out_at = args[0]; });
       return null;
     }
     if (like(q, 'SELECT ID FROM STRIPE_EVENTS'))

@@ -2236,11 +2236,36 @@ main:has(.statewrap)>section{max-width:none}
 .affedit .btn{flex:0 0 auto}
 .affchange{align-self:flex-start; margin-top:-.3rem}
 .affhint{margin-top:-.3rem; text-align:left}
+
+/* Affiliate earnings and the owner's payout list. */
+.affstats{width:100%; display:flex; flex-direction:column; gap:.45rem}
+.affstatgrid{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:.6rem}
+.affstatgrid div{display:flex; flex-direction:column; gap:.1rem; padding:.7rem .8rem;
+  border:1px solid var(--line); border-radius:var(--r-sm); background:var(--panel)}
+.affstatgrid b{font:600 1.25rem/1.1 var(--mono); color:var(--accent)}
+.affstatgrid span{font-size:.78rem; color:var(--ink-3)}
+.affrecent{list-style:none; margin:0; padding:0; display:flex; flex-direction:column}
+.affrecent li{display:flex; justify-content:space-between; gap:.6rem; padding:.4rem 0;
+  border-bottom:1px solid var(--line); font-size:.85rem; color:var(--ink-2)}
+.affrecent b{color:var(--ok)}
+.affadmin{align-self:flex-start; font-size:.85rem}
+.payrow{width:100%; display:grid; grid-template-columns:1fr auto auto; gap:.8rem;
+  align-items:center; padding:.8rem 0; border-bottom:1px solid var(--line)}
+.payrow > div:first-child{display:flex; flex-direction:column; gap:.1rem; min-width:0}
+.payrow > div:first-child span{font-size:.8rem; color:var(--ink-3); overflow:hidden; text-overflow:ellipsis}
+.payowed{display:flex; flex-direction:column; align-items:flex-end}
+.payowed b{font:600 1.1rem/1 var(--mono); color:var(--accent)}
+.payowed span{font-size:.72rem; color:var(--ink-3)}
+@media (max-width:560px){
+  .affstatgrid{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .payrow{grid-template-columns:1fr auto}
+  .payrow .btn{grid-column:1 / -1}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to the text</a>
 <main id="main" style="padding-top:2.5rem">
 <div class="card reading"><h1>Page not found</h1><p>There is nothing at that address. It may have been a typo, or a link that pointed somewhere this site never had.</p>
 <p><a class="btn" href="/" style="display:inline-flex">Go to the home page</a></p>
 <p><span class="muted">If you followed a link from inside the site and landed here, that is a bug worth telling us about: <a href="mailto:allrealwebsite@gmail.com">allrealwebsite@gmail.com</a>.</span></p>
-<p class="muted">Last updated 2026-10-15. <a href="/">Back to the home page</a>.</p></div>
+<p class="muted">Last updated 2026-10-16. <a href="/">Back to the home page</a>.</p></div>
 </main></body></html>

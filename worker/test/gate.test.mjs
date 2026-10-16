@@ -560,6 +560,40 @@ await it('checkout with a code applies it and tags the subscription', async () =
                'Stripe refuses discounts and the code box together');
 });
 
+/* Earnings: every paid invoice from a referred customer counts once. */
+async function invoicePaid(id, amount, meta) {
+  const body = JSON.stringify({ id: 'evt_' + id, type: 'invoice.paid', data: { object: {
+    id, customer: 'cus_ref_' + (meta.user_id || 'x'), amount_paid: amount,
+    subscription_details: { metadata: meta } } } });
+  return worker.fetch(req('/api/stripe-webhook', {
+    method: 'POST', body, headers: await signedWebhook(env, body) }), env, {});
+}
+await it('checkout records whose code it was, by account', async () => {
+  const aff = db._tables.affiliates[0];
+  assert.equal(LAST_CHECKOUT.get('subscription_data[metadata][ref_user]'), aff.user_id);
+});
+await it('a referred payment earns the affiliate 25%, once', async () => {
+  const aff = db._tables.affiliates[0];
+  await invoicePaid('in_1', 2100, { ref: 'X', ref_user: aff.user_id, user_id: 'buyer-1' });
+  await invoicePaid('in_1', 2100, { ref: 'X', ref_user: aff.user_id, user_id: 'buyer-1' });
+  await invoicePaid('in_2', 3500, { ref: 'X', ref_user: aff.user_id, user_id: 'buyer-1' });
+  const st = await (await worker.fetch(req('/api/affiliate/stats', {
+    headers: { Cookie: gCookie } }), env, {})).json();
+  assert.equal(st.payments, 2, 'a replayed invoice counted twice');
+  assert.equal(st.signups, 1);
+  assert.equal(st.earned, 525 + 875);
+  assert.equal(st.owed, 1400);
+  assert.ok(st.recent.every(r => !('customer' in r)), 'customers leaked to the affiliate');
+});
+await it('using your own code earns nothing', async () => {
+  const aff = db._tables.affiliates[0];
+  await invoicePaid('in_self', 3500, { ref: 'X', ref_user: aff.user_id, user_id: aff.user_id });
+  assert.ok(!db._tables.referrals.find(r => r.invoice_id === 'in_self'));
+});
+await it('stats need an account', async () => {
+  assert.equal((await worker.fetch(req('/api/affiliate/stats'), env, {})).status, 401);
+});
+
 await it('the webhook pays the account the checkout was started from', async () => {
   const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
   const body = JSON.stringify({ id: 'evt_g1', type: 'checkout.session.completed',
@@ -1377,6 +1411,23 @@ await it('an unknown admin route is 404, not a door', async () => {
   const res = await worker.fetch(req('/api/admin/everything', {
     headers: { Cookie: bossCookie } }), env, {});
   assert.equal(res.status, 404);
+});
+
+await it('only an admin sees who is owed, and can mark them paid', async () => {
+  assert.equal((await worker.fetch(req('/api/admin/affiliates', {
+    headers: { Cookie: gCookie } }), env, {})).status, 403, 'an ordinary user saw payouts');
+  const list = await (await worker.fetch(req('/api/admin/affiliates', {
+    headers: { Cookie: bossCookie } }), env, {})).json();
+  const a = list.affiliates.find(x => x.owed > 0);
+  assert.ok(a, 'nobody owed in the list');
+  const paid = await worker.fetch(req('/api/admin/affiliates/paid', {
+    method: 'POST', headers: { Cookie: bossCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ user_id: a.user_id }) }), env, {});
+  assert.equal(paid.status, 200);
+  const after = await (await worker.fetch(req('/api/admin/affiliates', {
+    headers: { Cookie: bossCookie } }), env, {})).json();
+  const b = after.affiliates.find(x => x.user_id === a.user_id);
+  assert.equal(b.owed, 0); assert.equal(b.paidOut, a.owed);
 });
 
 await it('losing the role closes the door again', async () => {

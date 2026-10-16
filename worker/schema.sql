@@ -89,3 +89,17 @@ CREATE TABLE IF NOT EXISTS affiliates (
   created_at  INTEGER NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+-- What each affiliate has earned: one row per paid invoice from a customer
+-- who signed up with their code (the first payment and every renewal).
+-- invoice_id is Stripe's, so a replayed webhook cannot count twice.
+CREATE TABLE IF NOT EXISTS referrals (
+  invoice_id        TEXT PRIMARY KEY,
+  affiliate_user_id TEXT NOT NULL,
+  customer          TEXT,
+  amount            INTEGER NOT NULL,   -- cents the customer paid
+  commission        INTEGER NOT NULL,   -- cents owed to the affiliate
+  created_at        INTEGER NOT NULL,
+  paid_out_at       INTEGER             -- when it was paid out; null = still owed
+);
+CREATE INDEX IF NOT EXISTS referrals_affiliate ON referrals(affiliate_user_id);

@@ -57,7 +57,7 @@ export function subscriptionActive(status) {
   return status === 'active' || status === 'trialing' || status === 'past_due';
 }
 
-export async function createCheckout(env, { email, origin, userId, plan, promo, ref }) {
+export async function createCheckout(env, { email, origin, userId, plan, promo, ref, refUser }) {
   const p = PLANS[plan];
   if (!p) throw new Error('Unknown plan.');
   const product = env.PRODUCT_NAME || 'Real Estate Exam Prep';
@@ -80,6 +80,8 @@ export async function createCheckout(env, { email, origin, userId, plan, promo, 
     form['discounts[0][promotion_code]'] = promo;
     form['metadata[ref]'] = ref;
     form['subscription_data[metadata][ref]'] = ref;
+    /* whose code it was, by account -- survives them changing the code */
+    if (refUser) form['subscription_data[metadata][ref_user]'] = refUser;
   } else {
     form.allow_promotion_codes = 'true';
   }
