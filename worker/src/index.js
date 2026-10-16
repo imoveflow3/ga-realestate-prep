@@ -134,6 +134,8 @@ function stamp(sec) {
   return sec ? new Date(sec * 1000).toISOString() : null;
 }
 
+const STRIPE_HOOK_PATHS = new Set(['/api/stripe-webhook', '/api/stripe/webhook']);
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -146,7 +148,11 @@ export default {
     }
 
     /* ---------------------------------------------------- Stripe webhook */
-    if (path === '/api/stripe-webhook' && request.method === 'POST') {
+    /* Two spellings, one endpoint. The documented path is the hyphenated
+       one; "/api/stripe/webhook" is accepted too, because that is the
+       obvious guess and a destination pointing there would otherwise drop
+       every payment silently. */
+    if (STRIPE_HOOK_PATHS.has(path) && request.method === 'POST') {
       const raw = await request.text();
       const { event, error } = await verifyWebhook(
         env, raw, request.headers.get('Stripe-Signature'));

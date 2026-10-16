@@ -666,6 +666,17 @@ await it('manage subscription sets up the portal itself, once', async () => {
   }
   assert.equal(PORTAL_CONFIG.get('features[subscription_cancel][mode]'), 'at_period_end');
 });
+/* The webhook URL is typed into Stripe by hand, once, and a wrong spelling
+   fails silently -- Stripe gets a 404 and the customer never turns paid.
+   Both spellings therefore reach the same handler. */
+await it('both spellings of the webhook URL reach the handler', async () => {
+  for (const p of ['/api/stripe-webhook', '/api/stripe/webhook']) {
+    const res = await worker.fetch(req(p, { method: 'POST', body: '{}' }), env, {});
+    assert.equal(res.status, 400, p + ' did not reach the webhook handler');
+    assert.match((await res.json()).error, /signature/,
+                 p + ' answered something other than a signature complaint');
+  }
+});
 await it('the manage-subscription page needs a signed-in account', async () => {
   const res = await worker.fetch(req('/api/billing', { method: 'POST' }), env, {});
   assert.equal(res.status, 401);
