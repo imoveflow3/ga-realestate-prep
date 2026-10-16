@@ -590,6 +590,13 @@ await it('using your own code earns nothing', async () => {
   await invoicePaid('in_self', 3500, { ref: 'X', ref_user: aff.user_id, user_id: aff.user_id });
   assert.ok(!db._tables.referrals.find(r => r.invoice_id === 'in_self'));
 });
+await it('a code missing at Stripe (test to live) is made again on first use', async () => {
+  const aff = db._tables.affiliates[0];
+  STRIPE_PROMOS.delete(aff.code);          // as if Stripe were now in live mode
+  const ok = await (await worker.fetch(req('/api/affiliate/check?code=' + aff.code), env, {})).json();
+  assert.equal(ok.ok, true, 'an affiliate lost their code in the switch');
+  assert.ok(STRIPE_PROMOS.has(aff.code), 'the code was not recreated at Stripe');
+});
 await it('stats need an account', async () => {
   assert.equal((await worker.fetch(req('/api/affiliate/stats'), env, {})).status, 401);
 });

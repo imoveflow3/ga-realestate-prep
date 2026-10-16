@@ -48,6 +48,23 @@ const html = (body, status = 200, headers = {}) =>
 const redirect = (to, headers = {}) =>
   new Response(null, { status: 302, headers: { Location: to, ...headers } });
 
+/* A live affiliate code at Stripe, by what the buyer typed. If Stripe has
+   no such code but an affiliate here owns it -- the account moved from test
+   mode to live, where test codes do not exist -- it is made again on the
+   spot, so switching modes never breaks anybody's code. */
+async function liveCode(env, code) {
+  const found = await findPromotionCode(env, code);
+  if (found) return found;
+  const owner = await env.DB.prepare('SELECT user_id FROM affiliates WHERE code = ?')
+    .bind(code).first();
+  if (!owner) return null;
+  const made = await createPromotionCode(env, { code, userId: owner.user_id });
+  if (made.taken || !made.id) return null;
+  await env.DB.prepare('UPDATE affiliates SET code = ?, promo_id = ? WHERE user_id = ?')
+    .bind(code, made.id, owner.user_id).run();
+  return { id: made.id, code };
+}
+
 /* Totals for one affiliate's referral rows. With `recent`, their latest
    payments too -- dates and amounts only, never who the customer is. */
 function summarise(rows, recent) {
@@ -293,7 +310,7 @@ export default {
       const code = cleanCode(url.searchParams.get('code'));
       if (!code || !env.STRIPE_SECRET_KEY) return json({ ok: false });
       try {
-        const found = await findPromotionCode(env, code);
+        const found = await liveCode(env, code);
         return json(found ? { ok: true, code: found.code, discount: AFFILIATE_DISCOUNT }
                           : { ok: false });
       } catch (e) {
@@ -340,7 +357,7 @@ export default {
         let promo = null, ref = null, refUser = null;
         const code = cleanCode(body && body.code);
         if (code) {
-          const found = await findPromotionCode(env, code);
+          const found = await liveCode(env, code);
           if (found) {
             promo = found.id; ref = found.code;
             const owner = await env.DB.prepare('SELECT user_id FROM affiliates WHERE code = ?')
