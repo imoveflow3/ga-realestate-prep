@@ -142,9 +142,28 @@ export async function findPromotionCode(env, code) {
 }
 
 /* Stripe's own page for cancelling, switching plan or changing the card. */
+/* The customer portal needs a configuration, which the dashboard only lets
+   you set up in live mode. So the site makes its own the first time one is
+   needed, in whichever mode the key is: cancel at the end of the period,
+   update the card, see past invoices. */
+async function portalConfiguration(env, origin) {
+  const list = await stripe(env, '/billing_portal/configurations?active=true&limit=1');
+  if (list.data && list.data.length) return list.data[0].id;
+  const made = await stripe(env, '/billing_portal/configurations', {
+    method: 'POST', form: {
+      default_return_url: `${origin}/`,
+      'features[payment_method_update][enabled]': 'true',
+      'features[invoice_history][enabled]': 'true',
+      'features[subscription_cancel][enabled]': 'true',
+      'features[subscription_cancel][mode]': 'at_period_end',
+    } });
+  return made.id;
+}
+
 export async function createPortal(env, { customer, origin }) {
+  const configuration = await portalConfiguration(env, origin);
   const session = await stripe(env, '/billing_portal/sessions', {
-    method: 'POST', form: { customer, return_url: `${origin}/` } });
+    method: 'POST', form: { customer, configuration, return_url: `${origin}/` } });
   return session.url;
 }
 

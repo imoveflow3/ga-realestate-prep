@@ -17,6 +17,7 @@ const ORIGIN = 'https://prep.test';
 const SENT = { code: null, to: null, verifyToken: null, resetToken: null };
 const GOOGLE = { email: 'gmail.user@gmail.com', verified: true };
 let LAST_CHECKOUT = new URLSearchParams();
+let PORTAL_CONFIG = null, LAST_PORTAL = null;
 const STRIPE_COUPONS = new Set();
 const STRIPE_PROMOS = new Map();     // code -> promotion code id (active only)
 const STRIPE_OFF = new Set();        // promotion codes switched off
@@ -81,6 +82,19 @@ globalThis.fetch = async (input, init = {}) => {
     const code = new URL(url).searchParams.get('code');
     const id = STRIPE_PROMOS.get(code);
     return new Response(JSON.stringify({ data: id ? [{ id, code }] : [] }), { status: 200 });
+  }
+  /* The portal: no configuration until the site makes one. */
+  if (url.startsWith('https://api.stripe.com/v1/billing_portal/configurations')) {
+    if ((init.method || 'GET') === 'POST') {
+      PORTAL_CONFIG = new URLSearchParams(init.body);
+      return new Response('{"id":"bpc_made"}', { status: 200 });
+    }
+    return new Response(JSON.stringify({ data: PORTAL_CONFIG ? [{ id: 'bpc_made' }] : [] }),
+                        { status: 200 });
+  }
+  if (url === 'https://api.stripe.com/v1/billing_portal/sessions') {
+    LAST_PORTAL = new URLSearchParams(init.body);
+    return new Response('{"url":"https://billing.stripe.com/p/session/stub"}', { status: 200 });
   }
   if (url === 'https://api.stripe.com/v1/checkout/sessions') {
     LAST_CHECKOUT = new URLSearchParams(init.body);
@@ -640,6 +654,17 @@ await it('a renewed subscription gives it back', async () => {
   const u = db._tables.users.find(u => u.email === 'gmail.user@gmail.com');
   await subEvent(env, 'evt_sub_upd', 'customer.subscription.updated', 'active');
   assert.equal(u.paid, 1, 'not paid after renewing');
+});
+await it('manage subscription sets up the portal itself, once', async () => {
+  for (let i = 0; i < 2; i++) {
+    const res = await worker.fetch(req('/api/billing', {
+      method: 'POST', headers: { Cookie: gCookie } }), env, {});
+    assert.equal(res.status, 200, 'portal refused');
+    assert.match((await res.json()).url, /billing\.stripe\.com/);
+    assert.equal(LAST_PORTAL.get('configuration'), 'bpc_made');
+    assert.equal(LAST_PORTAL.get('customer'), 'cus_g');
+  }
+  assert.equal(PORTAL_CONFIG.get('features[subscription_cancel][mode]'), 'at_period_end');
 });
 await it('the manage-subscription page needs a signed-in account', async () => {
   const res = await worker.fetch(req('/api/billing', { method: 'POST' }), env, {});
