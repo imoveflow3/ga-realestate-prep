@@ -18,7 +18,8 @@ const SENT = { code: null, to: null, verifyToken: null, resetToken: null };
 const GOOGLE = { email: 'gmail.user@gmail.com', verified: true };
 let LAST_CHECKOUT = new URLSearchParams();
 const STRIPE_COUPONS = new Set();
-const STRIPE_PROMOS = new Map();     // code -> promotion code id
+const STRIPE_PROMOS = new Map();     // code -> promotion code id (active only)
+const STRIPE_OFF = new Set();        // promotion codes switched off
 const realFetch = globalThis.fetch;
 globalThis.fetch = async (input, init = {}) => {
   const url = typeof input === 'string' ? input : input.url;
@@ -69,6 +70,12 @@ globalThis.fetch = async (input, init = {}) => {
     }
     STRIPE_PROMOS.set(b.get('code'), 'promo_' + b.get('code'));
     return new Response(JSON.stringify({ id: 'promo_' + b.get('code') }), { status: 200 });
+  }
+  if (/^https:\/\/api\.stripe\.com\/v1\/promotion_codes\/promo_/.test(url)) {
+    const id = url.split('/').pop();
+    for (const [c, v] of STRIPE_PROMOS) if (v === id) STRIPE_PROMOS.delete(c);
+    STRIPE_OFF.add(id);
+    return new Response(JSON.stringify({ id, active: false }), { status: 200 });
   }
   if (url.startsWith('https://api.stripe.com/v1/promotion_codes?')) {
     const code = new URL(url).searchParams.get('code');
@@ -496,6 +503,32 @@ await it('joining makes a promo code from the email address, once', async () => 
     method: 'POST', headers: { Cookie: gCookie } }), env, {});
   assert.equal((await again.json()).code, AFF_CODE, 'joining twice made a second code');
   assert.equal(db._tables.affiliates.length, 1);
+});
+await it('an affiliate can change their code to one nobody has', async () => {
+  const old = AFF_CODE;
+  const res = await worker.fetch(req('/api/affiliate/code', {
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code: 'pass with me' }) }), env, {});
+  assert.equal(res.status, 400, 'spaces were accepted');
+  const ok = await worker.fetch(req('/api/affiliate/code', {
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code: 'passwithme' }) }), env, {});
+  assert.equal(ok.status, 200);
+  assert.equal((await ok.json()).code, 'PASSWITHME');
+  assert.ok(STRIPE_PROMOS.has('PASSWITHME'), 'new code not made at Stripe');
+  assert.ok(STRIPE_OFF.has('promo_' + old), 'old code still active at Stripe');
+  assert.equal(db._tables.affiliates[0].code, 'PASSWITHME');
+  AFF_CODE = 'PASSWITHME';
+});
+await it('a code somebody else has is refused', async () => {
+  db._tables.affiliates.push({ user_id: 'someone-else', code: 'TAKENCODE', promo_id: 'promo_x' });
+  const res = await worker.fetch(req('/api/affiliate/code', {
+    method: 'POST', headers: { Cookie: gCookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code: 'takencode' }) }), env, {});
+  assert.equal(res.status, 409);
+  assert.equal(db._tables.affiliates.find(a => a.user_id !== 'someone-else').code, 'PASSWITHME',
+               'a refused change still changed the code');
+  db._tables.affiliates.pop();
 });
 await it('a live code checks out; a made-up one does not', async () => {
   const ok = await (await worker.fetch(req('/api/affiliate/check?code=' +

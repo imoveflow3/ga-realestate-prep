@@ -7,6 +7,7 @@
 import GATED from '../assets/gated.js';
 import { createCheckout, createPortal, fetchCheckout, verifyWebhook,
          PLANS, subscriptionActive, createPromotionCode, findPromotionCode,
+         deactivatePromotionCode,
          AFFILIATE_DISCOUNT, AFFILIATE_SHARE } from './stripe.js';
 import * as google from './google.js';
 import * as password from './password.js';
@@ -186,7 +187,8 @@ export default {
         try {
           made = await createPromotionCode(env, { code, userId: who.id });
         } catch (e) {
-          return json({ error: e.message }, 502);
+          console.error('affiliate join: Stripe refused:', e.message);
+          return json({ error: 'Could not make your code: ' + e.message }, 502);
         }
         if (made.taken) continue;
         await env.DB.prepare(
@@ -195,6 +197,39 @@ export default {
         return json({ code });
       }
       return json({ error: 'Could not make a code just now. Try again.' }, 503);
+    }
+
+    /* An affiliate picks their own code, as long as nobody else has it. The
+       new one is made at Stripe first; only then is the old one switched off,
+       so a clash or a Stripe hiccup leaves them with a working code. */
+    if (path === '/api/affiliate/code' && request.method === 'POST') {
+      const who = await currentUser(request, env);
+      if (!who) return json({ error: 'sign in first' }, 401);
+      const mine = await env.DB.prepare(
+        'SELECT code, promo_id FROM affiliates WHERE user_id = ?').bind(who.id).first();
+      if (!mine) return json({ error: 'Get a promo code first.' }, 404);
+      const body = await readJson(request);
+      const code = cleanCode(body && body.code);
+      if (!code || code.length < 4 || code.length > 20) {
+        return json({ error: 'Use 4 to 20 letters and numbers, no spaces.' }, 400);
+      }
+      if (code === mine.code) return json({ code });
+      const clash = await env.DB.prepare('SELECT user_id FROM affiliates WHERE code = ?')
+        .bind(code).first();
+      if (clash) return json({ error: 'Somebody already has that code. Try another.' }, 409);
+      let made;
+      try {
+        made = await createPromotionCode(env, { code, userId: who.id });
+      } catch (e) {
+        console.error('affiliate code change: Stripe refused:', e.message);
+        return json({ error: 'Could not save that code: ' + e.message }, 502);
+      }
+      if (made.taken) return json({ error: 'Somebody already has that code. Try another.' }, 409);
+      await env.DB.prepare('UPDATE affiliates SET code = ?, promo_id = ? WHERE user_id = ?')
+        .bind(code, made.id, who.id).run();
+      try { await deactivatePromotionCode(env, mine.promo_id); }
+      catch (e) { console.error('affiliate code change: old code still active:', e.message); }
+      return json({ code });
     }
 
     /* Is this a live affiliate code? For the plans page, to show the price

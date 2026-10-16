@@ -102,7 +102,8 @@ async function ensureAffiliateCoupon(env) {
       id: AFFILIATE_COUPON,
       percent_off: String(AFFILIATE_DISCOUNT),
       duration: 'once',
-      name: `Affiliate code \u2014 ${AFFILIATE_DISCOUNT}% off the first payment`,
+      // Stripe caps coupon names at 40 characters
+      name: `Affiliate: ${AFFILIATE_DISCOUNT}% off first payment`,
     } });
   }
 }
@@ -121,6 +122,14 @@ export async function createPromotionCode(env, { code, userId }) {
     if (/already exists|in use|unique/i.test(e.message)) return { taken: true };
     throw e;
   }
+}
+
+/* Switch an old code off when its owner picks a new one. Purchases already
+   made with it keep their `ref`, and the code keeps its affiliate_user_id. */
+export async function deactivatePromotionCode(env, id) {
+  if (!id) return;
+  await stripe(env, `/promotion_codes/${encodeURIComponent(id)}`,
+               { method: 'POST', form: { active: 'false' } });
 }
 
 /* An active affiliate code, by what the buyer typed. */

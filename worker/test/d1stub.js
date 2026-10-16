@@ -60,6 +60,15 @@ export function makeDB() {
       t.users.filter(u => u.stripe_id === args[1]).forEach(u => { u.paid = args[0]; });
       return null;
     }
+    if (like(q, 'SELECT CODE, PROMO_ID FROM AFFILIATES WHERE USER_ID')) {
+      const a = t.affiliates.find(x => x.user_id === args[0]);
+      return a ? { code: a.code, promo_id: a.promo_id } : null;
+    }
+    if (like(q, 'UPDATE AFFILIATES SET CODE = ?, PROMO_ID = ? WHERE USER_ID')) {
+      const a = t.affiliates.find(x => x.user_id === args[2]);
+      if (a) { a.code = args[0]; a.promo_id = args[1]; }
+      return null;
+    }
     if (like(q, 'SELECT CODE FROM AFFILIATES WHERE USER_ID')) {
       const a = t.affiliates.find(x => x.user_id === args[0]);
       return a ? { code: a.code } : null;

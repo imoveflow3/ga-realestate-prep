@@ -2195,3 +2195,9 @@ main:has(.statewrap)>section{max-width:none}
 .affform{width:100%; max-width:22rem; text-align:left}
 .affcard .linkish{margin-top:-.2rem}
 .affcontinue{max-width:22rem; align-self:center}
+.affedit{display:flex; gap:.5rem; width:100%}
+.affedit input{flex:1; min-width:0; font:600 1.1rem/1 var(--mono); letter-spacing:.06em;
+  padding:.7rem .8rem; text-transform:uppercase}
+.affedit .btn{flex:0 0 auto}
+.affchange{align-self:flex-start; margin-top:-.3rem}
+.affhint{margin-top:-.3rem; text-align:left}

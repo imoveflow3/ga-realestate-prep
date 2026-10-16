@@ -934,8 +934,21 @@ function renderAffiliate(v){
   card.appendChild(steps);
   if (AFF.error) card.appendChild(authNotice('bad', AFF.error));
 
-  /* Signed in already: one tap for the code. */
+  /* Signed in already: one tap for the code -- and say which account, with
+     a way to use another, so it is clear why there is no sign-up form. */
   if (info.signedIn){
+    card.appendChild(el('p', 'whoami', 'Signed in as ' + (ME.email || 'your account')));
+    var other = el('button', 'linkish', 'Use a different account');
+    other.type = 'button';
+    other.onclick = function(){
+      fetch('/api/logout', {method: 'POST', credentials: 'same-origin'})['catch'](function(){})
+        .then(function(){
+          ME = {signedIn: false};
+          AFF.info = {signedIn: false}; AFF.mode = 'signup'; AFF.error = '';
+          render();
+        });
+    };
+    card.appendChild(other);
     var acts = el('div', 'gateacts');
     var join = el('button', 'btn wide', AFF.busy ? 'Making your code…' : 'Get my promo code');
     join.disabled = AFF.busy;
@@ -1064,6 +1077,54 @@ function affiliateHome(card, code, aff){
   }
   var link = location.origin + '/?code=' + encodeURIComponent(code);
   card.appendChild(copyRow('Your code', code, 'big'));
+
+  /* Pick their own code, as long as nobody else has it. */
+  if (AFF.editing){
+    var ed = el('form', 'affedit');
+    ed.noValidate = true;
+    var inp = el('input'); inp.type = 'text'; inp.maxLength = 20;
+    inp.value = AFF.draft != null ? AFF.draft : code;
+    inp.setAttribute('aria-label', 'New promo code');
+    inp.autocapitalize = 'characters'; inp.spellcheck = false;
+    inp.oninput = function(){
+      inp.value = inp.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+      AFF.draft = inp.value;
+    };
+    ed.appendChild(inp);
+    var save = el('button', 'btn', AFF.busy ? 'Saving\u2026' : 'Save');
+    save.type = 'submit'; save.disabled = AFF.busy;
+    ed.appendChild(save);
+    var cancel = el('button', 'btn ghost', 'Cancel');
+    cancel.type = 'button';
+    cancel.onclick = function(){ AFF.editing = false; AFF.error = ''; AFF.draft = null; render(); };
+    ed.appendChild(cancel);
+    ed.onsubmit = function(e){
+      e.preventDefault();
+      if (AFF.busy) return;
+      AFF.busy = true; AFF.error = ''; render();
+      post('/api/affiliate/code', {code: AFF.draft != null ? AFF.draft : code})
+        .then(function(x){
+          AFF.busy = false;
+          if (x.d.code){
+            AFF.info = Object.assign({}, AFF.info, {code: x.d.code});
+            AFF.editing = false; AFF.draft = null; AFF.changed = true;
+          } else AFF.error = x.d.error || 'Could not save that code.';
+          render();
+        })['catch'](function(){ AFF.busy = false; AFF.error = 'Could not reach the server.'; render(); });
+    };
+    card.appendChild(ed);
+    card.appendChild(el('p', 'gatefine affhint',
+      '4 to 20 letters and numbers. Your old code stops working once you save; ' +
+      'people who already signed up with it still count for you.'));
+    if (AFF.error) card.appendChild(authNotice('bad', AFF.error));
+  } else {
+    if (AFF.changed) card.appendChild(authNotice('good',
+      'Your code is now ' + code + '. Your old code no longer works \u2014 share this one.'));
+    var change = el('button', 'linkish affchange', 'Change my code');
+    change.type = 'button';
+    change.onclick = function(){ AFF.editing = true; AFF.changed = false; AFF.error = ''; render(); };
+    card.appendChild(change);
+  }
   card.appendChild(copyRow('Your link — applies the code for them', link));
   var top = el('button', 'btn wide affcontinue', 'Continue');
   top.onclick = function(){ location.href = hasAccess() ? '/' : '/auth?pay=1'; };
