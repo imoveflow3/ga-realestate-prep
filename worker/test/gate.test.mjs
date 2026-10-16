@@ -465,13 +465,31 @@ await it('joining the affiliate program needs an account', async () => {
   const res = await worker.fetch(req('/api/affiliate/join', { method: 'POST' }), env, {});
   assert.equal(res.status, 401);
 });
+await it('affiliate sign-up needs only email and password; normal sign-up still needs name and phone', async () => {
+  const aff = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'new.affiliate@example.com', password: 'abcdefgh1',
+                           password2: 'abcdefgh1', terms: true, affiliate: true }) }), env, {});
+  assert.equal(aff.status, 200);
+  const u = db._tables.users.find(x => x.email === 'new.affiliate@example.com');
+  assert.equal(u.name, 'new.affiliate', 'the name did not default to the email');
+  assert.equal(u.paid, 0, 'an affiliate got access without paying');
+  const plain = await worker.fetch(req('/api/auth/signup', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: 'plain.person@example.com', password: 'abcdefgh1',
+                           password2: 'abcdefgh1', terms: true }) }), env, {});
+  assert.equal(plain.status, 400);
+  const f = (await plain.json()).fields;
+  assert.ok(f.name && f.phone, 'normal sign-up stopped asking for name and phone');
+});
+
 let AFF_CODE = null;
-await it('joining makes a promo code from the first name, once', async () => {
+await it('joining makes a promo code from the email address, once', async () => {
   const first = await worker.fetch(req('/api/affiliate/join', {
     method: 'POST', headers: { Cookie: gCookie } }), env, {});
   assert.equal(first.status, 200);
   AFF_CODE = (await first.json()).code;
-  assert.match(AFF_CODE, /^[A-Z]+\d{2}$/, 'not a NAME00 code: ' + AFF_CODE);
+  assert.match(AFF_CODE, /^GMAILUSER\d{2}$/, 'not made from gmail.user@: ' + AFF_CODE);
   assert.ok(STRIPE_COUPONS.has('AFFILIATE40'), 'the 40% coupon was never made');
   assert.ok(STRIPE_PROMOS.has(AFF_CODE), 'the code was never created at Stripe');
   const again = await worker.fetch(req('/api/affiliate/join', {

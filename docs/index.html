@@ -2230,6 +2230,9 @@ main:has(.statewrap)>section{max-width:none}
 .refbanner{align-self:center; margin:0 0 .4rem; padding:.5rem .9rem; border-radius:var(--r-pill);
   background:var(--accent-soft); color:var(--accent); font-weight:600; font-size:.88rem}
 .reffirst{margin:-.2rem 0 .2rem; font-size:.84rem; font-weight:600; color:var(--accent)}
+.affform{width:100%; max-width:22rem; text-align:left}
+.affcard .linkish{margin-top:-.2rem}
+.affcontinue{max-width:22rem; align-self:center}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -3165,7 +3168,8 @@ function stateFacts(code){
 /* Reached from "Join program" on the plans. Three states: how it works with
    a way to sign up; signed in, one tap to get a code; and the code itself,
    with a share link and ideas for spreading it. */
-var AFF = {loaded: false, info: null, busy: false, error: ''};
+var AFF = {loaded: false, info: null, busy: false, error: '', mode: 'signup',
+           values: {}, fields: {}, fresh: false};
 var REF_KEY = 'ga-prep-ref';          // an affiliate code brought in by a link
 var REF = {ok: null, checking: false};  // is that code live? asked once
 
@@ -3217,40 +3221,115 @@ function renderAffiliate(v){
   card.appendChild(steps);
   if (AFF.error) card.appendChild(authNotice('bad', AFF.error));
 
-  var acts = el('div', 'gateacts');
-  var join = el('button', 'btn wide', AFF.busy ? 'Making your code…'
-    : (info.signedIn ? 'Get my promo code' : 'Sign up and get my code'));
-  join.disabled = AFF.busy;
-  join.onclick = function(){
-    if (!info.signedIn){
-      /* back here after signing up, not on to the plans */
-      try { sessionStorage.setItem('ga-prep-after-auth', 'affiliate'); } catch(e){}
-      location.href = '/auth';
-      return;
-    }
-    AFF.busy = true; AFF.error = ''; render();
-    fetch('/api/affiliate/join', {method: 'POST', credentials: 'same-origin'})
-      .then(function(r){ return r.json(); })
-      .then(function(d){
+  /* Signed in already: one tap for the code. */
+  if (info.signedIn){
+    var acts = el('div', 'gateacts');
+    var join = el('button', 'btn wide', AFF.busy ? 'Making your code…' : 'Get my promo code');
+    join.disabled = AFF.busy;
+    join.onclick = function(){ makeCode(info); };
+    acts.appendChild(join);
+    acts.appendChild(affBack());
+    card.appendChild(acts);
+    return;
+  }
+
+  /* Not signed in: email and password, right here, then the code. */
+  var login = AFF.mode === 'login';
+  var form = el('form', 'authform affform');
+  form.noValidate = true;
+  function input(name, label, type, auto){
+    var f = el('div', 'field' + (AFF.fields[name] ? ' bad' : ''));
+    var lab = el('label', null, label); lab.htmlFor = 'aff_' + name;
+    var i = el('input'); i.id = 'aff_' + name; i.type = type; i.autocomplete = auto;
+    i.value = AFF.values[name] || '';
+    i.oninput = function(){ AFF.values[name] = i.value; };
+    f.appendChild(lab); f.appendChild(i);
+    if (AFF.fields[name]) f.appendChild(el('p', 'fielderr', AFF.fields[name]));
+    form.appendChild(f);
+  }
+  input('email', 'Email address', 'email', 'email');
+  input('password', 'Password', 'password', login ? 'current-password' : 'new-password');
+  if (!login){
+    input('password2', 'Confirm password', 'password', 'new-password');
+    var tw = el('div', 'field checkfield' + (AFF.fields.terms ? ' bad' : ''));
+    var tl = el('label', 'checkline');
+    var cb = el('input'); cb.type = 'checkbox'; cb.checked = !!AFF.values.terms;
+    cb.onchange = function(){ AFF.values.terms = cb.checked; };
+    tl.appendChild(cb);
+    var tt = el('span');
+    tt.appendChild(document.createTextNode('I agree to the '));
+    var t1 = el('a', null, 'Terms of Service'); t1.href = '/terms'; t1.target = '_blank';
+    tt.appendChild(t1); tt.appendChild(document.createTextNode('.'));
+    tl.appendChild(tt); tw.appendChild(tl);
+    if (AFF.fields.terms) tw.appendChild(el('p', 'fielderr', AFF.fields.terms));
+    form.appendChild(tw);
+  }
+  var go = el('button', 'btn wide', AFF.busy ? 'Making your code…'
+    : (login ? 'Log in and get my code' : 'Get my promo code'));
+  go.type = 'submit'; go.disabled = AFF.busy;
+  form.appendChild(go);
+  form.onsubmit = function(e){
+    e.preventDefault();
+    if (AFF.busy) return;
+    AFF.busy = true; AFF.error = ''; AFF.fields = {}; render();
+    var v2 = AFF.values;
+    var req = login
+      ? post('/api/auth/login', {email: v2.email, password: v2.password})
+      : post('/api/auth/signup', {email: v2.email, password: v2.password,
+                                  password2: v2.password2, terms: !!v2.terms, affiliate: true});
+    req.then(function(x){
+      if (x.d.fields || x.d.error){
         AFF.busy = false;
-        if (d.code){ AFF.info = Object.assign({}, info, {code: d.code}); }
-        else AFF.error = d.error || 'Could not make your code. Try again.';
+        AFF.fields = x.d.fields || {};
+        AFF.error = x.d.error || '';
         render();
-      })['catch'](function(){
-        AFF.busy = false; AFF.error = 'Could not reach the server. Try again.'; render();
-      });
+        return;
+      }
+      AFF.busy = false;
+      makeCode({signedIn: true});
+    })['catch'](function(){
+      AFF.busy = false; AFF.error = 'Could not reach the server. Try again.'; render();
+    });
   };
-  acts.appendChild(join);
+  card.appendChild(form);
+  var sw = el('button', 'linkish', login ? 'New here? Sign up instead'
+                                         : 'Already have an account? Log in');
+  sw.type = 'button';
+  sw.onclick = function(){ AFF.mode = login ? 'signup' : 'login'; AFF.fields = {}; AFF.error = ''; render(); };
+  card.appendChild(sw);
+  var acts2 = el('div', 'gateacts');
+  acts2.appendChild(affBack());
+  card.appendChild(acts2);
+}
+
+function affBack(){
   var back = el('button', 'btn ghost wide', 'Back');
+  back.type = 'button';
   back.onclick = function(){ if (history.length > 1) history.back(); else location.href = '/'; };
-  acts.appendChild(back);
-  card.appendChild(acts);
+  return back;
+}
+
+/* Ask the server for this account's code, then show it. */
+function makeCode(info){
+  AFF.busy = true; AFF.error = ''; render();
+  fetch('/api/affiliate/join', {method: 'POST', credentials: 'same-origin'})
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      AFF.busy = false;
+      if (d.code){ AFF.info = Object.assign({}, info, {signedIn: true, code: d.code}); AFF.fresh = true; }
+      else AFF.error = d.error || 'Could not make your code. Try again.';
+      /* now signed in either way: ME should know, for Continue */
+      return fetch('/api/me', {credentials: 'same-origin'}).then(function(r){ return r.json(); })
+        .then(function(me){ if (me) ME = me; });
+    })['catch'](function(){ AFF.busy = false; AFF.error = 'Could not reach the server. Try again.'; })
+    .then(function(){ render(); });
 }
 
 /* The affiliate's own page: the code, the link, the money, the ideas. */
 function affiliateHome(card, code, aff){
   card.classList.add('affhome');
-  card.appendChild(el('h1', null, 'Your promo code'));
+  card.appendChild(el('h1', null, AFF.fresh ? 'Here is your promo code' : 'Your promo code'));
+  card.appendChild(authNotice('good', 'Save this code. We will email you a confirmation.'));
   card.appendChild(el('p', 'gatelede', 'Anyone who uses it gets ' + aff.discount +
     '% off their first payment. You earn ' + aff.share + '% of every payment they ' +
     'make, renewals included.'));
@@ -3273,6 +3352,9 @@ function affiliateHome(card, code, aff){
   var link = location.origin + '/?code=' + encodeURIComponent(code);
   card.appendChild(copyRow('Your code', code, 'big'));
   card.appendChild(copyRow('Your link — applies the code for them', link));
+  var top = el('button', 'btn wide affcontinue', 'Continue');
+  top.onclick = function(){ location.href = hasAccess() ? '/' : '/auth?pay=1'; };
+  card.appendChild(top);
 
   /* What one referral is worth, from the real prices. */
   var earn = el('div', 'affearn');
@@ -3342,10 +3424,12 @@ function affiliateHome(card, code, aff){
     'When you share, say you earn from your code (for example "#ad" or "I earn a ' +
     'commission") — it is required by law. Payouts are monthly; we will email you ' +
     'at your account address to set up how you get paid.'));
+  /* Continue: on to paying. Having a code is not access -- the study site
+     is for paid accounts only, affiliates included. */
   var acts = el('div', 'gateacts');
-  var home = el('button', 'btn ghost wide', 'Back to the site');
-  home.onclick = function(){ location.href = '/'; };
-  acts.appendChild(home);
+  var cont = el('button', 'btn wide', 'Continue');
+  cont.onclick = function(){ location.href = hasAccess() ? '/' : '/auth?pay=1'; };
+  acts.appendChild(cont);
   card.appendChild(acts);
 }
 

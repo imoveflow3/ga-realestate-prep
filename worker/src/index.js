@@ -174,7 +174,8 @@ export default {
       if (!env.STRIPE_SECRET_KEY) return json({ error: 'Payments are not set up yet.' }, 503);
       /* Their first name and two digits: JORDAN27. Tried a few times in case
          that exact code is already somebody's. */
-      const stem = (String(who.name || '').split(/\s+/)[0] || who.email.split('@')[0])
+      /* From their email address: jordan.smith@gmail.com -> JORDANSMIT27. */
+      const stem = String(who.email || '').split('@')[0]
         .toUpperCase().replace(/[^A-Z]/g, '').slice(0, 10) || 'STUDY';
       for (let i = 0; i < 6; i++) {
         const code = stem + String(10 + Math.floor(Math.random() * 90));
@@ -292,9 +293,14 @@ export default {
       const fields = {};
       const email = normalizeEmail(body.email);
       if (!email) fields.email = 'That does not look like an email address.';
-      const name = accounts.cleanName(body.name);
+      /* The affiliate sign-up asks only for email and password: the name
+         defaults to the part of the address before the @, and the phone is
+         optional. Everyone else gives both. */
+      const affiliate = body.affiliate === true;
+      const fromEmail = email ? email.split('@')[0] : '';
+      const name = accounts.cleanName(body.name || (affiliate ? fromEmail : ''));
       if (name.error) fields.name = name.error;
-      const phone = accounts.cleanPhone(body.phone, true);
+      const phone = accounts.cleanPhone(body.phone, !affiliate);
       if (phone.error) fields.phone = phone.error;
       const bad = password.problemWith(body.password);
       if (bad) fields.password = bad;
