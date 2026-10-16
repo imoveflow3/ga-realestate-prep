@@ -9,12 +9,15 @@
    and GMAIL_USER (the address) in wrangler.toml [vars].
 
    Resend is still used instead if RESEND_API_KEY is set (it needs a domain).
+   Without 2-Step Verification there are no app passwords; then a Google Apps
+   Script in the same account sends instead (MAIL_SCRIPT_URL / _SECRET).
    The socket module only exists on Cloudflare, so it is imported when a
    message is actually sent -- the tests, which never reach here, can run in
    Node. */
 
 export function emailConfigured(env) {
-  return !!(env.RESEND_API_KEY || (env.GMAIL_USER && env.GMAIL_APP_PASSWORD));
+  return !!(env.RESEND_API_KEY || (env.GMAIL_USER && env.GMAIL_APP_PASSWORD) ||
+            (env.MAIL_SCRIPT_URL && env.MAIL_SCRIPT_SECRET));
 }
 
 export async function sendMail(env, to, subject, text) {
@@ -28,7 +31,32 @@ export async function sendMail(env, to, subject, text) {
       return { error: 'email-send-failed' };
     }
   }
+  if (env.MAIL_SCRIPT_URL && env.MAIL_SCRIPT_SECRET) return sendScript(env, to, subject, text);
   return { error: 'email-not-configured' };
+}
+
+/* The no-2-Step-Verification route: a Google Apps Script web app running in
+   the site's Gmail account (worker/mail-script.gs) sends the message with
+   MailApp. It only acts on requests carrying the shared secret. Apps Script
+   answers a POST with a redirect to the result, which fetch follows. */
+async function sendScript(env, to, subject, text) {
+  try {
+    const res = await fetch(env.MAIL_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ secret: env.MAIL_SCRIPT_SECRET, to: safeAddress(to),
+                             subject, text,
+                             name: env.MAIL_FROM_NAME || 'Real Estate Exam Prep' }),
+      redirect: 'follow',
+    });
+    const out = (await res.text()).trim();
+    if (res.ok && out === 'ok') return {};
+    console.error('email: script said', res.status, out.slice(0, 200));
+    return { error: 'email-send-failed' };
+  } catch (e) {
+    console.error('email: script unreachable:', e.message);
+    return { error: 'email-send-failed' };
+  }
 }
 
 async function sendResend(env, to, subject, text) {
