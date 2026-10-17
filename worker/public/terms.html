@@ -2065,6 +2065,9 @@ button.btn.danger:hover:not(:disabled){background:#73271c; border-color:#73271c}
   display:grid; gap:var(--s5); margin-top:var(--s3);
   grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
 }
+/* A one-exam state has a single cell; stretched edge to edge it reads as a
+   banner rather than a figure, so hold it to the width of a pair. */
+.standgrid.one{ grid-template-columns:minmax(230px, 28rem); }
 .sc-top{display:flex; align-items:baseline; gap:var(--s2); margin-bottom:var(--s1)}
 .sc-name{font-family:var(--display); font-size:1.05rem; color:var(--ink)}
 .sc-of{font-size:.78rem; color:var(--ink-3)}
@@ -2276,5 +2279,5 @@ main:has(.statewrap)>section{max-width:none}
 <p><b>Not affiliated.</b> This site is not connected to, endorsed by, or approved by the Georgia Real Estate Commission, PSI, or any real estate school. It is not a substitute for the 75-hour pre-licence course Georgia requires.</p>
 <p><b>Access.</b> Access is intended to last indefinitely. If the site ever shuts down, you will be given notice and a way to export your progress. You can export it yourself at any time from Account settings, without asking.</p>
 <p><b>Who runs this.</b> Real Estate Exam Prep. Questions and complaints go to allrealwebsite@gmail.com, which is read by a person.</p>
-<p class="muted">Last updated 2026-10-16. <a href="/">Back to the home page</a>.</p></div>
+<p class="muted">Last updated 2026-10-17. <a href="/">Back to the home page</a>.</p></div>
 </main></body></html>

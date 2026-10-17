@@ -2030,6 +2030,9 @@ button.btn.danger:hover:not(:disabled){background:#73271c; border-color:#73271c}
   display:grid; gap:var(--s5); margin-top:var(--s3);
   grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
 }
+/* A one-exam state has a single cell; stretched edge to edge it reads as a
+   banner rather than a figure, so hold it to the width of a pair. */
+.standgrid.one{ grid-template-columns:minmax(230px, 28rem); }
 .sc-top{display:flex; align-items:baseline; gap:var(--s2); margin-bottom:var(--s1)}
 .sc-name{font-family:var(--display); font-size:1.05rem; color:var(--ink)}
 .sc-of{font-size:.78rem; color:var(--ink-3)}

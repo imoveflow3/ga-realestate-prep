@@ -92,6 +92,15 @@ var CURRENT = null;
 /* The size of the real exam, counted from the blueprint rather than typed
    into sentences. It was typed into sentences, the blueprint changed, and
    six different places went on claiming 132 for a 152-question exam. */
+/* What to call each group of material. Where the state scores two portions
+   these are the portions; where it sets one exam they are just how the
+   material is grouped for study, and must not be called portions. */
+function portionName(portion){
+  if (portion === 'comprehensive') return 'Comprehensive subtest';
+  if (portion === 'national') return SINGLE ? 'General practice' : 'National portion';
+  return STATE.name + (SINGLE ? ' law' : ' state portion');
+}
+
 function examScored(portion){
   var p = DATA.portions[portion];
   return (p && !p.practice_only) ? (p.scored || 0) : 0;
@@ -362,14 +371,15 @@ function renderHome(){
   var v = $('view-home');
   v.innerHTML =
     '<h1>Practice quiz</h1>' +
-    '<p class="sub">Pick a portion, choose how many questions, and go. Every question is ' +
+    '<p class="sub">Pick a section, choose how many questions, and go. Every question is ' +
     'explained the moment you answer it.</p>' +
     '<div class="card"><div class="row">' +
-      '<div><label for="portion">Portion</label><select id="portion">' +
-        '<option value="national">National (' + examScored('national') + ' of ' +
-          examTotal() + ' exam questions)</option>' +
-        '<option value="georgia">'+STATE.name+' state (' + examScored('georgia') + ' of ' +
-          examTotal() + ')</option>' +
+      '<div><label for="portion">' + (SINGLE ? 'Section' : 'Portion') +
+        '</label><select id="portion">' +
+        '<option value="national">' + portionName('national') + ' (' +
+          examScored('national') + ' of ' + examTotal() + ' exam questions)</option>' +
+        '<option value="georgia">' + portionName('georgia') + ' (' +
+          examScored('georgia') + ' of ' + examTotal() + ')</option>' +
         '<option value="mixed">Mixed, exam-weighted</option>' +
         '<option value="comprehensive">Comprehensive subtest (drill)</option></select></div>' +
       '<div><label for="topic">Topic</label><select id="topic"></select></div>' +
@@ -989,11 +999,15 @@ function renderToday(){
       : (pr.current >= PASS ? 'clearing ' + PASS_PCT : 'below ' + PASS_PCT)));
     return d;
   }
-  g.appendChild(portionMetric('National', r.national));
-  g.appendChild(portionMetric(STATE.name, r.georgia));
+  if (SINGLE){
+    g.appendChild(portionMetric('Whole exam', r));
+  } else {
+    g.appendChild(portionMetric('National', r.national));
+    g.appendChild(portionMetric(STATE.name, r.georgia));
+  }
   head.appendChild(g);
 
-  if (r.national.current !== null && r.georgia.current !== null &&
+  if (!SINGLE && r.national.current !== null && r.georgia.current !== null &&
       (r.national.current < PASS) !== (r.georgia.current < PASS)){
     var warn = el('div', 'callout trap');
     warn.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.92rem;line-height:1.55';
@@ -1393,8 +1407,8 @@ function renderVocab(){
   head.appendChild(row);
   box.appendChild(head);
 
-  var NAMES = {national: 'National portion', georgia: STATE.name + ' state portion',
-               comprehensive: 'Comprehensive subtest'};
+  var NAMES = {national: portionName('national'), georgia: portionName('georgia'),
+               comprehensive: portionName('comprehensive')};
   var rows = vocabTopics(D);
   ['national', 'georgia', 'comprehensive'].forEach(function(portion){
     var mine = rows.filter(function(r){ return r.portion === portion; });
@@ -1805,8 +1819,8 @@ function renderStudy(){
 
   box.appendChild(intro);
 
-  var NAMES = {national: 'National portion', georgia: STATE.name + ' state portion',
-               comprehensive: 'Comprehensive subtest'};
+  var NAMES = {national: portionName('national'), georgia: portionName('georgia'),
+               comprehensive: portionName('comprehensive')};
   ['national', 'georgia', 'comprehensive'].forEach(function(portion){
     var keys = Object.keys(DATA.study.topics).filter(function(k){
       return DATA.study.topics[k].portion === portion;
@@ -1997,8 +2011,7 @@ function renderStudyTopic(v, n){
   crumbs.appendChild(c1);
   crumbs.appendChild(el('span', 'sep', '/'));
   crumbs.appendChild(el('span', null,
-    n.portion === 'georgia' ? STATE.name + ' portion'
-      : (n.portion === 'comprehensive' ? 'Practice topics' : 'National portion')));
+    n.portion === 'comprehensive' ? 'Practice topics' : portionName(n.portion)));
   head.appendChild(crumbs);
 
   var hd = el('div', 'cardhead');
@@ -2434,19 +2447,23 @@ function statRow(cells){
 }
 
 /* ---- the one thing this page is for ----------------------------------
-   Georgia scores the two portions separately and needs 75% on each, so
-   "am I ready" is two questions, and an average of the two can sit above
-   75% while you fail. The tables below answered it by implication; this
-   says it. */
+   Most states score the two portions separately and need the mark on each,
+   so "am I ready" is two questions, and an average of the two can sit above
+   the line while you fail. The tables below answered it by implication;
+   this says it. Where the state sets a single exam there is only one
+   question to answer, and pretending otherwise would be a lie. */
 function standingCard(box){
   var r = readiness(D);
   var card = el('div', 'card standing');
-  card.appendChild(cardHead('Where you stand',
-                            STATE.name + ' needs ' + PASS_PCT + ' on each portion, separately'));
+  card.appendChild(cardHead('Where you stand', SINGLE
+    ? STATE.name + ' sits one exam of ' + examTotal() + ' questions; ' +
+      PASS_PCT + ' to pass'
+    : STATE.name + ' needs ' + PASS_PCT + ' on each portion, separately'));
 
-  var grid = el('div', 'standgrid');
-  [['National', r.national, examScored('national')],
-   [STATE.name,  r.georgia,  examScored('georgia')]].forEach(function(row){
+  var grid = el('div', 'standgrid' + (SINGLE ? ' one' : ''));
+  (SINGLE ? [['Whole exam', r, examTotal()]]
+          : [['National', r.national, examScored('national')],
+             [STATE.name,  r.georgia,  examScored('georgia')]]).forEach(function(row){
     var name = row[0], p = row[1], onExam = row[2];
     var cell = el('div', 'standcell');
     var top = el('div', 'sc-top');
@@ -2473,7 +2490,8 @@ function standingCard(box){
     cell.appendChild(track);
 
     cell.appendChild(el('div', 'sc-note',
-      val === null ? 'No questions answered on this portion yet.'
+      val === null ? (SINGLE ? 'Nothing answered yet.'
+                             : 'No questions answered on this portion yet.')
       : (val >= PASS ? 'Clearing the pass mark on recent questions.'
                      : 'Short of ' + PASS_PCT + ' by ' + Math.round((PASS - val) * 100) +
                        ' points on recent questions.')));
@@ -2482,7 +2500,20 @@ function standingCard(box){
   card.appendChild(grid);
 
   var verdict = el('p', 'standverdict');
-  if (r.national.current === null && r.georgia.current === null){
+  if (SINGLE){
+    /* One paper, one mark. The two halves are how the material is studied,
+       not how it is scored, so they are a breakdown and nothing more. */
+    var half = function(name, p){
+      return name + ' ' + (p.current === null ? 'not started' : pct(p.current));
+    };
+    verdict.textContent = (r.current === null)
+      ? 'Nothing answered yet. Take a quiz and this fills in.'
+      : (r.current >= PASS
+          ? 'Above the line on recent questions. Keep it there and widen your coverage.'
+          : 'Short of the pass mark on recent questions.') +
+        '  Of that: ' + half(STATE.name + ' law', r.georgia) + ', ' +
+        half('general practice', r.national) + '.';
+  } else if (r.national.current === null && r.georgia.current === null){
     verdict.textContent = 'Nothing answered yet. Take a quiz on each portion ' +
       'and this fills in.';
   } else if (r.national.current === null || r.georgia.current === null){
@@ -2557,9 +2588,7 @@ function renderDash(){
     if (r.portion !== lastPortion){
       lastPortion = r.portion;
       var head = el('tr', 'grouprow');
-      var cell = el('td', null, {national: 'National portion',
-                                 georgia: STATE.name + ' state portion',
-                                 comprehensive: 'Comprehensive subtest'}[r.portion]);
+      var cell = el('td', null, portionName(r.portion));
       cell.colSpan = 8;
       head.appendChild(cell);
       tt.appendChild(head);
@@ -3569,12 +3598,16 @@ function welcomeIntro(v){
   v.appendChild(s2);
 
   /* --------------------------------------------------------- blueprint */
-  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.',
-    'Georgia scores the two portions separately and you must clear 75% on each. ' +
-    'A strong average will not save a weak half, so this app tracks them apart.');
+  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.', SINGLE
+    ? STATE.name + ' sets one exam of ' + examTotal() + ' questions and needs ' +
+      PASS_PCT + ' overall. It is split below by how the material is studied, ' +
+      'not by how it is scored.'
+    : STATE.name + ' scores the two portions separately and you must clear ' +
+      PASS_PCT + ' on each. A strong average will not save a weak half, so this ' +
+      'app tracks them apart.');
   var bp = el('div', 'blueprint');
-  [['national', 'National portion', DATA.exam.national],
-   ['georgia', STATE.name + ' portion', DATA.exam.georgia]].forEach(function(r){
+  [['national', SINGLE ? 'General practice' : 'National portion', DATA.exam.national],
+   ['georgia', STATE.name + (SINGLE ? ' law' : ' portion'), DATA.exam.georgia]].forEach(function(r){
     var col = el('div', 'bpcol');
     var h = el('h3');
     h.appendChild(document.createTextNode(r[1]));
@@ -3738,7 +3771,7 @@ function welcomeWizard(v){
     /* counted from the blueprint, like every other portion size in the app --
        this was typed in as 80 and went stale when the national portion was
        corrected to 100 */
-    var h = el('div','eyebrow', (portion === 'georgia' ? STATE.name + ' portion' : 'National portion') +
+    var h = el('div','eyebrow', portionName(portion) +
       ' · ' + examScored(portion) + ' questions');
     h.style.marginTop = '.6rem';
     card.appendChild(h);

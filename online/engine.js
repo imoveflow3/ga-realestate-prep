@@ -14,7 +14,7 @@ var STATE = (function(){
   if (!pack) return {code: 'GA', name: 'Georgia', abbr: 'GA', regulator: 'GREC', pass: 0.75};
   applyStatePack(pack);
   return {code: pack.code, name: pack.name, abbr: pack.abbr,
-          regulator: pack.regulator, pass: pack.pass};
+          regulator: pack.regulator, pass: pack.pass, single: pack.single === true};
 })();
 /* The lessons repeat each topic's exam weight; the catalog is the one kept
    current, so the lessons take theirs from it. */
@@ -24,6 +24,11 @@ var STATE = (function(){
 });
 var PASS = STATE.pass;
 var PASS_PCT = Math.round(PASS * 100) + '%';
+/* Most states set two papers and score them apart. Six write one exam of
+   their own instead, and for those the app must stop talking about portions
+   being scored separately. The content is still kept in two banks -- state
+   law and general practice -- because that is how it is studied. */
+var SINGLE = STATE.single === true;
 
 function applyStatePack(pack){
   var gaTopic = function(k){ return k.indexOf('georgia/') === 0 || k === 'comp/grec-deep'; };
@@ -1029,11 +1034,20 @@ function readiness(d){
   var nat = readinessFor(d, ['national']);
   var ga = readinessFor(d, ['georgia']);
   var both = readinessFor(d, ['national', 'georgia']);
-  // you pass only if BOTH portions clear 75%, so the weaker one governs
-  var weakestCurrent = [nat.current, ga.current].filter(function(x){ return x !== null; });
-  var weakestProj = [nat.projected, ga.projected].filter(function(x){ return x !== null; });
   both.national = nat;
   both.georgia = ga;
+  /* A state like Florida sits one exam with one mark. There is no weaker
+     portion to be held back by: the whole paper is the score. */
+  if (SINGLE){
+    both.weakest = both.current;
+    both.weakestProjected = both.projected;
+    both.bothOnTrack = both.onTrack;
+    both.blocker = null;
+    return both;
+  }
+  // you pass only if BOTH portions clear the mark, so the weaker one governs
+  var weakestCurrent = [nat.current, ga.current].filter(function(x){ return x !== null; });
+  var weakestProj = [nat.projected, ga.projected].filter(function(x){ return x !== null; });
   both.weakest = weakestCurrent.length ? Math.min.apply(null, weakestCurrent) : null;
   both.weakestProjected = weakestProj.length ? Math.min.apply(null, weakestProj) : null;
   both.bothOnTrack = (nat.onTrack === true) && (ga.onTrack === true);
@@ -1251,7 +1265,8 @@ function buildPlan(d){
     var phase = phases[i], focus = [], tasks;
     if (phase === 'Mock exams & review'){
       focus = nat.slice(0,2).concat(ga.slice(0,2));
-      tasks = ['Take one FULL mock exam (' + scoredTotal() + ' questions, National + ' + STATE.name + ').',
+      tasks = ['Take one FULL mock exam (' + scoredTotal() + ' questions' +
+                 (SINGLE ? '' : ', National + ' + STATE.name) + ').',
                'Review every miss and write the rule in your own words.',
                'Run Weak-spot mode twice on whatever the mock exposes.',
                'Do one 15-question math sprint daily.'];
