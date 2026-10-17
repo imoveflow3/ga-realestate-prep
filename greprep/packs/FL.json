@@ -1,0 +1,3409 @@
+{
+ "abbr": "FL",
+ "bank": [
+  {
+   "answer": 1,
+   "choices": [
+    "Five members elected by licensees",
+    "Seven members appointed by the Governor",
+    "Nine members appointed by the Senate",
+    "Seven members elected statewide"
+   ],
+   "concept": "Florida composition",
+   "difficulty": 1,
+   "explain": "Appointed by the Governor and confirmed by the Senate (475.02(1)).",
+   "id": "fl-67ebd6f2",
+   "portion": "georgia",
+   "q": "The Florida Real Estate Commission consists of:",
+   "sub": "fl/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Two",
+    "Five",
+    "Four",
+    "Seven"
+   ],
+   "concept": "Florida composition",
+   "difficulty": 1,
+   "explain": "Plus one broker or sales associate with two years, and two consumer members (475.02(1)).",
+   "id": "fl-4fa80a13",
+   "portion": "georgia",
+   "q": "How many FREC members must be licensed brokers with five years of active licensure?",
+   "sub": "fl/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One",
+    "Two",
+    "Three",
+    "None"
+   ],
+   "concept": "Florida composition",
+   "difficulty": 2,
+   "explain": "The consumer members (475.02(1)).",
+   "id": "fl-5358ded3",
+   "portion": "georgia",
+   "q": "How many FREC members must never have been licensed as a broker or sales associate?",
+   "sub": "fl/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Four years",
+    "Two years",
+    "Three years",
+    "Six years"
+   ],
+   "concept": "Florida composition",
+   "difficulty": 2,
+   "explain": "475.02(2).",
+   "id": "fl-abaf23b2",
+   "portion": "georgia",
+   "q": "FREC members serve terms of:",
+   "sub": "fl/commission|Composition",
+   "subtopic": "Composition",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Chapter 475, Florida Statutes",
+    "Chapter 455, Florida Statutes",
+    "Chapter 61J2, Florida Administrative Code",
+    "The Florida Constitution"
+   ],
+   "concept": "Florida authority",
+   "difficulty": 2,
+   "explain": "Chapter 475 is the statute; 61J2 is the rules FREC adopts under it.",
+   "id": "fl-8b278195",
+   "portion": "georgia",
+   "q": "FREC's rules are found in:",
+   "sub": "fl/commission|Authority",
+   "subtopic": "Authority",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The Division of Real Estate within the DBPR",
+    "FREC itself",
+    "The Department of Revenue",
+    "The county clerk"
+   ],
+   "concept": "Florida authority",
+   "difficulty": 2,
+   "explain": "475.021.",
+   "id": "fl-bb09cb42",
+   "portion": "georgia",
+   "q": "The administrative work of licensing in Florida is carried out by:",
+   "sub": "fl/commission|Authority",
+   "subtopic": "Authority",
+   "topic": "fl/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "18 years old",
+    "17 years old",
+    "19 years old",
+    "21 years old"
+   ],
+   "concept": "Florida qualifications",
+   "difficulty": 1,
+   "explain": "475.17(1)(a).",
+   "id": "fl-05a9a38d",
+   "portion": "georgia",
+   "q": "To be licensed as a Florida sales associate an applicant must be at least:",
+   "sub": "fl/licensing|Qualifications",
+   "subtopic": "Qualifications",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A bachelor's degree",
+    "An associate degree",
+    "No educational credential",
+    "A high school diploma or its equivalent"
+   ],
+   "concept": "Florida qualifications",
+   "difficulty": 1,
+   "explain": "475.17(1)(a).",
+   "id": "fl-aa6a45b8",
+   "portion": "georgia",
+   "q": "Florida requires a sales associate applicant to hold:",
+   "sub": "fl/licensing|Qualifications",
+   "subtopic": "Qualifications",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "45 hours",
+    "72 hours",
+    "63 hours",
+    "14 hours"
+   ],
+   "concept": "Florida education",
+   "difficulty": 1,
+   "explain": "Course I, 63 classroom hours of 50 minutes (475.17(2); rule 61J2-3.008).",
+   "id": "fl-3b097dcf",
+   "portion": "georgia",
+   "q": "The Florida pre-licence course for a sales associate is:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "63 hours",
+    "72 hours",
+    "60 hours",
+    "45 hours"
+   ],
+   "concept": "Florida education",
+   "difficulty": 2,
+   "explain": "Course II (475.17(2)).",
+   "id": "fl-b5c79e56",
+   "portion": "georgia",
+   "q": "The Florida pre-licence course for a broker is:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "45 hours before the first renewal",
+    "14 hours every two years",
+    "63 hours before the first renewal",
+    "None"
+   ],
+   "concept": "Florida education",
+   "difficulty": 1,
+   "explain": "475.17(3); rule 61J2-3.020.",
+   "id": "fl-7cfcd96c",
+   "portion": "georgia",
+   "q": "Post-licence education for a Florida sales associate is:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "45 hours",
+    "60 hours",
+    "72 hours",
+    "14 hours"
+   ],
+   "concept": "Florida education",
+   "difficulty": 2,
+   "explain": "Rule 61J2-3.020(1)(b).",
+   "id": "fl-608d9d6d",
+   "portion": "georgia",
+   "q": "Post-licence education for a Florida broker is:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "30 hours each year",
+    "45 hours each biennium",
+    "14 classroom hours each biennium",
+    "8 hours each year"
+   ],
+   "concept": "Florida education",
+   "difficulty": 1,
+   "explain": "475.182(1)(a).",
+   "id": "fl-478b1872",
+   "portion": "georgia",
+   "q": "Continuing education in Florida, after the first renewal, is:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Is placed on probation",
+    "May complete it within 12 months",
+    "Is fined $500",
+    "Has a licence that becomes null and void"
+   ],
+   "concept": "Florida education",
+   "difficulty": 3,
+   "explain": "Post-licence education cannot be made up after the fact (475.17(3)).",
+   "id": "fl-8ee72794",
+   "portion": "georgia",
+   "q": "A sales associate who fails to complete the 45-hour post-licence course before the first renewal:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "All 14 hours",
+    "Seven hours each year",
+    "Nothing",
+    "Three classroom hours, once per renewal cycle"
+   ],
+   "concept": "Florida education",
+   "difficulty": 3,
+   "explain": "Notify the Division at least 7 days in advance (475.182(1)(b)).",
+   "id": "fl-0dcd0ee8",
+   "portion": "georgia",
+   "q": "A licensee may substitute attendance at a FREC legal agenda session for:",
+   "sub": "fl/licensing|Education",
+   "subtopic": "Education",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A person paid a commission per sale to sell an owner's homes to the public",
+    "A salaried on-site apartment leasing agent",
+    "An attorney at law acting within their duties",
+    "An owner selling their own house"
+   ],
+   "concept": "Florida exemptions",
+   "difficulty": 1,
+   "explain": "The owner exemption is lost when a commissioned salesperson deals with the public (475.011(2)).",
+   "id": "fl-0fff0901",
+   "portion": "georgia",
+   "q": "Which person needs a Florida real estate licence?",
+   "sub": "fl/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "One year or less",
+    "Any length",
+    "Five years or less",
+    "Month-to-month only"
+   ],
+   "concept": "Florida exemptions",
+   "difficulty": 2,
+   "explain": "475.011(5).",
+   "id": "fl-0fbe86d6",
+   "portion": "georgia",
+   "q": "A salaried manager of a cooperative apartment complex is exempt when arranging rentals of:",
+   "sub": "fl/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any brokerage act",
+    "Up to three transactions a year",
+    "Leasing only",
+    "Executing contracts or conveyances only"
+   ],
+   "concept": "Florida exemptions",
+   "difficulty": 2,
+   "explain": "475.011(1).",
+   "id": "fl-b8acd40c",
+   "portion": "georgia",
+   "q": "An attorney in fact is exempt under chapter 475 for:",
+   "sub": "fl/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Needs a sales associate licence",
+    "Is exempt, provided no extra compensation is paid",
+    "Needs a broker licence",
+    "Is exempt only for leases"
+   ],
+   "concept": "Florida exemptions",
+   "difficulty": 3,
+   "explain": "475.011(3).",
+   "id": "fl-c83a1958",
+   "portion": "georgia",
+   "q": "A salaried employee of a public utility who buys land for the utility within their employment:",
+   "sub": "fl/licensing|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At least 14 hours of a FREC-prescribed course",
+    "The 63-hour pre-licence course",
+    "45 hours of post-licence education",
+    "Nothing beyond the fee"
+   ],
+   "concept": "Florida inactive status",
+   "difficulty": 2,
+   "explain": "475.183(2)(a).",
+   "id": "fl-8f1f6eef",
+   "portion": "georgia",
+   "q": "A licence involuntarily inactive for 12 months or less may be reactivated by completing:",
+   "sub": "fl/licensing|Inactive status",
+   "subtopic": "Inactive status",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any broker who pays them",
+    "Only the broker registered as their employer",
+    "Two brokers at once with consent",
+    "Themselves"
+   ],
+   "concept": "Florida sponsorship",
+   "difficulty": 2,
+   "explain": "475.42(1)(b).",
+   "id": "fl-0cb33101",
+   "portion": "georgia",
+   "q": "A Florida sales associate may work for:",
+   "sub": "fl/licensing|Sponsorship",
+   "subtopic": "Sponsorship",
+   "topic": "fl/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A single agent",
+    "A dual agent",
+    "In no brokerage relationship",
+    "A transaction broker"
+   ],
+   "concept": "Florida presumption",
+   "difficulty": 1,
+   "explain": "475.278(1)(b).",
+   "id": "fl-e853691c",
+   "portion": "georgia",
+   "q": "A Florida licensee with no written agreement about representation is presumed to be:",
+   "sub": "fl/relationships|Presumption",
+   "subtopic": "Presumption",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed with written consent",
+    "Prohibited, whether disclosed or not",
+    "Allowed only in commercial deals",
+    "Required when one broker has both sides"
+   ],
+   "concept": "Florida dual agency",
+   "difficulty": 1,
+   "explain": "475.278(1)(a).",
+   "id": "fl-2c37de74",
+   "portion": "georgia",
+   "q": "Dual agency in Florida is:",
+   "sub": "fl/relationships|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Three",
+    "Seven",
+    "Nine",
+    "Five"
+   ],
+   "concept": "Florida transaction broker",
+   "difficulty": 1,
+   "explain": "Honesty and fairness, accounting, skill care and diligence, disclosure of material value facts, presenting offers, limited confidentiality, and any agreed extras.",
+   "id": "fl-2d4fb56a",
+   "portion": "georgia",
+   "q": "How many duties does a transaction broker owe?",
+   "sub": "fl/relationships|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Seven",
+    "Three",
+    "Nine",
+    "Six"
+   ],
+   "concept": "Florida single agent",
+   "difficulty": 1,
+   "explain": "475.278(3)(a).",
+   "id": "fl-63e84a8e",
+   "portion": "georgia",
+   "q": "How many duties does a single agent owe?",
+   "sub": "fl/relationships|Single agent",
+   "subtopic": "Single agent",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "No duties",
+    "Seven duties",
+    "Three duties",
+    "Nine duties"
+   ],
+   "concept": "Florida no brokerage relationship",
+   "difficulty": 1,
+   "explain": "Honesty and fairness, disclosure of known material value facts, and accounting for funds (475.278(4)(a)).",
+   "id": "fl-55fe4243",
+   "portion": "georgia",
+   "q": "A licensee with no brokerage relationship owes:",
+   "sub": "fl/relationships|No brokerage relationship",
+   "subtopic": "No brokerage relationship",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Accounting for all funds",
+    "Loyalty",
+    "Dealing honestly and fairly",
+    "Presenting all offers"
+   ],
+   "concept": "Florida single agent",
+   "difficulty": 2,
+   "explain": "Loyalty, obedience, confidentiality and full disclosure are the single agent's additions.",
+   "id": "fl-6f8e8126",
+   "portion": "georgia",
+   "q": "Which duty is owed by a single agent but NOT by a transaction broker?",
+   "sub": "fl/relationships|Single agent",
+   "subtopic": "Single agent",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A known defect that affects value",
+    "The asking price",
+    "The property's square footage",
+    "That the buyer will pay more than the written offer"
+   ],
+   "concept": "Florida confidentiality",
+   "difficulty": 2,
+   "explain": "475.278(2)(f). Condition information is always disclosed.",
+   "id": "fl-3d2f3dd2",
+   "portion": "georgia",
+   "q": "Limited confidentiality prevents a transaction broker from revealing:",
+   "sub": "fl/relationships|Confidentiality",
+   "subtopic": "Confidentiality",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must tell any buyer who asks",
+    "May reveal it after an offer is made",
+    "May not reveal the motivation without written waiver",
+    "Must report it to FREC"
+   ],
+   "concept": "Florida confidentiality",
+   "difficulty": 3,
+   "explain": "Motivation is covered by limited confidentiality (475.278(2)(f)).",
+   "id": "fl-046a66f6",
+   "portion": "georgia",
+   "q": "A seller tells a transaction broker they must sell quickly because of a divorce. The broker:",
+   "sub": "fl/relationships|Confidentiality",
+   "subtopic": "Confidentiality",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At closing",
+    "Within 3 days of the contract",
+    "Only on request",
+    "Before or at the time of the agreement, or before showing property, whichever is first"
+   ],
+   "concept": "Florida disclosure timing",
+   "difficulty": 2,
+   "explain": "475.278(3)(b)1.",
+   "id": "fl-f263b674",
+   "portion": "georgia",
+   "q": "The single agent notice must be given:",
+   "sub": "fl/relationships|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At the contract",
+    "At closing",
+    "Within 10 days",
+    "Before showing the property"
+   ],
+   "concept": "Florida disclosure timing",
+   "difficulty": 2,
+   "explain": "475.278(4)(b).",
+   "id": "fl-23bf8486",
+   "portion": "georgia",
+   "q": "The no-brokerage-relationship notice must be given:",
+   "sub": "fl/relationships|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The other party's consent",
+    "FREC approval",
+    "Nothing; it happens automatically",
+    "The principal's written consent"
+   ],
+   "concept": "Florida transition",
+   "difficulty": 2,
+   "explain": "475.278(3)(b)2.",
+   "id": "fl-e695827b",
+   "portion": "georgia",
+   "q": "To move from single agent to transaction broker, a licensee must first obtain:",
+   "sub": "fl/relationships|Transition",
+   "subtopic": "Transition",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any transaction where both parties consent",
+    "The transaction is non-residential and each party has assets of $1 million or more",
+    "The sale price exceeds $1 million",
+    "Both parties are represented by the same agent"
+   ],
+   "concept": "Florida designated sales associate",
+   "difficulty": 2,
+   "explain": "475.2755(1).",
+   "id": "fl-5562b587",
+   "portion": "georgia",
+   "q": "Designated sales associates may be used only when:",
+   "sub": "fl/relationships|Designated sales associate",
+   "subtopic": "Designated sales associate",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Single agents for their respective customers",
+    "Transaction brokers for both",
+    "Dual agents",
+    "Licensees with no brokerage relationship"
+   ],
+   "concept": "Florida designated sales associate",
+   "difficulty": 3,
+   "explain": "475.2755(1).",
+   "id": "fl-32e8b518",
+   "portion": "georgia",
+   "q": "Designated sales associates act as:",
+   "sub": "fl/relationships|Designated sales associate",
+   "subtopic": "Designated sales associate",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Dealing honestly and fairly",
+    "Loyalty",
+    "Obedience",
+    "Limited confidentiality"
+   ],
+   "concept": "Florida duties",
+   "difficulty": 3,
+   "explain": "Honesty and fairness, disclosure of known material value facts, and accounting appear in all three.",
+   "id": "fl-430bfdd8",
+   "portion": "georgia",
+   "q": "Which duty appears in ALL THREE Florida brokerage relationships?",
+   "sub": "fl/relationships|Duties",
+   "subtopic": "Duties",
+   "topic": "fl/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The end of the third business day",
+    "The end of the next business day",
+    "Within five calendar days",
+    "Closing"
+   ],
+   "concept": "Florida escrow",
+   "difficulty": 1,
+   "explain": "Rule 61J2-14.009.",
+   "id": "fl-29e9116b",
+   "portion": "georgia",
+   "q": "A Florida sales associate who receives an earnest money deposit must deliver it to the broker by:",
+   "sub": "fl/brokerage|Escrow",
+   "subtopic": "Escrow",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The end of the third business day after receipt",
+    "The same day",
+    "The end of the next business day",
+    "Within ten business days"
+   ],
+   "concept": "Florida escrow",
+   "difficulty": 1,
+   "explain": "'Immediately' is defined in rule 61J2-14.008(3).",
+   "id": "fl-19293479",
+   "portion": "georgia",
+   "q": "A Florida broker must place a deposit into escrow by:",
+   "sub": "fl/brokerage|Escrow",
+   "subtopic": "Escrow",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Saturday",
+    "Sunday",
+    "A legal holiday",
+    "Tuesday"
+   ],
+   "concept": "Florida escrow",
+   "difficulty": 2,
+   "explain": "Saturdays, Sundays and legal holidays are excluded.",
+   "id": "fl-da8e2079",
+   "portion": "georgia",
+   "q": "For escrow deadlines, which counts as a business day?",
+   "sub": "fl/brokerage|Escrow",
+   "subtopic": "Escrow",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$500",
+    "$5,000",
+    "$1,000",
+    "Nothing"
+   ],
+   "concept": "Florida escrow",
+   "difficulty": 2,
+   "explain": "Property management escrow accounts allow $5,000 (rule 61J2-14.010(2)).",
+   "id": "fl-a83eb4ec",
+   "portion": "georgia",
+   "q": "The most personal funds a broker may keep in a sales escrow account is:",
+   "sub": "fl/brokerage|Escrow",
+   "subtopic": "Escrow",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$5,000",
+    "$1,000",
+    "$10,000",
+    "Nothing"
+   ],
+   "concept": "Florida escrow",
+   "difficulty": 2,
+   "explain": "Rule 61J2-14.010(2).",
+   "id": "fl-8181ec25",
+   "portion": "georgia",
+   "q": "The most personal funds a broker may keep in a property management escrow account is:",
+   "sub": "fl/brokerage|Escrow",
+   "subtopic": "Escrow",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "3 business days",
+    "30 calendar days",
+    "10 business days",
+    "15 business days"
+   ],
+   "concept": "Florida escrow disputes",
+   "difficulty": 1,
+   "explain": "Rule 61J2-10.032(1)(a).",
+   "id": "fl-f3b6a1e6",
+   "portion": "georgia",
+   "q": "On conflicting demands for escrowed funds, the broker must notify FREC within:",
+   "sub": "fl/brokerage|Escrow disputes",
+   "subtopic": "Escrow disputes",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "15 business days",
+    "30 business days of the last demand",
+    "60 days",
+    "90 days"
+   ],
+   "concept": "Florida escrow disputes",
+   "difficulty": 2,
+   "explain": "Rule 61J2-10.032(1)(a).",
+   "id": "fl-cc141299",
+   "portion": "georgia",
+   "q": "After conflicting demands, the broker must institute a settlement procedure within:",
+   "sub": "fl/brokerage|Escrow disputes",
+   "subtopic": "Escrow disputes",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Requesting an escrow disbursement order",
+    "Interpleader",
+    "Keeping the deposit until the parties agree",
+    "Mediation with written consent"
+   ],
+   "concept": "Florida escrow disputes",
+   "difficulty": 2,
+   "explain": "The fourth is arbitration with the consent of all parties (475.25(1)(d)1.).",
+   "id": "fl-bb53b4d3",
+   "portion": "georgia",
+   "q": "Which is NOT one of Florida's four escrow settlement procedures?",
+   "sub": "fl/brokerage|Escrow disputes",
+   "subtopic": "Escrow disputes",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "90 days",
+    "30 days",
+    "6 months",
+    "One year"
+   ],
+   "concept": "Florida escrow disputes",
+   "difficulty": 3,
+   "explain": "475.25(1)(d)1.d.",
+   "id": "fl-d2256463",
+   "portion": "georgia",
+   "q": "Mediation of an escrow dispute must be completed within:",
+   "sub": "fl/brokerage|Escrow disputes",
+   "subtopic": "Escrow disputes",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is personally liable with no recourse",
+    "May be reimbursed from the Recovery Fund if they notified FREC and defended the suit",
+    "Loses their licence automatically",
+    "Must repay the buyer from escrow"
+   ],
+   "concept": "Florida escrow disputes",
+   "difficulty": 3,
+   "explain": "475.482(2).",
+   "id": "fl-2e755397",
+   "portion": "georgia",
+   "q": "A broker who disburses under an escrow disbursement order and is later sued:",
+   "sub": "fl/brokerage|Escrow disputes",
+   "subtopic": "Escrow disputes",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any leased commercial space",
+    "A registered mailing address",
+    "No office is required",
+    "At least one enclosed room in a building of stationary construction"
+   ],
+   "concept": "Florida office",
+   "difficulty": 1,
+   "explain": "475.22(1).",
+   "id": "fl-0c4b8d9b",
+   "portion": "georgia",
+   "q": "An active Florida broker must maintain an office consisting of:",
+   "sub": "fl/brokerage|Office",
+   "subtopic": "Office",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The licence number",
+    "The office hours",
+    "The broker's name and the words 'licensed real estate broker'",
+    "The names of all sales associates"
+   ],
+   "concept": "Florida office",
+   "difficulty": 2,
+   "explain": "475.22(1).",
+   "id": "fl-00240596",
+   "portion": "georgia",
+   "q": "The broker's entrance sign must contain at minimum:",
+   "sub": "fl/brokerage|Office",
+   "subtopic": "Office",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licensee's licence number",
+    "The licensed name of the brokerage firm",
+    "The broker's home address",
+    "The words 'equal housing'"
+   ],
+   "concept": "Florida advertising",
+   "difficulty": 1,
+   "explain": "Rule 61J2-10.025(1).",
+   "id": "fl-6260b76a",
+   "portion": "georgia",
+   "q": "Every Florida real estate advertisement must include:",
+   "sub": "fl/brokerage|Advertising",
+   "subtopic": "Advertising",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The first name only",
+    "The last name as registered with the Commission",
+    "Initials",
+    "A nickname is acceptable"
+   ],
+   "concept": "Florida advertising",
+   "difficulty": 2,
+   "explain": "Rule 61J2-10.025(2).",
+   "id": "fl-6b73b478",
+   "portion": "georgia",
+   "q": "If a licensee's personal name appears in an advertisement, it must include at least:",
+   "sub": "fl/brokerage|Advertising",
+   "subtopic": "Advertising",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the page footer only",
+    "On the home page only",
+    "Adjacent to, or immediately above or below, the point of contact information",
+    "Anywhere on the site"
+   ],
+   "concept": "Florida advertising",
+   "difficulty": 2,
+   "explain": "Rule 61J2-10.025(3)(a).",
+   "id": "fl-c58647db",
+   "portion": "georgia",
+   "q": "On a website, the brokerage firm's name must appear:",
+   "sub": "fl/brokerage|Advertising",
+   "subtopic": "Advertising",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Realty",
+    "Team",
+    "Group",
+    "The members' surnames"
+   ],
+   "concept": "Florida advertising",
+   "difficulty": 2,
+   "explain": "Rule 61J2-10.026(4) bars realty, properties, company, associates and similar words.",
+   "id": "fl-91fbadbd",
+   "portion": "georgia",
+   "q": "Which word may NOT appear in a Florida team name?",
+   "sub": "fl/brokerage|Advertising",
+   "subtopic": "Advertising",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Annually",
+    "At least monthly",
+    "At each renewal",
+    "Only on FREC request"
+   ],
+   "concept": "Florida advertising",
+   "difficulty": 3,
+   "explain": "Rule 61J2-10.026(3).",
+   "id": "fl-a352dcbc",
+   "portion": "georgia",
+   "q": "How often must a broker maintain a current written record of each team's members?",
+   "sub": "fl/brokerage|Advertising",
+   "subtopic": "Advertising",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Directly from the seller",
+    "From the title company",
+    "Only in the name of the employer, with the employer's express consent",
+    "From any party who offers it"
+   ],
+   "concept": "Florida commissions",
+   "difficulty": 1,
+   "explain": "475.42(1)(d).",
+   "id": "fl-43893001",
+   "portion": "georgia",
+   "q": "A Florida sales associate may collect money in a brokerage transaction:",
+   "sub": "fl/brokerage|Commissions",
+   "subtopic": "Commissions",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "May sue for the commission",
+    "May collect half",
+    "May collect if the seller agrees",
+    "Cannot enforce a contract for the commission"
+   ],
+   "concept": "Florida commissions",
+   "difficulty": 2,
+   "explain": "475.41.",
+   "id": "fl-32a2cab3",
+   "portion": "georgia",
+   "q": "An unlicensed person who negotiates a sale for a fee:",
+   "sub": "fl/brokerage|Commissions",
+   "subtopic": "Commissions",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted if disclosed",
+    "Illegal price fixing",
+    "Set by FREC",
+    "Required by the local board"
+   ],
+   "concept": "Florida commissions",
+   "difficulty": 2,
+   "explain": "An antitrust violation; rates are always negotiable.",
+   "id": "fl-e195300b",
+   "portion": "georgia",
+   "q": "Brokers in a city agree to charge the same commission rate. This is:",
+   "sub": "fl/brokerage|Commissions",
+   "subtopic": "Commissions",
+   "topic": "fl/brokerage"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A second-degree misdemeanour",
+    "A third-degree felony",
+    "A civil infraction",
+    "A first-degree felony"
+   ],
+   "concept": "Florida criminal",
+   "difficulty": 1,
+   "explain": "475.42(1)(a).",
+   "id": "fl-5757bc68",
+   "portion": "georgia",
+   "q": "Operating as a broker or sales associate in Florida without a valid current active licence is:",
+   "sub": "fl/violations|Criminal",
+   "subtopic": "Criminal",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$5,000 for each count",
+    "$1,000 for each count",
+    "$5,000 per case",
+    "$10,000 for each count"
+   ],
+   "concept": "Florida discipline",
+   "difficulty": 1,
+   "explain": "475.25(1).",
+   "id": "fl-196b4c4e",
+   "portion": "georgia",
+   "q": "The maximum administrative fine FREC may impose is:",
+   "sub": "fl/violations|Discipline",
+   "subtopic": "Discipline",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "10 years",
+    "2 years",
+    "5 years",
+    "Indefinitely"
+   ],
+   "concept": "Florida discipline",
+   "difficulty": 2,
+   "explain": "475.25(1).",
+   "id": "fl-cea65873",
+   "portion": "georgia",
+   "q": "The maximum period for which FREC may suspend a licence is:",
+   "sub": "fl/violations|Discipline",
+   "subtopic": "Discipline",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Probable cause",
+    "Legal sufficiency",
+    "A final order",
+    "Mediation"
+   ],
+   "concept": "Florida complaint process",
+   "difficulty": 2,
+   "explain": "Does it allege a violation of the law FREC enforces?",
+   "id": "fl-d4ce9033",
+   "portion": "georgia",
+   "q": "A complaint received by the DBPR is first reviewed for:",
+   "sub": "fl/violations|Complaint process",
+   "subtopic": "Complaint process",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "FREC itself",
+    "A circuit judge",
+    "An administrative law judge at DOAH",
+    "The probable cause panel"
+   ],
+   "concept": "Florida complaint process",
+   "difficulty": 2,
+   "explain": "Undisputed facts go to an informal hearing before FREC.",
+   "id": "fl-94c0c561",
+   "portion": "georgia",
+   "q": "A disciplinary hearing where the facts ARE disputed is heard by:",
+   "sub": "fl/violations|Complaint process",
+   "subtopic": "Complaint process",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The circuit court",
+    "The District Court of Appeal",
+    "The Florida Supreme Court",
+    "The DBPR secretary"
+   ],
+   "concept": "Florida complaint process",
+   "difficulty": 3,
+   "explain": "Final agency action is reviewed by the DCA.",
+   "id": "fl-1d4ba507",
+   "portion": "georgia",
+   "q": "An appeal from a FREC final order goes to:",
+   "sub": "fl/violations|Complaint process",
+   "subtopic": "Complaint process",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$25,000",
+    "$100,000",
+    "$50,000",
+    "$150,000"
+   ],
+   "concept": "Florida recovery fund",
+   "difficulty": 1,
+   "explain": "Regardless of the number of claimants or parcels (475.484(3)).",
+   "id": "fl-c712ef96",
+   "portion": "georgia",
+   "q": "The Recovery Fund pays at most, per transaction:",
+   "sub": "fl/violations|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$50,000",
+    "$100,000",
+    "$250,000",
+    "$150,000"
+   ],
+   "concept": "Florida recovery fund",
+   "difficulty": 2,
+   "explain": "475.484(4).",
+   "id": "fl-febe0097",
+   "portion": "georgia",
+   "q": "The Recovery Fund pays at most, against any one licensee:",
+   "sub": "fl/violations|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Actual damages",
+    "Compensatory damages",
+    "The unsatisfied part of a judgment",
+    "Attorney's fees and court costs"
+   ],
+   "concept": "Florida recovery fund",
+   "difficulty": 2,
+   "explain": "475.484(1)(a) limits payment to actual or compensatory damages.",
+   "id": "fl-27b32339",
+   "portion": "georgia",
+   "q": "Which may NOT be recovered from the Recovery Fund?",
+   "sub": "fl/violations|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Automatically suspended until the fund is repaid with interest",
+    "Revoked permanently",
+    "Unaffected",
+    "Placed on probation for one year"
+   ],
+   "concept": "Florida recovery fund",
+   "difficulty": 2,
+   "explain": "475.484(7); no further administrative action is needed.",
+   "id": "fl-bc38e21f",
+   "portion": "georgia",
+   "q": "When the Recovery Fund pays on a judgment against a licensee, that licence is:",
+   "sub": "fl/violations|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Is released from the obligation",
+    "Must reapply as a new licensee",
+    "Is fined instead",
+    "Still may not have the licence reinstated until the fund is repaid"
+   ],
+   "concept": "Florida recovery fund",
+   "difficulty": 3,
+   "explain": "475.484(7).",
+   "id": "fl-d1d226dd",
+   "portion": "georgia",
+   "q": "A licensee discharged in bankruptcy after the fund paid a claim:",
+   "sub": "fl/violations|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "fl/violations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Familial status",
+    "Occupation",
+    "Income level",
+    "Marital status"
+   ],
+   "concept": "Florida fair housing",
+   "difficulty": 1,
+   "explain": "Race, colour, religion, sex, national origin, disability and familial status.",
+   "id": "fl-86ff8d9d",
+   "portion": "georgia",
+   "q": "Which is a protected class under the federal Fair Housing Act?",
+   "sub": "fl/fedstate|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Steering",
+    "Redlining",
+    "Blockbusting",
+    "Puffing"
+   ],
+   "concept": "Florida fair housing",
+   "difficulty": 2,
+   "explain": "Prohibited under the Fair Housing Act.",
+   "id": "fl-e8bf9a95",
+   "portion": "georgia",
+   "q": "Telling an owner that people of a particular race are moving in, to induce a sale, is:",
+   "sub": "fl/fedstate|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "15 days of the tenancy ending",
+    "45 days",
+    "60 days"
+   ],
+   "concept": "Florida security deposits",
+   "difficulty": 1,
+   "explain": "83.49(3)(a).",
+   "id": "fl-c18261ac",
+   "portion": "georgia",
+   "q": "A Florida landlord with no claim on the deposit must return it within:",
+   "sub": "fl/fedstate|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "15 days",
+    "45 days",
+    "30 days of the tenancy ending",
+    "60 days"
+   ],
+   "concept": "Florida security deposits",
+   "difficulty": 1,
+   "explain": "By certified mail (83.49(3)(a)).",
+   "id": "fl-e1fe59d9",
+   "portion": "georgia",
+   "q": "To impose a claim on a security deposit, a Florida landlord must give written notice within:",
+   "sub": "fl/fedstate|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "7 days",
+    "30 days",
+    "60 days",
+    "15 days"
+   ],
+   "concept": "Florida security deposits",
+   "difficulty": 2,
+   "explain": "83.49(3)(a).",
+   "id": "fl-452362e0",
+   "portion": "georgia",
+   "q": "After receiving a landlord's notice of claim, the tenant must object in writing within:",
+   "sub": "fl/fedstate|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "May still claim within 60 days",
+    "Keeps the deposit",
+    "Forfeits the right to impose a claim on the deposit",
+    "Is fined by the state"
+   ],
+   "concept": "Florida security deposits",
+   "difficulty": 2,
+   "explain": "They may still sue separately for damages (83.49(3)(a)).",
+   "id": "fl-f7221f70",
+   "portion": "georgia",
+   "q": "A landlord who fails to give notice of a claim within 30 days:",
+   "sub": "fl/fedstate|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Fewer than ten units",
+    "Fewer than five individual dwelling units",
+    "Only single-family homes",
+    "Only condominiums"
+   ],
+   "concept": "Florida security deposits",
+   "difficulty": 3,
+   "explain": "83.49(2).",
+   "id": "fl-20c9a0fb",
+   "portion": "georgia",
+   "q": "The written notice of where a deposit is held need not be given by a landlord renting:",
+   "sub": "fl/fedstate|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "fl/fedstate"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Are known, materially affect value, and are not readily observable",
+    "Are visible on inspection",
+    "Cost more than $1,000 to repair",
+    "Any buyer asks about"
+   ],
+   "concept": "Florida known defects",
+   "difficulty": 1,
+   "explain": "Johnson v. Davis (Fla. 1985); echoed in 475.278.",
+   "id": "fl-d816c924",
+   "portion": "georgia",
+   "q": "A Florida seller of a home must disclose facts that:",
+   "sub": "fl/disclosures|Known defects",
+   "subtopic": "Known defects",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only a single agent",
+    "Every licensee, including one with no brokerage relationship",
+    "Only a transaction broker",
+    "Only the listing broker"
+   ],
+   "concept": "Florida known defects",
+   "difficulty": 2,
+   "explain": "The duty appears in all three lists in 475.278.",
+   "id": "fl-6010a8c9",
+   "portion": "georgia",
+   "q": "Which licensee owes the duty to disclose known material defects to a buyer?",
+   "sub": "fl/disclosures|Known defects",
+   "subtopic": "Known defects",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "On at least one document executed at or before the sales contract or rental agreement",
+    "Only on new construction",
+    "At closing",
+    "Only if the buyer asks"
+   ],
+   "concept": "Florida radon",
+   "difficulty": 1,
+   "explain": "404.056(5).",
+   "id": "fl-e3f052a1",
+   "portion": "georgia",
+   "q": "The Florida radon notice must appear:",
+   "sub": "fl/disclosures|Radon",
+   "subtopic": "Radon",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Property taxes never change",
+    "The seller pays all taxes",
+    "A change of ownership triggers reassessment and taxes may rise",
+    "Taxes are capped at 3% forever"
+   ],
+   "concept": "Florida property tax",
+   "difficulty": 2,
+   "explain": "689.261(1).",
+   "id": "fl-f1d0e1e9",
+   "portion": "georgia",
+   "q": "The property tax disclosure summary warns the buyer that:",
+   "sub": "fl/disclosures|Property tax",
+   "subtopic": "Property tax",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Void it any time within a year",
+    "Void the contract within 3 days of receiving it, or before closing, whichever is first",
+    "Sue for treble damages",
+    "Do nothing once the contract is signed"
+   ],
+   "concept": "Florida hoa",
+   "difficulty": 2,
+   "explain": "720.401(1)(c); the right cannot be waived and ends at closing.",
+   "id": "fl-01a2832d",
+   "portion": "georgia",
+   "q": "A buyer who did not receive the homeowners' association disclosure summary may:",
+   "sub": "fl/disclosures|HOA",
+   "subtopic": "HOA",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the appendix of the contract",
+    "Given at closing",
+    "In boldfaced conspicuous type immediately before the buyer's signature",
+    "Read aloud to the buyer"
+   ],
+   "concept": "Florida cdd",
+   "difficulty": 2,
+   "explain": "190.048.",
+   "id": "fl-c5958c92",
+   "portion": "georgia",
+   "q": "The community development district disclosure must be:",
+   "sub": "fl/disclosures|CDD",
+   "subtopic": "CDD",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Before 1988",
+    "Before 1968",
+    "Before 1978",
+    "Any age"
+   ],
+   "concept": "Florida lead paint",
+   "difficulty": 1,
+   "explain": "Residential property built before 1978.",
+   "id": "fl-022f8b14",
+   "portion": "georgia",
+   "q": "The federal lead-based paint disclosure applies to housing built:",
+   "sub": "fl/disclosures|Lead paint",
+   "subtopic": "Lead paint",
+   "topic": "fl/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "One acre",
+    "10 acres",
+    "Half an acre",
+    "160 acres"
+   ],
+   "concept": "Florida homestead",
+   "difficulty": 1,
+   "explain": "160 acres applies outside a municipality (Art. X, s. 4, Fla. Const.).",
+   "id": "fl-c69ec54f",
+   "portion": "georgia",
+   "q": "Florida homestead protection covers up to how much land inside a municipality?",
+   "sub": "fl/homestead|Homestead",
+   "subtopic": "Homestead",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Half an acre",
+    "100 acres",
+    "160 acres",
+    "200 acres"
+   ],
+   "concept": "Florida homestead",
+   "difficulty": 1,
+   "explain": "Art. X, s. 4, Fla. Const.",
+   "id": "fl-51e2f290",
+   "portion": "georgia",
+   "q": "Florida homestead protection covers up to how much land outside a municipality?",
+   "sub": "fl/homestead|Homestead",
+   "subtopic": "Homestead",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A credit card judgment",
+    "A medical bill judgment",
+    "An unsecured personal loan",
+    "A mortgage the owner signed"
+   ],
+   "concept": "Florida homestead",
+   "difficulty": 2,
+   "explain": "Mortgages, property taxes and construction liens survive the protection.",
+   "id": "fl-6fc5e2d5",
+   "portion": "georgia",
+   "q": "Which claim can still be enforced against a Florida homestead?",
+   "sub": "fl/homestead|Homestead",
+   "subtopic": "Homestead",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Permitted without limit",
+    "Permitted with the friend's consent",
+    "Restricted; the homestead cannot be freely devised",
+    "Permitted if recorded"
+   ],
+   "concept": "Florida homestead",
+   "difficulty": 3,
+   "explain": "Art. X, s. 4(c), Fla. Const.",
+   "id": "fl-6e627d46",
+   "portion": "georgia",
+   "q": "An owner with a spouse and a minor child wishes to leave the homestead to a friend by will. This is:",
+   "sub": "fl/homestead|Homestead",
+   "subtopic": "Homestead",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Tenants in common",
+    "Joint tenants without survivorship",
+    "Tenants by the entireties",
+    "Community property owners"
+   ],
+   "concept": "Florida co-ownership",
+   "difficulty": 1,
+   "explain": "Carries right of survivorship.",
+   "id": "fl-69763864",
+   "portion": "georgia",
+   "q": "A married Florida couple taking title together are presumed to hold as:",
+   "sub": "fl/homestead|Co-ownership",
+   "subtopic": "Co-ownership",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Tenants in common",
+    "Joint tenants",
+    "Tenants by the entireties",
+    "Partners"
+   ],
+   "concept": "Florida co-ownership",
+   "difficulty": 2,
+   "explain": "Survivorship must be expressly stated.",
+   "id": "fl-432bb903",
+   "portion": "georgia",
+   "q": "Co-owners who are not married and whose deed says nothing about survivorship hold as:",
+   "sub": "fl/homestead|Co-ownership",
+   "subtopic": "Co-ownership",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "7 years, taxes irrelevant",
+    "20 years of possession",
+    "7 years of possession with all taxes paid",
+    "10 years with a recorded deed"
+   ],
+   "concept": "Florida adverse possession",
+   "difficulty": 2,
+   "explain": "95.18.",
+   "id": "fl-8d54c350",
+   "portion": "georgia",
+   "q": "Adverse possession without colour of title in Florida requires:",
+   "sub": "fl/homestead|Adverse possession",
+   "subtopic": "Adverse possession",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "30 days",
+    "3 years",
+    "1 year after entering into possession",
+    "7 years"
+   ],
+   "concept": "Florida adverse possession",
+   "difficulty": 3,
+   "explain": "95.18(1)(a).",
+   "id": "fl-4076a62d",
+   "portion": "georgia",
+   "q": "A Florida adverse possessor must pay the outstanding taxes within:",
+   "sub": "fl/homestead|Adverse possession",
+   "subtopic": "Adverse possession",
+   "topic": "fl/homestead"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "35 cents per $100",
+    "70 cents per $100 of consideration",
+    "$1.00 per $1,000",
+    "2 mills"
+   ],
+   "concept": "Florida documentary stamps",
+   "difficulty": 1,
+   "explain": "201.02(1)(a).",
+   "id": "fl-19bf4fd0",
+   "portion": "georgia",
+   "q": "Florida documentary stamp tax on a deed is:",
+   "sub": "fl/taxes|Documentary stamps",
+   "subtopic": "Documentary stamps",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "70 cents per $100",
+    "35 cents per $100 of the debt",
+    "55 cents per $100",
+    "Nothing"
+   ],
+   "concept": "Florida documentary stamps",
+   "difficulty": 1,
+   "explain": "201.08(1)(a).",
+   "id": "fl-53ac2157",
+   "portion": "georgia",
+   "q": "Florida documentary stamp tax on a promissory note is:",
+   "sub": "fl/taxes|Documentary stamps",
+   "subtopic": "Documentary stamps",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$840",
+    "$1,200",
+    "$2,400",
+    "$1,680"
+   ],
+   "concept": "Florida documentary stamps",
+   "difficulty": 2,
+   "explain": "$240,000 / 100 = 2,400 hundreds; 2,400 x $0.70 = $1,680.",
+   "id": "fl-ef1fe326",
+   "portion": "georgia",
+   "q": "A home sells for $240,000 cash. The documentary stamp tax on the deed is:",
+   "sub": "fl/taxes|Documentary stamps",
+   "subtopic": "Documentary stamps",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "1,853, because any fraction of $100 is rounded up",
+    "1,852",
+    "1,852.5",
+    "1,850"
+   ],
+   "concept": "Florida documentary stamps",
+   "difficulty": 3,
+   "explain": "201.02 taxes each $100 or fractional part.",
+   "id": "fl-6084643d",
+   "portion": "georgia",
+   "q": "Consideration of $185,250 is taxed on how many $100 units?",
+   "sub": "fl/taxes|Documentary stamps",
+   "subtopic": "Documentary stamps",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$50,000",
+    "$75,000",
+    "$10,000",
+    "$25,000"
+   ],
+   "concept": "Florida homestead exemption",
+   "difficulty": 1,
+   "explain": "196.031(1)(a).",
+   "id": "fl-17ec7c04",
+   "portion": "georgia",
+   "q": "The first homestead exemption in Florida is:",
+   "sub": "fl/taxes|Homestead exemption",
+   "subtopic": "Homestead exemption",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "$25,000",
+    "$50,000",
+    "$75,000",
+    "$100,000"
+   ],
+   "concept": "Florida homestead exemption",
+   "difficulty": 2,
+   "explain": "196.031(1)(b).",
+   "id": "fl-cf0efde7",
+   "portion": "georgia",
+   "q": "The additional $25,000 homestead exemption applies to assessed value above:",
+   "sub": "fl/taxes|Homestead exemption",
+   "subtopic": "Homestead exemption",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "County levies",
+    "Municipal levies",
+    "Special district levies",
+    "School district levies"
+   ],
+   "concept": "Florida homestead exemption",
+   "difficulty": 2,
+   "explain": "196.031(1)(b).",
+   "id": "fl-fe67c90d",
+   "portion": "georgia",
+   "q": "The additional $25,000 homestead exemption does NOT apply to:",
+   "sub": "fl/taxes|Homestead exemption",
+   "subtopic": "Homestead exemption",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The closing date",
+    "1 January",
+    "1 July",
+    "The date of application"
+   ],
+   "concept": "Florida homestead exemption",
+   "difficulty": 2,
+   "explain": "Legal or beneficial title and permanent residence on 1 January (196.031(1)(a)).",
+   "id": "fl-6d6ea772",
+   "portion": "georgia",
+   "q": "Eligibility for the homestead exemption is judged as of:",
+   "sub": "fl/taxes|Homestead exemption",
+   "subtopic": "Homestead exemption",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A flat 3%",
+    "A flat 10%",
+    "The lower of 3% or the change in the CPI",
+    "The change in the CPI only"
+   ],
+   "concept": "Florida save our homes",
+   "difficulty": 2,
+   "explain": "193.155(1).",
+   "id": "fl-223258c0",
+   "portion": "georgia",
+   "q": "Save Our Homes caps the annual increase in a homestead's assessed value at:",
+   "sub": "fl/taxes|Save Our Homes",
+   "subtopic": "Save Our Homes",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The owner refinances",
+    "The owner improves the kitchen",
+    "The CPI exceeds 3%",
+    "Ownership changes, and the property is reassessed at just value"
+   ],
+   "concept": "Florida save our homes",
+   "difficulty": 3,
+   "explain": "Which is why the property tax disclosure warns buyers (193.155).",
+   "id": "fl-a6bf0825",
+   "portion": "georgia",
+   "q": "The Save Our Homes cap is lost when:",
+   "sub": "fl/taxes|Save Our Homes",
+   "subtopic": "Save Our Homes",
+   "topic": "fl/taxes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A variance",
+    "A special exception",
+    "A rezoning",
+    "A nonconforming use"
+   ],
+   "concept": "Florida zoning",
+   "difficulty": 1,
+   "explain": "A special exception is a use the code already allows under conditions.",
+   "id": "fl-c7732d52",
+   "portion": "georgia",
+   "q": "Permission to build closer to a boundary than the setback allows, because of a hardship, is:",
+   "sub": "fl/planning|Zoning",
+   "subtopic": "Zoning",
+   "topic": "fl/planning"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A variance",
+    "A special exception",
+    "An illegal use",
+    "A nonconforming use"
+   ],
+   "concept": "Florida zoning",
+   "difficulty": 2,
+   "explain": "Commonly called grandfathered.",
+   "id": "fl-3c474d6a",
+   "portion": "georgia",
+   "q": "A use that was lawful before the zoning changed and may continue is:",
+   "sub": "fl/planning|Zoning",
+   "subtopic": "Zoning",
+   "topic": "fl/planning"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The state building code only",
+    "The local comprehensive plan",
+    "The county budget",
+    "The MLS rules"
+   ],
+   "concept": "Florida planning",
+   "difficulty": 2,
+   "explain": "Chapter 163, part II.",
+   "id": "fl-31752fa4",
+   "portion": "georgia",
+   "q": "Florida development must be consistent with:",
+   "sub": "fl/planning|Planning",
+   "subtopic": "Planning",
+   "topic": "fl/planning"
+  }
+ ],
+ "code": "FL",
+ "diffs": {
+  "national/agency": [
+   "Florida bans dual agency. Every licensee is PRESUMED to be a transaction broker unless a single agent or no-brokerage relationship is put in writing (475.278).",
+   "Transaction broker: 7 duties, including limited confidentiality. Single agent: 9. No brokerage relationship: 3."
+  ],
+  "national/contracts": [
+   "Florida licensees are not required to use state-promulgated contract forms, but a licensee who drafts terms beyond filling in blanks risks the unauthorised practice of law."
+  ],
+  "national/disclosures": [
+   "A Florida seller of residential property must disclose known facts that materially affect value and are not readily observable (Johnson v. Davis, Fla. 1985).",
+   "Florida contracts also carry radon, property tax, homeowners' association and community development district notices (ss. 404.056, 689.261, 720.401, 190.048)."
+  ],
+  "national/financing": [
+   "Florida is a LIEN THEORY state: a mortgage is a specific lien, not a conveyance of legal title or the right of possession (s. 697.02).",
+   "All Florida mortgages are foreclosed in equity - judicially, through the court, tried without a jury (s. 702.01)."
+  ],
+  "national/ownership": [
+   "Florida homestead is protected from most creditors: up to half an acre inside a municipality, 160 acres outside one (Art. X, s. 4, Fla. Const.).",
+   "Married couples take title as TENANTS BY THE ENTIRETIES, with survivorship and protection from one spouse's separate creditors."
+  ],
+  "national/practice": [
+   "Escrow: a sales associate hands a deposit to the broker by the end of the NEXT business day; the broker deposits it by the end of the THIRD (rules 61J2-14.009, -14.008).",
+   "Every advertisement must carry the licensed name of the brokerage firm, and online it must sit beside the point of contact information (rule 61J2-10.025)."
+  ],
+  "national/transfer": [
+   "Adverse possession without colour of title takes 7 years AND requires the claimant to have paid all taxes within a year of entering possession (s. 95.18).",
+   "Documentary stamp tax on the deed is 70 cents per $100 of consideration; on a note or mortgage, 35 cents per $100 (ss. 201.02, 201.08)."
+  ]
+ },
+ "name": "Florida",
+ "pass": 0.75,
+ "portions": {
+  "georgia": {
+   "blurb": "Chapter 475, FREC's rules, and the Florida property law on the outline.",
+   "minutes": 92,
+   "name": "Florida law",
+   "scored": 44
+  },
+  "national": {
+   "blurb": "Principles, practice and the maths, as Florida tests them.",
+   "minutes": 118,
+   "name": "General practice",
+   "scored": 56
+  }
+ },
+ "regulator": "FREC",
+ "single": true,
+ "sources": [
+  {
+   "by": "Florida Real Estate Commission",
+   "name": "Florida Real Estate Law Book (ch. 475 F.S. and ch. 61J2 F.A.C.)",
+   "note": "The Commission's own compilation of the licence law and its rules. Every licensing, agency, escrow and discipline rule in these notes was read from it.",
+   "url": "https://www2.myfloridalicense.com/servop/testing/documents/FREC_printable_LawBook.pdf"
+  },
+  {
+   "by": "Florida Legislature",
+   "name": "Chapter 475, Part I, Florida Statutes",
+   "note": "The real estate licence law itself, current text.",
+   "url": "https://www.flsenate.gov/Laws/Statutes/2026/Chapter475/All"
+  },
+  {
+   "by": "Florida Legislature",
+   "name": "Florida Statutes: ch. 83, 95, 190, 193, 196, 201, 697, 702, 720",
+   "note": "Leases, adverse possession, CDD and HOA disclosure, assessments, homestead exemption, documentary stamps, mortgages and foreclosure.",
+   "url": "https://www.flsenate.gov/Laws/Statutes"
+  },
+  {
+   "by": "Florida DBPR",
+   "name": "Candidate Information Booklet, Sales Associate Examination",
+   "note": "The blueprint: 100 items, three and a half hours, and the nineteen content areas with their weights.",
+   "url": "https://www2.myfloridalicense.com/servop/testing/documents/RE_sales_cibs.pdf"
+  }
+ ],
+ "study": {
+  "fl/brokerage": {
+   "blurb": "Offices, advertising, escrow deadlines, commissions, business entities.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Associate by Tuesday; the broker's clock runs from receipt, counting only business days.",
+     "s": "A sales associate takes a cheque on Friday. Monday is a legal holiday.",
+     "t": "A Friday deposit",
+     "w": [
+      "The associate must deliver it to the broker by the end of the next business day: Tuesday.",
+      "The broker then has until the end of the third business day after receipt."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage activities & procedures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Any commercial space over 200 sq ft",
+        "A home office only",
+        "At least one enclosed room in a building of stationary construction"
+       ],
+       "q": "A Florida broker's office must be:",
+       "why": "475.22(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The broker's name and the words 'licensed real estate broker'",
+        "The broker's licence number",
+        "The office hours"
+       ],
+       "q": "The entrance sign must contain at minimum:",
+       "why": "475.22(1)."
+      }
+     ],
+     "h": "Offices and signs (475.22)",
+     "l": [
+      "Each ACTIVE broker must maintain an office of at least ONE ENCLOSED ROOM in a building of stationary construction.",
+      "A sign at the entrance of the principal office and each branch office, readable by anyone about to enter.",
+      "The sign carries the broker's name, the trade name if any, and at minimum the words 'licensed real estate broker' or 'lic. real estate broker'.",
+      "A sales associate does not register an office; the associate works from the broker's."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The licensed name of the brokerage firm",
+        "The licensee's licence number",
+        "The broker's home address"
+       ],
+       "q": "Every Florida real estate advertisement must include:",
+       "why": "Rule 61J2-10.025(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Team",
+        "Group",
+        "Realty"
+       ],
+       "q": "Which may NOT appear in a team name?",
+       "why": "Rule 61J2-10.026(4)."
+      }
+     ],
+     "h": "Advertising (rule 61J2-10.025 and 61J2-10.026)",
+     "l": [
+      "Every advertisement must be in a way that a reasonable person would know they are dealing with a licensee, and must include the LICENSED NAME OF THE BROKERAGE FIRM.",
+      "No advert may be fraudulent, false, deceptive or misleading.",
+      "If the licensee's personal name appears, at least the LAST NAME must be used as registered with the Commission.",
+      "On the internet, the brokerage firm name sits ADJACENT TO, or immediately above or below, the point of contact information - any address, email, telephone or fax by which to reach the firm or licensee.",
+      "TEAM names may include 'team' or 'group', but NOT agency, associates, brokerage, brokers, company, corporation, Corp., Inc., LLC, LP, LLP, partnership, properties, property, real estate, realty, or anything similar.",
+      "Each team files a designated licensee with the broker who is responsible for advert compliance, and the broker keeps a current written record of team members at least monthly."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The end of the third business day",
+        "The end of the next business day",
+        "Within five calendar days"
+       ],
+       "q": "A sales associate must deliver an earnest money deposit to the broker by:",
+       "why": "Rule 61J2-14.009."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The same day",
+        "Within ten business days",
+        "The end of the third business day after receipt"
+       ],
+       "q": "The broker must place it in escrow by:",
+       "why": "Rule 61J2-14.008(3)."
+      }
+     ],
+     "h": "Escrow: the clock",
+     "l": [
+      "A SALES ASSOCIATE who receives a deposit must deliver it to the broker by the END OF THE NEXT BUSINESS DAY after receipt (rule 61J2-14.009).",
+      "A BROKER must place it in escrow 'immediately', which the rule defines as no later than the END OF THE THIRD BUSINESS DAY after receipt (rule 61J2-14.008(3)).",
+      "Saturdays, Sundays and legal holidays are NOT business days.",
+      "Receipt by a sales associate counts as receipt by the broker for the broker's three-day clock.",
+      "The broker must be a SIGNATORY on all escrow accounts."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "3 business days",
+        "30 calendar days",
+        "15 business days"
+       ],
+       "q": "On conflicting demands, the broker must notify FREC within:",
+       "why": "Rule 61J2-10.032(1)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "30 business days of the last demand",
+        "15 business days",
+        "90 days"
+       ],
+       "q": "A settlement procedure must be started within:",
+       "why": "Rule 61J2-10.032(1)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Up to $1,000",
+        "Up to $5,000",
+        "None at all"
+       ],
+       "q": "Personal funds allowed in a sales escrow account:",
+       "why": "Property management accounts allow $5,000."
+      }
+     ],
+     "h": "Escrow: personal funds and disputes",
+     "l": [
+      "A broker may keep up to $1,000 of personal or brokerage funds in each SALES escrow account, and up to $5,000 in each PROPERTY MANAGEMENT escrow account (rule 61J2-14.010(2)). Anything above that is commingling.",
+      "On CONFLICTING DEMANDS, or a GOOD FAITH DOUBT about who is entitled to the money, the broker must notify FREC in writing within 15 BUSINESS DAYS, and institute a settlement procedure within 30 BUSINESS DAYS (rule 61J2-10.032).",
+      "The four settlement procedures (475.25(1)(d)1.): request an ESCROW DISBURSEMENT ORDER from FREC; submit to ARBITRATION with the consent of all parties; seek court adjudication by INTERPLEADER; or submit to MEDIATION with the written consent of all parties, which must finish within 90 days.",
+      "A broker who disburses in compliance with an EDO and is then sued may be reimbursed from the Recovery Fund - but only if the broker notified the Commission and diligently defended the action (475.482(2))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Only the registered employer",
+        "The seller directly",
+        "The title company"
+       ],
+       "q": "A Florida sales associate may be paid by:",
+       "why": "475.42(1)(d)."
+      }
+     ],
+     "h": "Commissions and who may be paid",
+     "l": [
+      "A SALES ASSOCIATE may collect money only in the NAME OF THE EMPLOYER and with the employer's express consent, and may sue for a commission only against the registered employer (475.42(1)(d)).",
+      "A person who is not licensed cannot enforce a contract for a commission (475.41).",
+      "Commission rates are set by agreement, never by law or by agreement among competitors - price fixing is an antitrust violation."
+     ]
+    }
+   ],
+   "summary": "The biggest slice of the exam. Offices and signs, what every advert must say, and above all the escrow clock: next business day for a sales associate, third business day for a broker, 15 and 30 business days when a deposit is in dispute.",
+   "topic": "fl/brokerage",
+   "traps": [
+    "Next business day for the associate, third business day for the broker. Weekends and holidays do not count.",
+    "15 business days to tell FREC, 30 business days to start a procedure.",
+    "$1,000 sales escrow, $5,000 property management escrow.",
+    "Every advert carries the BROKERAGE firm's licensed name - not the team's, not just the agent's.",
+    "A team name may not contain 'realty', 'properties' or 'company'."
+   ],
+   "vocab": [
+    [
+     "Commingling",
+     "Mixing escrow money with the broker's own beyond the permitted amount."
+    ],
+    [
+     "Conversion",
+     "Using escrow money for the broker's own purposes."
+    ],
+    [
+     "EDO",
+     "Escrow Disbursement Order, FREC's ruling on who gets a disputed deposit."
+    ],
+    [
+     "Interpleader",
+     "A court action asking a judge to decide who is entitled to held funds."
+    ],
+    [
+     "Good faith doubt",
+     "The broker's genuine uncertainty about who is entitled to the deposit."
+    ],
+    [
+     "Point of contact information",
+     "Any way to reach the firm; the brokerage name must sit beside it online."
+    ]
+   ]
+  },
+  "fl/commission": {
+   "blurb": "The Commission, the Division, and where their authority comes from.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [],
+   "ga": [],
+   "label": "FREC & the DBPR",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Five",
+        "Nine",
+        "Seven"
+       ],
+       "q": "FREC has how many members?",
+       "why": "Four brokers, one broker or sales associate, two consumer members."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Two",
+        "One",
+        "Three"
+       ],
+       "q": "How many FREC members have never been licensed?",
+       "why": "475.02(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "5 years",
+        "2 years",
+        "10 years"
+       ],
+       "q": "A broker member must have held an active licence for the preceding:",
+       "why": "The fifth member needs only 2 years."
+      }
+     ],
+     "h": "The Florida Real Estate Commission (475.02)",
+     "l": [
+      "FOUR must be licensed brokers who have held an ACTIVE licence for the 5 years before appointment.",
+      "ONE must be a licensed broker OR sales associate who has held an active licence for the 2 years before appointment.",
+      "TWO must be people who are not, and never have been, brokers or sales associates - the consumer members.",
+      "At least one member must be 60 years of age or older.",
+      "Terms are FOUR years."
+     ],
+     "p": [
+      "FREC sits inside the Department of Business and Professional Regulation. It has SEVEN members appointed by the Governor and confirmed by the Senate:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "FREC's rules",
+        "The statutes passed by the Legislature",
+        "Federal regulations"
+       ],
+       "q": "Chapter 61J2 of the Florida Administrative Code holds:",
+       "why": "The statute is chapter 475; the rules are 61J2."
+      }
+     ],
+     "h": "Who does what",
+     "l": [
+      "FREC adopts rules (chapter 61J2, Florida Administrative Code), decides questions of practice, and disciplines licensees (475.05).",
+      "The DIVISION OF REAL ESTATE, inside the DBPR, does the administration: applications, records, and investigations (475.021).",
+      "The DEPARTMENT issues and renews licences; the Commission sets the standards they are issued against."
+     ]
+    }
+   ],
+   "summary": "Seven people appointed by the Governor run real estate licensing in Florida. Learn the make-up of the Commission and the difference between FREC, which makes the rules, and the Department, which runs the office.",
+   "topic": "fl/commission",
+   "traps": [
+    "Seven members, not five or nine. 4 + 1 + 2 = 7.",
+    "The Legislature writes chapter 475. FREC writes chapter 61J2.",
+    "The Governor appoints; the Senate confirms."
+   ],
+   "vocab": [
+    [
+     "FREC",
+     "Florida Real Estate Commission, the seven-member regulator."
+    ],
+    [
+     "DBPR",
+     "Department of Business and Professional Regulation."
+    ],
+    [
+     "DRE",
+     "Division of Real Estate, the administrative arm inside DBPR."
+    ],
+    [
+     "Chapter 475",
+     "The Florida real estate licence law."
+    ],
+    [
+     "Chapter 61J2",
+     "FREC's administrative rules."
+    ]
+   ]
+  },
+  "fl/disclosures": {
+   "blurb": "Radon, property tax, homeowners' association, CDD, and known defects.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Florida mandatory disclosures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Is visible from the street",
+        "Cost more than $500 to repair",
+        "Materially affects value and is not readily observable"
+       ],
+       "q": "A seller must disclose a known defect when it:",
+       "why": "Johnson v. Davis; echoed in 475.278."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only a single agent",
+        "All of them, including one with no brokerage relationship",
+        "Only a transaction broker"
+       ],
+       "q": "Which licensee owes the duty to disclose known material defects?",
+       "why": "It is in all three duty lists."
+      }
+     ],
+     "h": "Known defects",
+     "p": [
+      "Under Florida Supreme Court case law (Johnson v. Davis, 1985), a seller of residential property must disclose facts KNOWN to the seller that MATERIALLY AFFECT THE VALUE of the property and are NOT READILY OBSERVABLE to the buyer. The same standard appears in the licensee's duties in 475.278 for every brokerage relationship, including no brokerage relationship."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Sue for treble damages",
+        "Void the contract within 3 days of receiving it, or before closing",
+        "Do nothing"
+       ],
+       "q": "A buyer who never received the HOA disclosure summary may:",
+       "why": "720.401(1)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "On at least one document at or before the contract",
+        "Only on rentals",
+        "At closing"
+       ],
+       "q": "The radon notice must appear:",
+       "why": "404.056(5)."
+      }
+     ],
+     "h": "The notices a contract carries",
+     "l": [
+      "RADON GAS (404.056(5)): the statutory radon paragraph must appear on at least one document executed at or before the contract for sale, or the rental agreement.",
+      "PROPERTY TAX (689.261): a disclosure summary at or before execution of the contract, warning the buyer not to rely on the seller's current taxes because a change of ownership triggers reassessment.",
+      "HOMEOWNERS' ASSOCIATION (720.401): a disclosure summary BEFORE the contract is signed. If it is not given, the buyer may VOID the contract within 3 DAYS of receiving it or before closing, whichever comes first. The right cannot be waived and ends at closing.",
+      "COMMUNITY DEVELOPMENT DISTRICT (190.048): a boldfaced, conspicuous notice immediately above the buyer's signature, warning that the district may levy taxes and assessments.",
+      "Federal LEAD-BASED PAINT disclosure applies to housing built before 1978."
+     ]
+    }
+   ],
+   "summary": "Florida stacks mandatory notices onto residential contracts: radon, property taxes, homeowners' association, community development district. Plus the duty every Florida seller has to disclose known defects that a buyer cannot see.",
+   "topic": "fl/disclosures",
+   "traps": [
+    "Johnson v. Davis is about RESIDENTIAL property and KNOWN, non-observable defects affecting value.",
+    "The HOA right to void is 3 days from receiving the summary, and it dies at closing.",
+    "Radon goes on sales AND leases.",
+    "The property-tax summary exists because reassessment on sale often raises the bill sharply."
+   ],
+   "vocab": [
+    [
+     "Johnson v. Davis",
+     "The 1985 case creating Florida's residential seller disclosure duty."
+    ],
+    [
+     "Readily observable",
+     "Visible or obvious to a buyer; such facts need no disclosure."
+    ],
+    [
+     "CDD",
+     "Community Development District, which can levy its own assessments."
+    ],
+    [
+     "Disclosure summary",
+     "The statutory notice given before a contract is signed."
+    ]
+   ]
+  },
+  "fl/fedstate": {
+   "blurb": "Fair housing, and the Florida Residential Landlord and Tenant Act.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [
+    {
+     "k": "The landlord forfeits the claim on the deposit and must return it, though they may still sue separately for the damage.",
+     "s": "A tenant leaves on 1 June having caused $600 of damage. The landlord sends nothing until 10 July.",
+     "t": "The silent landlord",
+     "w": [
+      "Notice of a claim was due within 30 days, by 1 July.",
+      "The landlord missed it."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Federal & Florida laws",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Familial status",
+        "Occupation",
+        "Income level"
+       ],
+       "q": "Which is a protected class under the federal Fair Housing Act?",
+       "why": "Race, colour, religion, sex, national origin, disability and familial status."
+      }
+     ],
+     "h": "Fair housing",
+     "l": [
+      "The federal Fair Housing Act protects race, colour, religion, sex, national origin, disability and familial status.",
+      "Florida's Fair Housing Act mirrors the federal classes.",
+      "Steering, blockbusting and redlining are prohibited, and so is refusing a reasonable accommodation or modification for a disability."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "15 days",
+        "30 days",
+        "60 days"
+       ],
+       "q": "A landlord with no claim must return the deposit within:",
+       "why": "83.49(3)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "15 days",
+        "45 days",
+        "30 days"
+       ],
+       "q": "To claim against the deposit, the landlord must give written notice within:",
+       "why": "By certified mail."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "May still claim within 60 days",
+        "Forfeits the right to impose a claim on the deposit",
+        "Keeps the whole deposit"
+       ],
+       "q": "A landlord who misses the 30-day deadline:",
+       "why": "83.49(3)(a)."
+      }
+     ],
+     "h": "Security deposits (83.49)",
+     "l": [
+      "A landlord holds the deposit in a separate Florida account - non-interest-bearing, or interest-bearing paying the tenant at least 75% of the average annualised rate or 5% simple interest - or posts a surety bond.",
+      "The landlord may not commingle deposits with their own funds.",
+      "Written notice of how and where the deposit is held: in the lease, or within 30 DAYS of receiving it. This does not apply to a landlord renting fewer than five units.",
+      "NO CLAIM on the deposit: return it within 15 DAYS of the tenancy ending.",
+      "CLAIM on the deposit: send written notice by certified mail within 30 DAYS of the tenancy ending, stating the amount and the reason.",
+      "The tenant then has 15 DAYS from receiving that notice to OBJECT in writing.",
+      "A landlord who misses the 30-day notice FORFEITS the right to claim against the deposit."
+     ]
+    }
+   ],
+   "summary": "The federal fair housing rules you already know, plus Florida's own landlord and tenant deadlines: 15 days to return a deposit, 30 days to claim against it, and 15 days for the tenant to object.",
+   "topic": "fl/fedstate",
+   "traps": [
+    "15 / 30 / 15: return in 15, claim in 30, tenant objects within 15.",
+    "The deposit-notice rule does not bind a landlord with fewer than five units.",
+    "Missing the claim deadline does not delay the claim - it destroys it."
+   ],
+   "vocab": [
+    [
+     "Steering",
+     "Directing people toward or away from areas based on a protected class."
+    ],
+    [
+     "Blockbusting",
+     "Inducing sales by suggesting people of a protected class are moving in."
+    ],
+    [
+     "Redlining",
+     "Refusing to lend or insure in an area based on its make-up."
+    ],
+    [
+     "Advance rent",
+     "Rent paid for a period beyond the next immediate rental period."
+    ]
+   ]
+  },
+  "fl/homestead": {
+   "blurb": "Homestead protection, tenancy by the entireties, adverse possession.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Homestead & Florida property rights",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "One acre",
+        "160 acres",
+        "Half an acre"
+       ],
+       "q": "Homestead protection inside a city covers up to:",
+       "why": "160 acres applies outside a municipality."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A mortgage the owner signed",
+        "A credit card judgment",
+        "A medical bill judgment"
+       ],
+       "q": "Which claim can still reach a Florida homestead?",
+       "why": "Mortgages, taxes and construction liens survive."
+      }
+     ],
+     "h": "Homestead protection",
+     "l": [
+      "Article X, section 4 of the Florida Constitution protects the homestead from forced sale by most creditors.",
+      "Protected area: up to HALF AN ACRE inside a municipality, or up to 160 ACRES outside one.",
+      "The protection does NOT stop a mortgage the owner signed, property taxes and assessments, or liens for work done on the property - mechanics' liens.",
+      "If the owner is married or has a minor child, the homestead cannot be devised freely by will, and a conveyance or mortgage needs BOTH spouses to join."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Tenants in common",
+        "Tenants by the entireties",
+        "Joint tenants without survivorship"
+       ],
+       "q": "A married couple taking title together in Florida are presumed to hold as:",
+       "why": "The marital estate, with survivorship."
+      }
+     ],
+     "h": "How Florida owners hold title",
+     "l": [
+      "TENANCY BY THE ENTIRETIES is available to married couples and carries right of survivorship; neither spouse can convey alone and it is protected from the separate creditors of one spouse.",
+      "JOINT TENANCY with right of survivorship must be stated expressly; otherwise co-owners take as TENANTS IN COMMON.",
+      "Florida recognises condominiums (ch. 718), cooperatives (ch. 719) and timeshares (ch. 721)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "7 years, with all taxes paid",
+        "20 years",
+        "7 years, taxes irrelevant"
+       ],
+       "q": "Adverse possession without colour of title in Florida takes:",
+       "why": "95.18 makes paying taxes a condition."
+      }
+     ],
+     "h": "Adverse possession (95.18)",
+     "l": [
+      "WITHOUT colour of title, Florida requires 7 YEARS of actual, continued possession under a claim of title.",
+      "The claimant must have PAID ALL TAXES on the property within 1 year of entering possession and for every year after.",
+      "They must also file a return with the county PROPERTY APPRAISER within 30 days of paying.",
+      "Possession is shown by substantial enclosure, or cultivation, maintenance or improvement in the usual manner."
+     ]
+    }
+   ],
+   "summary": "Florida's homestead is unusually strong: protected from most creditors without limit on value, restricted on how it can be left by will, and carrying tax breaks. Add tenancy by the entireties and the seven-year adverse possession rule.",
+   "topic": "fl/homestead",
+   "traps": [
+    "Half an acre in the city, 160 acres outside it.",
+    "Homestead does not defeat a mortgage, property taxes or a construction lien.",
+    "Florida adverse possession REQUIRES paying the taxes - that is what catches people out.",
+    "Married couples take by the entireties, not as ordinary joint tenants."
+   ],
+   "vocab": [
+    [
+     "Homestead",
+     "The protected Florida residence: half an acre urban, 160 acres rural."
+    ],
+    [
+     "Tenancy by the entireties",
+     "Married co-ownership with survivorship, protected from one spouse's creditors."
+    ],
+    [
+     "Colour of title",
+     "A written instrument that appears to give title but is defective."
+    ],
+    [
+     "Devise",
+     "To leave real property by will; restricted for a Florida homestead."
+    ]
+   ]
+  },
+  "fl/licensing": {
+   "blurb": "Who needs a licence, who is exempt, education, renewal, inactive status.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "The licence becomes null and void. Post-licence education cannot be made up late.",
+     "s": "A sales associate licensed in May takes 14 hours of continuing education and renews.",
+     "t": "The first renewal",
+     "w": [
+      "The FIRST renewal needs the 45-hour post-licence course, not ordinary CE.",
+      "CE of 14 hours applies to every renewal AFTER the first."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Licensing & qualifications",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "18",
+        "17",
+        "21"
+       ],
+       "q": "The minimum age for a Florida sales associate licence is:",
+       "why": "475.17(1)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A high school diploma or its equivalent",
+        "A college degree",
+        "No formal schooling"
+       ],
+       "q": "Florida requires an applicant to hold:",
+       "why": "475.17(1)(a)."
+      }
+     ],
+     "h": "Qualifications (475.17)",
+     "l": [
+      "At least 18 years old.",
+      "Hold a high school diploma or its equivalent.",
+      "Be honest, truthful, trustworthy and of good character, with a good reputation for fair dealing.",
+      "Pass the examination."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "63 hours",
+        "45 hours",
+        "72 hours"
+       ],
+       "q": "Florida's pre-licence course for a sales associate is:",
+       "why": "72 is the broker course; 45 is post-licence."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "14 hours every two years",
+        "45 hours before the first renewal",
+        "63 hours before the first renewal"
+       ],
+       "q": "Post-licence education for a sales associate is:",
+       "why": "14 hours is ordinary CE."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "14 hours per biennium",
+        "30 hours per year",
+        "45 hours per biennium"
+       ],
+       "q": "Continuing education after the first renewal is:",
+       "why": "475.182(1)(a)."
+      }
+     ],
+     "h": "The education numbers",
+     "l": [
+      "PRE-LICENCE, sales associate: 63 classroom hours of 50 minutes (Course I), inclusive of the end-of-course exam (475.17(2); rule 61J2-3.008).",
+      "PRE-LICENCE, broker: 72 hours (Course II).",
+      "POST-LICENCE, sales associate: 45 hours, completed BEFORE the first renewal after initial licensure (475.17(3); rule 61J2-3.020). Miss it and the licence becomes null and void.",
+      "POST-LICENCE, broker: 60 hours.",
+      "CONTINUING EDUCATION: at least 14 classroom hours of 50 minutes each BIENNIUM (475.182).",
+      "Three of those 14 hours may be earned once per cycle by attending a FREC legal agenda session, telling the Division at least 7 days beforehand - but not if you are there as a party to a disciplinary action."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Is exempt from licensure",
+        "Needs a sales associate licence",
+        "Needs a broker licence"
+       ],
+       "q": "A salaried on-site apartment leasing agent:",
+       "why": "475.011(4)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Keeps the exemption",
+        "Must become a broker",
+        "Loses the owner exemption for that agent"
+       ],
+       "q": "An owner who hires an agent paid per transaction to sell to the public:",
+       "why": "475.011(2)."
+      }
+     ],
+     "h": "Exemptions (475.011)",
+     "l": [
+      "An attorney at law acting within the scope of their duties, or a CPA within theirs.",
+      "An attorney IN FACT, for executing contracts or conveyances only.",
+      "A personal representative, receiver, trustee or magistrate appointed by will or by a court.",
+      "An owner selling, exchanging or leasing their OWN property - unless they employ someone paid a commission strictly per transaction to deal with the public.",
+      "An employee of a public utility, railroad, or a government agency acting within their employment for no extra pay.",
+      "A SALARIED employee of an owner, or of the owner's registered broker, working in an ON-SITE rental office of an apartment community in a leasing capacity.",
+      "A salaried manager of a condominium or cooperative, for rentals of ONE YEAR OR LESS."
+     ],
+     "p": [
+      "Chapter 475 does not apply to, among others:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "14 hours of a FREC-prescribed course",
+        "63 hours of pre-licence education",
+        "Nothing; just pay the fee"
+       ],
+       "q": "A licence involuntarily inactive for 10 months can be reactivated by completing:",
+       "why": "475.183(2)(a)."
+      }
+     ],
+     "h": "Keeping the licence",
+     "l": [
+      "Licences run in two-year BIENNIUMS and expire on 31 March or 30 September depending on the cycle issued.",
+      "VOLUNTARILY inactive: the licensee chooses it, and renews under 475.183 with the education FREC prescribes.",
+      "INVOLUNTARILY inactive: the licence lapsed for failure to renew or to complete post-licence education.",
+      "A licence involuntarily inactive for 12 MONTHS OR LESS can be reactivated with at least 14 hours of a FREC-prescribed course (475.183(2)).",
+      "A sales associate works only for one registered employer; operating for anyone else violates 475.42(1)(b)."
+     ]
+    }
+   ],
+   "summary": "Florida licenses sales associates at 18 with a high school diploma and 63 hours of schooling. The numbers to hold are 63 before, 45 after, and 14 every two years - and the list of people who need no licence at all.",
+   "topic": "fl/licensing",
+   "traps": [
+    "63 before, 45 after, 14 every two years. Those three numbers carry most of the licensing questions.",
+    "Miss the 45-hour post-licence course and the licence is null and void - it is not merely inactive.",
+    "The owner exemption disappears the moment a commissioned salesperson is used with the public.",
+    "The condo manager exemption covers rentals of one year or less only."
+   ],
+   "vocab": [
+    [
+     "Course I",
+     "The 63-hour pre-licence course for a sales associate."
+    ],
+    [
+     "Post-licence education",
+     "45 hours a sales associate must finish before the first renewal."
+    ],
+    [
+     "Biennium",
+     "The two-year licence period; 14 hours of CE are due in each."
+    ],
+    [
+     "Voluntarily inactive",
+     "A licence the holder chose to make inactive."
+    ],
+    [
+     "Involuntarily inactive",
+     "A licence that lapsed, usually for missing renewal or post-licence education."
+    ],
+    [
+     "Attorney in fact",
+     "Someone acting under a power of attorney; exempt for executing documents only."
+    ]
+   ]
+  },
+  "fl/planning": {
+   "blurb": "Local planning agencies, the planning process, and code enforcement.",
+   "counts_on_exam": true,
+   "exam_questions": 1,
+   "examples": [],
+   "ga": [],
+   "label": "Planning & zoning",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A special exception",
+        "A rezoning",
+        "A variance"
+       ],
+       "q": "Relief from a setback requirement because of a hardship is:",
+       "why": "A special exception is a use the code already contemplates."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A variance",
+        "A nonconforming use",
+        "An illegal use"
+       ],
+       "q": "A use that was lawful before the zoning changed is:",
+       "why": "Commonly called grandfathered."
+      }
+     ],
+     "h": "How Florida plans",
+     "l": [
+      "The Community Planning Act (ch. 163, part II) requires local governments to adopt a COMPREHENSIVE PLAN, and development must be consistent with it.",
+      "A LOCAL PLANNING AGENCY prepares and recommends the plan and its amendments.",
+      "Zoning implements the plan. Changes come as a rezoning, a VARIANCE (relief from a dimensional requirement because of hardship), or a SPECIAL EXCEPTION (a use the code allows under conditions).",
+      "A NONCONFORMING USE is one that was lawful before the rules changed and may continue - 'grandfathered'.",
+      "A building permit and certificate of occupancy come from the local building department under the Florida Building Code."
+     ]
+    }
+   ],
+   "summary": "A single question, usually. Know that each local government plans through a comprehensive plan and a local planning agency, and that zoning is enforced locally through variances, special exceptions and nonconforming uses.",
+   "topic": "fl/planning",
+   "traps": [
+    "Variance = dimensional relief for hardship. Special exception = a conditional use already in the code.",
+    "Development must be consistent with the comprehensive plan."
+   ],
+   "vocab": [
+    [
+     "Comprehensive plan",
+     "The local government's long-range land use plan."
+    ],
+    [
+     "Variance",
+     "Permission to depart from a dimensional zoning requirement."
+    ],
+    [
+     "Special exception",
+     "A use allowed in a district subject to conditions."
+    ],
+    [
+     "Nonconforming use",
+     "A lawful use that predates the current zoning."
+    ]
+   ]
+  },
+  "fl/relationships": {
+   "blurb": "Transaction broker, single agent, no brokerage relationship.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "The licensee is a transaction broker, owing the seven duties including limited confidentiality.",
+     "s": "A licensee shows a buyer three homes. Nothing was signed about representation.",
+     "t": "No paperwork, one question",
+     "w": [
+      "No writing establishes a single agent or no-brokerage relationship.",
+      "The presumption in 475.278(1)(b) applies."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Authorized relationships & disclosures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A single agent",
+        "A dual agent",
+        "A transaction broker"
+       ],
+       "q": "If nothing is agreed in writing, a Florida licensee is presumed to be:",
+       "why": "475.278(1)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prohibited",
+        "Allowed with written consent",
+        "Allowed for commercial deals"
+       ],
+       "q": "Dual agency in Florida is:",
+       "why": "475.278(1)(a)."
+      }
+     ],
+     "h": "The three relationships (475.278)",
+     "l": [
+      "A licensee may be a TRANSACTION BROKER or a SINGLE AGENT, or may have NO BROKERAGE RELATIONSHIP.",
+      "DUAL AGENCY is prohibited in Florida, disclosed or not. A dual agent means a broker representing both buyer and seller as a fiduciary.",
+      "PRESUMPTION: every licensee is presumed to be operating as a transaction broker unless a single agent or no-brokerage relationship is established IN WRITING."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A known roof leak",
+        "The listed price",
+        "That the seller will take less than the asking price"
+       ],
+       "q": "Limited confidentiality stops a transaction broker revealing:",
+       "why": "Value-affecting condition is disclosed, not hidden."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Limited representation, not fiduciary duties",
+        "Full fiduciary duties",
+        "No duties at all"
+       ],
+       "q": "A transaction broker owes:",
+       "why": "475.278(2)."
+      }
+     ],
+     "h": "Transaction broker: SEVEN duties",
+     "l": [
+      "Dealing honestly and fairly.",
+      "Accounting for all funds.",
+      "Using skill, care and diligence in the transaction.",
+      "Disclosing all known facts that materially affect the VALUE of residential real property and are not readily observable to the buyer.",
+      "Presenting all offers and counteroffers in a timely manner, unless a party has directed otherwise in writing.",
+      "LIMITED CONFIDENTIALITY, unless waived in writing.",
+      "Any additional duties mutually agreed."
+     ],
+     "p": [
+      "Limited confidentiality prevents disclosing that the seller will take less than the asking price, that the buyer will pay more than the written offer, the MOTIVATION of any party, that a party will accept other financing terms, or anything else a party asked to be kept confidential."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Loyalty",
+        "Accounting for all funds",
+        "Dealing honestly and fairly"
+       ],
+       "q": "Which duty belongs to a single agent but not a transaction broker?",
+       "why": "Loyalty, obedience, confidentiality and full disclosure are the single agent's extras."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Before or at the time of the agreement, or before showing property, whichever is first",
+        "At closing",
+        "Within three days of the contract"
+       ],
+       "q": "The single agent notice is given:",
+       "why": "475.278(3)(b)1."
+      }
+     ],
+     "h": "Single agent: NINE duties",
+     "l": [
+      "Dealing honestly and fairly.",
+      "Loyalty.",
+      "Confidentiality.",
+      "Obedience.",
+      "Full disclosure.",
+      "Accounting for all funds.",
+      "Skill, care and diligence in the transaction.",
+      "Presenting all offers and counteroffers in a timely manner, unless directed otherwise in writing.",
+      "Disclosing all known facts that materially affect the value of residential real property and are not readily observable."
+     ],
+     "p": [
+      "The single agent notice must be given BEFORE, OR AT THE TIME OF, entering into a listing or representation agreement, OR BEFORE SHOWING PROPERTY, whichever happens first. Its first sentence is printed in uppercase and bold."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Three",
+        "Seven",
+        "Nine"
+       ],
+       "q": "A licensee with no brokerage relationship owes how many duties?",
+       "why": "Honesty and fairness, disclosure of material value facts, accounting."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At closing",
+        "Before showing the property",
+        "Only if asked"
+       ],
+       "q": "The no-brokerage-relationship notice is due:",
+       "why": "475.278(4)(b)."
+      }
+     ],
+     "h": "No brokerage relationship: THREE duties",
+     "l": [
+      "Dealing honestly and fairly.",
+      "Disclosing all known facts that materially affect the value of residential real property and are not readily observable to the buyer.",
+      "Accounting for all funds entrusted to the licensee."
+     ],
+     "p": [
+      "The no-brokerage-relationship notice must be given BEFORE THE SHOWING OF PROPERTY."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Any transaction, with consent",
+        "It is non-residential and both parties have assets of $1 million or more",
+        "Only residential sales"
+       ],
+       "q": "Designated sales associates may be used when:",
+       "why": "475.2755(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The principal's written consent, obtained before the change",
+        "Verbal notice",
+        "Nothing; it is automatic"
+       ],
+       "q": "Transitioning from single agent to transaction broker requires:",
+       "why": "475.278(3)(b)2."
+      }
+     ],
+     "h": "Changing relationship, and designated sales associates",
+     "l": [
+      "A SINGLE AGENT may transition to a TRANSACTION BROKER at any time, but only with the principal's WRITTEN CONSENT obtained FIRST (475.278(3)(b)2.).",
+      "DESIGNATED SALES ASSOCIATES (475.2755) are the narrow exception: in a NON-residential transaction where the buyer and seller each have assets of $1 MILLION or more, at the customers' request the broker may designate two sales associates to act as SINGLE AGENTS for the opposing customers in the same deal. Both customers sign a disclosure stating they meet the asset threshold."
+     ]
+    }
+   ],
+   "summary": "Florida bans dual agency and presumes every licensee is a TRANSACTION BROKER unless something in writing says otherwise. The exam leans hard on the three relationships and the exact duty lists: seven duties, nine duties, three duties.",
+   "topic": "fl/relationships",
+   "traps": [
+    "7 transaction broker, 9 single agent, 3 no brokerage relationship. Learn the counts, then the lists.",
+    "Transaction brokerage is the DEFAULT. Anything else must be in writing.",
+    "Limited confidentiality never hides a defect affecting value - condition is always disclosed.",
+    "Designated sales associates need BOTH: non-residential AND $1 million in assets each.",
+    "Florida has no dual agency at all. If an answer says 'disclosed dual agency', it is wrong."
+   ],
+   "vocab": [
+    [
+     "Transaction broker",
+     "Limited representation to one or both parties; the presumed relationship."
+    ],
+    [
+     "Single agent",
+     "A fiduciary for one party, owing nine duties."
+    ],
+    [
+     "No brokerage relationship",
+     "No representation; three duties remain."
+    ],
+    [
+     "Limited confidentiality",
+     "The transaction broker's duty not to reveal price, motivation or financing flexibility."
+    ],
+    [
+     "Designated sales associate",
+     "Two associates acting as single agents in one non-residential deal between million-dollar parties."
+    ],
+    [
+     "Transition disclosure",
+     "The written consent needed to move from single agent to transaction broker."
+    ]
+   ]
+  },
+  "fl/taxes": {
+   "blurb": "Documentary stamps, the homestead exemption, Save Our Homes.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [
+    {
+     "k": "$1,997.80 in documentary stamps on the deed.",
+     "s": "A buyer pays $285,400 cash for a home.",
+     "t": "Stamps on a $285,400 sale",
+     "w": [
+      "$285,400 / 100 = 2,854 taxable hundreds, with no fraction left over.",
+      "2,854 x $0.70 = $1,997.80."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Taxes affecting real estate",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "35 cents per $100",
+        "$1.00 per $1,000",
+        "70 cents per $100 of consideration"
+       ],
+       "q": "Documentary stamp tax on a deed is:",
+       "why": "201.02(1)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "70 cents per $100",
+        "Nothing",
+        "35 cents per $100"
+       ],
+       "q": "Documentary stamp tax on a new promissory note is:",
+       "why": "201.08(1)(a)."
+      }
+     ],
+     "h": "Documentary stamp taxes",
+     "l": [
+      "On a DEED (201.02): 70 CENTS per $100 of consideration, or any fraction of $100. Consideration includes money paid and any mortgage assumed.",
+      "On a PROMISSORY NOTE or recorded mortgage (201.08): 35 CENTS per $100 of the debt, or any fraction.",
+      "Round the consideration UP to the next full $100 before applying the rate."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "County levies",
+        "School district levies",
+        "City levies"
+       ],
+       "q": "The second $25,000 homestead exemption does not apply to:",
+       "why": "196.031(1)(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The closing date",
+        "1 January",
+        "1 July"
+       ],
+       "q": "Homestead exemption eligibility is judged on:",
+       "why": "Title and permanent residence as of 1 January."
+      }
+     ],
+     "h": "The homestead exemption (196.031)",
+     "l": [
+      "$25,000 off the assessed value of a permanent Florida residence, for a person holding title on 1 JANUARY.",
+      "An ADDITIONAL exemption of up to $25,000 on assessed value ABOVE $50,000 - and that second one does NOT apply to SCHOOL DISTRICT levies.",
+      "So the band from $25,000 to $50,000 is taxable, and the second exemption covers $50,000 to $75,000 for non-school levies."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A flat 3% always",
+        "The lower of 3% or CPI",
+        "10%"
+       ],
+       "q": "Save Our Homes caps the annual rise in assessed value at:",
+       "why": "193.155(1)."
+      }
+     ],
+     "h": "Save Our Homes (193.155)",
+     "p": [
+      "Once a property has the homestead exemption, its assessed value may rise each year by no more than the LOWER of 3 PERCENT or the change in the Consumer Price Index. The cap is lost on a change of ownership, when the property is reassessed at just value - which is why the property-tax disclosure summary warns buyers not to rely on the seller's bill."
+     ]
+    }
+   ],
+   "summary": "Three numbers carry this topic: 70 cents per $100 on a deed, 35 cents per $100 on a note, and the homestead exemption of $25,000 plus a second $25,000 - with Save Our Homes capping the yearly rise at 3%.",
+   "topic": "fl/taxes",
+   "traps": [
+    "70 cents deed, 35 cents note. Both per $100, rounding UP to the next $100.",
+    "The second $25,000 exemption skips school levies.",
+    "Save Our Homes resets on sale - that is the whole point of the tax disclosure.",
+    "January 1 is the date that decides homestead for the year."
+   ],
+   "vocab": [
+    [
+     "Documentary stamp tax",
+     "Florida's excise tax on deeds and notes."
+    ],
+    [
+     "Just value",
+     "Market value as determined by the property appraiser."
+    ],
+    [
+     "Assessed value",
+     "Just value adjusted by caps such as Save Our Homes."
+    ],
+    [
+     "Save Our Homes",
+     "The 3%-or-CPI cap on a homestead's annual assessment increase."
+    ],
+    [
+     "Millage",
+     "The tax rate, in dollars per $1,000 of taxable value."
+    ]
+   ]
+  },
+  "fl/violations": {
+   "blurb": "The complaint process, what FREC can impose, and who the fund pays.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [
+    {
+     "k": "Together they receive no more than $50,000, and the licence is suspended until the fund is repaid.",
+     "s": "A buyer and a seller each win $40,000 against the same licensee in the same transaction and cannot collect.",
+     "t": "Two claimants, one deal",
+     "w": [
+      "The per-transaction aggregate is $50,000 regardless of claimants.",
+      "Claims total $80,000, over the cap."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Violations, penalties & the Recovery Fund",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Legal sufficiency",
+        "Probable cause",
+        "A final order"
+       ],
+       "q": "A complaint is first reviewed for:",
+       "why": "Does it allege a violation of the law FREC enforces?"
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Before FREC itself",
+        "Before an administrative law judge",
+        "In circuit court"
+       ],
+       "q": "A hearing where the facts are disputed is held:",
+       "why": "Disputed facts go to DOAH; undisputed facts stay with FREC."
+      }
+     ],
+     "h": "The complaint process",
+     "l": [
+      "A complaint is filed with the DBPR, which reviews it for LEGAL SUFFICIENCY - does it allege a violation of chapter 475, 455 or the rules?",
+      "If sufficient, the Division INVESTIGATES and reports.",
+      "PROBABLE CAUSE is determined by a panel; if found, a formal complaint is issued.",
+      "The licensee may request a FORMAL hearing (disputed facts, heard by an administrative law judge at DOAH) or an INFORMAL hearing (facts not disputed, before FREC).",
+      "FREC issues a FINAL ORDER. An appeal goes to the District Court of Appeal."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$1,000 per count",
+        "$5,000 per count",
+        "$5,000 per case"
+       ],
+       "q": "The maximum administrative fine is:",
+       "why": "475.25(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "5 years",
+        "10 years",
+        "2 years"
+       ],
+       "q": "The maximum suspension is:",
+       "why": "475.25(1)."
+      }
+     ],
+     "h": "What FREC can impose (475.25)",
+     "l": [
+      "Deny an application, or a renewal.",
+      "Issue a reprimand.",
+      "Place on probation.",
+      "Suspend a licence for up to 10 YEARS.",
+      "Revoke a licence.",
+      "Impose an administrative fine of up to $5,000 FOR EACH COUNT or separate offence.",
+      "Any or all of these together."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A second-degree misdemeanour",
+        "A third-degree felony",
+        "A civil infraction"
+       ],
+       "q": "Practising real estate in Florida without a licence is:",
+       "why": "475.42(1)(a)."
+      }
+     ],
+     "h": "Criminal penalties (475.42)",
+     "l": [
+      "Operating as a broker or sales associate WITHOUT a valid and current ACTIVE licence is a THIRD-DEGREE FELONY.",
+      "A sales associate may not operate for any person not registered as their employer.",
+      "A broker may not employ a person as a sales associate who does not hold a valid current licence.",
+      "Most other violations of 475.42 are second-degree misdemeanours."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "$25,000",
+        "$150,000",
+        "$50,000"
+       ],
+       "q": "The Recovery Fund pays at most, per transaction:",
+       "why": "$150,000 is the per-licensee aggregate."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Revoked permanently",
+        "Unaffected",
+        "Automatically suspended until the fund is repaid with interest"
+       ],
+       "q": "When the fund pays on a judgment against a licensee, the licence is:",
+       "why": "475.484(7)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Compensatory damages",
+        "Attorney's fees and court costs",
+        "Actual damages"
+       ],
+       "q": "The fund will NOT pay:",
+       "why": "475.484(1)(a)."
+      }
+     ],
+     "h": "The Real Estate Recovery Fund (475.482-475.484)",
+     "l": [
+      "It reimburses a person who wins a court judgment against a licensee for an act that violated 475.25 or 475.42, committed while acting SOLELY as a licensee, and who cannot collect it.",
+      "Up to $50,000 per claim, limited to ACTUAL or COMPENSATORY damages. Treble damages, court costs, attorney's fees and interest are NOT paid.",
+      "$50,000 in the aggregate per TRANSACTION, regardless of the number of claimants or parcels.",
+      "$150,000 in the aggregate against any ONE licensee.",
+      "The licensee's licence is AUTOMATICALLY SUSPENDED on the date the fund pays, and stays suspended until the fund is repaid in full with interest. No further action is needed.",
+      "Bankruptcy does not wipe out that obligation."
+     ]
+    }
+   ],
+   "summary": "Practising without a licence is a felony in Florida. FREC can fine $5,000 a count and suspend for up to ten years, and the Recovery Fund pays wronged consumers $50,000 per transaction and $150,000 per licensee.",
+   "topic": "fl/violations",
+   "traps": [
+    "Unlicensed practice is a FELONY in Florida - harsher than most states.",
+    "$5,000 per COUNT, and up to a TEN-year suspension.",
+    "$50,000 per transaction, $150,000 per licensee.",
+    "The fund pays actual damages only, and suspension is automatic on payment.",
+    "Legal sufficiency comes first, then investigation, then probable cause."
+   ],
+   "vocab": [
+    [
+     "Legal sufficiency",
+     "Whether a complaint alleges a violation of the law FREC enforces."
+    ],
+    [
+     "Probable cause panel",
+     "The panel that decides whether a formal complaint should issue."
+    ],
+    [
+     "DOAH",
+     "Division of Administrative Hearings, where disputed facts are tried."
+    ],
+    [
+     "Final order",
+     "FREC's decision in a disciplinary case."
+    ],
+    [
+     "Recovery Fund",
+     "The fund that pays consumers holding uncollectable judgments against licensees."
+    ],
+    [
+     "Third-degree felony",
+     "The grade of unlicensed real estate practice in Florida."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Who needs a licence, who is exempt, education, renewal, inactive status.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "fl/licensing",
+   "label": "Licensing & qualifications",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Commission, the Division, and where their authority comes from.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "fl/commission",
+   "label": "FREC & the DBPR",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Transaction broker, single agent, no brokerage relationship.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "fl/relationships",
+   "label": "Authorized relationships & disclosures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Offices, advertising, escrow deadlines, commissions, business entities.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "fl/brokerage",
+   "label": "Brokerage activities & procedures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The complaint process, what FREC can impose, and who the fund pays.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "fl/violations",
+   "label": "Violations, penalties & the Recovery Fund",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Fair housing, and the Florida Residential Landlord and Tenant Act.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "fl/fedstate",
+   "label": "Federal & Florida laws",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Radon, property tax, homeowners' association, CDD, and known defects.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "fl/disclosures",
+   "label": "Florida mandatory disclosures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Homestead protection, tenancy by the entireties, adverse possession.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "fl/homestead",
+   "label": "Homestead & Florida property rights",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Documentary stamps, the homestead exemption, Save Our Homes.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "fl/taxes",
+   "label": "Taxes affecting real estate",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Local planning agencies, the planning process, and code enforcement.",
+   "counts_on_exam": true,
+   "exam_questions": 1,
+   "key": "fl/planning",
+   "label": "Planning & zoning",
+   "portion": "georgia"
+  }
+ ]
+}

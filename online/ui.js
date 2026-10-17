@@ -336,11 +336,11 @@ function countdown(){
   if (h.exam_pct !== null)
     hero.querySelector('.v').className = 'v ' + (h.passing ? 'good' : 'bad');
   box.appendChild(hero);
-  box.appendChild(ro('National',
+  box.appendChild(ro(SINGLE ? 'General' : 'National',
                      (st.national && st.national.recent_pct != null)
                        ? pct(st.national.recent_pct) : '\u2014',
                      examScored('national') + ' q'));
-  box.appendChild(ro(STATE.name,
+  box.appendChild(ro(SINGLE ? STATE.name + ' law' : STATE.name,
                      (st.georgia && st.georgia.recent_pct != null)
                        ? pct(st.georgia.recent_pct) : '\u2014',
                      examScored('georgia') + ' q'));
@@ -3892,9 +3892,13 @@ function renderAbout(){
     'hours per four-year renewal in Georgia, not the 36 that national study ' +
     'guides tend to quote.'));
   src.appendChild(el('p','sub',
-    'The national half follows the standard content outline used by the ' +
-    'licensing exams: agency, contracts, financing, valuation, property ' +
-    'ownership, transfer of title, practice and disclosures, and the maths.'));
+    (SINGLE ? 'The general-practice material follows the principles and practice ' +
+              'the state examines alongside its own law: agency, contracts, financing, ' +
+              'valuation, property ownership, transfer of title, practice and ' +
+              'disclosures, and the maths.'
+            : 'The national half follows the standard content outline used by the ' +
+              'licensing exams: agency, contracts, financing, valuation, property ' +
+              'ownership, transfer of title, practice and disclosures, and the maths.')));
   v.appendChild(src);
 
   var warn = el('div','card');

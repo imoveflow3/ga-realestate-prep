@@ -713,7 +713,8 @@ function sectionTable(d){
     });
     var st = _sliceStats(rows);
     st.portion = p;
-    st.name = {national: 'National', georgia: STATE.name + ' state',
+    st.name = {national: SINGLE ? 'General practice' : 'National',
+               georgia: STATE.name + (SINGLE ? ' law' : ' state'),
                comprehensive: 'Comprehensive'}[p];
     st.scored = (DATA.portions[p] || {}).scored || 0;
     out.push(st);
