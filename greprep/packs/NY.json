@@ -1,0 +1,2108 @@
+{
+ "abbr": "NY",
+ "bank": [
+  {
+   "answer": 0,
+   "choices": [
+    "A broker's agent",
+    "A subagent of the seller",
+    "A dual agent",
+    "A designated sales agent"
+   ],
+   "concept": "New York relationships",
+   "difficulty": 1,
+   "explain": "RPL 443(1)(k).",
+   "id": "ny-ed929156",
+   "portion": "georgia",
+   "q": "An agent engaged by a listing agent to help, but working at a different firm, is:",
+   "sub": "ny/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A broker's agent",
+    "A designated sales agent",
+    "A dual agent",
+    "A subagent"
+   ],
+   "concept": "New York relationships",
+   "difficulty": 2,
+   "explain": "RPL 443(1)(j).",
+   "id": "ny-47e11d9e",
+   "portion": "georgia",
+   "q": "A salesperson assigned to represent one client where the same broker also represents the other client is:",
+   "sub": "ny/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A broker's agent",
+    "A dual agent",
+    "A listing agent",
+    "A designated sales agent"
+   ],
+   "concept": "New York relationships",
+   "difficulty": 1,
+   "explain": "RPL 443(1)(i).",
+   "id": "ny-62a3f964",
+   "portion": "georgia",
+   "q": "An agent acting for both buyer and seller in one transaction is:",
+   "sub": "ny/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The broker's agent owes no duty of honesty",
+    "No disclosure form is needed",
+    "The broker's agent cannot be paid",
+    "The parties have no vicarious liability for the broker's agent's acts"
+   ],
+   "concept": "New York relationships",
+   "difficulty": 3,
+   "explain": "RPL 443(1)(k).",
+   "id": "ny-be7f6059",
+   "portion": "georgia",
+   "q": "Because a broker's agent has no direct relationship with the parties:",
+   "sub": "ny/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The listing, buyer's or tenant's agent who engaged them",
+    "The seller directly",
+    "The Department of State",
+    "The buyer directly"
+   ],
+   "concept": "New York relationships",
+   "difficulty": 2,
+   "explain": "RPL 443(1)(k).",
+   "id": "ny-e59ba8fa",
+   "portion": "georgia",
+   "q": "Who gives direction to a broker's agent?",
+   "sub": "ny/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A vacant lot zoned for housing",
+    "A 20-unit apartment building",
+    "A retail unit",
+    "A cooperative apartment"
+   ],
+   "concept": "New York residential property",
+   "difficulty": 2,
+   "explain": "One-to-four family dwellings and condo or co-op apartments (RPL 443(1)(f)).",
+   "id": "ny-b0d7948c",
+   "portion": "georgia",
+   "q": "For the agency disclosure rules, residential real property includes:",
+   "sub": "ny/agency|Residential property",
+   "subtopic": "Residential property",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Residential real property",
+    "Residential only if subdivided",
+    "Covered once plans are filed",
+    "Not residential real property for these rules"
+   ],
+   "concept": "New York residential property",
+   "difficulty": 3,
+   "explain": "RPL 443(1)(f).",
+   "id": "ny-520378f4",
+   "portion": "georgia",
+   "q": "Unimproved land on which homes will be built is:",
+   "sub": "ny/agency|Residential property",
+   "subtopic": "Residential property",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At the first open house",
+    "Before entering into the listing agreement",
+    "When the first offer arrives",
+    "At closing"
+   ],
+   "concept": "New York disclosure timing",
+   "difficulty": 1,
+   "explain": "RPL 443(3)(a).",
+   "id": "ny-0da210bb",
+   "portion": "georgia",
+   "q": "A listing agent must give the agency disclosure form to the seller:",
+   "sub": "ny/agency|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only once an offer is made",
+    "At the closing table",
+    "Within five days of the showing",
+    "At the time of first substantive contact"
+   ],
+   "concept": "New York disclosure timing",
+   "difficulty": 2,
+   "explain": "RPL 443(3)(b).",
+   "id": "ny-3d60fca7",
+   "portion": "georgia",
+   "q": "A seller's agent must give the form to a prospective buyer:",
+   "sub": "ny/agency|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "After the first showing",
+    "When the offer is accepted",
+    "At closing",
+    "Before entering into the agreement to act as the buyer's agent"
+   ],
+   "concept": "New York disclosure timing",
+   "difficulty": 2,
+   "explain": "RPL 443(3)(c).",
+   "id": "ny-3883c9a8",
+   "portion": "georgia",
+   "q": "A buyer's agent must give the form to the buyer:",
+   "sub": "ny/agency|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not less than three years",
+    "One year",
+    "Six months",
+    "Seven years"
+   ],
+   "concept": "New York disclosure timing",
+   "difficulty": 2,
+   "explain": "RPL 443(3)(d).",
+   "id": "ny-5bed8862",
+   "portion": "georgia",
+   "q": "The signed acknowledgment of the disclosure form must be kept for:",
+   "sub": "ny/agency|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Decline the listing",
+    "Set out the facts in a written declaration under oath or affirmation",
+    "Sign it on the seller's behalf",
+    "Report the seller to the Department"
+   ],
+   "concept": "New York disclosure timing",
+   "difficulty": 3,
+   "explain": "RPL 443(3)(e).",
+   "id": "ny-ca945cdd",
+   "portion": "georgia",
+   "q": "A seller refuses to sign the acknowledgment. The agent must:",
+   "sub": "ny/agency|Disclosure timing",
+   "subtopic": "Disclosure timing",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The seller directly",
+    "Only the broker with whom they are associated",
+    "Any cooperating broker",
+    "The title company"
+   ],
+   "concept": "New York compensation",
+   "difficulty": 1,
+   "explain": "RPL 442-a.",
+   "id": "ny-5fec4cf4",
+   "portion": "georgia",
+   "q": "A New York salesperson may accept compensation from:",
+   "sub": "ny/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "An unlicensed friend who found the buyer",
+    "The buyer's attorney as a referral fee",
+    "A person regularly engaged in real estate brokerage in another state",
+    "An unlicensed assistant"
+   ],
+   "concept": "New York compensation",
+   "difficulty": 2,
+   "explain": "RPL 442.",
+   "id": "ny-e059ad0e",
+   "portion": "georgia",
+   "q": "A broker may split a commission with:",
+   "sub": "ny/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "They had a written agreement",
+    "They were duly licensed when the cause of action arose",
+    "They belonged to a board of realtors",
+    "They were a resident of New York"
+   ],
+   "concept": "New York compensation",
+   "difficulty": 2,
+   "explain": "RPL 442-d.",
+   "id": "ny-a86a08b1",
+   "portion": "georgia",
+   "q": "To sue for a commission in New York, a person must allege and prove:",
+   "sub": "ny/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Wait until the next renewal",
+    "Notify the Department of State at once",
+    "Notify the local board",
+    "Do nothing"
+   ],
+   "concept": "New York compensation",
+   "difficulty": 3,
+   "explain": "RPL 442-b.",
+   "id": "ny-e603ccef",
+   "portion": "georgia",
+   "q": "When a salesperson's association with a broker ends, the broker must:",
+   "sub": "ny/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "ny/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Race",
+    "Colour",
+    "National origin",
+    "Marital status"
+   ],
+   "concept": "New York protected classes",
+   "difficulty": 1,
+   "explain": "New York adds creed, sexual orientation, military status, age and marital status.",
+   "id": "ny-b0258b4b",
+   "portion": "georgia",
+   "q": "Which is protected under New York's Human Rights Law but not the federal Fair Housing Act?",
+   "sub": "ny/fair-housing|Protected classes",
+   "subtopic": "Protected classes",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Credit score",
+    "Occupation",
+    "Military status",
+    "Length of residency"
+   ],
+   "concept": "New York protected classes",
+   "difficulty": 2,
+   "explain": "Executive Law 296(5)(a)(1).",
+   "id": "ny-a287a6e5",
+   "portion": "georgia",
+   "q": "Which of these is a New York protected class?",
+   "sub": "ny/fair-housing|Protected classes",
+   "subtopic": "Protected classes",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Political party",
+    "Education level",
+    "Creed",
+    "Employer"
+   ],
+   "concept": "New York protected classes",
+   "difficulty": 2,
+   "explain": "Executive Law 296(5)(a)(1).",
+   "id": "ny-0deceef2",
+   "portion": "georgia",
+   "q": "New York's list of protected classes includes:",
+   "sub": "ny/fair-housing|Protected classes",
+   "subtopic": "Protected classes",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "An unlawful discriminatory practice",
+    "Lawful if the owner instructed it",
+    "Lawful puffing",
+    "A matter for the courts only"
+   ],
+   "concept": "New York unlawful practices",
+   "difficulty": 1,
+   "explain": "Executive Law 296(5)(a)(1).",
+   "id": "ny-f73ac9e2",
+   "portion": "georgia",
+   "q": "Telling a caller a flat is unavailable when it is available, because of their race, is:",
+   "sub": "ny/fair-housing|Unlawful practices",
+   "subtopic": "Unlawful practices",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Lawful if answered voluntarily",
+    "Lawful for cooperatives",
+    "Only unlawful if acted upon",
+    "Unlawful in itself, even if nobody is refused"
+   ],
+   "concept": "New York unlawful practices",
+   "difficulty": 2,
+   "explain": "Executive Law 296(5)(a)(3) reaches the record or inquiry.",
+   "id": "ny-59338740",
+   "portion": "georgia",
+   "q": "A discriminatory question on a rental application is:",
+   "sub": "ny/fair-housing|Unlawful practices",
+   "subtopic": "Unlawful practices",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is protected by the owner's instruction",
+    "Must follow the client's lawful instruction",
+    "Commits the violation personally",
+    "Is liable only if sued by the owner"
+   ],
+   "concept": "New York unlawful practices",
+   "difficulty": 3,
+   "explain": "Agents and employees are covered in their own right.",
+   "id": "ny-fc599ee4",
+   "portion": "georgia",
+   "q": "An owner instructs the agent to exclude families with children. The agent who complies:",
+   "sub": "ny/fair-housing|Unlawful practices",
+   "subtopic": "Unlawful practices",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Have the licence revoked or suspended, or be fined",
+    "Only be sued privately",
+    "Face no licensing consequence",
+    "Be fined but never suspended"
+   ],
+   "concept": "New York enforcement",
+   "difficulty": 2,
+   "explain": "RPL 441-c(1)(a).",
+   "id": "ny-ca10418f",
+   "portion": "georgia",
+   "q": "A licensee who breaks the Human Rights Law while acting as a broker or salesperson may:",
+   "sub": "ny/fair-housing|Enforcement",
+   "subtopic": "Enforcement",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The state general fund",
+    "A fund for complainants",
+    "The anti-discrimination in housing fund",
+    "The licensee education fund"
+   ],
+   "concept": "New York enforcement",
+   "difficulty": 3,
+   "explain": "RPL 441-c(1)(a).",
+   "id": "ny-b762d770",
+   "portion": "georgia",
+   "q": "Fifty percent of such fines is paid into:",
+   "sub": "ny/fair-housing|Enforcement",
+   "subtopic": "Enforcement",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three",
+    "One",
+    "Two",
+    "Six"
+   ],
+   "concept": "New York education",
+   "difficulty": 2,
+   "explain": "RPL 441(3)(a).",
+   "id": "ny-b213472c",
+   "portion": "georgia",
+   "q": "Every two-year renewal must include at least how many hours on fair housing and discrimination?",
+   "sub": "ny/fair-housing|Education",
+   "subtopic": "Education",
+   "topic": "ny/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The next business day",
+    "Five calendar days",
+    "Three business days",
+    "Ten business days"
+   ],
+   "concept": "New York escrow",
+   "difficulty": 1,
+   "explain": "19 NYCRR 175.1.",
+   "id": "ny-b083f648",
+   "portion": "georgia",
+   "q": "A New York broker must deposit a principal's money within:",
+   "sub": "ny/practice|Escrow",
+   "subtopic": "Escrow",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The broker's operating account",
+    "A separate, special, federally insured bank account used exclusively for it",
+    "Any investment account",
+    "A money market fund"
+   ],
+   "concept": "New York escrow",
+   "difficulty": 1,
+   "explain": "19 NYCRR 175.1.",
+   "id": "ny-9a941410",
+   "portion": "georgia",
+   "q": "The account holding a principal's money must be:",
+   "sub": "ny/practice|Escrow",
+   "subtopic": "Escrow",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Belongs to the broker",
+    "Always belongs to the seller",
+    "May not be kept by the broker, except applied to earned commission with all parties' consent",
+    "Must be paid to the Department"
+   ],
+   "concept": "New York escrow",
+   "difficulty": 2,
+   "explain": "19 NYCRR 175.1.",
+   "id": "ny-67fe6dc1",
+   "portion": "georgia",
+   "q": "Interest accruing on escrowed money:",
+   "sub": "ny/practice|Escrow",
+   "subtopic": "Escrow",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Safeguarded in a secure location against loss or misappropriation",
+    "Held by the salesperson who received it",
+    "Deposited in the operating account temporarily",
+    "Returned to the payer"
+   ],
+   "concept": "New York escrow",
+   "difficulty": 2,
+   "explain": "19 NYCRR 175.1.",
+   "id": "ny-ecdc99ba",
+   "portion": "georgia",
+   "q": "Before it is deposited, a principal's money must be:",
+   "sub": "ny/practice|Escrow",
+   "subtopic": "Escrow",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted up to $200",
+    "Commingling, which is prohibited",
+    "Permitted if recorded",
+    "Required for reconciliation"
+   ],
+   "concept": "New York escrow",
+   "difficulty": 1,
+   "explain": "19 NYCRR 175.1.",
+   "id": "ny-cbf0f3e8",
+   "portion": "georgia",
+   "q": "Mixing a principal's money with the broker's own is:",
+   "sub": "ny/practice|Escrow",
+   "subtopic": "Escrow",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Owes nothing",
+    "Owes half the commission",
+    "Still owes the agreed commission",
+    "Owes only expenses"
+   ],
+   "concept": "New York exclusive listings",
+   "difficulty": 1,
+   "explain": "19 NYCRR 175.24(b).",
+   "id": "ny-22d2a6c8",
+   "portion": "georgia",
+   "q": "Under an exclusive RIGHT TO SELL, an owner who finds their own buyer:",
+   "sub": "ny/practice|Exclusive listings",
+   "subtopic": "Exclusive listings",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Owes the full commission",
+    "Owes a commission to both brokers",
+    "Owes a cancellation fee",
+    "Owes no commission to the broker"
+   ],
+   "concept": "New York exclusive listings",
+   "difficulty": 2,
+   "explain": "19 NYCRR 175.24(b).",
+   "id": "ny-c8ccce96",
+   "portion": "georgia",
+   "q": "Under an exclusive AGENCY listing, an owner who finds their own buyer:",
+   "sub": "ny/practice|Exclusive listings",
+   "subtopic": "Exclusive listings",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Eight point",
+    "Six point",
+    "Ten point",
+    "Twelve point"
+   ],
+   "concept": "New York exclusive listings",
+   "difficulty": 2,
+   "explain": "19 NYCRR 175.24(b).",
+   "id": "ny-aa61cdd1",
+   "portion": "georgia",
+   "q": "The explanation on an exclusive residential listing must be in type of at least:",
+   "sub": "ny/practice|Exclusive listings",
+   "subtopic": "Exclusive listings",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The option of having offers submitted through the listing broker or the selling broker",
+    "A guaranteed sale",
+    "A reduced commission",
+    "The right to cancel at will"
+   ],
+   "concept": "New York exclusive listings",
+   "difficulty": 3,
+   "explain": "19 NYCRR 175.24(c).",
+   "id": "ny-c9718911",
+   "portion": "georgia",
+   "q": "Where the listing broker belongs to a multiple listing service, the agreement must give the owner:",
+   "sub": "ny/practice|Exclusive listings",
+   "subtopic": "Exclusive listings",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At least two feet wide",
+    "Readable from the sidewalk",
+    "Illuminated at night",
+    "Approved by the Department"
+   ],
+   "concept": "New York offices",
+   "difficulty": 1,
+   "explain": "RPL 441-a(3).",
+   "id": "ny-2aa1031c",
+   "portion": "georgia",
+   "q": "A New York broker's office sign must be:",
+   "sub": "ny/practice|Offices",
+   "subtopic": "Offices",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "On the mail box",
+    "On the apartment door only",
+    "Nowhere; the rule does not apply",
+    "In the space provided for occupants' names, not the mail box"
+   ],
+   "concept": "New York offices",
+   "difficulty": 2,
+   "explain": "RPL 441-a(3).",
+   "id": "ny-3682ce8b",
+   "portion": "georgia",
+   "q": "In an apartment or hotel building, the broker's name and the words 'licensed real estate broker' go:",
+   "sub": "ny/practice|Offices",
+   "subtopic": "Offices",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One licence for all offices",
+    "A separate corporation for each",
+    "No additional licence",
+    "A supplemental licence for each branch office"
+   ],
+   "concept": "New York offices",
+   "difficulty": 2,
+   "explain": "RPL 441-a(3).",
+   "id": "ny-607d1324",
+   "portion": "georgia",
+   "q": "A broker with three places of business needs:",
+   "sub": "ny/practice|Offices",
+   "subtopic": "Offices",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not merely because the home telephone number is on a business card",
+    "Whenever clients are met there",
+    "Always",
+    "Only if a sign is posted"
+   ],
+   "concept": "New York offices",
+   "difficulty": 3,
+   "explain": "RPL 441-a(3).",
+   "id": "ny-5170832e",
+   "portion": "georgia",
+   "q": "A salesperson's home is a place of business:",
+   "sub": "ny/practice|Offices",
+   "subtopic": "Offices",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only newspaper advertisements",
+    "Only signs on the property",
+    "Only paid promotions",
+    "Websites, email, business cards, signs and flyers"
+   ],
+   "concept": "New York advertising",
+   "difficulty": 2,
+   "explain": "The definition covers promotion of licensed activity in any medium.",
+   "id": "ny-ddd6b682",
+   "portion": "georgia",
+   "q": "Under 19 NYCRR 175.25, advertising includes:",
+   "sub": "ny/practice|Advertising",
+   "subtopic": "Advertising",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any two cooperating brokers",
+    "Two or more licensees in the same brokerage holding out as a team",
+    "A broker and an attorney",
+    "A brokerage with more than ten agents"
+   ],
+   "concept": "New York advertising",
+   "difficulty": 3,
+   "explain": "19 NYCRR 175.25(a)(2); one member must be an associate broker or salesperson.",
+   "id": "ny-1326dbb7",
+   "portion": "georgia",
+   "q": "A 'team' under the advertising rule means:",
+   "sub": "ny/practice|Advertising",
+   "subtopic": "Advertising",
+   "topic": "ny/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "16",
+    "20",
+    "21",
+    "Over 18"
+   ],
+   "concept": "New York eligibility",
+   "difficulty": 1,
+   "explain": "RPL 440-a.",
+   "id": "ny-90aefe41",
+   "portion": "georgia",
+   "q": "The minimum age for a New York real estate salesperson licence is:",
+   "sub": "ny/license-law|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "18",
+    "20",
+    "19",
+    "21"
+   ],
+   "concept": "New York eligibility",
+   "difficulty": 2,
+   "explain": "RPL 440-a. New York sets the two ages apart.",
+   "id": "ny-56660ce0",
+   "portion": "georgia",
+   "q": "The minimum age for a New York real estate broker licence is:",
+   "sub": "ny/license-law|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "45 hours",
+    "63 hours",
+    "152 hours",
+    "77 hours"
+   ],
+   "concept": "New York education",
+   "difficulty": 1,
+   "explain": "152 hours is the broker total.",
+   "id": "ny-27b5bf6b",
+   "portion": "georgia",
+   "q": "Qualifying education for a New York salesperson is:",
+   "sub": "ny/license-law|Education",
+   "subtopic": "Education",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "77 hours",
+    "152 hours",
+    "120 hours",
+    "180 hours"
+   ],
+   "concept": "New York education",
+   "difficulty": 2,
+   "explain": "The 77-hour salesperson course may be credited if taken within eight years.",
+   "id": "ny-b345fcc5",
+   "portion": "georgia",
+   "q": "Total qualifying education for a New York broker is:",
+   "sub": "ny/license-law|Education",
+   "subtopic": "Education",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three",
+    "Two",
+    "Six",
+    "Eleven"
+   ],
+   "concept": "New York education",
+   "difficulty": 3,
+   "explain": "RPL 441.",
+   "id": "ny-b4748049",
+   "portion": "georgia",
+   "q": "Of the 77 hours, how many must address fair housing and discrimination?",
+   "sub": "ny/license-law|Education",
+   "subtopic": "Education",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One year",
+    "Three years",
+    "Four years",
+    "Two years"
+   ],
+   "concept": "New York renewal",
+   "difficulty": 1,
+   "explain": "Department of State.",
+   "id": "ny-952141be",
+   "portion": "georgia",
+   "q": "A New York real estate licence runs for:",
+   "sub": "ny/license-law|Renewal",
+   "subtopic": "Renewal",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "22.5 hours every two years",
+    "14 hours every two years",
+    "45 hours every four years",
+    "30 hours every two years"
+   ],
+   "concept": "New York renewal",
+   "difficulty": 1,
+   "explain": "RPL 441(3)(a).",
+   "id": "ny-112215e6",
+   "portion": "georgia",
+   "q": "Continuing education in New York is:",
+   "sub": "ny/license-law|Renewal",
+   "subtopic": "Renewal",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One",
+    "Two",
+    "Three",
+    "None"
+   ],
+   "concept": "New York renewal",
+   "difficulty": 2,
+   "explain": "RPL 441(3)(a).",
+   "id": "ny-3603b512",
+   "portion": "georgia",
+   "q": "The continuing education must include how many hours of implicit bias instruction?",
+   "sub": "ny/license-law|Renewal",
+   "subtopic": "Renewal",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One hour",
+    "Three hours",
+    "Four hours",
+    "Two hours"
+   ],
+   "concept": "New York renewal",
+   "difficulty": 3,
+   "explain": "One hour thereafter (RPL 441(3)(a)).",
+   "id": "ny-5d3a6745",
+   "portion": "georgia",
+   "q": "In a salesperson's FIRST two-year term, agency instruction must total:",
+   "sub": "ny/license-law|Renewal",
+   "subtopic": "Renewal",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One hour",
+    "Three hours",
+    "None",
+    "Two hours"
+   ],
+   "concept": "New York renewal",
+   "difficulty": 2,
+   "explain": "RPL 441(3)(a).",
+   "id": "ny-a72c57b3",
+   "portion": "georgia",
+   "q": "Cultural competency instruction required at each renewal is:",
+   "sub": "ny/license-law|Renewal",
+   "subtopic": "Renewal",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$500",
+    "$1,000",
+    "$5,000",
+    "$2,000"
+   ],
+   "concept": "New York discipline",
+   "difficulty": 1,
+   "explain": "RPL 441-c(1)(a).",
+   "id": "ny-c5750273",
+   "portion": "georgia",
+   "q": "The Department of State may fine a licensee up to:",
+   "sub": "ny/license-law|Discipline",
+   "subtopic": "Discipline",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Unaffected",
+    "Suspended",
+    "Automatically transferred to another broker",
+    "Revoked permanently"
+   ],
+   "concept": "New York discipline",
+   "difficulty": 2,
+   "explain": "RPL 441-d.",
+   "id": "ny-2d3203e3",
+   "portion": "georgia",
+   "q": "If a broker's licence is revoked, the associated salespersons' licences are:",
+   "sub": "ny/license-law|Discipline",
+   "subtopic": "Discipline",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Charging a negotiated commission",
+    "Refusing a listing",
+    "Working weekends",
+    "Dishonest or misleading advertising"
+   ],
+   "concept": "New York discipline",
+   "difficulty": 2,
+   "explain": "RPL 441-c(1)(a).",
+   "id": "ny-318a6870",
+   "portion": "georgia",
+   "q": "Which is a ground for discipline under RPL 441-c?",
+   "sub": "ny/license-law|Discipline",
+   "subtopic": "Discipline",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Is considered under article 23-A of the Correction Law, not an automatic bar",
+    "Always bars licensure",
+    "Is ignored entirely",
+    "Bars licensure for ten years"
+   ],
+   "concept": "New York discipline",
+   "difficulty": 3,
+   "explain": "RPL 440-a.",
+   "id": "ny-3bcbe5b8",
+   "portion": "georgia",
+   "q": "A criminal conviction in a licence application:",
+   "sub": "ny/license-law|Discipline",
+   "subtopic": "Discipline",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Must be sponsored by a licensed broker and cannot operate independently",
+    "May operate independently after two years",
+    "May sponsor other salespersons",
+    "May hold their own escrow account"
+   ],
+   "concept": "New York sponsorship",
+   "difficulty": 1,
+   "explain": "Department of State.",
+   "id": "ny-9dd25d14",
+   "portion": "georgia",
+   "q": "A New York salesperson:",
+   "sub": "ny/license-law|Sponsorship",
+   "subtopic": "Sponsorship",
+   "topic": "ny/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At closing",
+    "Within three days after the contract",
+    "Before the buyer signs a binding contract of sale",
+    "Only on request"
+   ],
+   "concept": "New York timing",
+   "difficulty": 1,
+   "explain": "RPL 462(1).",
+   "id": "ny-a1d3f933",
+   "portion": "georgia",
+   "q": "The property condition disclosure statement must be delivered:",
+   "sub": "ny/disclosures|Timing",
+   "subtopic": "Timing",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Filed with the county clerk",
+    "Held by the broker only",
+    "Sent to the Department of State",
+    "Attached to the real estate purchase contract"
+   ],
+   "concept": "New York timing",
+   "difficulty": 2,
+   "explain": "RPL 462(1).",
+   "id": "ny-1c8f4f7b",
+   "portion": "georgia",
+   "q": "Once signed by both parties, the statement must be:",
+   "sub": "ny/disclosures|Timing",
+   "subtopic": "Timing",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Gives the buyer a $500 credit at closing",
+    "Voids the contract automatically",
+    "May be liable for actual damages on a wilful failure",
+    "Faces no consequence"
+   ],
+   "concept": "New York the 2024 change",
+   "difficulty": 2,
+   "explain": "RPL 465. The $500 credit option is no longer in the law.",
+   "id": "ny-7851d19c",
+   "portion": "georgia",
+   "q": "Under the current statute, a seller who fails to deliver the statement:",
+   "sub": "ny/disclosures|The 2024 change",
+   "subtopic": "The 2024 change",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any innocent error on the form",
+    "Strict liability regardless of fault",
+    "Negligence only",
+    "A wilful failure to perform the article's requirements"
+   ],
+   "concept": "New York the 2024 change",
+   "difficulty": 3,
+   "explain": "RPL 465(2).",
+   "id": "ny-2e001695",
+   "portion": "georgia",
+   "q": "Liability under article 14 attaches for:",
+   "sub": "ny/disclosures|The 2024 change",
+   "subtopic": "The 2024 change",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "An owner-occupant selling their home",
+    "A foreclosure sale following a default",
+    "An investor selling a renovated house",
+    "A builder selling a completed house"
+   ],
+   "concept": "New York exemptions",
+   "difficulty": 1,
+   "explain": "RPL 463(4).",
+   "id": "ny-a80cbd6f",
+   "portion": "georgia",
+   "q": "Which transfer needs no property condition disclosure statement?",
+   "sub": "ny/disclosures|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Exempt from the disclosure statement",
+    "Subject to the statement",
+    "Exempt only if the lender agrees",
+    "Subject to double disclosure"
+   ],
+   "concept": "New York exemptions",
+   "difficulty": 2,
+   "explain": "RPL 463(2).",
+   "id": "ny-7a4bebf8",
+   "portion": "georgia",
+   "q": "A transfer by deed in lieu of foreclosure is:",
+   "sub": "ny/disclosures|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Subject to the statement",
+    "Exempt",
+    "Exempt only for small estates",
+    "Subject to the statement if a broker is involved"
+   ],
+   "concept": "New York exemptions",
+   "difficulty": 2,
+   "explain": "RPL 463(1).",
+   "id": "ny-bee294d1",
+   "portion": "georgia",
+   "q": "A transfer ordered by a probate court during estate administration is:",
+   "sub": "ny/disclosures|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Complete the statement for the seller",
+    "Timely inform the seller of the seller's obligations",
+    "Verify each answer on the statement",
+    "Deliver it to the county"
+   ],
+   "concept": "New York agent's duty",
+   "difficulty": 2,
+   "explain": "RPL 466.",
+   "id": "ny-709452be",
+   "portion": "georgia",
+   "q": "A listing agent's duty under article 14 is to:",
+   "sub": "ny/disclosures|Agent's duty",
+   "subtopic": "Agent's duty",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Remains liable for the seller's mistakes",
+    "Has no further duty and is not liable under the article",
+    "Must indemnify the buyer",
+    "Must file a report with the Department"
+   ],
+   "concept": "New York agent's duty",
+   "difficulty": 3,
+   "explain": "RPL 466.",
+   "id": "ny-d06912b2",
+   "portion": "georgia",
+   "q": "An agent who performs the duties in section 466:",
+   "sub": "ny/disclosures|Agent's duty",
+   "subtopic": "Agent's duty",
+   "topic": "ny/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Is still permitted; article 14 does not prevent it",
+    "Is prohibited for residential property",
+    "Removes the need for the statement",
+    "Requires Department approval"
+   ],
+   "concept": "New York as is",
+   "difficulty": 3,
+   "explain": "RPL 462(1).",
+   "id": "ny-125837f0",
+   "portion": "georgia",
+   "q": "An 'as is' sale in New York:",
+   "sub": "ny/disclosures|As is",
+   "subtopic": "As is",
+   "topic": "ny/disclosures"
+  }
+ ],
+ "code": "NY",
+ "diffs": {
+  "national/agency": [
+   "New York names six relationships, including the DESIGNATED SALES AGENT and the BROKER'S AGENT - the latter from a different firm, with no direct relationship to the parties (RPL 443(1)).",
+   "The disclosure form goes to your own client before the agreement, and to the other side at FIRST SUBSTANTIVE CONTACT; the signed acknowledgment is kept three years."
+  ],
+  "national/contracts": [
+   "An attorney commonly drafts or reviews the contract in New York, and in much of the state closings are attorney-conducted."
+  ],
+  "national/disclosures": [
+   "The seller's property condition disclosure statement is delivered BEFORE the buyer signs a binding contract, and the signed copy is attached to it (RPL 462).",
+   "The $500 credit that older guides describe has been REMOVED; section 465 now imposes liability for a wilful failure, measured by the buyer's actual damages."
+  ],
+  "national/ownership": [
+   "Cooperative apartments are shares in a corporation with a proprietary lease, not real property - and they count as residential real property for the disclosure rules (RPL 443(1)(f))."
+  ],
+  "national/practice": [
+   "A broker deposits a principal's money in a separate, special, federally insured account WITHIN THREE BUSINESS DAYS, and may not keep the interest (19 NYCRR 175.1).",
+   "Every exclusive listing of a home carries a six-point-type explanation of the difference between an exclusive right to sell and an exclusive agency (19 NYCRR 175.24).",
+   "Fair housing in New York adds creed, sexual orientation, military status, age, marital status and familial status to the federal classes (Executive Law 296(5))."
+  ]
+ },
+ "name": "New York",
+ "pass": 0.75,
+ "pass_note": "New York reports its examination only as passed or failed and publishes no numerical pass mark and no question count. The 75% here is this app's study target, and the blueprint below is the Department of State's own 77-hour syllabus, one question per hour.",
+ "pass_published": false,
+ "portions": {
+  "georgia": {
+   "blurb": "Article 12-A, the agency disclosure, fair housing, and the Department's rules.",
+   "minutes": 36,
+   "name": "New York law",
+   "scored": 30
+  },
+  "national": {
+   "blurb": "Estates, deeds, finance, land use, valuation and the maths, as the syllabus sets them.",
+   "minutes": 56,
+   "name": "General practice",
+   "scored": 47
+  }
+ },
+ "regulator": "NYS Department of State",
+ "single": true,
+ "sources": [
+  {
+   "by": "New York Department of State",
+   "name": "Real Estate License Law (March 2026)",
+   "note": "The Division of Licensing Services' own guide: Real Property Law article 12-A, the Property Condition Disclosure Act, the Human Rights Law, and 19 NYCRR parts 175-179.",
+   "url": "https://dos.ny.gov/real-estate-license-law"
+  },
+  {
+   "by": "New York Department of State",
+   "name": "Real Estate Salesperson Syllabus (2022)",
+   "note": "The 77-hour qualifying curriculum, subject by subject with its hours. The weighting in this app comes from it.",
+   "url": "https://dos.ny.gov/real-estate-salesperson-77-hour-curriculum-eff-12212022"
+  },
+  {
+   "by": "New York Department of State",
+   "name": "Become a Real Estate Salesperson",
+   "note": "The licensing requirements, the two-year term, and the statement that results are reported only as passed or failed.",
+   "url": "https://dos.ny.gov/real-estate-agent"
+  }
+ ],
+ "study": {
+  "ny/agency": {
+   "blurb": "The disclosure form, and the six relationships New York recognises.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "examples": [
+    {
+     "k": "Dual agency with designated sales agents, disclosed and acknowledged in writing.",
+     "s": "A broker lists a house and another salesperson at the same firm brings a buyer.",
+     "t": "Two clients, one firm",
+     "w": [
+      "The broker now has both clients, which is dual agency.",
+      "New York allows the broker to assign a DESIGNATED SALES AGENT to each client.",
+      "The disclosure form must set out the arrangement and be acknowledged."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Law of agency",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "A broker's agent",
+        "A subagent of the seller",
+        "A dual agent",
+        "A designated sales agent"
+       ],
+       "q": "An agent assisting a listing agent but working at a different firm is:",
+       "why": "RPL 443(1)(k)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "For a different brokerage",
+        "Without any supervision",
+        "Under the supervision of a broker who represents both clients",
+        "Only in commercial deals"
+       ],
+       "q": "A designated sales agent works:",
+       "why": "RPL 443(1)(j)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The broker's agent owes no duties",
+        "The broker's agent cannot be paid",
+        "The parties carry no vicarious liability for the broker's agent's acts",
+        "No disclosure is needed"
+       ],
+       "q": "Because the broker's agent has no direct relationship with the parties:",
+       "why": "RPL 443(1)(k)."
+      }
+     ],
+     "h": "The relationships New York names (RPL 443(1))",
+     "l": [
+      "SELLER'S AGENT - a listing agent acting alone, or one cooperating with the listing agent, acting as the seller's subagent or as a broker's agent to find a buyer.",
+      "BUYER'S AGENT - contracts to locate property for a buyer, or finds a buyer, presents the offer and negotiates for the buyer.",
+      "LISTING AGENT - has entered into a listing agreement to act for the owner for compensation.",
+      "DUAL AGENT - acts as buyer's agent and seller's agent, or tenant's agent and landlord's agent, in the SAME transaction.",
+      "DESIGNATED SALES AGENT - a salesperson or associate broker, under the broker's supervision, assigned to represent one client where the same broker also represents the other client in that transaction.",
+      "BROKER'S AGENT - engaged by a listing, buyer's or tenant's agent to assist, but NOT from the same firm. The broker's agent has no direct relationship with the seller, buyer, landlord or tenant, who therefore carry no vicarious liability for the broker's agent's acts."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "A vacant lot zoned for houses",
+        "A 12-unit apartment block",
+        "A warehouse",
+        "A cooperative apartment"
+       ],
+       "q": "Which is residential real property for the agency disclosure rules?",
+       "why": "RPL 443(1)(f) covers 1-4 family dwellings and condo or co-op apartments."
+      }
+     ],
+     "h": "What counts as residential real property",
+     "p": [
+      "For the disclosure rules, RESIDENTIAL REAL PROPERTY means property used or intended to be used, wholly or partly, as a home for one or more people, improved by a ONE-TO-FOUR FAMILY DWELLING, or a CONDOMINIUM or COOPERATIVE APARTMENT. Unimproved land on which such dwellings are to be built is NOT included (RPL 443(1)(f))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "At the first open house",
+        "When an offer arrives",
+        "Before entering into the listing agreement"
+       ],
+       "q": "A listing agent must give the disclosure form to the seller:",
+       "why": "RPL 443(3)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Within three days",
+        "Only if asked",
+        "At the time of first substantive contact"
+       ],
+       "q": "A buyer's agent meeting the listing agent for the first time must provide the form:",
+       "why": "RPL 443(3)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not less than three years",
+        "One year",
+        "Six months"
+       ],
+       "q": "The signed acknowledgment must be kept for:",
+       "why": "RPL 443(3)(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Cannot take the listing",
+        "Signs on the seller's behalf",
+        "Sets out the facts in a written declaration under oath"
+       ],
+       "q": "If the seller refuses to sign the acknowledgment, the agent:",
+       "why": "RPL 443(3)(e)."
+      }
+     ],
+     "h": "When the disclosure form is given (RPL 443(3))",
+     "l": [
+      "A SELLER'S or LANDLORD'S agent gives it to the seller or landlord BEFORE entering into the listing agreement, and obtains a signed acknowledgment.",
+      "That same agent gives it to the BUYER or TENANT (or their agent) at the time of the FIRST SUBSTANTIVE CONTACT, and obtains a signed acknowledgment.",
+      "A BUYER'S or TENANT'S agent gives it to the buyer or tenant BEFORE entering into the agreement to act for them, and to the seller or seller's agent at the FIRST SUBSTANTIVE CONTACT.",
+      "The agent gives the party a copy of the signed acknowledgment and keeps a copy for NOT LESS THAN THREE YEARS.",
+      "If a party REFUSES to sign, the agent sets out the facts in a written declaration under oath or affirmation."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Only the broker they are associated with",
+        "The seller directly",
+        "Any cooperating broker"
+       ],
+       "q": "A New York salesperson may be paid by:",
+       "why": "RPL 442-a."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "You were duly licensed when the cause of action arose",
+        "You had a written agreement only",
+        "You were a board member"
+       ],
+       "q": "To sue for a commission in New York you must prove:",
+       "why": "RPL 442-d."
+      }
+     ],
+     "h": "Getting paid",
+     "l": [
+      "A broker may split a fee only with a salesperson regularly associated with that broker, another licensed broker, or a person regularly engaged in real estate brokerage in a state OUTSIDE New York (RPL 442).",
+      "A SALESPERSON may not take compensation of any kind from anyone except the licensed broker with whom they are associated (RPL 442-a).",
+      "Nobody may sue for a commission without alleging AND PROVING they were duly licensed when the cause of action arose (RPL 442-d).",
+      "When a salesperson's association ends, the broker must notify the Department of State at once (RPL 442-b)."
+     ]
+    }
+   ],
+   "summary": "Eleven of the syllabus's seventy-seven hours go here, more than any other single subject. New York names six relationships, hands out a disclosure form at precise moments, and keeps the signed receipt for three years.",
+   "topic": "ny/agency",
+   "traps": [
+    "Six relationships, and the broker's agent is the one from a DIFFERENT firm.",
+    "Before the listing agreement for your own client; first substantive contact for the other side.",
+    "Three years for the signed acknowledgment.",
+    "A refusal to sign does not stop the deal - it triggers a sworn declaration.",
+    "Residential means 1-4 family, condo or co-op; not vacant land."
+   ],
+   "vocab": [
+    [
+     "Broker's agent",
+     "An agent from another firm assisting a listing or buyer's agent."
+    ],
+    [
+     "Designated sales agent",
+     "An agent assigned to one client where the broker has both."
+    ],
+    [
+     "Dual agent",
+     "An agent acting for both sides of the same transaction."
+    ],
+    [
+     "First substantive contact",
+     "When the disclosure form is due to the other side."
+    ],
+    [
+     "Vicarious liability",
+     "Liability for another's acts; the parties have none for a broker's agent."
+    ]
+   ]
+  },
+  "ny/disclosures": {
+   "blurb": "Article 14, its exemptions, and what the 2024 amendment removed.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [
+    {
+     "k": "Check the live statute. The $500 credit no longer exists.",
+     "s": "A revision guide says the seller can skip the statement by crediting the buyer $500.",
+     "t": "The outdated answer",
+     "w": [
+      "That option was in an earlier version of the article.",
+      "The current section 465 speaks only of liability for a wilful failure."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Property condition disclosure",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Before the buyer signs a binding contract of sale",
+        "At closing",
+        "Within three days after the contract"
+       ],
+       "q": "The property condition disclosure statement must be delivered:",
+       "why": "RPL 462(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Filed with the county",
+        "Kept by the broker only",
+        "Attached to the real estate purchase contract"
+       ],
+       "q": "The signed statement must then be:",
+       "why": "RPL 462(1)."
+      }
+     ],
+     "h": "The statement (RPL 462)",
+     "p": [
+      "Every seller of residential real property under a purchase contract must COMPLETE AND SIGN a property condition disclosure statement and deliver it, or a copy, to the buyer or the buyer's agent BEFORE THE BUYER SIGNS A BINDING CONTRACT OF SALE. A copy signed by BOTH seller and buyer is then ATTACHED to the purchase contract. Nothing in the article stops the parties agreeing to sell 'as is'."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Simply credits the buyer $500 at closing",
+        "Voids the contract",
+        "May be liable for actual damages on a wilful failure"
+       ],
+       "q": "Under the current statute, a seller who does not deliver the statement:",
+       "why": "RPL 465; the $500 credit is gone."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A wilful failure to perform the article's requirements",
+        "Any innocent mistake",
+        "Strict liability regardless of fault"
+       ],
+       "q": "Liability under article 14 attaches for:",
+       "why": "RPL 465(2)."
+      }
+     ],
+     "h": "What the 2024 amendment removed",
+     "p": [
+      "Older study guides teach that a seller could simply give the buyer a $500 CREDIT at closing instead of delivering the statement. That option is NOT in the current statute. Section 465 now deals only with LIABILITY: a seller who provides, or fails to provide, a statement or a revised statement is liable only for a WILFUL FAILURE to meet the article's requirements, and for a wilful failure is liable for the buyer's ACTUAL DAMAGES, on top of any other remedy."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "A foreclosure sale after default",
+        "An owner-occupant selling their house",
+        "An investor selling a renovated house"
+       ],
+       "q": "Which sale needs no property condition disclosure statement?",
+       "why": "RPL 463(4)."
+      }
+     ],
+     "h": "Exemptions (RPL 463)",
+     "l": [
+      "A transfer under a COURT ORDER - including a probate court transfer, a writ of execution, a bankruptcy trustee or debtor-in-possession, eminent domain, or a decree of specific performance.",
+      "A transfer to a mortgagee by DEED IN LIEU of foreclosure, or in satisfaction of the mortgage debt.",
+      "A transfer to a beneficiary of a DEED OF TRUST.",
+      "A transfer pursuant to a FORECLOSURE SALE following a default."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Complete the statement for the seller",
+        "Verify every answer",
+        "Timely inform the seller of the seller's obligations"
+       ],
+       "q": "A listing agent's duty under article 14 is to:",
+       "why": "RPL 466."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Has no further duty and is not liable under the article",
+        "Remains liable for the seller's errors",
+        "Must indemnify the buyer"
+       ],
+       "q": "An agent who performs the section 466 duties:",
+       "why": "RPL 466."
+      }
+     ],
+     "h": "The agent's own duty (RPL 466)",
+     "p": [
+      "A LISTING agent must timely inform each seller they represent of the seller's obligations under article 14. An agent representing a BUYER - or, where the buyer is unrepresented, the seller's agent dealing with that buyer - must inform the buyer of the buyer's rights and obligations under the article, and in any event BEFORE THE BUYER SIGNS A BINDING CONTRACT. An agent who does this has no further duty under the article and is not liable for a violation of it."
+     ]
+    }
+   ],
+   "summary": "Article 14 makes a residential seller hand over a condition statement before the contract is signed. What changed recently matters: the old option of giving the buyer a $500 credit instead is no longer in the statute.",
+   "topic": "ny/disclosures",
+   "traps": [
+    "The $500 credit is NOT in the current law. Any answer offering it is out of date.",
+    "Delivery is before the buyer signs a binding contract, not at closing.",
+    "Liability is for a WILFUL failure, and then for actual damages.",
+    "An agent who gives the required information is off the hook under the article."
+   ],
+   "vocab": [
+    [
+     "Property Condition Disclosure Act",
+     "Real Property Law article 14."
+    ],
+    [
+     "Wilful failure",
+     "The fault standard for seller liability under section 465."
+    ],
+    [
+     "Deed in lieu of foreclosure",
+     "A transfer to the lender instead of foreclosure; exempt."
+    ],
+    [
+     "As is",
+     "A sale where the buyer accepts the condition; still permitted by article 14."
+    ]
+   ]
+  },
+  "ny/fair-housing": {
+   "blurb": "New York's protected classes, which go well beyond the federal list.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Human rights & fair housing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Marital status",
+        "Race",
+        "Colour",
+        "National origin"
+       ],
+       "q": "Which is a protected class under New York's Human Rights Law but not the federal Fair Housing Act?",
+       "why": "Creed, sexual orientation, military status, age and marital status go beyond the federal list."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Permissible puffing",
+        "An unlawful discriminatory practice",
+        "Allowed if the owner instructed it",
+        "A civil matter only"
+       ],
+       "q": "Telling a caller a flat is taken when it is available is:",
+       "why": "Executive Law 296(5)(a)(1)."
+      }
+     ],
+     "h": "New York's protected classes (Executive Law 296(5))",
+     "l": [
+      "RACE",
+      "CREED",
+      "COLOR",
+      "NATIONAL ORIGIN",
+      "SEXUAL ORIENTATION",
+      "MILITARY STATUS",
+      "SEX",
+      "AGE",
+      "DISABILITY",
+      "MARITAL STATUS",
+      "FAMILIAL STATUS"
+     ],
+     "p": [
+      "It is an unlawful discriminatory practice for an owner, lessee, sub-lessee, assignee or managing agent - or any agent or employee of theirs - to refuse to sell, rent or lease a housing accommodation, or to represent it is unavailable when it is available, because of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Lawful if the applicant answers willingly",
+        "Lawful for co-ops",
+        "Unlawful, even if no one is refused",
+        "Only a problem if acted on"
+       ],
+       "q": "A discriminatory question on a rental application is:",
+       "why": "296(5)(a)(3) reaches the inquiry itself."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Is protected by the owner's instruction",
+        "Must comply with the client",
+        "Should get it in writing first",
+        "Commits the violation if they comply"
+       ],
+       "q": "An owner instructs an agent to refuse a family with children. The agent:",
+       "why": "The agent is liable in their own right."
+      }
+     ],
+     "h": "What else the section reaches",
+     "l": [
+      "Discriminating in the TERMS, CONDITIONS OR PRIVILEGES of a sale, rental or lease, or in the facilities or services that go with it (296(5)(a)(2)).",
+      "Printing or circulating any statement, advertisement, publication or APPLICATION FORM, or making any record or INQUIRY, that expresses directly or indirectly any limitation or discrimination (296(5)(a)(3)).",
+      "An instruction from an owner is no defence: the agent and employee are covered in their own right.",
+      "A licensee who breaks article 15 of the Executive Law in their capacity as a broker or salesperson can have the licence revoked or suspended, or be fined (RPL 441-c(1)(a))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "$1,000",
+        "$5,000",
+        "$2,000"
+       ],
+       "q": "The maximum Department of State fine is:",
+       "why": "RPL 441-c(1)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The general fund",
+        "The anti-discrimination in housing fund",
+        "The complainant"
+       ],
+       "q": "Half of such fines is paid to:",
+       "why": "RPL 441-c(1)(a)."
+      }
+     ],
+     "h": "Enforcement",
+     "p": [
+      "The Department of State may revoke or suspend a licence, or impose a FINE NOT EXCEEDING $2,000, for a violation of article 15 of the Executive Law committed as a broker or salesperson. FIFTY PERCENT of such fines goes to the anti-discrimination in housing fund (RPL 441-c(1)(a)). Continuing education reflects this too: every two-year renewal includes at least three hours on fair housing and discrimination, two hours of cultural competency and two hours of implicit bias."
+     ]
+    }
+   ],
+   "summary": "Six syllabus hours, and the single most common way New York differs from the national material: the state's protected classes go a long way past the federal seven.",
+   "topic": "ny/fair-housing",
+   "traps": [
+    "Creed, sexual orientation, military status, age and marital status are New York additions. The federal list alone is not enough.",
+    "The inquiry or application question is itself unlawful - no refusal is needed.",
+    "The fine is $2,000, and half of it funds anti-discrimination work.",
+    "An owner's instruction never shields the agent."
+   ],
+   "vocab": [
+    [
+     "Human Rights Law",
+     "Executive Law article 15, New York's anti-discrimination statute."
+    ],
+    [
+     "Housing accommodation",
+     "The dwelling covered by section 296(5)."
+    ],
+    [
+     "Creed",
+     "Religious belief; a New York protected class."
+    ],
+    [
+     "Military status",
+     "A New York protected class with no federal counterpart."
+    ],
+    [
+     "Cultural competency",
+     "Understanding cultural norms and challenges; a required CE subject."
+    ]
+   ]
+  },
+  "ny/license-law": {
+   "blurb": "Licensing, education, renewal, discipline, and licensee safety.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Licence law & regulations",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "16",
+        "20",
+        "Over 18",
+        "21"
+       ],
+       "q": "The minimum age for a New York salesperson licence is:",
+       "why": "Brokers must be 20 or over (RPL 440-a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "20",
+        "18",
+        "21",
+        "25"
+       ],
+       "q": "The minimum age for a New York broker licence is:",
+       "why": "RPL 440-a."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "45 hours",
+        "152 hours",
+        "77 hours",
+        "22.5 hours"
+       ],
+       "q": "Qualifying education for a salesperson is:",
+       "why": "152 hours is the broker total."
+      }
+     ],
+     "h": "Getting licensed",
+     "l": [
+      "A SALESPERSON must be OVER 18. A BROKER must be 20 OR OVER (RPL 440-a).",
+      "A salesperson completes 77 HOURS of approved qualifying education, six of which are on fair housing and discrimination, and passes the state examination.",
+      "A salesperson must be SPONSORED by a licensed New York broker and cannot operate independently.",
+      "A broker needs 152 HOURS in total: the 77-hour salesperson course may be credited if completed within eight years, plus the broker course, together with the required experience.",
+      "A conviction is not an automatic bar; the Secretary decides under article 23-A of the Correction Law."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "45 hours every four years",
+        "14 hours every two years",
+        "22.5 hours every two years"
+       ],
+       "q": "Continuing education in New York is:",
+       "why": "RPL 441(3)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "1 hour",
+        "2 hours",
+        "3 hours"
+       ],
+       "q": "How much of the CE must be agency instruction in a salesperson's FIRST two-year term?",
+       "why": "One hour thereafter (RPL 441(3)(a))."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Two years",
+        "One year",
+        "Four years"
+       ],
+       "q": "A New York licence term is:",
+       "why": "Department of State."
+      }
+     ],
+     "h": "Keeping the licence",
+     "l": [
+      "A licence runs TWO YEARS.",
+      "Continuing education: at least 22.5 HOURS in the two years before renewal, which must include at least 3 hours on FAIR HOUSING and discrimination, 2 hours of CULTURAL COMPETENCY, 2 hours of IMPLICIT BIAS, 2.5 hours of ETHICAL BUSINESS PRACTICES, 1 hour on RECENT LEGAL MATTERS, and 1 hour on the LAW OF AGENCY - 2 hours of agency for a salesperson's initial two-year term (RPL 441(3)(a)).",
+      "The broker holds the salesperson's licence; the salesperson carries a POCKET CARD.",
+      "When an association ends, the broker notifies the Department of State at once (RPL 442-b)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "$1,000",
+        "$5,000",
+        "$10,000",
+        "$2,000"
+       ],
+       "q": "The maximum Department of State fine is:",
+       "why": "RPL 441-c(1)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Unaffected",
+        "Suspended",
+        "Automatically transferred"
+       ],
+       "q": "If a broker's licence is revoked, the salespersons' licences are:",
+       "why": "RPL 441-d."
+      }
+     ],
+     "h": "Discipline",
+     "l": [
+      "The Department of State may REVOKE or SUSPEND a licence, impose a FINE NOT EXCEEDING $2,000, or issue a REPRIMAND (RPL 441-c(1)(a)).",
+      "Grounds include a conviction of a violation of article 12-A, a material misstatement in the application, fraud or fraudulent practices, DISHONEST OR MISLEADING ADVERTISING, demonstrated UNTRUSTWORTHINESS OR INCOMPETENCY, and violating the Human Rights Law as a licensee.",
+      "A salesperson's licence is suspended by the revocation or suspension of the employing broker's licence (RPL 441-d).",
+      "Unlicensed practice and other violations of article 12-A are misdemeanours (RPL 442-e)."
+     ]
+    }
+   ],
+   "summary": "Three syllabus hours of licence law plus the hour on licensee safety. The numbers: 18 to sell, 20 to broker, 77 hours in, 22.5 hours every two years to stay.",
+   "topic": "ny/license-law",
+   "traps": [
+    "18 to sell, 20 to broker. New York is unusual in setting them apart.",
+    "77 hours in, 22.5 hours every two years after.",
+    "The fine ceiling is $2,000, not $1,000.",
+    "The broker holds the licence; the salesperson holds a pocket card."
+   ],
+   "vocab": [
+    [
+     "Article 12-A",
+     "The Real Property Law article governing brokers and salespersons."
+    ],
+    [
+     "Pocket card",
+     "The card a licensee carries as evidence of licensure."
+    ],
+    [
+     "Associate broker",
+     "Someone qualified as a broker but working under another broker."
+    ],
+    [
+     "Supplemental licence",
+     "The licence for each branch office."
+    ],
+    [
+     "Blind ad",
+     "An advertisement that conceals that a licensee placed it."
+    ]
+   ]
+  },
+  "ny/practice": {
+   "blurb": "Commingling, exclusive listings, advertising and business signs.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "The commission is owed to the listing broker.",
+     "s": "A homeowner signs an exclusive right to sell, then sells to a colleague they found themselves.",
+     "t": "The owner's own buyer",
+     "w": [
+      "Under an exclusive right to sell the commission is owed whoever finds the buyer.",
+      "That is precisely what the six-point explanation must have told them."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage practice & escrow",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The next business day",
+        "Three business days",
+        "Five calendar days"
+       ],
+       "q": "A New York broker must deposit a principal's money within:",
+       "why": "19 NYCRR 175.1."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Belongs to the broker",
+        "Always goes to the buyer",
+        "May not be retained by the broker, save against earned commission with all parties' consent"
+       ],
+       "q": "Interest accrued on escrowed money:",
+       "why": "19 NYCRR 175.1."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Safeguarded in a secure location",
+        "Held by the salesperson",
+        "Deposited in the operating account"
+       ],
+       "q": "Before deposit, the money must be:",
+       "why": "19 NYCRR 175.1."
+      }
+     ],
+     "h": "The principal's money (19 NYCRR 175.1)",
+     "l": [
+      "A broker shall NOT COMMINGLE the money or property of a principal with their own.",
+      "The broker maintains a SEPARATE, SPECIAL bank account used EXCLUSIVELY for those monies.",
+      "The deposit shall be made WITHIN THREE BUSINESS DAYS.",
+      "Until deposited, the money must be SAFEGUARDED IN A SECURE LOCATION against loss or misappropriation.",
+      "It goes only into a FEDERALLY INSURED bank account - no other depository, fund or investment.",
+      "Any accrued INTEREST may not be kept by or for the broker, except where applied to and deducted from earned commission with the consent of ALL parties."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Still owes the agreed commission",
+        "Owes nothing",
+        "Owes half"
+       ],
+       "q": "Under an exclusive RIGHT TO SELL, an owner who finds their own buyer:",
+       "why": "That is the difference from an exclusive agency."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Ten point",
+        "Six point",
+        "Twelve point"
+       ],
+       "q": "The explanation on an exclusive residential listing must be in type of at least:",
+       "why": "19 NYCRR 175.24(b)."
+      }
+     ],
+     "h": "Exclusive listings on homes (19 NYCRR 175.24)",
+     "l": [
+      "Every exclusive listing of RESIDENTIAL property (1-4 family, condo or co-op) must carry, attached or printed on it and signed or initialled by the owner, an EXPLANATION in type no smaller than SIX POINT.",
+      "The explanation sets out the difference: under an EXCLUSIVE RIGHT TO SELL the owner owes the commission even if the owner finds the buyer; under an EXCLUSIVE AGENCY the owner owes nothing if the owner finds the buyer.",
+      "Where the broker belongs to a multiple listing service, the agreement must give the homeowner the OPTION of having offers submitted through the listing broker or through the selling broker."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Readable from the sidewalk",
+        "At least one square metre",
+        "Illuminated"
+       ],
+       "q": "A broker's office sign must be:",
+       "why": "RPL 441-a(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "One licence covering all",
+        "A separate corporation per office",
+        "A supplemental licence for each branch"
+       ],
+       "q": "A broker with three offices needs:",
+       "why": "RPL 441-a(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Websites, email and business cards",
+        "Only newspaper advertisements",
+        "Only signs on the property"
+       ],
+       "q": "Under 19 NYCRR 175.25, advertising includes:",
+       "why": "The definition is deliberately broad."
+      }
+     ],
+     "h": "Offices, signs and advertising",
+     "l": [
+      "Each licensed broker must have and maintain a DEFINITE PLACE OF BUSINESS in New York, with a sign outside READABLE FROM THE SIDEWALK giving the name and the business. In an office, apartment or hotel building, the name and the words 'licensed real estate broker' go in the space provided for occupants' names - not the mail box (RPL 441-a(3)).",
+      "A broker with more than one place of business applies for a SUPPLEMENTAL LICENCE for each branch office, each under the direct supervision of the broker or an appointed office manager.",
+      "A salesperson's principal residence is not a place of business merely because the residence telephone number appears on a business card.",
+      "ADVERTISING under 19 NYCRR 175.25 covers mail, telephone, websites, email, bulletin boards, business cards, signs, billboards and flyers - anything promoting licensed activity.",
+      "A TEAM is two or more people, at least one an associate broker or salesperson, in the same brokerage who hold themselves out as a team."
+     ]
+    }
+   ],
+   "summary": "The regulations in 19 NYCRR part 175 are short and very testable: three business days for the principal's money, a specific explanation on every exclusive residential listing, and a sign the sidewalk can read.",
+   "topic": "ny/practice",
+   "traps": [
+    "Three BUSINESS days, into a separate special federally insured account.",
+    "Six point type for the exclusive-listing explanation.",
+    "Exclusive right to sell: owner pays either way. Exclusive agency: owner finding the buyer pays nothing.",
+    "Each branch office needs its own supplemental licence."
+   ],
+   "vocab": [
+    [
+     "Commingling",
+     "Mixing the principal's money with the broker's own."
+    ],
+    [
+     "Special bank account",
+     "The separate escrow account a New York broker must keep."
+    ],
+    [
+     "Exclusive right to sell",
+     "The owner owes the commission whoever finds the buyer."
+    ],
+    [
+     "Exclusive agency",
+     "The owner owes nothing if the owner finds the buyer."
+    ],
+    [
+     "Supplemental licence",
+     "The licence required for each branch office."
+    ],
+    [
+     "Team",
+     "Two or more licensees in one brokerage holding out as a team."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "The disclosure form, and the six relationships New York recognises.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "key": "ny/agency",
+   "label": "Law of agency",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "New York's protected classes, which go well beyond the federal list.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "ny/fair-housing",
+   "label": "Human rights & fair housing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Commingling, exclusive listings, advertising and business signs.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "ny/practice",
+   "label": "Brokerage practice & escrow",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Licensing, education, renewal, discipline, and licensee safety.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "ny/license-law",
+   "label": "Licence law & regulations",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Article 14, its exemptions, and what the 2024 amendment removed.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "ny/disclosures",
+   "label": "Property condition disclosure",
+   "portion": "georgia"
+  }
+ ]
+}

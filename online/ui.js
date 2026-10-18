@@ -68,7 +68,8 @@ var NAV = [
   {v:'today',    name:'Today',      desc:'Five things to do right now'},
   {v:'study',    name:'Study',      desc:'Read the material, topic by topic'},
   {v:'home',     name:'Practice',   desc:'Timed quizzes and the full mock exam'},
-  {v:'dash',     name:'Progress',   desc:'Where you stand against the ' + PASS_PCT + ' pass mark'},
+  {v:'dash',     name:'Progress',   desc:'Where you stand against the ' + PASS_PCT +
+                                        (PASS_PUBLISHED ? ' pass mark' : ' study target')},
   {v:'vocab',    name:'Vocab',      desc:'See the definition, name the term'},
   {v:'cards',    name:'Flashcards', desc:'Spaced repetition on what you keep missing'},
   {v:'math',     name:'Math',       desc:'Every calculation, worked step by step'},
@@ -332,7 +333,10 @@ function countdown(){
   box.hidden = false;
   var h = headline(D), st = portionStats(D);
   var hero = ro('Readiness', h.exam_pct === null ? '\u2014' : pct(h.exam_pct),
-                h.exam_pct === null ? 'no data' : (h.passing ? 'passing' : 'need ' + PASS_PCT), true);
+                h.exam_pct === null ? 'no data'
+                  : (h.passing ? (PASS_PUBLISHED ? 'passing' : 'at target')
+                               : (PASS_PUBLISHED ? 'need ' + PASS_PCT
+                                                 : 'target ' + PASS_PCT)), true);
   if (h.exam_pct !== null)
     hero.querySelector('.v').className = 'v ' + (h.passing ? 'good' : 'bad');
   box.appendChild(hero);
@@ -2455,10 +2459,15 @@ function statRow(cells){
 function standingCard(box){
   var r = readiness(D);
   var card = el('div', 'card standing');
-  card.appendChild(cardHead('Where you stand', SINGLE
+  card.appendChild(cardHead('Where you stand', !PASS_PUBLISHED
+    ? STATE.name + ' publishes no pass mark; ' + PASS_PCT + ' is a study target'
+    : SINGLE
     ? STATE.name + ' sits one exam of ' + examTotal() + ' questions; ' +
       PASS_PCT + ' to pass'
     : STATE.name + ' needs ' + PASS_PCT + ' on each portion, separately'));
+  /* Saying "you need 70%" of a state that publishes no number would be an
+     invention, so the state's own position is printed instead. */
+  if (PASS_NOTE) card.appendChild(el('p', 'sub passnote', PASS_NOTE));
 
   var grid = el('div', 'standgrid' + (SINGLE ? ' one' : ''));
   (SINGLE ? [['Whole exam', r, examTotal()]]
@@ -2468,7 +2477,8 @@ function standingCard(box){
     var cell = el('div', 'standcell');
     var top = el('div', 'sc-top');
     top.appendChild(el('span', 'sc-name', name));
-    top.appendChild(el('span', 'sc-of', onExam + ' questions'));
+    top.appendChild(el('span', 'sc-of', onExam +
+      (PASS_PUBLISHED ? ' questions' : ' practice questions')));
     cell.appendChild(top);
 
     var val = (p && p.current !== null) ? p.current : null;
@@ -3598,7 +3608,9 @@ function welcomeIntro(v){
   v.appendChild(s2);
 
   /* --------------------------------------------------------- blueprint */
-  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.', SINGLE
+  var s3 = lsec('What is on the exam', 'The whole blueprint, weighted.', !PASS_PUBLISHED
+    ? (PASS_NOTE || (STATE.name + ' publishes no pass mark.'))
+    : SINGLE
     ? STATE.name + ' sets one exam of ' + examTotal() + ' questions and needs ' +
       PASS_PCT + ' overall. It is split below by how the material is studied, ' +
       'not by how it is scored.'

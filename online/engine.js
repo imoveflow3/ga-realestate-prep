@@ -11,10 +11,16 @@ var STATE = (function(){
   var code = null;
   try { code = localStorage.getItem('ga-prep-state'); } catch(e){}
   var pack = (DATA.packs || {})[code];
-  if (!pack) return {code: 'GA', name: 'Georgia', abbr: 'GA', regulator: 'GREC', pass: 0.75};
+  if (!pack) return {code: 'GA', name: 'Georgia', abbr: 'GA', regulator: 'GREC',
+                     pass: 0.75, passPublished: true};
   applyStatePack(pack);
   return {code: pack.code, name: pack.name, abbr: pack.abbr,
-          regulator: pack.regulator, pass: pack.pass, single: pack.single === true};
+          regulator: pack.regulator, pass: pack.pass, single: pack.single === true,
+          /* Some states publish no pass mark at all. Where that is so the
+             figure below is this app's study target, and must never be
+             presented as the state's requirement. */
+          passPublished: pack.pass_published !== false,
+          passNote: pack.pass_note || null};
 })();
 /* The lessons repeat each topic's exam weight; the catalog is the one kept
    current, so the lessons take theirs from it. */
@@ -29,6 +35,8 @@ var PASS_PCT = Math.round(PASS * 100) + '%';
    being scored separately. The content is still kept in two banks -- state
    law and general practice -- because that is how it is studied. */
 var SINGLE = STATE.single === true;
+var PASS_PUBLISHED = STATE.passPublished !== false;
+var PASS_NOTE = STATE.passNote;
 
 function applyStatePack(pack){
   var gaTopic = function(k){ return k.indexOf('georgia/') === 0 || k === 'comp/grec-deep'; };
