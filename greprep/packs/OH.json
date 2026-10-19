@@ -1,0 +1,2523 @@
+{
+ "abbr": "OH",
+ "bank": [
+  {
+   "answer": 0,
+   "choices": [
+    "Noninterest-bearing and separate from the broker's own accounts",
+    "Interest-bearing for the broker",
+    "Combined with the operating account",
+    "Held at any bank in the country"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 1,
+   "explain": "ORC 4735.18(A)(26).",
+   "id": "oh-4c8e1cbc",
+   "portion": "georgia",
+   "q": "An Ohio broker's sales trust account must be:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Located in Ohio and state or federally chartered",
+    "Anywhere in the United States",
+    "Outside Ohio for safety",
+    "Chosen by the buyer"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 2,
+   "explain": "ORC 4735.18(A)(26).",
+   "id": "oh-da8e4b5e",
+   "portion": "georgia",
+   "q": "The trust account must be held at an institution:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The broker",
+    "The property owners, pro rata",
+    "The Division of Real Estate",
+    "The tenants"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 2,
+   "explain": "ORC 4735.10(A)(2)(e)(ii).",
+   "id": "oh-6ec87a9a",
+   "portion": "georgia",
+   "q": "Interest earned on a property management trust account is paid to:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One account for everything",
+    "A separate property management account, distinct from the sales trust account",
+    "No account if the owner consents",
+    "The owner's personal account"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 2,
+   "explain": "ORC 4735.18(A)(27).",
+   "id": "oh-ea60681b",
+   "portion": "georgia",
+   "q": "A broker who manages property for others must keep:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Submitted in writing to the superintendent",
+    "Posted in the office window",
+    "Filed with the county recorder",
+    "Kept private"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 2,
+   "explain": "ORC 4735.18(A)(26).",
+   "id": "oh-1616e5ad",
+   "portion": "georgia",
+   "q": "Details of the trust account depository must be:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer's written demand alone",
+    "Written instructions signed by both parties",
+    "The seller's verbal demand",
+    "The listing agent's decision"
+   ],
+   "concept": "Ohio earnest money",
+   "difficulty": 1,
+   "explain": "ORC 4735.24(A)(2).",
+   "id": "oh-e356b6ac",
+   "portion": "georgia",
+   "q": "A broker holding disputed earnest money may disburse it on:",
+   "sub": "oh/license-law|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The broker's own judgment",
+    "A mediator's recommendation",
+    "The lender's instruction",
+    "A final court order specifying who receives it"
+   ],
+   "concept": "Ohio earnest money",
+   "difficulty": 2,
+   "explain": "ORC 4735.24(A)(3).",
+   "id": "oh-c6885a7c",
+   "portion": "georgia",
+   "q": "Absent agreement between the parties, a broker may also disburse earnest money on:",
+   "sub": "oh/license-law|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Kept by the broker",
+    "Paid to the seller",
+    "Donated to the Recovery Fund",
+    "Reported and remitted to the director of commerce as unclaimed funds"
+   ],
+   "concept": "Ohio earnest money",
+   "difficulty": 3,
+   "explain": "ORC 4735.24(A)(5).",
+   "id": "oh-a2bb63eb",
+   "portion": "georgia",
+   "q": "Earnest money that is never claimed must eventually be:",
+   "sub": "oh/license-law|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At the time each party signs",
+    "Within three business days",
+    "At closing",
+    "Only on request"
+   ],
+   "concept": "Ohio records",
+   "difficulty": 1,
+   "explain": "ORC 4735.18(A)(25).",
+   "id": "oh-8b467c2e",
+   "portion": "georgia",
+   "q": "True copies of a listing agreement must be given to the parties:",
+   "sub": "oh/license-law|Records",
+   "subtopic": "Records",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A ground for disciplinary action",
+    "Permitted if the file is closed",
+    "A criminal offence only",
+    "Allowed after one year"
+   ],
+   "concept": "Ohio records",
+   "difficulty": 2,
+   "explain": "ORC 4735.18(A)(24).",
+   "id": "oh-fce627cc",
+   "portion": "georgia",
+   "q": "Failing to produce transaction records for the Division is:",
+   "sub": "oh/license-law|Records",
+   "subtopic": "Records",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three years",
+    "One year",
+    "Five years",
+    "Seven years"
+   ],
+   "concept": "Ohio records",
+   "difficulty": 3,
+   "explain": "ORC 4735.022.",
+   "id": "oh-6db3762c",
+   "portion": "georgia",
+   "q": "An Ohio broker holding documents for an out-of-state commercial broker must retain them for:",
+   "sub": "oh/license-law|Records",
+   "subtopic": "Records",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The seller directly",
+    "The title agency",
+    "The broker with whom they are associated",
+    "The buyer"
+   ],
+   "concept": "Ohio commissions",
+   "difficulty": 1,
+   "explain": "The salesperson acts for and through the broker.",
+   "id": "oh-2d635a95",
+   "portion": "georgia",
+   "q": "An Ohio salesperson is paid for brokerage by:",
+   "sub": "oh/license-law|Commissions",
+   "subtopic": "Commissions",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Race",
+    "Military status",
+    "Religion",
+    "National origin"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 1,
+   "explain": "Ohio adds ancestry and military status (ORC 4112.02(H)).",
+   "id": "oh-9bd9ee14",
+   "portion": "georgia",
+   "q": "Which is protected under Ohio fair housing law but not the federal Fair Housing Act?",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Occupation",
+    "Income level",
+    "Education",
+    "Ancestry"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 2,
+   "explain": "ORC 4112.02(H), as recited in ORC 4735.55(C)(2).",
+   "id": "oh-a4d2ea62",
+   "portion": "georgia",
+   "q": "Ohio's protected classes include:",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The commission rate",
+    "The broker's licence number only",
+    "A fair housing statement, a blockbusting definition and the HUD equal housing logotype",
+    "A mediation clause"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 2,
+   "explain": "ORC 4735.55(C).",
+   "id": "oh-b3c8c2ad",
+   "portion": "georgia",
+   "q": "Every written agency agreement must include:",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Refusing to show homes in an area",
+    "Inducing sales by suggesting people of a protected class are moving in",
+    "Charging different commissions",
+    "Advertising without a licence"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 2,
+   "explain": "The agency agreement must define it and say it is illegal.",
+   "id": "oh-5d3cb509",
+   "portion": "georgia",
+   "q": "Blockbusting means:",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "An oral understanding",
+    "A signed disclosure statement only",
+    "A written agency agreement",
+    "Nothing in particular"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 1,
+   "explain": "ORC 4735.55(B)(1).",
+   "id": "oh-04d4170a",
+   "portion": "georgia",
+   "q": "Before showing residential property on behalf of a seller, an Ohio licensee must have:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer's verbal consent",
+    "A written agency agreement",
+    "The seller's permission",
+    "A signed offer only"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 1,
+   "explain": "ORC 4735.55(B)(2).",
+   "id": "oh-6ce94ef2",
+   "portion": "georgia",
+   "q": "Before making an offer to purchase for a buyer, the licensee must have:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Six months",
+    "Twelve months",
+    "Eighteen months",
+    "Three years"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 2,
+   "explain": "ORC 4735.55(B)(3).",
+   "id": "oh-83a05e6b",
+   "portion": "georgia",
+   "q": "A written agency agreement is required for a tenant's lease exceeding:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "An automatic renewal",
+    "A minimum commission",
+    "An expiration date",
+    "A dispute clause"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 2,
+   "explain": "ORC 4735.55(C)(1).",
+   "id": "oh-a25790cc",
+   "portion": "georgia",
+   "q": "Every Ohio written agency agreement must contain:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At closing",
+    "Within three days of the first showing",
+    "Only if asked",
+    "No later than the preparation of an offer to purchase or lease"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 1,
+   "explain": "ORC 4735.58(A)(1).",
+   "id": "oh-af649ea5",
+   "portion": "georgia",
+   "q": "The purchaser must sign the agency disclosure statement:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "After accepting the offer",
+    "At closing",
+    "When the listing expires",
+    "Before being presented with a written offer"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 2,
+   "explain": "ORC 4735.58(A)(1).",
+   "id": "oh-e7e0d991",
+   "portion": "georgia",
+   "q": "The seller must be presented with the agency disclosure statement:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The Division of Real Estate",
+    "The lender",
+    "The county recorder",
+    "The seller's agent, or the seller if unrepresented"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 2,
+   "explain": "ORC 4735.58(A)(1).",
+   "id": "oh-9a088fc6",
+   "portion": "georgia",
+   "q": "A purchaser's agent must deliver the purchaser's signed statement to:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only to the winning bidder",
+    "In the catalogue alone",
+    "After the hammer falls",
+    "Verbally to the audience before the auction"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 2,
+   "explain": "ORC 4735.58(B).",
+   "id": "oh-669f01e6",
+   "portion": "georgia",
+   "q": "At an auction, the licensee must disclose representing the seller:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A minor paperwork matter",
+    "A criminal offence",
+    "Prima-facie evidence of misconduct",
+    "Grounds for a civil suit only"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 3,
+   "explain": "ORC 4735.58(C).",
+   "id": "oh-6ef051bc",
+   "portion": "georgia",
+   "q": "Evidence that a licensee failed to comply with the disclosure section is:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The broker approves",
+    "One party consents",
+    "It is a commercial deal",
+    "Both parties have full knowledge and consent in writing on the disclosure statement"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 1,
+   "explain": "ORC 4735.71(A).",
+   "id": "oh-e917d384",
+   "portion": "georgia",
+   "q": "Dual agency in Ohio is permitted only where:",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A subagent of the seller",
+    "A brokerage representing both purchaser and seller as clients",
+    "A buyer's agent from another firm",
+    "An appraiser"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 2,
+   "explain": "ORC 4735.70(B).",
+   "id": "oh-95b36502",
+   "portion": "georgia",
+   "q": "Which is a dual agent under Ohio law?",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Never a dual agent",
+    "A dual agent, unless the statutory exception applies",
+    "A subagent",
+    "Outside the agency rules"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 3,
+   "explain": "ORC 4735.70(C).",
+   "id": "oh-f3cb659a",
+   "portion": "georgia",
+   "q": "A management level licensee representing a client in an in-company transaction is:",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only what the client asks",
+    "Nothing beyond the listing data",
+    "Confidential information too",
+    "Material facts they know or should know that are not confidential"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 1,
+   "explain": "ORC 4735.62(F).",
+   "id": "oh-574d9b10",
+   "portion": "georgia",
+   "q": "A licensee representing a client must disclose:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Give an opinion anyway",
+    "Stay silent",
+    "Advise the client to obtain expert advice",
+    "Withdraw from the agency"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 2,
+   "explain": "ORC 4735.62(G).",
+   "id": "oh-e9dc0cee",
+   "portion": "georgia",
+   "q": "Where a material matter needs expertise the licensee lacks, the duty is to:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "May be disclosed once the agency ends",
+    "Must still be kept confidential",
+    "Belongs to the brokerage",
+    "May be used for the new client"
+   ],
+   "concept": "Ohio confidentiality",
+   "difficulty": 3,
+   "explain": "ORC 4735.62(F) and (I).",
+   "id": "oh-56e99424",
+   "portion": "georgia",
+   "q": "Confidential information from a prior agency relationship:",
+   "sub": "oh/agency|Confidentiality",
+   "subtopic": "Confidentiality",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "17",
+    "19",
+    "21",
+    "18"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 1,
+   "explain": "ORC 4735.09.",
+   "id": "oh-f4dda10d",
+   "portion": "georgia",
+   "q": "The minimum age for an Ohio real estate salesperson licence is:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A college degree",
+    "No educational credential",
+    "A high school diploma or certificate of high school equivalence",
+    "A trade certificate"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(F)(5).",
+   "id": "oh-027d867a",
+   "portion": "georgia",
+   "q": "An applicant born after 1950 must hold:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Two personal references",
+    "The recommendation of the broker the applicant will associate with",
+    "A credit report",
+    "A surety bond"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(A).",
+   "id": "oh-4b02419d",
+   "portion": "georgia",
+   "q": "An Ohio salesperson application must be accompanied by:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Three times",
+    "There is no limit",
+    "Five times",
+    "Twice in a year"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(C).",
+   "id": "oh-ca74c5c3",
+   "portion": "georgia",
+   "q": "How many times may an Ohio applicant retake the licensing examination?",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 hours",
+    "40 hours",
+    "20 hours",
+    "10 hours"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 1,
+   "explain": "ORC 4735.09(F)(6)(a).",
+   "id": "oh-ac8a40eb",
+   "portion": "georgia",
+   "q": "Instruction in real estate practice required of an Ohio salesperson applicant is:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "20 hours",
+    "30 hours",
+    "10 hours",
+    "40 hours"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(F)(6)(d). The statute was reduced from 20.",
+   "id": "oh-f715a0eb",
+   "portion": "georgia",
+   "q": "Instruction in real estate finance required is:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "20 hours",
+    "10 hours",
+    "30 hours",
+    "40 hours"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(F)(6)(c).",
+   "id": "oh-730c29d3",
+   "portion": "georgia",
+   "q": "Instruction in real estate appraisal required is:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Appraisal theory",
+    "Municipal, state and federal civil rights law",
+    "Property management",
+    "Business economics"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(F)(6)(b).",
+   "id": "oh-1678c478",
+   "portion": "georgia",
+   "q": "The 40-hour Ohio real estate law course must also cover:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Anyone over 40",
+    "Applicants with a degree",
+    "An applicant already holding an Ohio appraiser licence or certificate",
+    "Military veterans"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(G)(2).",
+   "id": "oh-e0157b8f",
+   "portion": "georgia",
+   "q": "The appraisal instruction requirement does not apply to:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "20 hours within twelve months of licence issue",
+    "30 hours within three years",
+    "10 hours within six months",
+    "45 hours within 18 months"
+   ],
+   "concept": "Ohio post-licensure",
+   "difficulty": 1,
+   "explain": "ORC 4735.09(J).",
+   "id": "oh-99539bdf",
+   "portion": "georgia",
+   "q": "Ohio post-licensure education is:",
+   "sub": "oh/licensing|Post-licensure",
+   "subtopic": "Post-licensure",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "30 hours every three years",
+    "30 hours every year",
+    "14 hours every two years",
+    "8 hours every year"
+   ],
+   "concept": "Ohio continuing education",
+   "difficulty": 1,
+   "explain": "ORC 4735.141(A).",
+   "id": "oh-defe6e97",
+   "portion": "georgia",
+   "q": "Ohio continuing education is:",
+   "sub": "oh/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "31 December each year",
+    "The licensee's birthday three years after initial licensure, and every three years after",
+    "The anniversary of licensure each year",
+    "30 June each year"
+   ],
+   "concept": "Ohio continuing education",
+   "difficulty": 2,
+   "explain": "ORC 4735.141(A).",
+   "id": "oh-7579589f",
+   "portion": "georgia",
+   "q": "The continuing education deadline falls on:",
+   "sub": "oh/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A six-hour appraisal course",
+    "A one-hour maths course",
+    "A three-hour course on the duties of a principal broker",
+    "A fair housing roleplay"
+   ],
+   "concept": "Ohio continuing education",
+   "difficulty": 2,
+   "explain": "ORC 4735.141(A).",
+   "id": "oh-59c4e6d6",
+   "portion": "georgia",
+   "q": "A broker's continuing education must include:",
+   "sub": "oh/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "An annual renewal",
+    "A three-year licence and renewal system",
+    "A two-year renewal",
+    "A five-year renewal"
+   ],
+   "concept": "Ohio renewal",
+   "difficulty": 2,
+   "explain": "ORC 4735.10(A)(2)(b).",
+   "id": "oh-0c0edd98",
+   "portion": "georgia",
+   "q": "Ohio operates:",
+   "sub": "oh/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "It is placed inactive or resigned, revoked, suspended, or expires by law",
+    "Exactly two years from issue",
+    "The licensee moves",
+    "The broker closes"
+   ],
+   "concept": "Ohio renewal",
+   "difficulty": 3,
+   "explain": "ORC 4735.14(A).",
+   "id": "oh-ec316340",
+   "portion": "georgia",
+   "q": "An Ohio licence remains valid until:",
+   "sub": "oh/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Seven members",
+    "Five members appointed by the Governor",
+    "Nine members",
+    "Three members elected by licensees"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 1,
+   "explain": "ORC 4735.03, with the advice and consent of the Senate.",
+   "id": "oh-6ff61158",
+   "portion": "georgia",
+   "q": "The Ohio Real Estate Commission consists of:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Two",
+    "Three",
+    "Four",
+    "Five"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 2,
+   "explain": "With ten years in the business immediately preceding appointment.",
+   "id": "oh-61dbb90e",
+   "portion": "georgia",
+   "q": "How many Commission members must be licensed Ohio brokers?",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Ten years immediately preceding appointment",
+    "Two years",
+    "Five years",
+    "Fifteen years"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 2,
+   "explain": "ORC 4735.03.",
+   "id": "oh-9bc2ea3b",
+   "portion": "georgia",
+   "q": "A broker member must have been licensed in Ohio for:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Three years",
+    "Five years",
+    "Four years",
+    "Six years"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 2,
+   "explain": "Commencing 1 July (ORC 4735.03).",
+   "id": "oh-5729b337",
+   "portion": "georgia",
+   "q": "Commission terms run for:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Two",
+    "Three",
+    "Four",
+    "There is no limit"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 3,
+   "explain": "ORC 4735.03.",
+   "id": "oh-a69129fb",
+   "portion": "georgia",
+   "q": "No more than how many Commission members may belong to one political party?",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The Secretary of State",
+    "The Attorney General",
+    "The Department of Taxation",
+    "The Division of Real Estate & Professional Licensing"
+   ],
+   "concept": "Ohio division",
+   "difficulty": 2,
+   "explain": "Within the Ohio Department of Commerce.",
+   "id": "oh-4109ed62",
+   "portion": "georgia",
+   "q": "Ohio's licence law is administered by:",
+   "sub": "oh/governance|Division",
+   "subtopic": "Division",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$20,000",
+    "$50,000",
+    "$40,000",
+    "$100,000"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 1,
+   "explain": "ORC 4735.12(D).",
+   "id": "oh-323d18ad",
+   "portion": "georgia",
+   "q": "The Ohio Real Estate Recovery Fund pays at most, for any one licensee:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Actual loss",
+    "Direct loss",
+    "Punitive damages, attorney's fees and interest",
+    "The unpaid part of the judgment"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 2,
+   "explain": "ORC 4735.12(B)(2).",
+   "id": "oh-eca6a092",
+   "portion": "georgia",
+   "q": "Which is NOT recoverable from the Recovery Fund?",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any county court",
+    "The Ohio Supreme Court",
+    "The court of common pleas of Franklin county",
+    "The Division's own tribunal"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 2,
+   "explain": "ORC 4735.12(B)(1).",
+   "id": "oh-ada52ee1",
+   "portion": "georgia",
+   "q": "An application for payment from the fund is filed in:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Paid first come, first served",
+    "Returned to the state",
+    "Split equally",
+    "Distributed in proportion to the claims"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 3,
+   "explain": "ORC 4735.12(D).",
+   "id": "oh-14a8d682",
+   "portion": "georgia",
+   "q": "Where valid claims against one licensee exceed the cap, the money is:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$50,000",
+    "$100,000",
+    "$250,000 on the preceding 1 July",
+    "$1,000,000"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 3,
+   "explain": "Up to $10 a year per licensee (ORC 4735.12(A)).",
+   "id": "oh-6e633dbb",
+   "portion": "georgia",
+   "q": "A special assessment at renewal may be imposed when the fund holds less than:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Subject to a three-day hold",
+    "Deemed to meet the conditions imposed by ORC 1349.21",
+    "Void if over $10,000",
+    "Required to be certified"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 3,
+   "explain": "ORC 4735.18(A)(26).",
+   "id": "oh-b19534d4",
+   "portion": "georgia",
+   "q": "Cheques drawn on a broker's special or trust account are:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Never",
+    "Only with Division approval",
+    "Under a written contract with the property owner",
+    "Only if the owner is absent"
+   ],
+   "concept": "Ohio trust accounts",
+   "difficulty": 3,
+   "explain": "ORC 4735.10(A)(2)(e)(i).",
+   "id": "oh-6bad41b8",
+   "portion": "georgia",
+   "q": "A brokerage managing property may exercise signatory authority over an owner's account:",
+   "sub": "oh/license-law|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At the broker's discretion",
+    "Until the listing expires",
+    "In accordance with the terms of the purchase agreement",
+    "Until the lender approves"
+   ],
+   "concept": "Ohio earnest money",
+   "difficulty": 2,
+   "explain": "ORC 4735.24(A).",
+   "id": "oh-7511bd56",
+   "portion": "georgia",
+   "q": "While a purchase agreement is on foot, earnest money in the trust account is held:",
+   "sub": "oh/license-law|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The seller always",
+    "The closing or escrow agent, or as the purchase agreement directs",
+    "The buyer always",
+    "The listing brokerage"
+   ],
+   "concept": "Ohio earnest money",
+   "difficulty": 3,
+   "explain": "ORC 4735.24(A)(1).",
+   "id": "oh-ccb3cf04",
+   "portion": "georgia",
+   "q": "On closing, the broker disburses earnest money to:",
+   "sub": "oh/license-law|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only the out-of-state firm name",
+    "The Division's address",
+    "The licence number of each agent",
+    "The name of the cooperating Ohio broker"
+   ],
+   "concept": "Ohio advertising",
+   "difficulty": 2,
+   "explain": "ORC 4735.022, referring to ORC 4735.16.",
+   "id": "oh-22379981",
+   "portion": "georgia",
+   "q": "An out-of-state commercial broker's Ohio advertising must include:",
+   "sub": "oh/license-law|Advertising",
+   "subtopic": "Advertising",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Legal if the owner occupies the building",
+    "Legal for single-family homes",
+    "Illegal under both Ohio and federal fair housing law",
+    "A civil matter only"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 2,
+   "explain": "ORC 4112.02(H); 42 U.S.C. 3601.",
+   "id": "oh-70705c53",
+   "portion": "georgia",
+   "q": "Refusing to negotiate for the rental of housing because of familial status is:",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "24 C.F.R. 109.30",
+    "Ohio Administrative Code 1301:5",
+    "The Ohio Civil Rights Commission",
+    "The National Association of REALTORS"
+   ],
+   "concept": "Ohio fair housing",
+   "difficulty": 3,
+   "explain": "ORC 4735.55(C)(4).",
+   "id": "oh-06745ea4",
+   "portion": "georgia",
+   "q": "The equal housing opportunity logotype required in an agency agreement comes from:",
+   "sub": "oh/license-law|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Acceptable if emailed later",
+    "Only a civil matter",
+    "Permitted for oral agreements",
+    "A ground for disciplinary action"
+   ],
+   "concept": "Ohio misconduct",
+   "difficulty": 2,
+   "explain": "ORC 4735.18(A)(25).",
+   "id": "oh-45553c09",
+   "portion": "georgia",
+   "q": "Failing to furnish a party a true copy of an agreement they signed is:",
+   "sub": "oh/license-law|Misconduct",
+   "subtopic": "Misconduct",
+   "topic": "oh/license-law"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "ORC 4112.01",
+    "ORC 1349.21",
+    "The Commission's rules alone",
+    "ORC 5302.30"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 3,
+   "explain": "ORC 4735.55(A)(1).",
+   "id": "oh-d88eeb49",
+   "portion": "georgia",
+   "q": "'Residential real property' in the written agency agreement section takes its meaning from:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Has violated ORC 4735.55",
+    "Is fine if the seller agrees later",
+    "Is fine for one showing",
+    "Needs only a disclosure statement"
+   ],
+   "concept": "Ohio written agreements",
+   "difficulty": 2,
+   "explain": "The agreement must precede the showing.",
+   "id": "oh-862ea352",
+   "portion": "georgia",
+   "q": "A licensee who shows a seller's home without a written agency agreement:",
+   "sub": "oh/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The commission split",
+    "The listing price",
+    "The accurate agency relationship",
+    "The closing date"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 2,
+   "explain": "ORC 4735.58(A)(2).",
+   "id": "oh-a6d9c2b5",
+   "portion": "georgia",
+   "q": "The licensee must record on the agency disclosure statement:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "After closing",
+    "Within three days",
+    "Before signing a purchase contract",
+    "Only on request"
+   ],
+   "concept": "Ohio disclosure statement",
+   "difficulty": 3,
+   "explain": "ORC 4735.58(B).",
+   "id": "oh-62bc3083",
+   "portion": "georgia",
+   "q": "At auction, the successful bidder must receive the agency disclosure statement:",
+   "sub": "oh/agency|Disclosure statement",
+   "subtopic": "Disclosure statement",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclose all relevant information needed for an informed decision",
+    "Obtain the broker's signature only",
+    "File a notice with the Division",
+    "Reduce the commission"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 2,
+   "explain": "ORC 4735.71(A).",
+   "id": "oh-1d7f5539",
+   "portion": "georgia",
+   "q": "Before taking consent to dual agency, the licensee must:",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "They personally represent only one side, and another management level licensee is affiliated",
+    "They have never met the parties",
+    "The deal is commercial",
+    "The brokerage is small"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 3,
+   "explain": "ORC 4735.70(C)(1).",
+   "id": "oh-bffc189a",
+   "portion": "georgia",
+   "q": "A management level licensee is NOT a dual agent where:",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is always a dual agent",
+    "Represents only their own interest and is not a dual agent",
+    "May not buy at all",
+    "Must resign the licence"
+   ],
+   "concept": "Ohio dual agency",
+   "difficulty": 3,
+   "explain": "ORC 4735.70(C)(2).",
+   "id": "oh-3dce8dcc",
+   "portion": "georgia",
+   "q": "A management level licensee who is themselves the buyer in an in-company deal:",
+   "sub": "oh/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Follow all instructions without exception",
+    "Act on the broker's instructions only",
+    "Decide what is best regardless",
+    "Follow the client's lawful instructions"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 2,
+   "explain": "ORC 4735.62(C).",
+   "id": "oh-7a162c0c",
+   "portion": "georgia",
+   "q": "A licensee representing a client must:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Annual",
+    "Only at closing",
+    "Timely",
+    "On request alone"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 2,
+   "explain": "ORC 4735.62(H).",
+   "id": "oh-e5589485",
+   "portion": "georgia",
+   "q": "Accounting for money in which the client has an interest must be:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A courtesy only",
+    "A statutory fiduciary duty",
+    "Required only of brokers",
+    "Optional if the client agrees"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 3,
+   "explain": "ORC 4735.62(B).",
+   "id": "oh-817cd04e",
+   "portion": "georgia",
+   "q": "Performing the terms of a written agency agreement is:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Separate from agency duties",
+    "The broker's duty alone",
+    "Part of the licensee's fiduciary duty to the client",
+    "Only a federal matter"
+   ],
+   "concept": "Ohio fiduciary duties",
+   "difficulty": 2,
+   "explain": "ORC 4735.62(E).",
+   "id": "oh-ca12d758",
+   "portion": "georgia",
+   "q": "Complying with fair housing law is:",
+   "sub": "oh/agency|Fiduciary duties",
+   "subtopic": "Fiduciary duties",
+   "topic": "oh/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Is barred for life",
+    "Is unaffected",
+    "Must wait ten years",
+    "May still qualify if at least two years have passed and the superintendent is satisfied"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(F)(2)(b).",
+   "id": "oh-b73688e1",
+   "portion": "georgia",
+   "q": "An applicant adjudged to have violated civil rights laws relevant to real estate:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "$50",
+    "$81",
+    "$100",
+    "$150"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(B); it includes the initial year of the licensing period.",
+   "id": "oh-9ac8ee61",
+   "portion": "georgia",
+   "q": "The salesperson application fee under the statute is:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The applicant's first birthday after the licence is issued",
+    "31 December",
+    "The anniversary of issue",
+    "30 June"
+   ],
+   "concept": "Ohio qualifying",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(B).",
+   "id": "oh-8aa40f68",
+   "portion": "georgia",
+   "q": "The initial year of an Ohio licensing period ends on:",
+   "sub": "oh/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any licensed broker",
+    "A Division employee",
+    "A sitting judge",
+    "A member of the faculty of an accredited law school"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(F)(6)(b).",
+   "id": "oh-c3033aa2",
+   "portion": "georgia",
+   "q": "The Ohio real estate law instruction should, if feasible, be taught by:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A fair housing lawyer",
+    "A real estate broker",
+    "A university professor",
+    "A knowledgeable staff member of the Ohio Civil Rights Commission"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(F)(6)(b).",
+   "id": "oh-1249aabd",
+   "portion": "georgia",
+   "q": "The civil rights instruction should, if feasible, be taught by:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is excused from all education",
+    "Has no exemption",
+    "Is excused from the 40-hour law and civil rights course",
+    "Must take double the hours"
+   ],
+   "concept": "Ohio education",
+   "difficulty": 3,
+   "explain": "ORC 4735.09(F)(6)(b).",
+   "id": "oh-42f24bfd",
+   "portion": "georgia",
+   "q": "An applicant admitted to practise before the supreme court:",
+   "sub": "oh/licensing|Education",
+   "subtopic": "Education",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Appraisal theory only",
+    "Construction methods",
+    "Mortgage underwriting only",
+    "Contract law and fiduciary responsibility"
+   ],
+   "concept": "Ohio post-licensure",
+   "difficulty": 2,
+   "explain": "ORC 4735.09(J).",
+   "id": "oh-3d106e3f",
+   "portion": "georgia",
+   "q": "Ohio post-licensure instruction must cover, among other things:",
+   "sub": "oh/licensing|Post-licensure",
+   "subtopic": "Post-licensure",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Six months before",
+    "Two months before the filing deadline",
+    "One year before",
+    "There is no limit"
+   ],
+   "concept": "Ohio renewal",
+   "difficulty": 3,
+   "explain": "ORC 4735.14(B).",
+   "id": "oh-8639dc73",
+   "portion": "georgia",
+   "q": "A licensee may not file a notice of renewal earlier than:",
+   "sub": "oh/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "By post one year ahead",
+    "Two months before the filing deadline, by email",
+    "Only on request",
+    "At the start of each year"
+   ],
+   "concept": "Ohio renewal",
+   "difficulty": 3,
+   "explain": "ORC 4735.14(B).",
+   "id": "oh-3576f98d",
+   "portion": "georgia",
+   "q": "The renewal notice is sent by the superintendent:",
+   "sub": "oh/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Is excused from the continuing education requirement while resigned",
+    "Must still complete 30 hours",
+    "Loses the licence permanently",
+    "Must retake the examination"
+   ],
+   "concept": "Ohio status",
+   "difficulty": 2,
+   "explain": "ORC 4735.141(A), referring to ORC 4735.142.",
+   "id": "oh-33a8c8ab",
+   "portion": "georgia",
+   "q": "A licensee who places the licence in resigned status:",
+   "sub": "oh/licensing|Status",
+   "subtopic": "Status",
+   "topic": "oh/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any state board",
+    "The real estate appraiser board",
+    "A local zoning board",
+    "A school board"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 3,
+   "explain": "ORC 4735.03.",
+   "id": "oh-fd75c8ce",
+   "portion": "georgia",
+   "q": "A Commission member may not concurrently serve on:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Post a bond",
+    "Resign any brokerage",
+    "Subscribe to and file the constitutional oath of office with the secretary of state",
+    "Pass the licensing exam again"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 3,
+   "explain": "ORC 4735.03.",
+   "id": "oh-f987b06f",
+   "portion": "georgia",
+   "q": "Before taking office, each Commission member must:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The first day of July",
+    "1 January",
+    "The date of appointment",
+    "The first Monday of the year"
+   ],
+   "concept": "Ohio commission",
+   "difficulty": 2,
+   "explain": "ORC 4735.03.",
+   "id": "oh-33d37366",
+   "portion": "georgia",
+   "q": "Commission terms commence on:",
+   "sub": "oh/governance|Commission",
+   "subtopic": "Commission",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any unpaid debt",
+    "A Division complaint alone",
+    "A final judgment for conduct violating chapter 4735 in a licensed act",
+    "An arbitration award only"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 2,
+   "explain": "ORC 4735.12(B)(1).",
+   "id": "oh-d8918cea",
+   "portion": "georgia",
+   "q": "A claim on the Recovery Fund must rest on:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Always",
+    "At the superintendent's discretion",
+    "Never",
+    "Only if under $1,000"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 3,
+   "explain": "ORC 4735.12(B)(2).",
+   "id": "oh-b1f0b8e5",
+   "portion": "georgia",
+   "q": "Court costs may be recovered from the fund:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Is again $40,000, but only for later transactions",
+    "Is exhausted permanently",
+    "Doubles",
+    "Is reduced to $20,000"
+   ],
+   "concept": "Ohio recovery fund",
+   "difficulty": 3,
+   "explain": "ORC 4735.12(D).",
+   "id": "oh-8084ce0d",
+   "portion": "georgia",
+   "q": "If a licensee's licence is reactivated after a fund payment, the fund's liability:",
+   "sub": "oh/governance|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "oh/governance"
+  }
+ ],
+ "code": "OH",
+ "diffs": {
+  "national/agency": [
+   "Ohio requires a WRITTEN agency agreement before advertising or showing for a seller, before offering to purchase for a buyer, and before offering to lease for a tenant for more than eighteen months (ORC 4735.55).",
+   "The agency disclosure statement is signed by the purchaser no later than the preparation of an offer, and by the seller before a written offer is presented (ORC 4735.58).",
+   "Dual agency is allowed only with both parties' full knowledge and WRITTEN consent on that statement (ORC 4735.71)."
+  ],
+  "national/contracts": [
+   "Copies of every listing and agreement go to all parties AT THE TIME EACH SIGNS (ORC 4735.18(A)(25)).",
+   "Disputed earnest money may be released only on written instructions signed by both parties, or a final court order (ORC 4735.24)."
+  ],
+  "national/practice": [
+   "An Ohio broker's sales trust account must be NONINTEREST-BEARING and at an institution located in Ohio; the property management account is separate and may earn interest for the owners (ORC 4735.18(A)(26)-(27)).",
+   "Ohio fair housing adds ANCESTRY and MILITARY STATUS to the federal classes (ORC 4112.02(H)).",
+   "The Real Estate Recovery Fund pays at most $40,000 for any one licensee, and never punitive damages, attorney's fees or interest (ORC 4735.12)."
+  ]
+ },
+ "name": "Ohio",
+ "pass": 0.7,
+ "portions": {
+  "georgia": {
+   "blurb": "Chapter 4735, the Commission's rules, agency, and Ohio fair housing.",
+   "minutes": 60,
+   "name": "Ohio state",
+   "scored": 40
+  },
+  "national": {
+   "minutes": 120,
+   "scored": 80
+  }
+ },
+ "regulator": "Ohio Division of Real Estate",
+ "sources": [
+  {
+   "by": "Ohio General Assembly",
+   "name": "Ohio Revised Code chapter 4735 (Real Estate Brokers)",
+   "note": "The licence law itself, current text. Every licensing, agency, trust account and discipline rule here was read from it.",
+   "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4735"
+  },
+  {
+   "by": "Ohio Real Estate Commission",
+   "name": "Ohio Administrative Code 1301:5",
+   "note": "The Commission's rules, adopted under ORC 4735.10.",
+   "url": "https://codes.ohio.gov/oac/1301:5"
+  },
+  {
+   "by": "PSI Services and the Ohio Division of Real Estate",
+   "name": "Ohio Real Estate Candidate Information Bulletin",
+   "note": "The blueprint: 80 national and 40 state items, 70% for a salesperson, and the four state categories with their counts.",
+   "url": "https://test-takers.psiexams.com/ohre"
+  }
+ ],
+ "study": {
+  "oh/agency": {
+   "blurb": "Agency agreements, the disclosure statement, dual agency, confidentiality.",
+   "counts_on_exam": true,
+   "exam_questions": 14,
+   "examples": [
+    {
+     "k": "Both the written agreement and the signed disclosure must be in place before that offer.",
+     "s": "A licensee shows a buyer six houses on a handshake, then writes an offer.",
+     "t": "The offer that came too soon",
+     "w": [
+      "ORC 4735.55(B)(2) requires a written agency agreement before making an offer for a purchaser.",
+      "The agency disclosure statement must also be signed by then."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage relationships",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "An oral understanding",
+        "A signed disclosure statement only",
+        "A written agency agreement"
+       ],
+       "q": "Before showing a house for a seller, an Ohio licensee must have:",
+       "why": "ORC 4735.55(B)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "More than eighteen months",
+        "Any length",
+        "More than one year",
+        "More than three years"
+       ],
+       "q": "A written agency agreement is needed for a tenant's lease of:",
+       "why": "ORC 4735.55(B)(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only the buyer's verbal consent",
+        "The seller's permission",
+        "A written agency agreement"
+       ],
+       "q": "Before writing an offer for a buyer, the licensee must have:",
+       "why": "ORC 4735.55(B)(2)."
+      }
+     ],
+     "h": "A written agency agreement comes first (ORC 4735.55)",
+     "l": [
+      "ADVERTISING OR SHOWING residential real property on behalf of a SELLER;",
+      "Making an OFFER TO PURCHASE residential real property on behalf of a PURCHASER;",
+      "Making an offer to LEASE residential premises on behalf of a TENANT for a term EXCEEDING EIGHTEEN MONTHS."
+     ],
+     "p": [
+      "A licensee must enter into a WRITTEN agency agreement BEFORE doing any of these:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A minimum commission",
+        "An expiration date",
+        "A guaranteed sale price"
+       ],
+       "q": "Every Ohio written agency agreement must state:",
+       "why": "ORC 4735.55(C)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Blockbusting",
+        "Steering",
+        "Puffing"
+       ],
+       "q": "The agreement must include a definition of:",
+       "why": "ORC 4735.55(C)(3)."
+      }
+     ],
+     "h": "What the agreement must contain",
+     "l": [
+      "An EXPIRATION DATE.",
+      "A statement that refusing housing on the protected grounds is illegal under Ohio and federal fair housing law.",
+      "A statement DEFINING BLOCKBUSTING and saying it is illegal.",
+      "A copy of the HUD EQUAL HOUSING OPPORTUNITY LOGOTYPE."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "At closing",
+        "No later than the preparation of an offer",
+        "Within three days of the first showing"
+       ],
+       "q": "The purchaser signs the agency disclosure statement:",
+       "why": "ORC 4735.58(A)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only to the winning bidder",
+        "In the sale catalogue only",
+        "Verbally to the audience before the auction"
+       ],
+       "q": "At an auction, the licensee must disclose representation of the seller:",
+       "why": "ORC 4735.58(B)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A minor paperwork issue",
+        "Prima-facie evidence of misconduct",
+        "A criminal offence"
+       ],
+       "q": "Failing to comply with the disclosure section is:",
+       "why": "ORC 4735.58(C)."
+      }
+     ],
+     "h": "The agency disclosure statement (ORC 4735.58)",
+     "l": [
+      "A PURCHASER'S agent, or a seller's subagent working with a purchaser, presents the statement to the PURCHASER and asks them to sign and date it NO LATER THAN THE PREPARATION OF AN OFFER to purchase or lease.",
+      "That signed statement is then delivered to the seller's agent, or to the seller if unrepresented.",
+      "BEFORE presenting the seller with a written offer, the seller's agent - or the purchaser's agent if the seller has none - presents the statement to the SELLER to sign and date.",
+      "The licensee must indicate the ACCURATE agency relationship on the statement.",
+      "AT AUCTION: the licensee must VERBALLY disclose to the audience, before the auction, that they represent the seller, and give the statement to the successful bidder before they sign a purchase contract.",
+      "Evidence of failing to comply is PRIMA-FACIE EVIDENCE OF MISCONDUCT under ORC 4735.18(A)(6)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Verbal consent",
+        "Full knowledge and written consent from both parties on the disclosure statement",
+        "Only the broker's approval"
+       ],
+       "q": "Dual agency in Ohio requires:",
+       "why": "ORC 4735.71(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Two separate agencies",
+        "A dual agent",
+        "Not an agency at all"
+       ],
+       "q": "A brokerage representing both buyer and seller is:",
+       "why": "ORC 4735.70(B)."
+      }
+     ],
+     "h": "Dual agency (ORC 4735.70, 4735.71)",
+     "l": [
+      "A DUAL AGENT is: a licensee representing both purchaser and seller as clients in the same transaction; a BROKERAGE representing both; or a MANAGEMENT LEVEL licensee representing a client in an in-company transaction.",
+      "A management level licensee is NOT a dual agent where another management level licensee is affiliated AND either that licensee personally represents one side only, or is themselves the buyer or seller representing only their own interest.",
+      "Dual agency is permitted ONLY where BOTH seller and purchaser have FULL KNOWLEDGE of the dual representation and CONSENT IN WRITING on the agency disclosure statement.",
+      "Before taking consent, the licensee must disclose to both parties all relevant information needed for an informed decision."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Only what the client asks about",
+        "Material facts they know or should know, that are not confidential",
+        "Nothing beyond the listing data"
+       ],
+       "q": "A licensee must disclose to the client:",
+       "why": "ORC 4735.62(F)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Advise the client to obtain expert advice",
+        "Give an opinion anyway",
+        "Say nothing"
+       ],
+       "q": "Where a material matter needs expertise the licensee lacks, the duty is to:",
+       "why": "ORC 4735.62(G)."
+      }
+     ],
+     "h": "Fiduciary duties (ORC 4735.62)",
+     "l": [
+      "Exercising reasonable skill and care;",
+      "Performing the terms of any written agency agreement;",
+      "Following the client's lawful instructions;",
+      "Acting LOYALLY to the client's interest;",
+      "Complying with Ohio and federal fair housing law;",
+      "Disclosing MATERIAL FACTS of the transaction the licensee knows or should know, that are not confidential under a current or prior agency;",
+      "Advising the client to get EXPERT ADVICE on material matters where appropriate;",
+      "Accounting in a timely manner for money and property;",
+      "Keeping CONFIDENTIAL INFORMATION confidential, unless disclosure is permitted."
+     ],
+     "p": [
+      "Representing a client, a licensee is a FIDUCIARY and must use best efforts to further the client's interest, including:"
+     ]
+    }
+   ],
+   "summary": "Fourteen items. Ohio puts agency in writing early: a written agreement before you show a house for a seller or write an offer for a buyer, and an agency disclosure statement signed before the offer goes in.",
+   "topic": "oh/agency",
+   "traps": [
+    "Written agreement BEFORE showing for a seller or offering for a buyer - not after.",
+    "Eighteen months is the lease threshold, not twelve.",
+    "The purchaser signs the disclosure statement by the time the OFFER is prepared.",
+    "Dual agency needs written consent ON THE AGENCY DISCLOSURE STATEMENT.",
+    "Confidential information survives the end of the agency."
+   ],
+   "vocab": [
+    [
+     "Agency disclosure statement",
+     "The ORC 4735.57 form naming the relationships."
+    ],
+    [
+     "Dual agent",
+     "A licensee, brokerage or management level licensee on both sides."
+    ],
+    [
+     "Management level licensee",
+     "A licensee with supervisory authority in the brokerage."
+    ],
+    [
+     "In-company transaction",
+     "Both sides represented within one brokerage."
+    ],
+    [
+     "Subagent",
+     "An agent working for the seller through the listing broker."
+    ]
+   ]
+  },
+  "oh/governance": {
+   "blurb": "The Commission, the Division, discipline and the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [
+    {
+     "k": "$40,000 is shared in proportion to their claims.",
+     "s": "Three clients hold judgments totalling $70,000 against the same licensee.",
+     "t": "Three victims, one agent",
+     "w": [
+      "The fund's liability is capped at $40,000 for any one licensee.",
+      "Valid claims above that are paid pro rata."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "State governance",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Seven members",
+        "Nine members",
+        "Five members",
+        "Three members"
+       ],
+       "q": "The Ohio Real Estate Commission has:",
+       "why": "ORC 4735.03."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Ten years immediately preceding appointment",
+        "Five years",
+        "Two years"
+       ],
+       "q": "Four Commission members must have been licensed Ohio brokers for:",
+       "why": "ORC 4735.03."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Five years",
+        "Three years",
+        "Four years"
+       ],
+       "q": "Commission terms run for:",
+       "why": "ORC 4735.03."
+      }
+     ],
+     "h": "The Ohio Real Estate Commission (ORC 4735.03)",
+     "l": [
+      "FIVE members, appointed by the GOVERNOR with the advice and consent of the SENATE.",
+      "FOUR must have been engaged in the real estate business as LICENSED REAL ESTATE BROKERS in Ohio for TEN YEARS immediately preceding appointment.",
+      "ONE represents the PUBLIC.",
+      "Terms are FIVE YEARS, running 1 July to 30 June.",
+      "No more than THREE members may belong to any one political party.",
+      "No member may concurrently sit on the real estate appraiser board."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The Commission's own staff",
+        "A national testing service under agreement with the superintendent",
+        "Each real estate school"
+       ],
+       "q": "Ohio's examinations are delivered by:",
+       "why": "ORC 4735.07(A), 4735.09(D)."
+      }
+     ],
+     "h": "The Division and the superintendent",
+     "l": [
+      "The DIVISION OF REAL ESTATE & PROFESSIONAL LICENSING, inside the Ohio Department of Commerce, administers the licence law.",
+      "The SUPERINTENDENT OF REAL ESTATE issues licences, investigates complaints and may enter agreements with a national testing service to deliver the examinations.",
+      "The Commission adopts the rules in Ohio Administrative Code 1301:5 under ORC 4735.10."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$20,000",
+        "$40,000",
+        "$50,000",
+        "$100,000"
+       ],
+       "q": "The Ohio Real Estate Recovery Fund pays at most, for any one licensee:",
+       "why": "ORC 4735.12(D)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Actual loss",
+        "Direct loss",
+        "Punitive damages and attorney's fees"
+       ],
+       "q": "Which is NOT recoverable from the fund?",
+       "why": "ORC 4735.12(B)(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any county court",
+        "The Ohio Supreme Court",
+        "The court of common pleas of Franklin county"
+       ],
+       "q": "An application for payment is filed in:",
+       "why": "ORC 4735.12(B)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Distributed in proportion to the claims",
+        "Paid first come, first served",
+        "Returned to the state"
+       ],
+       "q": "Where claims exceed the cap for one licensee, the money is:",
+       "why": "ORC 4735.12(D)."
+      }
+     ],
+     "h": "The Real Estate Recovery Fund (ORC 4735.12)",
+     "l": [
+      "A person who obtains a FINAL JUDGMENT against a licensee, on grounds of conduct violating chapter 4735 or its rules and tied to an act only a licensee may perform, may apply to the COURT OF COMMON PLEAS OF FRANKLIN COUNTY for payment from the fund.",
+      "The fund pays the ACTUAL AND DIRECT LOSS that remains unpaid.",
+      "PUNITIVE DAMAGES, ATTORNEY'S FEES and INTEREST are NOT recoverable. COURT COSTS may be, at the superintendent's discretion.",
+      "The liability of the fund may not exceed $40,000 FOR ANY ONE LICENSEE. Where valid claims exceed that, the $40,000 is distributed in proportion to the claims.",
+      "A special assessment of up to $10 a year may be charged at renewal if the fund holds less than $250,000 on the preceding 1 July."
+     ]
+    }
+   ],
+   "summary": "Four items. Five people on the Commission, a Division that does the work, and a fund that pays a wronged consumer up to forty thousand dollars for any one licensee.",
+   "topic": "oh/governance",
+   "traps": [
+    "FIVE Commission members: four brokers of ten years, one public member.",
+    "$40,000 per LICENSEE - not per transaction.",
+    "No punitive damages, attorney's fees or interest from the fund; court costs only at discretion.",
+    "Claims go to Franklin county, wherever the deal happened."
+   ],
+   "vocab": [
+    [
+     "Superintendent of Real Estate",
+     "The head of the Division administering chapter 4735."
+    ],
+    [
+     "Recovery Fund",
+     "The state fund paying unsatisfied judgments against licensees."
+    ],
+    [
+     "Court of common pleas",
+     "The Ohio trial court; Franklin county hears fund claims."
+    ],
+    [
+     "Special assessment",
+     "The renewal surcharge that tops the fund up."
+    ]
+   ]
+  },
+  "oh/license-law": {
+   "blurb": "Advertising, commissions, records, trust accounts, listings, fair housing.",
+   "counts_on_exam": true,
+   "exam_questions": 16,
+   "examples": [
+    {
+     "k": "Hold the money until both sign, or a court decides.",
+     "s": "A deal collapses and buyer and seller each demand the $5,000 earnest money.",
+     "t": "The stand-off",
+     "w": [
+      "The broker may not simply pick a side.",
+      "Release needs written instructions signed by BOTH, or a final court order."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "License law & Commission rules",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Interest-bearing for the broker's benefit",
+        "Held at any bank in the country",
+        "Noninterest-bearing and separate from the broker's own accounts"
+       ],
+       "q": "A broker's sales trust account in Ohio must be:",
+       "why": "ORC 4735.18(A)(26)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The property owners, pro rata",
+        "The broker",
+        "The Division",
+        "The tenants"
+       ],
+       "q": "Interest earned on a property management trust account is paid to:",
+       "why": "ORC 4735.10(A)(2)(e)(ii)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Posted in the office",
+        "Filed with the county",
+        "Submitted in writing to the superintendent"
+       ],
+       "q": "Details of the trust account depository must be:",
+       "why": "ORC 4735.18(A)(26)."
+      }
+     ],
+     "h": "Trust and special accounts",
+     "l": [
+      "A broker must maintain at all times a SPECIAL OR TRUST bank account at a state or federally chartered institution LOCATED IN OHIO.",
+      "That account must be NONINTEREST-BEARING, and separate and distinct from any personal or other account of the broker.",
+      "It holds all escrow funds, security deposits and other money received by the broker in a FIDUCIARY CAPACITY.",
+      "The name, account number and location of the depository must be submitted IN WRITING to the superintendent.",
+      "A broker managing property for others keeps a SEPARATE property management account, used exclusively for rents, security deposits and escrow funds from that work. That account MAY earn interest, which is paid to the property owners PRO RATA.",
+      "Failing to maintain either account is a ground for discipline (ORC 4735.18(A)(26) and (27))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The buyer's demand alone",
+        "Written instructions signed by both parties",
+        "The listing agent's say-so"
+       ],
+       "q": "A broker may release disputed earnest money on:",
+       "why": "ORC 4735.24(A)(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A verbal agreement",
+        "A final court order",
+        "The seller's written demand alone"
+       ],
+       "q": "Absent agreement, a broker may also disburse on:",
+       "why": "ORC 4735.24(A)(3)."
+      }
+     ],
+     "h": "Earnest money (ORC 4735.24)",
+     "l": [
+      "The transaction CLOSES and the broker disburses to the closing or escrow agent, or as the agreement directs.",
+      "BOTH PARTIES give the broker separate WRITTEN instructions they have both signed, specifying disbursement, and the broker follows them.",
+      "The broker receives a copy of a FINAL COURT ORDER saying who gets it, and follows it.",
+      "The transaction is cancelled by the record owner of residential property under ORC 5301.95(C)(1).",
+      "It becomes UNCLAIMED FUNDS, and after the required notice the broker reports and remits it to the director of commerce."
+     ],
+     "p": [
+      "Once earnest money from a purchase agreement is in the broker's trust account, the broker holds it IN ACCORDANCE WITH THE TERMS OF THE PURCHASE AGREEMENT until one of these happens:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Within three days",
+        "At the time each party signs",
+        "At closing"
+       ],
+       "q": "Copies of a listing agreement must be given to the parties:",
+       "why": "ORC 4735.18(A)(25)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The associated broker",
+        "The seller directly",
+        "The title agency"
+       ],
+       "q": "A salesperson is paid for brokerage by:",
+       "why": "The salesperson acts for the broker."
+      }
+     ],
+     "h": "Records, copies and commissions",
+     "l": [
+      "A broker must keep the records of their transactions, and failing to produce them is a ground for discipline (ORC 4735.18(A)(24)).",
+      "A licensee must furnish ALL PARTIES true copies of all listings and other agreements to which they are a party, AT THE TIME EACH PARTY SIGNS them (ORC 4735.18(A)(25)).",
+      "A salesperson's compensation for brokerage comes through the broker with whom they are associated, not directly from a party.",
+      "Records relating to an out-of-state commercial broker's Ohio transaction are kept by the Ohio broker for THREE YEARS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Race",
+        "Military status",
+        "Religion",
+        "National origin"
+       ],
+       "q": "Which is protected under Ohio's fair housing law but not the federal Fair Housing Act?",
+       "why": "Ohio adds ancestry and military status."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A fair housing statement, a blockbusting definition and the HUD equal housing logotype",
+        "The commission rate",
+        "The broker's licence number only"
+       ],
+       "q": "Every written agency agreement must contain:",
+       "why": "ORC 4735.55(C)."
+      }
+     ],
+     "h": "Ohio fair housing",
+     "l": [
+      "RACE",
+      "COLOR",
+      "RELIGION",
+      "SEX",
+      "FAMILIAL STATUS",
+      "ANCESTRY",
+      "MILITARY STATUS",
+      "DISABILITY",
+      "NATIONAL ORIGIN"
+     ],
+     "p": [
+      "Ohio's fair housing law, ORC 4112.02(H), makes it illegal to refuse to sell, transfer, assign, rent, lease, sublease or finance housing, to refuse to negotiate, or otherwise to deny or make housing unavailable because of:"
+     ]
+    }
+   ],
+   "summary": "Sixteen of the forty state items, the biggest block. Most of it is what a broker must keep separate, keep on file, and keep out of an advertisement - plus Ohio's fair housing list, which is longer than the federal one.",
+   "topic": "oh/license-law",
+   "traps": [
+    "The SALES trust account is noninterest-bearing. The PROPERTY MANAGEMENT account may earn interest, paid to owners.",
+    "Copies go to the parties AT SIGNING, not later.",
+    "Ohio fair housing adds ANCESTRY and MILITARY STATUS to the federal list.",
+    "Disputed earnest money needs both parties' signed written instructions, or a court order."
+   ],
+   "vocab": [
+    [
+     "Special or trust account",
+     "The noninterest-bearing account holding others' money."
+    ],
+    [
+     "Fiduciary capacity",
+     "Holding money or property for another's benefit."
+    ],
+    [
+     "Blockbusting",
+     "Inducing sales by suggesting a protected group is moving in."
+    ],
+    [
+     "Superintendent",
+     "The head of the Division of Real Estate & Professional Licensing."
+    ],
+    [
+     "Unclaimed funds",
+     "Money reported and remitted to the director of commerce."
+    ]
+   ]
+  },
+  "oh/licensing": {
+   "blurb": "Who needs a licence, the education, renewal and status changes.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "17",
+        "19",
+        "21",
+        "18"
+       ],
+       "q": "The minimum age for an Ohio salesperson licence is:",
+       "why": "ORC 4735.09."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Two character references",
+        "A credit report",
+        "The recommendation of the broker the applicant will associate with"
+       ],
+       "q": "An Ohio application must be accompanied by:",
+       "why": "ORC 4735.09(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "There is no limit",
+        "Three times",
+        "Five times"
+       ],
+       "q": "How many times may an Ohio applicant retake the examination?",
+       "why": "ORC 4735.09(C)."
+      }
+     ],
+     "h": "Qualifying",
+     "l": [
+      "Be at least EIGHTEEN.",
+      "If born after 1950, hold a HIGH SCHOOL DIPLOMA or a certificate of high school equivalence.",
+      "Be HONEST AND TRUTHFUL, with no disqualifying offence and no unresolved civil rights adjudication.",
+      "Be recommended by the broker with whom the applicant is or will be associated, certifying honesty and truthfulness.",
+      "Pass the examination. There is NO LIMIT on the number of retakes (ORC 4735.09(C))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "30 hours",
+        "40 hours",
+        "20 hours",
+        "10 hours"
+       ],
+       "q": "Instruction in real estate practice required of an Ohio salesperson applicant is:",
+       "why": "ORC 4735.09(F)(6)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "10 hours",
+        "20 hours",
+        "30 hours",
+        "40 hours"
+       ],
+       "q": "Instruction in real estate finance required is:",
+       "why": "ORC 4735.09(F)(6)(d)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Appraisal theory",
+        "Municipal, state and federal civil rights law",
+        "Property management"
+       ],
+       "q": "The 40-hour law course must also cover:",
+       "why": "ORC 4735.09(F)(6)(b)."
+      }
+     ],
+     "h": "The education, as the statute now reads",
+     "l": [
+      "40 HOURS of instruction in REAL ESTATE PRACTICE;",
+      "40 HOURS covering OHIO REAL ESTATE LAW together with municipal, state and federal CIVIL RIGHTS law, new case law on housing discrimination, desegregation issues and methods of eliminating the effects of prior discrimination;",
+      "10 HOURS in REAL ESTATE APPRAISAL;",
+      "10 HOURS in REAL ESTATE FINANCE.",
+      "That is 100 hours in all, at an institution of higher education, by classroom or distance learning (ORC 4735.09(F)(6)).",
+      "The Ohio real estate law instruction should, if feasible, be taught by a law school faculty member, and the civil rights instruction by a knowledgeable Ohio Civil Rights Commission staff member.",
+      "The appraisal course does not apply to an applicant already holding an Ohio appraiser licence or certificate."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "20 hours within twelve months of licence issue",
+        "30 hours within three years",
+        "10 hours within six months"
+       ],
+       "q": "Post-licensure education in Ohio is:",
+       "why": "ORC 4735.09(J)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "30 hours every year",
+        "14 hours every two years",
+        "30 hours every three years"
+       ],
+       "q": "Continuing education in Ohio is:",
+       "why": "ORC 4735.141(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A six-hour appraisal course",
+        "A three-hour course on the duties of a principal broker",
+        "A one-hour maths course"
+       ],
+       "q": "A broker's continuing education must include:",
+       "why": "ORC 4735.141(A)."
+      }
+     ],
+     "h": "After licensure",
+     "l": [
+      "POST-LICENSURE: 20 HOURS of instruction, completed NOT LATER THAN TWELVE MONTHS after the date the salesperson licence is issued, in schools and institutions approved by the Commission (ORC 4735.09(J)).",
+      "It covers current practice in commercial real estate, property management, short sales and land contracts; contract law; federal and state programmes; economic conditions; and fiduciary responsibility.",
+      "CONTINUING EDUCATION: 30 HOURS, on or before the licensee's birthday THREE YEARS after initial licensure, and every three years after that (ORC 4735.141).",
+      "A broker, broker on deposit or management level licensee must include a THREE-HOUR course on the duties of a principal broker and operating a brokerage.",
+      "Ohio runs a THREE-YEAR licence and renewal system (ORC 4735.10(A)(2)(b)).",
+      "A licence stays valid until placed inactive or resigned, revoked, suspended, or expired by law (ORC 4735.14(A))."
+     ]
+    }
+   ],
+   "summary": "Six items. The hours changed recently: Ohio's prelicensing requirement is now 40 + 40 + 10 + 10, then 20 hours of post-licensure inside a year, then 30 hours every three years.",
+   "topic": "oh/licensing",
+   "traps": [
+    "40 + 40 + 10 + 10 = 100 hours. Older guides say 120 - the appraisal and finance courses were cut to 10 each.",
+    "20 hours of post-licensure within TWELVE MONTHS, then 30 hours every THREE YEARS.",
+    "The CE clock runs to the licensee's BIRTHDAY three years after initial licensure.",
+    "No limit on exam retakes."
+   ],
+   "vocab": [
+    [
+     "Post-licensure education",
+     "The 20 hours due within a year of licensure."
+    ],
+    [
+     "Broker on deposit",
+     "A broker whose licence is held on deposit with the Division."
+    ],
+    [
+     "Management level licensee",
+     "A licensee with supervisory authority in a brokerage."
+    ],
+    [
+     "Resigned status",
+     "A licence voluntarily given up under ORC 4735.142."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Advertising, commissions, records, trust accounts, listings, fair housing.",
+   "counts_on_exam": true,
+   "exam_questions": 16,
+   "key": "oh/license-law",
+   "label": "License law & Commission rules",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Agency agreements, the disclosure statement, dual agency, confidentiality.",
+   "counts_on_exam": true,
+   "exam_questions": 14,
+   "key": "oh/agency",
+   "label": "Brokerage relationships",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a licence, the education, renewal and status changes.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "oh/licensing",
+   "label": "Licensing requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Commission, the Division, discipline and the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "oh/governance",
+   "label": "State governance",
+   "portion": "georgia"
+  }
+ ]
+}
