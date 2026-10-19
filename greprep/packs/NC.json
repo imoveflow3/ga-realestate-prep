@@ -1,0 +1,3115 @@
+{
+ "abbr": "NC",
+ "bank": [
+  {
+   "answer": 3,
+   "choices": [
+    "At closing",
+    "When an offer is written",
+    "Within three days of a showing",
+    "At first substantial contact"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 1,
+   "explain": "Rule A.0104.",
+   "id": "nc-27b93758",
+   "portion": "georgia",
+   "q": "The Working With Real Estate Agents disclosure must be provided:",
+   "sub": "nc/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not satisfy the rule; the broker must review it and reach agreement",
+    "Satisfies the rule",
+    "Satisfies it if the buyer signs",
+    "Is required only for sellers"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "Rule A.0104.",
+   "id": "nc-3c915327",
+   "portion": "georgia",
+   "q": "Simply handing the disclosure form to a prospective buyer:",
+   "sub": "nc/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Their name and licence number",
+    "Their broker-in-charge's signature",
+    "The firm's tax number",
+    "The property address"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "Rule A.0104.",
+   "id": "nc-6c581692",
+   "portion": "georgia",
+   "q": "The broker providing the disclosure must include on the form:",
+   "sub": "nc/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In writing, at first substantial contact",
+    "Orally at the first showing",
+    "Only when an offer is made",
+    "Only if asked"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "Rule A.0104(e).",
+   "id": "nc-e872b1b4",
+   "portion": "georgia",
+   "q": "A seller's agent meeting an unrepresented buyer must disclose agency status:",
+   "sub": "nc/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Within ten days",
+    "Before the broker provides any services",
+    "Before closing",
+    "Only if exclusive"
+   ],
+   "concept": "North Carolina written agreements",
+   "difficulty": 1,
+   "explain": "Rule A.0104(a).",
+   "id": "nc-53a78a3e",
+   "portion": "georgia",
+   "q": "An agency agreement with a seller must be in writing:",
+   "sub": "nc/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Within 30 days",
+    "No later than the time any party makes an offer",
+    "At closing",
+    "Never; oral is sufficient"
+   ],
+   "concept": "North Carolina written agreements",
+   "difficulty": 1,
+   "explain": "Rule A.0104(a).",
+   "id": "nc-a677f051",
+   "portion": "georgia",
+   "q": "An oral buyer agency agreement must be reduced to writing:",
+   "sub": "nc/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Exclusive for 90 days",
+    "Exclusive but terminable",
+    "Non-exclusive, for an indefinite period, terminable at any time",
+    "For a definite six-month term"
+   ],
+   "concept": "North Carolina written agreements",
+   "difficulty": 2,
+   "explain": "Otherwise it must be written from the outset.",
+   "id": "nc-e1cb86b7",
+   "portion": "georgia",
+   "q": "An oral buyer agency agreement must be:",
+   "sub": "nc/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Renew automatically",
+    "Run at least six months",
+    "State a definite period and end without notice at its expiry",
+    "Be notarised"
+   ],
+   "concept": "North Carolina written agreements",
+   "difficulty": 2,
+   "explain": "Rule A.0104(a).",
+   "id": "nc-b63cd999",
+   "portion": "georgia",
+   "q": "Every written agency agreement must:",
+   "sub": "nc/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A residential listing",
+    "A buyer agency agreement",
+    "None may",
+    "A landlord's agreement to procure tenants, if the landlord may terminate"
+   ],
+   "concept": "North Carolina written agreements",
+   "difficulty": 3,
+   "explain": "The one exception in Rule A.0104(a).",
+   "id": "nc-add1ab61",
+   "portion": "georgia",
+   "q": "Which agency agreement may provide for automatic renewal?",
+   "sub": "nc/agency|Written agreements",
+   "subtopic": "Written agreements",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Verbal consent from both",
+    "The broker-in-charge's approval",
+    "The express written authority of each party",
+    "Commission approval"
+   ],
+   "concept": "North Carolina dual agency",
+   "difficulty": 1,
+   "explain": "Rule A.0104(d) and (i).",
+   "id": "nc-65ceaeb0",
+   "portion": "georgia",
+   "q": "A firm may represent both buyer and seller in the same transaction only with:",
+   "sub": "nc/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Remain completely neutral and impartial",
+    "Advocate for the seller",
+    "Advocate for the buyer",
+    "Advocate for whoever pays"
+   ],
+   "concept": "North Carolina dual agency",
+   "difficulty": 2,
+   "explain": "Advocacy is what dual agency gives up.",
+   "id": "nc-5dd4e8fa",
+   "portion": "georgia",
+   "q": "A standard dual agent must:",
+   "sub": "nc/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Without the knowledge of all parties for whom the broker acts",
+    "In any circumstances",
+    "Without Commission approval",
+    "In commercial transactions"
+   ],
+   "concept": "North Carolina dual agency",
+   "difficulty": 2,
+   "explain": "The rule then adds a written-authority requirement.",
+   "id": "nc-d1587406",
+   "portion": "georgia",
+   "q": "G.S. 93A-6(a)(4) prohibits acting for more than one party:",
+   "sub": "nc/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Using two firms",
+    "Appointing one agent to the seller and another to the buyer within the firm",
+    "Appointing an outside mediator",
+    "Letting the client pick any agent"
+   ],
+   "concept": "North Carolina designated agency",
+   "difficulty": 2,
+   "explain": "Rule A.0104(j)-(m).",
+   "id": "nc-f1a218a5",
+   "portion": "georgia",
+   "q": "Designated agency means:",
+   "sub": "nc/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "It requires no written authority",
+    "It pays a higher commission",
+    "Each client keeps an advocate",
+    "It avoids disclosure"
+   ],
+   "concept": "North Carolina designated agency",
+   "difficulty": 3,
+   "explain": "A standard dual agent must stay neutral.",
+   "id": "nc-f9cd0ab0",
+   "portion": "georgia",
+   "q": "The advantage of designated agency over standard dual agency is:",
+   "sub": "nc/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Within 30 days of closing",
+    "Only if the client asks",
+    "No later than when a written dual agency agreement is required",
+    "At first substantial contact"
+   ],
+   "concept": "North Carolina designated agency",
+   "difficulty": 3,
+   "explain": "Rule A.0104(j)-(m).",
+   "id": "nc-adb82083",
+   "portion": "georgia",
+   "q": "Authority to practise designated agency must be in writing:",
+   "sub": "nc/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Is good service to the buyer",
+    "Is permitted puffing",
+    "Is required honesty to the buyer",
+    "Violates the duty of loyalty to the seller"
+   ],
+   "concept": "North Carolina violations",
+   "difficulty": 3,
+   "explain": "Acting to benefit another party without the principal's consent.",
+   "id": "nc-7a5e0735",
+   "portion": "georgia",
+   "q": "An agent of the listing firm tells an unrepresented buyer the seller is desperate and will take far less. This:",
+   "sub": "nc/agency|Violations",
+   "subtopic": "Violations",
+   "topic": "nc/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The firm's advertising budget",
+    "Commission already properly disbursed",
+    "A tenant's security deposit",
+    "The broker's salary"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 1,
+   "explain": "Money belonging to others held by the licensee.",
+   "id": "nc-5993482d",
+   "portion": "georgia",
+   "q": "Which is trust money?",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three banking days of receipt",
+    "The next banking day",
+    "Five business days",
+    "Ten calendar days"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 1,
+   "explain": "Commission rules, Rule A.0116.",
+   "id": "nc-53359d14",
+   "portion": "georgia",
+   "q": "The general rule is that trust money must be deposited within:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Receipt of the cheque",
+    "Acceptance of the offer",
+    "The closing date",
+    "The end of the month"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 2,
+   "explain": "Unless the buyer instructs otherwise.",
+   "id": "nc-06616f82",
+   "portion": "georgia",
+   "q": "Earnest money paid by cheque with an offer must be deposited within three banking days of:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Acceptance",
+    "Closing",
+    "Receipt, even if the offer has not been accepted",
+    "The buyer's request"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 2,
+   "explain": "Cash is immediately available and refundable.",
+   "id": "nc-fb62d512",
+   "portion": "georgia",
+   "q": "Earnest money tendered in CASH must be deposited within three banking days of:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Receipt",
+    "The tenant moving in",
+    "Acceptance of the lease agreement",
+    "The end of the lease"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 2,
+   "explain": "Unless tendered in cash.",
+   "id": "nc-42b5eba8",
+   "portion": "georgia",
+   "q": "A tenant security deposit taken with a lease must be deposited within three banking days of:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Deposit it in the firm's account",
+    "Hold it until closing",
+    "Deliver it immediately to the broker-in-charge",
+    "Return it to the payer"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 1,
+   "explain": "Rule A.0116(b); A.1808.",
+   "id": "nc-c11efeb3",
+   "portion": "georgia",
+   "q": "A provisional broker who receives trust money must:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "No, never",
+    "Only with the seller's consent",
+    "Yes, unless the buyer instructed otherwise",
+    "Only if it exceeds $5,000"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 3,
+   "explain": "Early deposit may cause practical problems if the offer fails.",
+   "id": "nc-26dff689",
+   "portion": "georgia",
+   "q": "May a broker deposit an earnest money cheque before the offer is accepted?",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "It sets the commission",
+    "It fixes the closing date",
+    "It determines the excise tax",
+    "It starts the three-banking-day deposit clock"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 3,
+   "explain": "The Commission's guidance.",
+   "id": "nc-97ffa5a7",
+   "portion": "georgia",
+   "q": "Why should the date of acceptance appear in the purchase agreement?",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The broker's own money",
+    "Exempt because it is not a sale",
+    "A gift",
+    "Trust money"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 2,
+   "explain": "Held for another, even if collateral to the brokerage role.",
+   "id": "nc-1a07a030",
+   "portion": "georgia",
+   "q": "Money a listing agent receives from an out-of-town seller for yard maintenance is:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Commission the broker has properly earned and disbursed",
+    "Rents collected for an owner",
+    "HOA dues collected",
+    "Advance reservation deposits"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 2,
+   "explain": "Everything else belongs to someone else.",
+   "id": "nc-33b1fd49",
+   "portion": "georgia",
+   "q": "Which is NOT trust money in a brokerage?",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Sales taxes collected on the gross receipts",
+    "The broker's management fee",
+    "The owner's mortgage payment",
+    "Utility bills"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 3,
+   "explain": "The Commission's comments.",
+   "id": "nc-751cbbe2",
+   "portion": "georgia",
+   "q": "For short-term resort rentals, trust money also includes:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "They hold an active licence",
+    "They are a broker-in-charge",
+    "They belong to the National Association of REALTORS",
+    "They have passed postlicensing"
+   ],
+   "concept": "North Carolina terminology",
+   "difficulty": 2,
+   "explain": "It is trade association membership, not a licence status.",
+   "id": "nc-2051e9e1",
+   "portion": "georgia",
+   "q": "A licensed North Carolina agent is a REALTOR only if:",
+   "sub": "nc/practice|Terminology",
+   "subtopic": "Terminology",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Yes, no, or unknown",
+    "True or false",
+    "Yes or no only",
+    "Yes, no, or no representation"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 1,
+   "explain": "Chapter 47E.",
+   "id": "nc-3a92fac3",
+   "portion": "georgia",
+   "q": "On the North Carolina residential property disclosure form, an owner may answer:",
+   "sub": "nc/other|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The owner is hiding a defect",
+    "The buyer must inspect",
+    "The owner makes no statement either way, and it is not a misrepresentation",
+    "The form is incomplete"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "It is a permitted answer.",
+   "id": "nc-77dc2c94",
+   "portion": "georgia",
+   "q": "Answering 'no representation' means:",
+   "sub": "nc/other|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In writing, within three calendar days of contract acceptance",
+    "Within ten days",
+    "At any time before closing",
+    "Only with the seller's consent"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "Chapter 47E.",
+   "id": "nc-2c1094ae",
+   "portion": "georgia",
+   "q": "A buyer never given the disclosure statement may cancel the contract:",
+   "sub": "nc/other|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Complete it on the seller's behalf",
+    "Verify every answer",
+    "Assist the seller, but not complete the form for them",
+    "File it with the Commission"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 2,
+   "explain": "G.S. 47E-8 and the Commission's guidance.",
+   "id": "nc-2db52d51",
+   "portion": "georgia",
+   "q": "A licensee's role with the disclosure form is to:",
+   "sub": "nc/other|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "In the appendix of the contract",
+    "Conspicuous and in boldface type",
+    "Given at closing",
+    "Oral"
+   ],
+   "concept": "North Carolina mineral rights",
+   "difficulty": 2,
+   "explain": "G.S. 47E-4.1(a).",
+   "id": "nc-964b2329",
+   "portion": "georgia",
+   "q": "The mineral and oil and gas rights disclosure must be:",
+   "sub": "nc/other|Mineral rights",
+   "subtopic": "Mineral rights",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Conveyance or reservation by the owner",
+    "A zoning change",
+    "The buyer's election",
+    "A survey"
+   ],
+   "concept": "North Carolina mineral rights",
+   "difficulty": 3,
+   "explain": "G.S. 47E-4.1(a).",
+   "id": "nc-0804aac4",
+   "portion": "georgia",
+   "q": "Mineral rights may be severed from a property's title by:",
+   "sub": "nc/other|Mineral rights",
+   "subtopic": "Mineral rights",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$25,000",
+    "$75,000",
+    "$50,000",
+    "$100,000"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 1,
+   "explain": "G.S. 93A-21(a)(2), regardless of claimants or parcels.",
+   "id": "nc-28dbdf8e",
+   "portion": "georgia",
+   "q": "The Real Estate Education and Recovery Fund pays at most, per transaction:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$75,000",
+    "$25,000",
+    "$50,000",
+    "$150,000"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 2,
+   "explain": "G.S. 93A-21(a)(3).",
+   "id": "nc-bb2fee0a",
+   "portion": "georgia",
+   "q": "The aggregate the fund will pay for one licensee, ever, is:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$50,000",
+    "$75,000",
+    "$25,000",
+    "No annual limit"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 2,
+   "explain": "G.S. 93A-21(a)(3).",
+   "id": "nc-b1d2ad78",
+   "portion": "georgia",
+   "q": "The aggregate the fund will pay for one licensee in a single calendar year is:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any breach of contract",
+    "Conversion of trust funds by a licensed broker",
+    "A negligent valuation",
+    "A disputed commission"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 2,
+   "explain": "G.S. 93A-17(a).",
+   "id": "nc-6ff673a8",
+   "portion": "georgia",
+   "q": "A claim on the fund must rest on a judgment for:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Converted trust funds",
+    "Direct monetary loss",
+    "Punitive damages, interest and court costs",
+    "The unsatisfied judgment amount"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 3,
+   "explain": "G.S. 93A-21(a)(4).",
+   "id": "nc-b5d0a3c0",
+   "portion": "georgia",
+   "q": "The fund will NOT pay:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "60 days of the judgment",
+    "Three years",
+    "One year after all proceedings end",
+    "Six months of the conversion"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 3,
+   "explain": "G.S. 93A-21(a)(1).",
+   "id": "nc-38c66952",
+   "portion": "georgia",
+   "q": "Application to the fund must be made within:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Nine members",
+    "Five members",
+    "Seven members",
+    "Eleven members"
+   ],
+   "concept": "North Carolina commission",
+   "difficulty": 1,
+   "explain": "Seven appointed by the Governor and two by the General Assembly (G.S. 93A-3).",
+   "id": "nc-7ba81e23",
+   "portion": "georgia",
+   "q": "The North Carolina Real Estate Commission has:",
+   "sub": "nc/other|Commission",
+   "subtopic": "Commission",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three",
+    "Two",
+    "Five",
+    "Seven"
+   ],
+   "concept": "North Carolina commission",
+   "difficulty": 2,
+   "explain": "G.S. 93A-3(a).",
+   "id": "nc-ff42010e",
+   "portion": "georgia",
+   "q": "At least how many Commission members must be licensed brokers?",
+   "sub": "nc/other|Commission",
+   "subtopic": "Commission",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three years, staggered",
+    "Two years",
+    "Four years",
+    "Six years"
+   ],
+   "concept": "North Carolina commission",
+   "difficulty": 2,
+   "explain": "G.S. 93A-3(a).",
+   "id": "nc-8c18767a",
+   "portion": "georgia",
+   "q": "Commission members serve terms of:",
+   "sub": "nc/other|Commission",
+   "subtopic": "Commission",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In writing before the broker provides any services",
+    "Oral until an offer arrives",
+    "Written within ten days",
+    "Written only if exclusive"
+   ],
+   "concept": "North Carolina writing",
+   "difficulty": 1,
+   "explain": "G.S. 93A-13; Rule A.0104(a).",
+   "id": "nc-59d6ad43",
+   "portion": "georgia",
+   "q": "A North Carolina listing agreement must be:",
+   "sub": "nc/contracts|Writing",
+   "subtopic": "Writing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The statute of frauds",
+    "The licence law alone",
+    "Commission rule A.0104",
+    "The excise tax statute"
+   ],
+   "concept": "North Carolina writing",
+   "difficulty": 2,
+   "explain": "Writing is required for enforceability.",
+   "id": "nc-547641aa",
+   "portion": "georgia",
+   "q": "A contract for the sale of land must be in writing because of:",
+   "sub": "nc/contracts|Writing",
+   "subtopic": "Writing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "An automatic renewal clause",
+    "A definite termination date",
+    "A minimum commission",
+    "A mediation clause"
+   ],
+   "concept": "North Carolina writing",
+   "difficulty": 2,
+   "explain": "Rule A.0104(a).",
+   "id": "nc-336f0c3c",
+   "portion": "georgia",
+   "q": "Every written agency agreement must contain:",
+   "sub": "nc/contracts|Writing",
+   "subtopic": "Writing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Correct it personally",
+    "Ignore it if minor",
+    "Notify the settlement agent",
+    "Refuse to attend closing"
+   ],
+   "concept": "North Carolina closing",
+   "difficulty": 2,
+   "explain": "The Commission's guidance.",
+   "id": "nc-8c6131fb",
+   "portion": "georgia",
+   "q": "A broker who believes the settlement statement contains an error should:",
+   "sub": "nc/contracts|Closing",
+   "subtopic": "Closing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The listing broker",
+    "The lender's loan officer",
+    "An attorney",
+    "The register of deeds"
+   ],
+   "concept": "North Carolina closing",
+   "difficulty": 2,
+   "explain": "Attorney-conducted closings are the norm.",
+   "id": "nc-0cd83cd2",
+   "portion": "georgia",
+   "q": "North Carolina closings are commonly conducted by:",
+   "sub": "nc/contracts|Closing",
+   "subtopic": "Closing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Practising law",
+    "Not practising law",
+    "Practising law unless an attorney reviews it",
+    "Required to be an attorney"
+   ],
+   "concept": "North Carolina practice of law",
+   "difficulty": 3,
+   "explain": "Drafting provisions is a different matter.",
+   "id": "nc-d98d36d1",
+   "portion": "georgia",
+   "q": "A broker filling in the blanks of a preprinted offer form is:",
+   "sub": "nc/contracts|Practice of law",
+   "subtopic": "Practice of law",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Paid by the buyer to the seller for the due diligence period",
+    "Held in the broker's trust account as earnest money",
+    "Refundable in all cases",
+    "Paid by the seller"
+   ],
+   "concept": "North Carolina due diligence",
+   "difficulty": 2,
+   "explain": "It is distinct from earnest money.",
+   "id": "nc-37231797",
+   "portion": "georgia",
+   "q": "A due diligence fee in a North Carolina purchase contract is:",
+   "sub": "nc/contracts|Due diligence",
+   "subtopic": "Due diligence",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "120 days of designation",
+    "60 days",
+    "One year"
+   ],
+   "concept": "North Carolina broker-in-charge",
+   "difficulty": 1,
+   "explain": "Unless taken within the previous year.",
+   "id": "nc-465d7415",
+   "portion": "georgia",
+   "q": "A broker must complete the 12-hour Broker-in-Charge course within:",
+   "sub": "nc/supervision|Broker-in-charge",
+   "subtopic": "Broker-in-charge",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Losing BIC Eligible status until the course is taken",
+    "A $1,000 fine",
+    "Automatic revocation",
+    "Nothing, if the office has another BIC"
+   ],
+   "concept": "North Carolina broker-in-charge",
+   "difficulty": 2,
+   "explain": "The status must then be regained.",
+   "id": "nc-84af6ce0",
+   "portion": "georgia",
+   "q": "Failing to complete that course on time means:",
+   "sub": "nc/supervision|Broker-in-charge",
+   "subtopic": "Broker-in-charge",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Act only under the supervision of a designated broker-in-charge",
+    "Operate independently",
+    "Supervise other provisional brokers",
+    "Hold their own trust account"
+   ],
+   "concept": "North Carolina provisional brokers",
+   "difficulty": 1,
+   "explain": "G.S. 93A-2(a2).",
+   "id": "nc-de52313a",
+   "portion": "georgia",
+   "q": "A provisional broker may:",
+   "sub": "nc/supervision|Provisional brokers",
+   "subtopic": "Provisional brokers",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The seller directly",
+    "The closing attorney",
+    "The broker they are affiliated with",
+    "The buyer"
+   ],
+   "concept": "North Carolina compensation",
+   "difficulty": 2,
+   "explain": "Compensation flows through the affiliated broker.",
+   "id": "nc-40793f2a",
+   "portion": "georgia",
+   "q": "A provisional broker's brokerage compensation comes from:",
+   "sub": "nc/supervision|Compensation",
+   "subtopic": "Compensation",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$1.00 per $1,000",
+    "70 cents per $100",
+    "$2.00 per $500",
+    "$1.00 per $500 of consideration, or fraction of it"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 1,
+   "explain": "G.S. 105-228.30(a).",
+   "id": "nc-ce3d66d7",
+   "portion": "georgia",
+   "q": "The North Carolina excise tax rate on a conveyance is:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer, at closing",
+    "The transferor, to the register of deeds, before recording",
+    "The lender",
+    "The listing broker"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 1,
+   "explain": "G.S. 105-228.30(a).",
+   "id": "nc-a7ab12f4",
+   "portion": "georgia",
+   "q": "The excise tax is paid by:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$481",
+    "$480",
+    "$480.50",
+    "$482"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 2,
+   "explain": "$240,250 / 500 = 480.5, and a fraction counts as a whole unit, so 481 x $1.00.",
+   "id": "nc-05ea14ab",
+   "portion": "georgia",
+   "q": "A property sells for $240,250. The excise tax is:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Paid entirely by the buyer",
+    "Paid entirely by the seller",
+    "Prorated between seller and buyer",
+    "Waived on a sale"
+   ],
+   "concept": "North Carolina property tax",
+   "difficulty": 2,
+   "explain": "Standard closing practice.",
+   "id": "nc-a25fb182",
+   "portion": "georgia",
+   "q": "Property taxes at a North Carolina closing are usually:",
+   "sub": "nc/taxes|Property tax",
+   "subtopic": "Property tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A salesperson licence and a broker licence",
+    "Three grades of licence",
+    "A salesperson licence only",
+    "Only a broker licence, held initially on provisional status"
+   ],
+   "concept": "North Carolina license type",
+   "difficulty": 1,
+   "explain": "There is no salesperson licence in North Carolina.",
+   "id": "nc-1f926eff",
+   "portion": "georgia",
+   "q": "North Carolina issues:",
+   "sub": "nc/licensure|License type",
+   "subtopic": "License type",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "60 hours",
+    "90 hours",
+    "120 hours",
+    "75 instructional hours"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 1,
+   "explain": "90 hours is the postlicensing programme.",
+   "id": "nc-40abbae0",
+   "portion": "georgia",
+   "q": "The North Carolina prelicensing course is:",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "75 hours within a year",
+    "45 hours within two years",
+    "30 hours within six months",
+    "90 hours within 18 months of initial licensure"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 1,
+   "explain": "Three 30-hour courses: Post 301, 302 and 303.",
+   "id": "nc-931722d6",
+   "portion": "georgia",
+   "q": "Postlicensing education is:",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Kept in the landlord's personal account",
+    "Sent to the Commission",
+    "Returned within ten days",
+    "Held in a trust account at an insured institution, or covered by a bond"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 1,
+   "explain": "G.S. 42-50.",
+   "id": "nc-3d8c7327",
+   "portion": "georgia",
+   "q": "A North Carolina residential security deposit must be:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "15 days",
+    "45 days",
+    "60 days in all cases",
+    "30 days of termination and delivery of possession"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 2,
+   "explain": "G.S. 42-52.",
+   "id": "nc-a34ba4f9",
+   "portion": "georgia",
+   "q": "The landlord must account for the deposit within:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "45 days",
+    "90 days",
+    "120 days",
+    "60 days"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 2,
+   "explain": "With an interim accounting at 30 days (G.S. 42-52).",
+   "id": "nc-13905e67",
+   "portion": "georgia",
+   "q": "Where the claim cannot be determined within 30 days, the final accounting is due within:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "On active status immediately",
+    "As a salesperson licence",
+    "On probation for a year",
+    "On provisional status, and initially inactive"
+   ],
+   "concept": "North Carolina license type",
+   "difficulty": 2,
+   "explain": "Activation requires affiliation with a broker-in-charge.",
+   "id": "nc-412bdd28",
+   "portion": "georgia",
+   "q": "A newly licensed North Carolina broker holds the licence:",
+   "sub": "nc/licensure|License type",
+   "subtopic": "License type",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Post 302: Trust Account Basics",
+    "Post 302: Contracts and Closing",
+    "Post 302: Appraisal Principles",
+    "Post 302: Property Management"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 2,
+   "explain": "Post 301, 302 and 303.",
+   "id": "nc-19ad81e7",
+   "portion": "georgia",
+   "q": "Which is one of the three postlicensing courses?",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Broker Relationships and Responsibilities",
+    "Contracts and Closing",
+    "Fair Housing",
+    "NC Law, Rules, and Legal Concepts"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 2,
+   "explain": "Post 301 is relationships; Post 302 contracts and closing.",
+   "id": "nc-b964cb16",
+   "portion": "georgia",
+   "q": "Post 303 covers:",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "On the licensee's written request",
+    "After two years of practice",
+    "Automatically, once all three postlicensing courses are reported complete",
+    "By Commission hearing"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 2,
+   "explain": "The education provider reports completion.",
+   "id": "nc-1bfc4ca8",
+   "portion": "georgia",
+   "q": "Provisional status is removed:",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Loses the licence permanently",
+    "Is fined $250",
+    "Continues on active status",
+    "Has the licence placed on inactive status until the deficiency is cured"
+   ],
+   "concept": "North Carolina education",
+   "difficulty": 3,
+   "explain": "Reactivation requires the activation form.",
+   "id": "nc-2c46e2c6",
+   "portion": "georgia",
+   "q": "A provisional broker who misses the 18-month postlicensing deadline:",
+   "sub": "nc/licensure|Education",
+   "subtopic": "Education",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Two years after issue",
+    "On the licensee's birthday",
+    "On June 30 each year",
+    "On December 31"
+   ],
+   "concept": "North Carolina renewal",
+   "difficulty": 1,
+   "explain": "Renewal runs 15 May to 30 June.",
+   "id": "nc-ffdc15ac",
+   "portion": "georgia",
+   "q": "North Carolina real estate licences expire:",
+   "sub": "nc/licensure|Renewal",
+   "subtopic": "Renewal",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "January 1 to March 31",
+    "July 1 to August 31",
+    "May 15 to June 30",
+    "Any time in the year"
+   ],
+   "concept": "North Carolina renewal",
+   "difficulty": 2,
+   "explain": "The annual fee is $50.",
+   "id": "nc-e7a569a8",
+   "portion": "georgia",
+   "q": "The annual renewal window is:",
+   "sub": "nc/licensure|Renewal",
+   "subtopic": "Renewal",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "8 hours each year, due by June 10",
+    "22.5 hours every two years",
+    "45 hours every four years",
+    "16 hours every two years"
+   ],
+   "concept": "North Carolina renewal",
+   "difficulty": 1,
+   "explain": "For renewal on active status.",
+   "id": "nc-e0346063",
+   "portion": "georgia",
+   "q": "Continuing education in North Carolina is:",
+   "sub": "nc/licensure|Renewal",
+   "subtopic": "Renewal",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Must take 8 hours immediately",
+    "Is exempt from CE for two years",
+    "Must take 16 hours in year one",
+    "Has no CE requirement in the initial licence year"
+   ],
+   "concept": "North Carolina renewal",
+   "difficulty": 2,
+   "explain": "But must satisfy it before the second renewal.",
+   "id": "nc-e07292b8",
+   "portion": "georgia",
+   "q": "A broker newly licensed by examination:",
+   "sub": "nc/licensure|Renewal",
+   "subtopic": "Renewal",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Has an expired licence and must apply for reinstatement",
+    "Has a 90-day grace period",
+    "May renew late for double the fee",
+    "Keeps the licence on inactive status"
+   ],
+   "concept": "North Carolina renewal",
+   "difficulty": 3,
+   "explain": "It is unlawful to practise without an active licence.",
+   "id": "nc-d70ad613",
+   "portion": "georgia",
+   "q": "A licensee who fails to renew by June 30:",
+   "sub": "nc/licensure|Renewal",
+   "subtopic": "Renewal",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "As a neutral facilitator",
+    "As a transaction broker",
+    "Only as an agent for a party to the transaction",
+    "As an undisclosed principal"
+   ],
+   "concept": "North Carolina scope",
+   "difficulty": 2,
+   "explain": "The Commission's comments on G.S. 93A-1 and 93A-2.",
+   "id": "nc-e68f0cfe",
+   "portion": "georgia",
+   "q": "A North Carolina licensee may engage in brokerage:",
+   "sub": "nc/licensure|Scope",
+   "subtopic": "Scope",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Must hold a North Carolina broker licence",
+    "Is exempt if the owner is licensed",
+    "Needs only to register",
+    "Is exempt if out of state"
+   ],
+   "concept": "North Carolina scope",
+   "difficulty": 2,
+   "explain": "G.S. 93A-1.",
+   "id": "nc-071bd8a5",
+   "portion": "georgia",
+   "q": "A business entity engaging in brokerage for compensation in North Carolina:",
+   "sub": "nc/licensure|Scope",
+   "subtopic": "Scope",
+   "topic": "nc/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Complete postlicensing twice",
+    "Obtain BIC Eligible status",
+    "Serve five years as a broker",
+    "Open an office"
+   ],
+   "concept": "North Carolina broker-in-charge",
+   "difficulty": 2,
+   "explain": "The Commission may require evidence of the required experience.",
+   "id": "nc-e656b110",
+   "portion": "georgia",
+   "q": "Before being designated a broker-in-charge, a broker must first:",
+   "sub": "nc/supervision|Broker-in-charge",
+   "subtopic": "Broker-in-charge",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Taking the Broker-in-Charge course again",
+    "Waiting one year",
+    "Paying a reinstatement fee",
+    "Applying to the Governor"
+   ],
+   "concept": "North Carolina broker-in-charge",
+   "difficulty": 3,
+   "explain": "The course must be retaken before eligibility returns.",
+   "id": "nc-e89ff17e",
+   "portion": "georgia",
+   "q": "A broker who has lost BIC Eligible status may regain it by:",
+   "sub": "nc/supervision|Broker-in-charge",
+   "subtopic": "Broker-in-charge",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only clerical work",
+    "Only leasing",
+    "The same acts as a full broker, while supervised",
+    "Only acts the broker-in-charge witnesses"
+   ],
+   "concept": "North Carolina provisional brokers",
+   "difficulty": 2,
+   "explain": "G.S. 93A-2(a2).",
+   "id": "nc-3cd8766a",
+   "portion": "georgia",
+   "q": "A provisional broker generally may perform:",
+   "sub": "nc/supervision|Provisional brokers",
+   "subtopic": "Provisional brokers",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed if disclosed",
+    "Prohibited",
+    "Allowed up to $500",
+    "Allowed for referrals only"
+   ],
+   "concept": "North Carolina compensation",
+   "difficulty": 2,
+   "explain": "G.S. 93A-6.",
+   "id": "nc-272f0140",
+   "portion": "georgia",
+   "q": "Paying an unlicensed person for acts requiring a licence is:",
+   "sub": "nc/supervision|Compensation",
+   "subtopic": "Compensation",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted practice",
+    "A ground for disciplinary action",
+    "A criminal felony",
+    "Allowed with the broker-in-charge's consent"
+   ],
+   "concept": "North Carolina discipline",
+   "difficulty": 2,
+   "explain": "G.S. 93A-6(a)(4).",
+   "id": "nc-65208cb0",
+   "portion": "georgia",
+   "q": "Acting for more than one party without the knowledge of all is:",
+   "sub": "nc/supervision|Discipline",
+   "subtopic": "Discipline",
+   "topic": "nc/supervision"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The tenant agrees orally",
+    "The lease says so",
+    "It is a commercial lease",
+    "The tenant is given an adequate bond in the amount of the deposits"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 2,
+   "explain": "G.S. 42-50.",
+   "id": "nc-725ca7d0",
+   "portion": "georgia",
+   "q": "A landlord may hold a deposit in a trust account outside North Carolina only if:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "10 days",
+    "60 days",
+    "At the end of the lease",
+    "30 days after the lease term begins"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 2,
+   "explain": "G.S. 42-50.",
+   "id": "nc-daa4725b",
+   "portion": "georgia",
+   "q": "The tenant must be told where the deposit is held within:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The cost of re-renting after the tenant's breach",
+    "Normal wear and tear",
+    "The landlord's lost profit",
+    "Routine repainting"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 2,
+   "explain": "G.S. 42-51(a)(5), including a reasonable broker's fee.",
+   "id": "nc-f9021696",
+   "portion": "georgia",
+   "q": "Which is a permitted deduction from a North Carolina security deposit?",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "May be deducted from the deposit",
+    "May not be deducted",
+    "Are the landlord's responsibility alone",
+    "Require a court order"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 3,
+   "explain": "G.S. 42-51(a)(4).",
+   "id": "nc-c2982fe9",
+   "portion": "georgia",
+   "q": "Unpaid bills that become a lien on the property because of the tenant's occupancy:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Keep the whole deposit",
+    "Pay it to the State immediately",
+    "Apply the deposit after 30 days and hold the balance for the tenant",
+    "Destroy the record"
+   ],
+   "concept": "North Carolina deposits",
+   "difficulty": 3,
+   "explain": "G.S. 42-52.",
+   "id": "nc-d1c03e01",
+   "portion": "georgia",
+   "q": "If the tenant's address is unknown, the landlord may:",
+   "sub": "nc/landlord|Deposits",
+   "subtopic": "Deposits",
+   "topic": "nc/landlord"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Both counties equally",
+    "The county of the buyer's residence",
+    "The register of deeds of the county holding the greater part by value",
+    "The State"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 2,
+   "explain": "G.S. 105-228.30(a).",
+   "id": "nc-f776b8aa",
+   "portion": "georgia",
+   "q": "Where a parcel lies in two counties, the excise tax is paid to:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Leases of one year",
+    "Timber deeds and contracts for the sale of standing timber",
+    "Mortgage assignments",
+    "Easement releases only"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 3,
+   "explain": "G.S. 105-228.30(a).",
+   "id": "nc-2faa79de",
+   "portion": "georgia",
+   "q": "The excise tax also applies to:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "$310",
+    "$620",
+    "$624",
+    "$600"
+   ],
+   "concept": "North Carolina excise tax",
+   "difficulty": 2,
+   "explain": "$310,000 / 500 = 620 units at $1.00.",
+   "id": "nc-1f734d08",
+   "portion": "georgia",
+   "q": "A property sells for $310,000. The excise tax is:",
+   "sub": "nc/taxes|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer's equity",
+    "The lender, up to the loan amount",
+    "The seller",
+    "The broker"
+   ],
+   "concept": "North Carolina insurance",
+   "difficulty": 2,
+   "explain": "An owner's policy is separate.",
+   "id": "nc-fd904f1b",
+   "portion": "georgia",
+   "q": "A lender's title insurance policy protects:",
+   "sub": "nc/taxes|Insurance",
+   "subtopic": "Insurance",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The land value",
+    "The buyer's personal belongings only",
+    "Nothing until closing",
+    "At least the amount of the loan"
+   ],
+   "concept": "North Carolina insurance",
+   "difficulty": 2,
+   "explain": "Standard lending practice.",
+   "id": "nc-1ba82387",
+   "portion": "georgia",
+   "q": "Hazard insurance required by a lender normally covers:",
+   "sub": "nc/taxes|Insurance",
+   "subtopic": "Insurance",
+   "topic": "nc/taxes"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "May stay oral",
+    "Is exempt from the rule",
+    "Needs only the landlord's signature",
+    "Must also be in writing and signed"
+   ],
+   "concept": "North Carolina writing",
+   "difficulty": 2,
+   "explain": "Rule A.0104(a) covers sales and leases.",
+   "id": "nc-1e192609",
+   "portion": "georgia",
+   "q": "An agency agreement for a LEASE transaction in North Carolina:",
+   "sub": "nc/contracts|Writing",
+   "subtopic": "Writing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Trust money until properly disbursed",
+    "The seller's money on acceptance",
+    "The broker's on acceptance",
+    "The buyer's to withdraw at will"
+   ],
+   "concept": "North Carolina earnest money",
+   "difficulty": 2,
+   "explain": "Trust money rules apply throughout.",
+   "id": "nc-43357a2f",
+   "portion": "georgia",
+   "q": "Earnest money held by a broker is:",
+   "sub": "nc/contracts|Earnest money",
+   "subtopic": "Earnest money",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Whenever the broker chooses",
+    "Always to the seller at closing",
+    "To the listing firm first",
+    "At the proper time, to the party entitled to it"
+   ],
+   "concept": "North Carolina closing",
+   "difficulty": 3,
+   "explain": "The Commission's comments.",
+   "id": "nc-2aa2b417",
+   "portion": "georgia",
+   "q": "Trust money is disbursed:",
+   "sub": "nc/contracts|Closing",
+   "subtopic": "Closing",
+   "topic": "nc/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Name every salesperson",
+    "Not be false or misleading",
+    "Be approved by the Commission",
+    "Include the licence number of the buyer"
+   ],
+   "concept": "North Carolina advertising",
+   "difficulty": 2,
+   "explain": "G.S. 93A-6.",
+   "id": "nc-cc3a6770",
+   "portion": "georgia",
+   "q": "A broker's advertising must:",
+   "sub": "nc/practice|Advertising",
+   "subtopic": "Advertising",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Retained and made available to the Commission on request",
+    "Destroyed after closing",
+    "Kept only by the attorney",
+    "Filed with the register of deeds"
+   ],
+   "concept": "North Carolina records",
+   "difficulty": 2,
+   "explain": "The Commission may inspect and audit.",
+   "id": "nc-da133f40",
+   "portion": "georgia",
+   "q": "Records of a brokerage transaction must be:",
+   "sub": "nc/practice|Records",
+   "subtopic": "Records",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Mixing trust money with the broker's own money",
+    "Holding two clients' funds in one trust account",
+    "Paying a cooperating broker",
+    "Depositing early"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 3,
+   "explain": "A properly run pooled trust account is not commingling.",
+   "id": "nc-35b10fd0",
+   "portion": "georgia",
+   "q": "Commingling means:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Depositing late",
+    "Using trust money for the broker's own purposes",
+    "Transferring between trust accounts",
+    "Refunding a buyer"
+   ],
+   "concept": "North Carolina trust money",
+   "difficulty": 3,
+   "explain": "It is the ground for a Recovery Fund claim.",
+   "id": "nc-15e10942",
+   "portion": "georgia",
+   "q": "Conversion means:",
+   "sub": "nc/practice|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nc/practice"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "60 days after it is commenced",
+    "six months",
+    "one year"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 3,
+   "explain": "Or, for claims under $3,000 excluding fees, within 60 days of the end of all proceedings (G.S. 93A-17).",
+   "id": "nc-9122fcba",
+   "portion": "georgia",
+   "q": "A claimant must notify the Commission of the lawsuit within:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$200,000",
+    "$50,000",
+    "$100,000",
+    "$500,000"
+   ],
+   "concept": "North Carolina recovery fund",
+   "difficulty": 3,
+   "explain": "G.S. 93A-16(a).",
+   "id": "nc-de108a44",
+   "portion": "georgia",
+   "q": "The Commission may not spend fund money on education if it would reduce the balance below:",
+   "sub": "nc/other|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Elected by the members for a one-year term",
+    "Appointed by the Governor",
+    "The longest-serving member",
+    "The Secretary of State"
+   ],
+   "concept": "North Carolina commission",
+   "difficulty": 3,
+   "explain": "G.S. 93A-3(a).",
+   "id": "nc-8cfe2bdd",
+   "portion": "georgia",
+   "q": "The Commission chairman is:",
+   "sub": "nc/other|Commission",
+   "subtopic": "Commission",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any reason at all",
+    "Voting against the Governor",
+    "Only a criminal conviction",
+    "Misconduct, incompetency, or wilful neglect of duty"
+   ],
+   "concept": "North Carolina commission",
+   "difficulty": 3,
+   "explain": "G.S. 93A-3(a).",
+   "id": "nc-f121079b",
+   "portion": "georgia",
+   "q": "The Governor may remove a Commission member for:",
+   "sub": "nc/other|Commission",
+   "subtopic": "Commission",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Occupation",
+    "Familial status",
+    "Income level",
+    "Education"
+   ],
+   "concept": "North Carolina fair housing",
+   "difficulty": 1,
+   "explain": "The State Fair Housing Act mirrors the federal classes.",
+   "id": "nc-455513ba",
+   "portion": "georgia",
+   "q": "Which is a federally protected class that North Carolina also enforces?",
+   "sub": "nc/other|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Faces only federal action",
+    "May face Commission discipline as well as fair housing enforcement",
+    "Is liable only if the owner instructed it",
+    "Faces no licensing consequence"
+   ],
+   "concept": "North Carolina fair housing",
+   "difficulty": 2,
+   "explain": "The Commission treats it as a licence law matter.",
+   "id": "nc-6eda297c",
+   "portion": "georgia",
+   "q": "A broker who violates fair housing law:",
+   "sub": "nc/other|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "nc/other"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Most residential property owners selling under a purchase contract",
+    "All sellers including commercial",
+    "Only new construction",
+    "Only owners using a broker"
+   ],
+   "concept": "North Carolina disclosure",
+   "difficulty": 3,
+   "explain": "Chapter 47E, with statutory exemptions.",
+   "id": "nc-7c8bf59b",
+   "portion": "georgia",
+   "q": "The residential property disclosure statement is required of:",
+   "sub": "nc/other|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "nc/other"
+  }
+ ],
+ "code": "NC",
+ "diffs": {
+  "national/agency": [
+   "North Carolina issues only a BROKER licence; newcomers hold it on PROVISIONAL status and may never operate independently.",
+   "The Working With Real Estate Agents disclosure goes to buyers and sellers at FIRST SUBSTANTIAL CONTACT, and the broker must review it with them, not merely hand it over.",
+   "Dual agency needs the EXPRESS WRITTEN AUTHORITY of each party; designated agency then restores an advocate to each client (Rule A.0104)."
+  ],
+  "national/contracts": [
+   "An agreement with an owner must be written before any services; an oral buyer agency agreement is allowed but must be written by the time any party makes an offer.",
+   "Every written agency agreement must carry a definite termination date."
+  ],
+  "national/disclosures": [
+   "The residential property disclosure form offers a third answer found almost nowhere else: NO REPRESENTATION, which is not a misrepresentation (ch. 47E).",
+   "A separate MINERAL AND OIL AND GAS RIGHTS disclosure must be given, conspicuous and in boldface (G.S. 47E-4.1).",
+   "A buyer never given the disclosure may cancel in writing within three calendar days of contract acceptance."
+  ],
+  "national/practice": [
+   "Trust money is deposited within THREE BANKING DAYS - of acceptance for a cheque, of receipt for cash - and a provisional broker must hand it to the broker-in-charge immediately.",
+   "The Real Estate Education and Recovery Fund pays $50,000 per transaction, $25,000 per licensee per calendar year and $75,000 per licensee in all (G.S. 93A-21)."
+  ],
+  "national/transfer": [
+   "The excise tax is $1.00 per $500 of consideration or fractional part, paid by the SELLER to the register of deeds before recording (G.S. 105-228.30)."
+  ]
+ },
+ "name": "North Carolina",
+ "pass": 0.75,
+ "portions": {
+  "georgia": {
+   "blurb": "Chapter 93A, the Commission's rules, and the North Carolina law the outline names.",
+   "minutes": 120,
+   "name": "North Carolina state",
+   "scored": 60
+  },
+  "national": {
+   "minutes": 150,
+   "scored": 80
+  }
+ },
+ "regulator": "NCREC",
+ "sources": [
+  {
+   "by": "North Carolina General Assembly",
+   "name": "N.C. General Statutes chapter 93A (Real Estate License Law)",
+   "note": "The licence law itself, including the Real Estate Education and Recovery Fund.",
+   "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByChapter/Chapter_93A.html"
+  },
+  {
+   "by": "North Carolina Real Estate Commission",
+   "name": "License Law and Commission Rules (with the Commission's comments)",
+   "note": "The Commission's own commentary on the rules in 21 NCAC 58A. Agency, trust money and brokerage practice here were read from it.",
+   "url": "https://www.ncrec.gov/Resources/LicenseLaw"
+  },
+  {
+   "by": "NCREC and Pearson VUE",
+   "name": "Real Estate Licensing in North Carolina (April 2026)",
+   "note": "The blueprint: 80 national and 60 state scored items, a score of 75 on each, and the education requirements.",
+   "url": "https://www.ncrec.gov/Pdfs/Licensing/RELINC.pdf"
+  },
+  {
+   "by": "North Carolina General Assembly",
+   "name": "N.C.G.S. chapters 42, 47E and 105",
+   "note": "Tenant security deposits, the residential property and mineral rights disclosures, and the excise tax.",
+   "url": "https://www.ncleg.gov/Laws/GeneralStatutesTOC"
+  }
+ ],
+ "study": {
+  "nc/agency": {
+   "blurb": "Working With Real Estate Agents, written agreements, dual and designated agency.",
+   "counts_on_exam": true,
+   "exam_questions": 16,
+   "examples": [
+    {
+     "k": "The agreement must be put in writing before that offer goes in.",
+     "s": "A broker agrees orally to help a buyer, shows four homes, and the buyer wants to make an offer.",
+     "t": "The oral buyer agreement",
+     "w": [
+      "An oral buyer agency agreement is permitted at the outset.",
+      "It must be reduced to writing no later than the time any party makes an offer."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "At the closing table",
+        "When an offer is written",
+        "At first substantial contact"
+       ],
+       "q": "The Working With Real Estate Agents disclosure is given:",
+       "why": "Rule A.0104."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Files a copy with the Commission",
+        "Has it notarised",
+        "Reviews its contents and reaches agreement on the relationship"
+       ],
+       "q": "Providing the form satisfies the rule only if the broker also:",
+       "why": "Handing it over is not enough."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Orally, at the first showing",
+        "In writing, at first substantial contact",
+        "Only if the buyer asks"
+       ],
+       "q": "A seller's agent meeting an unrepresented buyer must disclose agency status:",
+       "why": "Rule A.0104(e)."
+      }
+     ],
+     "h": "Working With Real Estate Agents, at first substantial contact",
+     "l": [
+      "A seller's agent or subagent must also disclose their agency status IN WRITING to a prospective buyer at first substantial contact (Rule A.0104(e)).",
+      "With a prospective SELLER the broker may act as the seller's agent - which needs a written agreement from the outset - or may work with them as a buyer's agent if they already represent a buyer.",
+      "With a prospective BUYER the broker may act as the buyer's agent under an oral or written agreement, or may work with them as the seller's agent, which must be disclosed in writing from the outset."
+     ],
+     "p": [
+      "At FIRST SUBSTANTIAL CONTACT with a prospective buyer or seller, a broker must provide the WORKING WITH REAL ESTATE AGENTS disclosure, REVIEW ITS CONTENTS with them, and reach agreement about the relationship. Handing over the form to read is NOT enough. The broker puts their own name and licence number on the form (Rule A.0104)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Within ten days",
+        "Before the broker provides any services",
+        "Before closing"
+       ],
+       "q": "An agency agreement with a seller must be in writing:",
+       "why": "Rule A.0104(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Within 30 days",
+        "No later than the time any party makes an offer",
+        "At closing"
+       ],
+       "q": "An oral buyer agency agreement must be reduced to writing:",
+       "why": "Rule A.0104(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Non-exclusive, indefinite and terminable at any time",
+        "Exclusive for 90 days",
+        "Witnessed by the broker-in-charge"
+       ],
+       "q": "An oral buyer agency agreement must be:",
+       "why": "Otherwise it must be written from the outset."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Renew automatically",
+        "Run for at least six months",
+        "State a definite period and end without notice at its expiry"
+       ],
+       "q": "A written agency agreement must:",
+       "why": "Landlord tenant-procurement agreements are the exception."
+      }
+     ],
+     "h": "Agency agreements must be in writing - with one exception",
+     "l": [
+      "Every agency agreement for brokerage services, in sales AND leases, must be IN WRITING and SIGNED by the parties (G.S. 93A-13; Rule A.0104(a)).",
+      "With a PROPERTY OWNER - seller or landlord, any property type - the agreement must be in writing BEFORE the broker provides any services.",
+      "With a BUYER or TENANT an EXPRESS ORAL agreement is allowed at the outset, but it must be reduced to writing NO LATER THAN the time any party makes an OFFER.",
+      "That oral buyer agreement must be NON-EXCLUSIVE, for an INDEFINITE period, and terminable by the client at any time. If it limits the client's right to work with other agents, or binds them for a definite period, it must be written from the outset.",
+      "Every written agency agreement must state a DEFINITE PERIOD and end without notice at its expiry. The one exception is an agreement with a landlord to procure tenants, which may renew automatically if the landlord can terminate."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Verbal consent from one party",
+        "The express written authority of each party",
+        "The broker-in-charge's approval"
+       ],
+       "q": "A firm may represent both buyer and seller only with:",
+       "why": "Rule A.0104(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Remain completely neutral and impartial",
+        "Advocate for the seller",
+        "Advocate for whoever pays"
+       ],
+       "q": "A standard dual agent must:",
+       "why": "Advocacy is the thing dual agency gives up."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "It needs no written authority",
+        "It is used only in leases",
+        "Each client keeps an advocate in their designated agent"
+       ],
+       "q": "Designated agency differs from standard dual agency because:",
+       "why": "Rule A.0104(j)-(m)."
+      }
+     ],
+     "h": "Dual agency and designated agency",
+     "l": [
+      "G.S. 93A-6(a)(4) forbids acting for more than one party in a transaction WITHOUT THE KNOWLEDGE of all parties for whom the broker acts.",
+      "Rule A.0104(d) and (i) go further: a broker or firm representing one party may not undertake to represent another party in the same transaction without the EXPRESS WRITTEN AUTHORITY of each party.",
+      "A dual agent must stay COMPLETELY NEUTRAL AND IMPARTIAL; advocacy for either client is lost.",
+      "DESIGNATED AGENCY (Rule A.0104(j)-(m)) lets a firm appoint one agent to represent only the seller and another to represent only the buyer in an in-house dual agency. Each client then gets an advocate again.",
+      "Authority to practise designated agency must be IN WRITING no later than the time a written dual agency agreement is required."
+     ]
+    }
+   ],
+   "summary": "Sixteen of the sixty state items, more than any other category. North Carolina runs on one form handed over at first substantial contact, written agreements with every seller, and dual agency that needs express written authority.",
+   "topic": "nc/agency",
+   "traps": [
+    "First substantial contact, and the broker must REVIEW the form, not just hand it over.",
+    "Sellers: written before any services. Buyers: oral allowed, written by the time of an offer.",
+    "An oral buyer agreement must be non-exclusive and indefinite - otherwise it must be written at once.",
+    "Dual agency needs EXPRESS WRITTEN authority from each party, not mere knowledge."
+   ],
+   "vocab": [
+    [
+     "First substantial contact",
+     "When the Working With Real Estate Agents disclosure is due."
+    ],
+    [
+     "WWREA",
+     "The Working With Real Estate Agents disclosure form."
+    ],
+    [
+     "Dual agency",
+     "Representing both parties; neutral, and needing express written authority."
+    ],
+    [
+     "Designated agency",
+     "In-house dual agency with a separate agent appointed to each client."
+    ],
+    [
+     "Subagent",
+     "An agent of the seller through the listing firm."
+    ]
+   ]
+  },
+  "nc/contracts": {
+   "blurb": "Agency agreements, offers, and what the closing statement must show.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [],
+   "ga": [],
+   "label": "Contracts & closing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "In writing before any services are provided",
+        "Oral until an offer arrives",
+        "Written within ten days"
+       ],
+       "q": "A listing agreement in North Carolina must be:",
+       "why": "Rule A.0104(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "An automatic renewal",
+        "A definite termination date",
+        "A minimum term of 90 days"
+       ],
+       "q": "Every written agency agreement must have:",
+       "why": "Rule A.0104(a)."
+      }
+     ],
+     "h": "What must be in writing",
+     "l": [
+      "Every agency agreement for brokerage services, in sales and leases, must be in writing and signed (G.S. 93A-13).",
+      "A listing or other agreement with an owner must be written BEFORE any services are provided.",
+      "Each written agreement must carry a DEFINITE termination date and end without notice at it.",
+      "A contract for the sale of land must be in writing to be enforceable, under the statute of frauds.",
+      "A broker completing a preprinted offer form in the ordinary course is not practising law, but drafting provisions is."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Notify the settlement agent",
+        "Correct it themselves",
+        "Ignore it if small"
+       ],
+       "q": "A broker who spots an error on the settlement statement should:",
+       "why": "The Commission's guidance."
+      }
+     ],
+     "h": "Closing",
+     "l": [
+      "The broker should review the settlement statement and NOTIFY THE SETTLEMENT AGENT of any errors or omissions they believe exist.",
+      "North Carolina closings are commonly handled by an attorney, who certifies title and records the deed.",
+      "Trust money held by the broker is disbursed only at the proper time and to the party entitled to it."
+     ]
+    }
+   ],
+   "summary": "Seven items. The agency agreement rules do much of the work here, joined by the closing statement and the broker's duty to flag errors in it.",
+   "topic": "nc/contracts",
+   "traps": [
+    "Owner agreements: written first. Buyer agreements: oral allowed, written by the offer.",
+    "A definite termination date is mandatory in every written agency agreement."
+   ],
+   "vocab": [
+    [
+     "Statute of frauds",
+     "The rule that land contracts must be written to be enforceable."
+    ],
+    [
+     "Settlement statement",
+     "The accounting of debits and credits at closing."
+    ],
+    [
+     "Due diligence fee",
+     "A fee a North Carolina buyer may pay the seller for the due diligence period."
+    ],
+    [
+     "Definite termination date",
+     "The required end date in a written agency agreement."
+    ]
+   ]
+  },
+  "nc/landlord": {
+   "blurb": "The Tenant Security Deposit Act and its deadlines.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Landlord & tenant",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Held in a trust account at an insured institution, or covered by a bond",
+        "Kept in the landlord's own account",
+        "Sent to the Commission"
+       ],
+       "q": "A North Carolina residential security deposit must be:",
+       "why": "G.S. 42-50."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "10 days",
+        "30 days after the lease term begins",
+        "60 days"
+       ],
+       "q": "The tenant must be told where the deposit is held within:",
+       "why": "G.S. 42-50."
+      }
+     ],
+     "h": "Holding the deposit (G.S. 42-50)",
+     "l": [
+      "Security deposits on residential dwellings go into a TRUST ACCOUNT with a licensed, federally insured depository institution or an authorised trust institution - or the landlord may instead furnish a BOND from an insurance company licensed in North Carolina.",
+      "A deposit may be held in a trust account OUTSIDE North Carolina only if the landlord gives the tenant an adequate bond in the amount of the deposits.",
+      "The landlord or agent must tell the tenant the NAME AND ADDRESS of the bank or institution holding the deposit - or the bonding insurer - within 30 DAYS after the lease term begins."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "15 days",
+        "30 days of termination and delivery of possession",
+        "60 days always"
+       ],
+       "q": "The landlord must account for the deposit within:",
+       "why": "G.S. 42-52."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "45 days",
+        "60 days",
+        "90 days"
+       ],
+       "q": "Where the claim cannot be determined in 30 days, the final accounting is due within:",
+       "why": "With an interim accounting at 30 days."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Normal wear and tear",
+        "The cost of re-renting after the tenant's breach",
+        "The landlord's lost opportunity"
+       ],
+       "q": "Which is a permitted deduction?",
+       "why": "G.S. 42-51(a)(5)."
+      }
+     ],
+     "h": "Returning it (G.S. 42-52)",
+     "l": [
+      "On termination, the landlord applies the deposit to permitted claims or refunds it.",
+      "Either way the landlord must ITEMIZE any damage IN WRITING and mail or deliver it with the balance NO LATER THAN 30 DAYS after the tenancy ends and possession is delivered.",
+      "If the extent of the claim cannot be determined in 30 days, the landlord gives an INTERIM accounting within 30 days and a FINAL accounting within 60 DAYS.",
+      "If the tenant's address is unknown, the landlord may apply the deposit after 30 days and hold the balance for the tenant.",
+      "Permitted deductions (G.S. 42-51) include unpaid rent, damage to the premises, unpaid bills that become a lien, the cost of re-renting after a breach - including a reasonable broker's fee - and damages from non-fulfilment of the rental period."
+     ]
+    }
+   ],
+   "summary": "Three items from the Tenant Security Deposit Act. Thirty days is the headline, with a sixty-day backstop when the damage cannot be totted up in time.",
+   "topic": "nc/landlord",
+   "traps": [
+    "30 days to account, 60 days for the final figure when it cannot be worked out in time.",
+    "Out-of-state trust account only with a bond covering the deposits.",
+    "A broker's re-renting fee after a tenant's breach IS deductible."
+   ],
+   "vocab": [
+    [
+     "Tenant Security Deposit Act",
+     "Article 6 of chapter 42."
+    ],
+    [
+     "Interim accounting",
+     "The 30-day statement where the final figure is not yet known."
+    ],
+    [
+     "Demised premises",
+     "The property let to the tenant."
+    ]
+   ]
+  },
+  "nc/licensure": {
+   "blurb": "One licence, provisional status, and the education that lifts it.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Licensure",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A salesperson licence and a broker licence",
+        "Only a broker licence, initially on provisional status",
+        "Three separate licences"
+       ],
+       "q": "North Carolina issues:",
+       "why": "There is no salesperson licence."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "60 hours",
+        "90 hours",
+        "75 instructional hours",
+        "120 hours"
+       ],
+       "q": "The prelicensing course is:",
+       "why": "90 hours is the POSTlicensing programme."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Active immediately",
+        "Provisional but active",
+        "Inactive, until the broker affiliates"
+       ],
+       "q": "An initial North Carolina licence is issued:",
+       "why": "Activation needs affiliation with a broker-in-charge."
+      }
+     ],
+     "h": "One licence, several statuses",
+     "l": [
+      "There is only ONE type of licence in North Carolina: a BROKER licence. There is no salesperson licence.",
+      "A person who meets the requirements - including the 75-HOUR prelicensing course and the Commission's examination - is first issued a broker licence on PROVISIONAL status.",
+      "A provisional broker may do what a full broker does, but only under the supervision of a designated broker-in-charge, and may not operate independently.",
+      "An initial licence is issued INACTIVE; it must be activated by affiliating with a broker-in-charge.",
+      "A licensee may only engage in brokerage as an AGENT for a party. A licensee is not automatically a REALTOR - that means membership of a private trade association."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "90 hours within 18 months of initial licensure",
+        "75 hours within a year",
+        "45 hours within two years"
+       ],
+       "q": "Postlicensing education is:",
+       "why": "Three 30-hour courses."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Two years after issue",
+        "On the licensee's birthday",
+        "On June 30 each year"
+       ],
+       "q": "North Carolina licences expire:",
+       "why": "Renewal runs May 15 to June 30."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "8 hours, due by June 10",
+        "22.5 hours every two years",
+        "45 hours every four years"
+       ],
+       "q": "Annual continuing education is:",
+       "why": "For renewal on active status."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Has no CE requirement in the initial licence year",
+        "Must take 8 hours immediately",
+        "Is exempt for two years"
+       ],
+       "q": "A broker newly licensed by examination:",
+       "why": "But must meet it before the second renewal."
+      }
+     ],
+     "h": "Postlicensing, renewal and continuing education",
+     "l": [
+      "POSTLICENSING: 90 instructional hours within 18 MONTHS of initial licensure, in three 30-hour courses - Post 301 Broker Relationships and Responsibilities, Post 302 Contracts and Closing, and Post 303 NC Law, Rules, and Legal Concepts.",
+      "Completing all three removes provisional status automatically; the education provider reports it, not the licensee.",
+      "Fail to finish in time and the licence goes INACTIVE until the deficiency is cured.",
+      "RENEWAL: every licence expires on JUNE 30 each year. Renew online between MAY 15 and JUNE 30; the annual fee is $50.",
+      "CONTINUING EDUCATION: 8 hours each annual licence period (July 1 - June 30), to be completed by JUNE 10 to renew on active status.",
+      "A broker newly licensed by examination has NO CE requirement in the initial licence year, but must meet the 8 hours before the SECOND renewal."
+     ]
+    }
+   ],
+   "summary": "Three items, and the first thing to know is structural: North Carolina issues only a BROKER licence. Newcomers hold it on provisional status until 90 hours of postlicensing education lift that status.",
+   "topic": "nc/licensure",
+   "traps": [
+    "75 hours in, 90 hours of postlicensing within 18 months, 8 hours of CE a year.",
+    "Everyone is a BROKER. 'Salesperson' is the wrong word in North Carolina.",
+    "Licences expire June 30 annually - not on a two-year cycle.",
+    "CE is due by June 10, not June 30."
+   ],
+   "vocab": [
+    [
+     "Provisional broker",
+     "The entry-level broker licence status."
+    ],
+    [
+     "Postlicensing education",
+     "The 90 hours that remove provisional status."
+    ],
+    [
+     "Active / inactive status",
+     "Whether the licensee may currently practise."
+    ],
+    [
+     "Pocket card",
+     "The annual card evidencing renewal."
+    ],
+    [
+     "REALTOR",
+     "A member of a private trade association, not a licence status."
+    ]
+   ]
+  },
+  "nc/other": {
+   "blurb": "Residential property disclosure, mineral rights, fair housing, the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "examples": [
+    {
+     "k": "The transaction cap is $50,000, and no more than $25,000 may be paid for that licensee in a calendar year.",
+     "s": "A broker converts $60,000 of trust money in one transaction; two clients sue and win.",
+     "t": "Two claims, one closing",
+     "w": [
+      "The per-transaction cap is $50,000 regardless of how many were wronged.",
+      "The yearly cap for one licensee is $25,000."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Other NC laws",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Yes, no, or unknown",
+        "True, false, or not applicable",
+        "Yes, no, or no representation"
+       ],
+       "q": "The three answers on the North Carolina disclosure form are:",
+       "why": "'No representation' is the North Carolina option."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Cancel in writing within three calendar days of contract acceptance",
+        "Sue for treble damages",
+        "Do nothing"
+       ],
+       "q": "If the form is never given to the buyer, the buyer may:",
+       "why": "Chapter 47E."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Assist the seller with the form but not complete it for them",
+        "Complete it on the seller's behalf",
+        "Verify every answer personally"
+       ],
+       "q": "A licensee should:",
+       "why": "G.S. 47E-8 and the Commission's guidance."
+      }
+     ],
+     "h": "Residential Property and Owners' Association Disclosure",
+     "l": [
+      "Answering 'no representation' means the owner makes no statement either way, and is not a misrepresentation.",
+      "FAILURE to provide the buyer with the form may allow the buyer to CANCEL the contract by notifying the seller in writing within THREE CALENDAR DAYS of contract acceptance.",
+      "Licensees have a duty under G.S. 47E-8 to inform their clients of the client's rights and obligations under the statute.",
+      "Licensees are expected to ASSIST the seller in completing the form, but must NOT complete it for them."
+     ],
+     "p": [
+      "Chapter 47E requires most residential property owners to complete a disclosure statement for prospective purchasers. The form asks about the condition of the property, and the owner may answer YES, NO, or - uniquely - NO REPRESENTATION."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "In the appendix",
+        "Given only on request",
+        "Conspicuous and in boldface type"
+       ],
+       "q": "The mineral and oil and gas rights disclosure must be:",
+       "why": "G.S. 47E-4.1(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Zoning change",
+        "Conveyance or reservation by the owner",
+        "The buyer's election"
+       ],
+       "q": "Mineral rights may be severed from the title by:",
+       "why": "G.S. 47E-4.1(a)."
+      }
+     ],
+     "h": "Mineral, oil and gas rights (G.S. 47E-4.1)",
+     "p": [
+      "Separately from the condition disclosure, the owner must give the purchaser a MINERAL AND OIL AND GAS RIGHTS disclosure statement, conspicuous and in BOLDFACE type. It explains that those rights can be severed from the title by conveyance or reservation, and that whoever owns them may have a perpetual right to drill, mine, explore and remove resources, from the surface or from nearby."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "$25,000",
+        "$75,000",
+        "$50,000"
+       ],
+       "q": "The fund pays at most, per transaction:",
+       "why": "G.S. 93A-21(a)(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "$25,000",
+        "$50,000",
+        "$75,000"
+       ],
+       "q": "The aggregate limit for one licensee, ever, is:",
+       "why": "$25,000 is the cap within a single calendar year."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A judgment for conversion of trust funds",
+        "Any breach of contract",
+        "A negligent appraisal"
+       ],
+       "q": "A claim on the fund must rest on:",
+       "why": "G.S. 93A-17(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Court costs and punitive damages",
+        "Direct monetary loss",
+        "Converted trust funds"
+       ],
+       "q": "The fund will NOT pay:",
+       "why": "G.S. 93A-21(a)(4)."
+      }
+     ],
+     "h": "The Real Estate Education and Recovery Fund",
+     "l": [
+      "The Commission maintains the fund to pay unsatisfied judgments where an aggrieved person suffered a DIRECT MONETARY LOSS from the CONVERSION OF TRUST FUNDS by a licensed broker (G.S. 93A-16, 93A-17).",
+      "The claimant must have sued the broker and given the Commission written notice of the suit within 60 DAYS of its start - or, where the claim is under $3,000 excluding attorney's fees, within 60 days of the end of all proceedings.",
+      "A final judgment on grounds of conversion of trust funds is required.",
+      "Limits (G.S. 93A-21): $50,000 PER TRANSACTION regardless of the number of claimants or parcels; $25,000 in the aggregate for ONE LICENSEE in a single calendar year; and $75,000 in the aggregate for one licensee ever.",
+      "Application must be made within ONE YEAR after all proceedings end.",
+      "The fund does NOT pay consequential, multiple, punitive, incidental or special damages, civil penalties, interest or court costs."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Seven members",
+        "Nine members",
+        "Five members"
+       ],
+       "q": "The North Carolina Real Estate Commission has:",
+       "why": "Seven appointed by the Governor and two by the General Assembly."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Three",
+        "Five",
+        "Seven"
+       ],
+       "q": "At least how many members must be licensed brokers?",
+       "why": "G.S. 93A-3(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Four years",
+        "Two years",
+        "Three years, staggered"
+       ],
+       "q": "Commission members serve terms of:",
+       "why": "G.S. 93A-3(a)."
+      }
+     ],
+     "h": "The Commission itself (G.S. 93A-3)",
+     "l": [
+      "NINE members: SEVEN appointed by the Governor, ONE by the General Assembly on the recommendation of the President Pro Tempore of the Senate, and ONE on the recommendation of the Speaker of the House.",
+      "At least THREE must be licensed real estate brokers.",
+      "At least TWO must be people not involved directly or indirectly in the real estate or appraisal business.",
+      "Members serve THREE-YEAR staggered terms, and elect a chairman annually."
+     ]
+    }
+   ],
+   "summary": "Eleven items of North Carolina law that sits outside the licence law: the disclosure form with its famous third option, the mineral rights notice, and the fund that pays consumers when a broker converts their money.",
+   "topic": "nc/other",
+   "traps": [
+    "'No representation' is a valid answer and is not a misrepresentation.",
+    "Three CALENDAR days to cancel when the disclosure was never given.",
+    "$50,000 per transaction, $25,000 per licensee per year, $75,000 per licensee ever.",
+    "Nine Commission members, at least three brokers and at least two outsiders."
+   ],
+   "vocab": [
+    [
+     "RPOADS",
+     "Residential Property and Owners' Association Disclosure Statement."
+    ],
+    [
+     "No representation",
+     "The North Carolina answer meaning the owner states nothing either way."
+    ],
+    [
+     "Conversion",
+     "Taking trust money for one's own use; the ground for a fund claim."
+    ],
+    [
+     "Recovery Fund",
+     "The Real Estate Education and Recovery Fund."
+    ],
+    [
+     "Severed mineral rights",
+     "Subsurface rights separated from surface ownership."
+    ]
+   ]
+  },
+  "nc/practice": {
+   "blurb": "Trust money, the three-banking-day rule, advertising and records.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Into the trust account within three banking days of receipt, accepted or not.",
+     "s": "A buyer hands a provisional broker $2,000 in cash with an offer the seller has not yet seen.",
+     "t": "Cash across the desk",
+     "w": [
+      "The provisional broker must pass it to the broker-in-charge immediately.",
+      "Because it is cash, the three-banking-day clock runs from receipt, not acceptance."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage practice",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The broker's earned commission after disbursement",
+        "A tenant's security deposit",
+        "The firm's advertising budget"
+       ],
+       "q": "Which is trust money?",
+       "why": "Money belonging to others."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The broker's own money",
+        "Trust money",
+        "Exempt because it is not a sale"
+       ],
+       "q": "A listing agent receives money from an out-of-town seller for yard maintenance. That money is:",
+       "why": "It is held for another, even if collateral to the brokerage."
+      }
+     ],
+     "h": "What trust money is",
+     "l": [
+      "Earnest money deposits",
+      "Down payments",
+      "Tenant security deposits",
+      "Rents",
+      "Homeowner association dues and assessments",
+      "Money received from final settlements",
+      "For short-term and resort rentals: advance reservation deposits, and the sales taxes on gross receipts"
+     ],
+     "p": [
+      "TRUST MONEY is money belonging to others received by a broker acting as an agent, and any money a licensee holds as temporary custodian for someone else - even where that is only collateral to the brokerage role."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Acceptance of the offer",
+        "Receipt of the cheque",
+        "Closing"
+       ],
+       "q": "Earnest money paid by cheque with an offer must be deposited within three banking days of:",
+       "why": "Unless the buyer instructs otherwise."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Acceptance",
+        "Receipt, even if the offer has not been accepted",
+        "The end of the month"
+       ],
+       "q": "Earnest money tendered in CASH must be deposited within three banking days of:",
+       "why": "Cash is immediately available."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Hold it until closing",
+        "Deliver it immediately to the broker-in-charge",
+        "Deposit it in their own account"
+       ],
+       "q": "A provisional broker who receives a deposit must:",
+       "why": "Rule A.0116(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "It sets the closing date",
+        "It fixes the commission",
+        "It starts the three-banking-day clock for a cheque"
+       ],
+       "q": "The date of acceptance matters because:",
+       "why": "Which is why it should be shown in the agreement."
+      }
+     ],
+     "h": "The three-banking-day rule",
+     "l": [
+      "The general rule: trust money must be deposited within THREE BANKING DAYS OF RECEIPT.",
+      "EXCEPTION - earnest money received with an offer to purchase, and tenant security deposits with a lease, go in not later than three banking days following ACCEPTANCE of the offer or lease.",
+      "EXCEPTION TO THE EXCEPTION - if the deposit is tendered in CASH, it must be deposited within three banking days of RECEIPT, even if nothing has been accepted. Cash is immediately available and can be refunded at once; cheques may need days to clear.",
+      "A broker MAY choose to deposit a cheque at once and need not wait for acceptance, unless the buyer or tenant has instructed otherwise.",
+      "A PROVISIONAL BROKER who receives trust money must deliver it IMMEDIATELY to their broker-in-charge; they may not hold it any longer than it takes to hand it over (Rule A.0116(b); A.1808)."
+     ]
+    }
+   ],
+   "summary": "Twelve items, and most of them are about other people's money. Three banking days is the rule, but when the clock starts depends on whether the money is earnest money, a security deposit, or cash.",
+   "topic": "nc/practice",
+   "traps": [
+    "Three BANKING days - not business days, not calendar days.",
+    "Cheque: clock starts at acceptance. Cash: clock starts at receipt.",
+    "A provisional broker never holds trust money; it goes straight to the broker-in-charge.",
+    "Commission is the broker's money only after it is properly earned and disbursed."
+   ],
+   "vocab": [
+    [
+     "Trust money",
+     "Money belonging to others held by a licensee."
+    ],
+    [
+     "Banking day",
+     "A day the broker's bank is open for business."
+    ],
+    [
+     "Commingling",
+     "Mixing trust money with the broker's own."
+    ],
+    [
+     "Conversion",
+     "Using trust money for the broker's own purposes."
+    ],
+    [
+     "Broker-in-charge",
+     "The broker who supervises an office and its provisional brokers."
+    ]
+   ]
+  },
+  "nc/supervision": {
+   "blurb": "The broker-in-charge, provisional brokers, and who may be paid.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Supervision & compensation",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "120 days of designation",
+        "30 days",
+        "one year"
+       ],
+       "q": "A broker must complete the 12-hour Broker-in-Charge course within:",
+       "why": "Unless taken within the previous year."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Operate independently after one year",
+        "Act only under the supervision of a designated broker-in-charge",
+        "Supervise other provisional brokers"
+       ],
+       "q": "A provisional broker may:",
+       "why": "G.S. 93A-2(a2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A $500 fine",
+        "Losing BIC Eligible status until the course is taken",
+        "Automatic licence revocation"
+       ],
+       "q": "Missing the 12-hour course deadline means:",
+       "why": "The Commission's rules."
+      }
+     ],
+     "h": "The broker-in-charge",
+     "l": [
+      "An office must have a designated BROKER-IN-CHARGE, who supervises the brokers in it.",
+      "To be designated, a broker must first obtain BIC ELIGIBLE status, which requires the experience the Commission prescribes - the Commission may require evidence of it.",
+      "After obtaining BIC Eligible status, the broker must complete the Commission's 12-HOUR BROKER-IN-CHARGE COURSE within 120 DAYS of designation, unless taken in the previous year. Missing that deadline costs the BIC Eligible status, and the course must be taken again before it can be regained.",
+      "A PROVISIONAL BROKER may do the same acts as a full broker only while supervised by a designated broker-in-charge, and may NEVER operate independently in any way."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The seller directly",
+        "The affiliated broker",
+        "The closing attorney"
+       ],
+       "q": "A provisional broker is paid by:",
+       "why": "Brokerage compensation flows through the broker."
+      }
+     ],
+     "h": "Who may be paid",
+     "l": [
+      "A provisional broker's compensation for brokerage comes through the broker they are affiliated with, not directly from a party.",
+      "Acting for more than one party without the knowledge of all parties is a ground for discipline (G.S. 93A-6(a)(4)).",
+      "Paying an unlicensed person for acts requiring a licence is prohibited."
+     ]
+    }
+   ],
+   "summary": "Four items on who answers for whom. The broker-in-charge is the pivot: a provisional broker cannot act without one, and cannot be paid by anyone else.",
+   "topic": "nc/supervision",
+   "traps": [
+    "12 hours, within 120 days of designation.",
+    "A provisional broker is never independent - supervision is the whole point of the status."
+   ],
+   "vocab": [
+    [
+     "Broker-in-charge",
+     "The designated broker supervising an office."
+    ],
+    [
+     "BIC Eligible",
+     "The status a broker must hold before being designated."
+    ],
+    [
+     "Provisional broker",
+     "The entry-level status; supervised, never independent."
+    ],
+    [
+     "Affiliated broker",
+     "The broker through whom a provisional broker works."
+    ]
+   ]
+  },
+  "nc/taxes": {
+   "blurb": "The excise tax, property tax, and insurance in a transaction.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [
+    {
+     "k": "$573 in excise tax, paid by the seller.",
+     "s": "A home sells for $286,300.",
+     "t": "Excise on $286,300",
+     "w": [
+      "$286,300 / 500 = 572.6 units.",
+      "A fractional part counts as a whole unit, so 573.",
+      "573 x $1.00 = $573."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Taxes & insurance",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "$1.00 per $1,000",
+        "70 cents per $100",
+        "$1.00 per $500 of consideration or fraction of it"
+       ],
+       "q": "The North Carolina excise tax rate is:",
+       "why": "G.S. 105-228.30(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The buyer, at closing",
+        "The transferor, to the register of deeds",
+        "The lender"
+       ],
+       "q": "The excise tax is paid by:",
+       "why": "G.S. 105-228.30(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "401, because a fractional part counts as a whole unit",
+        "400",
+        "400.8"
+       ],
+       "q": "A $200,400 sale is taxed on how many $500 units?",
+       "why": "$200,400 / 500 = 400.8, rounded up."
+      }
+     ],
+     "h": "The excise tax (G.S. 105-228.30)",
+     "l": [
+      "An EXCISE TAX is levied on each instrument conveying an interest in real property.",
+      "The rate is $1.00 ON EACH $500 of the consideration or value conveyed, OR FRACTIONAL PART of $500.",
+      "The TRANSFEROR - the seller - pays it to the REGISTER OF DEEDS of the county where the property lies, BEFORE the instrument is recorded.",
+      "Where a parcel lies in two or more counties, it is paid to the register of deeds of the county holding the greater part by value.",
+      "It also applies to timber deeds and contracts for the sale of standing timber."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Prorated between seller and buyer",
+        "Paid entirely by the buyer",
+        "Waived"
+       ],
+       "q": "Property taxes at closing are usually:",
+       "why": "Standard practice."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The buyer's equity",
+        "The seller",
+        "The lender, up to the loan amount"
+       ],
+       "q": "A lender's title policy protects:",
+       "why": "An owner's policy is separate."
+      }
+     ],
+     "h": "Property tax and insurance in a transaction",
+     "l": [
+      "County and municipal ad valorem property taxes are assessed on the property and are commonly PRORATED between seller and buyer at closing.",
+      "A lender normally requires HAZARD INSURANCE at least equal to the loan, and may escrow for taxes and insurance.",
+      "TITLE INSURANCE protects against defects in title; the lender's policy protects the lender, an owner's policy the owner."
+     ]
+    }
+   ],
+   "summary": "Four items. The number to carry is the excise tax: a dollar for every five hundred, paid by the seller at the register of deeds.",
+   "topic": "nc/taxes",
+   "traps": [
+    "$1 per $500, and any fraction of $500 counts as a whole $500.",
+    "The SELLER pays the excise tax, before recording."
+   ],
+   "vocab": [
+    [
+     "Excise tax",
+     "North Carolina's transfer tax on a recorded conveyance."
+    ],
+    [
+     "Register of deeds",
+     "The county office where instruments are recorded."
+    ],
+    [
+     "Ad valorem tax",
+     "A tax according to value; the property tax."
+    ],
+    [
+     "Proration",
+     "Dividing a shared cost between seller and buyer at closing."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Working With Real Estate Agents, written agreements, dual and designated agency.",
+   "counts_on_exam": true,
+   "exam_questions": 16,
+   "key": "nc/agency",
+   "label": "Agency",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Trust money, the three-banking-day rule, advertising and records.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "nc/practice",
+   "label": "Brokerage practice",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Residential property disclosure, mineral rights, fair housing, the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "key": "nc/other",
+   "label": "Other NC laws",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Agency agreements, offers, and what the closing statement must show.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "nc/contracts",
+   "label": "Contracts & closing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The broker-in-charge, provisional brokers, and who may be paid.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "nc/supervision",
+   "label": "Supervision & compensation",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The excise tax, property tax, and insurance in a transaction.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "nc/taxes",
+   "label": "Taxes & insurance",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "One licence, provisional status, and the education that lifts it.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "nc/licensure",
+   "label": "Licensure",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Tenant Security Deposit Act and its deadlines.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "nc/landlord",
+   "label": "Landlord & tenant",
+   "portion": "georgia"
+  }
+ ]
+}
