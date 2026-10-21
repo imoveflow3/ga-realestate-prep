@@ -1,0 +1,2227 @@
+{
+ "abbr": "PA",
+ "bank": [
+  {
+   "answer": 2,
+   "choices": [
+    "At the first showing",
+    "When an offer is prepared",
+    "At the initial interview",
+    "At settlement"
+   ],
+   "concept": "Pennsylvania consumer notice",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.336(a).",
+   "id": "pa-5a517430",
+   "portion": "georgia",
+   "q": "The Consumer Notice must be given to a consumer:",
+   "sub": "pa/agency|Consumer Notice",
+   "subtopic": "Consumer Notice",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three years",
+    "One year",
+    "Six months",
+    "Thirty days"
+   ],
+   "concept": "Pennsylvania consumer notice",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.336(b).",
+   "id": "pa-260d1a82",
+   "portion": "georgia",
+   "q": "The signed or refused acknowledgement of the Consumer Notice is retained for:",
+   "sub": "pa/agency|Consumer Notice",
+   "subtopic": "Consumer Notice",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A binding listing agreement",
+    "An offer to purchase",
+    "A disclosure of defects",
+    "Not a contract"
+   ],
+   "concept": "Pennsylvania consumer notice",
+   "difficulty": 1,
+   "explain": "It is headed 'THIS IS NOT A CONTRACT'.",
+   "id": "pa-2d2e8afc",
+   "portion": "georgia",
+   "q": "The Consumer Notice states that it is:",
+   "sub": "pa/agency|Consumer Notice",
+   "subtopic": "Consumer Notice",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Is not representing them; no relationship is presumed",
+    "Is their agent by default",
+    "Is automatically a dual agent",
+    "Is a subagent of the seller"
+   ],
+   "concept": "Pennsylvania consumer notice",
+   "difficulty": 2,
+   "explain": "The Consumer Notice says a business relationship is NOT presumed.",
+   "id": "pa-08f0ce9a",
+   "portion": "georgia",
+   "q": "Until a consumer signs a written agreement selecting a relationship, the licensee:",
+   "sub": "pa/agency|Consumer Notice",
+   "subtopic": "Consumer Notice",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The seller, because they pay",
+    "Both parties equally",
+    "The buyer or tenant",
+    "The listing broker"
+   ],
+   "concept": "Pennsylvania relationships",
+   "difficulty": 1,
+   "explain": "The Consumer Notice states this expressly.",
+   "id": "pa-3289c6fd",
+   "portion": "georgia",
+   "q": "A buyer agent paid by the seller works exclusively for:",
+   "sub": "pa/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Verbal consent from one",
+    "The broker's approval alone",
+    "The written consent of both parties",
+    "Commission approval"
+   ],
+   "concept": "Pennsylvania relationships",
+   "difficulty": 1,
+   "explain": "The Consumer Notice.",
+   "id": "pa-661740bb",
+   "portion": "georgia",
+   "q": "A dual agent in Pennsylvania needs:",
+   "sub": "pa/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Disclose a known material defect",
+    "Present offers",
+    "Collect a commission",
+    "Take any action adverse or detrimental to either party"
+   ],
+   "concept": "Pennsylvania relationships",
+   "difficulty": 2,
+   "explain": "Material defects must still be disclosed.",
+   "id": "pa-e813767b",
+   "portion": "georgia",
+   "q": "A dual agent may not:",
+   "sub": "pa/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Automatically serves as a dual agent",
+    "Has no role in the transaction",
+    "Must represent only the seller",
+    "Becomes a transaction licensee"
+   ],
+   "concept": "Pennsylvania relationships",
+   "difficulty": 2,
+   "explain": "Because the broker supervises all the licensees.",
+   "id": "pa-a21d42a8",
+   "portion": "georgia",
+   "q": "In designated agency, the broker:",
+   "sub": "pa/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Pay both sides' fees",
+    "Withdraw from the deal",
+    "Take reasonable steps to keep confidential information from being disclosed within the company",
+    "Notify the Commission"
+   ],
+   "concept": "Pennsylvania relationships",
+   "difficulty": 2,
+   "explain": "The Consumer Notice.",
+   "id": "pa-069a49ea",
+   "portion": "georgia",
+   "q": "A designated agency broker must additionally:",
+   "sub": "pa/agency|Relationships",
+   "subtopic": "Relationships",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Represents both parties",
+    "Provides services with no agency relationship",
+    "Represents the seller only",
+    "Is prohibited in Pennsylvania"
+   ],
+   "concept": "Pennsylvania transaction licensee",
+   "difficulty": 1,
+   "explain": "No duty of loyalty or confidentiality.",
+   "id": "pa-ef2b5ed5",
+   "portion": "georgia",
+   "q": "A transaction licensee:",
+   "sub": "pa/agency|Transaction licensee",
+   "subtopic": "Transaction licensee",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A known material defect",
+    "The asking price",
+    "That the buyer will pay more than the price in the written offer",
+    "The property's square footage"
+   ],
+   "concept": "Pennsylvania transaction licensee",
+   "difficulty": 2,
+   "explain": "The three price confidences bind even without agency.",
+   "id": "pa-8dc589d2",
+   "portion": "georgia",
+   "q": "A transaction licensee is prohibited from disclosing:",
+   "sub": "pa/agency|Transaction licensee",
+   "subtopic": "Transaction licensee",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Keep all information confidential",
+    "Act in the buyer's best interest",
+    "Disclose known material defects about the property",
+    "Advocate on price"
+   ],
+   "concept": "Pennsylvania transaction licensee",
+   "difficulty": 2,
+   "explain": "The Consumer Notice.",
+   "id": "pa-f3bb00e0",
+   "portion": "georgia",
+   "q": "A transaction licensee must still:",
+   "sub": "pa/agency|Transaction licensee",
+   "subtopic": "Transaction licensee",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The same duties and obligations as the seller agent",
+    "No duties at all",
+    "The duties of a transaction licensee",
+    "Duties to the buyer"
+   ],
+   "concept": "Pennsylvania subagency",
+   "difficulty": 2,
+   "explain": "The Consumer Notice.",
+   "id": "pa-1f58220f",
+   "portion": "georgia",
+   "q": "A subagent in Pennsylvania has:",
+   "sub": "pa/agency|Subagency",
+   "subtopic": "Subagency",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Loyalty",
+    "Dealing honestly and in good faith",
+    "Confidentiality",
+    "Advocacy on price"
+   ],
+   "concept": "Pennsylvania common duties",
+   "difficulty": 1,
+   "explain": "The Consumer Notice lists the common duties.",
+   "id": "pa-d8fbc3de",
+   "portion": "georgia",
+   "q": "Which duty is owed by EVERY licensee, whatever the relationship?",
+   "sub": "pa/agency|Common duties",
+   "subtopic": "Common duties",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Orally by the buyer",
+    "By the broker",
+    "Never",
+    "In writing by the seller, once the property is under contract"
+   ],
+   "concept": "Pennsylvania common duties",
+   "difficulty": 2,
+   "explain": "The Consumer Notice sets out the one waiver.",
+   "id": "pa-947fe710",
+   "portion": "georgia",
+   "q": "The duty to present offers as soon as practicable may be waived:",
+   "sub": "pa/agency|Common duties",
+   "subtopic": "Common duties",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At settlement",
+    "When the service is recommended, or when they first learn it will be used",
+    "Only if asked",
+    "Within 30 days"
+   ],
+   "concept": "Pennsylvania common duties",
+   "difficulty": 2,
+   "explain": "The Consumer Notice.",
+   "id": "pa-f95862b0",
+   "portion": "georgia",
+   "q": "A licensee recommending a title or inspection service in which they hold a financial interest must disclose it:",
+   "sub": "pa/agency|Common duties",
+   "subtopic": "Common duties",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Advise the consumer to seek expert advice",
+    "Give a best guess",
+    "Decline the engagement",
+    "Refer to the Commission"
+   ],
+   "concept": "Pennsylvania common duties",
+   "difficulty": 3,
+   "explain": "The Consumer Notice.",
+   "id": "pa-6fc8427c",
+   "portion": "georgia",
+   "q": "Where a matter is beyond the licensee's expertise, the duty is to:",
+   "sub": "pa/agency|Common duties",
+   "subtopic": "Common duties",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The duty to disclose material defects",
+    "The licensee's fees or commission",
+    "The Consumer Notice itself",
+    "The Seller Disclosure Law"
+   ],
+   "concept": "Pennsylvania negotiable terms",
+   "difficulty": 2,
+   "explain": "Duration, fees, scope, and cooperation with other brokers.",
+   "id": "pa-bbfdfafa",
+   "portion": "georgia",
+   "q": "Which is expressly negotiable under the Consumer Notice?",
+   "sub": "pa/agency|Negotiable terms",
+   "subtopic": "Negotiable terms",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Fixed by the Commission",
+    "A negotiable term that must be addressed in the agreement",
+    "Set by the local board",
+    "Prohibited"
+   ],
+   "concept": "Pennsylvania negotiable terms",
+   "difficulty": 3,
+   "explain": "The Consumer Notice.",
+   "id": "pa-880dff92",
+   "portion": "georgia",
+   "q": "The broker's cooperation with and sharing of fees with other brokers is:",
+   "sub": "pa/agency|Negotiable terms",
+   "subtopic": "Negotiable terms",
+   "topic": "pa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The broker as trustee",
+    "The seller as trustee",
+    "The title company as trustee",
+    "The Commission as trustee"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.325(a)(2).",
+   "id": "pa-59586c5b",
+   "portion": "georgia",
+   "q": "A Pennsylvania escrow account must designate:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Exclusively for escrow purposes",
+    "For escrow and payroll",
+    "For any brokerage purpose",
+    "For the broker's reserves"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.325(a)(4).",
+   "id": "pa-260c8970",
+   "portion": "georgia",
+   "q": "An escrow account must be used:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A 30-day notice period",
+    "Joint signatures of both parties",
+    "Withdrawal of funds without prior notice",
+    "Quarterly withdrawals only"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.325(a)(3).",
+   "id": "pa-2fcaaa9e",
+   "portion": "georgia",
+   "q": "An escrow account must provide for:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Belongs to the broker",
+    "Goes to the Commission",
+    "Is disbursed pro rata like the principal, and the broker may not claim it",
+    "Is always paid to the buyer"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.325(c), with the lessor exception.",
+   "id": "pa-5c438739",
+   "portion": "georgia",
+   "q": "Interest earned on a Pennsylvania escrow account:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Encouraged to deposit it in an interest-bearing account",
+    "Required to use a non-interest account",
+    "Required to return it",
+    "Required to notify the Commission"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.325(c).",
+   "id": "pa-d0e90fa0",
+   "portion": "georgia",
+   "q": "Where escrow money will be held more than six months, the broker is:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any employee",
+    "The seller",
+    "Nobody but the broker",
+    "A licensed employee, for payments properly chargeable to the account"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.325(b).",
+   "id": "pa-997f6288",
+   "portion": "georgia",
+   "q": "Who may be given written authority to withdraw from the escrow account?",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Must be held in escrow",
+    "Go into the general business account",
+    "May be kept by the broker",
+    "Go into a separate rental management account"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.321(b).",
+   "id": "pa-c2e77c53",
+   "portion": "georgia",
+   "q": "Rents a broker receives as a property manager:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Each salesperson",
+    "The corporation's accountant",
+    "The broker of record",
+    "The Commission"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.321(a).",
+   "id": "pa-56e674b8",
+   "portion": "georgia",
+   "q": "In a corporate brokerage, responsibility for performing the escrow duty rests with:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Cover bank service charges or maintain a required minimum balance",
+    "Round a deposit up",
+    "Lend to a client",
+    "Cover a shortfall"
+   ],
+   "concept": "Pennsylvania commingling",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.326(b).",
+   "id": "pa-24526ba2",
+   "portion": "georgia",
+   "q": "A broker may deposit personal funds into escrow only to:",
+   "sub": "pa/regulations|Commingling",
+   "subtopic": "Commingling",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Permitted if repaid",
+    "Permitted up to $200",
+    "Permitted with the client's consent",
+    "Misappropriation, and prohibited"
+   ],
+   "concept": "Pennsylvania commingling",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.326(c).",
+   "id": "pa-5d9586b4",
+   "portion": "georgia",
+   "q": "Using escrow money for the broker's own purposes is:",
+   "sub": "pa/regulations|Commingling",
+   "subtopic": "Commingling",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Split it evenly",
+    "Pay the seller",
+    "Return it to the buyer",
+    "Retain the money in escrow until the dispute is resolved"
+   ],
+   "concept": "Pennsylvania disputes",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.327.",
+   "id": "pa-aee7ea2a",
+   "portion": "georgia",
+   "q": "When the parties dispute entitlement to escrowed money, the broker must first:",
+   "sub": "pa/regulations|Disputes",
+   "subtopic": "Disputes",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "10 days' notice",
+    "60 days' notice",
+    "30 days' notice",
+    "No notice"
+   ],
+   "concept": "Pennsylvania disputes",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.327.",
+   "id": "pa-c1bdfc1f",
+   "portion": "georgia",
+   "q": "Before petitioning the county court to interplead rival claimants, the broker must give the parties:",
+   "sub": "pa/regulations|Disputes",
+   "subtopic": "Disputes",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Six months",
+    "At least three years following consummation",
+    "One year",
+    "Seven years"
+   ],
+   "concept": "Pennsylvania records",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.286(a).",
+   "id": "pa-74913f8b",
+   "portion": "georgia",
+   "q": "Pennsylvania transaction records must be kept for:",
+   "sub": "pa/regulations|Records",
+   "subtopic": "Records",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Three years",
+    "Six months",
+    "One year",
+    "Indefinitely"
+   ],
+   "concept": "Pennsylvania records",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.286(a)(1).",
+   "id": "pa-e1775ff9",
+   "portion": "georgia",
+   "q": "A Consumer Notice acknowledgement where no transaction followed is kept for:",
+   "sub": "pa/regulations|Records",
+   "subtopic": "Records",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only the amount and date",
+    "Only the buyer",
+    "The broker's commission",
+    "The party the money came from, the party it belongs to, and the account it is held for"
+   ],
+   "concept": "Pennsylvania records",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.328.",
+   "id": "pa-ac3fa77d",
+   "portion": "georgia",
+   "q": "Escrow records must identify:",
+   "sub": "pa/regulations|Records",
+   "subtopic": "Records",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "17",
+    "19",
+    "21",
+    "18"
+   ],
+   "concept": "Pennsylvania qualifying",
+   "difficulty": 1,
+   "explain": "Pearson handbook; RELRA.",
+   "id": "pa-4b9df074",
+   "portion": "georgia",
+   "q": "The minimum age for a Pennsylvania salesperson licence is:",
+   "sub": "pa/licensure|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A high school graduate or the equivalent",
+    "A college graduate",
+    "A trade school graduate",
+    "Able to show five years' work history"
+   ],
+   "concept": "Pennsylvania qualifying",
+   "difficulty": 1,
+   "explain": "Pearson handbook.",
+   "id": "pa-12fc783c",
+   "portion": "georgia",
+   "q": "A Pennsylvania salesperson applicant must be at least:",
+   "sub": "pa/licensure|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "5 credits or 75 hours of basic real estate courses",
+    "30 hours",
+    "60 hours",
+    "120 hours"
+   ],
+   "concept": "Pennsylvania education",
+   "difficulty": 1,
+   "explain": "Through a Commission-approved provider or an accredited college.",
+   "id": "pa-8dfa29dc",
+   "portion": "georgia",
+   "q": "Pre-licensing education for a Pennsylvania salesperson is:",
+   "sub": "pa/licensure|Education",
+   "subtopic": "Education",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One year",
+    "Three years",
+    "Ten years",
+    "Five years before passing the examination"
+   ],
+   "concept": "Pennsylvania education",
+   "difficulty": 2,
+   "explain": "Pearson handbook.",
+   "id": "pa-03d94105",
+   "portion": "georgia",
+   "q": "Pre-licensing courses must have been completed within:",
+   "sub": "pa/licensure|Education",
+   "subtopic": "Education",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year",
+    "Three years",
+    "Five years",
+    "Indefinitely"
+   ],
+   "concept": "Pennsylvania examination",
+   "difficulty": 2,
+   "explain": "The licence application must be filed within that period.",
+   "id": "pa-391be3e8",
+   "portion": "georgia",
+   "q": "Pennsylvania examination scores are valid for:",
+   "sub": "pa/licensure|Examination",
+   "subtopic": "Examination",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 hours",
+    "14 hours per licence period",
+    "22.5 hours",
+    "8 hours"
+   ],
+   "concept": "Pennsylvania continuing education",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.382(a).",
+   "id": "pa-f70944bf",
+   "portion": "georgia",
+   "q": "Continuing education in Pennsylvania is:",
+   "sub": "pa/licensure|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "December 31",
+    "June 30",
+    "May 31",
+    "The licensee's birthday"
+   ],
+   "concept": "Pennsylvania continuing education",
+   "difficulty": 1,
+   "explain": "49 Pa. Code 35.382(a).",
+   "id": "pa-278566cc",
+   "portion": "georgia",
+   "q": "The Pennsylvania continuing education deadline is:",
+   "sub": "pa/licensure|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Optional for a first renewal",
+    "A condition precedent to renewal",
+    "Required only of brokers",
+    "Waived for inactive licensees"
+   ],
+   "concept": "Pennsylvania continuing education",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.382(a).",
+   "id": "pa-047c8052",
+   "portion": "georgia",
+   "q": "Completing the continuing education is:",
+   "sub": "pa/licensure|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At any time in the past",
+    "In the two-year period before the reactivation application",
+    "After reactivation",
+    "Within 30 days of applying"
+   ],
+   "concept": "Pennsylvania reactivation",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.382(b).",
+   "id": "pa-f83dd155",
+   "portion": "georgia",
+   "q": "To reactivate and renew a noncurrent standard licence, the 14 hours must be completed:",
+   "sub": "pa/licensure|Reactivation",
+   "subtopic": "Reactivation",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "May reuse previous courses",
+    "Is exempt from education",
+    "Must retake the examination",
+    "May not use the same continuing education course twice"
+   ],
+   "concept": "Pennsylvania reactivation",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.382(b).",
+   "id": "pa-fd9dd6b7",
+   "portion": "georgia",
+   "q": "A licensee reactivating a licence:",
+   "sub": "pa/licensure|Reactivation",
+   "subtopic": "Reactivation",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Unless the property is zoned solely or primarily for single family dwellings",
+    "Always, without exception",
+    "Only for commercial property",
+    "Only if the buyer asks"
+   ],
+   "concept": "Pennsylvania zoning",
+   "difficulty": 2,
+   "explain": "The Consumer Notice sets out the rule.",
+   "id": "pa-8034cf7e",
+   "portion": "georgia",
+   "q": "A Pennsylvania sales agreement must state the property's zoning classification:",
+   "sub": "pa/misc|Zoning",
+   "subtopic": "Zoning",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only the seller agent's duty",
+    "Optional in an as-is sale",
+    "The buyer's responsibility",
+    "A duty every licensee owes, whatever the relationship"
+   ],
+   "concept": "Pennsylvania seller disclosure",
+   "difficulty": 1,
+   "explain": "It is in the Consumer Notice's common duty list.",
+   "id": "pa-a9a69416",
+   "portion": "georgia",
+   "q": "Complying with the Real Estate Seller Disclosure Law is:",
+   "sub": "pa/misc|Seller disclosure",
+   "subtopic": "Seller disclosure",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Race",
+    "Colour",
+    "National origin",
+    "Ancestry"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 1,
+   "explain": "Pennsylvania also adds religious creed, age and the guide-animal class.",
+   "id": "pa-d6518964",
+   "portion": "georgia",
+   "q": "Which is protected under the Pennsylvania Human Relations Act but not the federal Fair Housing Act?",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At any age",
+    "Only for those under 18",
+    "At 40 and over",
+    "Only in employment"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 2,
+   "explain": "Pennsylvania Human Relations Commission.",
+   "id": "pa-62ecdb1e",
+   "portion": "georgia",
+   "q": "Age is protected under the Pennsylvania Human Relations Act:",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Occupation",
+    "Credit score",
+    "The use, handling or training of a support or guide animal for a disability",
+    "Length of residence"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 2,
+   "explain": "Pennsylvania Human Relations Commission.",
+   "id": "pa-ddda77b7",
+   "portion": "georgia",
+   "q": "Pennsylvania's protected classes include:",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The rent and term",
+    "Whether they are the owner, the owner's direct employee, or an agent under a management or leasing agreement",
+    "The tenant's credit score",
+    "The commission"
+   ],
+   "concept": "Pennsylvania leases",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.337.",
+   "id": "pa-5a2add91",
+   "portion": "georgia",
+   "q": "The Consumer Notice for a lease where the licensee acts for the owner asks the licensee to state:",
+   "sub": "pa/misc|Leases",
+   "subtopic": "Leases",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "63 P.S. 455",
+    "Title 68 of the Consolidated Statutes",
+    "49 Pa. Code chapter 35",
+    "The Pennsylvania Bulletin only"
+   ],
+   "concept": "Pennsylvania structure",
+   "difficulty": 1,
+   "explain": "RELRA is the statute; chapter 35 holds the regulations.",
+   "id": "pa-44251a83",
+   "portion": "georgia",
+   "q": "The Pennsylvania Commission's regulations are found in:",
+   "sub": "pa/commission|Structure",
+   "subtopic": "Structure",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "49 Pa. Code 35",
+    "68 Pa.C.S. 3101",
+    "43 P.S. 955",
+    "63 P.S. 455.101-455.902"
+   ],
+   "concept": "Pennsylvania structure",
+   "difficulty": 2,
+   "explain": "The Commission's regulations are made under it.",
+   "id": "pa-459a1836",
+   "portion": "georgia",
+   "q": "The Real Estate Licensing and Registration Act is cited as:",
+   "sub": "pa/commission|Structure",
+   "subtopic": "Structure",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The broker's personal bank statements",
+    "A list of all clients",
+    "A letter authorising the bank to release the escrow account records",
+    "Copies of every listing"
+   ],
+   "concept": "Pennsylvania powers",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.325(d).",
+   "id": "pa-770f3a50",
+   "portion": "georgia",
+   "q": "At an office inspection, a broker must provide the Commission with:",
+   "sub": "pa/commission|Powers",
+   "subtopic": "Powers",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Fraud, misrepresentation or deceit in a real estate transaction",
+    "Any unpaid debt",
+    "A disputed commission",
+    "Negligent advice"
+   ],
+   "concept": "Pennsylvania recovery fund",
+   "difficulty": 1,
+   "explain": "As stated in the Consumer Notice.",
+   "id": "pa-08cba27a",
+   "portion": "georgia",
+   "q": "A Recovery Fund claim must rest on a final civil judgment for:",
+   "sub": "pa/commission|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Filed a Commission complaint",
+    "Waited twelve months",
+    "Exhausted all legal and equitable remedies to collect the judgment",
+    "Obtained the licensee's consent"
+   ],
+   "concept": "Pennsylvania recovery fund",
+   "difficulty": 2,
+   "explain": "As stated in the Consumer Notice.",
+   "id": "pa-338a5b14",
+   "portion": "georgia",
+   "q": "Before the Recovery Fund will pay, the claimant must have:",
+   "sub": "pa/commission|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The Attorney General's office",
+    "The Department of Revenue",
+    "The Treasury",
+    "The Bureau of Professional and Occupational Affairs, Department of State"
+   ],
+   "concept": "Pennsylvania structure",
+   "difficulty": 2,
+   "explain": "RELRA establishes it there.",
+   "id": "pa-a238872d",
+   "portion": "georgia",
+   "q": "The State Real Estate Commission sits within:",
+   "sub": "pa/commission|Structure",
+   "subtopic": "Structure",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A broker's office and its records",
+    "Only records sent voluntarily",
+    "Nothing without a court order",
+    "Only escrow statements"
+   ],
+   "concept": "Pennsylvania powers",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.246.",
+   "id": "pa-65467d89",
+   "portion": "georgia",
+   "q": "The Commission may inspect:",
+   "sub": "pa/commission|Powers",
+   "subtopic": "Powers",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only at renewal",
+    "Only under subpoena",
+    "On written request or at an office inspection",
+    "Annually"
+   ],
+   "concept": "Pennsylvania powers",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.328.",
+   "id": "pa-4833a3d7",
+   "portion": "georgia",
+   "q": "Escrow records must be produced to the Commission:",
+   "sub": "pa/commission|Powers",
+   "subtopic": "Powers",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Lost money on a property's value",
+    "Disagrees with a commission",
+    "Was refused a listing",
+    "Could not collect a final civil judgment against a licensee"
+   ],
+   "concept": "Pennsylvania recovery fund",
+   "difficulty": 3,
+   "explain": "The Consumer Notice.",
+   "id": "pa-e4919348",
+   "portion": "georgia",
+   "q": "The Recovery Fund reimburses a person who:",
+   "sub": "pa/commission|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "pa/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Not protected in Pennsylvania",
+    "Protected only in employment",
+    "A protected class under the Pennsylvania Human Relations Act",
+    "Protected only in public accommodation"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 2,
+   "explain": "Pennsylvania Human Relations Commission.",
+   "id": "pa-2d40e5fe",
+   "portion": "georgia",
+   "q": "Religious creed is:",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In employment only",
+    "Nowhere",
+    "In housing",
+    "In public accommodation only"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 2,
+   "explain": "Pennsylvania Human Relations Commission.",
+   "id": "pa-44b47047",
+   "portion": "georgia",
+   "q": "Familial status is protected under the Pennsylvania Act:",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted if the claim failed",
+    "Itself prohibited under the Act",
+    "Only a federal matter",
+    "Outside the Commission's reach"
+   ],
+   "concept": "Pennsylvania fair housing",
+   "difficulty": 3,
+   "explain": "Pennsylvania Human Relations Commission.",
+   "id": "pa-4a29e1e8",
+   "portion": "georgia",
+   "q": "Retaliation against someone who asserts their rights is:",
+   "sub": "pa/misc|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Need no disclosure",
+    "Use the sales Consumer Notice",
+    "Have their own Consumer Notice",
+    "Are not regulated"
+   ],
+   "concept": "Pennsylvania time-shares",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.338.",
+   "id": "pa-654e9332",
+   "portion": "georgia",
+   "q": "Time-share estates in Pennsylvania:",
+   "sub": "pa/misc|Time-shares",
+   "subtopic": "Time-shares",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three years",
+    "One year",
+    "Six months",
+    "Indefinitely"
+   ],
+   "concept": "Pennsylvania documents",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.286(a)(2).",
+   "id": "pa-412e4aa6",
+   "portion": "georgia",
+   "q": "The acknowledgement portion of a time-share Consumer Notice is retained for:",
+   "sub": "pa/misc|Documents",
+   "subtopic": "Documents",
+   "topic": "pa/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Five years in construction",
+    "A mortgage licence",
+    "A paralegal certificate",
+    "A bachelor's degree with a major in real estate from an accredited college"
+   ],
+   "concept": "Pennsylvania qualifying",
+   "difficulty": 2,
+   "explain": "Pearson handbook.",
+   "id": "pa-969f31b7",
+   "portion": "georgia",
+   "q": "An alternative to the 75 hours is:",
+   "sub": "pa/licensure|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Rental listing referral agents",
+    "Property inspectors",
+    "Mortgage brokers",
+    "Appraisal trainees under this Act"
+   ],
+   "concept": "Pennsylvania qualifying",
+   "difficulty": 3,
+   "explain": "A separate category under RELRA; 49 Pa. Code 35.227.",
+   "id": "pa-91d69bb1",
+   "portion": "georgia",
+   "q": "Pennsylvania also licenses:",
+   "sub": "pa/licensure|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must retake both",
+    "May not retake a previously passed portion",
+    "Must wait a year",
+    "Loses the result after 30 days"
+   ],
+   "concept": "Pennsylvania examination",
+   "difficulty": 3,
+   "explain": "Pearson handbook.",
+   "id": "pa-212fc435",
+   "portion": "georgia",
+   "q": "A candidate who passes one portion of the Pennsylvania examination:",
+   "sub": "pa/licensure|Examination",
+   "subtopic": "Examination",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "To every candidate",
+    "Only on request",
+    "Only to failing candidates",
+    "Never"
+   ],
+   "concept": "Pennsylvania scores",
+   "difficulty": 3,
+   "explain": "Pearson handbook; passing candidates are told only that they passed.",
+   "id": "pa-e44620f4",
+   "portion": "georgia",
+   "q": "Pennsylvania reports a numeric examination score:",
+   "sub": "pa/licensure|Scores",
+   "subtopic": "Scores",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A percentage of items correct",
+    "A scaled score ranging from 0 to 100",
+    "A letter grade",
+    "A percentile rank"
+   ],
+   "concept": "Pennsylvania scores",
+   "difficulty": 2,
+   "explain": "And the handbook says the scaled score is NOT the percentage correct.",
+   "id": "pa-5e043e87",
+   "portion": "georgia",
+   "q": "Pennsylvania converts raw scores into:",
+   "sub": "pa/licensure|Scores",
+   "subtopic": "Scores",
+   "topic": "pa/licensure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A federally- or state-insured bank or recognised depository",
+    "Any account the broker chooses",
+    "A brokerage investment account",
+    "An out-of-state trust"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.325(a)(1).",
+   "id": "pa-df0108a0",
+   "portion": "georgia",
+   "q": "An escrow account must be held in:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Always",
+    "Never",
+    "Only as provided by section 511.2 of the Landlord and Tenant Act",
+    "With the tenant's consent"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.325(c).",
+   "id": "pa-ba0b78f8",
+   "portion": "georgia",
+   "q": "A broker acting as a lessor may claim escrow interest:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Until the listing expires",
+    "For a fixed 90 days",
+    "Pending consummation, or a prior termination not involving a dispute",
+    "Until the broker is paid"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.321(a).",
+   "id": "pa-f7259dcf",
+   "portion": "georgia",
+   "q": "Money belonging to another is held in escrow:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The full amount to the party entitled to receive it",
+    "The amount less the commission",
+    "Half to each party",
+    "The amount the seller directs"
+   ],
+   "concept": "Pennsylvania escrow",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.321(a).",
+   "id": "pa-13f69ca6",
+   "portion": "georgia",
+   "q": "On consummation or an undisputed termination, the broker pays:",
+   "sub": "pa/regulations|Escrow",
+   "subtopic": "Escrow",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Escrow money and the interest earned on it",
+    "Escrow principal only",
+    "Only amounts over $1,000",
+    "Only personal funds"
+   ],
+   "concept": "Pennsylvania commingling",
+   "difficulty": 2,
+   "explain": "49 Pa. Code 35.326(a).",
+   "id": "pa-bd2d5e1a",
+   "portion": "georgia",
+   "q": "Commingling under the Commission's rules covers:",
+   "sub": "pa/regulations|Commingling",
+   "subtopic": "Commingling",
+   "topic": "pa/regulations"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only to the parties",
+    "For examination by the Commission on written request or at an office inspection",
+    "Only under court order",
+    "Only at renewal"
+   ],
+   "concept": "Pennsylvania records",
+   "difficulty": 3,
+   "explain": "49 Pa. Code 35.328.",
+   "id": "pa-afc85eec",
+   "portion": "georgia",
+   "q": "Escrow records must be produced:",
+   "sub": "pa/regulations|Records",
+   "subtopic": "Records",
+   "topic": "pa/regulations"
+  }
+ ],
+ "code": "PA",
+ "diffs": {
+  "national/agency": [
+   "Pennsylvania presumes NO relationship. The Consumer Notice at the initial interview tells the consumer that until they sign a written agreement, the licensee does not represent them (49 Pa. Code 35.336).",
+   "Five business relationships: seller agent (and subagent), buyer agent, dual agent, designated agent, and TRANSACTION LICENSEE - who is not an agent at all but still may not reveal price confidences.",
+   "In designated agency the supervising BROKER automatically becomes a dual agent."
+  ],
+  "national/contracts": [
+   "All sales agreements must state the property's zoning classification, except where it is zoned solely or primarily for single family dwellings."
+  ],
+  "national/practice": [
+   "The escrow account names the broker as TRUSTEE, allows withdrawal without prior notice, and is used exclusively for escrow (49 Pa. Code 35.325).",
+   "Rents taken as a property manager are NOT escrow: they go to a separate rental management account (35.321(b)).",
+   "On a dispute the broker holds the money, gives 30 days' notice, then may petition the county court to interplead (35.327).",
+   "Pennsylvania fair housing adds ancestry, religious creed, age 40 and over, and the use or training of a support or guide animal (Human Relations Act)."
+  ]
+ },
+ "name": "Pennsylvania",
+ "pass": 0.75,
+ "pass_note": "Pennsylvania reports a scaled score from 0 to 100, and its own handbook says that score is neither the number nor the percentage of questions answered correctly. The Commission does not publish the passing figure, and only failing candidates are told a number. The 75% here is this app's study target, not the state's requirement.",
+ "pass_published": false,
+ "portions": {
+  "georgia": {
+   "blurb": "RELRA, the Commission's regulations, the Consumer Notice and escrow.",
+   "minutes": 50,
+   "name": "Pennsylvania state",
+   "scored": 40
+  },
+  "national": {
+   "minutes": 100,
+   "scored": 80
+  }
+ },
+ "regulator": "PA State Real Estate Commission",
+ "sources": [
+  {
+   "by": "Pennsylvania State Real Estate Commission",
+   "name": "49 Pa. Code chapter 35 (Commission regulations)",
+   "note": "Escrow, the Consumer Notice, records, standards of conduct and continuing education. Every rule of practice here was read from it.",
+   "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/049/chapter35/chap35toc.html"
+  },
+  {
+   "by": "Pennsylvania General Assembly",
+   "name": "Real Estate Licensing and Registration Act (63 P.S. 455.101-455.902)",
+   "note": "The licence law the Commission's regulations are made under.",
+   "url": "https://www.dos.pa.gov/ProfessionalLicensing/BoardsCommissions/RealEstateCommission"
+  },
+  {
+   "by": "Pearson VUE and the State Real Estate Commission",
+   "name": "Pennsylvania Candidate Handbook and Content Outlines",
+   "note": "The blueprint: 80 national and 40 state scored items, the five state categories, and the scaled-score explanation.",
+   "url": "https://www.pearsonvue.com/us/en/pa/realestate.html"
+  },
+  {
+   "by": "Pennsylvania Human Relations Commission",
+   "name": "Protected classes under the Human Relations Act",
+   "note": "Pennsylvania's protected classes, which go beyond the federal list.",
+   "url": "https://www.pa.gov/agencies/phrc"
+  }
+ ],
+ "study": {
+  "pa/agency": {
+   "blurb": "The Consumer Notice and Pennsylvania's five business relationships.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "No agency exists, but the price confidences and the defect duty still bind.",
+     "s": "A licensee meets a buyer at an open house, gives the Consumer Notice, and the buyer signs nothing.",
+     "t": "Nobody's agent",
+     "w": [
+      "A business relationship is not presumed in Pennsylvania.",
+      "The licensee may act as a transaction licensee: no loyalty, no confidentiality.",
+      "They still may not reveal that the seller would take less, and must disclose known material defects."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency & disclosure",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "At the first showing",
+        "At the initial interview",
+        "When an offer is written"
+       ],
+       "q": "The Consumer Notice must be given:",
+       "why": "49 Pa. Code 35.336(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Six months",
+        "Three years",
+        "One year"
+       ],
+       "q": "The signed acknowledgement of the Consumer Notice is kept for:",
+       "why": "35.336(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Is their agent by default",
+        "Is a dual agent",
+        "Is not representing them; no relationship is presumed"
+       ],
+       "q": "Until a consumer signs a written agreement, the licensee:",
+       "why": "The Notice says so expressly."
+      }
+     ],
+     "h": "The Consumer Notice (49 Pa. Code 35.336)",
+     "l": [
+      "A licensee must give the consumer the CONSUMER NOTICE at the INITIAL INTERVIEW.",
+      "It is headed 'Consumer Notice' and says plainly 'THIS IS NOT A CONTRACT'.",
+      "The licensee keeps the signed or refused ACKNOWLEDGEMENT for SIX MONTHS and gives the consumer a copy of the whole summary.",
+      "It warns the consumer: until you select a business relationship by signing a written agreement, the licensee is NOT representing you. A BUSINESS RELATIONSHIP IS NOT PRESUMED."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The seller, because they pay",
+        "The buyer, exclusively",
+        "Both parties"
+       ],
+       "q": "A buyer agent paid by the seller works for:",
+       "why": "The Consumer Notice says so expressly."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Has no role",
+        "Automatically serves as a dual agent",
+        "Must pick one side"
+       ],
+       "q": "In designated agency, the broker:",
+       "why": "Because the broker supervises all the licensees."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A known material defect",
+        "That the seller will accept less than the asking price",
+        "The listing price"
+       ],
+       "q": "A transaction licensee may NOT disclose:",
+       "why": "Material defects are always disclosed."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Buyer agent",
+        "Dual agent",
+        "Designated agent",
+        "Transaction licensee"
+       ],
+       "q": "Which relationship carries no duty of loyalty?",
+       "why": "They have no agency relationship at all."
+      }
+     ],
+     "h": "The five business relationships",
+     "l": [
+      "SELLER AGENT - works exclusively for the seller or landlord and must act in their best interest, including a continuous and good faith effort to find a buyer or tenant, except while the property is under an existing agreement. Keeps confidential information confidential, EXCEPT that known MATERIAL DEFECTS must be revealed. A SUBAGENT has the same duties.",
+      "BUYER AGENT - works exclusively for the buyer or tenant EVEN IF PAID BY THE SELLER, with the same good faith effort and the same confidentiality rule.",
+      "DUAL AGENT - works for both. May not take any action ADVERSE OR DETRIMENTAL to either party, must disclose known material defects, and needs the WRITTEN CONSENT of both parties.",
+      "DESIGNATED AGENT - the broker designates some licensees to act exclusively for the seller and others exclusively for the buyer. Because the broker supervises everyone, THE BROKER AUTOMATICALLY SERVES AS A DUAL AGENT, and must take reasonable steps to keep confidential information from spreading inside the company.",
+      "TRANSACTION LICENSEE - provides real estate services with NO agency relationship. No duty of loyalty or confidentiality - but still prohibited from disclosing that the seller will take less than the asking price, that the buyer will pay more than the written offer, or that either will agree to other financing terms. Must still disclose known material defects."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Orally by either party",
+        "Never",
+        "In writing by the seller, once the property is under contract"
+       ],
+       "q": "The duty to present offers as soon as practicable may be waived:",
+       "why": "The Consumer Notice sets out the one waiver."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Disclose the financial interest when the service is recommended",
+        "Say nothing",
+        "Disclose only at closing"
+       ],
+       "q": "A licensee recommending their brother-in-law's inspection firm must:",
+       "why": "The duty applies to all licensees."
+      }
+     ],
+     "h": "Duties every licensee owes, whatever the relationship",
+     "l": [
+      "Exercise reasonable professional SKILL AND CARE meeting the practice standards RELRA requires.",
+      "Deal HONESTLY AND IN GOOD FAITH.",
+      "Present, AS SOON AS PRACTICABLE, all written offers, counteroffers, notices and communications. A seller may WAIVE this IN WRITING once their property is under contract.",
+      "Comply with the Real Estate Seller Disclosure Law.",
+      "ACCOUNT for escrow and deposit funds.",
+      "Disclose, as soon as practicable, all CONFLICTS OF INTEREST and financial interests.",
+      "Assist with document preparation and advise on compliance with the laws of the transaction.",
+      "Advise the consumer to seek EXPERT ADVICE on matters beyond the licensee's expertise.",
+      "Keep the consumer informed about the transaction and the tasks to be completed.",
+      "Disclose a financial interest in a service - financial, title, insurance, construction, repair or inspection - when it is recommended, or when the licensee first learns it will be used."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The broker's cooperation and fee-sharing with other brokers",
+        "The Consumer Notice itself",
+        "The duty to disclose material defects"
+       ],
+       "q": "Which is negotiable under the Consumer Notice?",
+       "why": "All four negotiable terms concern the engagement, not the duties."
+      }
+     ],
+     "h": "What is negotiable",
+     "p": [
+      "The Consumer Notice names four terms as NEGOTIABLE between licensee and consumer, which must be addressed in the agreement or disclosure statement: the DURATION of the employment, listing or contract; the licensee's FEES OR COMMISSION; the SCOPE of the licensee's activities; and the broker's COOPERATION with and SHARING OF FEES with other brokers."
+     ]
+    }
+   ],
+   "summary": "Pennsylvania does not presume any relationship. A licensee hands over the CONSUMER NOTICE at the initial interview, and the consumer then chooses from five business relationships - including a TRANSACTION LICENSEE, who represents nobody at all.",
+   "topic": "pa/agency",
+   "traps": [
+    "No relationship is PRESUMED in Pennsylvania. Nothing is owed as an agent until something is signed.",
+    "Five relationships, and the transaction licensee is the one that is not an agency at all.",
+    "In designated agency the BROKER is automatically a dual agent.",
+    "Confidentiality never covers a known material defect - in any relationship.",
+    "Consumer Notice at the INITIAL INTERVIEW; acknowledgement kept six months."
+   ],
+   "vocab": [
+    [
+     "Consumer Notice",
+     "The disclosure summary given at the initial interview."
+    ],
+    [
+     "Transaction licensee",
+     "A licensee providing services with no agency relationship."
+    ],
+    [
+     "Designated agent",
+     "A licensee assigned to one side where the broker has both."
+    ],
+    [
+     "Initial interview",
+     "The first contact where substantive discussion occurs; the Notice is due."
+    ],
+    [
+     "Material defect",
+     "A property fault that must be disclosed whatever the relationship."
+    ]
+   ]
+  },
+  "pa/commission": {
+   "blurb": "Duties and powers, complaints and hearings, the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Real Estate Commission",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "49 Pa. Code chapter 35",
+        "63 P.S. 455",
+        "Title 68 of the Consolidated Statutes"
+       ],
+       "q": "The Commission's regulations are found in:",
+       "why": "RELRA is the statute; chapter 35 is the regulations."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The broker's personal bank statements",
+        "A list of clients",
+        "A letter authorising the bank to release escrow records"
+       ],
+       "q": "At an office inspection the broker must provide:",
+       "why": "49 Pa. Code 35.325(d)."
+      }
+     ],
+     "h": "The Commission",
+     "l": [
+      "The STATE REAL ESTATE COMMISSION sits within the Bureau of Professional and Occupational Affairs in the Department of State.",
+      "It is established by the REAL ESTATE LICENSING AND REGISTRATION ACT (RELRA), 63 P.S. 455.101-455.902, and makes the regulations in 49 Pa. Code chapter 35.",
+      "It licenses, investigates complaints, holds hearings and disciplines licensees, and may inspect a broker's office (49 Pa. Code 35.246).",
+      "On request or at an inspection, a broker must give the Commission a letter authorising the bank to release the escrow account records."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Any unpaid debt",
+        "A disputed commission",
+        "Fraud, misrepresentation or deceit in a real estate transaction",
+        "Negligent advice"
+       ],
+       "q": "A Recovery Fund claim must rest on a judgment for:",
+       "why": "As the Consumer Notice states."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Exhausted all legal and equitable remedies to collect",
+        "Filed a complaint with the Commission",
+        "Waited one year"
+       ],
+       "q": "Before the Fund will pay, the claimant must have:",
+       "why": "The Consumer Notice sets the condition."
+      }
+     ],
+     "h": "The Real Estate Recovery Fund",
+     "p": [
+      "The Fund reimburses a person who has obtained a FINAL CIVIL JUDGMENT against a Pennsylvania licensee owing to FRAUD, MISREPRESENTATION OR DECEIT in a real estate transaction, and who has been unable to collect it AFTER EXHAUSTING ALL LEGAL AND EQUITABLE REMEDIES."
+     ]
+    }
+   ],
+   "summary": "Five items on the Commission itself and the fund behind it. The Recovery Fund pays where a licensee's fraud, misrepresentation or deceit leaves a judgment nobody can collect.",
+   "topic": "pa/commission",
+   "traps": [
+    "RELRA is the Act; chapter 35 is the regulations. Questions often swap them.",
+    "The Fund covers fraud, misrepresentation or deceit - not every loss.",
+    "Collection must be attempted and exhausted first."
+   ],
+   "vocab": [
+    [
+     "RELRA",
+     "The Real Estate Licensing and Registration Act."
+    ],
+    [
+     "Recovery Fund",
+     "The fund paying uncollectable judgments for licensee fraud."
+    ],
+    [
+     "BPOA",
+     "Bureau of Professional and Occupational Affairs, which houses the Commission."
+    ],
+    [
+     "Office inspection",
+     "The Commission's right to examine a broker's office and records."
+    ]
+   ]
+  },
+  "pa/licensure": {
+   "blurb": "Qualifications, what needs a licence, renewal, reactivation, exemptions.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [],
+   "ga": [],
+   "label": "Licensure",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "17",
+        "19",
+        "21",
+        "18"
+       ],
+       "q": "The minimum age for a Pennsylvania salesperson licence is:",
+       "why": "Pearson handbook / RELRA."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "5 credits or 75 hours",
+        "30 hours",
+        "60 hours",
+        "120 hours"
+       ],
+       "q": "Pre-licensing education for a salesperson is:",
+       "why": "Through a Commission-approved provider or accredited college."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "One year",
+        "Three years",
+        "Five years"
+       ],
+       "q": "Pennsylvania examination scores remain valid for:",
+       "why": "The licence application must be filed within that time."
+      }
+     ],
+     "h": "Qualifying as a salesperson",
+     "l": [
+      "Be at least 18 YEARS OLD.",
+      "Be at least a HIGH SCHOOL GRADUATE or the equivalent.",
+      "Complete 5 CREDITS OR 75 HOURS of basic real estate courses through an education provider approved by the Commission, by an out-of-state provider approved where it sits, or at an accredited college.",
+      "Alternatively, hold a qualifying degree - for example a bachelor's degree with a MAJOR IN REAL ESTATE from an accredited college.",
+      "Pre-licensing courses must have been completed within FIVE YEARS before passing the examination.",
+      "Examination scores are valid for THREE YEARS; the licence application must be made within that period."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "30 hours",
+        "14 hours per licence period",
+        "22.5 hours",
+        "8 hours"
+       ],
+       "q": "Continuing education in Pennsylvania is:",
+       "why": "49 Pa. Code 35.382(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "December 31",
+        "May 31",
+        "June 30",
+        "The licensee's birthday"
+       ],
+       "q": "The continuing education deadline is:",
+       "why": "35.382(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A condition precedent to renewal",
+        "Optional for the first renewal",
+        "Required only of brokers"
+       ],
+       "q": "Completing the continuing education is:",
+       "why": "35.382(a)."
+      }
+     ],
+     "h": "Renewal and continuing education",
+     "l": [
+      "A broker or salesperson with a STANDARD licence must, as a CONDITION PRECEDENT to renewal, complete 14 HOURS of Commission-approved continuing education during the preceding licence period (49 Pa. Code 35.382(a)).",
+      "It must be completed by the MAY 31 RENEWAL DEADLINE.",
+      "To REACTIVATE and renew a NONCURRENT standard licence, the same 14 hours must be completed in the 2-YEAR PERIOD before the reactivation application is submitted (35.382(b)).",
+      "The same course may not be used twice."
+     ]
+    }
+   ],
+   "summary": "Eight items. The entry numbers are 18, a high school diploma, and 75 hours - and renewal turns on 14 hours of continuing education by 31 May.",
+   "topic": "pa/licensure",
+   "traps": [
+    "75 hours in, 14 hours every licence period, deadline 31 MAY.",
+    "Courses must be within five years of passing; scores last three years.",
+    "A reactivating licensee needs the 14 hours in the two years before applying."
+   ],
+   "vocab": [
+    [
+     "Standard licence",
+     "An ordinary Pennsylvania broker or salesperson licence."
+    ],
+    [
+     "Noncurrent licence",
+     "A licence not renewed, requiring reactivation."
+    ],
+    [
+     "Condition precedent",
+     "Something that must be done before renewal is possible."
+    ],
+    [
+     "Rental listing referral agent",
+     "A separate Pennsylvania licence category."
+    ]
+   ]
+  },
+  "pa/misc": {
+   "blurb": "Seller disclosure, forms, the Human Relations Act, condos and leases.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Miscellaneous",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Always, without exception",
+        "Unless the property is zoned solely or primarily for single family dwellings",
+        "Only for commercial property"
+       ],
+       "q": "A Pennsylvania sales agreement must state the zoning classification:",
+       "why": "The Consumer Notice sets out the rule."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only the seller agent's duty",
+        "Optional in an as-is sale",
+        "A duty every licensee owes, whatever the relationship"
+       ],
+       "q": "Complying with the Seller Disclosure Law is:",
+       "why": "It is in the common duty list."
+      }
+     ],
+     "h": "Seller disclosure and the zoning line",
+     "l": [
+      "Every licensee owes consumers a duty to COMPLY WITH THE REAL ESTATE SELLER DISCLOSURE LAW.",
+      "ALL SALES AGREEMENTS must contain the property's ZONING CLASSIFICATION - except where the property is zoned solely or primarily to permit SINGLE FAMILY DWELLINGS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Race",
+        "Colour",
+        "Ancestry",
+        "National origin"
+       ],
+       "q": "Which is protected under the Pennsylvania Human Relations Act but not the federal Fair Housing Act?",
+       "why": "Pennsylvania adds ancestry, religious creed, age and the guide-animal class."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The use or training of a support or guide animal for a disability",
+        "Occupation",
+        "Credit score"
+       ],
+       "q": "Pennsylvania's protected classes include:",
+       "why": "Pennsylvania Human Relations Commission."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At any age",
+        "At 40 and over",
+        "Only under 18"
+       ],
+       "q": "Age is protected under the Act:",
+       "why": "Pennsylvania Human Relations Commission."
+      }
+     ],
+     "h": "The Pennsylvania Human Relations Act",
+     "l": [
+      "RACE",
+      "COLOR",
+      "RELIGIOUS CREED",
+      "ANCESTRY",
+      "AGE (40 and over)",
+      "SEX",
+      "NATIONAL ORIGIN",
+      "FAMILIAL STATUS (in housing)",
+      "DISABILITY",
+      "The USE, HANDLING OR TRAINING OF SUPPORT OR GUIDE ANIMALS for a disability",
+      "RETALIATION"
+     ],
+     "p": [
+      "The Pennsylvania Human Relations Commission enforces the Act, which prohibits discrimination in housing and commercial property on these grounds:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The rent",
+        "Whether they are the owner, the owner's employee, or an agent under a management or leasing agreement",
+        "The lease term"
+       ],
+       "q": "The Consumer Notice for a lease on the owner's behalf asks the licensee to state:",
+       "why": "49 Pa. Code 35.337."
+      }
+     ],
+     "h": "Time-shares, planned communities and leases",
+     "l": [
+      "The outline also reaches TIME-SHARES, PLANNED COMMUNITIES and CONDOMINIUMS, and RENTALS, LEASING AND PROPERTY MANAGEMENT.",
+      "A separate Consumer Notice exists for the LEASE of property where the licensee acts for the OWNER, stating whether the licensee is the owner or landlord, a direct employee of the owner, or an agent under a property management or exclusive leasing agreement (49 Pa. Code 35.337).",
+      "A further Consumer Notice applies to TIME-SHARE ESTATES (35.338)."
+     ]
+    }
+   ],
+   "summary": "Six items gathering the Pennsylvania law that sits outside the Commission's rules: the Seller Disclosure Law, the zoning line every sales agreement must carry, and a fair housing list longer than the federal one.",
+   "topic": "pa/misc",
+   "traps": [
+    "The zoning line goes in EXCEPT for single-family-zoned property - the exception is the tested part.",
+    "Pennsylvania protects ancestry, religious creed, age 40+, and guide or support animals.",
+    "There is a different Consumer Notice for leases where the licensee acts for the owner."
+   ],
+   "vocab": [
+    [
+     "Seller Disclosure Law",
+     "Pennsylvania's residential property disclosure statute."
+    ],
+    [
+     "PHRA",
+     "The Pennsylvania Human Relations Act."
+    ],
+    [
+     "Planned community",
+     "A development with common areas governed by an association."
+    ],
+    [
+     "Time-share estate",
+     "An interest giving periodic use; it has its own Consumer Notice."
+    ]
+   ]
+  },
+  "pa/regulations": {
+   "blurb": "Advertising, broker and salesperson relations, escrow, prohibited conduct.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "examples": [
+    {
+     "k": "Hold, notify for 30 days, then interplead. Never pick a side.",
+     "s": "A sale collapses; the buyer wants the deposit back and the seller says it is forfeit.",
+     "t": "The deal falls apart",
+     "w": [
+      "The broker holds the money in escrow while the dispute runs.",
+      "If settlement looks remote, the broker gives 30 days' notice.",
+      "Then the broker may petition the county court to interplead."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Regulations governing licensees",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The broker as trustee",
+        "The seller as trustee",
+        "The title company as trustee"
+       ],
+       "q": "A Pennsylvania escrow account must designate:",
+       "why": "49 Pa. Code 35.325(a)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Is disbursed pro rata like the principal, and the broker may not claim it",
+        "Belongs to the broker",
+        "Goes to the Commission"
+       ],
+       "q": "Interest earned on an escrow account:",
+       "why": "35.325(c), with the lessor exception."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Required to use a non-interest account",
+        "Required to return it",
+        "Encouraged to use an interest-bearing account"
+       ],
+       "q": "Where money will be held more than six months, the broker is:",
+       "why": "35.325(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Any employee",
+        "A licensed employee, for payments properly chargeable",
+        "Only the broker, never anyone else"
+       ],
+       "q": "Who may be given written authority to WITHDRAW from escrow?",
+       "why": "35.325(b)."
+      }
+     ],
+     "h": "The escrow account (49 Pa. Code 35.325)",
+     "l": [
+      "Maintained in a FEDERALLY- OR STATE-INSURED bank or recognised depository.",
+      "DESIGNATES THE BROKER AS TRUSTEE.",
+      "Provides for WITHDRAWAL WITHOUT PRIOR NOTICE.",
+      "Used EXCLUSIVELY for escrow purposes.",
+      "A sole proprietor or broker of record may give an employee WRITTEN authority to deposit, and a LICENSED employee written authority to withdraw for payments properly chargeable to the account.",
+      "Where money is expected to be held MORE THAN SIX MONTHS, the broker is ENCOURAGED to use an interest-bearing account. Interest is held and disbursed PRO RATA in the same way as the principal, unless the parties agree otherwise.",
+      "A broker MAY NOT CLAIM the interest, unless the broker is a lessor under section 511.2 of the Landlord and Tenant Act."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The escrow account",
+        "The general business account",
+        "A separate rental management account"
+       ],
+       "q": "Rents collected as a property manager go into:",
+       "why": "49 Pa. Code 35.321(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Each salesperson",
+        "The corporation's accountant",
+        "The broker of record"
+       ],
+       "q": "In a corporate brokerage, responsibility for the escrow duty rests with:",
+       "why": "35.321(a)."
+      }
+     ],
+     "h": "Depositing, and what is not escrow (35.321)",
+     "l": [
+      "A broker deposits money received belonging to another into the escrow account, HELD PENDING CONSUMMATION of the transaction or a prior termination that does not involve a dispute - then pays the FULL AMOUNT to the party entitled to it.",
+      "Where the broker is a partnership, association or corporation, the BROKER OF RECORD is responsible for ensuring the escrow duty is performed.",
+      "RENTS received as a PROPERTY MANAGER for a lessor need NOT be held in escrow. They go into a RENTAL MANAGEMENT ACCOUNT, separate from both the escrow and the general business accounts."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Round up a deposit",
+        "Lend to a client",
+        "Cover bank service charges or keep a required minimum balance"
+       ],
+       "q": "A broker may put personal money into escrow only to:",
+       "why": "49 Pa. Code 35.326(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Splits it evenly",
+        "Retains the money in escrow until the dispute is resolved",
+        "Pays the seller"
+       ],
+       "q": "When the parties dispute the deposit, the broker first:",
+       "why": "35.327."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "10 days' notice",
+        "No notice",
+        "30 days' notice"
+       ],
+       "q": "Before petitioning the court to interplead, the broker must give the parties:",
+       "why": "35.327."
+      }
+     ],
+     "h": "Commingling, and disputes",
+     "l": [
+      "A broker MAY NOT COMMINGLE escrow money, or the interest on it, with business, personal or other funds (35.326(a)).",
+      "The one exception: a broker MAY deposit business or personal funds to cover BANK SERVICE CHARGES or to maintain a MINIMUM BALANCE the bank requires (35.326(b)).",
+      "A broker may not MISAPPROPRIATE escrow money or its interest for business, personal or other purposes (35.326(c)).",
+      "DISPUTE (35.327): where the parties disagree over entitlement, the broker RETAINS the money in escrow until the dispute is resolved. If resolution looks remote without legal action, the broker may - after 30 DAYS' NOTICE to the parties - petition the county court to INTERPLEAD the rival claimants."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "One year",
+        "Six months",
+        "Seven years",
+        "At least three years after consummation"
+       ],
+       "q": "Transaction records in Pennsylvania are kept for:",
+       "why": "49 Pa. Code 35.286(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Six months",
+        "Three years",
+        "Indefinitely"
+       ],
+       "q": "A Consumer Notice acknowledgement where no transaction followed is kept:",
+       "why": "35.286(a)(1)."
+      }
+     ],
+     "h": "Records",
+     "l": [
+      "Escrow records must show the NAME of the party from whom the money was received, the name of the party TO WHOM IT BELONGS, the name of the party FOR WHOSE ACCOUNT it is deposited, and the dates (35.328).",
+      "The broker must give the Commission, on written request or at an office inspection, a letter authorising the bank to RELEASE THE RECORDS of the escrow account (35.325(d)).",
+      "RETENTION (35.286): records of a real estate transaction are kept at least THREE YEARS following consummation. The acknowledgement portion of a Consumer Notice where there was NO transaction is kept SIX MONTHS."
+     ]
+    }
+   ],
+   "summary": "Eleven items, the largest category. Most of it is escrow: where the money goes, who may touch it, who gets the interest, and what the broker does when the parties fall out.",
+   "topic": "pa/regulations",
+   "traps": [
+    "Broker as TRUSTEE, withdrawal WITHOUT prior notice, used EXCLUSIVELY for escrow.",
+    "Rents as a property manager are NOT escrow - separate rental management account.",
+    "The broker never keeps escrow interest, unless acting as a lessor under the Landlord and Tenant Act.",
+    "Dispute: hold, then 30 days' notice, then interplead.",
+    "Three years for transaction records; six months for an unused Consumer Notice acknowledgement."
+   ],
+   "vocab": [
+    [
+     "Escrow account",
+     "The insured account, with the broker as trustee, used only for escrow."
+    ],
+    [
+     "Broker of record",
+     "The broker answerable for a corporate brokerage's escrow duty."
+    ],
+    [
+     "Rental management account",
+     "The separate account for rents collected as property manager."
+    ],
+    [
+     "Interplead",
+     "Asking a court to decide between rival claimants to held money."
+    ],
+    [
+     "Commingling",
+     "Mixing escrow money with business or personal funds."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Advertising, broker and salesperson relations, escrow, prohibited conduct.",
+   "counts_on_exam": true,
+   "exam_questions": 11,
+   "key": "pa/regulations",
+   "label": "Regulations governing licensees",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Consumer Notice and Pennsylvania's five business relationships.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "key": "pa/agency",
+   "label": "Agency & disclosure",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Qualifications, what needs a licence, renewal, reactivation, exemptions.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "pa/licensure",
+   "label": "Licensure",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Seller disclosure, forms, the Human Relations Act, condos and leases.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "pa/misc",
+   "label": "Miscellaneous",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Duties and powers, complaints and hearings, the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "pa/commission",
+   "label": "Real Estate Commission",
+   "portion": "georgia"
+  }
+ ]
+}
