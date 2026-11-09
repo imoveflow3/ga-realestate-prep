@@ -1,0 +1,2605 @@
+{
+ "abbr": "AZ",
+ "bank": [
+  {
+   "answer": 1,
+   "choices": [
+    "$20,000",
+    "$30,000",
+    "$50,000",
+    "$90,000"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 1,
+   "explain": "ARS 32-2186(B)(1), regardless of claimants, licensees or parcels.",
+   "id": "az-b6f38540",
+   "portion": "georgia",
+   "q": "The Arizona Real Estate Recovery Fund pays at most, per transaction:",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "$90,000",
+    "$30,000",
+    "$60,000",
+    "$150,000"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 1,
+   "explain": "ARS 32-2186(B)(2).",
+   "id": "az-e776b6f0",
+   "portion": "georgia",
+   "q": "The Recovery Fund's aggregate limit for each licensee is:",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Claim like any consumer",
+    "Claim up to half",
+    "Claim only for fraud",
+    "Not claim against the fund"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 2,
+   "explain": "ARS 32-2186(D).",
+   "id": "az-a57d0911",
+   "portion": "georgia",
+   "q": "A licensee who loses money as a party to a transaction may:",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A natural person",
+    "A corporation",
+    "A partnership",
+    "Any licensed entity"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 2,
+   "explain": "ARS 32-2186(E).",
+   "id": "az-5a216016",
+   "portion": "georgia",
+   "q": "The fund pays only against the licence of:",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Five per cent",
+    "Ten per cent",
+    "Twenty-five per cent",
+    "Fifty per cent"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 3,
+   "explain": "ARS 32-2186(D).",
+   "id": "az-511c6702",
+   "portion": "georgia",
+   "q": "An entity in which the licensee holds a direct or indirect interest of at least how much is barred from claiming?",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Resets annually",
+    "Doubles",
+    "Is terminated",
+    "Continues indefinitely"
+   ],
+   "concept": "Arizona recovery fund",
+   "difficulty": 3,
+   "explain": "ARS 32-2186(C).",
+   "id": "az-32e199bc",
+   "portion": "georgia",
+   "q": "Once orders authorise payment of the licensee aggregate, the fund's liability for that licensee:",
+   "sub": "az/regulatory|Recovery Fund",
+   "subtopic": "Recovery Fund",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three years",
+    "Seven years",
+    "Five years after the transaction ends",
+    "One year"
+   ],
+   "concept": "Arizona records",
+   "difficulty": 1,
+   "explain": "ARS 32-2151.01(A).",
+   "id": "az-91cf7e0b",
+   "portion": "georgia",
+   "q": "Arizona broker transaction records must be kept for at least:",
+   "sub": "az/regulatory|Records",
+   "subtopic": "Records",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Nothing",
+    "A Commissioner's order",
+    "Prior written notice to the Department of the street address",
+    "Annual reporting"
+   ],
+   "concept": "Arizona records",
+   "difficulty": 2,
+   "explain": "ARS 32-2151.01(A).",
+   "id": "az-12bbe914",
+   "portion": "georgia",
+   "q": "Storing broker records off-site in Arizona requires:",
+   "sub": "az/regulatory|Records",
+   "subtopic": "Records",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licensee's tax returns",
+    "Earnest money receipts and closing statements",
+    "Appraisal licences",
+    "Client credit reports"
+   ],
+   "concept": "Arizona records",
+   "difficulty": 2,
+   "explain": "ARS 32-2151.01(A).",
+   "id": "az-7ce589e8",
+   "portion": "georgia",
+   "q": "Which must the employing broker's records include?",
+   "sub": "az/regulatory|Records",
+   "subtopic": "Records",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Article II",
+    "Article IX",
+    "Article XIV",
+    "Article XXVI"
+   ],
+   "concept": "Arizona framework",
+   "difficulty": 2,
+   "explain": "It heads the Real Estate Statutes category.",
+   "id": "az-de5bfed7",
+   "portion": "georgia",
+   "q": "Which part of the Arizona Constitution appears on the state exam outline?",
+   "sub": "az/regulatory|Framework",
+   "subtopic": "Framework",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A nine-member commission",
+    "The Secretary of State",
+    "The Arizona Department of Real Estate, headed by the Commissioner",
+    "The Attorney General"
+   ],
+   "concept": "Arizona framework",
+   "difficulty": 1,
+   "explain": "ARS title 32, chapter 20.",
+   "id": "az-143398fa",
+   "portion": "georgia",
+   "q": "Arizona's real estate regulator is:",
+   "sub": "az/regulatory|Framework",
+   "subtopic": "Framework",
+   "topic": "az/regulatory"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Verbal consent from one party",
+    "Broker approval only",
+    "Nothing; it is prohibited",
+    "The knowledge or written consent of all parties"
+   ],
+   "concept": "Arizona dual representation",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(2).",
+   "id": "az-050ec44a",
+   "portion": "georgia",
+   "q": "Acting for more than one party in an Arizona transaction requires:",
+   "sub": "az/agency|Dual representation",
+   "subtopic": "Dual representation",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Prohibited outright",
+    "Allowed only commercially",
+    "Permitted with the knowledge and written consent of all parties",
+    "Allowed only by brokers"
+   ],
+   "concept": "Arizona dual representation",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(2).",
+   "id": "az-f7b99696",
+   "portion": "georgia",
+   "q": "Dual representation in Arizona is:",
+   "sub": "az/agency|Dual representation",
+   "subtopic": "Dual representation",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "May do so with disclosure",
+    "May do so for one deal",
+    "Must notify the Department only",
+    "Commits a ground for discipline"
+   ],
+   "concept": "Arizona brokers",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(8).",
+   "id": "az-b8532b21",
+   "portion": "georgia",
+   "q": "A salesperson who represents a broker other than the one they are licensed to:",
+   "sub": "az/agency|Brokers",
+   "subtopic": "Brokers",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is fine if supervised",
+    "Is fine for clerical work only",
+    "Commits a ground for discipline"
+   ],
+   "concept": "Arizona brokers",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(6).",
+   "id": "az-125ec004",
+   "portion": "georgia",
+   "q": "A broker who employs an unlicensed salesperson:",
+   "sub": "az/agency|Brokers",
+   "subtopic": "Brokers",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any party to the transaction",
+    "The buyer directly",
+    "Only a person authorised under ARS 32-2155",
+    "The escrow agent"
+   ],
+   "concept": "Arizona compensation",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(7).",
+   "id": "az-00cf7c47",
+   "portion": "georgia",
+   "q": "An Arizona licensee may accept compensation from:",
+   "sub": "az/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted if disclosed",
+    "A ground for discipline",
+    "Permitted under $500",
+    "A criminal felony"
+   ],
+   "concept": "Arizona compensation",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(10).",
+   "id": "az-dd8a3d4b",
+   "portion": "georgia",
+   "q": "Paying or receiving a rebate in violation of the chapter is:",
+   "sub": "az/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Within 24 hours",
+    "Within three business days",
+    "At closing only",
+    "Within a reasonable time"
+   ],
+   "concept": "Arizona accounting",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(9).",
+   "id": "az-b518d2f1",
+   "portion": "georgia",
+   "q": "A licensee holding money belonging to another must account for it:",
+   "sub": "az/agency|Accounting",
+   "subtopic": "Accounting",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Kept for five years",
+    "Destroyed at closing",
+    "Surrendered to the rightful owner within a reasonable time",
+    "Filed with the Department"
+   ],
+   "concept": "Arizona accounting",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(9).",
+   "id": "az-893f5cd9",
+   "portion": "georgia",
+   "q": "Documents belonging to another that come into a licensee's possession must be:",
+   "sub": "az/agency|Accounting",
+   "subtopic": "Accounting",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Decline to issue it",
+    "Have it countersigned",
+    "Report it to the Commissioner",
+    "Fully disclose the nature and extent of that interest"
+   ],
+   "concept": "Arizona appraisals",
+   "difficulty": 3,
+   "explain": "ARS 32-2153(A)(9).",
+   "id": "az-4858cb77",
+   "portion": "georgia",
+   "q": "A licensee issuing an appraisal report on property they have an interest in must:",
+   "sub": "az/agency|Appraisals",
+   "subtopic": "Appraisals",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "May be given to any employee",
+    "Is restricted by statute",
+    "Belongs to whoever took the deposit",
+    "Is unlimited"
+   ],
+   "concept": "Arizona trust money",
+   "difficulty": 2,
+   "explain": "ARS 32-2151.01(B).",
+   "id": "az-4c3cca28",
+   "portion": "georgia",
+   "q": "Authority to withdraw from a broker's trust fund account:",
+   "sub": "az/agency|Trust money",
+   "subtopic": "Trust money",
+   "topic": "az/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Say nothing",
+    "Resign the listing",
+    "Notify only the broker",
+    "Disclose the conflict of interest"
+   ],
+   "concept": "Arizona disclosure",
+   "difficulty": 1,
+   "explain": "Arizona state content outline; ARS 32-2153.",
+   "id": "az-560dfef5",
+   "portion": "georgia",
+   "q": "A licensee holding an interest in the property being sold must:",
+   "sub": "az/duties|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any opinion on value",
+    "Knowledge of the neighbourhood",
+    "Expertise they do not have",
+    "Membership of a trade body"
+   ],
+   "concept": "Arizona disclosure",
+   "difficulty": 2,
+   "explain": "Experience and knowledge disclosures on the outline.",
+   "id": "az-d48077fc",
+   "portion": "georgia",
+   "q": "A licensee must not hold out:",
+   "sub": "az/duties|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Assumed from custom",
+    "Kept confidential",
+    "Set by the Department",
+    "Disclosed"
+   ],
+   "concept": "Arizona disclosure",
+   "difficulty": 2,
+   "explain": "Compensation disclosures on the outline.",
+   "id": "az-5242787f",
+   "portion": "georgia",
+   "q": "Where the licensee's compensation comes from must be:",
+   "sub": "az/duties|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Whether the licensee acts as a licensee or as a principal",
+    "Only when representing a client",
+    "Only in listings",
+    "Only if money changes hands"
+   ],
+   "concept": "Arizona misrepresentation",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(1).",
+   "id": "az-6534608e",
+   "portion": "georgia",
+   "q": "Pursuing a course of misrepresentation is a ground for discipline:",
+   "sub": "az/duties|Misrepresentation",
+   "subtopic": "Misrepresentation",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Skilled advocacy",
+    "Permitted with disclosure",
+    "Permitted if the client benefits",
+    "A ground for discipline"
+   ],
+   "concept": "Arizona contracts",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A).",
+   "id": "az-ba3685a4",
+   "portion": "georgia",
+   "q": "Inducing a party to break an existing contract is:",
+   "sub": "az/duties|Contracts",
+   "subtopic": "Contracts",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Commission arbitration by the Department",
+    "Controversy between cross sale agents",
+    "Agent licensing appeals"
+   ],
+   "concept": "Arizona cross sale",
+   "difficulty": 3,
+   "explain": "Licensee duties and obligations, item G.",
+   "id": "az-17aa9325",
+   "portion": "georgia",
+   "q": "The Arizona outline includes a category on:",
+   "sub": "az/duties|Cross sale",
+   "subtopic": "Cross sale",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Complete them for the seller",
+    "Help the seller complete and deliver them",
+    "Verify every statement personally",
+    "Ignore them if as-is"
+   ],
+   "concept": "Arizona seller disclosure",
+   "difficulty": 2,
+   "explain": "Licensee obligations on seller disclosures.",
+   "id": "az-929b8536",
+   "portion": "georgia",
+   "q": "A licensee's obligation on seller disclosures is to:",
+   "sub": "az/duties|Seller disclosure",
+   "subtopic": "Seller disclosure",
+   "topic": "az/duties"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$150,000",
+    "$250,000",
+    "$400,000 in value",
+    "Unlimited"
+   ],
+   "concept": "Arizona homestead",
+   "difficulty": 1,
+   "explain": "ARS 33-1101(A), adjusted annually.",
+   "id": "az-11ca518b",
+   "portion": "georgia",
+   "q": "The Arizona homestead exemption is:",
+   "sub": "az/consumer|Homestead",
+   "subtopic": "Homestead",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A rental house",
+    "A vacant lot",
+    "A cooperative in which the person resides",
+    "A commercial building"
+   ],
+   "concept": "Arizona homestead",
+   "difficulty": 2,
+   "explain": "ARS 33-1101(A)(2).",
+   "id": "az-db074398",
+   "portion": "georgia",
+   "q": "Which may be held as an Arizona homestead?",
+   "sub": "az/consumer|Homestead",
+   "subtopic": "Homestead",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Yes, plus the land on which it sits, if the person resides there",
+    "No",
+    "Only if permanently affixed",
+    "Only in a park"
+   ],
+   "concept": "Arizona homestead",
+   "difficulty": 2,
+   "explain": "ARS 33-1101(A)(3).",
+   "id": "az-f9dbbc82",
+   "portion": "georgia",
+   "q": "A mobile home may be an Arizona homestead:",
+   "sub": "az/consumer|Homestead",
+   "subtopic": "Homestead",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Property taxes",
+    "A mortgage the owner signed",
+    "HOA assessments",
+    "Attachment, execution and forced sale"
+   ],
+   "concept": "Arizona homestead",
+   "difficulty": 2,
+   "explain": "ARS 33-1101(A).",
+   "id": "az-bdfac4f3",
+   "portion": "georgia",
+   "q": "The homestead exemption protects against:",
+   "sub": "az/consumer|Homestead",
+   "subtopic": "Homestead",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Married",
+    "A property owner for five years",
+    "At least eighteen and resident in the state",
+    "A US citizen"
+   ],
+   "concept": "Arizona homestead",
+   "difficulty": 3,
+   "explain": "ARS 33-1101(A).",
+   "id": "az-8fe5f817",
+   "portion": "georgia",
+   "q": "To hold an Arizona homestead a person must be:",
+   "sub": "az/consumer|Homestead",
+   "subtopic": "Homestead",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "1980",
+    "1995",
+    "1967",
+    "2001"
+   ],
+   "concept": "Arizona consumer fraud",
+   "difficulty": 2,
+   "explain": "Named on the Arizona state content outline.",
+   "id": "az-c262269f",
+   "portion": "georgia",
+   "q": "The Arizona Consumer Fraud Protection Act dates from:",
+   "sub": "az/consumer|Consumer fraud",
+   "subtopic": "Consumer fraud",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A month-to-month tenancy",
+    "A verbal price quote",
+    "An open house sign-in",
+    "A contract for the sale of land"
+   ],
+   "concept": "Arizona statute of frauds",
+   "difficulty": 1,
+   "explain": "Land contracts and leases over one year.",
+   "id": "az-240bbe8c",
+   "portion": "georgia",
+   "q": "Under the statute of frauds, which must be in writing?",
+   "sub": "az/consumer|Statute of frauds",
+   "subtopic": "Statute of frauds",
+   "topic": "az/consumer"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Negligently only",
+    "Regardless of knowledge",
+    "Knowingly",
+    "Only if a sale resulted"
+   ],
+   "concept": "Arizona false advertising",
+   "difficulty": 1,
+   "explain": "ARS 32-2153(A)(4).",
+   "id": "az-f5dd9337",
+   "portion": "georgia",
+   "q": "False or misleading advertising is a ground for discipline where the licensee acted:",
+   "sub": "az/advertising|False advertising",
+   "subtopic": "False advertising",
+   "topic": "az/advertising"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Only in Arizona",
+    "Only in print media",
+    "Only online",
+    "In this or any other state"
+   ],
+   "concept": "Arizona false advertising",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(4).",
+   "id": "az-8f80a541",
+   "portion": "georgia",
+   "q": "The advertising ground for discipline reaches statements made:",
+   "sub": "az/advertising|False advertising",
+   "subtopic": "False advertising",
+   "topic": "az/advertising"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A civil matter only",
+    "Permitted if unpaid",
+    "Permitted while an application is pending",
+    "A ground for discipline"
+   ],
+   "concept": "Arizona titles",
+   "difficulty": 2,
+   "explain": "ARS 32-2153(A)(5).",
+   "id": "az-bcae9600",
+   "portion": "georgia",
+   "q": "Knowingly using the term 'real estate broker' without the right to do so is:",
+   "sub": "az/advertising|Titles",
+   "subtopic": "Titles",
+   "topic": "az/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The broker, for what the brokerage publishes",
+    "Each agent alone",
+    "The Department",
+    "The seller"
+   ],
+   "concept": "Arizona supervision",
+   "difficulty": 2,
+   "explain": "Advertising supervision on the state outline.",
+   "id": "az-78e6fc69",
+   "portion": "georgia",
+   "q": "Advertising supervision in Arizona places responsibility on:",
+   "sub": "az/advertising|Supervision",
+   "subtopic": "Supervision",
+   "topic": "az/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Builder warranties",
+    "Advertising for a subdivision or development",
+    "Construction permits"
+   ],
+   "concept": "Arizona development",
+   "difficulty": 3,
+   "explain": "Arizona state content outline.",
+   "id": "az-0906e8ae",
+   "portion": "georgia",
+   "q": "Development advertising on the Arizona outline concerns:",
+   "sub": "az/advertising|Development",
+   "subtopic": "Development",
+   "topic": "az/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Two and one-half acres or less",
+    "Five acres or less",
+    "Ten acres or less",
+    "Any size"
+   ],
+   "concept": "Arizona anti-deficiency",
+   "difficulty": 1,
+   "explain": "ARS 33-729(A).",
+   "id": "az-13c95e0f",
+   "portion": "georgia",
+   "q": "Arizona's anti-deficiency protection covers parcels of:",
+   "sub": "az/foreclosure|Anti-deficiency",
+   "subtopic": "Anti-deficiency",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any residential building",
+    "A single one-family or single two-family dwelling",
+    "A fourplex or smaller",
+    "An owner-occupied home of any size"
+   ],
+   "concept": "Arizona anti-deficiency",
+   "difficulty": 1,
+   "explain": "ARS 33-729(A).",
+   "id": "az-5f634a16",
+   "portion": "georgia",
+   "q": "The protected dwelling must be:",
+   "sub": "az/foreclosure|Anti-deficiency",
+   "subtopic": "Anti-deficiency",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "May pursue the borrower's other property",
+    "May garnish wages",
+    "May sue for the shortfall within a year",
+    "May not obtain a deficiency judgment"
+   ],
+   "concept": "Arizona anti-deficiency",
+   "difficulty": 2,
+   "explain": "ARS 33-729(A).",
+   "id": "az-88a3a594",
+   "portion": "georgia",
+   "q": "Where ARS 33-729 applies, the lender:",
+   "sub": "az/foreclosure|Anti-deficiency",
+   "subtopic": "Anti-deficiency",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any mortgage",
+    "A refinance",
+    "A home equity line",
+    "Purchase money - for the balance of the price or a loan to pay it"
+   ],
+   "concept": "Arizona anti-deficiency",
+   "difficulty": 2,
+   "explain": "ARS 33-729(A).",
+   "id": "az-4a67e31b",
+   "portion": "georgia",
+   "q": "The loan must be:",
+   "sub": "az/foreclosure|Anti-deficiency",
+   "subtopic": "Anti-deficiency",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "90 days of the sale",
+    "6 months",
+    "One year"
+   ],
+   "concept": "Arizona trustee sale",
+   "difficulty": 1,
+   "explain": "ARS 33-814(A).",
+   "id": "az-0ddb5b26",
+   "portion": "georgia",
+   "q": "After an Arizona trustee's sale, a deficiency action must be brought within:",
+   "sub": "az/foreclosure|Trustee sale",
+   "subtopic": "Trustee sale",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A deed of trust with a power of sale",
+    "A mortgage foreclosed judicially",
+    "A land contract",
+    "A security deed"
+   ],
+   "concept": "Arizona trustee sale",
+   "difficulty": 2,
+   "explain": "ARS 33-814.",
+   "id": "az-f0567300",
+   "portion": "georgia",
+   "q": "Arizona lenders normally secure loans with:",
+   "sub": "az/foreclosure|Trustee sale",
+   "subtopic": "Trustee sale",
+   "topic": "az/foreclosure"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "1980",
+    "1912",
+    "1968",
+    "1995"
+   ],
+   "concept": "Arizona water",
+   "difficulty": 1,
+   "explain": "Named on the Arizona content outlines.",
+   "id": "az-0263facd",
+   "portion": "georgia",
+   "q": "The Arizona Groundwater Management Act dates from:",
+   "sub": "az/skill-care|Water",
+   "subtopic": "Water",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Riparian districts",
+    "Active Management Areas and Irrigation Non-Expansion Areas",
+    "Water courts",
+    "Groundwater trusts"
+   ],
+   "concept": "Arizona water",
+   "difficulty": 2,
+   "explain": "Named on the Arizona content outlines.",
+   "id": "az-28bcfa58",
+   "portion": "georgia",
+   "q": "The 1980 Act created:",
+   "sub": "az/skill-care|Water",
+   "subtopic": "Water",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Riparian rights",
+    "Absolute ownership",
+    "Correlative rights",
+    "Prior appropriation"
+   ],
+   "concept": "Arizona water",
+   "difficulty": 2,
+   "explain": "First in time, first in right.",
+   "id": "az-daddfb94",
+   "portion": "georgia",
+   "q": "Arizona surface water follows:",
+   "sub": "az/skill-care|Water",
+   "subtopic": "Water",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A riparian right",
+    "A littoral right",
+    "A grandfathered right",
+    "An appropriative right"
+   ],
+   "concept": "Arizona water",
+   "difficulty": 3,
+   "explain": "Named on the Arizona content outlines.",
+   "id": "az-e2416543",
+   "portion": "georgia",
+   "q": "A groundwater right recognised from before the 1980 Act is:",
+   "sub": "az/skill-care|Water",
+   "subtopic": "Water",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "An ad valorem tax",
+    "A transfer tax",
+    "An excise tax",
+    "A special assessment"
+   ],
+   "concept": "Arizona taxes",
+   "difficulty": 2,
+   "explain": "Property taxes and special assessments on the outline.",
+   "id": "az-5fcab306",
+   "portion": "georgia",
+   "q": "A charge for a local improvement benefiting a particular property is:",
+   "sub": "az/skill-care|Taxes",
+   "subtopic": "Taxes",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Commission negotiation",
+    "Property taxes, special assessments, and utility and environmental regulation",
+    "Office management",
+    "Advertising budgets"
+   ],
+   "concept": "Arizona obligation",
+   "difficulty": 2,
+   "explain": "Arizona state content outline.",
+   "id": "az-a450662e",
+   "portion": "georgia",
+   "q": "Reasonable skill and care in the Arizona outline is tied to:",
+   "sub": "az/skill-care|Obligation",
+   "subtopic": "Obligation",
+   "topic": "az/skill-care"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Residential resale",
+    "Open houses",
+    "Comparative market analysis",
+    "Timeshare"
+   ],
+   "concept": "Arizona niches",
+   "difficulty": 1,
+   "explain": "Arizona state content outline, item VI.C.",
+   "id": "az-03ad35ad",
+   "portion": "georgia",
+   "q": "Which does Arizona name as a niche needing particular competence?",
+   "sub": "az/competency|Niches",
+   "subtopic": "Niches",
+   "topic": "az/competency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Mortgage origination",
+    "Title examination",
+    "New home sales and developments",
+    "Home inspection"
+   ],
+   "concept": "Arizona niches",
+   "difficulty": 2,
+   "explain": "Arizona state content outline.",
+   "id": "az-368e2766",
+   "portion": "georgia",
+   "q": "Which is listed among the Arizona niche areas?",
+   "sub": "az/competency|Niches",
+   "subtopic": "Niches",
+   "topic": "az/competency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Proceed and learn on the job",
+    "Refer it to the Commissioner",
+    "Charge a higher fee",
+    "Get help or decline the work"
+   ],
+   "concept": "Arizona competency",
+   "difficulty": 1,
+   "explain": "Professional competency requirements.",
+   "id": "az-850c442f",
+   "portion": "georgia",
+   "q": "A licensee asked to handle work beyond their competence should:",
+   "sub": "az/competency|Competency",
+   "subtopic": "Competency",
+   "topic": "az/competency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Condominium budgets",
+    "Commercial leases",
+    "Certain unsubdivided land, covering access, utilities and roads",
+    "New home warranties"
+   ],
+   "concept": "Arizona land",
+   "difficulty": 2,
+   "explain": "Named on the Arizona state content outline.",
+   "id": "az-fd092702",
+   "portion": "georgia",
+   "q": "The Affidavit of Disclosure concerns:",
+   "sub": "az/competency|Land",
+   "subtopic": "Land",
+   "topic": "az/competency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Unregulated",
+    "Regulated only by counties",
+    "Separately regulated under title 32, chapter 20",
+    "Regulated by the Corporation Commission"
+   ],
+   "concept": "Arizona subdivisions",
+   "difficulty": 3,
+   "explain": "Named on the Arizona state content outline.",
+   "id": "az-70ad662b",
+   "portion": "georgia",
+   "q": "Subdivisions in Arizona are:",
+   "sub": "az/competency|Subdivisions",
+   "subtopic": "Subdivisions",
+   "topic": "az/competency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Three hours of contract theory",
+    "Six hours of contract law and contract writing",
+    "Twelve hours of contracts",
+    "No contract instruction"
+   ],
+   "concept": "Arizona education",
+   "difficulty": 1,
+   "explain": "ARS 32-2124(M).",
+   "id": "az-d13048d0",
+   "portion": "georgia",
+   "q": "An original Arizona salesperson applicant must complete:",
+   "sub": "az/contracts|Education",
+   "subtopic": "Education",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Deeds and mortgages",
+    "Appraisal reports",
+    "Purchase contracts, listing agreements and lease agreements",
+    "Escrow instructions"
+   ],
+   "concept": "Arizona education",
+   "difficulty": 2,
+   "explain": "ARS 32-2124(M).",
+   "id": "az-ea943f8f",
+   "portion": "georgia",
+   "q": "That contract instruction must include the applicant drafting:",
+   "sub": "az/contracts|Education",
+   "subtopic": "Education",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Salesperson employment contracts",
+    "Property management staffing",
+    "Listing and buyer-broker agreements",
+    "Independent contractor agreements"
+   ],
+   "concept": "Arizona employment agreements",
+   "difficulty": 1,
+   "explain": "Arizona state content outline, item VIII.A.",
+   "id": "az-fec67980",
+   "portion": "georgia",
+   "q": "In the Arizona outline, 'employment agreements' means:",
+   "sub": "az/contracts|Employment agreements",
+   "subtopic": "Employment agreements",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Notarisation",
+    "Offer and acceptance, consideration, capable parties and a lawful object",
+    "Recording",
+    "Commissioner approval"
+   ],
+   "concept": "Arizona validity",
+   "difficulty": 1,
+   "explain": "Valid contract requirements on the outline.",
+   "id": "az-32e5e9f7",
+   "portion": "georgia",
+   "q": "A valid Arizona purchase contract requires:",
+   "sub": "az/contracts|Validity",
+   "subtopic": "Validity",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Appraisal methodology",
+    "The closing process, possession, and costs at closing",
+    "Loan underwriting",
+    "Title plant operations"
+   ],
+   "concept": "Arizona closing",
+   "difficulty": 2,
+   "explain": "Arizona state content outline, item VIII.B.",
+   "id": "az-6b805590",
+   "portion": "georgia",
+   "q": "The Arizona contracts category also covers:",
+   "sub": "az/contracts|Closing",
+   "subtopic": "Closing",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Article XXVI of the Arizona Constitution",
+    "A Commissioner's rule",
+    "A Supreme Court order",
+    "The Consumer Fraud Act"
+   ],
+   "concept": "Arizona drafting",
+   "difficulty": 3,
+   "explain": "Named first on the Real Estate Statutes outline.",
+   "id": "az-35751d09",
+   "portion": "georgia",
+   "q": "Arizona licensees may draft the documents incident to a transaction they handle because of:",
+   "sub": "az/contracts|Drafting",
+   "subtopic": "Drafting",
+   "topic": "az/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer's equity",
+    "The lender, up to the loan amount",
+    "The seller",
+    "The escrow agent"
+   ],
+   "concept": "Arizona title",
+   "difficulty": 1,
+   "explain": "An owner's policy is separate.",
+   "id": "az-96cb19f5",
+   "portion": "georgia",
+   "q": "A lender's title policy protects:",
+   "sub": "az/services|Title",
+   "subtopic": "Title",
+   "topic": "az/services"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The buyer's agent",
+    "The seller's agent",
+    "A neutral third party holding funds and documents",
+    "The lender's agent"
+   ],
+   "concept": "Arizona escrow",
+   "difficulty": 1,
+   "explain": "Critical business services on the outline.",
+   "id": "az-5f5201a7",
+   "portion": "georgia",
+   "q": "An escrow agent in an Arizona transaction is:",
+   "sub": "az/services|Escrow",
+   "subtopic": "Escrow",
+   "topic": "az/services"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Show the commission split",
+    "Be filed with the Department",
+    "Be notarised",
+    "Confirm the money was handled as the transaction required"
+   ],
+   "concept": "Arizona escrow",
+   "difficulty": 2,
+   "explain": "ARS 32-2151.01(A).",
+   "id": "az-45371e1a",
+   "portion": "georgia",
+   "q": "Earnest money receipts in the broker's records must:",
+   "sub": "az/services|Escrow",
+   "subtopic": "Escrow",
+   "topic": "az/services"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Receipts, disbursements and adjustments",
+    "Only the purchase price",
+    "Only the loan amount"
+   ],
+   "concept": "Arizona lending",
+   "difficulty": 2,
+   "explain": "ARS 32-2151.01(A) describes the closing statement contents.",
+   "id": "az-0ff6078b",
+   "portion": "georgia",
+   "q": "Costs that appear on the Arizona closing statement include:",
+   "sub": "az/services|Lending",
+   "subtopic": "Lending",
+   "topic": "az/services"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The lender only",
+    "The listing broker",
+    "The buyer's interest in the title",
+    "The escrow company"
+   ],
+   "concept": "Arizona title",
+   "difficulty": 2,
+   "explain": "The lender's policy is separate.",
+   "id": "az-2ef6b04d",
+   "portion": "georgia",
+   "q": "An owner's title policy protects:",
+   "sub": "az/services|Title",
+   "subtopic": "Title",
+   "topic": "az/services"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A community property state",
+    "A common law title state only",
+    "A dower and curtesy state",
+    "A tenancy by the entireties state"
+   ],
+   "concept": "Arizona marital property",
+   "difficulty": 1,
+   "explain": "Property acquired during marriage is generally community property.",
+   "id": "az-97bb29f6",
+   "portion": "georgia",
+   "q": "Arizona is:",
+   "sub": "az/ownership|Marital property",
+   "subtopic": "Marital property",
+   "topic": "az/ownership"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Community property",
+    "Jointly owned by law",
+    "Separate property",
+    "Held in trust"
+   ],
+   "concept": "Arizona marital property",
+   "difficulty": 1,
+   "explain": "Separate property keeps its character.",
+   "id": "az-053f9bff",
+   "portion": "georgia",
+   "q": "Property one spouse owned before marriage is:",
+   "sub": "az/ownership|Marital property",
+   "subtopic": "Marital property",
+   "topic": "az/ownership"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Community property",
+    "Half community",
+    "Separate property",
+    "Community after five years"
+   ],
+   "concept": "Arizona marital property",
+   "difficulty": 2,
+   "explain": "Gift, devise or descent is separate.",
+   "id": "az-3a7cb862",
+   "portion": "georgia",
+   "q": "Property acquired by one spouse during marriage by gift or inheritance is:",
+   "sub": "az/ownership|Marital property",
+   "subtopic": "Marital property",
+   "topic": "az/ownership"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Plain community property",
+    "Community property with right of survivorship",
+    "Tenancy in common",
+    "Severalty"
+   ],
+   "concept": "Arizona survivorship",
+   "difficulty": 2,
+   "explain": "The survivorship form must be stated.",
+   "id": "az-69018a37",
+   "portion": "georgia",
+   "q": "Which gives survivorship between Arizona spouses?",
+   "sub": "az/ownership|Survivorship",
+   "subtopic": "Survivorship",
+   "topic": "az/ownership"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The owner's fee simple interest",
+    "The property's market value",
+    "An easement across the property"
+   ],
+   "concept": "Arizona encumbrances",
+   "difficulty": 2,
+   "explain": "Encumbrances are claims or restrictions on title.",
+   "id": "az-e8cf4fb7",
+   "portion": "georgia",
+   "q": "Which is an encumbrance?",
+   "sub": "az/ownership|Encumbrances",
+   "subtopic": "Encumbrances",
+   "topic": "az/ownership"
+  }
+ ],
+ "code": "AZ",
+ "diffs": {
+  "national/contracts": [
+   "Article XXVI of the Arizona Constitution lets licensees draft the documents incident to a transaction they handle - which is why an applicant must complete six hours of contract law and contract WRITING, including drafting practice (ARS 32-2124(M))."
+  ],
+  "national/financing": [
+   "Arizona lenders use a DEED OF TRUST with a trustee's power of sale; a deficiency action after a trustee's sale must be brought within 90 days (ARS 33-814).",
+   "The ANTI-DEFICIENCY statute bars a deficiency judgment where purchase money financed a parcel of 2.5 acres or less used as a single one- or two-family dwelling (ARS 33-729)."
+  ],
+  "national/landuse": [
+   "Arizona surface water follows PRIOR APPROPRIATION, and the Groundwater Management Act 1980 created Active Management Areas, Irrigation Non-Expansion Areas and grandfathered rights."
+  ],
+  "national/ownership": [
+   "Arizona is a COMMUNITY PROPERTY state, and also recognises community property WITH RIGHT OF SURVIVORSHIP.",
+   "The homestead exemption protects up to $400,000 in value from attachment, execution and forced sale, and can cover a mobile home plus its land (ARS 33-1101)."
+  ],
+  "national/ownership_water": [],
+  "national/practice": [
+   "Arizona broker records are kept five years, at the principal or branch office, or at an Arizona off-site location notified to the Department in writing (ARS 32-2151.01).",
+   "The Recovery Fund pays $30,000 per transaction and $90,000 per licensee, and licensees themselves cannot claim (ARS 32-2186).",
+   "Acting for more than one party needs the knowledge or written consent of all parties (ARS 32-2153(A)(2))."
+  ]
+ },
+ "name": "Arizona",
+ "pass": 0.75,
+ "portions": {
+  "georgia": {
+   "blurb": "ARS title 32 chapter 20, the Commissioner's Rules, and the Arizona law the outline names.",
+   "minutes": 90,
+   "name": "Arizona state",
+   "scored": 60
+  },
+  "national": {
+   "minutes": 120,
+   "scored": 80
+  }
+ },
+ "regulator": "Arizona Department of Real Estate",
+ "sources": [
+  {
+   "by": "Arizona Legislature",
+   "name": "Arizona Revised Statutes title 32, chapter 20",
+   "note": "The real estate licence law: the Department, licensing, broker records, discipline and the Recovery Fund.",
+   "url": "https://www.azleg.gov/arsDetail/?title=32"
+  },
+  {
+   "by": "Arizona Legislature",
+   "name": "Arizona Revised Statutes title 33",
+   "note": "The homestead exemption and the anti-deficiency statutes for mortgages and deeds of trust.",
+   "url": "https://www.azleg.gov/arsDetail/?title=33"
+  },
+  {
+   "by": "Pearson VUE and the Arizona Department of Real Estate",
+   "name": "Arizona Candidate Handbook and Content Outlines",
+   "note": "The blueprint: 80 national and 60 state scored items, 75% on each as a percentage of items correct, and the eleven state categories.",
+   "url": "https://www.pearsonvue.com/us/en/az/realestate.html"
+  }
+ ],
+ "study": {
+  "az/advertising": {
+   "blurb": "Licensee advertising, promotions, development ads, supervision.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Advertising",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Knowingly",
+        "Negligently only",
+        "Regardless of knowledge"
+       ],
+       "q": "False advertising is a ground for discipline where the licensee acted:",
+       "why": "ARS 32-2153(A)(4)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only in Arizona",
+        "Only in print",
+        "In this or any other state"
+       ],
+       "q": "The advertising ground reaches statements made:",
+       "why": "ARS 32-2153(A)(4)."
+      }
+     ],
+     "h": "False or misleading advertising (ARS 32-2153(A)(4))",
+     "p": [
+      "A licence may be denied, suspended or revoked where a licensee KNOWINGLY authorised, directed, connived at or aided in the publication, advertisement, distribution or circulation of any MATERIALLY FALSE OR MISLEADING statement or representation concerning the licensee's business, or any land, cemetery property, subdivision, membership campground or camping contract offered for sale - IN THIS OR ANY OTHER STATE."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Only when acting for a client",
+        "Only in listings",
+        "Whether the licensee acts as a licensee or as a principal"
+       ],
+       "q": "Misrepresentation is a ground for discipline:",
+       "why": "ARS 32-2153(A)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A ground for discipline",
+        "A civil matter only",
+        "Permitted if unpaid"
+       ],
+       "q": "Calling yourself a real estate broker without the right to do so is:",
+       "why": "ARS 32-2153(A)(5)."
+      }
+     ],
+     "h": "Titles and supervision",
+     "l": [
+      "Knowingly using the term REAL ESTATE BROKER, cemetery broker or membership camping broker without the legal right to do so is a ground for discipline (ARS 32-2153(A)(5)).",
+      "The state outline divides advertising into ADVERTISING BY A LICENSEE, PROMOTIONAL ACTIVITIES, DEVELOPMENT ADVERTISING and ADVERTISING SUPERVISION - the last putting responsibility on the broker for what the brokerage publishes.",
+      "Pursuing a COURSE OF MISREPRESENTATION, or making false promises, directly or through others, is a ground for discipline whether acting as a licensee or as a PRINCIPAL in the transaction (32-2153(A)(1))."
+     ]
+    }
+   ],
+   "summary": "Five items. The licence law's advertising ground for discipline is broad: knowingly putting out any materially false or misleading statement about the business or the property.",
+   "topic": "az/advertising",
+   "traps": [
+    "The advertising ground needs KNOWLEDGE; the misrepresentation ground reaches a course of conduct.",
+    "Discipline follows a licensee even when they are the principal in their own deal.",
+    "Advertising supervision is the broker's problem, not only the agent's."
+   ],
+   "vocab": [
+    [
+     "Development advertising",
+     "Advertising for a subdivision or development."
+    ],
+    [
+     "Connive at",
+     "To knowingly allow or assist; used in the statute."
+    ],
+    [
+     "Material misstatement",
+     "A false statement that matters to the decision."
+    ]
+   ]
+  },
+  "az/agency": {
+   "blurb": "Types, creation, Arizona case law on clients and customers, termination.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Arizona agency",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Verbal consent",
+        "The knowledge and written consent of all parties",
+        "Broker approval only",
+        "Nothing; it is prohibited"
+       ],
+       "q": "Acting for both parties in Arizona requires:",
+       "why": "ARS 32-2153(A)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Allowed with written consent of all parties",
+        "Prohibited outright",
+        "Allowed only in commercial deals"
+       ],
+       "q": "Dual representation in Arizona is:",
+       "why": "ARS 32-2153(A)(2)."
+      }
+     ],
+     "h": "Dual representation (ARS 32-2153(A)(2))",
+     "p": [
+      "A licence may be denied, suspended or revoked where a licensee has ACTED FOR MORE THAN ONE PARTY IN A TRANSACTION WITHOUT THE KNOWLEDGE OR WRITTEN CONSENT OF ALL PARTIES. So dual representation is permitted in Arizona, but only with everyone knowing and consenting in writing."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Only a person authorised under ARS 32-2155",
+        "Any party to the deal",
+        "The buyer directly"
+       ],
+       "q": "An Arizona salesperson may accept compensation from:",
+       "why": "ARS 32-2153(A)(7)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Allowed with disclosure",
+        "A ground for discipline",
+        "Allowed for one transaction"
+       ],
+       "q": "Representing a broker other than the one you are licensed to is:",
+       "why": "ARS 32-2153(A)(8)."
+      }
+     ],
+     "h": "Representing the right broker",
+     "l": [
+      "A salesperson or associate broker may not REPRESENT OR ATTEMPT TO REPRESENT a broker other than the one they are licensed to (ARS 32-2153(A)(8)).",
+      "A broker may not employ an UNLICENSED salesperson or associate broker (32-2153(A)(6)).",
+      "A licensee may accept compensation only from a person authorised to pay it under ARS 32-2155 (32-2153(A)(7)).",
+      "Paying or receiving a REBATE, profit, compensation or commission in violation of the chapter is a ground for discipline (32-2153(A)(10))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Within 24 hours",
+        "Within a reasonable time",
+        "At closing only"
+       ],
+       "q": "A licensee holding money belonging to another must account for it:",
+       "why": "ARS 32-2153(A)(9)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Be refused",
+        "Be reviewed by the Commissioner",
+        "Fully disclose the nature and extent of that interest"
+       ],
+       "q": "An appraisal report on property the licensee has an interest in must:",
+       "why": "ARS 32-2153(A)(9)."
+      }
+     ],
+     "h": "Accounting and documents",
+     "p": [
+      "Failing, WITHIN A REASONABLE TIME, to account for or remit money, or to surrender to the rightful owner documents or other valuable property belonging to others that came into the licensee's possession, is a ground for discipline (ARS 32-2153(A)(9)). The same provision covers issuing an appraisal report on property in which the licensee has an interest without fully disclosing the nature and extent of that interest."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Is restricted by statute",
+        "May be given to any employee",
+        "Belongs to the salesperson who took the deposit"
+       ],
+       "q": "Authority to withdraw from a broker's trust fund account:",
+       "why": "ARS 32-2151.01(B)."
+      }
+     ],
+     "h": "Trust money and withdrawals",
+     "p": [
+      "A broker may NOT grant anyone authority to withdraw money from the broker's TRUST FUND ACCOUNT unless the statute permits it (ARS 32-2151.01(B)). Trust money is the client's, and the employing broker answers for it."
+     ]
+    }
+   ],
+   "summary": "Six items. Arizona's rule is short: acting for more than one party without the knowledge or WRITTEN CONSENT of all parties is a ground for discipline.",
+   "topic": "az/agency",
+   "traps": [
+    "Arizona allows dual representation WITH written consent; it is not banned.",
+    "Compensation must come through a person ARS 32-2155 authorises.",
+    "'Within a reasonable time' is the accounting standard, not a fixed number of days."
+   ],
+   "vocab": [
+    [
+     "Associate broker",
+     "A broker working under an employing broker."
+    ],
+    [
+     "Employing broker",
+     "The broker a licensee is licensed to."
+    ],
+    [
+     "Designated broker",
+     "The broker responsible for a brokerage's compliance."
+    ],
+    [
+     "Trust fund account",
+     "The account holding money belonging to others."
+    ]
+   ]
+  },
+  "az/competency": {
+   "blurb": "Professional competency, new homes, property management, timeshare, land.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Competencies & property types",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Timeshare",
+        "Residential resale",
+        "Open houses"
+       ],
+       "q": "Arizona lists which as a niche needing particular competence?",
+       "why": "Arizona state content outline."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Get help or decline",
+        "Proceed and learn on the job",
+        "Refer it to the Commissioner"
+       ],
+       "q": "A licensee asked to handle work beyond their competence should:",
+       "why": "Professional competency requirements."
+      }
+     ],
+     "h": "Professional competency",
+     "l": [
+      "NEW HOME SALES AND DEVELOPMENTS - builder contracts and subdivision rules differ from resale practice.",
+      "PROPERTY MANAGEMENT - trust money, leases and the landlord and tenant act.",
+      "TIMESHARE - regulated separately under title 32 chapter 20.",
+      "VACANT LAND - access, water, utilities and the AFFIDAVIT OF DISCLOSURE for certain unsubdivided parcels.",
+      "COMMERCIAL - different contracts, different clients, different liabilities."
+     ],
+     "p": [
+      "The outline opens with PROFESSIONAL COMPETENCY REQUIREMENTS: a licensee takes on work they are competent to do, or gets help. It then lists PROPERTY TYPES and the NICHE AREAS where competence is most often lacking."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Condominium budgets",
+        "Certain unsubdivided land, covering access, utilities and roads",
+        "Commercial leases"
+       ],
+       "q": "The Affidavit of Disclosure concerns:",
+       "why": "Named on the Arizona state content outline."
+      }
+     ],
+     "h": "Subdivisions and the Affidavit of Disclosure",
+     "p": [
+      "The state outline lists SUBDIVISIONS under the licence law, and names the AFFIDAVIT OF DISCLOSURE. Arizona requires a seller of certain unsubdivided land to give the buyer an affidavit covering access, utilities, roads and physical conditions - a document with no national equivalent."
+     ]
+    }
+   ],
+   "summary": "Six items on staying inside what you actually know. Arizona names the niches by name: new homes, property management, timeshare, vacant land, commercial.",
+   "topic": "az/competency",
+   "traps": [
+    "The Affidavit of Disclosure is for land, not for a house in a subdivision.",
+    "Timeshare is separately regulated in Arizona."
+   ],
+   "vocab": [
+    [
+     "Affidavit of Disclosure",
+     "The Arizona land disclosure for certain unsubdivided parcels."
+    ],
+    [
+     "Subdivision",
+     "Land divided for sale; separately regulated under title 32."
+    ],
+    [
+     "Timeshare",
+     "An interest giving periodic use, regulated under chapter 20."
+    ]
+   ]
+  },
+  "az/consumer": {
+   "blurb": "Consumer Fraud Act, statute of frauds, fair housing, homestead.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Consumer protection laws",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$150,000",
+        "$400,000 in value",
+        "$250,000",
+        "Unlimited"
+       ],
+       "q": "The Arizona homestead exemption is:",
+       "why": "ARS 33-1101(A)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A rental property",
+        "A vacant lot",
+        "A cooperative in which the person resides",
+        "A commercial building"
+       ],
+       "q": "Which qualifies for the Arizona homestead exemption?",
+       "why": "ARS 33-1101(A)(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Property taxes",
+        "Attachment, execution and forced sale",
+        "A mortgage the owner signed"
+       ],
+       "q": "The homestead exemption protects against:",
+       "why": "ARS 33-1101(A)."
+      }
+     ],
+     "h": "The homestead exemption (ARS 33-1101)",
+     "l": [
+      "Any person at least EIGHTEEN, married or single, residing in Arizona may hold a homestead EXEMPT FROM ATTACHMENT, EXECUTION AND FORCED SALE, not exceeding $400,000 IN VALUE.",
+      "It may be the person's interest in real property in one compact body with a dwelling house in which they reside; a CONDOMINIUM or COOPERATIVE in which they reside; or a MOBILE HOME, park model trailer, motor home, travel trailer, fifth wheel, houseboat or manufactured home in which they reside, plus the land it sits on.",
+      "The figure is adjusted annually, so treat $400,000 as the statutory base."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "1980",
+        "1995",
+        "1967",
+        "2001"
+       ],
+       "q": "The Arizona Consumer Fraud Protection Act dates from:",
+       "why": "Named on the Arizona state content outline."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A one-month tenancy",
+        "An oral price quote",
+        "A contract for the sale of land"
+       ],
+       "q": "Under the statute of frauds, which must be written?",
+       "why": "Land contracts and leases over a year."
+      }
+     ],
+     "h": "Consumer Fraud and the statute of frauds",
+     "l": [
+      "The 1967 ARIZONA CONSUMER FRAUD PROTECTION ACT is named on the exam outline; it reaches deception, false promise and concealment in connection with the sale or advertisement of merchandise, which includes real estate.",
+      "The STATUTE OF FRAUDS requires contracts for the sale of land, and leases longer than one year, to be in writing to be enforceable.",
+      "ARIZONA FAIR HOUSING and ARIZONA HOMESTEAD LAWS complete this outline category."
+     ]
+    }
+   ],
+   "summary": "Five items. The Arizona-specific numbers here are the homestead exemption at $400,000 and the Consumer Fraud Act of 1967.",
+   "topic": "az/consumer",
+   "traps": [
+    "$400,000 homestead, adjusted annually.",
+    "A mobile home plus its land can be the homestead.",
+    "Homestead does not defeat a mortgage the owner signed or property taxes."
+   ],
+   "vocab": [
+    [
+     "Homestead exemption",
+     "Arizona's $400,000 protection from forced sale."
+    ],
+    [
+     "Consumer Fraud Act",
+     "Arizona's 1967 deceptive practices statute."
+    ],
+    [
+     "Statute of frauds",
+     "The rule that land contracts must be written."
+    ],
+    [
+     "Attachment",
+     "A creditor's seizure of property to secure a claim."
+    ]
+   ]
+  },
+  "az/contracts": {
+   "blurb": "Employment agreements, purchase contracts, closing and costs.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [],
+   "ga": [],
+   "label": "Contracts",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Employment agreements and purchase contracts",
+        "Only purchase contracts",
+        "Only listing agreements"
+       ],
+       "q": "Which does the Arizona outline group under contracts?",
+       "why": "Arizona state content outline."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The statute of frauds",
+        "The Consumer Fraud Act",
+        "Commissioner's Rules"
+       ],
+       "q": "A land contract must be in writing because of:",
+       "why": "Named under Arizona consumer protection laws."
+      }
+     ],
+     "h": "Employment agreements and purchase contracts",
+     "l": [
+      "EMPLOYMENT AGREEMENTS - listing agreements and buyer-broker agreements, which the outline treats as the licensee's own contract with the client.",
+      "PURCHASE CONTRACTS, covering VALID CONTRACT REQUIREMENTS, CONSIDERATION, TERMS AND CONDITIONS, the CLOSING PROCESS AND POSSESSION, and COSTS AT CLOSING.",
+      "A valid contract needs offer and acceptance, consideration, capable parties, lawful object, and - for land - writing under the statute of frauds."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Three hours of contract theory",
+        "No contract instruction",
+        "Six hours of contract law and contract writing, including drafting"
+       ],
+       "q": "Arizona requires an original salesperson applicant to complete:",
+       "why": "ARS 32-2124(M)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Deeds and mortgages",
+        "Appraisal reports",
+        "Purchase contracts, listing agreements and lease agreements"
+       ],
+       "q": "That instruction must include drafting:",
+       "why": "ARS 32-2124(M)."
+      }
+     ],
+     "h": "Drafting, and the six-hour requirement",
+     "p": [
+      "An applicant for an original Arizona salesperson's licence must certify completion of SIX HOURS of instruction in REAL ESTATE CONTRACT LAW AND CONTRACT WRITING, and that instruction must include the applicant actually DRAFTING contracts to purchase real property, listing agreements and lease agreements (ARS 32-2124(M)). Arizona expects licensees to write contracts, so it makes them practise first."
+     ]
+    }
+   ],
+   "summary": "Eight items, the largest category. Arizona lets licensees draft the documents incident to their own transactions, which makes contract competence a licence-law issue rather than a nicety.",
+   "topic": "az/contracts",
+   "traps": [
+    "Six hours of contract writing is an Arizona licensing requirement, separate from the 90-hour course.",
+    "Employment agreement here means the listing or buyer-broker agreement."
+   ],
+   "vocab": [
+    [
+     "Employment agreement",
+     "A listing or buyer-broker agreement in Arizona usage."
+    ],
+    [
+     "Consideration",
+     "The value each party gives; required for a valid contract."
+    ],
+    [
+     "Possession",
+     "When the buyer takes occupancy; set by the contract."
+    ]
+   ]
+  },
+  "az/duties": {
+   "blurb": "Disclosure, conflicts, compensation, timing, cross-sale disputes.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Licensee duties & obligations",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Say nothing",
+        "Disclose the conflict of interest",
+        "Resign the listing"
+       ],
+       "q": "A licensee who holds an interest in the property they are selling must:",
+       "why": "Arizona state content outline; ARS 32-2153."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Any market opinion",
+        "Expertise they do not have",
+        "Knowledge of the neighbourhood"
+       ],
+       "q": "A licensee must not claim:",
+       "why": "Experience and knowledge disclosures."
+      }
+     ],
+     "h": "What must be disclosed",
+     "l": [
+      "LICENSEE OBLIGATIONS OF DISCLOSURE generally.",
+      "LICENSEE OBLIGATIONS ON SELLER DISCLOSURES - helping the seller complete and deliver them.",
+      "CONFLICTS OF INTEREST DISCLOSURE - including the licensee's own interest in the property.",
+      "COMPENSATION DISCLOSURES - where the licensee's compensation comes from.",
+      "EXPERIENCE AND KNOWLEDGE DISCLOSURES - a licensee must not hold out expertise they do not have.",
+      "TIMING OF PERFORMANCE for clients and customers.",
+      "CONTROVERSY BETWEEN CROSS SALE AGENTS - how a dispute between the two sides' agents is handled."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Kept for five years",
+        "Destroyed at closing",
+        "Surrendered to the rightful owner within a reasonable time"
+       ],
+       "q": "Documents belonging to another that come into a licensee's possession must be:",
+       "why": "ARS 32-2153(A)(9)."
+      }
+     ],
+     "h": "Accounting and remitting (ARS 32-2153(A)(9))",
+     "p": [
+      "Failing within a reasonable time to account for or remit money, or to surrender documents or other valuable property belonging to others, is a ground for discipline. Money and documents belonging to someone else are never the licensee's to hold onto."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Good advocacy",
+        "Permitted with disclosure",
+        "A ground for discipline"
+       ],
+       "q": "Persuading a seller to break an existing contract so a new one can be written is:",
+       "why": "ARS 32-2153(A)."
+      }
+     ],
+     "h": "Inducing a breach",
+     "p": [
+      "The licence law also reaches a licensee who INDUCES a party to break a contract - the statute lists it among the grounds for discipline alongside misrepresentation and unlawful compensation."
+     ]
+    }
+   ],
+   "summary": "Six items on what a licensee must say and when. The outline puts disclosure obligations, conflicts, compensation and timing together, and adds the Arizona oddity of a dispute between cross-sale agents.",
+   "topic": "az/duties",
+   "traps": [
+    "Compensation sources are disclosed, not assumed.",
+    "Claiming expertise you lack is itself a disclosure failure in Arizona.",
+    "Money AND documents both fall under the duty to account and surrender."
+   ],
+   "vocab": [
+    [
+     "Cross sale",
+     "A transaction where different agents represent each side."
+    ],
+    [
+     "Conflict of interest",
+     "A personal interest at odds with the client's."
+    ],
+    [
+     "Material fact",
+     "A fact that would affect a reasonable party's decision."
+    ]
+   ]
+  },
+  "az/foreclosure": {
+   "blurb": "The Arizona anti-deficiency statute and the foreclosure process.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [
+    {
+     "k": "No deficiency judgment. The lender takes the sale proceeds and nothing further.",
+     "s": "A purchase-money loan on a 0.2-acre single-family home; the trustee's sale raises $60,000 less than the debt.",
+     "t": "The shortfall",
+     "w": [
+      "Purchase money, under 2.5 acres, single one-family dwelling.",
+      "All three conditions of the anti-deficiency statute are met."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Foreclosure & short sale",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Five acres or less",
+        "Two and one-half acres or less",
+        "Ten acres or less",
+        "Any size"
+       ],
+       "q": "Arizona's anti-deficiency protection covers parcels of:",
+       "why": "ARS 33-729(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Any residential building",
+        "A single one-family or single two-family dwelling",
+        "A fourplex or smaller"
+       ],
+       "q": "The dwelling must be:",
+       "why": "ARS 33-729(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "May pursue the borrower's other property",
+        "May not obtain a deficiency judgment",
+        "May garnish wages"
+       ],
+       "q": "Where the statute applies, the lender:",
+       "why": "ARS 33-729(A)."
+      }
+     ],
+     "h": "The anti-deficiency statute (ARS 33-729)",
+     "l": [
+      "In short: no DEFICIENCY JUDGMENT on a qualifying small home bought with purchase money.",
+      "The three tests are PURCHASE MONEY, 2.5 ACRES OR LESS, and a SINGLE ONE- OR TWO-FAMILY DWELLING actually used as such."
+     ],
+     "p": [
+      "Where a MORTGAGE secures the balance of the purchase price, or a loan to pay all or part of the purchase price, of a parcel of REAL PROPERTY OF TWO AND ONE-HALF ACRES OR LESS, LIMITED TO AND USED FOR A SINGLE ONE-FAMILY OR SINGLE TWO-FAMILY DWELLING, the judgment lien in a foreclosure action does NOT extend to the debtor's other property, no general execution may issue, and if the sale proceeds fall short the judgment may not otherwise be enforced."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "30 days",
+        "90 days of the sale",
+        "6 months",
+        "One year"
+       ],
+       "q": "After an Arizona trustee's sale, a deficiency action must be brought within:",
+       "why": "ARS 33-814(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A deed of trust with a power of sale",
+        "A mortgage foreclosed judicially",
+        "A land contract"
+       ],
+       "q": "Arizona lenders normally secure loans with:",
+       "why": "ARS 33-814."
+      }
+     ],
+     "h": "Deeds of trust (ARS 33-814)",
+     "l": [
+      "Arizona lenders normally use a DEED OF TRUST with a trustee's power of sale.",
+      "After a trustee's sale, an action for a DEFICIENCY JUDGMENT must be brought within NINETY DAYS of the date of sale.",
+      "The deficiency is the total owed the beneficiary as of the date of sale, less the property's value as the court determines.",
+      "Subsections F, G and H carry the same anti-deficiency protection for qualifying small homes."
+     ]
+    }
+   ],
+   "summary": "Three items, and they turn on one Arizona rule: on a small home financed with purchase money, the lender takes the house and nothing more.",
+   "topic": "az/foreclosure",
+   "traps": [
+    "2.5 acres, one- or two-family, purchase money. All three must hold.",
+    "90 days after a trustee's sale to sue for a deficiency.",
+    "Anti-deficiency protects the borrower; it does not cancel the debt before sale."
+   ],
+   "vocab": [
+    [
+     "Anti-deficiency statute",
+     "Arizona's bar on deficiency judgments for qualifying homes."
+    ],
+    [
+     "Deficiency judgment",
+     "A judgment for the shortfall after a foreclosure sale."
+    ],
+    [
+     "Deed of trust",
+     "Arizona's usual security instrument, with a trustee's power of sale."
+    ],
+    [
+     "Trustee's sale",
+     "The non-judicial sale under a deed of trust."
+    ]
+   ]
+  },
+  "az/ownership": {
+   "blurb": "Ownership, liens, deeds, HOAs, easements.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Ownership & encumbrances",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A common law title state only",
+        "A dower and curtesy state",
+        "A community property state"
+       ],
+       "q": "Arizona is:",
+       "why": "Property acquired during marriage is generally community."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Community property",
+        "Jointly owned by law",
+        "Separate property"
+       ],
+       "q": "Property one spouse owned before marriage is:",
+       "why": "Separate property keeps its character."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Tenancy in common",
+        "Severalty",
+        "Community property with right of survivorship"
+       ],
+       "q": "Which gives survivorship between spouses in Arizona?",
+       "why": "Arizona recognises the survivorship form."
+      }
+     ],
+     "h": "How Arizonans hold title",
+     "l": [
+      "ARIZONA IS A COMMUNITY PROPERTY STATE: property acquired by either spouse during marriage is generally community property.",
+      "SEPARATE PROPERTY is what a spouse owned before marriage or acquired by gift, devise or descent.",
+      "Arizona also recognises community property WITH RIGHT OF SURVIVORSHIP, joint tenancy with right of survivorship, and tenancy in common.",
+      "The outline also covers LIENS, DEEDS, HOMEOWNER'S ASSOCIATION restrictions, and EASEMENTS AND OTHER ENCUMBRANCES."
+     ]
+    }
+   ],
+   "summary": "Five items. Arizona is a community property state, which changes how married couples take and convey title.",
+   "topic": "az/ownership",
+   "traps": [
+    "Community property is the default for what is acquired during marriage.",
+    "Plain community property does NOT carry survivorship; the survivorship form must be stated."
+   ],
+   "vocab": [
+    [
+     "Community property",
+     "Property acquired by either spouse during marriage."
+    ],
+    [
+     "Separate property",
+     "Owned before marriage, or acquired by gift, devise or descent."
+    ],
+    [
+     "Severalty",
+     "Sole ownership by one person or entity."
+    ],
+    [
+     "Encumbrance",
+     "A claim or restriction on the title."
+    ]
+   ]
+  },
+  "az/regulatory": {
+   "blurb": "The Department, its powers, licensing, and the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "They share $30,000 for that transaction.",
+     "s": "Two buyers are defrauded by the same salesperson in a single transaction.",
+     "t": "Two victims, one deal",
+     "w": [
+      "The per-transaction cap is $30,000 regardless of how many were wronged.",
+      "The per-licensee aggregate is $90,000 across all transactions."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Regulatory framework",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A nine-member commission",
+        "The Attorney General",
+        "The Real Estate Commissioner"
+       ],
+       "q": "Arizona's real estate regulator is headed by:",
+       "why": "ADRE is headed by the Commissioner."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Article II",
+        "Article IX",
+        "Article XXVI"
+       ],
+       "q": "Which part of the Arizona Constitution concerns real estate licensees?",
+       "why": "It is the first heading on the state exam outline."
+      }
+     ],
+     "h": "The Department and the Commissioner",
+     "l": [
+      "The ARIZONA DEPARTMENT OF REAL ESTATE (ADRE) administers title 32, chapter 20, headed by the REAL ESTATE COMMISSIONER.",
+      "The Commissioner issues licences, approves schools and courses, adopts the Commissioner's Rules, and disciplines licensees.",
+      "Arizona real estate law sits in ARS title 32 chapter 20, the Commissioner's Rules, and - distinctively - ARTICLE XXVI of the ARIZONA CONSTITUTION, which lets licensed brokers and salespersons draft the documents incident to a transaction they handle."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$20,000",
+        "$30,000",
+        "$50,000",
+        "$90,000"
+       ],
+       "q": "The Arizona Recovery Fund pays at most, per transaction:",
+       "why": "ARS 32-2186(B)(1)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "$30,000",
+        "$60,000",
+        "$150,000",
+        "$90,000"
+       ],
+       "q": "The aggregate limit for each licensee is:",
+       "why": "ARS 32-2186(B)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No - licensees have no claim",
+        "Yes, like any consumer",
+        "Yes, up to half"
+       ],
+       "q": "A licensee who loses money in a transaction may claim against the fund:",
+       "why": "ARS 32-2186(D)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A corporation",
+        "A partnership",
+        "A natural person only",
+        "Any licensed entity"
+       ],
+       "q": "The fund pays against the licence of:",
+       "why": "ARS 32-2186(E)."
+      }
+     ],
+     "h": "The Real Estate Recovery Fund (ARS 32-2186)",
+     "l": [
+      "The Commissioner maintains the fund for a person aggrieved by an act, representation, transaction or conduct of a licensee.",
+      "The fund's liability may not exceed $30,000 FOR EACH TRANSACTION, regardless of the number of persons aggrieved, licensees, or parcels involved.",
+      "It may not exceed $90,000 FOR EACH LICENSEE. Once orders authorise that aggregate, the fund's liability for that licensee ends.",
+      "A LICENSEE acting as principal or agent has NO CLAIM against the fund - nor do marital communities, corporations, LLCs or partnerships in which the licensee is a principal, member, partner, officer or director, or holds at least a 10 PER CENT direct or indirect interest.",
+      "The fund pays only against the licence of a NATURAL PERSON, never a corporation, partnership or other entity."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Three years",
+        "Five years after the transaction or employment ends",
+        "Seven years"
+       ],
+       "q": "Arizona broker records must be kept for at least:",
+       "why": "ARS 32-2151.01(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prior written notice to the Department of the street address",
+        "Nothing",
+        "Commissioner approval by order"
+       ],
+       "q": "Off-site record storage requires:",
+       "why": "ARS 32-2151.01(A)."
+      }
+     ],
+     "h": "Broker records (ARS 32-2151.01)",
+     "l": [
+      "An employing broker keeps records of ALL transactions handled by or through the broker, and employment records for all current and former employees.",
+      "Records include earnest money receipts confirming the money was handled as the transaction required, closing statements showing receipts, disbursements and adjustments, sales contracts, and employment agreements where applicable.",
+      "Records are kept at least FIVE YEARS after the transaction or employment ends.",
+      "They are kept at the employing broker's principal or licensed branch office in Arizona, or at an off-site Arizona storage location if the broker has given the Department prior WRITTEN notice of the street address.",
+      "Records are open at all reasonable times for inspection by the Commissioner."
+     ]
+    }
+   ],
+   "summary": "Five items on who runs real estate in Arizona and the fund that pays when a licensee wrongs someone. The two numbers to hold are $30,000 and $90,000.",
+   "topic": "az/regulatory",
+   "traps": [
+    "$30,000 per transaction, $90,000 per licensee. Both appear as answer options.",
+    "Licensees - and entities they substantially own - cannot claim on the fund.",
+    "Five years for broker records, and off-site storage needs prior written notice."
+   ],
+   "vocab": [
+    [
+     "ADRE",
+     "Arizona Department of Real Estate."
+    ],
+    [
+     "Commissioner",
+     "The head of ADRE who licenses and disciplines."
+    ],
+    [
+     "Recovery Fund",
+     "The fund paying people wronged by a licensee."
+    ],
+    [
+     "Employing broker",
+     "The broker who holds the records and employs the licensees."
+    ],
+    [
+     "Article XXVI",
+     "The Arizona constitutional provision on licensees drafting documents."
+    ]
+   ]
+  },
+  "az/services": {
+   "blurb": "Escrow, title insurance and lending in an Arizona transaction.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Critical business services",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The buyer's equity",
+        "The lender, up to the loan amount",
+        "The seller"
+       ],
+       "q": "A lender's title policy protects:",
+       "why": "An owner's policy is separate."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Be filed with the Department",
+        "Confirm the money was handled as the transaction required, and be kept in the broker's records",
+        "Be destroyed at closing"
+       ],
+       "q": "Earnest money receipts must:",
+       "why": "ARS 32-2151.01(A)."
+      }
+     ],
+     "h": "Escrow, title and lending",
+     "l": [
+      "ESCROW - a neutral third party holds the money and documents and closes on the agreed terms. In Arizona a licensed escrow agent commonly handles closing.",
+      "TITLE INSURANCE - the owner's policy protects the buyer's interest; the lender's policy protects the lender up to the loan amount.",
+      "LENDING - qualifying the buyer, the loan instruments, and the costs that land on the closing statement.",
+      "A licensee who holds earnest money must handle it as the transaction requires and keep the receipt in the broker's records (ARS 32-2151.01(A))."
+     ]
+    }
+   ],
+   "summary": "Five items on the three outside businesses every Arizona transaction leans on: escrow, title insurance and lending.",
+   "topic": "az/services",
+   "traps": [
+    "Owner's policy and lender's policy are different policies with different beneficiaries.",
+    "The escrow agent is neutral; it is not the buyer's or seller's agent."
+   ],
+   "vocab": [
+    [
+     "Escrow agent",
+     "The neutral party holding funds and documents to closing."
+    ],
+    [
+     "Owner's title policy",
+     "Title insurance protecting the buyer's interest."
+    ],
+    [
+     "Lender's title policy",
+     "Title insurance protecting the lender."
+    ]
+   ]
+  },
+  "az/skill-care": {
+   "blurb": "The licensee's obligation, property taxes, utilities and environment.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Reasonable skill & care",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Commission negotiation",
+        "Office management",
+        "Property taxes, special assessments, and utility and environmental regulation"
+       ],
+       "q": "Reasonable skill and care in Arizona is tied by the outline to:",
+       "why": "Arizona state content outline."
+      }
+     ],
+     "h": "The obligation",
+     "p": [
+      "A licensee must act with REASONABLE SKILL AND CARE. The outline ties that duty to two concrete areas where Arizona practice differs: PROPERTY TAXES AND SPECIAL ASSESSMENTS, and ARIZONA UTILITY AND ENVIRONMENTAL REGULATION."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "1912",
+        "1980",
+        "1968",
+        "1995"
+       ],
+       "q": "The Arizona Groundwater Management Act dates from:",
+       "why": "Named on the Arizona content outlines."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Riparian districts",
+        "Active Management Areas and Irrigation Non-Expansion Areas",
+        "Water courts"
+       ],
+       "q": "The 1980 Act created:",
+       "why": "Named on the Arizona content outlines."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prior appropriation",
+        "Riparian rights",
+        "Absolute ownership"
+       ],
+       "q": "Arizona surface water follows:",
+       "why": "Prior appropriation governs in Arizona."
+      }
+     ],
+     "h": "Arizona water law",
+     "l": [
+      "Arizona water is on the broker outline and matters in practice: the ARIZONA WATER DOCTRINE, and the ARIZONA GROUNDWATER MANAGEMENT ACT 1980.",
+      "The 1980 Act created ACTIVE MANAGEMENT AREAS and IRRIGATION NON-EXPANSION AREAS, recognised GRANDFATHERED RIGHTS, and governs the TRANSFER OF WELL RIGHTS.",
+      "Surface water in Arizona follows PRIOR APPROPRIATION - first in time, first in right - rather than the riparian rule used in wetter states."
+     ]
+    }
+   ],
+   "summary": "Six items. The licensee's obligation of reasonable skill and care, plus two Arizona subjects it reaches: property taxes with special assessments, and utility and environmental regulation.",
+   "topic": "az/skill-care",
+   "traps": [
+    "Arizona is prior appropriation, not riparian.",
+    "AMAs and INAs both come from the 1980 Groundwater Management Act.",
+    "Special assessments are separate from ordinary property taxes."
+   ],
+   "vocab": [
+    [
+     "Prior appropriation",
+     "First in time, first in right; Arizona's surface water rule."
+    ],
+    [
+     "Active Management Area",
+     "An area with groundwater withdrawal controls."
+    ],
+    [
+     "Irrigation Non-Expansion Area",
+     "An area where irrigated acreage may not expand."
+    ],
+    [
+     "Grandfathered right",
+     "A groundwater right recognised from before the 1980 Act."
+    ],
+    [
+     "Special assessment",
+     "A charge for a local improvement benefiting the property."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Employment agreements, purchase contracts, closing and costs.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "az/contracts",
+   "label": "Contracts",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Types, creation, Arizona case law on clients and customers, termination.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "az/agency",
+   "label": "Arizona agency",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Disclosure, conflicts, compensation, timing, cross-sale disputes.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "az/duties",
+   "label": "Licensee duties & obligations",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Professional competency, new homes, property management, timeshare, land.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "az/competency",
+   "label": "Competencies & property types",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The licensee's obligation, property taxes, utilities and environment.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "az/skill-care",
+   "label": "Reasonable skill & care",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Department, its powers, licensing, and the Recovery Fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "az/regulatory",
+   "label": "Regulatory framework",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Consumer Fraud Act, statute of frauds, fair housing, homestead.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "az/consumer",
+   "label": "Consumer protection laws",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Licensee advertising, promotions, development ads, supervision.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "az/advertising",
+   "label": "Advertising",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Escrow, title insurance and lending in an Arizona transaction.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "az/services",
+   "label": "Critical business services",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Ownership, liens, deeds, HOAs, easements.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "az/ownership",
+   "label": "Ownership & encumbrances",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The Arizona anti-deficiency statute and the foreclosure process.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "az/foreclosure",
+   "label": "Foreclosure & short sale",
+   "portion": "georgia"
+  }
+ ]
+}
