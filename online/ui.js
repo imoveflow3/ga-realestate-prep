@@ -993,30 +993,35 @@ function renderToday(){
   d1.appendChild(ring);
   g.appendChild(d1);
 
-  function portionMetric(label, pr){
+  function portionMetric(label, pr, portion){
+    var mark = portion ? passFor(portion) : PASS;
+    var markPct = Math.round(mark * 100) + '%';
     var d = el('div', 'metric');
     d.appendChild(el('div', 'eyebrow', label));
     d.appendChild(el('div', 'stat' + (pr.current === null ? ''
-      : (pr.current >= PASS ? ' good' : ' bad')),
+      : (pr.current >= mark ? ' good' : ' bad')),
       pr.current === null ? '—' : pct(pr.current)));
     d.appendChild(el('div', 'muted', pr.current === null ? 'no data yet'
-      : (pr.current >= PASS ? 'clearing ' + PASS_PCT : 'below ' + PASS_PCT)));
+      : (pr.current >= mark ? 'clearing ' + markPct : 'below ' + markPct)));
     return d;
   }
   if (SINGLE){
     g.appendChild(portionMetric('Whole exam', r));
   } else {
-    g.appendChild(portionMetric('National', r.national));
-    g.appendChild(portionMetric(STATE.name, r.georgia));
+    g.appendChild(portionMetric('National', r.national, 'national'));
+    g.appendChild(portionMetric(STATE.name, r.georgia, 'georgia'));
   }
   head.appendChild(g);
 
   if (!SINGLE && r.national.current !== null && r.georgia.current !== null &&
-      (r.national.current < PASS) !== (r.georgia.current < PASS)){
+      (r.national.current < passFor('national')) !== (r.georgia.current < passFor('georgia'))){
     var warn = el('div', 'callout trap');
     warn.style.cssText = 'font-family:"Barlow",sans-serif;font-size:.92rem;line-height:1.55';
-    warn.textContent = 'The two portions are scored separately and you must clear ' + PASS_PCT + ' ' +
-      'on each. Your ' + (r.blocker === 'georgia' ? STATE.name : 'National') +
+    warn.textContent = 'The two portions are scored separately and you must clear ' +
+      (SPLIT_PASS ? passPct('national') + ' on National and ' + passPct('georgia') +
+                    ' on ' + STATE.name
+                  : PASS_PCT + ' on each') +
+      '. Your ' + (r.blocker === 'georgia' ? STATE.name : 'National') +
       ' portion is below the mark, so a healthy average does not mean a pass.';
     head.appendChild(warn);
   }
@@ -2464,6 +2469,9 @@ function standingCard(box){
     : SINGLE
     ? STATE.name + ' sits one exam of ' + examTotal() + ' questions; ' +
       PASS_PCT + ' to pass'
+    : SPLIT_PASS
+    ? STATE.name + ' needs ' + passPct('national') + ' on National and ' +
+      passPct('georgia') + ' on ' + STATE.name + ', separately'
     : STATE.name + ' needs ' + PASS_PCT + ' on each portion, separately'));
   /* Saying "you need 70%" of a state that publishes no number would be an
      invention, so the state's own position is printed instead. */
@@ -2471,8 +2479,8 @@ function standingCard(box){
 
   var grid = el('div', 'standgrid' + (SINGLE ? ' one' : ''));
   (SINGLE ? [['Whole exam', r, examTotal()]]
-          : [['National', r.national, examScored('national')],
-             [STATE.name,  r.georgia,  examScored('georgia')]]).forEach(function(row){
+          : [['National', r.national, examScored('national'), 'national'],
+             [STATE.name,  r.georgia,  examScored('georgia'), 'georgia']]).forEach(function(row){
     var name = row[0], p = row[1], onExam = row[2];
     var cell = el('div', 'standcell');
     var top = el('div', 'sc-top');
@@ -2482,8 +2490,10 @@ function standingCard(box){
     cell.appendChild(top);
 
     var val = (p && p.current !== null) ? p.current : null;
+    var mark = SINGLE ? PASS : passFor(row[3] || 'national');
+    var markPct = Math.round(mark * 100) + '%';
     var fig = el('div', 'sc-val' + (val === null ? ' none'
-                 : (val >= PASS ? ' ok' : ' low')));
+                 : (val >= mark ? ' ok' : ' low')));
     fig.textContent = (val === null) ? 'no data' : Math.round(val * 100) + '%';
     cell.appendChild(fig);
 
@@ -2491,19 +2501,19 @@ function standingCard(box){
        rather than a number to hold in your head. */
     var track = el('div', 'sc-track');
     var fill = el('div', 'sc-fill ' + (val === null ? 'none'
-                 : (val >= PASS ? 'ok' : 'low')));
+                 : (val >= mark ? 'ok' : 'low')));
     fill.style.width = Math.round((val || 0) * 100) + '%';
     track.appendChild(fill);
-    var mark = el('div', 'sc-mark');
-    mark.title = 'The ' + PASS_PCT + ' pass mark';
-    track.appendChild(mark);
+    var markEl = el('div', 'sc-mark');
+    markEl.title = 'The ' + markPct + ' pass mark';
+    track.appendChild(markEl);
     cell.appendChild(track);
 
     cell.appendChild(el('div', 'sc-note',
       val === null ? (SINGLE ? 'Nothing answered yet.'
                              : 'No questions answered on this portion yet.')
-      : (val >= PASS ? 'Clearing the pass mark on recent questions.'
-                     : 'Short of ' + PASS_PCT + ' by ' + Math.round((PASS - val) * 100) +
+      : (val >= mark ? 'Clearing the pass mark on recent questions.'
+                     : 'Short of ' + markPct + ' by ' + Math.round((mark - val) * 100) +
                        ' points on recent questions.')));
     grid.appendChild(cell);
   });
@@ -3615,8 +3625,10 @@ function welcomeIntro(v){
       PASS_PCT + ' overall. It is split below by how the material is studied, ' +
       'not by how it is scored.'
     : STATE.name + ' scores the two portions separately and you must clear ' +
-      PASS_PCT + ' on each. A strong average will not save a weak half, so this ' +
-      'app tracks them apart.');
+      (SPLIT_PASS ? passPct('national') + ' on National and ' + passPct('georgia') +
+                    ' on ' + STATE.name
+                  : PASS_PCT + ' on each') +
+      '. A strong average will not save a weak half, so this app tracks them apart.');
   var bp = el('div', 'blueprint');
   [['national', SINGLE ? 'General practice' : 'National portion', DATA.exam.national],
    ['georgia', STATE.name + (SINGLE ? ' law' : ' portion'), DATA.exam.georgia]].forEach(function(r){

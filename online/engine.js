@@ -30,6 +30,17 @@ var STATE = (function(){
 });
 var PASS = STATE.pass;
 var PASS_PCT = Math.round(PASS * 100) + '%';
+/* A few states set a different mark on each portion -- Illinois wants 70%
+   on the national paper and 75% on its own. A pack says so by putting
+   `pass` on a portion; everything else falls back to the state's figure. */
+function passFor(portion){
+  var p = DATA.portions[portion];
+  return (p && typeof p.pass === 'number') ? p.pass : PASS;
+}
+function passPct(portion){ return Math.round(passFor(portion) * 100) + '%'; }
+var SPLIT_PASS = ['national', 'georgia'].some(function(p){
+  return passFor(p) !== PASS;
+});
 /* Most states set two papers and score them apart. Six write one exam of
    their own instead, and for those the app must stop talking about portions
    being scored separately. The content is still kept in two banks -- state
@@ -49,8 +60,9 @@ function applyStatePack(pack){
     if (t.portion === 'national') t.exam_questions = Math.max(1, Math.round(t.exam_questions * scale));
   };
   DATA.topics.forEach(rescale);
-  nat.scored = pack.portions.national.scored;
-  nat.minutes = pack.portions.national.minutes;
+  /* Copy every field the pack gives, not just the two that were needed
+     first: a portion may also carry its own `pass`. */
+  for (var nf in pack.portions.national) nat[nf] = pack.portions.national[nf];
   for (var f in pack.portions.georgia) st[f] = pack.portions.georgia[f];
   if (DATA.portions.comprehensive)
     DATA.portions.comprehensive.blurb = 'Cross-cutting drill: vocabulary, judgment calls, and closing ' +
@@ -991,7 +1003,7 @@ function notebookDue(d){
    healthy blended average can still hide a failing state portion. Readiness is
    therefore computed per portion as well as overall, and the overall figure is
    never allowed to look better than the weaker half. */
-function readinessFor(d, portionKeys){
+function readinessFor(d, portionKeys, mark){
   var keys = {};
   portionKeys.forEach(function(p){
     portionTopics(p).forEach(function(k){ keys[k] = 1; });
@@ -1035,14 +1047,15 @@ function readinessFor(d, portionKeys){
   out.perDay = slope;
   // a straight line through a handful of quizzes should not claim certainty
   out.projected = Math.max(0.05, Math.min(0.95, proj));
-  out.onTrack = out.projected >= PASS;
+  out.onTrack = out.projected >= (typeof mark === 'number' ? mark : PASS);
   return out;
 }
 
 function readiness(d){
-  var nat = readinessFor(d, ['national']);
-  var ga = readinessFor(d, ['georgia']);
-  var both = readinessFor(d, ['national', 'georgia']);
+  var nat = readinessFor(d, ['national'], passFor('national'));
+  var ga = readinessFor(d, ['georgia'], passFor('georgia'));
+  var both = readinessFor(d, ['national', 'georgia'],
+                          Math.max(passFor('national'), passFor('georgia')));
   both.national = nat;
   both.georgia = ga;
   /* A state like Florida sits one exam with one mark. There is no weaker
@@ -1054,14 +1067,22 @@ function readiness(d){
     both.blocker = null;
     return both;
   }
-  // you pass only if BOTH portions clear the mark, so the weaker one governs
+  /* You pass only if BOTH portions clear the mark, so the weaker one
+     governs -- and where the marks differ, "weaker" means further below
+     its own mark, not simply the lower percentage. */
+  var gap = function(r, p){
+    return r.current === null ? null : r.current - passFor(p);
+  };
+  var gaps = [gap(nat, 'national'), gap(ga, 'georgia')]
+               .filter(function(x){ return x !== null; });
   var weakestCurrent = [nat.current, ga.current].filter(function(x){ return x !== null; });
   var weakestProj = [nat.projected, ga.projected].filter(function(x){ return x !== null; });
   both.weakest = weakestCurrent.length ? Math.min.apply(null, weakestCurrent) : null;
   both.weakestProjected = weakestProj.length ? Math.min.apply(null, weakestProj) : null;
+  both.worstGap = gaps.length ? Math.min.apply(null, gaps) : null;
   both.bothOnTrack = (nat.onTrack === true) && (ga.onTrack === true);
   both.blocker = (nat.current !== null && ga.current !== null)
-    ? (nat.current < ga.current ? 'national' : 'georgia') : null;
+    ? (gap(nat, 'national') < gap(ga, 'georgia') ? 'national' : 'georgia') : null;
   return both;
 }
 
