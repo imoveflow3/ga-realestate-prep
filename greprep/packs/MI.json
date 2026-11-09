@@ -1,0 +1,2996 @@
+{
+ "abbr": "MI",
+ "bank": [
+  {
+   "answer": 3,
+   "choices": [
+    "5 business days after the offer",
+    "24 hours of receipt",
+    "10 days of closing",
+    "2 banking days after notice that all parties accepted the offer"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 1,
+   "explain": "MCL 339.2512(k)(v).",
+   "id": "mi-008c9717",
+   "portion": "georgia",
+   "q": "A Michigan broker must deposit money belonging to others into the trust account within:",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Pay or deliver it to the employing broker on receipt",
+    "Deposit it in their own account",
+    "Hold it until closing",
+    "Give it to the seller"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 1,
+   "explain": "MCL 339.2512(k)(ii).",
+   "id": "mi-cde45d52",
+   "portion": "georgia",
+   "q": "A salesperson who receives a deposit must:",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Nothing at all",
+    "Not more than $2,000.00",
+    "$100",
+    "Up to one month's expenses"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(k)(iv), for bank charges and minimum balances.",
+   "id": "mi-40cc68e8",
+   "portion": "georgia",
+   "q": "How much of its own money may a broker keep in each trust account?",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Be interest bearing",
+    "Be held at a national bank only",
+    "Require the seller's signature",
+    "Designate the broker as trustee and allow withdrawal without previous notice"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(k)(vi).",
+   "id": "mi-98c6a577",
+   "portion": "georgia",
+   "q": "A Michigan broker's custodial trust account must:",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Allowed for up to 30 days",
+    "Allowed with written consent",
+    "Commingling, and prohibited"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(k)(iii).",
+   "id": "mi-573d6d31",
+   "portion": "georgia",
+   "q": "Putting advance payments belonging to others into the broker's business account is:",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "5 days",
+    "Immediately on signing",
+    "2 banking days after notice that all parties accepted"
+   ],
+   "concept": "Michigan trust money",
+   "difficulty": 3,
+   "explain": "MCL 339.2512(k)(vii).",
+   "id": "mi-29b2d0d1",
+   "portion": "georgia",
+   "q": "Where the purchase agreement names an escrowee other than the broker, a licensee holding the deposit must deliver it to that escrowee within:",
+   "sub": "mi/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Anywhere on the advertisement",
+    "In the smallest legible type",
+    "Only on request",
+    "In equal or greater type size than the salesperson's name"
+   ],
+   "concept": "Michigan advertising",
+   "difficulty": 1,
+   "explain": "MCL 339.2512e(3)(b).",
+   "id": "mi-3e0b7e04",
+   "portion": "georgia",
+   "q": "In advertising that names a salesperson, the employing broker's business name must appear:",
+   "sub": "mi/activities|Advertising",
+   "subtopic": "Advertising",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The broker consents in writing",
+    "It is a rental property",
+    "The property is the salesperson's principal residence",
+    "The listing has expired"
+   ],
+   "concept": "Michigan advertising",
+   "difficulty": 2,
+   "explain": "MCL 339.2512e(4).",
+   "id": "mi-0ddc34a9",
+   "portion": "georgia",
+   "q": "A salesperson may advertise a property for sale under their own name only if:",
+   "sub": "mi/activities|Advertising",
+   "subtopic": "Advertising",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licence number and expiry date",
+    "The broker's telephone number or street address, and a statement that the advertiser is a real estate broker",
+    "The seller's name"
+   ],
+   "concept": "Michigan advertising",
+   "difficulty": 2,
+   "explain": "MCL 339.2512e(1).",
+   "id": "mi-46508a10",
+   "portion": "georgia",
+   "q": "A broker's advertisement must include the broker's name and:",
+   "sub": "mi/activities|Advertising",
+   "subtopic": "Advertising",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At the next renewal",
+    "Within 90 days",
+    "Only if asked",
+    "With the licence application or within 30 days of adopting it, whichever is earlier"
+   ],
+   "concept": "Michigan advertising",
+   "difficulty": 3,
+   "explain": "MCL 339.2512e(5).",
+   "id": "mi-cb309861",
+   "portion": "georgia",
+   "q": "A broker that adopts an assumed name must notify the department:",
+   "sub": "mi/activities|Advertising",
+   "subtopic": "Advertising",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "No; an action may not be brought on that ground",
+    "Yes, always",
+    "Yes, if the buyer asks"
+   ],
+   "concept": "Michigan stigma",
+   "difficulty": 1,
+   "explain": "MCL 339.2518(a); disclosing it would be unlawful discrimination.",
+   "id": "mi-6a6863b9",
+   "portion": "georgia",
+   "q": "A Michigan licensee may be sued for failing to disclose that a prior occupant had a disability:",
+   "sub": "mi/activities|Stigma",
+   "subtopic": "Stigma",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Happened more than 5 years ago",
+    "Had no material effect on the condition of the property",
+    "Was never reported"
+   ],
+   "concept": "Michigan stigma",
+   "difficulty": 2,
+   "explain": "MCL 339.2518(b).",
+   "id": "mi-9eefb0e3",
+   "portion": "georgia",
+   "q": "The statute bars an action for not disclosing a homicide at the property where the event:",
+   "sub": "mi/activities|Stigma",
+   "subtopic": "Stigma",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must search and report it",
+    "Cannot be sued for failing to disclose it; the compilation is public",
+    "Must warn every buyer"
+   ],
+   "concept": "Michigan stigma",
+   "difficulty": 2,
+   "explain": "MCL 339.2518(c).",
+   "id": "mi-2fd9b125",
+   "portion": "georgia",
+   "q": "On sex offender registry information, a Michigan licensee:",
+   "sub": "mi/activities|Stigma",
+   "subtopic": "Stigma",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed under $100",
+    "Prohibited",
+    "Allowed with the broker's consent",
+    "Allowed once per transaction"
+   ],
+   "concept": "Michigan inducements",
+   "difficulty": 1,
+   "explain": "MCL 339.2512(h).",
+   "id": "mi-eb55d840",
+   "portion": "georgia",
+   "q": "Paying an unlicensed person for the name of a potential buyer is:",
+   "sub": "mi/activities|Inducements",
+   "subtopic": "Inducements",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Payment for a commercially prepared list of names",
+    "A finder's fee to a neighbour",
+    "A gift card for a referral"
+   ],
+   "concept": "Michigan inducements",
+   "difficulty": 3,
+   "explain": "MCL 339.2512(h) excludes it expressly.",
+   "id": "mi-0fba9353",
+   "portion": "georgia",
+   "q": "Which payment is NOT caught by the fee-sharing prohibition?",
+   "sub": "mi/activities|Inducements",
+   "subtopic": "Inducements",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "5 days",
+    "30 days",
+    "10 business days",
+    "At the next renewal"
+   ],
+   "concept": "Michigan records",
+   "difficulty": 2,
+   "explain": "MCL 339.2507(1); failing to do so violates MCL 339.2512(f).",
+   "id": "mi-32060b15",
+   "portion": "georgia",
+   "q": "A broker must deliver or mail a discharged salesperson's licence to the department within:",
+   "sub": "mi/activities|Records",
+   "subtopic": "Records",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "May recover in quantum meruit",
+    "May sue in small claims only",
+    "Cannot maintain the action; they must allege and prove they were licensed"
+   ],
+   "concept": "Michigan records",
+   "difficulty": 2,
+   "explain": "MCL 339.2512a.",
+   "id": "mi-3afb1318",
+   "portion": "georgia",
+   "q": "An unlicensed person suing for a commission in a Michigan court:",
+   "sub": "mi/activities|Records",
+   "subtopic": "Records",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Held in the sales trust account",
+    "Paid to the owner weekly",
+    "Kept in property management accounts separate from all other accounts"
+   ],
+   "concept": "Michigan records",
+   "difficulty": 2,
+   "explain": "MCL 339.2512c(2).",
+   "id": "mi-e60727e7",
+   "portion": "georgia",
+   "q": "Money a broker holds as a property manager must be:",
+   "sub": "mi/activities|Records",
+   "subtopic": "Records",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is acting as a transaction coordinator",
+    "Needs only an oral disclosure",
+    "Commits prohibited conduct"
+   ],
+   "concept": "Michigan discipline",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(a).",
+   "id": "mi-b570ed4c",
+   "portion": "georgia",
+   "q": "A licensee acting for more than one party in a transaction without the parties' knowledge:",
+   "sub": "mi/activities|Discipline",
+   "subtopic": "Discipline",
+   "topic": "mi/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Marital status",
+    "Race",
+    "Religion",
+    "National origin"
+   ],
+   "concept": "Michigan fair housing",
+   "difficulty": 1,
+   "explain": "MCL 37.2502(1), the Elliott-Larsen Civil Rights Act.",
+   "id": "mi-a29d7250",
+   "portion": "georgia",
+   "q": "Which is protected in a Michigan real estate transaction but not by the federal Fair Housing Act?",
+   "sub": "mi/additional|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Age and gender identity or expression",
+    "Credit score",
+    "Occupation",
+    "Length of employment"
+   ],
+   "concept": "Michigan fair housing",
+   "difficulty": 1,
+   "explain": "MCL 37.2502(1).",
+   "id": "mi-279cf716",
+   "portion": "georgia",
+   "q": "Elliott-Larsen's real estate list also includes:",
+   "sub": "mi/additional|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Elliott-Larsen alone",
+    "The Occupational Code",
+    "The Persons with Disabilities Civil Rights Act, 1976 PA 220",
+    "The Truth in Renting Act"
+   ],
+   "concept": "Michigan fair housing",
+   "difficulty": 2,
+   "explain": "Elliott-Larsen's housing list does not name disability.",
+   "id": "mi-4af917f1",
+   "portion": "georgia",
+   "q": "Disability discrimination in Michigan housing is governed by:",
+   "sub": "mi/additional|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Fewer than 20 units",
+    "Any owner-occupied duplex",
+    "Fewer than 5 rental units in the state"
+   ],
+   "concept": "Michigan fair housing",
+   "difficulty": 2,
+   "explain": "MCL 37.2502(4).",
+   "id": "mi-47eb6ffa",
+   "portion": "georgia",
+   "q": "Michigan's source-of-income protection does not apply to a landlord of:",
+   "sub": "mi/additional|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only the applicant",
+    "That individual or anyone residing with that individual",
+    "Only the named tenant"
+   ],
+   "concept": "Michigan fair housing",
+   "difficulty": 3,
+   "explain": "MCL 37.2502(1).",
+   "id": "mi-d55b66e6",
+   "portion": "georgia",
+   "q": "Elliott-Larsen protects a person against discrimination based on the characteristics of:",
+   "sub": "mi/additional|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any real estate",
+    "Commercial property only",
+    "New construction only",
+    "Not less than 1 and not more than 4 residential dwelling units"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 1,
+   "explain": "MCL 565.952.",
+   "id": "mi-fb6f6c6d",
+   "portion": "georgia",
+   "q": "The Michigan seller's disclosure statement applies to real estate of:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Before the seller executes a binding purchase agreement",
+    "At closing",
+    "Within 10 days of the offer",
+    "On request"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 1,
+   "explain": "MCL 565.954(1)(a).",
+   "id": "mi-86b808b0",
+   "portion": "georgia",
+   "q": "The seller must deliver the disclosure statement:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "24 hours",
+    "72 hours",
+    "120 hours",
+    "10 days"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 2,
+   "explain": "MCL 565.954(3)(a).",
+   "id": "mi-54a6adf8",
+   "portion": "georgia",
+   "q": "A disclosure statement handed over in person after the agreement was signed lets the buyer terminate within:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "72 hours",
+    "48 hours",
+    "5 business days",
+    "120 hours"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 2,
+   "explain": "MCL 565.954(3)(b).",
+   "id": "mi-1ff76ea6",
+   "portion": "georgia",
+   "q": "Delivered instead by registered mail, the termination window is:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "After 30 days",
+    "On transfer of the property by deed or installment sales contract",
+    "At the inspection deadline"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 3,
+   "explain": "MCL 565.954(4).",
+   "id": "mi-52779368",
+   "portion": "georgia",
+   "q": "The buyer's right to terminate for a late disclosure expires:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A warranty of condition",
+    "An inspection report",
+    "A representation of the seller's agent",
+    "A disclosure of what the seller knows, and not a warranty"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 2,
+   "explain": "MCL 565.957(1).",
+   "id": "mi-5deede53",
+   "portion": "georgia",
+   "q": "The seller's disclosure statement is:",
+   "sub": "mi/additional|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A separate written instrument attached to the conveyance stating the road is private and need not be maintained by the county road commissioners",
+    "A note in the listing",
+    "An oral warning at closing",
+    "Nothing special"
+   ],
+   "concept": "Michigan land division",
+   "difficulty": 1,
+   "explain": "MCL 560.261.",
+   "id": "mi-5e09cc06",
+   "portion": "georgia",
+   "q": "Selling a parcel of unplatted land in an unincorporated area abutting a road not accepted as public requires:",
+   "sub": "mi/additional|Land division",
+   "subtopic": "Land division",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Void from the start",
+    "Voidable at the purchaser's option",
+    "Valid in all respects",
+    "A felony"
+   ],
+   "concept": "Michigan land division",
+   "difficulty": 2,
+   "explain": "MCL 560.261.",
+   "id": "mi-e4f9d595",
+   "portion": "georgia",
+   "q": "A sale made without the required private road notice is:",
+   "sub": "mi/additional|Land division",
+   "subtopic": "Land division",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A flood zone notice",
+    "A lead paint warning",
+    "The Michigan Right to Farm Act statement",
+    "A mineral rights waiver"
+   ],
+   "concept": "Michigan land division",
+   "difficulty": 2,
+   "explain": "MCL 560.109(4), added by 1996 PA 591.",
+   "id": "mi-d3a6afac",
+   "portion": "georgia",
+   "q": "A deed for unplatted land executed after 31 March 1997 must contain:",
+   "sub": "mi/additional|Land division",
+   "subtopic": "Land division",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "They stay with the remainder of the parent tract retained by the grantor",
+    "They pass to the grantee",
+    "They are extinguished"
+   ],
+   "concept": "Michigan land division",
+   "difficulty": 3,
+   "explain": "MCL 560.109(3).",
+   "id": "mi-2b829b22",
+   "portion": "georgia",
+   "q": "If a deed for unplatted land says nothing about division rights:",
+   "sub": "mi/additional|Land division",
+   "subtopic": "Land division",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$1.10 per $1,000",
+    "0.75% of the sale price",
+    "$7.50 per $1,000",
+    "$3.75 for each $500 or fraction of $500 of value"
+   ],
+   "concept": "Michigan transfer tax",
+   "difficulty": 1,
+   "explain": "MCL 207.525(1).",
+   "id": "mi-da976c69",
+   "portion": "georgia",
+   "q": "Michigan's state real estate transfer tax rate is:",
+   "sub": "mi/additional|Transfer tax",
+   "subtopic": "Transfer tax",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer",
+    "The seller or grantor",
+    "The lender",
+    "The listing broker"
+   ],
+   "concept": "Michigan transfer tax",
+   "difficulty": 1,
+   "explain": "MCL 207.523(2).",
+   "id": "mi-63c44fd9",
+   "portion": "georgia",
+   "q": "Who is liable for the state real estate transfer tax?",
+   "sub": "mi/additional|Transfer tax",
+   "subtopic": "Transfer tax",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "15 days after delivery of the instrument",
+    "30 days after closing",
+    "The end of the month"
+   ],
+   "concept": "Michigan transfer tax",
+   "difficulty": 2,
+   "explain": "MCL 207.523(3).",
+   "id": "mi-9d281a59",
+   "portion": "georgia",
+   "q": "The state transfer tax is paid to the county treasurer not later than:",
+   "sub": "mi/additional|Transfer tax",
+   "subtopic": "Transfer tax",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "$900",
+    "$1,800",
+    "$2,400",
+    "$480"
+   ],
+   "concept": "Michigan transfer tax",
+   "difficulty": 3,
+   "explain": "$240,000 / $500 = 480; 480 x $3.75 = $1,800 (MCL 207.525).",
+   "id": "mi-a6305e6f",
+   "portion": "georgia",
+   "q": "The state transfer tax on a $240,000 sale is:",
+   "sub": "mi/additional|Transfer tax",
+   "subtopic": "Transfer tax",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "3 business days",
+    "15 days",
+    "72 hours",
+    "9 business days after receiving the required documents"
+   ],
+   "concept": "Michigan condominiums",
+   "difficulty": 1,
+   "explain": "MCL 559.184(2); the day of receipt counts if it is a business day.",
+   "id": "mi-846b1f3f",
+   "portion": "georgia",
+   "q": "A purchaser of a residential condominium unit may withdraw from a signed purchase agreement within:",
+   "sub": "mi/additional|Condominiums",
+   "subtopic": "Condominiums",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "30 days",
+    "10 days",
+    "3 business days",
+    "At the developer's convenience"
+   ],
+   "concept": "Michigan condominiums",
+   "difficulty": 2,
+   "explain": "MCL 559.184(4)(a).",
+   "id": "mi-c96c6983",
+   "portion": "georgia",
+   "q": "Funds must be returned to a withdrawing condominium purchaser within:",
+   "sub": "mi/additional|Condominiums",
+   "subtopic": "Condominiums",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$10,000",
+    "$500",
+    "$25,000",
+    "$2,500.00"
+   ],
+   "concept": "Michigan condominiums",
+   "difficulty": 3,
+   "explain": "MCL 559.184(4)(d).",
+   "id": "mi-d4fa3437",
+   "portion": "georgia",
+   "q": "A Michigan condominium purchase agreement must offer binding arbitration, at the purchaser's option, for claims under:",
+   "sub": "mi/additional|Condominiums",
+   "subtopic": "Condominiums",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One month's rent",
+    "2 months' rent",
+    "Whatever the lease says",
+    "1 1/2 months' rent"
+   ],
+   "concept": "Michigan landlord tenant",
+   "difficulty": 1,
+   "explain": "MCL 554.602.",
+   "id": "mi-ba566877",
+   "portion": "georgia",
+   "q": "A Michigan security deposit may not exceed:",
+   "sub": "mi/additional|Landlord tenant",
+   "subtopic": "Landlord tenant",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "14 days",
+    "45 days",
+    "7 days",
+    "30 days"
+   ],
+   "concept": "Michigan landlord tenant",
+   "difficulty": 2,
+   "explain": "MCL 554.609(1).",
+   "id": "mi-ba1b5c16",
+   "portion": "georgia",
+   "q": "After a tenancy ends the landlord must mail an itemised notice of damages within:",
+   "sub": "mi/additional|Landlord tenant",
+   "subtopic": "Landlord tenant",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "14 days",
+    "30 days",
+    "4 days after moving out",
+    "Before moving out"
+   ],
+   "concept": "Michigan landlord tenant",
+   "difficulty": 2,
+   "explain": "MCL 554.603.",
+   "id": "mi-dae7a7d3",
+   "portion": "georgia",
+   "q": "The tenant must give the landlord a forwarding address within:",
+   "sub": "mi/additional|Landlord tenant",
+   "subtopic": "Landlord tenant",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Enforceable if initialled",
+    "Valid for the first year",
+    "Void",
+    "Enforceable against a commercial tenant"
+   ],
+   "concept": "Michigan landlord tenant",
+   "difficulty": 2,
+   "explain": "MCL 554.633(1)(b) and (3), the Truth in Renting Act.",
+   "id": "mi-67106fd6",
+   "portion": "georgia",
+   "q": "A lease clause waiving the tenant's security deposit rights is:",
+   "sub": "mi/additional|Landlord tenant",
+   "subtopic": "Landlord tenant",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One broker setting a high fee",
+    "A contract, combination or conspiracy between 2 or more persons",
+    "A written agreement only",
+    "A government finding"
+   ],
+   "concept": "Michigan antitrust",
+   "difficulty": 1,
+   "explain": "MCL 445.772.",
+   "id": "mi-600acfbd",
+   "portion": "georgia",
+   "q": "Under the Michigan Antitrust Reform Act a restraint of trade requires:",
+   "sub": "mi/additional|Antitrust",
+   "subtopic": "Antitrust",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A private mortgage insurer",
+    "A trade association of brokers",
+    "A public body corporate and politic created by 1966 PA 346",
+    "A federal agency"
+   ],
+   "concept": "Michigan mshda",
+   "difficulty": 2,
+   "explain": "MCL 125.1421(1).",
+   "id": "mi-3728c802",
+   "portion": "georgia",
+   "q": "MSHDA is:",
+   "sub": "mi/additional|MSHDA",
+   "subtopic": "MSHDA",
+   "topic": "mi/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "90 clock hours",
+    "60 clock hours",
+    "24 clock hours",
+    "40 clock hours"
+   ],
+   "concept": "Michigan education",
+   "difficulty": 1,
+   "explain": "MCL 339.2504(2).",
+   "id": "mi-59aced67",
+   "portion": "georgia",
+   "q": "Prelicensure education for a Michigan salesperson is:",
+   "sub": "mi/licensing|Education",
+   "subtopic": "Education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At least 9",
+    "At least 4",
+    "At least 2",
+    "None"
+   ],
+   "concept": "Michigan education",
+   "difficulty": 1,
+   "explain": "MCL 339.2504(2).",
+   "id": "mi-7352edea",
+   "portion": "georgia",
+   "q": "How many of those hours must cover civil rights law and equal opportunity in housing?",
+   "sub": "mi/licensing|Education",
+   "subtopic": "Education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "40 clock hours",
+    "120 clock hours",
+    "60 clock hours",
+    "90 clock hours, including at least 9 on civil rights and fair housing"
+   ],
+   "concept": "Michigan education",
+   "difficulty": 2,
+   "explain": "MCL 339.2504(1)(b).",
+   "id": "mi-9799beac",
+   "portion": "georgia",
+   "q": "A Michigan broker applicant must complete:",
+   "sub": "mi/licensing|Education",
+   "subtopic": "Education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "5 years",
+    "12 months",
+    "The 36 months preceding the application",
+    "No time limit"
+   ],
+   "concept": "Michigan education",
+   "difficulty": 2,
+   "explain": "MCL 339.2504(2).",
+   "id": "mi-c8b3ef25",
+   "portion": "georgia",
+   "q": "The prelicensure hours must be completed within:",
+   "sub": "mi/licensing|Education",
+   "subtopic": "Education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A full 60 minutes always",
+    "50 to 60 minutes of actual classroom instruction, not counting outside assignments",
+    "Any session of any length"
+   ],
+   "concept": "Michigan education",
+   "difficulty": 3,
+   "explain": "MCL 339.2501(d).",
+   "id": "mi-a81f5f6e",
+   "portion": "georgia",
+   "q": "A clock hour means:",
+   "sub": "mi/licensing|Education",
+   "subtopic": "Education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "18 clock hours per licence cycle",
+    "24 hours",
+    "12 hours",
+    "6 hours"
+   ],
+   "concept": "Michigan continuing education",
+   "difficulty": 1,
+   "explain": "MCL 339.2504a(1)(b), being 6 hours for each year of the cycle.",
+   "id": "mi-7b682d08",
+   "portion": "georgia",
+   "q": "Continuing education in Michigan is:",
+   "sub": "mi/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "2 hours on law, rules and court cases and 1 hour on fair housing",
+    "6 hours of fair housing",
+    "2 hours of ethics only",
+    "Nothing specific"
+   ],
+   "concept": "Michigan continuing education",
+   "difficulty": 2,
+   "explain": "MCL 339.2504a(2)(a).",
+   "id": "mi-59ea7d49",
+   "portion": "georgia",
+   "q": "In each year of the cycle a licensee must take at least:",
+   "sub": "mi/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "1 year",
+    "7 years",
+    "Not less than 4 years",
+    "Until renewal"
+   ],
+   "concept": "Michigan continuing education",
+   "difficulty": 2,
+   "explain": "MCL 339.2504a(3).",
+   "id": "mi-6bbfa27a",
+   "portion": "georgia",
+   "q": "Continuing education records must be retained for:",
+   "sub": "mi/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Half credit",
+    "No additional hours",
+    "Full credit again"
+   ],
+   "concept": "Michigan continuing education",
+   "difficulty": 3,
+   "explain": "MCL 339.2504a(2)(e).",
+   "id": "mi-531aab02",
+   "portion": "georgia",
+   "q": "Repeating an eligible continuing education course within a cycle earns:",
+   "sub": "mi/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "17",
+    "19",
+    "21",
+    "18"
+   ],
+   "concept": "Michigan eligibility",
+   "difficulty": 1,
+   "explain": "MCL 339.2502a(1).",
+   "id": "mi-876909b3",
+   "portion": "georgia",
+   "q": "The minimum age for a Michigan real estate licence is:",
+   "sub": "mi/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Two licensed references",
+    "The real estate broker who will employ the applicant",
+    "A notary public only",
+    "The applicant alone"
+   ],
+   "concept": "Michigan eligibility",
+   "difficulty": 2,
+   "explain": "MCL 339.2505(4).",
+   "id": "mi-13184a0d",
+   "portion": "georgia",
+   "q": "A salesperson's licence application must be signed by:",
+   "sub": "mi/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any misdemeanour",
+    "A traffic offence",
+    "Any felony whatever",
+    "Embezzlement or misappropriation of funds"
+   ],
+   "concept": "Michigan eligibility",
+   "difficulty": 2,
+   "explain": "MCL 339.2505(2).",
+   "id": "mi-35f5ce8e",
+   "portion": "georgia",
+   "q": "A broker's licence must be refused to an applicant convicted of:",
+   "sub": "mi/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "6 months",
+    "3 years",
+    "1 year",
+    "Indefinitely"
+   ],
+   "concept": "Michigan eligibility",
+   "difficulty": 2,
+   "explain": "MCL 339.2505(6)(b).",
+   "id": "mi-8370ad14",
+   "portion": "georgia",
+   "q": "A passing score on the Michigan examination is valid for:",
+   "sub": "mi/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Under the direct supervision of an associate broker physically present on a regular basis",
+    "Visited monthly by the broker",
+    "Licensed as a separate brokerage",
+    "Closed"
+   ],
+   "concept": "Michigan offices",
+   "difficulty": 2,
+   "explain": "MCL 339.2505(3).",
+   "id": "mi-fdff358b",
+   "portion": "georgia",
+   "q": "A branch office more than 25 miles from the nearest boundary of the main office's municipality must be:",
+   "sub": "mi/licensing|Offices",
+   "subtopic": "Offices",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The full prelicensure course",
+    "Nothing but the fees",
+    "6 clock hours of continuing education for each year and partial year elapsed",
+    "A new examination"
+   ],
+   "concept": "Michigan renewal",
+   "difficulty": 2,
+   "explain": "MCL 339.2502a(4)(c).",
+   "id": "mi-2fc0e30b",
+   "portion": "georgia",
+   "q": "A licensee relicensing 2 years after expiry must complete:",
+   "sub": "mi/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "1 year",
+    "At least 3 years",
+    "5 years",
+    "Ever"
+   ],
+   "concept": "Michigan renewal",
+   "difficulty": 3,
+   "explain": "MCL 339.2502a(7); no credit for prior education or examinations.",
+   "id": "mi-b0d806b1",
+   "portion": "georgia",
+   "q": "After a licence is revoked, the licensee may not apply for a new one for:",
+   "sub": "mi/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is exempt from licensing",
+    "Needs only registration with LARA",
+    "Requires a real estate licence"
+   ],
+   "concept": "Michigan scope",
+   "difficulty": 1,
+   "explain": "MCL 339.2501(r), (u).",
+   "id": "mi-613a2ffa",
+   "portion": "georgia",
+   "q": "Property management for a fee in Michigan:",
+   "sub": "mi/licensing|Scope",
+   "subtopic": "Scope",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "50%",
+    "90%",
+    "100%",
+    "75%"
+   ],
+   "concept": "Michigan scope",
+   "difficulty": 3,
+   "explain": "MCL 339.2501(h)(ii).",
+   "id": "mi-60b9e380",
+   "portion": "georgia",
+   "q": "An independent contractor relationship requires that at least what share of annual compensation comes from real estate sales commissions?",
+   "sub": "mi/licensing|Scope",
+   "subtopic": "Scope",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Still must supervise the licensee's regulated acts",
+    "Has no supervisory responsibility",
+    "Is not liable for anything"
+   ],
+   "concept": "Michigan scope",
+   "difficulty": 2,
+   "explain": "MCL 339.2501(g).",
+   "id": "mi-75646023",
+   "portion": "georgia",
+   "q": "An independent contractor agreement means the broker:",
+   "sub": "mi/licensing|Scope",
+   "subtopic": "Scope",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The equivalent of 3 years of full-time experience in the business of real estate",
+    "1 year of licensure",
+    "5 years of licensure",
+    "No experience"
+   ],
+   "concept": "Michigan experience",
+   "difficulty": 3,
+   "explain": "MCL 339.2505(7).",
+   "id": "mi-57e813f4",
+   "portion": "georgia",
+   "q": "A Michigan broker applicant must show:",
+   "sub": "mi/licensing|Experience",
+   "subtopic": "Experience",
+   "topic": "mi/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Before the buyer or seller discloses any confidential information to the licensee",
+    "At the first showing",
+    "With the purchase agreement",
+    "Before closing"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 1,
+   "explain": "MCL 339.2517(1).",
+   "id": "mi-8b535387",
+   "portion": "georgia",
+   "q": "The Michigan agency disclosure must be given:",
+   "sub": "mi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Oral if witnessed",
+    "In writing, given to the client, and substantially in the statutory form",
+    "In any format the broker chooses"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 2,
+   "explain": "MCL 339.2517(3).",
+   "id": "mi-88dc7fff",
+   "portion": "georgia",
+   "q": "The agency disclosure must be:",
+   "sub": "mi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any transfer of real estate",
+    "A sale or lease of 1 to 4 residential dwelling units, or a residential building site",
+    "Commercial property only"
+   ],
+   "concept": "Michigan disclosure",
+   "difficulty": 3,
+   "explain": "MCL 339.2517(11)(g).",
+   "id": "mi-43ff3e59",
+   "portion": "georgia",
+   "q": "A 'real estate transaction' under the agency disclosure statute means:",
+   "sub": "mi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Loyalty and confidentiality",
+    "The duty to account",
+    "Compliance with the law",
+    "Presentation of offers, negotiation assistance, and post-execution assistance"
+   ],
+   "concept": "Michigan limited service",
+   "difficulty": 1,
+   "explain": "MCL 339.2517(2), (4); only section 2512d(3)(b), (c), (d) services.",
+   "id": "mi-4e04f978",
+   "portion": "georgia",
+   "q": "Which may a client waive under a Michigan limited service agreement?",
+   "sub": "mi/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "As a clause in the listing agreement",
+    "In the agency disclosure",
+    "On a separate form, with each waived service initialled"
+   ],
+   "concept": "Michigan limited service",
+   "difficulty": 2,
+   "explain": "MCL 339.2517(4).",
+   "id": "mi-be4fe654",
+   "portion": "georgia",
+   "q": "The limited service waiver must appear:",
+   "sub": "mi/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Owes only a refund",
+    "Commits prohibited conduct",
+    "Is merely negligent"
+   ],
+   "concept": "Michigan limited service",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(j).",
+   "id": "mi-bca6d1dd",
+   "portion": "georgia",
+   "q": "A licensee who fails to provide the minimum services without a written waiver:",
+   "sub": "mi/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Dual agent",
+    "Subagent",
+    "Designated agent",
+    "Transaction coordinator"
+   ],
+   "concept": "Michigan coordinator",
+   "difficulty": 1,
+   "explain": "MCL 339.2517(5), (11)(k); allowed on proper notice to all parties.",
+   "id": "mi-ec190e0c",
+   "portion": "georgia",
+   "q": "A licensee who is the agent of neither buyer nor seller is a:",
+   "sub": "mi/agency|Coordinator",
+   "subtopic": "Coordinator",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only the individual salesperson",
+    "The broker and all affiliated licensees",
+    "No one until closing"
+   ],
+   "concept": "Michigan designated agency",
+   "difficulty": 2,
+   "explain": "MCL 339.2517(6).",
+   "id": "mi-7ad40a71",
+   "portion": "georgia",
+   "q": "With no written designated agency agreement, a client has an agency relationship with:",
+   "sub": "mi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Both dual agents",
+    "In violation of the Act",
+    "Not dual agents, though their broker and supervisory brokers are disclosed consensual dual agents"
+   ],
+   "concept": "Michigan designated agency",
+   "difficulty": 2,
+   "explain": "MCL 339.2517(7), (8).",
+   "id": "mi-54e3d63d",
+   "portion": "georgia",
+   "q": "Two designated agents of the same broker representing opposite parties are:",
+   "sub": "mi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Before an offer to purchase is made or presented",
+    "At closing",
+    "Only if asked"
+   ],
+   "concept": "Michigan designated agency",
+   "difficulty": 3,
+   "explain": "MCL 339.2517(7).",
+   "id": "mi-18c683fb",
+   "portion": "georgia",
+   "q": "Those designated agents must disclose the broker's dual position:",
+   "sub": "mi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A supervisory broker, to seek advice or assistance for the client's benefit",
+    "Any affiliated licensee",
+    "The cooperating agent"
+   ],
+   "concept": "Michigan designated agency",
+   "difficulty": 3,
+   "explain": "MCL 339.2517(9).",
+   "id": "mi-57fa1c32",
+   "portion": "georgia",
+   "q": "A designated agent may share a client's confidential information with:",
+   "sub": "mi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Prohibited outright",
+    "Permitted on oral consent",
+    "Permitted only in commercial deals",
+    "Permitted with the knowledge and informed written consent of both buyer and seller"
+   ],
+   "concept": "Michigan dual agency",
+   "difficulty": 1,
+   "explain": "MCL 339.2517(3), Dual Agents.",
+   "id": "mi-4a0d6e77",
+   "portion": "georgia",
+   "q": "Dual agency in Michigan is:",
+   "sub": "mi/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Presentation of offers",
+    "Confidentiality of information obtained in the relationship",
+    "Negotiation assistance",
+    "Post-execution assistance"
+   ],
+   "concept": "Michigan duties",
+   "difficulty": 2,
+   "explain": "MCL 339.2517(3)(1)(g); only the three services are waivable.",
+   "id": "mi-49ec3cb4",
+   "portion": "georgia",
+   "q": "Which is a minimum DUTY a Michigan client cannot waive?",
+   "sub": "mi/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A commission invoice only",
+    "A complete and detailed signed closing statement showing each party its receipts and disbursements",
+    "A copy of the deed"
+   ],
+   "concept": "Michigan duties",
+   "difficulty": 3,
+   "explain": "MCL 339.2517(3)(2)(e).",
+   "id": "mi-48d2722e",
+   "portion": "georgia",
+   "q": "At closing, a broker or associate broker involved must furnish:",
+   "sub": "mi/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "mi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The Department of Licensing and Regulatory Affairs",
+    "The Board of Realtors",
+    "The county register of deeds",
+    "The Attorney General"
+   ],
+   "concept": "Michigan who is who",
+   "difficulty": 1,
+   "explain": "PSI Michigan bulletin, state outline note.",
+   "id": "mi-451c4e13",
+   "portion": "georgia",
+   "q": "On the Michigan examination, 'Department' means:",
+   "sub": "mi/department|Who is who",
+   "subtopic": "Who is who",
+   "topic": "mi/department"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The county road commission",
+    "The Michigan Real Estate Commission",
+    "The Board of Real Estate Brokers and Salespersons"
+   ],
+   "concept": "Michigan who is who",
+   "difficulty": 1,
+   "explain": "MCL 339.2502; PSI bulletin note.",
+   "id": "mi-6278d919",
+   "portion": "georgia",
+   "q": "'Board' on the Michigan examination means:",
+   "sub": "mi/department|Who is who",
+   "subtopic": "Who is who",
+   "topic": "mi/department"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "6 months",
+    "18 months of the violation or of completion of the transaction, whichever is later",
+    "3 years",
+    "No time limit"
+   ],
+   "concept": "Michigan penalties",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(2).",
+   "id": "mi-1cd8e4b5",
+   "portion": "georgia",
+   "q": "A complaint seeking a penalty for prohibited conduct must be filed within:",
+   "sub": "mi/department|Penalties",
+   "subtopic": "Penalties",
+   "topic": "mi/department"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Article 6 of the Occupational Code",
+    "Article 25 itself",
+    "The Elliott-Larsen Act",
+    "The Truth in Renting Act"
+   ],
+   "concept": "Michigan penalties",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(1).",
+   "id": "mi-0c6c7910",
+   "portion": "georgia",
+   "q": "Penalties for prohibited conduct under article 25 are set out in:",
+   "sub": "mi/department|Penalties",
+   "subtopic": "Penalties",
+   "topic": "mi/department"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A fine only",
+    "Automatic revocation",
+    "A public reprimand only",
+    "Completing enough additional hours to cure the deficient period"
+   ],
+   "concept": "Michigan penalties",
+   "difficulty": 3,
+   "explain": "MCL 339.2504a(5).",
+   "id": "mi-a905842f",
+   "portion": "georgia",
+   "q": "Where an audit shows a continuing education shortfall, the penalty must include:",
+   "sub": "mi/department|Penalties",
+   "subtopic": "Penalties",
+   "topic": "mi/department"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Subject to inspection by the department",
+    "Private to the broker",
+    "Open only under subpoena"
+   ],
+   "concept": "Michigan inspection",
+   "difficulty": 2,
+   "explain": "MCL 339.2512(k)(vi).",
+   "id": "mi-acfff05b",
+   "portion": "georgia",
+   "q": "A broker's trust account records are:",
+   "sub": "mi/department|Inspection",
+   "subtopic": "Inspection",
+   "topic": "mi/department"
+  }
+ ],
+ "code": "MI",
+ "diffs": {
+  "national/agency": [
+   "Michigan allows a LIMITED SERVICE AGREEMENT waiving three named services - presentation of offers, negotiation assistance and post-execution assistance - but no statutory DUTY may be waived (MCL 339.2517(2), (4)).",
+   "A TRANSACTION COORDINATOR is a licensee who represents neither party, allowed on proper notice (MCL 339.2517(5)).",
+   "Under DESIGNATED AGENCY two agents of one broker may take opposite sides and are not dual agents, but the broker and supervisory brokers become disclosed consensual dual agents (MCL 339.2517(7), (8)).",
+   "The agency disclosure comes BEFORE the client gives any confidential information, not at the offer (MCL 339.2517(1))."
+  ],
+  "national/disclosures": [
+   "Michigan bars an ACTION against a licensee for not disclosing a former occupant's disability, a homicide or suicide with no material effect on condition, or sex offender registry information (MCL 339.2518).",
+   "A late seller's disclosure statement lets the buyer terminate within 72 hours (in person) or 120 hours (registered mail), and that right dies on transfer (MCL 565.954).",
+   "Selling land abutting a road not accepted as public needs a separate written private road notice attached to the conveyance, or the contract is voidable by the purchaser (MCL 560.261)."
+  ],
+  "national/practice": [
+   "Deposits go into the broker's trust account within 2 BANKING DAYS of notice that all parties accepted, and the broker may keep up to $2,000 of its own money in each trust account (MCL 339.2512(k)).",
+   "Elliott-Larsen adds AGE, MARITAL STATUS, sexual orientation and gender identity or expression to the federal classes, and disability is covered by a separate act (MCL 37.2502).",
+   "The state transfer tax is $3.75 per $500 of value and the SELLER pays it (MCL 207.523, 207.525).",
+   "Education: 40 prelicence hours for a salesperson and 90 for a broker, then 18 hours of continuing education a cycle (MCL 339.2504, 339.2504a)."
+  ]
+ },
+ "name": "Michigan",
+ "pass": 0.7,
+ "portions": {
+  "georgia": {
+   "blurb": "Occupational Code article 25, Elliott-Larsen, disclosure, land division and the transfer tax.",
+   "minutes": 55,
+   "name": "Michigan law",
+   "scored": 35
+  },
+  "national": {
+   "blurb": "Principles, practice and the maths, as Michigan tests them.",
+   "minutes": 125,
+   "name": "General practice",
+   "scored": 80
+  }
+ },
+ "regulator": "Michigan Department of Licensing and Regulatory Affairs",
+ "single": true,
+ "sources": [
+  {
+   "by": "Michigan Legislature",
+   "name": "Occupational Code article 25 (MCL 339.2501 to 339.2518)",
+   "note": "The licence law: definitions, education, trust money, advertising, agency disclosure, prohibited conduct.",
+   "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-299-1980-25"
+  },
+  {
+   "by": "Michigan Legislature",
+   "name": "Elliott-Larsen Civil Rights Act (MCL 37.2102, 37.2502)",
+   "note": "Michigan's own protected classes, which include several the federal Act leaves out.",
+   "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-37-2502"
+  },
+  {
+   "by": "Michigan Legislature",
+   "name": "Seller Disclosure Act (1993 PA 92) and Land Division Act (1967 PA 288)",
+   "note": "The seller's disclosure statement and its timing, and the private road notice.",
+   "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-565-954"
+  },
+  {
+   "by": "PSI Services and Michigan LARA",
+   "name": "Michigan Real Estate Candidate Information Bulletin",
+   "note": "One 115-question paper, 180 minutes, 70% to pass, and the 35-item Michigan outline.",
+   "url": "https://test-takers.psiexams.com/mire"
+  }
+ ],
+ "study": {
+  "mi/activities": {
+   "blurb": "Advertising, trust money, records, inducements, stigmatized property.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [
+    {
+     "k": "Delivery is immediate; the deposit clock runs from acceptance by all parties.",
+     "s": "A salesperson takes a $5,000 deposit Friday. All parties sign Monday, and the broker hears Monday afternoon.",
+     "t": "Deposit timing",
+     "w": [
+      "The salesperson delivers the cheque to the broker ON RECEIPT, Friday.",
+      "The broker's 2-banking-day clock starts Monday, when it learns all parties accepted.",
+      "So the deposit must be in the trust account by Wednesday."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Statutory requirements on licensees",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "2 banking days after notice that all parties accepted",
+        "5 business days",
+        "24 hours",
+        "At closing"
+       ],
+       "q": "A Michigan broker deposits accepted-offer money into the trust account within:",
+       "why": "MCL 339.2512(k)(v)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Deposit it personally",
+        "Hold it until closing",
+        "Give it to the seller",
+        "Pay or deliver it to the employing broker on receipt"
+       ],
+       "q": "A salesperson who takes a deposit must:",
+       "why": "MCL 339.2512(k)(ii)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Nothing at all",
+        "$100",
+        "Any amount",
+        "Not more than $2,000.00"
+       ],
+       "q": "How much of its own money may a broker keep in each trust account?",
+       "why": "MCL 339.2512(k)(iv)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Withdrawal of funds without previous notice",
+        "90 days' notice",
+        "Only the seller to withdraw"
+       ],
+       "q": "The trust account must allow:",
+       "why": "MCL 339.2512(k)(vi)."
+      }
+     ],
+     "h": "Trust money (MCL 339.2512(k))",
+     "l": [
+      "A salesperson who receives a deposit must pay or deliver it to the EMPLOYING BROKER ON RECEIPT.",
+      "The broker deposits money belonging to others into a separate CUSTODIAL TRUST OR ESCROW ACCOUNT not later than 2 BANKING DAYS after the broker receives notice that an offer to purchase is ACCEPTED BY ALL PARTIES, and holds it until the transaction is consummated or terminated, then accounts for the full amount.",
+      "If the purchase agreement names an escrowee other than the broker, a licensee holding the deposit delivers it to that escrowee within the same 2 BANKING DAYS.",
+      "NO COMMINGLING: the broker may not put advance payments belonging to others into a business or personal account.",
+      "A broker may keep more than one trust account, and may deposit NOT MORE THAN $2,000.00 of its own money in each one to cover bank service charges and minimum balances - and must account for that money in the records.",
+      "The account designates the broker as TRUSTEE and must allow withdrawal without previous notice. Records show the date, from whom, the date deposited, the date of withdrawal, for whose account, and to whom the money belongs. They are open to department inspection."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "Anywhere on the advertisement",
+        "In smaller type",
+        "Optional",
+        "In equal or greater type size than the salesperson's name"
+       ],
+       "q": "In advertising that names a salesperson, the employing broker's business name must be:",
+       "why": "MCL 339.2512e(3)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "It is the salesperson's principal residence",
+        "The broker agrees",
+        "It is a rental",
+        "It is listed with another firm"
+       ],
+       "q": "A salesperson may advertise a property for sale in their own name only if:",
+       "why": "MCL 339.2512e(4)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At renewal",
+        "Within one year",
+        "With the licence application, or within 30 days of adopting it",
+        "Never"
+       ],
+       "q": "A broker adopting an assumed name must notify the department:",
+       "why": "MCL 339.2512e(5)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The commission rate",
+        "The seller's name",
+        "That the advertiser is a real estate broker"
+       ],
+       "q": "A broker's advertisement must state:",
+       "why": "MCL 339.2512e(1)."
+      }
+     ],
+     "h": "Advertising (MCL 339.2512e)",
+     "l": [
+      "A BROKER'S advertisement must include the broker's name or business name, the broker's telephone number OR street address, and must STATE THAT THE ADVERTISER IS A REAL ESTATE BROKER.",
+      "A SALESPERSON or associate broker advertises only under the supervision of, and IN THE BUSINESS NAME OF, the employing broker. Advertising naming the salesperson must carry the employing broker's telephone number or street address and the broker's BUSINESS NAME IN EQUAL OR GREATER TYPE SIZE than the salesperson's name.",
+      "A salesperson may not advertise property for sale under their own name UNLESS it is their PRINCIPAL RESIDENCE, and may not advertise property for rent under their own name unless they OWN it.",
+      "A broker may not advertise under any name other than the one the licence was issued in, or a lawfully authorised assumed name, and must notify the department of an assumed name with the application or WITHIN 30 DAYS of adopting it."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "All three",
+        "None of these: a former occupant's disability, a homicide with no effect on condition, or registry information",
+        "Only the homicide",
+        "Only the registry"
+       ],
+       "q": "A Michigan licensee may be sued for failing to disclose:",
+       "why": "MCL 339.2518."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "It is confidential medical data",
+        "Disclosing it would be unlawful discrimination under the federal Fair Housing Act",
+        "The seller owns the information"
+       ],
+       "q": "Why does the statute bar a claim over a former occupant's disability?",
+       "why": "MCL 339.2518(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No material effect on the condition of the property",
+        "Any effect at all",
+        "Occurred over ten years ago"
+       ],
+       "q": "The homicide exemption applies where the event had:",
+       "why": "MCL 339.2518(b)."
+      }
+     ],
+     "h": "No duty to disclose: stigma (MCL 339.2518)",
+     "l": [
+      "That a FORMER OCCUPANT has or is suspected of having a DISABILITY - because disclosing it would be unlawful discrimination under the federal Fair Housing Act.",
+      "That the property was or was suspected to have been the site of a HOMICIDE, SUICIDE OR OTHER OCCURRENCE PROHIBITED BY LAW which had NO MATERIAL EFFECT on the condition of the property.",
+      "Any information from the SEX OFFENDERS REGISTRATION ACT compilation that is made available to the public."
+     ],
+     "p": [
+      "Michigan bars an ACTION against a licensee for failing to disclose three things:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Allowed if under $100",
+        "Allowed with a written receipt",
+        "Prohibited"
+       ],
+       "q": "Paying an unlicensed person for the name of a potential buyer is:",
+       "why": "MCL 339.2512(h)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "30 days",
+        "10 business days",
+        "5 days"
+       ],
+       "q": "A broker must return a discharged salesperson's licence to the department within:",
+       "why": "MCL 339.2507(1); 339.2512(f)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "May sue in small claims",
+        "Cannot maintain the action; they must allege and prove they were licensed",
+        "May recover half"
+       ],
+       "q": "An unlicensed person suing for a commission:",
+       "why": "MCL 339.2512a."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "6 months",
+        "3 years",
+        "No limit",
+        "18 months"
+       ],
+       "q": "A complaint seeking a penalty must be filed within:",
+       "why": "MCL 339.2512(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Mixed with the trust account",
+        "Kept in accounts separate from all other accounts",
+        "Held by the owner"
+       ],
+       "q": "Property management money must be:",
+       "why": "MCL 339.2512c(2)."
+      }
+     ],
+     "h": "Inducements, fee sharing and the rest",
+     "l": [
+      "A licensee may not SHARE OR PAY a fee, commission or other valuable consideration to a person NOT LICENSED under article 25 - including paying anyone for the name of a potential seller or buyer. Buying a COMMERCIALLY PREPARED LIST of names is excluded, and a broker may pay a commission to an out-of-state broker who did no negotiating in Michigan.",
+      "Acting for MORE THAN ONE PARTY in a transaction without the knowledge of the parties is prohibited (property management aside).",
+      "A licensee who does not ACCOUNT FOR or REMIT money belonging to others is subject to penalty, as is one who changes business location WITHOUT NOTIFYING THE DEPARTMENT.",
+      "A broker must DELIVER OR MAIL a discharged salesperson's licence to the department WITHIN 5 DAYS, and tell the salesperson in writing that it did so (MCL 339.2507).",
+      "An unlicensed person cannot MAINTAIN AN ACTION IN COURT for a commission: they must allege and prove they were licensed at the time (MCL 339.2512a).",
+      "PROPERTY MANAGEMENT money goes in accounts kept SEPARATE from all other accounts, under a written property management employment contract (MCL 339.2512c).",
+      "A complaint seeking a penalty must be filed NOT LATER THAN 18 MONTHS after the violation or, for a transaction, after it was completed."
+     ]
+    }
+   ],
+   "summary": "Ten items, the biggest state category. The money rules and the advertising rules carry most of the marks, and Michigan has a statute saying what you DON'T have to disclose.",
+   "topic": "mi/activities",
+   "traps": [
+    "2 banking days, counted from notice that ALL PARTIES accepted - not from the offer.",
+    "$2,000 of the broker's own money per trust account is allowed, not zero.",
+    "Michigan's stigma statute is a shield, not a duty: no action lies for not disclosing.",
+    "A salesperson's own-name advertising is limited to their principal residence (sale) or property they own (rent)."
+   ],
+   "vocab": [
+    [
+     "Custodial trust account",
+     "The separate account holding others' money, broker as trustee."
+    ],
+    [
+     "Commingling",
+     "Mixing clients' money with the broker's own. Prohibited."
+    ],
+    [
+     "Inducement",
+     "Paying for a referral or a name. Unlicensed payees are barred."
+    ],
+    [
+     "Banking day",
+     "A day the bank is open; the deposit clock is counted in these."
+    ],
+    [
+     "Assumed name",
+     "A business name other than the licensed one; 30-day notice."
+    ]
+   ]
+  },
+  "mi/additional": {
+   "blurb": "Fair housing, land division, transfer tax, condos, landlord-tenant.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Divide by 500, multiply by 3.75, and round any fraction of $500 UP to a full increment.",
+     "s": "Work out the state real estate transfer tax.",
+     "t": "Transfer tax on a $240,000 sale",
+     "w": [
+      "$240,000 / $500 = 480 increments.",
+      "480 x $3.75 = $1,800.",
+      "The seller pays it to the county treasurer within 15 days of delivery."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Additional Michigan topics",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Race",
+        "Religion",
+        "Marital status",
+        "Color"
+       ],
+       "q": "Which is protected in a Michigan real estate transaction but not by the federal Fair Housing Act?",
+       "why": "MCL 37.2502(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Credit score",
+        "Age and gender identity or expression",
+        "Occupation"
+       ],
+       "q": "Elliott-Larsen also protects:",
+       "why": "MCL 37.2502(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The Persons with Disabilities Civil Rights Act, 1976 PA 220",
+        "Elliott-Larsen alone",
+        "The Occupational Code"
+       ],
+       "q": "Disability in Michigan housing is covered by:",
+       "why": "Elliott-Larsen's housing list does not name disability."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Fewer than 20 units",
+        "Any single-family home",
+        "Fewer than 5 rental units in Michigan"
+       ],
+       "q": "The source-of-income rule does not apply to a landlord of:",
+       "why": "MCL 37.2502(4)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The individual or anyone residing with them",
+        "Only the applicant",
+        "Only the owner"
+       ],
+       "q": "Elliott-Larsen protects a person against discrimination based on the characteristics of:",
+       "why": "MCL 37.2502(1)."
+      }
+     ],
+     "h": "Elliott-Larsen Civil Rights Act (MCL 37.2502)",
+     "l": [
+      "RELIGION",
+      "RACE",
+      "COLOR",
+      "NATIONAL ORIGIN",
+      "AGE",
+      "SEX",
+      "SEXUAL ORIENTATION",
+      "GENDER IDENTITY OR EXPRESSION",
+      "FAMILIAL STATUS",
+      "MARITAL STATUS",
+      "- of the individual OR OF ANYONE RESIDING WITH THEM.",
+      "The Act's declaration of civil right in MCL 37.2102 also names HEIGHT and WEIGHT.",
+      "DISABILITY is covered by a separate statute, the PERSONS WITH DISABILITIES CIVIL RIGHTS ACT, 1976 PA 220.",
+      "SOURCE OF INCOME: a landlord may not deny a tenancy, discriminate on price or terms, or exclude a rent voucher or subsidy when applying an income threshold. This subsection does NOT apply to a landlord of FEWER THAN 5 rental units in Michigan."
+     ],
+     "p": [
+      "In a real estate transaction, a person, broker or salesperson may not refuse to deal, discriminate in terms or conditions, refuse to transmit a bona fide offer, refuse to negotiate, misrepresent availability, advertise a preference, take a discriminatory listing, or discriminate in brokering or appraising, on the basis of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Any property",
+        "Commercial property only",
+        "Not less than 1 and not more than 4 residential dwelling units"
+       ],
+       "q": "The Michigan seller's disclosure statement covers property of:",
+       "why": "MCL 565.952."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "24 hours",
+        "10 days",
+        "No right",
+        "72 hours to terminate in writing"
+       ],
+       "q": "A disclosure statement delivered in person after the agreement was signed gives the buyer:",
+       "why": "MCL 565.954(3)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "72 hours",
+        "5 days",
+        "120 hours"
+       ],
+       "q": "Delivered by registered mail instead, the period is:",
+       "why": "MCL 565.954(3)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At closing of escrow",
+        "After 30 days",
+        "On transfer of the property by deed or installment sales contract"
+       ],
+       "q": "The buyer's right to terminate expires:",
+       "why": "MCL 565.954(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A warranty of condition",
+        "A disclosure from the seller's knowledge, not a warranty",
+        "An inspection report"
+       ],
+       "q": "The disclosure statement is:",
+       "why": "MCL 565.957."
+      }
+     ],
+     "h": "The seller's disclosure statement (1993 PA 92)",
+     "l": [
+      "It applies to a transfer of any interest in real estate of NOT LESS THAN 1 AND NOT MORE THAN 4 RESIDENTIAL DWELLING UNITS, by sale, exchange, installment land contract, lease with an option to purchase, other option, or a residential co-operative interest (MCL 565.952).",
+      "The seller delivers it BEFORE THE SELLER EXECUTES A BINDING PURCHASE AGREEMENT. If it goes to the seller's agent, that agent gives a copy to the buyer or the buyer's agent; delivery to the buyer's agent counts as delivery to the buyer (MCL 565.954).",
+      "If the statement or an amendment arrives AFTER the seller signed a binding purchase agreement, the buyer may TERMINATE by written notice within 72 HOURS of in-person delivery, or 120 HOURS if delivered by registered mail. That right EXPIRES on transfer by deed or installment sales contract.",
+      "The form is NOT A WARRANTY and the seller answers from KNOWLEDGE, using UNKNOWN or NOT AVAILABLE where they do not know. Failure to give a signed statement lets the purchaser terminate an otherwise binding agreement.",
+      "The form's 'Other Items' include a FARM OR FARM OPERATION IN THE VICINITY, shared features such as roads and driveways, encroachments and easements, work done without permits, and pending litigation. It also tells buyers the SEX OFFENDER REGISTRY compilation is public and to contact local law enforcement."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "A note in the listing",
+        "An oral warning",
+        "Nothing",
+        "A separate written instrument attached to the conveyance saying the road is private"
+       ],
+       "q": "A sale of a parcel abutting a road not accepted as public requires:",
+       "why": "MCL 560.261."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Voidable at the purchaser's option",
+        "Void from the start",
+        "Fully valid",
+        "A felony"
+       ],
+       "q": "A sale made without that private road notice is:",
+       "why": "MCL 560.261."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A flood notice",
+        "A mineral rights waiver",
+        "The Michigan Right to Farm Act statement"
+       ],
+       "q": "Deeds for unplatted land after 31 March 1997 must carry:",
+       "why": "MCL 560.109(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "They pass to the grantee",
+        "They stay with the remainder the grantor retained",
+        "They are lost"
+       ],
+       "q": "If a deed for unplatted land says nothing about division rights:",
+       "why": "MCL 560.109(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "45 days",
+        "30 days",
+        "90 days"
+       ],
+       "q": "A municipality must act on a complete division application within:",
+       "why": "MCL 560.109(1)."
+      }
+     ],
+     "h": "Land Division Act (1967 PA 288)",
+     "l": [
+      "PRIVATE ROAD NOTICE: no one may sell a lot in a recorded plat, or a parcel of unplatted land in an UNINCORPORATED AREA, that abuts a street or road NOT ACCEPTED AS PUBLIC, unless the seller first tells the buyer IN WRITING ON A SEPARATE INSTRUMENT ATTACHED TO THE CONVEYANCE that the road is private and IS NOT REQUIRED TO BE MAINTAINED BY THE BOARD OF COUNTY ROAD COMMISSIONERS. A contract made in violation is VOIDABLE AT THE PURCHASER'S OPTION (MCL 560.261).",
+      "1996 PA 591 added MCL 560.109: a municipality approves or disapproves a proposed division within 45 DAYS of a complete application, and each resulting parcel must be ACCESSIBLE and meet the depth-to-width and area rules.",
+      "A deed for unplatted land must state how many divisions the grantor conveys ('zero', a number, or 'all'); with no conforming statement, the division rights STAY WITH THE REMAINDER retained by the grantor (MCL 560.109(3)).",
+      "Every deed for unplatted land executed after MARCH 31, 1997 must carry the RIGHT TO FARM statement: the property may be near farm land, and generally accepted agricultural practices generating noise, dust and odours are protected by the Michigan Right to Farm Act (MCL 560.109(4))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "$1.10 per $1,000",
+        "0.75% of value",
+        "$3.75 per $500 or fraction of $500 of value"
+       ],
+       "q": "The Michigan state transfer tax rate is:",
+       "why": "MCL 207.525(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The buyer",
+        "The lender",
+        "The seller or grantor",
+        "The broker"
+       ],
+       "q": "Who is liable for the state transfer tax?",
+       "why": "MCL 207.523(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "30 days",
+        "At recording only",
+        "15 days after delivery of the instrument"
+       ],
+       "q": "It is paid to the county treasurer within:",
+       "why": "MCL 207.523(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The whole price always",
+        "Only the personal property",
+        "Only the real property, if the values are stated separately"
+       ],
+       "q": "On a sale of real and personal property together, the tax applies to:",
+       "why": "MCL 207.525(2)."
+      }
+     ],
+     "h": "State real estate transfer tax (1993 PA 330)",
+     "l": [
+      "The state tax is $3.75 FOR EACH $500.00 or fraction of $500.00 of the total value of the property transferred (MCL 207.525).",
+      "The SELLER OR GRANTOR is liable for it (MCL 207.523(2)).",
+      "It is paid to the COUNTY TREASURER where the property is located NOT LATER THAN 15 DAYS after delivery of the instrument.",
+      "The instrument must state the total value on its face, or carry an affidavit declaring it. Where real and personal property are sold together, the tax falls only on the real property if the values are stated separately."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "3 days",
+        "15 days",
+        "9 business days after receiving the required documents",
+        "72 hours"
+       ],
+       "q": "A Michigan condominium purchaser may withdraw within:",
+       "why": "MCL 559.184(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "3 business days",
+        "30 days",
+        "At closing"
+       ],
+       "q": "Withdrawn funds must be returned within:",
+       "why": "MCL 559.184(4)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "$10,000",
+        "$2,500.00",
+        "$500"
+       ],
+       "q": "The purchase agreement must offer binding arbitration for claims under:",
+       "why": "MCL 559.184(4)(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Only in exceptional cases, knowingly and voluntarily in writing",
+        "By initialling the agreement",
+        "Never"
+       ],
+       "q": "The withdrawal right may be waived:",
+       "why": "MCL 559.184(5)."
+      }
+     ],
+     "h": "Condominium Act (1978 PA 59)",
+     "l": [
+      "A signed purchase agreement for a residential condominium unit DOES NOT BIND the purchaser, who may WITHDRAW without cause and without penalty before conveyance and WITHIN 9 BUSINESS DAYS after receiving the section 84a documents - counting the day of receipt if it is a business day (MCL 559.184(2)).",
+      "The developer must hold all funds in ESCROW and return them within 3 BUSINESS DAYS after a withdrawal.",
+      "The section 84a documents are the RECORDED MASTER DEED, a signable purchase agreement with the escrow agreement, a CONDOMINIUM BUYER'S HANDBOOK, and a DISCLOSURE STATEMENT with the first-year projected budget and the developers' experience.",
+      "The purchase agreement must offer BINDING ARBITRATION, at the purchaser's exclusive option, for a claim under $2,500.00.",
+      "The right of withdrawal may be waived only in exceptional cases, by a purchaser given all the documents who waives it KNOWINGLY AND VOLUNTARILY IN WRITING."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "2 months' rent",
+        "1 1/2 months' rent",
+        "One month's rent"
+       ],
+       "q": "A Michigan security deposit may not exceed:",
+       "why": "MCL 554.602."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "30 days after the tenancy ends",
+        "14 days",
+        "45 days"
+       ],
+       "q": "The landlord must mail an itemised notice of damages within:",
+       "why": "MCL 554.609(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "4 days after moving out",
+        "14 days",
+        "30 days"
+       ],
+       "q": "The tenant must give a forwarding address within:",
+       "why": "MCL 554.603."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Void",
+        "Enforceable if initialled",
+        "Valid for one year"
+       ],
+       "q": "A lease provision that waives the tenant's security deposit rights is:",
+       "why": "MCL 554.633(1)(b), (3)."
+      }
+     ],
+     "h": "Landlord and tenant",
+     "l": [
+      "SECURITY DEPOSIT: it may not exceed 1 1/2 MONTHS' RENT (MCL 554.602).",
+      "Within 14 DAYS of the tenant taking possession the landlord must give written notice of its name and address, the financial institution or surety, and the tenant's duty to give a forwarding address WITHIN 4 DAYS of moving out - in 12 POINT BOLDFACE at least 4 points larger than the body (MCL 554.603).",
+      "The landlord must mail an ITEMISED NOTICE OF DAMAGES WITHIN 30 DAYS after the tenancy ends, with the balance of the deposit. The tenant then has 7 DAYS to respond or forfeits the amount claimed (MCL 554.609).",
+      "TRUTH IN RENTING ACT: a rental agreement may not waive habitability remedies or security-deposit rights, discriminate under Elliott-Larsen or the Persons with Disabilities Civil Rights Act, provide a confession of judgment, exculpate the lessor, waive a jury trial, or let the lessor alter the agreement without the tenant's written consent. Such a provision is VOID (MCL 554.633)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Two or more persons",
+        "One broker acting alone",
+        "A written contract only"
+       ],
+       "q": "A conspiracy in restraint of trade under Michigan law requires:",
+       "why": "MCL 445.772."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A public body corporate and politic created by 1966 PA 346",
+        "A private lender",
+        "A trade association"
+       ],
+       "q": "MSHDA is:",
+       "why": "MCL 125.1421(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The Dodd-Frank Act",
+        "RESPA",
+        "The Sherman Act"
+       ],
+       "q": "The federal statute the outline ties to land contract changes is:",
+       "why": "PSI Michigan outline, Additional State Topics."
+      }
+     ],
+     "h": "Antitrust and MSHDA",
+     "l": [
+      "MICHIGAN ANTITRUST REFORM ACT: a contract, combination or conspiracy between 2 OR MORE PERSONS in restraint of, or to monopolise, trade or commerce in a relevant market is UNLAWFUL (MCL 445.772). Commission fixing between competing brokers is the classic example.",
+      "The MICHIGAN STATE HOUSING DEVELOPMENT AUTHORITY (MSHDA) is a PUBLIC BODY CORPORATE AND POLITIC created by 1966 PA 346, governed by 3 heads of state departments plus gubernatorial appointees, and it administers state and federal housing programmes (MCL 125.1421).",
+      "LAND CONTRACTS: changes in federal law, the Dodd-Frank Act, now reach seller financing, which the outline flags under land contract law."
+     ]
+    }
+   ],
+   "summary": "Twelve items spread over eight Michigan statutes. The fair housing list and the transfer tax number are the reliable marks.",
+   "topic": "mi/additional",
+   "traps": [
+    "Elliott-Larsen's housing list does NOT name disability; that is the Persons with Disabilities Civil Rights Act.",
+    "Marital status and age ARE protected in Michigan; they are not federal classes.",
+    "$3.75 per $500 is the STATE tax, and the SELLER pays it.",
+    "Condominium withdrawal is 9 BUSINESS days, counting the day of receipt.",
+    "72 hours in person, 120 hours by registered mail. Do not swap them."
+   ],
+   "vocab": [
+    [
+     "Elliott-Larsen",
+     "Michigan's civil rights act, 1976 PA 453."
+    ],
+    [
+     "Unplatted land",
+     "Land not in a recorded plat; special deed statements apply."
+    ],
+    [
+     "Grantor",
+     "The seller who conveys, and who owes the transfer tax."
+    ],
+    [
+     "Section 84a documents",
+     "The condominium package that starts the 9-day clock."
+    ],
+    [
+     "Truth in Renting Act",
+     "The statute voiding unlawful lease clauses."
+    ]
+   ]
+  },
+  "mi/agency": {
+   "blurb": "Agency disclosure, designated agency, transaction coordinator, waivers.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "Designated agency splits the agents but not the broker.",
+     "s": "Both buyer and seller have signed designated agency agreements with different salespersons at the same brokerage.",
+     "t": "Two agents, one firm",
+     "w": [
+      "The two designated agents are NOT dual agents, and neither one's confidential knowledge is imputed to the other.",
+      "The broker and every named supervisory broker ARE disclosed consensual dual agents.",
+      "Both agents must tell their clients that before an offer is made or presented."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Contractual relationships",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "At the first showing",
+        "Before closing",
+        "With the purchase agreement",
+        "Before the buyer or seller discloses any confidential information to the licensee"
+       ],
+       "q": "The Michigan agency disclosure must be given:",
+       "why": "MCL 339.2517(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Oral is enough",
+        "In writing and substantially in the statutory form",
+        "Any format the broker prefers"
+       ],
+       "q": "The disclosure must be:",
+       "why": "MCL 339.2517(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not less than 1 and not more than 4 residential dwelling units, or a residential building site",
+        "Any property at all",
+        "Commercial property"
+       ],
+       "q": "A real estate transaction, for the disclosure statute, means:",
+       "why": "MCL 339.2517(11)(g)."
+      }
+     ],
+     "h": "When the disclosure is made (MCL 339.2517(1))",
+     "p": [
+      "A licensee must disclose to a potential buyer or seller ALL TYPES OF AGENCY RELATIONSHIPS AVAILABLE and the duties each creates BEFORE that person discloses to the licensee ANY CONFIDENTIAL INFORMATION specific to them. The disclosure is IN WRITING, given to the client, and substantially in the statutory form. Failing to give it is prohibited conduct under MCL 339.2512(b)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Presentation of offers, negotiation assistance, and post-execution assistance",
+        "Loyalty and confidentiality",
+        "The duty to account",
+        "Compliance with law"
+       ],
+       "q": "Which may a client waive by a limited service agreement?",
+       "why": "MCL 339.2517(2), (4)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "On a separate form, with each waived service initialled",
+        "A clause in the listing",
+        "Oral with a witness"
+       ],
+       "q": "The limited service waiver must be:",
+       "why": "MCL 339.2517(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Is merely negligent",
+        "Commits prohibited conduct",
+        "Owes a refund only"
+       ],
+       "q": "A licensee who does not provide the minimum services without a written waiver:",
+       "why": "MCL 339.2512(j)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No other licensee is required to provide the waived services",
+        "The fee is reduced by law",
+        "The listing cannot be cancelled"
+       ],
+       "q": "The waiver form warns the client that:",
+       "why": "MCL 339.2517(4)."
+      }
+     ],
+     "h": "Minimum duties and services (MCL 339.2512d, reproduced in 2517)",
+     "l": [
+      "DUTIES owed to the client: reasonable CARE AND SKILL; PERFORMANCE of the terms of the agreement; LOYALTY to the client's interest; COMPLIANCE with law; REFERRAL to other licensed professionals for expert advice outside the licensee's expertise; timely ACCOUNTING for money and property; and CONFIDENTIALITY of information obtained in the relationship unless released by the client or by law, including not disclosing it to a licensee who is not the client's agent.",
+      "SERVICES owed: marketing as agreed; ACCEPTANCE OF DELIVERY AND PRESENTATION of offers and counteroffers; assistance in developing, communicating, negotiating and presenting offers and related documents until an agreement is executed and contingencies satisfied or waived; assistance after execution to complete the transaction; and, for a broker at closing, a COMPLETE AND DETAILED SIGNED CLOSING STATEMENT showing each party its receipts and disbursements.",
+      "ONLY THREE SERVICES may be waived by a LIMITED SERVICE AGREEMENT - presentation of offers, negotiation assistance, and post-execution assistance. The DUTIES cannot be waived.",
+      "The waiver is on a SEPARATE FORM, initialled service by service, and tells the client that NO OTHER LICENSEE must provide the waived services and that they may need to retain an attorney."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Dual agent",
+        "Transaction coordinator",
+        "Subagent",
+        "Designated agent"
+       ],
+       "q": "A licensee who is the agent of neither party is a:",
+       "why": "MCL 339.2517(11)(k)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only the individual salesperson",
+        "The broker and all affiliated licensees",
+        "No one"
+       ],
+       "q": "With no written designated agency agreement, the client's agency relationship runs with:",
+       "why": "MCL 339.2517(6)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Both dual agents",
+        "In breach of the Act",
+        "Not dual agents, but their broker and supervisory brokers are disclosed consensual dual agents"
+       ],
+       "q": "Two designated agents in one firm on opposite sides of a deal are:",
+       "why": "MCL 339.2517(7), (8)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Before an offer to purchase is made or presented",
+        "At closing",
+        "In the disclosure booklet only"
+       ],
+       "q": "They must tell their clients about the broker's position:",
+       "why": "MCL 339.2517(7)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The knowledge and informed written consent of both buyer and seller",
+        "Only an oral agreement",
+        "Board approval"
+       ],
+       "q": "Dual agency in Michigan requires:",
+       "why": "MCL 339.2517(3), Dual Agents."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any affiliated licensee",
+        "The other party's agent",
+        "A supervisory broker, to seek advice for the client's benefit"
+       ],
+       "q": "A designated agent may share a client's confidential information with:",
+       "why": "MCL 339.2517(9)."
+      }
+     ],
+     "h": "Dual agency, designated agency, transaction coordinator",
+     "l": [
+      "DUAL AGENCY is permitted, but only with the KNOWLEDGE AND INFORMED CONSENT, IN WRITING, of both seller and buyer. The dual agent then cannot disclose all known information to either side.",
+      "A TRANSACTION COORDINATOR is a licensee who is NOT THE AGENT OF EITHER party. Acting as one is allowed UPON PROPER NOTICE to all parties (MCL 339.2517(5), (11)(k)).",
+      "DESIGNATED AGENCY: a broker and client may agree in writing that one named salesperson or associate broker is the client's agent. WITHOUT a written designated agency agreement, the client is considered to have an agency relationship with the BROKER AND ALL AFFILIATED LICENSEES (MCL 339.2517(6)).",
+      "With a designated agency agreement, two designated agents in the same firm may represent OPPOSITE PARTIES in the same transaction and are NOT dual agents, and the designated agent's knowledge of confidential information is NOT IMPUTED to other affiliated licensees. But the BROKER AND ALL SUPERVISORY BROKERS are then DISCLOSED CONSENSUAL DUAL AGENTS, and the designated agents must tell their clients that BEFORE AN OFFER IS MADE OR PRESENTED (MCL 339.2517(7), (8)).",
+      "A designated agency agreement must NAME every associate broker authorised to act as a SUPERVISORY BROKER. A designated agent may share confidential information with a supervisory broker to seek advice for the client's benefit, but with no other licensee (MCL 339.2517(9)).",
+      "A listing or buyer agency agreement may be amended at any time by WRITTEN ADDENDUM SIGNED BY THE PARTIES to create designated agency or change the agent or supervisory broker."
+     ]
+    }
+   ],
+   "summary": "Five items. Michigan's quirks: the agency disclosure comes BEFORE any confidential information, services can be WAIVED by a limited service agreement, and a TRANSACTION COORDINATOR represents nobody.",
+   "topic": "mi/agency",
+   "traps": [
+    "Designated agency defeats dual agency for the AGENTS but not for the BROKER.",
+    "Only three services are waivable. No duty is waivable.",
+    "The disclosure precedes confidential information, not the offer.",
+    "A transaction coordinator is not a dual agent; they represent nobody."
+   ],
+   "vocab": [
+    [
+     "Transaction coordinator",
+     "A licensee acting for neither party."
+    ],
+    [
+     "Designated agent",
+     "The individual named as the client's agent."
+    ],
+    [
+     "Supervisory broker",
+     "An associate broker named to supervise the relationship."
+    ],
+    [
+     "Affiliated licensees",
+     "Salespersons and associate brokers of the same broker."
+    ],
+    [
+     "Limited service agreement",
+     "The written waiver of named services."
+    ]
+   ]
+  },
+  "mi/department": {
+   "blurb": "Who regulates, how they investigate, and what the penalties are.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Department and Board",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The Department of Licensing and Regulatory Affairs",
+        "The Board of Realtors",
+        "The county clerk"
+       ],
+       "q": "On the Michigan examination, 'Department' means:",
+       "why": "PSI Michigan bulletin, state outline note."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The county road commission",
+        "The Board of Real Estate Brokers and Salespersons",
+        "The Real Estate Commission"
+       ],
+       "q": "'Board' on the examination means:",
+       "why": "MCL 339.2502; PSI bulletin."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Private to the broker",
+        "Subject to inspection by the department",
+        "Open only by subpoena"
+       ],
+       "q": "Trust account records are:",
+       "why": "MCL 339.2512(k)(vi)."
+      }
+     ],
+     "h": "Who is who",
+     "l": [
+      "On examination questions about Michigan law, 'DEPARTMENT' means the DEPARTMENT OF LICENSING AND REGULATORY AFFAIRS (LARA) and 'BOARD' means the BOARD OF REAL ESTATE BROKERS AND SALESPERSONS - the bulletin says so in terms.",
+      "The Board of real estate brokers and salespersons is created by MCL 339.2502.",
+      "The department issues and renews licences, approves prelicensure courses and providers, sets the licence cycle and the continuing education hours BY RULE, and may suspend or revoke a course provider's approval.",
+      "The department may audit a licensee's continuing education on renewal, and records of trust accounts, property management accounts and courses are SUBJECT TO ITS INSPECTION."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "18 months after the violation or completion of the transaction",
+        "6 months",
+        "No limit",
+        "5 years"
+       ],
+       "q": "The time limit for filing a complaint seeking a penalty is:",
+       "why": "MCL 339.2512(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Article 25 itself",
+        "Article 6 of the Occupational Code",
+        "The Elliott-Larsen Act"
+       ],
+       "q": "Penalties for prohibited conduct are set out in:",
+       "why": "MCL 339.2512(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Completing enough additional hours to cure the deficient period",
+        "Only a fine",
+        "Automatic revocation"
+       ],
+       "q": "A continuing education shortfall found on audit means the penalty must include:",
+       "why": "MCL 339.2504a(5)."
+      }
+     ],
+     "h": "Penalties and complaints",
+     "l": [
+      "A licensee who commits the prohibited conduct in MCL 339.2512 is subject to the PENALTIES SET FORTH IN ARTICLE 6 of the Occupational Code.",
+      "A complaint seeking a penalty under ARTICLE 5 must be filed NOT LATER THAN 18 MONTHS after the violation or, where it arose in a transaction, after the transaction was completed.",
+      "A person operating an unapproved prelicensure school in violation of MCL 339.2504(4) is also subject to the article 6 penalties.",
+      "Where an audit shows a licensee short of continuing education, the penalty MUST INCLUDE a requirement to complete enough additional hours to cure the deficient period."
+     ]
+    }
+   ],
+   "summary": "Only three items. Know who 'Department' and 'Board' mean on the paper, and that the penalties live in articles 5 and 6 of the Occupational Code.",
+   "topic": "mi/department",
+   "traps": [
+    "LARA is the Department; the Board is a separate body named in the statute.",
+    "18 months, from the later of the violation and the completed transaction."
+   ],
+   "vocab": [
+    [
+     "LARA",
+     "Department of Licensing and Regulatory Affairs."
+    ],
+    [
+     "Article 6",
+     "The Occupational Code's penalty provisions."
+    ],
+    [
+     "Audit",
+     "The department's check of continuing education or records."
+    ]
+   ]
+  },
+  "mi/licensing": {
+   "blurb": "Who needs a licence, education, renewal, transfer, offices.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "90 clock hours",
+        "40 clock hours",
+        "60 clock hours",
+        "24 clock hours"
+       ],
+       "q": "Prelicensure education for a Michigan salesperson is:",
+       "why": "MCL 339.2504(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At least 9",
+        "At least 4",
+        "At least 2",
+        "None"
+       ],
+       "q": "Of those hours, how many must be civil rights and equal opportunity in housing?",
+       "why": "MCL 339.2504(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "90 clock hours, including at least 9 on civil rights and fair housing",
+        "40 hours",
+        "120 hours"
+       ],
+       "q": "A broker applicant's prelicensure requirement is:",
+       "why": "MCL 339.2504(1)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "5 years",
+        "12 months",
+        "The 36 months preceding the application"
+       ],
+       "q": "The hours must be completed within:",
+       "why": "MCL 339.2504(2)."
+      }
+     ],
+     "h": "Prelicensure education (MCL 339.2504)",
+     "l": [
+      "A SALESPERSON applicant must show, before being permitted to take the examination, at least 40 CLOCK HOURS of approved prelicensure classroom courses in principles of real estate, INCLUDING AT LEAST 4 CLOCK HOURS on civil rights law and equal opportunity in housing, completed within the 36 MONTHS preceding the application.",
+      "A BROKER applicant must complete at least 90 CLOCK HOURS, including AT LEAST 9 HOURS on civil rights and fair housing, in addition to the salesperson hours, within the same 36-month window unless they held an active salesperson licence throughout.",
+      "A CLOCK HOUR is 50 to 60 minutes of actual classroom instruction, not counting outside assignments and reading.",
+      "A course provider must be approved by the department and MAY NOT represent that its students are assured of passing."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "24 hours",
+        "12 hours",
+        "30 hours",
+        "18 clock hours per licence cycle"
+       ],
+       "q": "Continuing education in Michigan is:",
+       "why": "MCL 339.2504a(1)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not less than 2 hours",
+        "Not less than 6 hours",
+        "None"
+       ],
+       "q": "How much of each YEAR's continuing education must be law, rules and court cases?",
+       "why": "MCL 339.2504a(2)(a)(i)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "2 hours",
+        "Not less than 1 hour",
+        "4 hours"
+       ],
+       "q": "And fair housing, each year?",
+       "why": "MCL 339.2504a(2)(a)(ii)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "1 year",
+        "Not less than 4 years",
+        "7 years"
+       ],
+       "q": "Continuing education records must be kept for:",
+       "why": "MCL 339.2504a(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No additional hours",
+        "Half credit",
+        "Full credit again"
+       ],
+       "q": "Repeating the same eligible course in a cycle earns:",
+       "why": "MCL 339.2504a(2)(e)."
+      }
+     ],
+     "h": "Continuing education (MCL 339.2504a)",
+     "l": [
+      "18 CLOCK HOURS of eligible continuing education each licence cycle - the department sets the figure by rule as 6 HOURS FOR EACH YEAR of the cycle.",
+      "In EACH YEAR of the cycle: not less than 2 HOURS on laws, rules and court cases regarding real estate, and not less than 1 HOUR on local, state or federal FAIR HOUSING compliance. The rest are the licensee's choice.",
+      "At the course the licensee must present the POCKET CARD or licence number AND a government photo identification.",
+      "Repeating a course earns no additional hours. Records must be kept for NOT LESS THAN 4 YEARS and produced on request; renewals are subject to audit.",
+      "Broker prelicensure hours and continuing education hours DO NOT COUNT for each other."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "17",
+        "19",
+        "21",
+        "18"
+       ],
+       "q": "The minimum age for a Michigan licence is:",
+       "why": "MCL 339.2502a(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Two references",
+        "The broker who will employ the applicant",
+        "A notary only"
+       ],
+       "q": "A salesperson's licence application must be signed by:",
+       "why": "MCL 339.2505(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "6 months",
+        "1 year",
+        "3 years",
+        "Indefinitely"
+       ],
+       "q": "A passing examination score is valid for:",
+       "why": "MCL 339.2505(6)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Under the direct supervision of an associate broker physically present on a regular basis",
+        "Visited monthly",
+        "Closed"
+       ],
+       "q": "A branch office more than 25 miles from the main office's municipality must be:",
+       "why": "MCL 339.2505(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "6 clock hours of continuing education for each year and partial year elapsed",
+        "The full 40 prelicensure hours",
+        "Nothing"
+       ],
+       "q": "Someone relicensing 2 years after expiry must complete:",
+       "why": "MCL 339.2502a(4)(c)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "1 year",
+        "5 years",
+        "Ever",
+        "At least 3 years"
+       ],
+       "q": "After revocation, a licensee may not apply again for:",
+       "why": "MCL 339.2502a(7)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "1 year",
+        "The equivalent of 3 years full-time in the business of real estate",
+        "5 years"
+       ],
+       "q": "A broker applicant's experience requirement is:",
+       "why": "MCL 339.2505(7)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any misdemeanour",
+        "A traffic offence",
+        "Embezzlement or misappropriation of funds"
+       ],
+       "q": "A broker's licence is barred outright for a conviction of:",
+       "why": "MCL 339.2505(2)."
+      }
+     ],
+     "h": "Eligibility, renewal and lapse (MCL 339.2502a, 339.2505)",
+     "l": [
+      "The department SHALL NOT ISSUE A LICENCE to an individual UNDER 18 YEARS OF AGE.",
+      "A salesperson's application must be SIGNED BY THE BROKER THAT WILL EMPLOY the applicant, and a salesperson licence is issued only to an INDIVIDUAL.",
+      "The department SHALL NOT ISSUE A BROKER'S LICENCE to an individual convicted of EMBEZZLEMENT OR MISAPPROPRIATION OF FUNDS.",
+      "A passing score on the examination, or on a portion of it, is VALID FOR 1 YEAR.",
+      "A licensee who misses renewal may be relicensed WITHOUT EXAMINATION if they apply within 3 YEARS of expiry, pay the fees, and complete 6 CLOCK HOURS of continuing education FOR EACH YEAR AND PARTIAL YEAR elapsed. After 3 years they must instead redo the prelicensure hours in the preceding 12 months or pass the examination again.",
+      "A licensee whose licence is REVOKED may not apply for a new one for AT LEAST 3 YEARS, and gets NO CREDIT for education, experience or examinations from before the revocation.",
+      "A BROKER must maintain a PLACE OF BUSINESS in Michigan and a BRANCH OFFICE LICENCE for each additional place. A branch more than 25 MILES from the nearest boundary of the main office's municipality must be under the DIRECT SUPERVISION of an associate broker, physically present on a regular basis.",
+      "A broker applicant needs the equivalent of 3 YEARS of full-time real estate experience; a salesperson earns 1 year of credit for each 12-month period in which they closed 5 OR MORE transactions."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Requires a real estate licence",
+        "Is exempt",
+        "Needs only registration"
+       ],
+       "q": "Property management for a fee in Michigan:",
+       "why": "MCL 339.2501(r), (u)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "50%",
+        "90%",
+        "75%",
+        "None"
+       ],
+       "q": "An independent contractor agreement requires at least what share of annual compensation from sales commissions?",
+       "why": "MCL 339.2501(h)(ii)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Still must supervise the licensee's regulated acts",
+        "Has no supervisory duty",
+        "Is not liable at all"
+       ],
+       "q": "An independent contractor relationship means the broker:",
+       "why": "MCL 339.2501(g)."
+      }
+     ],
+     "h": "Who needs a licence",
+     "p": [
+      "A REAL ESTATE BROKER is a person who, intending to collect a fee, sells, buys, provides market analyses of, lists or negotiates real estate; negotiates its mortgage; negotiates construction on it; leases or rents it for others; engages in PROPERTY MANAGEMENT; sells businesses or goodwill for others; or as owner engages in the sale of real estate as a PRINCIPAL VOCATION. A REAL ESTATE SALESPERSON does those things FOR COMPENSATION, EMPLOYED DIRECTLY OR INDIRECTLY BY A LICENSED BROKER (MCL 339.2501(u), (v)).",
+      "A salesperson's employment may be an INDEPENDENT CONTRACTOR RELATIONSHIP - a written agreement treating them as not an employee for tax purposes, with at least 75% of annual compensation from real estate sales commissions. That does NOT relieve the broker of the duty to SUPERVISE (MCL 339.2501(g), (h))."
+     ]
+    }
+   ],
+   "summary": "Five items. The numbers to hold: 40 hours to sit the salesperson exam, 90 for a broker, 18 hours of continuing education a cycle, and 18 years old.",
+   "topic": "mi/licensing",
+   "traps": [
+    "40 hours salesperson, 90 broker. The 4 and 9 civil rights hours sit inside those totals.",
+    "18 hours of continuing education a cycle, but the 2-hour law and 1-hour fair housing minimums are PER YEAR.",
+    "The 3-year relicensure window needs 6 hours for each year AND PARTIAL YEAR.",
+    "The 25-mile branch rule is measured from the nearest boundary of the main office's municipality."
+   ],
+   "vocab": [
+    [
+     "Clock hour",
+     "50 to 60 minutes of actual instruction."
+    ],
+    [
+     "Associate broker",
+     "Someone who qualifies as a broker but works for one."
+    ],
+    [
+     "Principal",
+     "The designated control person of a licensed business entity."
+    ],
+    [
+     "Pocket card",
+     "The card the department issues with the licence."
+    ],
+    [
+     "Branch office licence",
+     "Required for each additional place of business."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Advertising, trust money, records, inducements, stigmatized property.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "key": "mi/activities",
+   "label": "Statutory requirements on licensees",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Fair housing, land division, transfer tax, condos, landlord-tenant.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "mi/additional",
+   "label": "Additional Michigan topics",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a licence, education, renewal, transfer, offices.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "mi/licensing",
+   "label": "Licensing requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Agency disclosure, designated agency, transaction coordinator, waivers.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "mi/agency",
+   "label": "Contractual relationships",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who regulates, how they investigate, and what the penalties are.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "mi/department",
+   "label": "Department and Board",
+   "portion": "georgia"
+  }
+ ]
+}
