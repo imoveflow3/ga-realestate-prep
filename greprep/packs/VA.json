@@ -1,0 +1,1832 @@
+{
+ "abbr": "VA",
+ "bank": [
+  {
+   "answer": 3,
+   "choices": [
+    "Only until a contract is signed",
+    "Only if above the asking price",
+    "At the seller's request",
+    "In a timely manner, even when the property is already under contract"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2131(A)(2)(c).",
+   "id": "va-330c35e1",
+   "portion": "georgia",
+   "q": "A Virginia seller's agent must present written offers:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Extraordinary care",
+    "Strict liability",
+    "Ordinary care",
+    "Utmost care"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2131(A)(4).",
+   "id": "va-182c4a73",
+   "portion": "georgia",
+   "q": "The standard of care a Virginia licensee owes a client is:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any suspicion",
+    "Actual knowledge",
+    "Constructive notice",
+    "A rumour"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2131(A)(6).",
+   "id": "va-841543b5",
+   "portion": "georgia",
+   "q": "Material facts must be disclosed to the client where the licensee has:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At the broker's discretion",
+    "Where the law provides otherwise or the client consents in writing",
+    "Once the deal closes",
+    "After one year"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2131(A)(3).",
+   "id": "va-eac84df6",
+   "portion": "georgia",
+   "q": "Confidential client information may be released:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must keep marketing in all cases",
+    "Need not seek additional offers unless the agreement says so",
+    "Must withdraw the listing"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2131(A)(2)(a).",
+   "id": "va-3364ac16",
+   "portion": "georgia",
+   "q": "While a property is under a contract of sale, the licensee:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In a timely manner",
+    "At closing only",
+    "Annually",
+    "On written demand only"
+   ],
+   "concept": "Virginia seller duties",
+   "difficulty": 3,
+   "explain": "Va. Code 54.1-2131(A)(5).",
+   "id": "va-1beee556",
+   "portion": "georgia",
+   "q": "A Virginia licensee must account for the client's money:",
+   "sub": "va/agency|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Full fiduciary duties",
+    "No duty at all",
+    "Honest treatment and no knowingly false information",
+    "Confidentiality"
+   ],
+   "concept": "Virginia customers",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2131(B).",
+   "id": "va-b77f4bf7",
+   "portion": "georgia",
+   "q": "A Virginia seller's agent owes a prospective buyer:",
+   "sub": "va/agency|Customers",
+   "subtopic": "Customers",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Both the services provided and the standard agent duties not provided",
+    "Only the services provided",
+    "Only the fee",
+    "Only the term"
+   ],
+   "concept": "Virginia limited service",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2138.1(A).",
+   "id": "va-55f0fbed",
+   "portion": "georgia",
+   "q": "A limited service agreement must list:",
+   "sub": "va/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "In the same type as the rest of the agreement",
+    "Initialled only",
+    "Read aloud",
+    "Conspicuous, in bold or all capitals, and underlined or in a separate box"
+   ],
+   "concept": "Virginia limited service",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2138.1(A).",
+   "id": "va-2d176956",
+   "portion": "georgia",
+   "q": "The limited service disclosure must be:",
+   "sub": "va/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "In any transaction, orally",
+    "In residential transactions, under a written brokerage agreement",
+    "In commercial deals only",
+    "Without any agreement"
+   ],
+   "concept": "Virginia limited service",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2138.1(A).",
+   "id": "va-d9314ecf",
+   "portion": "georgia",
+   "q": "Limited service agency is available:",
+   "sub": "va/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The fee is non-refundable",
+    "Neither the other party nor their licensee must help with the duties not performed",
+    "The agreement cannot be cancelled",
+    "The Board approves the arrangement"
+   ],
+   "concept": "Virginia limited service",
+   "difficulty": 3,
+   "explain": "Va. Code 54.1-2138.1(A).",
+   "id": "va-7ec6e684",
+   "portion": "georgia",
+   "q": "The statutory acknowledgement warns the client that:",
+   "sub": "va/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Perform all standard duties",
+    "Refuse dual agency",
+    "Notify the Board",
+    "Disclose dual agency under 54.1-2139"
+   ],
+   "concept": "Virginia limited service",
+   "difficulty": 3,
+   "explain": "Va. Code 54.1-2138.1(A).",
+   "id": "va-ab0408af",
+   "portion": "georgia",
+   "q": "A limited service agent must still:",
+   "sub": "va/agency|Limited service",
+   "subtopic": "Limited service",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Limited service agency",
+    "Subagency",
+    "Designated agency",
+    "Transaction brokerage"
+   ],
+   "concept": "Virginia designated agency",
+   "difficulty": 2,
+   "explain": "Virginia recognises dual and designated agency.",
+   "id": "va-a4329cf1",
+   "portion": "georgia",
+   "q": "Where a broker assigns one licensee to the seller and another to the buyer, that is:",
+   "sub": "va/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclosed under 54.1-2139",
+    "Prohibited",
+    "Approved by the Board",
+    "Limited to commercial deals"
+   ],
+   "concept": "Virginia dual agency",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2139.",
+   "id": "va-ae53427b",
+   "portion": "georgia",
+   "q": "Dual agency in Virginia must be:",
+   "sub": "va/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "va/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Seller warranty of condition",
+    "Strict seller liability",
+    "Buyer beware, with the buyer exercising due diligence",
+    "Agent certification"
+   ],
+   "concept": "Virginia buyer beware",
+   "difficulty": 1,
+   "explain": "Va. Code 55.1-703.",
+   "id": "va-0b2ca1d0",
+   "portion": "georgia",
+   "q": "The Virginia Residential Property Disclosure Act works on the principle of:",
+   "sub": "va/disclosures|Buyer beware",
+   "subtopic": "Buyer beware",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Whether the property is in a designated preservation area",
+    "The water quality",
+    "The flood insurance premium",
+    "The shoreline length"
+   ],
+   "concept": "Virginia chesapeake bay",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-b8937e07",
+   "portion": "georgia",
+   "q": "The Chesapeake Bay disclosure tells a buyer:",
+   "sub": "va/disclosures|Chesapeake Bay",
+   "subtopic": "Chesapeake Bay",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Commercial flight paths",
+    "Military air installation noise or accident potential zones",
+    "Airport expansion plans",
+    "Helicopter routes"
+   ],
+   "concept": "Virginia aircraft",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-97c6c6da",
+   "portion": "georgia",
+   "q": "Aircraft noise disclosure in Virginia concerns:",
+   "sub": "va/disclosures|Aircraft",
+   "subtopic": "Aircraft",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must search and report offenders",
+    "Directs the buyer to the registry rather than searching it for them",
+    "May not mention it",
+    "Must warn neighbours"
+   ],
+   "concept": "Virginia megan's law",
+   "difficulty": 1,
+   "explain": "The notice points the buyer to the registry.",
+   "id": "va-57f2896d",
+   "portion": "georgia",
+   "q": "On Megan's Law, a Virginia licensee:",
+   "sub": "va/disclosures|Megan's Law",
+   "subtopic": "Megan's Law",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The well depth",
+    "Whether a septic system has been inspected or carries operating requirements",
+    "The water bill",
+    "The sewer connection fee"
+   ],
+   "concept": "Virginia septic",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-cdea3fce",
+   "portion": "georgia",
+   "q": "Virginia septic disclosure concerns:",
+   "sub": "va/disclosures|Septic",
+   "subtopic": "Septic",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A structural defect",
+    "An unpaid lien",
+    "Events at the property rather than its physical condition",
+    "A boundary dispute"
+   ],
+   "concept": "Virginia stigmatized",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-ea5d3af6",
+   "portion": "georgia",
+   "q": "A stigmatized property is one affected by:",
+   "sub": "va/disclosures|Stigmatized",
+   "subtopic": "Stigmatized",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The packet fee and page count",
+    "The association's budget",
+    "The number of units",
+    "The timing for review and cancellation, and what constitutes delivery"
+   ],
+   "concept": "Virginia associations",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-8a168695",
+   "portion": "georgia",
+   "q": "For an association disclosure packet, the two tested points are:",
+   "sub": "va/disclosures|Associations",
+   "subtopic": "Associations",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Store fuel",
+    "House livestock",
+    "Manufacture methamphetamine",
+    "Operate a business"
+   ],
+   "concept": "Virginia methamphetamine",
+   "difficulty": 2,
+   "explain": "Va. Code 55.1-708.",
+   "id": "va-1ae007ca",
+   "portion": "georgia",
+   "q": "Virginia requires specific disclosure where a property was previously used to:",
+   "sub": "va/disclosures|Methamphetamine",
+   "subtopic": "Methamphetamine",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclosure requirements",
+    "Escrow accounts",
+    "Licensing",
+    "Fair housing"
+   ],
+   "concept": "Virginia advertising",
+   "difficulty": 2,
+   "explain": "PSI Virginia state outline, item 7.",
+   "id": "va-74a1e390",
+   "portion": "georgia",
+   "q": "Advertising rules appear in the Virginia outline under:",
+   "sub": "va/disclosures|Advertising",
+   "subtopic": "Advertising",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A full warranty of condition",
+    "A warranty of title",
+    "No representations on the matters the statute lists",
+    "A guarantee of value"
+   ],
+   "concept": "Virginia due diligence",
+   "difficulty": 3,
+   "explain": "Va. Code 55.1-703.",
+   "id": "va-9789263e",
+   "portion": "georgia",
+   "q": "Under the Act the owner makes:",
+   "sub": "va/disclosures|Due diligence",
+   "subtopic": "Due diligence",
+   "topic": "va/disclosures"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "17",
+    "19",
+    "21",
+    "18"
+   ],
+   "concept": "Virginia qualifying",
+   "difficulty": 1,
+   "explain": "PSI Virginia bulletin.",
+   "id": "va-2cd7147b",
+   "portion": "georgia",
+   "q": "The minimum age for a Virginia salesperson applicant is:",
+   "sub": "va/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Both portions",
+    "Only the state portion of the examination",
+    "Neither portion",
+    "A reciprocity interview"
+   ],
+   "concept": "Virginia qualifying",
+   "difficulty": 2,
+   "explain": "PSI Virginia bulletin.",
+   "id": "va-99ccd0b4",
+   "portion": "georgia",
+   "q": "A licensee from another state applying in Virginia takes:",
+   "sub": "va/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "90 calendar days",
+    "30 days",
+    "6 months",
+    "One year"
+   ],
+   "concept": "Virginia qualifying",
+   "difficulty": 3,
+   "explain": "Otherwise the applicant pays to be fingerprinted again.",
+   "id": "va-19e69c66",
+   "portion": "georgia",
+   "q": "After fingerprint results reach the Board, the licence application must follow within:",
+   "sub": "va/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At least 30 hours within the initial year of licensure",
+    "16 hours",
+    "45 hours within two years",
+    "None"
+   ],
+   "concept": "Virginia post-licence",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2105.01(A).",
+   "id": "va-ef3149ee",
+   "portion": "georgia",
+   "q": "Virginia post-licence education is:",
+   "sub": "va/licensing|Post-licence",
+   "subtopic": "Post-licence",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Has the licence placed on inactive status until it is completed",
+    "Loses the licence permanently",
+    "Is fined $500",
+    "Must retake the exam"
+   ],
+   "concept": "Virginia post-licence",
+   "difficulty": 2,
+   "explain": "Va. Code 54.1-2105.01(A).",
+   "id": "va-98657c9a",
+   "portion": "georgia",
+   "q": "A new salesperson who misses the post-licence deadline:",
+   "sub": "va/licensing|Post-licence",
+   "subtopic": "Post-licence",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The examination date",
+    "1 January",
+    "The date of application",
+    "The last day of the month in which the licence was issued"
+   ],
+   "concept": "Virginia post-licence",
+   "difficulty": 3,
+   "explain": "Va. Code 54.1-2105.01(A).",
+   "id": "va-19275385",
+   "portion": "georgia",
+   "q": "The one-year post-licence clock runs from:",
+   "sub": "va/licensing|Post-licence",
+   "subtopic": "Post-licence",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "24 hours",
+    "12 hours",
+    "30 hours",
+    "16 hours per licensing term"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 1,
+   "explain": "18VAC135-20-101.",
+   "id": "va-6a6b0eb6",
+   "portion": "georgia",
+   "q": "Continuing education for a Virginia salesperson is:",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "24 hours per licensing term",
+    "16 hours",
+    "30 hours",
+    "12 hours"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2105.03(A)(1).",
+   "id": "va-830fc608",
+   "portion": "georgia",
+   "q": "Continuing education for a Virginia broker is:",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "8",
+    "16",
+    "11",
+    "4"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 2,
+   "explain": "2 fair housing, 3 ethics, 2 agency, 2 contracts, 2 legal updates.",
+   "id": "va-7e3030ea",
+   "portion": "georgia",
+   "q": "How many of a salesperson's 16 hours are mandated subjects?",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three",
+    "Two",
+    "Four",
+    "One"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 2,
+   "explain": "18VAC135-20-101.",
+   "id": "va-ae599060",
+   "portion": "georgia",
+   "q": "The mandated ethics and standards of conduct hours total:",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Appraisal standards",
+    "Federal tax law",
+    "Antitrust",
+    "Flood zone areas and the National Flood Insurance Program"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 2,
+   "explain": "18VAC135-20-101.",
+   "id": "va-e2543f51",
+   "portion": "georgia",
+   "q": "The legal updates hours must include:",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Contract principles, forms, and escrow deposits and accounts",
+    "Only contract forms",
+    "Only escrow",
+    "Only negotiation"
+   ],
+   "concept": "Virginia continuing education",
+   "difficulty": 3,
+   "explain": "18VAC135-20-101.",
+   "id": "va-def0fa53",
+   "portion": "georgia",
+   "q": "The mandated contracts hours must cover:",
+   "sub": "va/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Wait until renewal",
+    "Inform the Board",
+    "Retake the state portion",
+    "Do nothing"
+   ],
+   "concept": "Virginia maintenance",
+   "difficulty": 2,
+   "explain": "Licence maintenance on the state outline.",
+   "id": "va-9cb70d32",
+   "portion": "georgia",
+   "q": "A Virginia licensee who changes firm must:",
+   "sub": "va/licensing|Maintenance",
+   "subtopic": "Maintenance",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Improper commission arrangements",
+    "Slow email replies",
+    "Weekend open houses",
+    "Advertising online"
+   ],
+   "concept": "Virginia discipline",
+   "difficulty": 2,
+   "explain": "PSI Virginia state outline.",
+   "id": "va-c8525c64",
+   "portion": "georgia",
+   "q": "Improper brokerage on the Virginia outline includes:",
+   "sub": "va/licensing|Discipline",
+   "subtopic": "Discipline",
+   "topic": "va/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Elderliness",
+    "Race",
+    "Religion",
+    "National origin"
+   ],
+   "concept": "Virginia classes",
+   "difficulty": 1,
+   "explain": "Va. Code 36-96.3(A)(1).",
+   "id": "va-4296a32d",
+   "portion": "georgia",
+   "q": "Which is protected under Virginia fair housing law but not the federal Fair Housing Act?",
+   "sub": "va/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "va/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Credit score",
+    "Occupation",
+    "Source of funds",
+    "Length of residence"
+   ],
+   "concept": "Virginia classes",
+   "difficulty": 1,
+   "explain": "Va. Code 36-96.3(A)(1).",
+   "id": "va-70246be5",
+   "portion": "georgia",
+   "q": "Virginia also protects:",
+   "sub": "va/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "va/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Political affiliation",
+    "Union membership",
+    "Gender identity and military status",
+    "Education level"
+   ],
+   "concept": "Virginia classes",
+   "difficulty": 2,
+   "explain": "Va. Code 36-96.3(A)(1).",
+   "id": "va-dec61ef8",
+   "portion": "georgia",
+   "q": "Virginia's protected classes include:",
+   "sub": "va/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "va/fair-housing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Lawful if the owner requested it",
+    "Unlawful, even without any refusal",
+    "Lawful in private sales",
+    "Lawful if not published"
+   ],
+   "concept": "Virginia practices",
+   "difficulty": 2,
+   "explain": "Va. Code 36-96.3(A)(3).",
+   "id": "va-1a86bf88",
+   "portion": "georgia",
+   "q": "An advertisement indicating a preference based on a protected class is:",
+   "sub": "va/fair-housing|Practices",
+   "subtopic": "Practices",
+   "topic": "va/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Optional",
+    "Four hours",
+    "Two mandated hours each term",
+    "One hour"
+   ],
+   "concept": "Virginia education",
+   "difficulty": 2,
+   "explain": "18VAC135-20-101.",
+   "id": "va-d826a1d9",
+   "portion": "georgia",
+   "q": "Fair housing in Virginia continuing education is:",
+   "sub": "va/fair-housing|Education",
+   "subtopic": "Education",
+   "topic": "va/fair-housing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Notice before excavation so utilities can be marked",
+    "A survey before listing",
+    "Easements to be recorded",
+    "Utility deposits"
+   ],
+   "concept": "Virginia utilities",
+   "difficulty": 1,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-779a0fce",
+   "portion": "georgia",
+   "q": "The Virginia Underground Utility Damage Prevention Act requires:",
+   "sub": "va/acts|Utilities",
+   "subtopic": "Utilities",
+   "topic": "va/acts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The Condominium Act",
+    "The Virginia Residential Landlord and Tenant Act",
+    "The POA Act",
+    "The Common Interest Communities Act"
+   ],
+   "concept": "Virginia tenancies",
+   "difficulty": 1,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-bfb77e46",
+   "portion": "georgia",
+   "q": "Residential tenancies in Virginia are mainly governed by:",
+   "sub": "va/acts|Tenancies",
+   "subtopic": "Tenancies",
+   "topic": "va/acts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The VRLTA",
+    "The Underground Utility Damage Prevention Act",
+    "The Virginia Condominium Act"
+   ],
+   "concept": "Virginia associations",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-6011fa20",
+   "portion": "georgia",
+   "q": "Unit-owner restrictions and CC&Rs fall under:",
+   "sub": "va/acts|Associations",
+   "subtopic": "Associations",
+   "topic": "va/acts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The VRLTA",
+    "The Virginia Common Interest Communities Act",
+    "The Condominium Act",
+    "The POA Act"
+   ],
+   "concept": "Virginia associations",
+   "difficulty": 3,
+   "explain": "PSI marks it broker only.",
+   "id": "va-31467c92",
+   "portion": "georgia",
+   "q": "Which appears on the Virginia BROKER outline but not the salesperson outline?",
+   "sub": "va/acts|Associations",
+   "subtopic": "Associations",
+   "topic": "va/acts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The broker's once a contract is signed",
+    "Kept separate from the broker's own funds and accounted for in a timely manner",
+    "Held personally by the listing agent",
+    "Paid to the seller at once"
+   ],
+   "concept": "Virginia protection",
+   "difficulty": 1,
+   "explain": "Va. Code 54.1-2108; 54.1-2131(A)(5).",
+   "id": "va-297fca39",
+   "portion": "georgia",
+   "q": "Escrow money held by a Virginia broker is:",
+   "sub": "va/escrow|Protection",
+   "subtopic": "Protection",
+   "topic": "va/escrow"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The two mandated contract hours of continuing education",
+    "The elective hours only",
+    "Post-licence education only",
+    "Broker education only"
+   ],
+   "concept": "Virginia education",
+   "difficulty": 2,
+   "explain": "18VAC135-20-101.",
+   "id": "va-2c1e103b",
+   "portion": "georgia",
+   "q": "Escrow deposits and accounts are a required subject in:",
+   "sub": "va/escrow|Education",
+   "subtopic": "Education",
+   "topic": "va/escrow"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Through inspection of records and audits",
+    "Only with a court order",
+    "Only after a complaint",
+    "Only at renewal"
+   ],
+   "concept": "Virginia audits",
+   "difficulty": 2,
+   "explain": "Named on the Virginia state outline.",
+   "id": "va-982c6385",
+   "portion": "georgia",
+   "q": "The Board may examine a broker's escrow records:",
+   "sub": "va/escrow|Audits",
+   "subtopic": "Audits",
+   "topic": "va/escrow"
+  }
+ ],
+ "code": "VA",
+ "diffs": {
+  "national/agency": [
+   "Virginia's LIMITED SERVICE AGENT must set out in writing not only the services provided but the standard agent duties NOT provided, conspicuously in bold or capitals (Va. Code 54.1-2138.1).",
+   "A seller's agent must present written offers in a timely manner EVEN WHEN the property is already under contract, though they need not seek further offers (54.1-2131).",
+   "The standard of care is ORDINARY care, and material facts are disclosed where the licensee has ACTUAL knowledge."
+  ],
+  "national/disclosures": [
+   "Virginia is a BUYER BEWARE state: the Residential Property Disclosure Act has the seller point the buyer to their own due diligence rather than warranting condition (Va. Code 55.1-703).",
+   "Virginia-specific disclosures include the Chesapeake Bay Preservation Act, military aircraft noise and accident potential zones, septic systems, and prior methamphetamine manufacture (55.1-708)."
+  ],
+  "national/practice": [
+   "Virginia fair housing adds ELDERLINESS, SOURCE OF FUNDS, sexual orientation, gender identity and military status to the federal classes (Va. Code 36-96.3).",
+   "Salespersons take 30 hours of post-licence education in the first year, then 16 hours each term; brokers take 24 (54.1-2105.01, 54.1-2105.03)."
+  ]
+ },
+ "name": "Virginia",
+ "pass": 0.75,
+ "portions": {
+  "georgia": {
+   "blurb": "Title 54.1 chapter 21, the Board's regulations, disclosure and Virginia fair housing.",
+   "minutes": 45,
+   "name": "Virginia state",
+   "pass": 0.75,
+   "scored": 40
+  },
+  "national": {
+   "minutes": 105,
+   "pass": 0.7,
+   "scored": 80
+  }
+ },
+ "regulator": "Virginia Real Estate Board",
+ "sources": [
+  {
+   "by": "Virginia General Assembly",
+   "name": "Code of Virginia title 54.1, chapter 21 (Real Estate)",
+   "note": "The licence law: brokerage relationships, standard agent duties, limited service agents, escrow protection.",
+   "url": "https://law.lis.virginia.gov/vacode/title54.1/chapter21/"
+  },
+  {
+   "by": "Virginia Real Estate Board",
+   "name": "18VAC135-20 (Real Estate Board regulations)",
+   "note": "Continuing education, records, escrow and standards of practice.",
+   "url": "https://law.lis.virginia.gov/admincode/title18/agency135/chapter20/"
+  },
+  {
+   "by": "Virginia General Assembly",
+   "name": "Code of Virginia title 36 and title 55.1",
+   "note": "The Virginia Fair Housing Law and the Residential Property Disclosure Act.",
+   "url": "https://law.lis.virginia.gov/vacode/title36/chapter5.1/"
+  },
+  {
+   "by": "PSI Services and Virginia DPOR",
+   "name": "Virginia Real Estate Candidate Information Bulletin",
+   "note": "The blueprint: 80 national and 40 state questions, passing scores 56 and 30, and the six state categories.",
+   "url": "https://test-takers.psiexams.com/vare"
+  }
+ ],
+ "study": {
+  "va/acts": {
+   "blurb": "Condominium Act, VRLTA, POA Act, Underground Utility Damage Prevention.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Specific Virginia acts",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A survey before listing",
+        "Notice before excavation so utilities can be marked",
+        "Utility easements to be recorded"
+       ],
+       "q": "The Virginia Underground Utility Damage Prevention Act requires:",
+       "why": "Named on the Virginia state outline."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The Condominium Act",
+        "The POA Act",
+        "The Virginia Residential Landlord and Tenant Act"
+       ],
+       "q": "Tenancies in Virginia are mainly governed by:",
+       "why": "Named on the Virginia state outline."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The VRLTA",
+        "The Virginia Common Interest Communities Act",
+        "The Condominium Act"
+       ],
+       "q": "Which appears on the BROKER outline but not the salesperson outline?",
+       "why": "PSI marks it broker only."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The VRLTA",
+        "The Virginia Condominium Act",
+        "The Underground Utility Damage Prevention Act"
+       ],
+       "q": "Unit-owner restrictions and CC&Rs fall under:",
+       "why": "Named on the Virginia state outline."
+      }
+     ],
+     "h": "The four acts",
+     "l": [
+      "The VIRGINIA CONDOMINIUM ACT and its regulations - CC&Rs, definitions and unit-owner restrictions.",
+      "The VIRGINIA RESIDENTIAL LANDLORD AND TENANT ACT (VRLTA) - the statute governing most residential tenancies.",
+      "The VIRGINIA PROPERTY OWNERS' ASSOCIATION ACT - governing POAs outside the condominium regime, and the disclosure packet a buyer receives.",
+      "The VIRGINIA UNDERGROUND UTILITY DAMAGE PREVENTION ACT - the 'call before you dig' law requiring notice before excavation so utilities can be marked.",
+      "The VIRGINIA COMMON INTEREST COMMUNITIES ACT appears on the BROKER outline only."
+     ]
+    }
+   ],
+   "summary": "Four items covering four named Virginia statutes. Worth knowing what each one is for rather than its detail.",
+   "topic": "va/acts",
+   "traps": [
+    "VRLTA governs tenancies; the POA Act governs owners' associations. Different statutes.",
+    "Common Interest Communities Act is broker-only on the outline."
+   ],
+   "vocab": [
+    [
+     "VRLTA",
+     "Virginia Residential Landlord and Tenant Act."
+    ],
+    [
+     "POA",
+     "Property Owners' Association."
+    ],
+    [
+     "CC&Rs",
+     "Covenants, conditions and restrictions."
+    ],
+    [
+     "Miss Utility",
+     "The notification system behind the underground utility law."
+    ]
+   ]
+  },
+  "va/agency": {
+   "blurb": "Standard and limited service agents, dual and designated agency, duties.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Present it. Seeking more offers is optional; presenting one that arrives is not.",
+     "s": "A listed house is under contract; a second buyer submits a written offer.",
+     "t": "Under contract, new offer",
+     "w": [
+      "The licensee must receive and present written offers in a timely manner even when the property is already under contract.",
+      "But the licensee is not obliged to go looking for further offers unless the agreement says so."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency definitions & relationships",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "In a timely manner, even when the property is already under contract",
+        "Only until a contract is signed",
+        "Only above the asking price"
+       ],
+       "q": "A Virginia seller's agent must present written offers:",
+       "why": "Va. Code 54.1-2131(A)(2)(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Extraordinary care",
+        "Strict liability",
+        "Ordinary care",
+        "Best efforts without limit"
+       ],
+       "q": "The standard of care a Virginia licensee owes a client is:",
+       "why": "Va. Code 54.1-2131(A)(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Any suspicion",
+        "Actual knowledge",
+        "Constructive notice"
+       ],
+       "q": "Material facts must be disclosed to the client where the licensee has:",
+       "why": "Va. Code 54.1-2131(A)(6)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The seller's written consent, or where the law provides otherwise",
+        "The broker's decision",
+        "The passage of time"
+       ],
+       "q": "Confidentiality may be released by:",
+       "why": "Va. Code 54.1-2131(A)(3)."
+      }
+     ],
+     "h": "The standard agent's duties to a seller (54.1-2131)",
+     "l": [
+      "Perform in accordance with the terms of the brokerage agreement.",
+      "PROMOTE THE SELLER'S INTERESTS: market the property per the agreement, seeking a sale at the agreed price and terms or terms acceptable to the seller; assist in drafting and negotiating offers, counteroffers, amendments and addenda; receive and present WRITTEN offers and counteroffers in a timely manner EVEN WHEN THE PROPERTY IS ALREADY UNDER CONTRACT; and give reasonable assistance to satisfy the seller's contract obligations and reach settlement.",
+      "A licensee is NOT obliged to seek additional offers while the property is under a contract of sale, unless the brokerage agreement or the contract says so.",
+      "MAINTAIN CONFIDENTIALITY of all personal and financial information received during the relationship, and anything else the client asks be kept confidential, unless the law provides otherwise or the seller consents in writing.",
+      "EXERCISE ORDINARY CARE.",
+      "ACCOUNT in a timely manner for money and property in which the seller has or may have an interest.",
+      "Disclose to the seller MATERIAL FACTS related to the property or the transaction of which the licensee has ACTUAL KNOWLEDGE.",
+      "Comply with the article, fair housing law and other applicable law."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Full fiduciary duties",
+        "No duty whatever",
+        "Honest treatment and no knowingly false information"
+       ],
+       "q": "A seller's agent owes a prospective buyer:",
+       "why": "Va. Code 54.1-2131(B)."
+      }
+     ],
+     "h": "Duties to the other side",
+     "p": [
+      "Licensees must treat ALL PROSPECTIVE BUYERS HONESTLY and must not KNOWINGLY give them false information. That duty runs to customers as well as clients, and sits alongside the agent's loyalty to the client."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Only the services provided",
+        "Both the services provided and the standard agent duties not provided",
+        "Only the fee"
+       ],
+       "q": "A limited service agreement must list:",
+       "why": "Va. Code 54.1-2138.1(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Conspicuous, in bold or capitals, and underlined or boxed",
+        "In the same type as the rest",
+        "Initialled only"
+       ],
+       "q": "The limited service disclosure must be:",
+       "why": "Va. Code 54.1-2138.1(A)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The fee is non-refundable",
+        "The agreement cannot be cancelled",
+        "Neither the other party nor their licensee must help with the duties not performed"
+       ],
+       "q": "The statutory acknowledgement warns the client that:",
+       "why": "Va. Code 54.1-2138.1(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "In any transaction, orally",
+        "In residential real estate transactions, under a written agreement",
+        "Only in commercial deals"
+       ],
+       "q": "Limited service agency is available:",
+       "why": "Va. Code 54.1-2138.1(A)."
+      }
+     ],
+     "h": "The limited service agent (54.1-2138.1)",
+     "l": [
+      "A licensee may act as a LIMITED SERVICE AGENT in a residential transaction ONLY under a WRITTEN brokerage agreement that: (i) discloses the licensee is acting as a limited service agent; (ii) lists the SPECIFIC SERVICES the licensee WILL provide; and (iii) lists the SPECIFIC STANDARD AGENT DUTIES the licensee WILL NOT provide.",
+      "That disclosure must be CONSPICUOUS and printed in BOLD LETTERING or ALL CAPITALS, and either UNDERLINED or IN A SEPARATE BOX.",
+      "The Act prints acknowledgement language that, used substantially, satisfies the requirement - including that NEITHER the other party NOR the other party's licensee is under any legal obligation to help with the duties the limited service agent is not performing.",
+      "A limited service agent must still disclose DUAL AGENCY under 54.1-2139."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Designated agency",
+        "Limited service agency",
+        "Subagency"
+       ],
+       "q": "Where a broker assigns one licensee to the seller and another to the buyer, that is:",
+       "why": "Virginia recognises both dual and designated agency."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Prohibited",
+        "Disclosed under 54.1-2139",
+        "Approved by the Board"
+       ],
+       "q": "Dual agency in Virginia must be:",
+       "why": "Va. Code 54.1-2139."
+      }
+     ],
+     "h": "Dual and designated agency",
+     "p": [
+      "Virginia recognises DUAL AGENCY, where one licensee represents both parties, and DESIGNATED AGENCY, where the broker assigns different licensees to each client. Both require disclosure under 54.1-2139. The outline also covers BROKER-SALESPERSON relationships and compensation, document handling (delivery and leaving copies), duties to client versus customer, misrepresentation and omissions, brokerage agreements, and UNREPRESENTED PARTIES."
+     ]
+    }
+   ],
+   "summary": "Twelve items, the biggest category. Virginia's own invention is the LIMITED SERVICE AGENT, who must list in writing not only what they will do but which standard agent duties they will NOT do.",
+   "topic": "va/agency",
+   "traps": [
+    "Offers are presented even when the property is already under contract - that is explicit in the statute.",
+    "Ordinary care, not extraordinary care.",
+    "A limited service agreement lists the duties NOT provided. That omission list is the point.",
+    "Confidentiality survives unless the law or the client's written consent releases it."
+   ],
+   "vocab": [
+    [
+     "Standard agent",
+     "A licensee owing the full statutory duties."
+    ],
+    [
+     "Limited service agent",
+     "A licensee who contracts out of named standard duties, in writing."
+    ],
+    [
+     "Designated agency",
+     "Different licensees of one broker assigned to each client."
+    ],
+    [
+     "Brokerage agreement",
+     "The written agreement engaging the licensee."
+    ],
+    [
+     "Ordinary care",
+     "The statutory standard of care in Virginia."
+    ]
+   ]
+  },
+  "va/disclosures": {
+   "blurb": "Buyer beware, Chesapeake Bay, aircraft noise, septic, HOA, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "examples": [],
+   "ga": [],
+   "label": "Disclosure requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Buyer beware, with the buyer exercising due diligence",
+        "Seller warranty of condition",
+        "Strict seller liability"
+       ],
+       "q": "The Virginia Residential Property Disclosure Act works on the principle of:",
+       "why": "Va. Code 55.1-703."
+      }
+     ],
+     "h": "Buyer beware and due diligence",
+     "p": [
+      "Virginia's Residential Property Disclosure Act (title 55.1, chapter 7) does not make the seller warrant the condition of the house. The seller gives a disclosure statement telling the buyer to EXERCISE WHATEVER DUE DILIGENCE THE BUYER THINKS NECESSARY, and the Act then lists matters on which the owner makes NO REPRESENTATIONS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Whether the property is in a designated preservation area",
+        "The water quality",
+        "The flood insurance premium"
+       ],
+       "q": "The Chesapeake Bay disclosure tells a buyer:",
+       "why": "Named on the Virginia state outline."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Must search and report offenders",
+        "Directs the buyer to the registry rather than searching it for them",
+        "May not mention it"
+       ],
+       "q": "On Megan's Law, a Virginia licensee:",
+       "why": "The notice points the buyer to the registry."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Military air installation noise or accident potential zones",
+        "Commercial flight paths only",
+        "Airport construction plans"
+       ],
+       "q": "Aircraft noise disclosure concerns:",
+       "why": "Named on the Virginia state outline."
+      }
+     ],
+     "h": "What the outline names",
+     "l": [
+      "PROPERTY DISCLOSURE, including the CHESAPEAKE BAY PRESERVATION ACT - whether the property sits in a designated preservation area.",
+      "AIRCRAFT NOISE AND CRASH disclosure - whether the property is in a military air installation noise or accident potential zone.",
+      "SEPTIC disclosure - including whether a septic system has been inspected or has operating requirements.",
+      "MEGAN'S LAW - the sex offender registry notice; the buyer is directed to the registry rather than the licensee searching it.",
+      "STIGMATIZED PROPERTIES - facts about events at the property as opposed to its physical condition.",
+      "HOA AND POA DISCLOSURES, with TIMING FOR REVIEW AND CANCELLATION and what constitutes DELIVERY.",
+      "ADVERTISING RULES."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Store fuel",
+        "Manufacture methamphetamine",
+        "House livestock"
+       ],
+       "q": "Virginia requires specific disclosure where a property was previously used to:",
+       "why": "Va. Code 55.1-708."
+      }
+     ],
+     "h": "Methamphetamine (55.1-708)",
+     "p": [
+      "Virginia also requires disclosure where the property was PREVIOUSLY USED TO MANUFACTURE METHAMPHETAMINE and has not been cleaned up in accordance with the applicable guidelines."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The packet fee and page count",
+        "The timing for review and cancellation, and what constitutes delivery",
+        "The association's budget"
+       ],
+       "q": "For an association disclosure packet, the two tested points are:",
+       "why": "Named on the Virginia state outline."
+      }
+     ],
+     "h": "Association disclosure timing",
+     "p": [
+      "For HOA and POA disclosure packets the exam cares about TIMING - how long the buyer has to review and cancel - and what counts as DELIVERY of the packet. Those two points decide whether a cancellation is effective."
+     ]
+    }
+   ],
+   "summary": "Ten items. Virginia's disclosure law runs on BUYER BEWARE: the seller discloses that the buyer must investigate, and the statute lists the specific things nobody is required to tell you.",
+   "topic": "va/disclosures",
+   "traps": [
+    "Virginia is buyer beware; the seller is not warranting condition.",
+    "Megan's Law directs the buyer to the registry - the licensee does not run searches.",
+    "Chesapeake Bay, aircraft noise and septic are all Virginia-specific disclosure headings.",
+    "Methamphetamine manufacture has its own statutory disclosure."
+   ],
+   "vocab": [
+    [
+     "Residential Property Disclosure Act",
+     "Virginia's buyer-beware disclosure statute."
+    ],
+    [
+     "Chesapeake Bay Preservation Area",
+     "A designated area with land use restrictions."
+    ],
+    [
+     "Accident potential zone",
+     "A military airfield zone affecting nearby land."
+    ],
+    [
+     "Stigmatized property",
+     "Property affected by events rather than physical defects."
+    ],
+    [
+     "Disclosure packet",
+     "The HOA or POA documents given to a buyer."
+    ]
+   ]
+  },
+  "va/escrow": {
+   "blurb": "Holding and protecting money that belongs to others.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [],
+   "ga": [],
+   "label": "Escrow accounts",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The broker's once a contract is signed",
+        "Kept separate from the broker's own funds and accounted for in a timely manner",
+        "Held by the listing agent personally"
+       ],
+       "q": "Escrow money held by a Virginia broker is:",
+       "why": "Va. Code 54.1-2108; 54.1-2131(A)(5)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The elective hours only",
+        "The two mandated contract hours of continuing education",
+        "Post-licence education only"
+       ],
+       "q": "Escrow deposits and accounts are a required subject in:",
+       "why": "18VAC135-20-101."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only with a court order",
+        "Only after a complaint",
+        "Through inspection of records and audits"
+       ],
+       "q": "The Board may examine a broker's escrow records:",
+       "why": "Named on the Virginia state outline."
+      }
+     ],
+     "h": "Protecting escrow funds (54.1-2108)",
+     "l": [
+      "The Code has a dedicated section on the PROTECTION OF ESCROW FUNDS held by a broker.",
+      "Escrow money is held for the parties, kept separate from the broker's own funds, and accounted for in a timely manner.",
+      "Record keeping and the Board's INSPECTION OF RECORDS AND AUDITS reach the escrow account as well as the transaction file.",
+      "Continuing education reinforces it: two mandated hours on real estate contracts must cover ESCROW DEPOSITS AND ACCOUNTS."
+     ]
+    }
+   ],
+   "summary": "Only two items, but they are easy marks. Escrow money belongs to someone else, and Virginia protects it by statute.",
+   "topic": "va/escrow",
+   "traps": [
+    "Escrow is only 2 of 40 items - do not over-study it, but do not drop the easy marks.",
+    "Timely accounting is a statutory agent duty, not just good practice."
+   ],
+   "vocab": [
+    [
+     "Escrow account",
+     "The account holding money belonging to the parties."
+    ],
+    [
+     "Audit",
+     "The Board's examination of a broker's records."
+    ],
+    [
+     "Timely accounting",
+     "The statutory duty to account for others' money promptly."
+    ]
+   ]
+  },
+  "va/fair-housing": {
+   "blurb": "Virginia's protected classes, which go well past the federal list.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Virginia Fair Housing Law",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Race",
+        "Elderliness",
+        "Religion",
+        "National origin"
+       ],
+       "q": "Which is protected under Virginia fair housing law but not the federal Fair Housing Act?",
+       "why": "Va. Code 36-96.3(A)(1)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Credit score",
+        "Occupation",
+        "Length of residence",
+        "Source of funds"
+       ],
+       "q": "Virginia also protects:",
+       "why": "Va. Code 36-96.3(A)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Political affiliation",
+        "Union membership",
+        "Gender identity and military status"
+       ],
+       "q": "Virginia's list includes:",
+       "why": "Va. Code 36-96.3(A)(1)."
+      }
+     ],
+     "h": "Virginia's protected classes (54.1 / 36-96.3)",
+     "l": [
+      "RACE",
+      "COLOR",
+      "RELIGION",
+      "NATIONAL ORIGIN",
+      "SEX",
+      "ELDERLINESS",
+      "SOURCE OF FUNDS",
+      "FAMILIAL STATUS",
+      "SEXUAL ORIENTATION",
+      "GENDER IDENTITY",
+      "MILITARY STATUS"
+     ],
+     "p": [
+      "It is an unlawful discriminatory housing practice to refuse to sell or rent after a bona fide offer, refuse to negotiate, or otherwise make unavailable or deny a dwelling to any person because of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Lawful if the owner asked for it",
+        "Lawful in private sales",
+        "Unlawful, even without a refusal"
+       ],
+       "q": "An advertisement indicating a preference based on a protected class is:",
+       "why": "Va. Code 36-96.3(A)(3)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Optional",
+        "Two mandated hours each term",
+        "Four hours"
+       ],
+       "q": "Fair housing in Virginia continuing education is:",
+       "why": "18VAC135-20-101."
+      }
+     ],
+     "h": "What else the section reaches",
+     "l": [
+      "DISCRIMINATING IN THE TERMS, CONDITIONS OR PRIVILEGES of a sale or rental, or in the services and facilities that go with it.",
+      "MAKING, PRINTING OR PUBLISHING any notice, statement or advertisement about a sale or rental indicating a preference or limitation.",
+      "Fair housing is also a mandated two hours in every licensee's continuing education."
+     ]
+    }
+   ],
+   "summary": "Four items, and the whole category rests on one list. Virginia protects several classes the federal Act does not, including ELDERLINESS and SOURCE OF FUNDS.",
+   "topic": "va/fair-housing",
+   "traps": [
+    "Elderliness and source of funds are the two most-tested Virginia additions.",
+    "Virginia also covers sexual orientation, gender identity and military status.",
+    "The advertisement itself is unlawful; no refusal is needed."
+   ],
+   "vocab": [
+    [
+     "Elderliness",
+     "A Virginia protected class based on age."
+    ],
+    [
+     "Source of funds",
+     "A Virginia protected class covering vouchers and benefits."
+    ],
+    [
+     "Bona fide offer",
+     "A genuine offer; refusing after one triggers the section."
+    ],
+    [
+     "Dwelling",
+     "The residential property the fair housing law protects."
+    ]
+   ]
+  },
+  "va/licensing": {
+   "blurb": "Qualifications, supervision, discipline, records, education, transfers.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "17",
+        "19",
+        "21",
+        "18"
+       ],
+       "q": "The minimum age for a Virginia salesperson applicant is:",
+       "why": "PSI Virginia bulletin."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Both portions",
+        "Only the state portion",
+        "Neither portion"
+       ],
+       "q": "A licensee from another state applying in Virginia takes:",
+       "why": "PSI Virginia bulletin."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "90 calendar days",
+        "30 days",
+        "6 months"
+       ],
+       "q": "After fingerprint results reach the Board, the licence application must follow within:",
+       "why": "PSI Virginia bulletin."
+      }
+     ],
+     "h": "Qualifying",
+     "l": [
+      "An applicant for the Virginia examinations must be at least 18 YEARS OLD.",
+      "They must complete the required PRE-LICENCE EDUCATION before taking the examination, or be licensed in another state - in which case they take ONLY THE STATE PORTION.",
+      "Fingerprinting is required; the licence application must reach the Board within 90 CALENDAR DAYS of the Board receiving the fingerprint results, or the applicant pays to be fingerprinted again."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "At least 30 hours within the initial year of licensure",
+        "16 hours",
+        "45 hours within two years"
+       ],
+       "q": "Virginia post-licence education is:",
+       "why": "Va. Code 54.1-2105.01(A)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Loses the licence permanently",
+        "Is fined",
+        "Has the licence placed on inactive status until it is completed"
+       ],
+       "q": "A new salesperson who misses the post-licence deadline:",
+       "why": "Va. Code 54.1-2105.01(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The exam date",
+        "The last day of the month in which the licence was issued",
+        "1 January"
+       ],
+       "q": "The one-year post-licence clock runs from:",
+       "why": "Va. Code 54.1-2105.01(A)."
+      }
+     ],
+     "h": "Post-licence education (54.1-2105.01)",
+     "p": [
+      "The Board sets a POST-LICENCE curriculum of AT LEAST 30 HOURS, required of all salespersons WITHIN THE INITIAL YEAR OF LICENSURE. A new licensee who fails to complete it within one year from the LAST DAY OF THE MONTH in which the licence was issued has the licence placed on INACTIVE STATUS until it is done."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "24 hours",
+        "12 hours",
+        "30 hours",
+        "16 hours per licensing term"
+       ],
+       "q": "Continuing education for a Virginia salesperson is:",
+       "why": "18VAC135-20-101."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "11",
+        "8",
+        "16",
+        "4"
+       ],
+       "q": "How many of those hours are mandated subjects?",
+       "why": "2 fair housing, 3 ethics, 2 agency, 2 contracts, 2 legal updates."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Flood zone areas and the National Flood Insurance Program",
+        "Appraisal standards",
+        "Tax law"
+       ],
+       "q": "The legal updates hours must include:",
+       "why": "18VAC135-20-101."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "16 hours",
+        "24 hours per licensing term",
+        "30 hours"
+       ],
+       "q": "Continuing education for a Virginia broker is:",
+       "why": "Va. Code 54.1-2105.03(A)(1)."
+      }
+     ],
+     "h": "Continuing education (54.1-2105.03; 18VAC135-20-101)",
+     "l": [
+      "SALESPERSONS: at least 16 HOURS each licensing term. 11 of those are mandated - 2 hours FAIR HOUSING, 3 hours ETHICS AND STANDARDS OF CONDUCT, 2 hours REAL ESTATE AGENCY, 2 hours REAL ESTATE CONTRACTS including contract principles, forms and ESCROW DEPOSITS AND ACCOUNTS, and 2 hours LEGAL UPDATES AND EMERGING TRENDS including FLOOD ZONE AREAS AND THE NATIONAL FLOOD INSURANCE PROGRAM. The remaining hours are electives.",
+      "BROKERS: at least 24 HOURS, with the same 11 mandated hours plus at least 8 hours relating to broker subjects."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Wait until renewal",
+        "Re-sit the examination",
+        "Inform the Board"
+       ],
+       "q": "A Virginia licensee who changes firm must:",
+       "why": "Licence maintenance on the state outline."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Slow email replies",
+        "Improper commission arrangements",
+        "Late open houses"
+       ],
+       "q": "Improper brokerage on the outline includes:",
+       "why": "PSI Virginia state outline."
+      }
+     ],
+     "h": "Supervision, records and discipline",
+     "l": [
+      "The outline covers the BROKER'S SUPERVISORY REQUIREMENTS, DISCIPLINARY PROCEDURES AND SANCTIONS, and in particular IMPROPER DEALINGS and IMPROPER BROKERAGE including commission arrangements.",
+      "It also covers INSPECTION OF RECORDS AND AUDITS and the RECORD KEEPING REQUIREMENTS behind them.",
+      "LICENCE MAINTENANCE: post-licence education, continuing education, LICENCE TRANSFER, and INFORMING THE BOARD OF CHANGES."
+     ]
+    }
+   ],
+   "summary": "Eight items. Virginia's education numbers: 60 hours to qualify, 30 hours of post-licence inside the first year, then 16 hours each renewal for a salesperson.",
+   "topic": "va/licensing",
+   "traps": [
+    "30 hours of post-licence inside the FIRST YEAR, and the clock starts at month end.",
+    "16 hours salesperson CE, 24 broker; 11 mandated either way.",
+    "The flood insurance hours sit inside the legal updates requirement.",
+    "Out-of-state licensees sit the state portion only."
+   ],
+   "vocab": [
+    [
+     "DPOR",
+     "Department of Professional and Occupational Regulation."
+    ],
+    [
+     "Real Estate Board",
+     "The Virginia board regulating licensees."
+    ],
+    [
+     "Post-licence education",
+     "The 30 hours due in the first year."
+    ],
+    [
+     "Inactive status",
+     "A licence that may not be used until a deficiency is cured."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Standard and limited service agents, dual and designated agency, duties.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "va/agency",
+   "label": "Agency definitions & relationships",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Buyer beware, Chesapeake Bay, aircraft noise, septic, HOA, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 10,
+   "key": "va/disclosures",
+   "label": "Disclosure requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Qualifications, supervision, discipline, records, education, transfers.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "va/licensing",
+   "label": "Licensing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Virginia's protected classes, which go well past the federal list.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "va/fair-housing",
+   "label": "Virginia Fair Housing Law",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Condominium Act, VRLTA, POA Act, Underground Utility Damage Prevention.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "va/acts",
+   "label": "Specific Virginia acts",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Holding and protecting money that belongs to others.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "va/escrow",
+   "label": "Escrow accounts",
+   "portion": "georgia"
+  }
+ ]
+}
