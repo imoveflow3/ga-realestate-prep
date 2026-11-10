@@ -1,0 +1,3204 @@
+{
+ "abbr": "WI",
+ "bank": [
+  {
+   "answer": 1,
+   "choices": [
+    "Ends at closing",
+    "Continues after the transaction is complete and after the firm stops providing services",
+    "Applies only to clients",
+    "Ends when the listing expires"
+   ],
+   "concept": "Wisconsin duties to parties",
+   "difficulty": 1,
+   "explain": "s. 452.133(1)(d).",
+   "id": "wi-9033714f",
+   "portion": "georgia",
+   "q": "In Wisconsin, the duty to keep a party's information confidential:",
+   "sub": "wi/agency|Duties to parties",
+   "subtopic": "Duties to parties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Timely and in writing, unless disclosure is prohibited by law",
+    "Orally at the showing",
+    "Only if the party asks",
+    "Only to clients"
+   ],
+   "concept": "Wisconsin duties to parties",
+   "difficulty": 1,
+   "explain": "s. 452.133(1)(c).",
+   "id": "wi-871ba523",
+   "portion": "georgia",
+   "q": "A material adverse fact known to the firm must be disclosed:",
+   "sub": "wi/agency|Duties to parties",
+   "subtopic": "Duties to parties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the light most favourable to its client",
+    "Without any comment",
+    "In an objective and unbiased manner, disclosing the advantages and disadvantages"
+   ],
+   "concept": "Wisconsin duties to parties",
+   "difficulty": 2,
+   "explain": "s. 452.133(1)(g).",
+   "id": "wi-60a7c331",
+   "portion": "georgia",
+   "q": "When negotiating, a Wisconsin firm must present contract proposals:",
+   "sub": "wi/agency|Duties to parties",
+   "subtopic": "Duties to parties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Any party who requests it, within a reasonable time",
+    "Clients only",
+    "The listing firm only"
+   ],
+   "concept": "Wisconsin duties to parties",
+   "difficulty": 2,
+   "explain": "s. 452.133(1)(e).",
+   "id": "wi-d88a2aa7",
+   "portion": "georgia",
+   "q": "Accurate information about market conditions is owed to:",
+   "sub": "wi/agency|Duties to parties",
+   "subtopic": "Duties to parties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Clients only",
+    "Buyers only",
+    "Every party the firm provides brokerage services to"
+   ],
+   "concept": "Wisconsin duties to parties",
+   "difficulty": 2,
+   "explain": "s. 452.133(1)(b).",
+   "id": "wi-c1903feb",
+   "portion": "georgia",
+   "q": "The duty to provide brokerage services with reasonable skill and care is owed to:",
+   "sub": "wi/agency|Duties to parties",
+   "subtopic": "Duties to parties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only the other party's interests",
+    "The firm's own interests and the interests of non-clients in the transaction",
+    "Nothing in particular"
+   ],
+   "concept": "Wisconsin duties to clients",
+   "difficulty": 1,
+   "explain": "s. 452.133(2)(a).",
+   "id": "wi-2d275f84",
+   "portion": "georgia",
+   "q": "Loyal representation in Wisconsin requires placing the client's interests ahead of:",
+   "sub": "wi/agency|Duties to clients",
+   "subtopic": "Duties to clients",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Oral if witnessed",
+    "Implied from conduct",
+    "Filed with the Board",
+    "A written agreement between a firm and a client"
+   ],
+   "concept": "Wisconsin duties to clients",
+   "difficulty": 1,
+   "explain": "s. 452.01(1m).",
+   "id": "wi-ddf7dc82",
+   "portion": "georgia",
+   "q": "A Wisconsin agency agreement must be:",
+   "sub": "wi/agency|Duties to clients",
+   "subtopic": "Duties to clients",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "To every party",
+    "To the firm's client",
+    "To the cooperating firm"
+   ],
+   "concept": "Wisconsin duties to clients",
+   "difficulty": 2,
+   "explain": "s. 452.133(2)(d).",
+   "id": "wi-908d2744",
+   "portion": "georgia",
+   "q": "The duty to negotiate is owed:",
+   "sub": "wi/agency|Duties to clients",
+   "subtopic": "Duties to clients",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Anything unfavourable to the client",
+    "Confidential information and information whose disclosure is prohibited by law",
+    "Price information"
+   ],
+   "concept": "Wisconsin duties to clients",
+   "difficulty": 3,
+   "explain": "s. 452.133(2)(b).",
+   "id": "wi-57c986ae",
+   "portion": "georgia",
+   "q": "A firm must disclose to its client information material to the transaction, except:",
+   "sub": "wi/agency|Duties to clients",
+   "subtopic": "Duties to clients",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Anyone the firm is working with",
+    "Anyone who signed a disclosure",
+    "The firm's client, or a client of a principal firm that engaged the firm as a subagent"
+   ],
+   "concept": "Wisconsin negotiating",
+   "difficulty": 1,
+   "explain": "s. 452.134(1)(b).",
+   "id": "wi-fef096b8",
+   "portion": "georgia",
+   "q": "A Wisconsin firm may negotiate on behalf of a party only where that party is:",
+   "sub": "wi/agency|Negotiating",
+   "subtopic": "Negotiating",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Yes, but it may not negotiate on that person's behalf",
+    "No, never",
+    "Yes, with full client duties"
+   ],
+   "concept": "Wisconsin negotiating",
+   "difficulty": 2,
+   "explain": "s. 452.134(1).",
+   "id": "wi-8990baa0",
+   "portion": "georgia",
+   "q": "May a firm provide brokerage services to someone with no agency agreement?",
+   "sub": "wi/agency|Negotiating",
+   "subtopic": "Negotiating",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Oral consent from one client",
+    "Board approval",
+    "The written consent of all of the firm's clients in the relationship",
+    "Nothing"
+   ],
+   "concept": "Wisconsin multiple representation",
+   "difficulty": 1,
+   "explain": "s. 452.134(2).",
+   "id": "wi-92cec966",
+   "portion": "georgia",
+   "q": "A multiple representation relationship requires:",
+   "sub": "wi/agency|Multiple representation",
+   "subtopic": "Multiple representation",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The broker's decision",
+    "The written consent of all the firm's clients in the multiple representation relationship",
+    "Consent from the seller only"
+   ],
+   "concept": "Wisconsin designated agency",
+   "difficulty": 1,
+   "explain": "s. 452.134(3)(a).",
+   "id": "wi-648f929a",
+   "portion": "georgia",
+   "q": "Designated agency in Wisconsin requires:",
+   "sub": "wi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At any time, by written notice to the firm",
+    "Only before an offer is written",
+    "Not once an offer is accepted",
+    "Never"
+   ],
+   "concept": "Wisconsin designated agency",
+   "difficulty": 2,
+   "explain": "s. 452.134(3)(a).",
+   "id": "wi-72e72258",
+   "portion": "georgia",
+   "q": "A client may withdraw consent to designated agency:",
+   "sub": "wi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only if it is neutral between the clients",
+    "Only in writing",
+    "Even if it places one of the firm's clients ahead of another"
+   ],
+   "concept": "Wisconsin designated agency",
+   "difficulty": 2,
+   "explain": "s. 452.134(3)(b).",
+   "id": "wi-97201005",
+   "portion": "georgia",
+   "q": "With designated agency in place, the negotiating licensee may give their client advice:",
+   "sub": "wi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Favours the seller",
+    "May not place any client's interests ahead of any other client's",
+    "Favours the first client signed"
+   ],
+   "concept": "Wisconsin designated agency",
+   "difficulty": 2,
+   "explain": "s. 452.134(4).",
+   "id": "wi-00c167bf",
+   "portion": "georgia",
+   "q": "In a multiple representation relationship WITHOUT designated agency, the firm:",
+   "sub": "wi/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Full client duties",
+    "Only the duties owed to all parties, not the client duties",
+    "No duties at all"
+   ],
+   "concept": "Wisconsin subagency",
+   "difficulty": 2,
+   "explain": "s. 452.133(4)(a).",
+   "id": "wi-4c77bb34",
+   "portion": "georgia",
+   "q": "A subagent owes the principal firm's clients:",
+   "sub": "wi/agency|Subagency",
+   "subtopic": "Subagency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Give advice contrary to the principal firm's clients' interests, unless required by law",
+    "Work with a buyer",
+    "Show the property"
+   ],
+   "concept": "Wisconsin subagency",
+   "difficulty": 3,
+   "explain": "s. 452.133(4)(b)(2).",
+   "id": "wi-bf1579f3",
+   "portion": "georgia",
+   "q": "A subagent may not:",
+   "sub": "wi/agency|Subagency",
+   "subtopic": "Subagency",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not later than the time the firm enters into the agency agreement",
+    "At the first showing",
+    "Before closing",
+    "With the offer"
+   ],
+   "concept": "Wisconsin disclosure",
+   "difficulty": 1,
+   "explain": "s. 452.135(2)(a).",
+   "id": "wi-50badae5",
+   "portion": "georgia",
+   "q": "The Disclosure to Clients must be provided:",
+   "sub": "wi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Answers any question",
+    "Negotiates on behalf of a party who is not the firm's client",
+    "Takes a listing"
+   ],
+   "concept": "Wisconsin disclosure",
+   "difficulty": 1,
+   "explain": "s. 452.135(1)(a).",
+   "id": "wi-1fa6a2b9",
+   "portion": "georgia",
+   "q": "The Disclosure to Customers must be provided before the firm:",
+   "sub": "wi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A binding contract",
+    "A plain-language summary of the duties owed to a customer under s. 452.133(1)",
+    "A warranty of condition"
+   ],
+   "concept": "Wisconsin disclosure",
+   "difficulty": 3,
+   "explain": "s. 452.135(1)(a).",
+   "id": "wi-6898d28c",
+   "portion": "georgia",
+   "q": "The statute describes the Disclosure to Customers as:",
+   "sub": "wi/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In the offer to purchase, option, lease or other transaction contract",
+    "In a separate side letter",
+    "Orally before writing"
+   ],
+   "concept": "Wisconsin prohibited conduct",
+   "difficulty": 1,
+   "explain": "s. 452.133(3)(b).",
+   "id": "wi-ca2dfcf5",
+   "portion": "georgia",
+   "q": "A licensee buying a listed property personally must obtain the parties' written consent:",
+   "sub": "wi/agency|Prohibited conduct",
+   "subtopic": "Prohibited conduct",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Nothing if the provider is licensed",
+    "Oral consent",
+    "Written disclosure of the compensation or the interest"
+   ],
+   "concept": "Wisconsin prohibited conduct",
+   "difficulty": 2,
+   "explain": "s. 452.133(3)(c).",
+   "id": "wi-219671d9",
+   "portion": "georgia",
+   "q": "Recommending a service provider who pays the licensee a referral fee requires:",
+   "sub": "wi/agency|Prohibited conduct",
+   "subtopic": "Prohibited conduct",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The prior written consent of all parties to the transaction",
+    "The payer's consent only",
+    "Nothing at all"
+   ],
+   "concept": "Wisconsin prohibited conduct",
+   "difficulty": 2,
+   "explain": "s. 452.133(3)(a).",
+   "id": "wi-800512b0",
+   "portion": "georgia",
+   "q": "Accepting compensation from someone other than the licensee's client or firm requires:",
+   "sub": "wi/agency|Prohibited conduct",
+   "subtopic": "Prohibited conduct",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "May proceed without disclosure",
+    "Needs the prior written consent of all parties",
+    "Is barred outright"
+   ],
+   "concept": "Wisconsin prohibited conduct",
+   "difficulty": 3,
+   "explain": "s. 452.133(3)(b).",
+   "id": "wi-0a4ce9db",
+   "portion": "georgia",
+   "q": "A licensee acting in a transaction for an entity in which they hold an interest:",
+   "sub": "wi/agency|Prohibited conduct",
+   "subtopic": "Prohibited conduct",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Supplement common law in all cases",
+    "Supersede common law duties to the extent the common law is inconsistent",
+    "Have no effect on common law"
+   ],
+   "concept": "Wisconsin common law",
+   "difficulty": 2,
+   "explain": "s. 452.139(1).",
+   "id": "wi-928a9b95",
+   "portion": "georgia",
+   "q": "Under Wisconsin law, ch. 452 duties:",
+   "sub": "wi/agency|Common law",
+   "subtopic": "Common law",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Always",
+    "Only if the client knew or should have known, or the firm repeated the client's own misrepresentation",
+    "Never"
+   ],
+   "concept": "Wisconsin common law",
+   "difficulty": 2,
+   "explain": "s. 452.139(2)(a).",
+   "id": "wi-1bcf8aca",
+   "portion": "georgia",
+   "q": "A client is liable for a firm's misrepresentation:",
+   "sub": "wi/agency|Common law",
+   "subtopic": "Common law",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A high asking price",
+    "Information showing a party is unable or does not intend to meet their contract obligations",
+    "A slow-responding buyer"
+   ],
+   "concept": "Wisconsin adverse facts",
+   "difficulty": 2,
+   "explain": "s. 452.01(1e)(b).",
+   "id": "wi-d5b7a07b",
+   "portion": "georgia",
+   "q": "Which is an adverse fact under Wisconsin law?",
+   "sub": "wi/agency|Adverse facts",
+   "subtopic": "Adverse facts",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only relevant to the appraiser",
+    "Immaterial unless visible",
+    "An adverse fact"
+   ],
+   "concept": "Wisconsin adverse facts",
+   "difficulty": 3,
+   "explain": "s. 452.01(1e)(a)(2).",
+   "id": "wi-6aab3b19",
+   "portion": "georgia",
+   "q": "A condition that significantly reduces the structural integrity of improvements is:",
+   "sub": "wi/agency|Adverse facts",
+   "subtopic": "Adverse facts",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Stop at the firm",
+    "Apply only to the supervising broker",
+    "Extend to each licensee associated with the firm who provides brokerage services to that party"
+   ],
+   "concept": "Wisconsin licensee duties",
+   "difficulty": 3,
+   "explain": "s. 452.133(4m)(a), (d).",
+   "id": "wi-5f7c9c7f",
+   "portion": "georgia",
+   "q": "A firm's duties to a party:",
+   "sub": "wi/agency|Licensee duties",
+   "subtopic": "Licensee duties",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Clients only",
+    "Every party the firm provides brokerage services to",
+    "The Board only"
+   ],
+   "concept": "Wisconsin trust funds",
+   "difficulty": 2,
+   "explain": "s. 452.133(1)(f).",
+   "id": "wi-8466d505",
+   "portion": "georgia",
+   "q": "The duty to safeguard trust funds and other property held is owed to:",
+   "sub": "wi/agency|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Within the knowledge, skills and training required for licensure",
+    "Of any kind, including legal advice",
+    "Limited to the asking price"
+   ],
+   "concept": "Wisconsin duties to clients",
+   "difficulty": 3,
+   "explain": "s. 452.133(2)(am).",
+   "id": "wi-3e9d1d3d",
+   "portion": "georgia",
+   "q": "On request, a firm must give its client information and advice on matters material to the transaction that are:",
+   "sub": "wi/agency|Duties to clients",
+   "subtopic": "Duties to clients",
+   "topic": "wi/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Advise on the legal effect of a specific contract",
+    "Give an opinion on the state of title",
+    "Give a general explanation of an approved form's provisions when completing or delivering it"
+   ],
+   "concept": "Wisconsin forms",
+   "difficulty": 1,
+   "explain": "s. 452.40(2).",
+   "id": "wi-59fff81b",
+   "portion": "georgia",
+   "q": "A Wisconsin licensee may:",
+   "sub": "wi/contracts|Forms",
+   "subtopic": "Forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The legal rights or obligations of the parties",
+    "Current market conditions",
+    "The condition of the roof"
+   ],
+   "concept": "Wisconsin forms",
+   "difficulty": 1,
+   "explain": "s. 452.40(2).",
+   "id": "wi-7ce5a9ce",
+   "portion": "georgia",
+   "q": "A licensee may NOT provide advice or opinions about:",
+   "sub": "wi/contracts|Forms",
+   "subtopic": "Forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Completing it by filling in blanks or modifying printed provisions at a party's instruction in a specific transaction",
+    "Drafting a new form",
+    "Reading the form aloud"
+   ],
+   "concept": "Wisconsin forms",
+   "difficulty": 2,
+   "explain": "s. 452.40(1)(a).",
+   "id": "wi-c34c8e1e",
+   "portion": "georgia",
+   "q": "'Use a form' in Wisconsin means:",
+   "sub": "wi/contracts|Forms",
+   "subtopic": "Forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Unauthorised practice of law",
+    "Not the provision of legal advice or opinion",
+    "Required to be done by an attorney"
+   ],
+   "concept": "Wisconsin forms",
+   "difficulty": 3,
+   "explain": "s. 452.40(2).",
+   "id": "wi-757a0ebd",
+   "portion": "georgia",
+   "q": "A supervising broker's pre-closing review is:",
+   "sub": "wi/contracts|Forms",
+   "subtopic": "Forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "WB-41 Notice Relating to Offer to Purchase",
+    "WB-44 Counter-Offer",
+    "WB-40 Amendment to Offer to Purchase",
+    "WB-46 Multiple Counter Proposal"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 1,
+   "explain": "An amendment is bilateral; a notice is unilateral.",
+   "id": "wi-975fbf8d",
+   "portion": "georgia",
+   "q": "Which form changes an accepted offer by agreement of both parties?",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "WB-11",
+    "WB-1",
+    "WB-13",
+    "WB-36"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 1,
+   "explain": "Named on the Wisconsin salesperson content outline.",
+   "id": "wi-3411a44b",
+   "portion": "georgia",
+   "q": "The buyer agency and tenant representation agreement is:",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "WB-11",
+    "WB-14",
+    "WB-13",
+    "WB-4"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 2,
+   "explain": "Named on the Wisconsin salesperson content outline.",
+   "id": "wi-406a4da1",
+   "portion": "georgia",
+   "q": "A vacant land purchase uses:",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "WB-1",
+    "WB-4",
+    "WB-14",
+    "WB-36"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 2,
+   "explain": "Named on the Wisconsin salesperson content outline.",
+   "id": "wi-ede9b07b",
+   "portion": "georgia",
+   "q": "The residential condominium listing contract is:",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A WB-41 Notice Relating to Offer to Purchase",
+    "A WB-40 Amendment",
+    "A WB-44 Counter-Offer"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 2,
+   "explain": "A notice is unilateral; an amendment needs both parties.",
+   "id": "wi-379ac0d2",
+   "portion": "georgia",
+   "q": "A party exercising a right the contract already gives them delivers:",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "WB-44 Counter-Offer only",
+    "WB-46 Multiple Counter Proposal",
+    "WB-40 Amendment"
+   ],
+   "concept": "Wisconsin wb forms",
+   "difficulty": 3,
+   "explain": "Named on the Wisconsin salesperson content outline.",
+   "id": "wi-f068e91d",
+   "portion": "georgia",
+   "q": "A seller responding to several offers at once may use:",
+   "sub": "wi/contracts|WB forms",
+   "subtopic": "WB forms",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the offer to purchase",
+    "Only the commission statement",
+    "Executed documents, transaction records, and the trust account records for the transaction"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 1,
+   "explain": "s. 452.132(4)(a).",
+   "id": "wi-1a9941d1",
+   "portion": "georgia",
+   "q": "A Wisconsin supervising broker must review, before closing:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Communicating errors apparent on the face of the document and known to the reviewer",
+    "Rewriting the contract",
+    "Approving the price"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 2,
+   "explain": "s. 452.132(4)(b).",
+   "id": "wi-1af2fc5b",
+   "portion": "georgia",
+   "q": "That review is limited to confirming the disclosure statement was given, that approved forms were used and completed consistently, and:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The broker amends the document",
+    "The transaction is voided",
+    "The licensee discusses it with the party, who decides whether to request changes"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 2,
+   "explain": "s. 452.132(6)(a).",
+   "id": "wi-9b4d3d9f",
+   "portion": "georgia",
+   "q": "When an error is communicated to the licensee:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any associated salesperson",
+    "The Board",
+    "A supervising broker who is a licensed individual broker, by a signed written delegation"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 2,
+   "explain": "s. 452.132(5)(a), (c).",
+   "id": "wi-2fe29859",
+   "portion": "georgia",
+   "q": "A licensed broker business entity must delegate supervision to:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "To only one person",
+    "Only to an attorney",
+    "To more than one supervising broker"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 3,
+   "explain": "s. 452.132(5)(d).",
+   "id": "wi-072a2805",
+   "portion": "georgia",
+   "q": "A firm may delegate the duty to supervise:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Has no supervision duty",
+    "Is itself deemed to be the supervising broker",
+    "Must close"
+   ],
+   "concept": "Wisconsin supervision",
+   "difficulty": 3,
+   "explain": "s. 452.132(5)(b).",
+   "id": "wi-925496ca",
+   "portion": "georgia",
+   "q": "A firm that is not a licensed broker business entity and names no supervising broker:",
+   "sub": "wi/contracts|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Within 30 days",
+    "Only on request",
+    "In a timely manner"
+   ],
+   "concept": "Wisconsin records",
+   "difficulty": 1,
+   "explain": "s. 452.132(6)(b).",
+   "id": "wi-b0619888",
+   "portion": "georgia",
+   "q": "A licensee must submit executed agreements, offers and leases to the firm:",
+   "sub": "wi/contracts|Records",
+   "subtopic": "Records",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must be kept on paper",
+    "Must be filed with the Board",
+    "May be retained in electronic file format"
+   ],
+   "concept": "Wisconsin records",
+   "difficulty": 2,
+   "explain": "s. 452.42(2).",
+   "id": "wi-f2cd9fc5",
+   "portion": "georgia",
+   "q": "Transaction records in Wisconsin:",
+   "sub": "wi/contracts|Records",
+   "subtopic": "Records",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The individual licensee",
+    "The closing agent",
+    "The firm"
+   ],
+   "concept": "Wisconsin records",
+   "difficulty": 2,
+   "explain": "s. 452.132(3).",
+   "id": "wi-c7738100",
+   "portion": "georgia",
+   "q": "Custody and safety of transaction documents submitted to the firm is the responsibility of:",
+   "sub": "wi/contracts|Records",
+   "subtopic": "Records",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A copy of the Board's register",
+    "A written statement of the firm's procedures for handling leases, agency agreements, offers, documents and records",
+    "A commission schedule"
+   ],
+   "concept": "Wisconsin firm procedures",
+   "difficulty": 2,
+   "explain": "s. 452.132(2)(a).",
+   "id": "wi-e769c365",
+   "portion": "georgia",
+   "q": "A firm must give each associated licensee:",
+   "sub": "wi/contracts|Firm procedures",
+   "subtopic": "Firm procedures",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Re-examine the licensee",
+    "Ensure the licensee holds a valid licence",
+    "Notify the Board"
+   ],
+   "concept": "Wisconsin firm procedures",
+   "difficulty": 3,
+   "explain": "s. 452.132(2)(c).",
+   "id": "wi-bd1503b7",
+   "portion": "georgia",
+   "q": "Before a licensee becomes associated, and at the start of each biennial licensure period, the firm must:",
+   "sub": "wi/contracts|Firm procedures",
+   "subtopic": "Firm procedures",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Where to obtain the Board's rules on conduct, ethical practices and responsibilities",
+    "The Board's enforcement statistics",
+    "The firm's tax identification number"
+   ],
+   "concept": "Wisconsin firm procedures",
+   "difficulty": 3,
+   "explain": "s. 452.132(2)(b).",
+   "id": "wi-5ad41ff6",
+   "portion": "georgia",
+   "q": "A firm must tell each associated licensee:",
+   "sub": "wi/contracts|Firm procedures",
+   "subtopic": "Firm procedures",
+   "topic": "wi/contracts"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licensee owns the property",
+    "The firm is a business enterprise and not a private party",
+    "The price is negotiable"
+   ],
+   "concept": "Wisconsin advertising",
+   "difficulty": 1,
+   "explain": "s. 452.136(2)(a).",
+   "id": "wi-6536fcb4",
+   "portion": "georgia",
+   "q": "All Wisconsin licensee advertising must clearly indicate that:",
+   "sub": "wi/ethics|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Freely",
+    "Never under any circumstances",
+    "Only with the listing firm's consent"
+   ],
+   "concept": "Wisconsin advertising",
+   "difficulty": 1,
+   "explain": "s. 452.136(3).",
+   "id": "wi-e8656404",
+   "portion": "georgia",
+   "q": "A firm may advertise a property it did not list:",
+   "sub": "wi/ethics|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Clearly identify themselves as a real estate licensee",
+    "Obtain Board approval",
+    "Use the firm name anyway"
+   ],
+   "concept": "Wisconsin advertising",
+   "difficulty": 2,
+   "explain": "s. 452.136(2)(c).",
+   "id": "wi-d4bf8efb",
+   "portion": "georgia",
+   "q": "A licensee advertising the occasional sale of their own property without the firm name must:",
+   "sub": "wi/ethics|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed to generate interest",
+    "Prohibited, though a range reflecting the agreed price is allowed",
+    "Allowed if below the agreed price"
+   ],
+   "concept": "Wisconsin advertising",
+   "difficulty": 2,
+   "explain": "s. 452.136(4).",
+   "id": "wi-a9c21c5b",
+   "portion": "georgia",
+   "q": "Advertising a price other than the one agreed with the owner is:",
+   "sub": "wi/ethics|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the licensee's own name",
+    "In the seller's name",
+    "Under the supervision of and in the name of the firm, clearly and conspicuously"
+   ],
+   "concept": "Wisconsin advertising",
+   "difficulty": 2,
+   "explain": "s. 452.136(2)(b).",
+   "id": "wi-f092a9ed",
+   "portion": "georgia",
+   "q": "An associated licensee must advertise:",
+   "sub": "wi/ethics|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licensee personally",
+    "The firm",
+    "An escrow agent",
+    "The client"
+   ],
+   "concept": "Wisconsin compensation",
+   "difficulty": 1,
+   "explain": "s. 452.19(1m)(b).",
+   "id": "wi-4121fa83",
+   "portion": "georgia",
+   "q": "Under Wisconsin law in force now, a licensee associated with a firm must have all commissions paid to:",
+   "sub": "wi/ethics|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Prohibited",
+    "Allowed under $500",
+    "Allowed with written disclosure"
+   ],
+   "concept": "Wisconsin compensation",
+   "difficulty": 1,
+   "explain": "s. 452.19(1m)(a).",
+   "id": "wi-954039c0",
+   "portion": "georgia",
+   "q": "Paying a finder's fee to an unlicensed neighbour is:",
+   "sub": "wi/ethics|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Has any licence of any kind",
+    "Is a friend of the firm",
+    "Is regularly and lawfully engaged in the brokerage business in that state"
+   ],
+   "concept": "Wisconsin compensation",
+   "difficulty": 2,
+   "explain": "s. 452.19(1m)(a).",
+   "id": "wi-ece8d715",
+   "portion": "georgia",
+   "q": "A referral fee may be paid to an out-of-state broker who:",
+   "sub": "wi/ethics|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Capped at 3%",
+    "Prohibited, and any agreement to pay it void and unenforceable",
+    "Allowed with the parties' written consent"
+   ],
+   "concept": "Wisconsin 2027 changes",
+   "difficulty": 2,
+   "explain": "s. 452.19(3), created by 2025 Wis. Act 69.",
+   "id": "wi-c412def6",
+   "portion": "georgia",
+   "q": "From 1 January 2027, firm-to-firm compensation in a one-to-four unit residential sale will be:",
+   "sub": "wi/ethics|2027 changes",
+   "subtopic": "2027 changes",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the listing contract alone",
+    "Published in the MLS",
+    "Expressly stated in the fully executed offer or option and signed by buyer and seller"
+   ],
+   "concept": "Wisconsin 2027 changes",
+   "difficulty": 2,
+   "explain": "s. 452.19(4)(a).",
+   "id": "wi-63dfda4a",
+   "portion": "georgia",
+   "q": "From 1 January 2027, a seller's agreement to pay a firm that is not the listing firm must be:",
+   "sub": "wi/ethics|2027 changes",
+   "subtopic": "2027 changes",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Will pay the buyer's closing costs",
+    "Authorises the listing firm to disclose that compensation is offered to another firm",
+    "Will accept a land contract"
+   ],
+   "concept": "Wisconsin 2027 changes",
+   "difficulty": 3,
+   "explain": "s. 452.19(4)(d).",
+   "id": "wi-5af31d9e",
+   "portion": "georgia",
+   "q": "From 1 January 2027, a listing contract must state whether the seller:",
+   "sub": "wi/ethics|2027 changes",
+   "subtopic": "2027 changes",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Removed from the MLS",
+    "Reported to DSPS",
+    "Disclosed in the advertising"
+   ],
+   "concept": "Wisconsin 2027 changes",
+   "difficulty": 3,
+   "explain": "s. 452.136(1m), created by 2025 Wis. Act 69.",
+   "id": "wi-420d7109",
+   "portion": "georgia",
+   "q": "From 1 January 2027, advertising altered using artificial intelligence so as to mislead about the property must be:",
+   "sub": "wi/ethics|2027 changes",
+   "subtopic": "2027 changes",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A $1,000 fine",
+    "A $10,000 fine",
+    "A $5,000 fine or 6 months' imprisonment or both",
+    "A civil forfeiture only"
+   ],
+   "concept": "Wisconsin penalties",
+   "difficulty": 1,
+   "explain": "s. 452.17(1).",
+   "id": "wi-2f43090a",
+   "portion": "georgia",
+   "q": "Practising real estate in Wisconsin without a licence carries a maximum of:",
+   "sub": "wi/ethics|Penalties",
+   "subtopic": "Penalties",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year has elapsed",
+    "The confinement is complete or they are released and 3 years have elapsed",
+    "Five years have elapsed"
+   ],
+   "concept": "Wisconsin penalties",
+   "difficulty": 3,
+   "explain": "s. 452.25(1)(b).",
+   "id": "wi-61c3e578",
+   "portion": "georgia",
+   "q": "An applicant convicted of a felony may ask the Board for a suitability determination once:",
+   "sub": "wi/ethics|Penalties",
+   "subtopic": "Penalties",
+   "topic": "wi/ethics"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Before the offer is written",
+    "Not later than 10 days after acceptance of the contract of sale or option contract",
+    "At closing",
+    "Within 30 days"
+   ],
+   "concept": "Wisconsin condition report",
+   "difficulty": 1,
+   "explain": "s. 709.02(1).",
+   "id": "wi-186348e4",
+   "portion": "georgia",
+   "q": "The owner must furnish a Wisconsin real estate condition report:",
+   "sub": "wi/disclosures|Condition report",
+   "subtopic": "Condition report",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "10 days after closing",
+    "2 business days after the end of the 10-day period",
+    "72 hours of the offer",
+    "5 business days"
+   ],
+   "concept": "Wisconsin condition report",
+   "difficulty": 1,
+   "explain": "s. 709.02(1).",
+   "id": "wi-218d300f",
+   "portion": "georgia",
+   "q": "A buyer who does not receive the report in time may rescind within:",
+   "sub": "wi/disclosures|Condition report",
+   "subtopic": "Condition report",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Damages",
+    "The return of any deposits or option fees paid",
+    "Specific performance",
+    "A new report"
+   ],
+   "concept": "Wisconsin condition report",
+   "difficulty": 2,
+   "explain": "s. 709.02(1).",
+   "id": "wi-d7ad467b",
+   "portion": "georgia",
+   "q": "On a valid rescission the buyer is entitled to:",
+   "sub": "wi/disclosures|Condition report",
+   "subtopic": "Condition report",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Signed it",
+    "Had it notarised",
+    "Answered, or supplied substitute information for, every item"
+   ],
+   "concept": "Wisconsin condition report",
+   "difficulty": 2,
+   "explain": "s. 709.02(1).",
+   "id": "wi-4b7741c8",
+   "portion": "georgia",
+   "q": "A condition report is complete only if the owner:",
+   "sub": "wi/disclosures|Condition report",
+   "subtopic": "Condition report",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A reserve study",
+    "An appraisal",
+    "A title commitment",
+    "An addendum naming the association and saying whether it is self-managed"
+   ],
+   "concept": "Wisconsin condition report",
+   "difficulty": 3,
+   "explain": "s. 709.02(2).",
+   "id": "wi-7a3448d5",
+   "portion": "georgia",
+   "q": "A condominium seller must also supply, at the same time:",
+   "sub": "wi/disclosures|Condition report",
+   "subtopic": "Condition report",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Happened more than 5 years ago",
+    "Had no effect on the physical condition of the property or its structures",
+    "Was not reported to police"
+   ],
+   "concept": "Wisconsin no duty",
+   "difficulty": 1,
+   "explain": "s. 452.23(2)(a).",
+   "id": "wi-cb7b6cc9",
+   "portion": "georgia",
+   "q": "A licensee need not disclose an act or occurrence at the property if it:",
+   "sub": "wi/disclosures|No duty",
+   "subtopic": "No duty",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Never",
+    "Only for structural matters",
+    "Where the licensee knows facts that contradict the report"
+   ],
+   "concept": "Wisconsin no duty",
+   "difficulty": 2,
+   "explain": "s. 452.23(2)(b), (3).",
+   "id": "wi-88e97e1c",
+   "portion": "georgia",
+   "q": "A qualified third party's written report relieves the licensee of disclosure, except:",
+   "sub": "wi/disclosures|No duty",
+   "subtopic": "No duty",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Need not be disclosed",
+    "Must always be disclosed",
+    "Must be disclosed on request"
+   ],
+   "concept": "Wisconsin no duty",
+   "difficulty": 2,
+   "explain": "s. 452.23(2)(c).",
+   "id": "wi-24930a2b",
+   "portion": "georgia",
+   "q": "The location of a nearby community-based residential facility:",
+   "sub": "wi/disclosures|No duty",
+   "subtopic": "No duty",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is strictly liable",
+    "Must indemnify the buyer",
+    "May not be held civilly liable, and good faith is presumed"
+   ],
+   "concept": "Wisconsin good faith",
+   "difficulty": 3,
+   "explain": "s. 452.23(5).",
+   "id": "wi-eb88c5cc",
+   "portion": "georgia",
+   "q": "A licensee who in good faith passes on inaccurate information from a state agency:",
+   "sub": "wi/disclosures|Good faith",
+   "subtopic": "Good faith",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must refuse to answer",
+    "Must run a registry search",
+    "Must disclose information of which they have actual knowledge"
+   ],
+   "concept": "Wisconsin registry",
+   "difficulty": 1,
+   "explain": "s. 452.24(1).",
+   "id": "wi-b1272f2c",
+   "portion": "georgia",
+   "q": "Asked about the sex offender registry, a Wisconsin licensee:",
+   "sub": "wi/disclosures|Registry",
+   "subtopic": "Registry",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Written notice that the person may get registry information from the Department of Corrections, with its phone number and website",
+    "An oral referral",
+    "A printed copy of the registry"
+   ],
+   "concept": "Wisconsin registry",
+   "difficulty": 2,
+   "explain": "s. 452.24(2).",
+   "id": "wi-4e3a227a",
+   "portion": "georgia",
+   "q": "The licensee gains immunity by timely providing:",
+   "sub": "wi/disclosures|Registry",
+   "subtopic": "Registry",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The care of an engineer",
+    "No particular standard",
+    "The care of a reasonably prudent person with the knowledge, skills and training required for licensure"
+   ],
+   "concept": "Wisconsin care",
+   "difficulty": 2,
+   "explain": "s. 452.23(4).",
+   "id": "wi-0a41c57b",
+   "portion": "georgia",
+   "q": "In making a disclosure a licensee must exercise:",
+   "sub": "wi/disclosures|Care",
+   "subtopic": "Care",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Before 1950",
+    "Before 1978",
+    "Before 1992",
+    "Before 1985"
+   ],
+   "concept": "Wisconsin lead paint",
+   "difficulty": 2,
+   "explain": "Federal law; named on the Wisconsin salesperson outline.",
+   "id": "wi-12c046fb",
+   "portion": "georgia",
+   "q": "Federal lead-based paint disclosure applies to target housing built:",
+   "sub": "wi/disclosures|Lead paint",
+   "subtopic": "Lead paint",
+   "topic": "wi/disclosures"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A non-interest-bearing trust account",
+    "An interest-bearing common trust account at an insured depository institution",
+    "The firm's operating account"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 1,
+   "explain": "s. 452.13(2)(a), (c).",
+   "id": "wi-ce8a7798",
+   "portion": "georgia",
+   "q": "Wisconsin client funds must be held in:",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The firm",
+    "The Department of Administration",
+    "The buyer",
+    "The seller"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 1,
+   "explain": "s. 452.13(2)(d).",
+   "id": "wi-9023996a",
+   "portion": "georgia",
+   "q": "The beneficial owner of the interest on a Wisconsin trust account is:",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A promissory note",
+    "An earnest money deposit",
+    "A downpayment",
+    "Other money related to a conveyance"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 2,
+   "explain": "s. 452.13(1)(a).",
+   "id": "wi-fdca9b55",
+   "portion": "georgia",
+   "q": "Which is NOT client funds in Wisconsin?",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Monthly",
+    "Annually, before 1 February",
+    "At each closing",
+    "On demand"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 2,
+   "explain": "s. 452.13(2)(e)(1).",
+   "id": "wi-38fb56db",
+   "portion": "georgia",
+   "q": "Trust account interest must be remitted:",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A surety bond",
+    "A letter authorising examination and audit of the account",
+    "Quarterly statements"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 2,
+   "explain": "s. 452.13(2)(b)(3).",
+   "id": "wi-263b1ed2",
+   "portion": "georgia",
+   "q": "A firm maintaining a trust account must furnish the department:",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Less than $100",
+    "Less than $10 before service charges",
+    "Less than $1"
+   ],
+   "concept": "Wisconsin trust accounts",
+   "difficulty": 3,
+   "explain": "s. 452.13(2)(e)(1).",
+   "id": "wi-ac2af6d0",
+   "portion": "georgia",
+   "q": "An institution need not remit trust account interest for a period if the total is:",
+   "sub": "wi/misc|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Only to the extent the firm failed to comply with its supervision obligations",
+    "Always and without limit",
+    "Never"
+   ],
+   "concept": "Wisconsin responsibility",
+   "difficulty": 1,
+   "explain": "s. 452.12(3).",
+   "id": "wi-bcc93efc",
+   "portion": "georgia",
+   "q": "A Wisconsin firm is responsible for an associated licensee's brokerage services:",
+   "sub": "wi/misc|Responsibility",
+   "subtopic": "Responsibility",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "10 days",
+    "30 days after the effective date of the change",
+    "At the next renewal",
+    "Immediately"
+   ],
+   "concept": "Wisconsin responsibility",
+   "difficulty": 2,
+   "explain": "s. 452.12(2)(c).",
+   "id": "wi-aab1b0d8",
+   "portion": "georgia",
+   "q": "A change in a business entity's business representatives must be reported within:",
+   "sub": "wi/misc|Responsibility",
+   "subtopic": "Responsibility",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "10 days after notifying the associated licensees",
+    "The same day"
+   ],
+   "concept": "Wisconsin responsibility",
+   "difficulty": 3,
+   "explain": "s. 452.12(5)(bm)(3).",
+   "id": "wi-291d833c",
+   "portion": "georgia",
+   "q": "If a firm's licence is not renewed, notices of termination must be filed within:",
+   "sub": "wi/misc|Responsibility",
+   "subtopic": "Responsibility",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$3.75 per $500, paid by the seller",
+    "1% of value, paid by the buyer",
+    "30 cents per $500",
+    "30 cents per $100 of value or fraction of $100, imposed on the grantor"
+   ],
+   "concept": "Wisconsin transfer fee",
+   "difficulty": 1,
+   "explain": "s. 77.22(1).",
+   "id": "wi-fac4313b",
+   "portion": "georgia",
+   "q": "The Wisconsin real estate transfer fee is:",
+   "sub": "wi/misc|Transfer fee",
+   "subtopic": "Transfer fee",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "The grantor alone",
+    "The register of deeds",
+    "The closing agent",
+    "Both the grantor and the grantee"
+   ],
+   "concept": "Wisconsin transfer fee",
+   "difficulty": 2,
+   "explain": "s. 77.22(1).",
+   "id": "wi-8dd00ef9",
+   "portion": "georgia",
+   "q": "The real estate transfer return must be signed by:",
+   "sub": "wi/misc|Transfer fee",
+   "subtopic": "Transfer fee",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Presumed individual property",
+    "Presumed to be marital property, with each spouse holding a present undivided one-half interest",
+    "Held as joint tenants by law"
+   ],
+   "concept": "Wisconsin marital property",
+   "difficulty": 1,
+   "explain": "s. 766.31(2), (3).",
+   "id": "wi-f93bd893",
+   "portion": "georgia",
+   "q": "Under Wisconsin law, property of spouses is:",
+   "sub": "wi/misc|Marital property",
+   "subtopic": "Marital property",
+   "topic": "wi/misc"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Race",
+    "Religion",
+    "National origin",
+    "Lawful source of income"
+   ],
+   "concept": "Wisconsin classes",
+   "difficulty": 1,
+   "explain": "s. 106.50(1).",
+   "id": "wi-1d1ca012",
+   "portion": "georgia",
+   "q": "Which is protected by Wisconsin's open housing law but not the federal Fair Housing Act?",
+   "sub": "wi/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "wi/fair-housing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Credit history",
+    "Occupation",
+    "Status as a victim of domestic abuse, sexual assault or stalking",
+    "Length of residence"
+   ],
+   "concept": "Wisconsin classes",
+   "difficulty": 1,
+   "explain": "s. 106.50(1).",
+   "id": "wi-651adf52",
+   "portion": "georgia",
+   "q": "Wisconsin also protects:",
+   "sub": "wi/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "wi/fair-housing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Over 40",
+    "At least 18 years of age",
+    "Over 62",
+    "Any age"
+   ],
+   "concept": "Wisconsin classes",
+   "difficulty": 2,
+   "explain": "s. 106.50(1m)(am).",
+   "id": "wi-25d0323a",
+   "portion": "georgia",
+   "q": "'Age', for a member of a Wisconsin protected class, means:",
+   "sub": "wi/fair-housing|Classes",
+   "subtopic": "Classes",
+   "topic": "wi/fair-housing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Lawful puffing",
+    "Unlawful discrimination in housing",
+    "A listing error only"
+   ],
+   "concept": "Wisconsin practices",
+   "difficulty": 2,
+   "explain": "s. 106.50(2)(h).",
+   "id": "wi-b476867b",
+   "portion": "georgia",
+   "q": "Falsely telling a caller that a vacant unit is unavailable is:",
+   "sub": "wi/fair-housing|Practices",
+   "subtopic": "Practices",
+   "topic": "wi/fair-housing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Unlawful",
+    "An internal MLS matter",
+    "Lawful if members vote"
+   ],
+   "concept": "Wisconsin practices",
+   "difficulty": 2,
+   "explain": "s. 106.50(2)(i).",
+   "id": "wi-29fc684e",
+   "portion": "georgia",
+   "q": "Denying a licensee access to or membership in a multiple listing service on a protected ground is:",
+   "sub": "wi/fair-housing|Practices",
+   "subtopic": "Practices",
+   "topic": "wi/fair-housing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A written warning",
+    "A $500 forfeiture",
+    "Immediate revocation",
+    "Suspension of not less than 90 days"
+   ],
+   "concept": "Wisconsin discipline",
+   "difficulty": 1,
+   "explain": "s. 452.17(4)(a)(1); a second offence brings revocation.",
+   "id": "wi-12df8d1c",
+   "portion": "georgia",
+   "q": "A first discrimination violation by a Wisconsin licensee brings:",
+   "sub": "wi/fair-housing|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wi/fair-housing"
+  }
+ ],
+ "code": "WI",
+ "diffs": {
+  "national/agency": [
+   "Wisconsin's duties run from the FIRM. A firm owes every party honesty, reasonable skill and care, written disclosure of material adverse facts, confidentiality that SURVIVES the transaction, accurate market information, safeguarding of trust funds, and objective presentation of proposals (s. 452.133(1)).",
+   "A firm may work with anyone but may only NEGOTIATE for its own client or a principal firm's client (s. 452.134(1)).",
+   "MULTIPLE REPRESENTATION and DESIGNATED AGENCY each need separate WRITTEN consent from all of the firm's clients, and consent to designated agency may be withdrawn at any time (s. 452.134(2), (3)).",
+   "Self-dealing consent must be taken IN the offer, option or lease itself (s. 452.133(3)(b))."
+  ],
+  "national/disclosures": [
+   "The owner delivers the REAL ESTATE CONDITION REPORT within 10 DAYS of acceptance; a buyer who does not get it may rescind within 2 BUSINESS DAYS of that deadline (s. 709.02).",
+   "A licensee need NOT disclose an occurrence with no effect on physical condition, matters already in a qualified third party's written report, or the location of an adult family home, CBRF or nursing home - but must disclose facts that CONTRADICT the report (s. 452.23).",
+   "Registry questions are answered from ACTUAL KNOWLEDGE, with immunity for pointing the asker to the Department of Corrections in writing (s. 452.24)."
+  ],
+  "national/practice": [
+   "Client funds go into an INTEREST-BEARING COMMON TRUST ACCOUNT and the interest belongs to the DEPARTMENT OF ADMINISTRATION (s. 452.13).",
+   "Open housing adds LAWFUL SOURCE OF INCOME, marital status, ancestry and victim-of-abuse status, and a first discrimination violation brings a MANDATORY 90-day suspension, a second revocation (s. 106.50; s. 452.17(4)).",
+   "Licensees FILL IN board-approved forms and may give a general explanation, but may not advise on legal rights, legal effect or title (s. 452.40).",
+   "The transfer fee is 30 CENTS PER $100 of value and the GRANTOR pays it (s. 77.22).",
+   "2025 Wis. Act 69 bans firm-to-firm compensation in 1-4 unit residential sales and requires seller-paid buyer-agent compensation to sit in the executed offer - FROM 1 JANUARY 2027, not yet in force (s. 452.19(3), (4))."
+  ]
+ },
+ "name": "Wisconsin",
+ "pass": 0.75,
+ "pass_note": "Wisconsin equates its forms and reports a SCALED score on a 0-100 scale. DSPS set the passing scaled score at 75, but the handbook says that score is neither the number nor the percentage of questions answered correctly. Numeric scores are reported only to candidates who FAIL. Treat 75% here as a study target, not the state's requirement.",
+ "pass_published": false,
+ "portions": {
+  "georgia": {
+   "blurb": "Chapter 452, the REEB rules, the WB forms, condition reports and open housing.",
+   "minutes": 170,
+   "name": "Wisconsin law",
+   "scored": 99
+  },
+  "national": {
+   "blurb": "Ownership, transfer, land use, valuation, financing and the maths.",
+   "minutes": 70,
+   "name": "General practice",
+   "scored": 41
+  }
+ },
+ "regulator": "Wisconsin Real Estate Examining Board",
+ "single": true,
+ "sources": [
+  {
+   "by": "Wisconsin Legislature",
+   "name": "Wis. Stat. ch. 452, Real Estate Practice",
+   "note": "Duties of licensees, multiple representation, disclosure statements, trust accounts, advertising and compensation.",
+   "url": "https://docs.legis.wisconsin.gov/statutes/statutes/452"
+  },
+  {
+   "by": "Wisconsin Real Estate Examining Board",
+   "name": "Wis. Admin. Code ch. REEB 25, Education",
+   "note": "The 72-hour salesperson pre-licence programme and the continuing education rules.",
+   "url": "https://docs.legis.wisconsin.gov/code/admin_code/reeb/25"
+  },
+  {
+   "by": "Wisconsin Legislature",
+   "name": "Wis. Stat. ch. 709, s. 106.50, s. 77.22 and s. 766.31",
+   "note": "The real estate condition report, open housing, the transfer fee and marital property.",
+   "url": "https://docs.legis.wisconsin.gov/statutes/statutes/709"
+  },
+  {
+   "by": "Wisconsin DSPS",
+   "name": "Real Estate Continuing Education",
+   "note": "The Board's own published 18-hour biennial requirement: 12 mandatory hours plus 6 electives.",
+   "url": "https://dsps.wi.gov/credentialing/real-estate-continuing-education/"
+  },
+  {
+   "by": "Pearson VUE and Wisconsin DSPS",
+   "name": "Wisconsin Real Estate Candidate Handbook and Content Outlines",
+   "note": "140 scored items, 4 hours, a scaled passing score of 75, and the Wisconsin outline.",
+   "url": "https://www.pearsonvue.com/us/en/wi/realestate.html"
+  }
+ ],
+ "study": {
+  "wi/agency": {
+   "blurb": "Duties to parties and clients, multiple representation, the WB agency forms.",
+   "counts_on_exam": true,
+   "exam_questions": 32,
+   "examples": [
+    {
+     "k": "Consent to multiple representation and consent to designated agency are two separate consents.",
+     "s": "Your firm lists a house and also has a buyer client who wants it. Both consent in writing to multiple representation but the seller refuses designated agency.",
+     "t": "Two clients, one firm",
+     "w": [
+      "Multiple representation is allowed because both clients consented in writing.",
+      "Designated agency is NOT available without the consent of all the firm's clients in the relationship.",
+      "So the firm and its licensees may not place either client's interests ahead of the other's in the negotiations."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Ends at closing",
+        "Continues after the transaction is complete and after the firm stops providing services",
+        "Applies only to clients"
+       ],
+       "q": "Wisconsin's duty of confidentiality to a party:",
+       "why": "s. 452.133(1)(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Timely and in writing, where the firm knows it and the party cannot discover it by reasonably vigilant observation",
+        "Orally at the showing",
+        "Only if the party asks"
+       ],
+       "q": "A material adverse fact must be disclosed:",
+       "why": "s. 452.133(1)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "In an objective and unbiased manner, disclosing advantages and disadvantages",
+        "In the light most favourable to its client",
+        "Without comment"
+       ],
+       "q": "When negotiating, a firm must present contract proposals:",
+       "why": "s. 452.133(1)(g)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Clients only",
+        "Any party who requests it, within a reasonable time",
+        "Only the seller"
+       ],
+       "q": "Accurate information about market conditions is owed to:",
+       "why": "s. 452.133(1)(e)."
+      }
+     ],
+     "h": "Duties to ALL parties (s. 452.133(1))",
+     "l": [
+      "The duty to provide brokerage services HONESTLY AND FAIRLY.",
+      "The duty to provide them with REASONABLE SKILL AND CARE.",
+      "The duty to TIMELY DISCLOSE IN WRITING all MATERIAL ADVERSE FACTS the firm knows and the party does not know or cannot discover through reasonably vigilant observation, unless disclosure is prohibited by law.",
+      "The duty to KEEP CONFIDENTIAL any information given in confidence, or that the firm knows a reasonable person would want kept confidential - and it CONTINUES AFTER the transaction is complete and after the firm stops providing services.",
+      "The duty to provide ACCURATE INFORMATION ABOUT MARKET CONDITIONS within a reasonable time of a request.",
+      "The duty to SAFEGUARD TRUST FUNDS and other property held.",
+      "When negotiating for a party, the duty to present contract proposals in an OBJECTIVE AND UNBIASED manner and to disclose the ADVANTAGES AND DISADVANTAGES of the proposals."
+     ],
+     "p": [
+      "A firm providing brokerage services to a party owes that party, client or not:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Only the other party's interests",
+        "Nobody's",
+        "The firm's own interests and the interests of non-clients"
+       ],
+       "q": "A client's interests must be placed ahead of:",
+       "why": "s. 452.133(2)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "In writing",
+        "Oral if witnessed",
+        "Implied by conduct"
+       ],
+       "q": "An agency agreement in Wisconsin must be:",
+       "why": "s. 452.01(1m)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "To its client",
+        "To every party",
+        "To the other firm"
+       ],
+       "q": "A firm owes the duty to negotiate:",
+       "why": "s. 452.133(2)(d)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Place the client's interests ahead of its own",
+        "Disclose the client's confidential information to advance the client's position",
+        "Negotiate for the client"
+       ],
+       "q": "Which may a firm NOT do for a client?",
+       "why": "s. 452.133(2)(b) carves out confidential information."
+      }
+     ],
+     "h": "Extra duties to CLIENTS (s. 452.133(2))",
+     "l": [
+      "LOYAL REPRESENTATION: placing the client's interests ahead of the FIRM'S OWN interests, and ahead of the interests of non-clients in the transaction by not disclosing to them information or advice contrary to the client's interests unless the law requires it.",
+      "On request, INFORMATION AND ADVICE on matters material to the client's transaction that are within the knowledge, skills and training required for a licence.",
+      "DISCLOSURE of all information known to the firm that is material to the transaction and not known to or discoverable by the client, except confidential information and information whose disclosure is prohibited.",
+      "FULFILLING the obligations of the agency agreement and any client order within its scope, so long as not inconsistent with another duty under the chapter.",
+      "The duty to NEGOTIATE on behalf of the client.",
+      "An AGENCY AGREEMENT is a WRITTEN agreement between a firm and a client authorising the firm to provide brokerage services (s. 452.01(1m))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Anyone it is working with",
+        "Anyone who signs a disclosure",
+        "The firm's client, or a client of a principal firm that engaged the firm as a subagent"
+       ],
+       "q": "A firm may negotiate on behalf of a party only if that party is:",
+       "why": "s. 452.134(1)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Oral consent",
+        "Board approval",
+        "The written consent of all of the firm's clients in it",
+        "Nothing"
+       ],
+       "q": "A multiple representation relationship requires:",
+       "why": "s. 452.134(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "At any time, by written notice to the firm",
+        "Only before an offer",
+        "Not at all"
+       ],
+       "q": "A client may withdraw consent to designated agency:",
+       "why": "s. 452.134(3)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Favours the seller",
+        "May not place any client's interests ahead of any other's",
+        "Favours whoever signed first"
+       ],
+       "q": "Without designated agency, a firm in multiple representation:",
+       "why": "s. 452.134(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Full client duties",
+        "Only the duties owed to all parties, not the client duties",
+        "No duties at all"
+       ],
+       "q": "A subagent owes the principal firm's clients:",
+       "why": "s. 452.133(4)(a)."
+      }
+     ],
+     "h": "Who may negotiate, and multiple representation",
+     "l": [
+      "A firm may provide BROKERAGE SERVICES to any party whether or not there is an agency agreement, but may NOT NEGOTIATE on behalf of a party unless that party is the firm's CLIENT or a client of a PRINCIPAL FIRM that engaged it as a SUBAGENT (s. 452.134(1)).",
+      "A firm may not provide services in a MULTIPLE REPRESENTATION RELATIONSHIP unless ALL of the firm's clients in it have CONSENTED IN WRITING (s. 452.134(2)).",
+      "DESIGNATED AGENCY within a multiple representation relationship also needs the WRITTEN CONSENT of all the firm's clients in that relationship, and a client may WITHDRAW consent by written notice AT ANY TIME (s. 452.134(3)(a)).",
+      "With designated agency, the licensee negotiating for a client may give that client information, opinions and advice to assist in the negotiation EVEN IF it places one client's interests ahead of another client's (s. 452.134(3)(b)).",
+      "WITHOUT designated agency - or if consent is withdrawn - the firm and its licensees may NOT place the interests of any client ahead of any other in the negotiations (s. 452.134(4)).",
+      "A SUBAGENT owes all parties the duties in s. 452.133(1) but does NOT owe the principal firm's clients the client duties in sub. (2). A subagent may not put its own interests ahead of the principal firm's clients, nor give advice contrary to their interests unless required by law (s. 452.133(4))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "At the first showing",
+        "Before closing",
+        "With the offer",
+        "Not later than the time the firm enters into the agency agreement"
+       ],
+       "q": "The Disclosure to Clients must be given:",
+       "why": "s. 452.135(2)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Any conversation at all",
+        "The firm negotiates on behalf of a party who is not its client",
+        "The listing is taken"
+       ],
+       "q": "The Disclosure to Customers must be given before:",
+       "why": "s. 452.135(1)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A contract",
+        "A plain-language summary of the duties to a customer under s. 452.133(1)",
+        "A warranty of condition"
+       ],
+       "q": "The Disclosure to Customers is described in the statute as:",
+       "why": "s. 452.135(1)(a)."
+      }
+     ],
+     "h": "The disclosure statements (s. 452.135)",
+     "l": [
+      "A firm may NOT NEGOTIATE on behalf of a party who is NOT its client unless it first gives that party a copy of the statutory DISCLOSURE TO CUSTOMERS - which recites the duties owed to a customer under s. 452.133(1) and tells the reader to go to an attorney, tax advisor or home inspector for that advice.",
+      "A firm must give a CLIENT a copy of the statutory DISCLOSURE TO CLIENTS NOT LATER THAN the time the firm ENTERS INTO THE AGENCY AGREEMENT with the client.",
+      "A SUBAGENT must give the Disclosure to Customers to any person who is not the principal firm's client and who receives brokerage services from the subagent.",
+      "The supervising broker's pre-closing review must CONFIRM that the written disclosure statement was provided (s. 452.132(4)(b))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "In a separate letter",
+        "Orally before writing",
+        "In the offer to purchase, option, lease or other transaction contract"
+       ],
+       "q": "A licensee buying a listed property personally must take the parties' written consent:",
+       "why": "s. 452.133(3)(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Nothing, if the inspector is licensed",
+        "Written disclosure of the compensation or interest",
+        "The client's oral consent"
+       ],
+       "q": "Recommending a home inspector who pays the licensee a referral fee requires:",
+       "why": "s. 452.133(3)(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only the payer's consent",
+        "Nothing",
+        "The prior written consent of all parties to the transaction"
+       ],
+       "q": "Accepting compensation from someone other than the licensee's client or firm requires:",
+       "why": "s. 452.133(3)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Only if the client knew or should have known, or the firm repeated the client's own misrepresentation",
+        "Always",
+        "Never"
+       ],
+       "q": "A client is liable for a firm's misrepresentation:",
+       "why": "s. 452.139(2)(a)."
+      }
+     ],
+     "h": "Prohibited conduct in providing brokerage services (s. 452.133(3))",
+     "l": [
+      "Accepting any FEE OR COMPENSATION related to the transaction from any person OTHER THAN the licensee's client or firm WITHOUT THE PRIOR WRITTEN CONSENT OF ALL PARTIES.",
+      "Acting in a transaction ON THE LICENSEE'S OWN BEHALF, for the licensee's IMMEDIATE FAMILY, for the licensee's FIRM, or for any entity in which the licensee has an interest, WITHOUT the prior written consent of all parties - and the consent must be taken IN THE OFFER TO PURCHASE, OPTION, LEASE OR OTHER TRANSACTION CONTRACT.",
+      "REFERRING or recommending a service provider from which the licensee may receive compensation, or in which the licensee has an interest, WITHOUT DISCLOSING THAT IN WRITING.",
+      "NEGOTIATING the sale, exchange, purchase or rental of PERSONAL PROPERTY unless related to the transaction.",
+      "COMMON LAW is superseded: the chapter's duties override inconsistent common law duties (s. 452.139(1)). A CLIENT is NOT LIABLE for a firm's misrepresentation unless the client knew or should have known, or the firm is repeating the client's own misrepresentation (s. 452.139(2)(a))."
+     ]
+    }
+   ],
+   "summary": "Thirty-two items, by far the biggest block. Wisconsin's duties run from the FIRM, not the individual, and the firm owes a short list of duties to EVERY party and a longer list to its clients.",
+   "topic": "wi/agency",
+   "traps": [
+    "Duties run from the FIRM; each associated licensee owes the same duties the firm owes.",
+    "Confidentiality survives the transaction and the relationship. It does not end at closing.",
+    "You may work with anyone, but you may only NEGOTIATE for a client or a principal firm's client.",
+    "Designated agency lets one licensee favour one client; without it, nobody is favoured.",
+    "Self-dealing consent goes IN the contract, not in a side letter."
+   ],
+   "vocab": [
+    [
+     "Firm",
+     "The licensed broker business entity or individual broker the duties run from."
+    ],
+    [
+     "Agency agreement",
+     "The written agreement authorising brokerage services for a client."
+    ],
+    [
+     "Material adverse fact",
+     "A condition significantly affecting value, structure or health, or showing a party will not perform."
+    ],
+    [
+     "Multiple representation",
+     "One firm with more than one client in the same transaction."
+    ],
+    [
+     "Designated agency",
+     "Naming individual licensees to negotiate for each client."
+    ],
+    [
+     "Subagent",
+     "A firm engaged by a principal firm to help its clients."
+    ]
+   ]
+  },
+  "wi/contracts": {
+   "blurb": "Approved forms, the WB-11 offer, counter-offers, amendments, notices.",
+   "counts_on_exam": true,
+   "exam_questions": 22,
+   "examples": [],
+   "ga": [],
+   "label": "Contract law & approved forms",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Give a general explanation of an approved form's provisions when completing or delivering it",
+        "Advise on the legal effect of the contract",
+        "Opine on the state of title"
+       ],
+       "q": "A Wisconsin licensee may:",
+       "why": "s. 452.40(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Writing a form from scratch",
+        "Filling in blanks or modifying printed provisions at a party's instruction in a specific transaction",
+        "Reading a form aloud"
+       ],
+       "q": "'Use a form' means:",
+       "why": "s. 452.40(1)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Unauthorised practice of law",
+        "Optional",
+        "Not the provision of legal advice or opinion"
+       ],
+       "q": "A supervising broker's pre-closing review is:",
+       "why": "s. 452.40(2)."
+      }
+     ],
+     "h": "Approved forms and the line you cannot cross (s. 452.40)",
+     "l": [
+      "To USE A FORM means to complete it by FILLING IN BLANKS or MODIFYING PRINTED PROVISIONS at the instruction of a party the licensee is working with or representing in a SPECIFIC TRANSACTION.",
+      "A firm and its licensees MAY use a form approved by the Board under s. 452.05(1)(b) in real estate practice.",
+      "A licensee MAY NOT provide advice or opinions about the LEGAL RIGHTS OR OBLIGATIONS of the parties, the LEGAL EFFECT of a specific contract or conveyance, or the STATE OF TITLE.",
+      "A licensee MAY give a GENERAL EXPLANATION of the provisions of an approved form, at the time of completing it or when delivering it for the seller's or buyer's acceptance.",
+      "A supervising broker's review under s. 452.132(4) is NOT the provision of legal advice."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "WB-41 Notice Relating to Offer to Purchase",
+        "WB-44 Counter-Offer",
+        "WB-40 Amendment to Offer to Purchase"
+       ],
+       "q": "Which form changes the terms of an accepted offer by agreement of both parties?",
+       "why": "An amendment is bilateral; a notice is unilateral."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "WB-40 Amendment",
+        "WB-46 Multiple Counter Proposal",
+        "WB-44 Counter-Offer"
+       ],
+       "q": "Which form does a buyer use to respond to a seller's counter with new terms?",
+       "why": "Named on the Wisconsin salesperson outline."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "WB-11",
+        "WB-36",
+        "WB-1",
+        "WB-13"
+       ],
+       "q": "The buyer agency and tenant representation agreement is:",
+       "why": "Named on the Wisconsin salesperson outline."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "WB-11",
+        "WB-14",
+        "WB-13",
+        "WB-4"
+       ],
+       "q": "A vacant land purchase uses:",
+       "why": "Named on the Wisconsin salesperson outline."
+      }
+     ],
+     "h": "The forms the outline names",
+     "l": [
+      "WB-1 Residential Listing Contract and WB-4 Residential Condominium Listing Contract.",
+      "WB-36 Buyer Agency / Tenant Representation Agreement.",
+      "WB-11 Residential Offer to Purchase, WB-13 Vacant Land Offer to Purchase and WB-14 Residential Condominium Offer to Purchase.",
+      "WB-40 Amendment to Offer to Purchase, WB-41 Notice Relating to Offer to Purchase, WB-44 Counter-Offer and WB-46 Multiple Counter Proposal.",
+      "An AMENDMENT (WB-40) changes terms by agreement of BOTH parties; a NOTICE (WB-41) is a UNILATERAL communication one party is entitled to give under the contract, such as delivering a contingency notice."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Executed documents, records and the transaction's trust account records",
+        "Only the offer",
+        "Only the commission"
+       ],
+       "q": "A supervising broker's pre-closing review covers:",
+       "why": "s. 452.132(4)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The broker corrects it",
+        "The licensee discusses it with the party, who decides whether to request changes",
+        "The closing is cancelled"
+       ],
+       "q": "If the review turns up an error on the face of a document:",
+       "why": "s. 452.132(4)(b), (6)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any associated salesperson",
+        "Nobody; the entity supervises itself",
+        "A supervising broker who is a licensed individual broker, in a signed writing"
+       ],
+       "q": "A licensed broker business entity must delegate supervision to:",
+       "why": "s. 452.132(5)(a), (c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "In electronic file format",
+        "On paper only",
+        "Only by the Board"
+       ],
+       "q": "Transaction records may be retained:",
+       "why": "s. 452.42(2)."
+      }
+     ],
+     "h": "Supervision, copies and records",
+     "l": [
+      "A FIRM must SUPERVISE the brokerage activities of each associated licensee, give each one a WRITTEN STATEMENT of the firm's procedures for handling leases, agency agreements, offers and records, tell them where to get the Board's conduct rules, and confirm each licensee holds a VALID LICENCE before association and at the start of each biennial period (s. 452.132(1), (2)).",
+      "A SUPERVISING BROKER must, BEFORE CLOSING, review all agency agreements, offers, leases and other executed documents and records, and all TRUST ACCOUNT RECORDS for the transaction. The review is LIMITED to confirming the written disclosure statement was given, confirming any applicable approved form was used and completed consistently with its structure, and COMMUNICATING any errors apparent on the face of the document (s. 452.132(4)).",
+      "The licensee must then DISCUSS any communicated error with the party, and THE PARTY decides whether to request changes (s. 452.132(6)(a)).",
+      "A licensee must submit to the firm, IN A TIMELY MANNER, all executed agreements, offers, leases and records (s. 452.132(6)(b)), and the FIRM is responsible for their custody and safety (s. 452.132(3)).",
+      "A firm that is a licensed broker business entity MUST delegate supervision to a SUPERVISING BROKER who is a licensed individual broker; the delegation is WRITTEN AND SIGNED by both. A firm may delegate to MORE THAN ONE supervising broker (s. 452.132(5)).",
+      "Licensees must RETAIN transaction documents as the Board's rules require, and records MAY be kept in ELECTRONIC form (s. 452.42)."
+     ]
+    }
+   ],
+   "summary": "Twenty-two items, most of them on the WB forms. Wisconsin licensees fill in Board-approved forms; they do not draft and they do not advise on legal rights.",
+   "topic": "wi/contracts",
+   "traps": [
+    "Fill in blanks, explain generally - never advise on legal rights, legal effect or title.",
+    "Amendment = both parties agree. Notice = one party exercising a contract right.",
+    "The supervising broker's review is narrow and does not make them the drafter."
+   ],
+   "vocab": [
+    [
+     "Approved form",
+     "A form the Real Estate Examining Board has approved for use."
+    ],
+    [
+     "Supervising broker",
+     "The licensed individual broker a firm delegates supervision to."
+    ],
+    [
+     "WB-11",
+     "The Residential Offer to Purchase."
+    ],
+    [
+     "WB-41",
+     "The unilateral Notice Relating to Offer to Purchase."
+    ]
+   ]
+  },
+  "wi/disclosures": {
+   "blurb": "The condition report, environmental items, condominiums, lead paint.",
+   "counts_on_exam": true,
+   "exam_questions": 13,
+   "examples": [
+    {
+     "k": "The clock is 10 days, then 2 business days - and the notice must be in writing.",
+     "s": "An offer is accepted on 1 March. No condition report has arrived by 11 March.",
+     "t": "No report arrives",
+     "w": [
+      "The owner's 10 days expired on 11 March.",
+      "The buyer then has 2 business days to deliver written notice of rescission.",
+      "On rescission the buyer gets back deposits and option fees."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Disclosures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Before the offer is written",
+        "At closing",
+        "Not later than 10 days after acceptance of the contract"
+       ],
+       "q": "The owner must furnish a Wisconsin real estate condition report:",
+       "why": "s. 709.02(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "10 days after closing",
+        "2 business days after the end of the 10-day period",
+        "72 hours of the offer"
+       ],
+       "q": "A buyer who never receives the report may rescind within:",
+       "why": "s. 709.02(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The return of any deposits or option fees paid",
+        "Damages",
+        "Specific performance"
+       ],
+       "q": "On rescission the buyer is entitled to:",
+       "why": "s. 709.02(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "An addendum naming the association and whether it is self-managed",
+        "A reserve study",
+        "An appraisal"
+       ],
+       "q": "A condominium seller must also supply:",
+       "why": "s. 709.02(2)."
+      }
+     ],
+     "h": "The real estate condition report (ch. 709)",
+     "l": [
+      "The OWNER must furnish the prospective buyer a COMPLETED report NOT LATER THAN 10 DAYS AFTER ACCEPTANCE of a contract of sale or option contract.",
+      "A buyer who does NOT receive the report within those 10 days may, WITHIN 2 BUSINESS DAYS after the end of the 10-day period, RESCIND by delivering WRITTEN NOTICE of rescission to the owner or the owner's agent, and is entitled to the RETURN OF ANY DEPOSITS OR OPTION FEES paid.",
+      "The report is COMPLETE only if the owner answered, or supplied the substitute information allowed by s. 709.035, for EVERY ITEM.",
+      "The owner may SUBSTITUTE written information supplied by a licensed engineer, a professional land surveyor, a structural pest control operator, a qualified third party, a contractor within their occupation, or a public agency, as long as it is furnished on time and the entry it relates to is identified.",
+      "For a CONDOMINIUM UNIT the owner must add an ADDENDUM at the same time, giving the condominium's name and creation date, the unit number, the seller or agent's contact details, and the association's name and address, whether it is SELF-MANAGED or has hired management, and a contact individual (s. 709.02(2))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Happened over 5 years ago",
+        "Had no effect on the physical condition of the property",
+        "Was never reported"
+       ],
+       "q": "A licensee need not disclose an event at the property if it:",
+       "why": "s. 452.23(2)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Never",
+        "Where the licensee knows facts that contradict the report",
+        "Only for structural items"
+       ],
+       "q": "A third-party inspection report relieves disclosure, except:",
+       "why": "s. 452.23(2)(b), (3)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Must always be disclosed",
+        "Need not be disclosed",
+        "Must be disclosed on request"
+       ],
+       "q": "The location of a nearby community-based residential facility:",
+       "why": "s. 452.23(2)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Carries no civil liability, and good faith is presumed",
+        "Is always actionable",
+        "Requires a written waiver"
+       ],
+       "q": "Passing on inaccurate information from a government agency in good faith:",
+       "why": "s. 452.23(5)."
+      }
+     ],
+     "h": "What a licensee need NOT disclose (s. 452.23(2))",
+     "l": [
+      "That the property was the SITE OF A SPECIFIC ACT OR OCCURRENCE, if it had NO EFFECT ON THE PHYSICAL CONDITION of the property or its structures.",
+      "Information about the PHYSICAL CONDITION or the transaction that is already in a WRITTEN REPORT PREPARED BY A QUALIFIED THIRD PARTY and provided to the person - a governmental agency, or anyone the licensee or a party reasonably believes has the expertise to meet industry standards for that kind of inspection.",
+      "The LOCATION of an adult family home, community-based residential facility or nursing home relative to the property.",
+      "Sex offender registry information, except as s. 452.24 requires.",
+      "BUT a licensee MUST disclose any facts they know that CONTRADICT the third-party report (s. 452.23(3)), and must exercise the care of a reasonably prudent person with the knowledge, skills and training required for licensure (s. 452.23(4)).",
+      "No licensee may disclose information whose disclosure would be UNLAWFUL DISCRIMINATION under s. 106.50 or the federal handicap provisions (s. 452.23(1)).",
+      "A licensee who in GOOD FAITH passes on information attributable to a state or local governmental or quasi-governmental body may not be held civilly liable if it turns out to be inaccurate, unless they knew it was - and good faith is PRESUMED (s. 452.23(5))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Must refuse to answer",
+        "Must run a search",
+        "Must disclose what they have actual knowledge of"
+       ],
+       "q": "A Wisconsin licensee asked about the sex offender registry:",
+       "why": "s. 452.24(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "An oral referral",
+        "A copy of the registry",
+        "Written notice that the person may get the information from the Department of Corrections, with its phone number and website"
+       ],
+       "q": "Immunity attaches if the licensee timely provides:",
+       "why": "s. 452.24(2)."
+      }
+     ],
+     "h": "The sex offender registry (s. 452.24)",
+     "l": [
+      "If a person the licensee is serving ASKS for information about whether someone must register as a sex offender, or about the registry generally, the licensee HAS A DUTY TO DISCLOSE such information IF THE LICENSEE HAS ACTUAL KNOWLEDGE of it.",
+      "The licensee is IMMUNE from liability for any act or omission related to that disclosure if they TIMELY give the person WRITTEN NOTICE that the person may obtain registry information from the DEPARTMENT OF CORRECTIONS - the notice must include the department's TELEPHONE NUMBER AND INTERNET SITE."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "The property is overpriced",
+        "A party is unable or does not intend to meet their contract obligations",
+        "The buyer is slow to respond"
+       ],
+       "q": "An adverse fact includes information that:",
+       "why": "s. 452.01(1e)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Immaterial unless structural",
+        "Only relevant to lenders",
+        "An adverse fact"
+       ],
+       "q": "A condition presenting a significant health risk to occupants is:",
+       "why": "s. 452.01(1e)(a)(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Before 1950",
+        "Before 1992",
+        "Before 1978"
+       ],
+       "q": "Federal lead-based paint disclosure applies to housing built:",
+       "why": "Federal law; named on the Wisconsin outline."
+      }
+     ],
+     "h": "Material adverse facts and environment",
+     "l": [
+      "An ADVERSE FACT is a condition or occurrence a competent licensee generally recognises as SIGNIFICANTLY AND ADVERSELY AFFECTING THE VALUE of the property, SIGNIFICANTLY REDUCING THE STRUCTURAL INTEGRITY of improvements, or PRESENTING A SIGNIFICANT HEALTH RISK to occupants - or information showing a PARTY CANNOT OR DOES NOT INTEND TO MEET their obligations (s. 452.01(1e)).",
+      "The outline's environmental items include ASBESTOS and UNDERGROUND STORAGE TANKS, and the Board's own education rule points licensees at underground storage tanks under ch. ATCP 93, FLOODPLAINS under s. 87.30, WETLANDS under s. 23.32 and FARMLAND PRESERVATION under ss. 91.60 to 91.70 (REEB 25.028(2)(g)).",
+      "The FEDERAL LEAD-BASED PAINT disclosure law applies to target housing built before 1978, and condominium disclosure requirements sit alongside the condition report addendum."
+     ]
+    }
+   ],
+   "summary": "Thirteen items. The real estate condition report drives this topic, and the rescission right attached to it is the number worth memorising.",
+   "topic": "wi/disclosures",
+   "traps": [
+    "10 days to deliver the report; 2 BUSINESS days after that window to rescind.",
+    "A third-party report shields you - unless you know something that contradicts it.",
+    "You answer registry questions from actual knowledge, and get immunity by pointing to Corrections in writing."
+   ],
+   "vocab": [
+    [
+     "Condition report",
+     "The owner's completed ch. 709 disclosure of the property's condition."
+    ],
+    [
+     "Qualified 3rd party",
+     "An agency or expert whose written report relieves the licensee."
+    ],
+    [
+     "Adverse fact",
+     "The statutory definition driving material adverse fact disclosure."
+    ],
+    [
+     "Rescission",
+     "The buyer's written cancellation and return of deposits."
+    ]
+   ]
+  },
+  "wi/ethics": {
+   "blurb": "Conduct and ethical practice rules for Wisconsin licensees.",
+   "counts_on_exam": true,
+   "exam_questions": 14,
+   "examples": [],
+   "ga": [],
+   "label": "Business ethics",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The licensee owns the property",
+        "The price is negotiable",
+        "The firm is a business enterprise and not a private party"
+       ],
+       "q": "All licensee advertising must clearly indicate that:",
+       "why": "s. 452.136(2)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Freely",
+        "Never",
+        "Only with the listing firm's consent"
+       ],
+       "q": "A firm may advertise a property it has not listed:",
+       "why": "s. 452.136(3)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Get Board approval",
+        "Clearly identify themselves as a real estate licensee",
+        "Use the firm name anyway"
+       ],
+       "q": "A licensee advertising their own home for sale without the firm name must:",
+       "why": "s. 452.136(2)(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Allowed to attract interest",
+        "Prohibited, though a range reflecting the agreed price is allowed",
+        "Allowed below the agreed price only"
+       ],
+       "q": "Advertising a price different from the one agreed with the owner is:",
+       "why": "s. 452.136(4)."
+      }
+     ],
+     "h": "Advertising (s. 452.136)",
+     "l": [
+      "A licensee MAY NOT advertise in a manner that is FALSE, DECEPTIVE OR MISLEADING.",
+      "Except for advertising the rental of real estate the licensee owns, all advertising must disclose the FIRM'S NAME exactly as printed on the licence, or a TRADE NAME previously filed with the department, and must CLEARLY INDICATE THAT THE FIRM IS A BUSINESS ENTERPRISE AND NOT A PRIVATE PARTY.",
+      "An associated licensee advertises UNDER THE SUPERVISION OF AND IN THE NAME OF THE FIRM, and the firm's name must be CLEAR AND CONSPICUOUS.",
+      "A licensee may advertise the OCCASIONAL sale of real estate the licensee owns, or occasionally solicit property for their own purchase, without the firm name, PROVIDED the advertisement CLEARLY IDENTIFIES them as a real estate licensee.",
+      "A firm may NOT ADVERTISE A PROPERTY unless it is the LISTING FIRM or it has the LISTING FIRM'S CONSENT.",
+      "A licensee may not advertise a property at a price OTHER THAN THAT AGREED WITH THE OWNER, though the price may be given as a RANGE or in general terms if it reflects the agreed price."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The licensee personally",
+        "An escrow agent",
+        "The firm"
+       ],
+       "q": "Under the law in force now, a licensee associated with a firm must have commissions paid to:",
+       "why": "s. 452.19(1m)(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Allowed under $500",
+        "Prohibited",
+        "Allowed with disclosure"
+       ],
+       "q": "Paying a finder's fee to an unlicensed neighbour is:",
+       "why": "s. 452.19(1m)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Capped at 3%",
+        "Prohibited, and an agreement to pay it is void and unenforceable",
+        "Allowed with written consent"
+       ],
+       "q": "From 1 January 2027, firm-to-firm compensation in a 1-4 unit residential sale is:",
+       "why": "s. 452.19(3), created by 2025 Wis. Act 69."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Expressly stated in the fully executed offer and signed by buyer and seller",
+        "In the listing contract only",
+        "In the MLS"
+       ],
+       "q": "From 1 January 2027, a seller's agreement to pay the buyer's firm must be:",
+       "why": "s. 452.19(4)(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Removed by the MLS",
+        "Disclosed in the advertising",
+        "Reported to DSPS"
+       ],
+       "q": "From 1 January 2027, an AI-altered listing photo that misleads must be:",
+       "why": "s. 452.136(1m)."
+      }
+     ],
+     "h": "Compensation: the rule today, and the rule from 1 January 2027",
+     "l": [
+      "TODAY: no licensee may pay a fee, commission, referral fee or finder's fee to a person NOT LICENSED under ch. 452, unless that person is regularly and lawfully in the brokerage business in another state, territory or country, or was licensed here when the commission was earned or the referral arrangement was made (s. 452.19(1m)(a)).",
+      "TODAY: if a licensee is associated with a firm, ALL fees, commissions, referral fees and finder's fees SHALL BE PAID TO THE FIRM (s. 452.19(1m)(b)).",
+      "FROM 1 JANUARY 2027 (2025 Wis. Act 69): a firm SHALL NOT ACCEPT COMPENSATION OF ANY KIND FROM ANOTHER FIRM in a transaction involving RESIDENTIAL PROPERTY OF ONE TO FOUR DWELLING UNITS - whatever the parties represented, and whether the non-listing firm is a buyer's agent, a subagent or any other cooperative capacity. Referral and finder's fees are not caught. An agreement that violates it is VOID AND UNENFORCEABLE (s. 452.19(3)).",
+      "FROM 1 JANUARY 2027: in a one-to-four unit residential transaction, a seller's agreement to pay a firm that is NOT the listing firm must be EXPRESSLY STATED IN THE FULLY EXECUTED OFFER OR OPTION TO PURCHASE and SIGNED BY BOTH BUYER AND SELLER as part of the contract. A listing contract may not require or imply such a payment unless it is contingent on that inclusion, and a listing contract must state whether the seller AUTHORISES THE LISTING FIRM TO DISCLOSE that compensation is being offered (s. 452.19(4)).",
+      "FROM 1 JANUARY 2027: advertising ALTERED OR MODIFIED USING TECHNOLOGY, INCLUDING ARTIFICIAL INTELLIGENCE, to add, remove or change elements of the property in a way that creates a false or misleading impression must be DISCLOSED (s. 452.136(1m))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$1,000",
+        "$5,000, or 6 months' imprisonment, or both",
+        "$10,000",
+        "A civil forfeiture only"
+       ],
+       "q": "The maximum fine for practising without a Wisconsin licence is:",
+       "why": "s. 452.17(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A warning",
+        "Immediate revocation",
+        "Suspension of not less than 90 days",
+        "A $500 fine"
+       ],
+       "q": "A first discrimination violation brings:",
+       "why": "s. 452.17(4)(a)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A 180-day suspension",
+        "A fine only",
+        "Revocation"
+       ],
+       "q": "A second discrimination violation brings:",
+       "why": "s. 452.17(4)(a)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The applicant has completed or been released from the sentence and 3 years have elapsed, then asks the Board for a determination",
+        "Five years have passed automatically",
+        "Forever"
+       ],
+       "q": "A felony conviction bars an initial licence until:",
+       "why": "s. 452.25(1)(b)."
+      }
+     ],
+     "h": "Discipline and penalties",
+     "l": [
+      "The Board investigates on the secretary's motion or its own determination where it receives CREDIBLE INFORMATION that a licensee violated ch. 452 or a rule (s. 452.14(1)).",
+      "Practising WITHOUT A LICENCE is prosecuted by the district attorney or the attorney general and carries a fine of NOT MORE THAN $5,000 or imprisonment of NOT MORE THAN 6 MONTHS or both. Any other violation of the chapter carries the same maximum (s. 452.17(1), (3)).",
+      "For a DISCRIMINATION violation under s. 452.14(3)(jm) the Board SHALL suspend the licence for NOT LESS THAN 90 DAYS on a first offence and SHALL REVOKE it on a second, in addition to any other penalty (s. 452.17(4)).",
+      "An INITIAL licence may not be issued to an individual convicted of a FELONY; after the confinement portion is complete or the applicant is released, and 3 YEARS have elapsed, the applicant may ask the Board for a suitability determination (s. 452.25(1)).",
+      "The Board's register lists everyone whose licence was REVOKED WITHIN THE PAST 2 YEARS (s. 452.12(4))."
+     ]
+    }
+   ],
+   "summary": "Fourteen items on conduct. Advertising and compensation carry most of the weight, and Wisconsin has a big change arriving on 1 January 2027 that you should know is COMING but is not law yet.",
+   "topic": "wi/ethics",
+   "traps": [
+    "2025 Act 69's compensation and AI rules take effect 1 JANUARY 2027. Know which rule the question is asking about.",
+    "Commissions are paid to the FIRM, not to the licensee.",
+    "Discrimination carries a mandatory 90-day minimum suspension, then revocation."
+   ],
+   "vocab": [
+    [
+     "Trade name",
+     "A name filed with the department that a firm may advertise under."
+    ],
+    [
+     "Listing firm",
+     "The only firm that may advertise a property without consent."
+    ],
+    [
+     "Finder's fee",
+     "A referral payment; unlicensed people may not receive one."
+    ],
+    [
+     "2025 Wis. Act 69",
+     "The act whose compensation and AI rules begin 1 January 2027."
+    ]
+   ]
+  },
+  "wi/fair-housing": {
+   "blurb": "Wisconsin's open housing law, local ordinances and the ADA.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Fair housing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Race",
+        "Lawful source of income",
+        "Religion",
+        "National origin"
+       ],
+       "q": "Which is protected by Wisconsin's open housing law but not the federal Fair Housing Act?",
+       "why": "s. 106.50(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Status as a victim of domestic abuse, sexual assault or stalking",
+        "Credit history",
+        "Occupation"
+       ],
+       "q": "Wisconsin also protects:",
+       "why": "s. 106.50(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Over 40",
+        "At least 18 years of age",
+        "Any age"
+       ],
+       "q": "'Age' as a Wisconsin protected class means:",
+       "why": "s. 106.50(1m)(am)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Federal classes only",
+        "Protected classes in Wisconsin housing",
+        "Not protected anywhere"
+       ],
+       "q": "Marital status and ancestry are:",
+       "why": "s. 106.50(1)."
+      }
+     ],
+     "h": "Wisconsin's protected classes (s. 106.50(1))",
+     "l": [
+      "SEX",
+      "RACE",
+      "COLOR",
+      "SEXUAL ORIENTATION",
+      "DISABILITY",
+      "RELIGION",
+      "NATIONAL ORIGIN",
+      "MARITAL STATUS",
+      "FAMILY STATUS",
+      "STATUS AS A VICTIM OF DOMESTIC ABUSE, SEXUAL ASSAULT OR STALKING",
+      "LAWFUL SOURCE OF INCOME",
+      "AGE",
+      "ANCESTRY",
+      "'AGE', for a member of a protected class, means AT LEAST 18 YEARS OF AGE (s. 106.50(1m)(am)).",
+      "The statute also makes it the duty of POLITICAL SUBDIVISIONS to help prevent and remove housing discrimination, so LOCAL EQUAL OPPORTUNITY ordinances sit on top of the state law."
+     ],
+     "p": [
+      "Wisconsin's declared policy is equal opportunity for housing regardless of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "A false representation of unavailability, and unlawful",
+        "Lawful puffing",
+        "A listing error only"
+       ],
+       "q": "Telling a caller a vacant flat is taken when it is not is:",
+       "why": "s. 106.50(2)(h)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "An internal MLS matter",
+        "Lawful if voted on",
+        "Unlawful discrimination"
+       ],
+       "q": "Denying a licensee membership in an MLS on a protected ground is:",
+       "why": "s. 106.50(2)(i)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Unlawful",
+        "Lawful if the lease allows it",
+        "A landlord-tenant matter only"
+       ],
+       "q": "Harassing a tenant or causing an eviction on a protected ground is:",
+       "why": "s. 106.50(2)(f)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Outside the open housing law",
+        "A lending matter only",
+        "Unlawful"
+       ],
+       "q": "Refusing to finance an unimproved residential lot on a protected ground is:",
+       "why": "s. 106.50(2)(c)."
+      }
+     ],
+     "h": "The prohibited acts (s. 106.50(2))",
+     "l": [
+      "Refusing to SELL, RENT, FINANCE OR CONTRACT TO CONSTRUCT housing, or refusing to NEGOTIATE OR DISCUSS the terms.",
+      "Refusing to permit INSPECTION, or exacting DIFFERENT OR MORE STRINGENT price, terms or conditions.",
+      "Refusing to finance or sell an UNIMPROVED RESIDENTIAL LOT or to build a home on one.",
+      "ADVERTISING in a manner that indicates discrimination by a preference or limitation.",
+      "For an insurer, refusing or varying a HAZARD INSURANCE contract on a dwelling.",
+      "Refusing to RENEW A LEASE, causing an EVICTION, or HARASSING a tenant.",
+      "Discriminating in the PRIVILEGES, SERVICES OR FACILITIES available with housing.",
+      "FALSELY REPRESENTING that housing is unavailable for inspection, rental or sale.",
+      "Denying ACCESS TO OR MEMBERSHIP IN a multiple listing service or other real estate service.",
+      "COERCING, INTIMIDATING, THREATENING OR INTERFERING with a person exercising a right under the section, or with someone who aided another in doing so."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Suspension of not less than 90 days",
+        "A written warning",
+        "A $500 forfeiture",
+        "Immediate revocation"
+       ],
+       "q": "A first discrimination violation by a Wisconsin licensee brings:",
+       "why": "s. 452.17(4)(a)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A 180-day suspension",
+        "A fine",
+        "Revocation"
+       ],
+       "q": "A second brings:",
+       "why": "s. 452.17(4)(a)(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Answer honestly",
+        "Refer the question to the seller",
+        "Not disclose the information"
+       ],
+       "q": "A licensee asked a question whose answer would be unlawful discrimination must:",
+       "why": "s. 452.23(1)."
+      }
+     ],
+     "h": "Consequences for a licensee",
+     "l": [
+      "A licensee MAY NOT DISCLOSE information whose disclosure would be unlawful discrimination under s. 106.50 or unlawful handicap discrimination under 42 USC 3604, 3605, 3606 or 3617 (s. 452.23(1)).",
+      "For a discrimination violation the Board SHALL suspend the licence for NOT LESS THAN 90 DAYS on the FIRST offence and SHALL REVOKE it on the SECOND. That penalty may be imposed IN ADDITION to any other penalty under ch. 452, s. 66.1011 or s. 106.50 (s. 452.17(4)).",
+      "The outline also covers providing AUXILIARY SERVICES FOR THE DISABLED under the Americans with Disabilities Act."
+     ]
+    }
+   ],
+   "summary": "Six items. Wisconsin's open housing law protects several classes the federal Act does not, and the penalty for breaking it is the harshest in the licence law.",
+   "topic": "wi/fair-housing",
+   "traps": [
+    "Lawful source of income, victim status, marital status and ancestry are the Wisconsin additions.",
+    "'Age' here means 18 or over, not a senior category.",
+    "90 days minimum then revocation - the discipline is mandatory, not discretionary."
+   ],
+   "vocab": [
+    [
+     "Open housing law",
+     "Wisconsin's fair housing statute, s. 106.50."
+    ],
+    [
+     "Lawful source of income",
+     "A Wisconsin protected class covering vouchers and benefits."
+    ],
+    [
+     "Family status",
+     "A Wisconsin protected class covering households with children."
+    ],
+    [
+     "Conciliation",
+     "The informal resolution of a housing discrimination complaint."
+    ]
+   ]
+  },
+  "wi/misc": {
+   "blurb": "Client funds, fee splitting, firm supervision, leases and rentals.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Divide by 100, multiply by 0.30, and round any fraction of $100 up.",
+     "s": "Work out the Wisconsin real estate transfer fee.",
+     "t": "Transfer fee on a $280,000 sale",
+     "w": [
+      "$280,000 / $100 = 2,800 increments.",
+      "2,800 x $0.30 = $840.",
+      "The grantor pays it, and the register of deeds collects it at recording."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Trust accounts & responsibilities",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A non-interest-bearing account",
+        "An interest-bearing common trust account at an insured depository institution",
+        "The firm's operating account"
+       ],
+       "q": "Wisconsin client funds go into:",
+       "why": "s. 452.13(2)(a), (c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The Department of Administration",
+        "The firm",
+        "The buyer",
+        "The seller"
+       ],
+       "q": "Who is the beneficial owner of the interest?",
+       "why": "s. 452.13(2)(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "An earnest money deposit",
+        "A downpayment",
+        "A promissory note"
+       ],
+       "q": "Which is NOT client funds?",
+       "why": "s. 452.13(1)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Monthly",
+        "At each closing",
+        "Annually, before 1 February"
+       ],
+       "q": "Interest must be remitted:",
+       "why": "s. 452.13(2)(e)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A surety bond",
+        "Monthly statements",
+        "A letter authorising examination and audit of the trust account"
+       ],
+       "q": "The firm must give the department:",
+       "why": "s. 452.13(2)(b)(3)."
+      }
+     ],
+     "h": "Trust accounts (s. 452.13)",
+     "l": [
+      "CLIENT FUNDS are all DOWNPAYMENTS, EARNEST MONEY DEPOSITS or other money related to a conveyance of real estate received by a licensee on behalf of a firm or any other person. PROMISSORY NOTES ARE NOT client funds.",
+      "A firm that HOLDS client funds must establish an INTEREST-BEARING COMMON TRUST ACCOUNT in a DEPOSITORY INSTITUTION - a bank, savings bank, savings and loan association or credit union authorised to do business in Wisconsin and federally insured.",
+      "The account must earn interest at a rate NOT LESS THAN that for individual accounts of the same type, size and duration from which withdrawals can be made without delay.",
+      "The firm must REGISTER the institution's name and address and the account number with the department, NOTIFY it of changes, and furnish a LETTER AUTHORISING the department and the Department of Administration to EXAMINE AND AUDIT the account whenever either considers it necessary.",
+      "ALL client funds go into that account, and the DEPARTMENT OF ADMINISTRATION is the BENEFICIAL OWNER of the interest, minus service charges. The institution remits the interest ANNUALLY BEFORE 1 FEBRUARY, and need not remit at all if the total for the period is LESS THAN $10 before charges.",
+      "A trust account is OPTIONAL in the sense that the section does not require a firm to hold client funds, nor require anyone to transfer client funds to a firm (s. 452.13(4))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Always, without limit",
+        "Only to the extent the firm failed to comply with its supervision duties",
+        "Never"
+       ],
+       "q": "A Wisconsin firm is liable for an associated licensee's brokerage services:",
+       "why": "s. 452.12(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "10 days",
+        "At renewal",
+        "30 days of the effective date"
+       ],
+       "q": "A change in a business entity's business representatives must be reported within:",
+       "why": "s. 452.12(2)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "10 days after notifying the licensees",
+        "30 days",
+        "Immediately"
+       ],
+       "q": "If the firm's licence lapses, the business representative must file notices of termination within:",
+       "why": "s. 452.12(5)(bm)(3)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Must still investigate independently",
+        "Cannot be held liable for negligent hiring, even if it did no investigation of its own",
+        "Is strictly liable"
+       ],
+       "q": "A firm relying on the department's investigation of a licensee:",
+       "why": "s. 452.139(3)."
+      }
+     ],
+     "h": "Responsibilities of firms and licensees",
+     "l": [
+      "A FIRM is responsible for brokerage services provided on its behalf by an associated licensee ONLY TO THE EXTENT that the firm FAILED TO COMPLY with s. 452.132 and the supervision rules as to that licensee (s. 452.12(3)).",
+      "A firm may NOT be held civilly liable for NEGLIGENT HIRING where a licensee commits a crime or other wrongful act, if the firm relied on the department's investigations under s. 440.03(13) or on a Board determination - WHETHER OR NOT the firm did its own investigation (s. 452.139(3)).",
+      "A broker's licence may be issued to a BUSINESS ENTITY that has at least one BUSINESS REPRESENTATIVE licensed as a broker. A broker may be a business representative for MORE THAN ONE entity with each entity's EXPRESS WRITTEN CONSENT, and a change of business representative must be REPORTED WITHIN 30 DAYS (s. 452.12(2)).",
+      "If a FIRM'S licence is not renewed, the firm and every licensee associated with it may not act under that licence, and the business representative must notify each licensee and, WITHIN 10 DAYS of notifying them, file a NOTICE OF TERMINATION for each (s. 452.12(5)(bm))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$3.75 per $500, paid by the seller",
+        "30 cents per $100 of value or fraction of $100, paid by the grantor",
+        "1% of value, paid by the buyer"
+       ],
+       "q": "The Wisconsin real estate transfer fee is:",
+       "why": "s. 77.22(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Both the grantor and the grantee",
+        "The grantor only",
+        "The register of deeds"
+       ],
+       "q": "The transfer return must be signed by:",
+       "why": "s. 77.22(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The downpayment",
+        "The assessed value",
+        "The total principal the buyer agrees to pay"
+       ],
+       "q": "On a land contract the taxable value is:",
+       "why": "s. 77.22(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A survivorship interest only",
+        "A one-third dower interest",
+        "A present undivided one-half interest"
+       ],
+       "q": "Each spouse's interest in an item of marital property is:",
+       "why": "s. 766.31(3)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Presumed to be marital property",
+        "Presumed individual",
+        "Classified only at divorce"
+       ],
+       "q": "Property of Wisconsin spouses is:",
+       "why": "s. 766.31(2)."
+      }
+     ],
+     "h": "Transfer fee and marital property",
+     "l": [
+      "The REAL ESTATE TRANSFER FEE is imposed on the GRANTOR at 30 CENTS FOR EACH $100 OF VALUE or fraction of $100, on every conveyance not exempt. On a LAND CONTRACT the value is the TOTAL PRINCIPAL the buyer agrees to pay (s. 77.22(1)).",
+      "The REGISTER OF DEEDS collects it when the instrument is submitted for recording, and both a completed TRANSFER RETURN - signed by BOTH grantor and grantee - and payment are PREREQUISITES TO RECORDING. The register has NO DUTY to determine the correct value or the validity of a claimed exemption, and an exemption must be stated on the face of the conveyance by reference to the subsection of s. 77.25.",
+      "MARITAL PROPERTY: all property of spouses IS marital property unless classified otherwise, all property of spouses is PRESUMED marital, and each spouse has a PRESENT UNDIVIDED ONE-HALF INTEREST in each item of marital property (s. 766.31(1) to (3))."
+     ]
+    }
+   ],
+   "summary": "Twelve items on where the money sits and who is responsible. Wisconsin's trust account is unusual: it is an INTEREST-BEARING COMMON account and the interest belongs to the state.",
+   "topic": "wi/misc",
+   "traps": [
+    "The trust account is INTEREST-BEARING and the interest goes to the Department of Administration.",
+    "Promissory notes are not client funds.",
+    "30 cents per $100 - and the GRANTOR pays.",
+    "Spouses hold a present undivided one-half interest, not a future one."
+   ],
+   "vocab": [
+    [
+     "Client funds",
+     "Downpayments and earnest money, but not promissory notes."
+    ],
+    [
+     "Common trust account",
+     "The single interest-bearing account holding all client funds."
+    ],
+    [
+     "Business representative",
+     "The licensed broker through whom an entity acts."
+    ],
+    [
+     "Transfer return",
+     "The form both parties sign before a deed may be recorded."
+    ],
+    [
+     "Marital property",
+     "The default classification of all property of Wisconsin spouses."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Duties to parties and clients, multiple representation, the WB agency forms.",
+   "counts_on_exam": true,
+   "exam_questions": 32,
+   "key": "wi/agency",
+   "label": "Agency",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Approved forms, the WB-11 offer, counter-offers, amendments, notices.",
+   "counts_on_exam": true,
+   "exam_questions": 22,
+   "key": "wi/contracts",
+   "label": "Contract law & approved forms",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Conduct and ethical practice rules for Wisconsin licensees.",
+   "counts_on_exam": true,
+   "exam_questions": 14,
+   "key": "wi/ethics",
+   "label": "Business ethics",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The condition report, environmental items, condominiums, lead paint.",
+   "counts_on_exam": true,
+   "exam_questions": 13,
+   "key": "wi/disclosures",
+   "label": "Disclosures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Client funds, fee splitting, firm supervision, leases and rentals.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "wi/misc",
+   "label": "Trust accounts & responsibilities",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Wisconsin's open housing law, local ordinances and the ADA.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "wi/fair-housing",
+   "label": "Fair housing",
+   "portion": "georgia"
+  }
+ ]
+}
