@@ -1,0 +1,2455 @@
+{
+ "abbr": "WA",
+ "bank": [
+  {
+   "answer": 2,
+   "choices": [
+    "Within 3 business days",
+    "Within 5 banking days",
+    "The next banking day after receipt, unless the agreement provides for deferred deposit",
+    "At closing"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 1,
+   "explain": "RCW 18.85.285(7).",
+   "id": "wa-e822d552",
+   "portion": "georgia",
+   "q": "A Washington broker must deposit client funds into the firm's trust bank account:",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The firm",
+    "The buyer",
+    "The state treasurer, for the housing trust fund and the real estate education program account",
+    "The seller"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 1,
+   "explain": "RCW 18.85.285(8)(b).",
+   "id": "wa-c96ef99c",
+   "portion": "georgia",
+   "q": "Interest on a Washington pooled trust account is paid to:",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is an all-cash sale",
+    "Instructs the broker to deliver the earnest money directly to a named closing agent or to the seller",
+    "Is for new construction"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 2,
+   "explain": "RCW 18.85.285(6).",
+   "id": "wa-6611112b",
+   "portion": "georgia",
+   "q": "No trust account is required where the purchase and sale agreement:",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Immediately",
+    "No later than 30 consecutive days after the written notification date",
+    "Only on a court order",
+    "Within 10 days"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 2,
+   "explain": "RCW 18.85.285(9).",
+   "id": "wa-95470102",
+   "portion": "georgia",
+   "q": "Where trust funds are claimed by more than one party, disbursement must occur:",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The firm's income",
+    "Trust funds",
+    "The client's own problem",
+    "Escrow company property"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 2,
+   "explain": "RCW 18.85.285(2).",
+   "id": "wa-ee7b334e",
+   "portion": "georgia",
+   "q": "Funds over which a licensee exercises control in a transaction are:",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "No; the firm or designated broker is not required to notify the client",
+    "Yes, in writing",
+    "Yes, at closing"
+   ],
+   "concept": "Washington trust funds",
+   "difficulty": 3,
+   "explain": "RCW 18.85.285(8)(b).",
+   "id": "wa-ca696e4f",
+   "portion": "georgia",
+   "q": "Must a Washington firm tell the client that trust account interest funds state housing programmes?",
+   "sub": "wa/statutes|Trust funds",
+   "subtopic": "Trust funds",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year",
+    "Three years",
+    "Five years",
+    "Seven years"
+   ],
+   "concept": "Washington records",
+   "difficulty": 1,
+   "explain": "RCW 18.85.361(16), (17).",
+   "id": "wa-05ad6063",
+   "portion": "georgia",
+   "q": "Washington transaction and escrow records must be kept for:",
+   "sub": "wa/statutes|Records",
+   "subtopic": "Records",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At closing",
+    "Within a reasonable time after signing",
+    "Within 30 days",
+    "Only on request"
+   ],
+   "concept": "Washington records",
+   "difficulty": 2,
+   "explain": "RCW 18.85.285(3).",
+   "id": "wa-2543a0f5",
+   "portion": "georgia",
+   "q": "Signed purchase and sale agreements must be delivered to all signing parties:",
+   "sub": "wa/statutes|Records",
+   "subtopic": "Records",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The designated broker",
+    "Each individual broker",
+    "The closing agent",
+    "The managing broker only"
+   ],
+   "concept": "Washington records",
+   "difficulty": 2,
+   "explain": "RCW 18.85.285(1).",
+   "id": "wa-fc33eb30",
+   "portion": "georgia",
+   "q": "Who must keep the firm's transaction records?",
+   "sub": "wa/statutes|Records",
+   "subtopic": "Records",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclose that they hold a real estate licence",
+    "Include the firm's name anyway",
+    "Get the firm's written consent",
+    "Use the MLS"
+   ],
+   "concept": "Washington advertising",
+   "difficulty": 1,
+   "explain": "RCW 18.85.361(8).",
+   "id": "wa-34556ea3",
+   "portion": "georgia",
+   "q": "A Washington broker advertising their own home for sale must:",
+   "sub": "wa/statutes|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "File a notice within 30 days",
+    "Register it with the county",
+    "Obtain a separate licence for each assumed name before using it"
+   ],
+   "concept": "Washington advertising",
+   "difficulty": 2,
+   "explain": "RCW 18.85.221.",
+   "id": "wa-b936b0cb",
+   "portion": "georgia",
+   "q": "A firm wanting to trade under an extra assumed name must:",
+   "sub": "wa/statutes|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "In the individual broker's name",
+    "In the name of the firm or its licensed assumed name",
+    "In the designated broker's name"
+   ],
+   "concept": "Washington advertising",
+   "difficulty": 2,
+   "explain": "RCW 18.85.221.",
+   "id": "wa-f362ea50",
+   "portion": "georgia",
+   "q": "All real estate brokerage services in Washington must be conducted:",
+   "sub": "wa/statutes|Advertising",
+   "subtopic": "Advertising",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The owner is told before accepting the offer and the fact is shown in the purchase and sale agreement",
+    "The broker approves it",
+    "It is cashed before closing"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 1,
+   "explain": "RCW 18.85.361(9).",
+   "id": "wa-c9df452d",
+   "portion": "georgia",
+   "q": "Taking a promissory note as earnest money is permitted only if:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Oral consent from both",
+    "Nothing if the amounts are equal",
+    "Full written disclosure to all interested parties first"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 1,
+   "explain": "RCW 18.85.361(10).",
+   "id": "wa-3c3ac790",
+   "portion": "georgia",
+   "q": "Accepting compensation from more than one party requires:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only the firm's name",
+    "In writing, that they are a real estate licensee",
+    "Nothing, as a private party"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 2,
+   "explain": "RCW 18.85.361(21).",
+   "id": "wa-796c430e",
+   "portion": "georgia",
+   "q": "A licensee buying property for their own account must disclose:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A technical violation only",
+    "Prima facie evidence of conversion",
+    "A civil matter only"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 2,
+   "explain": "RCW 18.85.361(5).",
+   "id": "wa-2a3f7f59",
+   "portion": "georgia",
+   "q": "Failing to return trust property within 30 days after demand is:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any party to the transaction",
+    "The lender",
+    "The licensed real estate firm they are licensed with",
+    "The escrow company"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 2,
+   "explain": "RCW 18.85.361(19).",
+   "id": "wa-20d44129",
+   "portion": "georgia",
+   "q": "A Washington broker may accept a commission from:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The kickback is under $500",
+    "The expectation is disclosed to the principal first",
+    "The lender is licensed"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 3,
+   "explain": "RCW 18.85.361(20).",
+   "id": "wa-db505bde",
+   "portion": "georgia",
+   "q": "Referring a principal to a lender expecting a kickback is permitted only if:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed with disclosure",
+    "A ground for discipline",
+    "Allowed for lender work"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 3,
+   "explain": "RCW 18.85.361(12).",
+   "id": "wa-ff6af9b5",
+   "portion": "georgia",
+   "q": "Accepting an appraisal engagement contingent on reporting a predetermined value is:",
+   "sub": "wa/statutes|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is liable only in contract",
+    "Faces no sanction",
+    "Is subject to discipline"
+   ],
+   "concept": "Washington supervision",
+   "difficulty": 2,
+   "explain": "RCW 18.85.361(22).",
+   "id": "wa-82d4f58c",
+   "portion": "georgia",
+   "q": "A firm, managing broker or designated broker who fails to supervise brokers adequately:",
+   "sub": "wa/statutes|Supervision",
+   "subtopic": "Supervision",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Ceases to be in force",
+    "Transfers automatically to the new firm",
+    "Stays active for 30 days"
+   ],
+   "concept": "Washington affiliation",
+   "difficulty": 1,
+   "explain": "RCW 18.85.291.",
+   "id": "wa-93aef928",
+   "portion": "georgia",
+   "q": "When a Washington broker leaves a firm, their licence:",
+   "sub": "wa/statutes|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Wait to be asked",
+    "Notify the MLS only",
+    "Immediately file a written statement of the facts with the director"
+   ],
+   "concept": "Washington affiliation",
+   "difficulty": 2,
+   "explain": "RCW 18.85.291.",
+   "id": "wa-d2cf22f5",
+   "portion": "georgia",
+   "q": "A firm that terminates a broker for a violation of the licence law must:",
+   "sub": "wa/statutes|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Faces no consequence",
+    "Is fined by the MLS",
+    "Exposes both the firm and themselves to disciplinary action"
+   ],
+   "concept": "Washington affiliation",
+   "difficulty": 3,
+   "explain": "RCW 18.85.291.",
+   "id": "wa-ef0ef25c",
+   "portion": "georgia",
+   "q": "A designated broker who will not notify the director of a termination after demand:",
+   "sub": "wa/statutes|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "wa/statutes"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "60 hours",
+    "90 hours, including 3 hours of fair housing and consumer protection",
+    "120 hours",
+    "30 hours"
+   ],
+   "concept": "Washington education",
+   "difficulty": 1,
+   "explain": "RCW 18.85.101(1)(c).",
+   "id": "wa-b1602e4d",
+   "portion": "georgia",
+   "q": "Prelicence education for a Washington broker is:",
+   "sub": "wa/licensing|Education",
+   "subtopic": "Education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Five years",
+    "One year",
+    "No limit",
+    "Two years before applying for the broker's examination"
+   ],
+   "concept": "Washington education",
+   "difficulty": 2,
+   "explain": "RCW 18.85.101(1)(c).",
+   "id": "wa-4af65a45",
+   "portion": "georgia",
+   "q": "Each prelicence course must be completed within:",
+   "sub": "wa/licensing|Education",
+   "subtopic": "Education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A further 90 hours, including real estate law with 3 hours of fair housing, plus advanced practices",
+    "30 hours of continuing education only",
+    "No additional education"
+   ],
+   "concept": "Washington education",
+   "difficulty": 1,
+   "explain": "RCW 18.85.101(2).",
+   "id": "wa-40e5a975",
+   "portion": "georgia",
+   "q": "The FIRST renewal of a Washington broker's licence requires:",
+   "sub": "wa/licensing|Education",
+   "subtopic": "Education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "21 years old and a diploma",
+    "18 years old and a high school diploma or equivalent",
+    "18 years old with no education requirement"
+   ],
+   "concept": "Washington eligibility",
+   "difficulty": 1,
+   "explain": "RCW 18.85.101(1)(a), (b).",
+   "id": "wa-614b2c69",
+   "portion": "georgia",
+   "q": "The minimum age and education for a Washington broker's licence are:",
+   "sub": "wa/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "One firm at a time",
+    "Two firms",
+    "Any number of firms"
+   ],
+   "concept": "Washington eligibility",
+   "difficulty": 2,
+   "explain": "RCW 18.85.101(3).",
+   "id": "wa-4f0309fe",
+   "portion": "georgia",
+   "q": "A Washington broker may be licensed to:",
+   "sub": "wa/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year of licensure",
+    "Three years as a full-time broker within the previous five years",
+    "Five years with no time limit"
+   ],
+   "concept": "Washington managing broker",
+   "difficulty": 2,
+   "explain": "RCW 18.85.111(1)(c).",
+   "id": "wa-e85c67b7",
+   "portion": "georgia",
+   "q": "A managing broker applicant must have:",
+   "sub": "wa/licensing|Managing broker",
+   "subtopic": "Managing broker",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At least 15 hours",
+    "Of any length",
+    "At least 30 clock hours with a comprehensive examination, completed within three years before applying"
+   ],
+   "concept": "Washington managing broker",
+   "difficulty": 3,
+   "explain": "RCW 18.85.111(1)(d).",
+   "id": "wa-2216851a",
+   "portion": "georgia",
+   "q": "Each managing broker course must be:",
+   "sub": "wa/licensing|Managing broker",
+   "subtopic": "Managing broker",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Annually",
+    "Every four years",
+    "On 31 December",
+    "Two years from the issuance date"
+   ],
+   "concept": "Washington renewal",
+   "difficulty": 1,
+   "explain": "RCW 18.85.191.",
+   "id": "wa-daf3cc7b",
+   "portion": "georgia",
+   "q": "A Washington real estate licence expires:",
+   "sub": "wa/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "One year of expiry",
+    "30 days",
+    "Three years",
+    "Six months"
+   ],
+   "concept": "Washington renewal",
+   "difficulty": 2,
+   "explain": "RCW 18.85.191.",
+   "id": "wa-73a4e106",
+   "portion": "georgia",
+   "q": "A licence is cancelled if the renewal fee is not received within:",
+   "sub": "wa/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Two years after issue",
+    "On the designated broker's renewal date",
+    "When its registration or certificate of authority with the secretary of state expires"
+   ],
+   "concept": "Washington renewal",
+   "difficulty": 3,
+   "explain": "RCW 18.85.191.",
+   "id": "wa-03649ce1",
+   "portion": "georgia",
+   "q": "A firm licence issued to a corporation expires:",
+   "sub": "wa/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "30 clock hours per renewal",
+    "18 hours",
+    "12 hours",
+    "45 hours"
+   ],
+   "concept": "Washington continuing education",
+   "difficulty": 1,
+   "explain": "WAC 308-124A.",
+   "id": "wa-7bb0f3ff",
+   "portion": "georgia",
+   "q": "Washington continuing education is:",
+   "sub": "wa/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "3 hours of core curriculum and 3 hours of Washington real estate fair housing",
+    "6 hours of ethics",
+    "3 hours of agency only"
+   ],
+   "concept": "Washington continuing education",
+   "difficulty": 1,
+   "explain": "WAC 308-124A.",
+   "id": "wa-44f57c99",
+   "portion": "georgia",
+   "q": "Of those hours, the prescribed curricula are:",
+   "sub": "wa/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "36 months",
+    "24 months of the renewal date",
+    "12 months",
+    "The whole biennium"
+   ],
+   "concept": "Washington continuing education",
+   "difficulty": 2,
+   "explain": "WAC 308-124A-800.",
+   "id": "wa-b9599089",
+   "portion": "georgia",
+   "q": "Core curriculum must be completed within:",
+   "sub": "wa/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Prohibited",
+    "A recognised option",
+    "Allowed once per career"
+   ],
+   "concept": "Washington continuing education",
+   "difficulty": 2,
+   "explain": "WAC 308-124A.",
+   "id": "wa-05eb6f72",
+   "portion": "georgia",
+   "q": "Placing a licence on inactive status to avoid continuing education is:",
+   "sub": "wa/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Denial of licence renewal",
+    "A fine",
+    "A 30-day grace period"
+   ],
+   "concept": "Washington continuing education",
+   "difficulty": 2,
+   "explain": "WAC 308-124A.",
+   "id": "wa-67b5bcfb",
+   "portion": "georgia",
+   "q": "Failing to complete the prescribed core and fair housing hours results in:",
+   "sub": "wa/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "wa/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A subagent of the seller",
+    "A limited dual agent",
+    "Unrepresented",
+    "The buyer's agent"
+   ],
+   "concept": "Washington default",
+   "difficulty": 1,
+   "explain": "RCW 18.86.020(1).",
+   "id": "wa-21005e20",
+   "portion": "georgia",
+   "q": "A Washington broker performing brokerage services for a buyer is, by default:",
+   "sub": "wa/agency|Default",
+   "subtopic": "Default",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "30 days",
+    "60 days, with the option of a longer term",
+    "90 days",
+    "Six months"
+   ],
+   "concept": "Washington services agreement",
+   "difficulty": 1,
+   "explain": "RCW 18.86.020(2)(b)(i).",
+   "id": "wa-949f6c95",
+   "portion": "georgia",
+   "q": "The default term of a buyer's services agreement in Washington is:",
+   "sub": "wa/agency|Services agreement",
+   "subtopic": "Services agreement",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Given orally",
+    "Implied by signing the listing",
+    "Separately initialled by the principal in the services agreement"
+   ],
+   "concept": "Washington services agreement",
+   "difficulty": 2,
+   "explain": "RCW 18.86.020(2)(b)(iv).",
+   "id": "wa-7c1fd458",
+   "portion": "georgia",
+   "q": "Consent to limited dual agency must be:",
+   "sub": "wa/agency|Services agreement",
+   "subtopic": "Services agreement",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Solely for commercial real estate",
+    "In any new construction sale",
+    "For an all-cash buyer"
+   ],
+   "concept": "Washington services agreement",
+   "difficulty": 2,
+   "explain": "RCW 18.86.020(3).",
+   "id": "wa-20d4d19c",
+   "portion": "georgia",
+   "q": "A services agreement is NOT required where a broker acts as a buyer's agent:",
+   "sub": "wa/agency|Services agreement",
+   "subtopic": "Services agreement",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A choice of commission rates",
+    "Checkbox options for an exclusive or nonexclusive relationship",
+    "A list of approved lenders"
+   ],
+   "concept": "Washington services agreement",
+   "difficulty": 3,
+   "explain": "RCW 18.86.020(2)(b)(iii).",
+   "id": "wa-131fd49d",
+   "portion": "georgia",
+   "q": "A buyer's services agreement must offer:",
+   "sub": "wa/agency|Services agreement",
+   "subtopic": "Services agreement",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only until mutual acceptance",
+    "Only if above list price",
+    "Timely, even where the property is already subject to a contract for sale"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 1,
+   "explain": "RCW 18.86.030(1)(c).",
+   "id": "wa-3ace9e8d",
+   "portion": "georgia",
+   "q": "Written offers must be presented:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At closing",
+    "Within five days of the offer",
+    "Before that party signs a services agreement"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 1,
+   "explain": "RCW 18.86.030(1)(f)(i).",
+   "id": "wa-b240a97f",
+   "portion": "georgia",
+   "q": "The agency pamphlet must be given to a party the broker serves:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Never",
+    "Only on written request",
+    "Before signing an offer, or as soon as reasonably practical"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 2,
+   "explain": "RCW 18.86.030(1)(f)(ii).",
+   "id": "wa-9d270e65",
+   "portion": "georgia",
+   "q": "An unrepresented party must receive the agency pamphlet:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Material Facts",
+    "Agency Disclosure",
+    "Notice to Consumer",
+    "Statement of Relationship"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 2,
+   "explain": "RCW 18.86.030(1)(g)(i).",
+   "id": "wa-a938b2a2",
+   "portion": "georgia",
+   "q": "The capacity disclosure must appear in a separate paragraph titled:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Disclose known material facts",
+    "Account for money received",
+    "Independently inspect the property or verify a party's statements"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 2,
+   "explain": "RCW 18.86.030(2).",
+   "id": "wa-cb0455e9",
+   "portion": "georgia",
+   "q": "Unless otherwise agreed, a Washington broker owes no duty to:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Requires an independent inspection",
+    "Extends to the parties' finances",
+    "Does not imply a duty to investigate matters the broker has not agreed to investigate"
+   ],
+   "concept": "Washington duties",
+   "difficulty": 3,
+   "explain": "RCW 18.86.030(1)(d).",
+   "id": "wa-1abfc33b",
+   "portion": "georgia",
+   "q": "The duty to disclose material facts:",
+   "sub": "wa/agency|Duties",
+   "subtopic": "Duties",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The written consent of both parties, set out in the services agreement",
+    "Oral consent of both",
+    "The designated broker's approval"
+   ],
+   "concept": "Washington dual agency",
+   "difficulty": 1,
+   "explain": "RCW 18.86.060(1).",
+   "id": "wa-8f6448e3",
+   "portion": "georgia",
+   "q": "A Washington limited dual agent may act only with:",
+   "sub": "wa/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Once the transaction closes",
+    "Only under subpoena or court order, even after the relationship ends",
+    "With the other broker's consent"
+   ],
+   "concept": "Washington confidentiality",
+   "difficulty": 1,
+   "explain": "RCW 18.86.050(1)(d).",
+   "id": "wa-3e827e96",
+   "portion": "georgia",
+   "q": "A Washington agent may disclose a client's confidential information:",
+   "sub": "wa/agency|Confidentiality",
+   "subtopic": "Confidentiality",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Both brokers become dual agents",
+    "The arrangement is prohibited",
+    "The designated broker and any supervising managing broker are limited dual agents, and each appointed broker solely represents their own party"
+   ],
+   "concept": "Washington dual agency",
+   "difficulty": 2,
+   "explain": "RCW 18.86.060(5).",
+   "id": "wa-ba43eb27",
+   "portion": "georgia",
+   "q": "Where two brokers of one firm represent opposite parties:",
+   "sub": "wa/agency|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not in itself breach the duty of loyalty",
+    "Breaches loyalty",
+    "Requires the buyer's written consent"
+   ],
+   "concept": "Washington loyalty",
+   "difficulty": 2,
+   "explain": "RCW 18.86.050(2)(a).",
+   "id": "wa-11d9a4ad",
+   "portion": "georgia",
+   "q": "Showing the same property to other prospective buyers:",
+   "sub": "wa/agency|Loyalty",
+   "subtopic": "Loyalty",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Makes the payer the client",
+    "Creates limited dual agency",
+    "Does not establish an agency relationship with the payer"
+   ],
+   "concept": "Washington compensation",
+   "difficulty": 1,
+   "explain": "RCW 18.86.080(2).",
+   "id": "wa-8ff2ce16",
+   "portion": "georgia",
+   "q": "Paying a Washington broker's compensation:",
+   "sub": "wa/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The buyer's maximum price",
+    "Whether the broker will show properties if no party or firm offers to pay the firm",
+    "The lender's name"
+   ],
+   "concept": "Washington compensation",
+   "difficulty": 2,
+   "explain": "RCW 18.86.080(7)(b).",
+   "id": "wa-bc4c53b4",
+   "portion": "georgia",
+   "q": "A buyer's services agreement must state:",
+   "sub": "wa/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only by its own client",
+    "Only by the seller",
+    "By more than one party in a transaction"
+   ],
+   "concept": "Washington compensation",
+   "difficulty": 2,
+   "explain": "RCW 18.86.080(5).",
+   "id": "wa-dc171abc",
+   "portion": "georgia",
+   "q": "A Washington firm may be compensated:",
+   "sub": "wa/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is prohibited",
+    "Needs no services agreement",
+    "Needs the client's written consent"
+   ],
+   "concept": "Washington compensation",
+   "difficulty": 3,
+   "explain": "RCW 18.86.080(9).",
+   "id": "wa-d9ce260e",
+   "portion": "georgia",
+   "q": "A referral between firms where the referring firm did no brokerage work:",
+   "sub": "wa/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not breach any duty to the buyer or seller",
+    "Is prohibited",
+    "Requires separate written consent"
+   ],
+   "concept": "Washington compensation",
+   "difficulty": 3,
+   "explain": "RCW 18.86.080(6).",
+   "id": "wa-77b96945",
+   "portion": "georgia",
+   "q": "Compensation calculated on the purchase price:",
+   "sub": "wa/agency|Compensation",
+   "subtopic": "Compensation",
+   "topic": "wa/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Before the offer is written",
+    "Not later than five business days after mutual acceptance, unless otherwise agreed",
+    "At closing",
+    "Within 10 days"
+   ],
+   "concept": "Washington disclosure",
+   "difficulty": 1,
+   "explain": "RCW 64.06.030.",
+   "id": "wa-6e6cc478",
+   "portion": "georgia",
+   "q": "The Washington seller disclosure statement is due:",
+   "sub": "wa/general|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Three business days",
+    "72 hours",
+    "Five business days",
+    "Ten days"
+   ],
+   "concept": "Washington disclosure",
+   "difficulty": 1,
+   "explain": "RCW 64.06.030.",
+   "id": "wa-bfb6617e",
+   "portion": "georgia",
+   "q": "After receiving it, the buyer may rescind within:",
+   "sub": "wa/general|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Void",
+    "Deemed approved and accepted",
+    "Automatically re-sent"
+   ],
+   "concept": "Washington disclosure",
+   "difficulty": 2,
+   "explain": "RCW 64.06.030.",
+   "id": "wa-30a5948e",
+   "portion": "georgia",
+   "q": "If the buyer sends no written rescission notice in that window, the statement is:",
+   "sub": "wa/general|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must still amend and wait",
+    "Must extend closing",
+    "Need not amend, and the buyer gets no right of rescission"
+   ],
+   "concept": "Washington disclosure",
+   "difficulty": 2,
+   "explain": "RCW 64.06.040(1).",
+   "id": "wa-060a6bf3",
+   "portion": "georgia",
+   "q": "A seller who corrects an adverse change at least three business days before closing:",
+   "sub": "wa/general|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The buyer loses the right",
+    "The agreement is void",
+    "The closing date is extended until the period expires"
+   ],
+   "concept": "Washington disclosure",
+   "difficulty": 3,
+   "explain": "RCW 64.06.040(1).",
+   "id": "wa-fd1bdf11",
+   "portion": "georgia",
+   "q": "If closing falls inside the three-business-day rescission period:",
+   "sub": "wa/general|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Race",
+    "Color",
+    "Citizenship or immigration status",
+    "National origin"
+   ],
+   "concept": "Washington fair housing",
+   "difficulty": 1,
+   "explain": "RCW 49.60.222(1).",
+   "id": "wa-34800562",
+   "portion": "georgia",
+   "q": "Which is protected in Washington real estate but not by the federal Fair Housing Act?",
+   "sub": "wa/general|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Credit score",
+    "Honorably discharged veteran or military status",
+    "Occupation",
+    "Length of residence"
+   ],
+   "concept": "Washington fair housing",
+   "difficulty": 1,
+   "explain": "RCW 49.60.222(1).",
+   "id": "wa-4e87a6f4",
+   "portion": "georgia",
+   "q": "Washington also protects:",
+   "sub": "wa/general|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Covered only by the ADA",
+    "Not protected in housing",
+    "A protected basis in its own right"
+   ],
+   "concept": "Washington fair housing",
+   "difficulty": 2,
+   "explain": "RCW 49.60.222(1).",
+   "id": "wa-10194560",
+   "portion": "georgia",
+   "q": "The use of a trained dog guide or service animal by a person with a disability is:",
+   "sub": "wa/general|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The buyer",
+    "The lender",
+    "The seller",
+    "The closing agent"
+   ],
+   "concept": "Washington excise tax",
+   "difficulty": 1,
+   "explain": "RCW 82.45.080(1).",
+   "id": "wa-2fa18d23",
+   "portion": "georgia",
+   "q": "The Washington real estate excise tax is the obligation of:",
+   "sub": "wa/general|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Graduated on portions of the selling price, from 1.1% up to 3%",
+    "A flat 1.28%",
+    "A flat 1.78%",
+    "A flat 1.1%"
+   ],
+   "concept": "Washington excise tax",
+   "difficulty": 2,
+   "explain": "RCW 82.45.060(1)(b).",
+   "id": "wa-96487d2c",
+   "portion": "georgia",
+   "q": "Since 2020 the state real estate excise tax is:",
+   "sub": "wa/general|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The graduated rates",
+    "A flat 1.1%",
+    "A flat 1.28% of the selling price"
+   ],
+   "concept": "Washington excise tax",
+   "difficulty": 2,
+   "explain": "RCW 82.45.060(1)(c).",
+   "id": "wa-0516f92f",
+   "portion": "georgia",
+   "q": "Timberland and agricultural land are taxed at:",
+   "sub": "wa/general|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Every fourth year, by the lesser of the growth in the CPI for shelter or 5%",
+    "Annually with inflation",
+    "Never"
+   ],
+   "concept": "Washington excise tax",
+   "difficulty": 3,
+   "explain": "RCW 82.45.060(2).",
+   "id": "wa-5b61561d",
+   "portion": "georgia",
+   "q": "The excise tax bracket thresholds are adjusted:",
+   "sub": "wa/general|Excise tax",
+   "subtopic": "Excise tax",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Permitted without a subpoena",
+    "A civil matter only",
+    "A ground for discipline"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 2,
+   "explain": "RCW 18.85.361(6).",
+   "id": "wa-b79593be",
+   "portion": "georgia",
+   "q": "Refusing to produce records for the director on demand is:",
+   "sub": "wa/general|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/general"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only in client transactions",
+    "Whether or not it was for the licensee's own account",
+    "Only when a client complains"
+   ],
+   "concept": "Washington discipline",
+   "difficulty": 3,
+   "explain": "RCW 18.85.361.",
+   "id": "wa-ef40199f",
+   "portion": "georgia",
+   "q": "Discipline can follow conduct in a transaction:",
+   "sub": "wa/general|Discipline",
+   "subtopic": "Discipline",
+   "topic": "wa/general"
+  }
+ ],
+ "code": "WA",
+ "diffs": {
+  "national/agency": [
+   "Since 2023 c 318 a broker working with a BUYER is the BUYER'S AGENT by default, and every principal needs a written SERVICES AGREEMENT - with a DEFAULT 60-DAY TERM for a buyer (RCW 18.86.020).",
+   "The RCW 18.86.030 duties MAY NOT BE WAIVED, including presenting written offers even where the property is already under contract, and giving the AGENCY PAMPHLET with an acknowledgment of receipt.",
+   "Confidentiality is broken only by SUBPOENA OR COURT ORDER, and it survives termination of the relationship (RCW 18.86.040, .050, .060).",
+   "Where two brokers of one firm take opposite sides, the DESIGNATED BROKER and supervising managing broker become LIMITED DUAL AGENTS while each appointed broker solely represents their own party (RCW 18.86.060(5)).",
+   "Paying compensation does NOT create an agency relationship, and a firm may be paid by more than one party (RCW 18.86.080)."
+  ],
+  "national/disclosures": [
+   "The seller's disclosure statement is due within FIVE BUSINESS DAYS of mutual acceptance and the buyer may rescind within THREE BUSINESS DAYS, in their sole discretion (RCW 64.06.030).",
+   "A late amendment restarts a three-business-day rescission right, and closing is EXTENDED if it falls inside that window (RCW 64.06.040).",
+   "RCW 49.60.222 adds CITIZENSHIP OR IMMIGRATION STATUS, honorably discharged veteran or military status, and use of a trained dog guide or service animal to the federal classes.",
+   "The real estate excise tax is GRADUATED from 1.1% to 3% and is the SELLER'S obligation (RCW 82.45.060, .080)."
+  ],
+  "national/practice": [
+   "Client funds go into the firm's trust account the NEXT BANKING DAY, into a POOLED INTEREST-BEARING account whose interest goes to the STATE HOUSING TRUST FUND and the real estate education account (RCW 18.85.285).",
+   "Records are kept THREE YEARS, and failing to return trust property within 30 days of demand is PRIMA FACIE CONVERSION (RCW 18.85.361).",
+   "Education: 90 hours before the examination, another 90 at the FIRST renewal, then 30 clock hours each renewal including 3 core and 3 Washington fair housing hours.",
+   "A licence runs TWO YEARS and is CANCELLED if unrenewed for a year (RCW 18.85.191)."
+  ]
+ },
+ "name": "Washington",
+ "pass": 0.7,
+ "pass_note": "Washington reports a SCALED score. The PSI bulletin requires a scaled score of 70 on EACH portion of the Broker examination and says the scaled score is not the same as a percentage - the raw passing score varies slightly between forms. Candidates who pass are told only PASS. Treat 70% here as a study target, not the state's requirement. Pass one portion and you have SIX MONTHS to pass the other, or you retake both.",
+ "pass_published": false,
+ "portions": {
+  "georgia": {
+   "blurb": "RCW 18.85 and 18.86, the seller disclosure statement, fair housing and the excise tax.",
+   "minutes": 90,
+   "name": "Washington law",
+   "scored": 30
+  },
+  "national": {
+   "minutes": 150,
+   "scored": 100
+  }
+ },
+ "regulator": "Washington Department of Licensing",
+ "sources": [
+  {
+   "by": "Washington State Legislature",
+   "name": "RCW 18.86, Real Estate Brokerage Relationships",
+   "note": "The agency law as rewritten by 2023 c 318: services agreements, duties, limited dual agency, compensation.",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=18.86"
+  },
+  {
+   "by": "Washington State Legislature",
+   "name": "RCW 18.85, Real Estate Brokers and Managing Brokers",
+   "note": "Licence requirements, renewal, trust accounts, records and the grounds for discipline.",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=18.85"
+  },
+  {
+   "by": "Washington State Legislature",
+   "name": "RCW 64.06, RCW 49.60.222 and RCW 82.45",
+   "note": "The seller disclosure statement, unfair practices in real estate, and the real estate excise tax.",
+   "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=64.06"
+  },
+  {
+   "by": "Washington Department of Licensing",
+   "name": "WAC 308-124A",
+   "note": "The 30 clock hours of continuing education, including core and Washington fair housing curricula.",
+   "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=308-124A"
+  },
+  {
+   "by": "PSI Services and the Washington Real Estate Commission",
+   "name": "Washington Candidate Information Bulletin",
+   "note": "National 100 items in 150 minutes, State 30 in 90, a scaled score of 70 on each portion, and the state outline.",
+   "url": "https://test-takers.psiexams.com/ware"
+  }
+ ],
+ "study": {
+  "wa/agency": {
+   "blurb": "Services agreements, buyer's and seller's agents, limited dual agency.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [
+    {
+     "k": "The question is answered in the services agreement before it ever arises.",
+     "s": "A buyer asks you to show a for-sale-by-owner where the seller offers nothing to your firm.",
+     "t": "No one is offering to pay",
+     "w": [
+      "Your firm needs a services agreement with the buyer to be paid at all.",
+      "That agreement must already say whether you will show properties when no party or firm offers compensation.",
+      "The buyer may agree to pay your firm directly; paying you does not change who you represent."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage relationships (agency)",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The buyer's agent",
+        "A subagent of the seller",
+        "A dual agent",
+        "Unrepresented"
+       ],
+       "q": "A Washington broker working with a buyer is, by default:",
+       "why": "RCW 18.86.020(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "30 days",
+        "60 days, with the option of a longer term",
+        "6 months",
+        "Indefinite"
+       ],
+       "q": "The default term of a buyer's services agreement is:",
+       "why": "RCW 18.86.020(2)(b)(i)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Separately initialled by the principal in the services agreement",
+        "Oral",
+        "Implied by signing the listing"
+       ],
+       "q": "Consent to limited dual agency must be:",
+       "why": "RCW 18.86.020(2)(b)(iv)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Solely for commercial real estate",
+        "In any new construction sale",
+        "For a cash buyer"
+       ],
+       "q": "A services agreement is NOT required where the broker acts as a buyer's agent:",
+       "why": "RCW 18.86.020(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A choice of commission rates",
+        "A list of lenders",
+        "Checkbox options for an exclusive or nonexclusive relationship"
+       ],
+       "q": "The buyer's services agreement must offer:",
+       "why": "RCW 18.86.020(2)(b)(iii)."
+      }
+     ],
+     "h": "What you are by default (RCW 18.86.020)",
+     "l": [
+      "A broker who performs real estate brokerage services FOR A BUYER IS A BUYER'S AGENT unless (a) the firm appointed the broker to represent the SELLER under a services agreement, (b) the firm appointed the broker to represent BOTH under services agreements, making the broker a LIMITED DUAL AGENT, or (c) the broker IS the seller.",
+      "A firm MUST ENTER INTO A SERVICES AGREEMENT with the principal BEFORE, OR AS SOON AS REASONABLY PRACTICAL AFTER, its appointed broker starts rendering brokerage services.",
+      "The services agreement must state: the TERM - and for a BUYER a DEFAULT TERM OF 60 DAYS with the option of a longer one; the BROKER APPOINTED as agent; whether the relationship is EXCLUSIVE OR NONEXCLUSIVE, with CHECKBOX OPTIONS for a buyer; whether the principal consents to LIMITED DUAL AGENCY, SEPARATELY INITIALLED, with an acknowledgment that a limited dual agent MAY NOT ADVOCATE TERMS FAVOURABLE TO ONE PRINCIPAL TO THE DETRIMENT OF THE OTHER; and whether the principal consents to the DESIGNATED BROKER and any supervising MANAGING BROKER acting as limited dual agents where different brokers in the firm represent different parties.",
+      "NO services agreement is required where a broker acts as a buyer's agent SOLELY FOR COMMERCIAL REAL ESTATE.",
+      "A broker may work with the same party in SEPARATE TRANSACTIONS under DIFFERENT relationships - representing them in one and not in another - as long as the chapter is complied with for each."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Only until mutual acceptance",
+        "Timely, even where the property is already under contract",
+        "Only above list price"
+       ],
+       "q": "Written offers must be presented:",
+       "why": "RCW 18.86.030(1)(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At closing",
+        "Within 5 days of the offer",
+        "Before that party signs a services agreement"
+       ],
+       "q": "The agency pamphlet must reach a party the broker serves:",
+       "why": "RCW 18.86.030(1)(f)(i)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Before they sign an offer, or as soon as reasonably practical",
+        "Never",
+        "Only on request"
+       ],
+       "q": "An unrepresented party must get the pamphlet:",
+       "why": "RCW 18.86.030(1)(f)(ii)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Agency Disclosure",
+        "Material Facts",
+        "Notice to Consumer"
+       ],
+       "q": "The capacity disclosure must appear in a separate paragraph titled:",
+       "why": "RCW 18.86.030(1)(g)(i)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Disclose known material facts",
+        "Account for money received",
+        "Independently inspect the property or verify a party's statements"
+       ],
+       "q": "Unless otherwise agreed, a Washington broker owes no duty to:",
+       "why": "RCW 18.86.030(2)."
+      }
+     ],
+     "h": "Duties owed to EVERYONE (RCW 18.86.030)",
+     "l": [
+      "To exercise REASONABLE SKILL AND CARE.",
+      "To deal HONESTLY AND IN GOOD FAITH.",
+      "To present ALL WRITTEN OFFERS, WRITTEN NOTICES AND OTHER WRITTEN COMMUNICATIONS to and from either party in a TIMELY MANNER - REGARDLESS of whether the property is already under contract or the buyer is already a party to a contract to purchase.",
+      "To DISCLOSE ALL EXISTING MATERIAL FACTS known to the broker and not apparent or readily ascertainable to a party. This does NOT imply a duty to investigate matters the broker has not agreed to investigate.",
+      "To ACCOUNT IN A TIMELY MANNER for all money and property received.",
+      "To PROVIDE THE AGENCY PAMPHLET prescribed by RCW 18.86.120 and obtain an ACKNOWLEDGMENT OF RECEIPT - to a party the broker renders services to BEFORE THAT PARTY SIGNS A SERVICES AGREEMENT, and to an unrepresented party BEFORE THEY SIGN AN OFFER or as soon as reasonably practical.",
+      "To DISCLOSE IN WRITING, before the principal signs an offer and before mutual agreement, whether the broker represents the buyer, the seller or both as a LIMITED DUAL AGENT - in a separate paragraph titled 'AGENCY DISCLOSURE' - and any TERMS OF COMPENSATION offered by a party or firm to a firm representing another party.",
+      "Unless otherwise agreed, a broker owes NO DUTY to inspect the property independently, to investigate either party's finances, or to verify statements made by either party or by a source reasonably believed reliable."
+     ],
+     "p": [
+      "A broker owes these to their principal AND to all parties, and they MAY NOT BE WAIVED:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The written consent of both parties, set out in the services agreement",
+        "Oral consent",
+        "The designated broker's approval"
+       ],
+       "q": "A Washington limited dual agent may act only with:",
+       "why": "RCW 18.86.060(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Once the deal closes",
+        "With the other agent's consent",
+        "Only under subpoena or court order, even after the relationship ends"
+       ],
+       "q": "Confidential information may be disclosed:",
+       "why": "RCW 18.86.050(1)(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The designated broker and any supervising managing broker are limited dual agents, while each appointed broker solely represents their own party",
+        "Both brokers are dual agents",
+        "The arrangement is prohibited"
+       ],
+       "q": "When two brokers of one firm represent opposite parties:",
+       "why": "RCW 18.86.060(5)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Does not in itself breach the duty of loyalty",
+        "Breaches loyalty",
+        "Requires written consent"
+       ],
+       "q": "Showing the same property to other buyers:",
+       "why": "RCW 18.86.050(2)(a)."
+      }
+     ],
+     "h": "Seller's agent, buyer's agent, limited dual agent",
+     "l": [
+      "A SELLER'S AGENT or BUYER'S AGENT additionally owes LOYALTY - taking no action adverse or detrimental to the principal's interest; TIMELY DISCLOSURE OF CONFLICTS; advice to SEEK EXPERT HELP beyond the agent's expertise; CONFIDENTIALITY, with no disclosure of confidential information EXCEPT UNDER SUBPOENA OR COURT ORDER, EVEN AFTER TERMINATION of the relationship; and a GOOD FAITH AND CONTINUOUS EFFORT to find a buyer or a property - though not obliged to seek more while the property or the buyer is under an existing contract (RCW 18.86.040, 18.86.050).",
+      "Showing the same property to OTHER prospective buyers, or representing MORE THAN ONE BUYER through different brokers of the same firm in COMPETING transactions on the same property, does NOT in itself breach loyalty or create a conflict (RCW 18.86.050(2)).",
+      "A broker may act as a LIMITED DUAL AGENT ONLY WITH THE WRITTEN CONSENT OF BOTH PARTIES, SET FORTH IN THE SERVICES AGREEMENT (RCW 18.86.060(1)). The limited dual agent takes no action adverse to either, discloses conflicts to both, advises both to seek expert advice, and discloses NO confidential information from or about EITHER party except under subpoena or court order, even after termination.",
+      "Where DIFFERENT BROKERS AFFILIATED WITH THE SAME FIRM represent DIFFERENT PARTIES, the firm's DESIGNATED BROKER and any MANAGING BROKER supervising both IS A LIMITED DUAL AGENT - and each appointed broker SOLELY REPRESENTS their own party (RCW 18.86.060(5))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Makes the payer the client",
+        "Creates dual agency",
+        "Does not establish an agency relationship with the payer"
+       ],
+       "q": "Paying a broker's compensation:",
+       "why": "RCW 18.86.080(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The buyer's maximum price",
+        "The lender's name",
+        "Whether the broker will show properties where no party or firm offers to pay the firm"
+       ],
+       "q": "A buyer's services agreement must state:",
+       "why": "RCW 18.86.080(7)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "By more than one party in a transaction",
+        "Only by its own client",
+        "Only by the seller"
+       ],
+       "q": "A firm may be compensated:",
+       "why": "RCW 18.86.080(5)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Is prohibited",
+        "Needs no services agreement",
+        "Needs the client's consent"
+       ],
+       "q": "A referral fee between firms where the referring firm did no brokerage work:",
+       "why": "RCW 18.86.080(9)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Is prohibited",
+        "Does not breach any duty to the buyer or seller",
+        "Requires separate consent"
+       ],
+       "q": "Compensation based on the purchase price:",
+       "why": "RCW 18.86.080(6)."
+      }
+     ],
+     "h": "Compensation (RCW 18.86.080)",
+     "l": [
+      "Compensation may be paid by the SELLER, the BUYER, a THIRD PARTY, or SHARED BETWEEN FIRMS, and a firm may be compensated BY MORE THAN ONE PARTY.",
+      "An agreement to pay, or payment of, compensation DOES NOT ESTABLISH AN AGENCY RELATIONSHIP between the payer and the broker.",
+      "A firm may receive compensation BASED ON THE PURCHASE PRICE without breaching any duty.",
+      "To receive compensation, a firm MUST HAVE A SERVICES AGREEMENT stating the AMOUNT the principal agrees to pay, the principal's CONSENT (if any) to compensation sharing between firms and parties, the principal's CONSENT (if any) to being compensated by MORE THAN ONE PARTY, and - in a BUYER'S agreement - WHETHER THE BROKER WILL SHOW THE BUYER PROPERTIES IF NO PARTY OR FIRM OFFERS TO PAY the firm.",
+      "For COMMERCIAL real estate, a broker serving a buyer may, instead of a services agreement, disclose in writing before the buyer signs an offer the SOURCES AND AMOUNTS of compensation expected, in a separate paragraph titled 'COMPENSATION DISCLOSURE'.",
+      "No services agreement is needed to be paid for a BROKER'S PRICE OPINION or for a REFERRAL by one firm to another where the referring firm provided no brokerage services."
+     ]
+    }
+   ],
+   "summary": "Four or five items, and they hang on one 2023 rewrite: work with a buyer and you ARE their agent unless a services agreement says otherwise.",
+   "topic": "wa/agency",
+   "traps": [
+    "60-day default buyer term - a Washington-specific number.",
+    "A payment does not make the payer your client.",
+    "Confidentiality breaks only for a subpoena or court order, and it survives termination.",
+    "The designated broker becomes the limited dual agent when two firm brokers split a deal."
+   ],
+   "vocab": [
+    [
+     "Services agreement",
+     "The written agreement appointing a broker as agent."
+    ],
+    [
+     "Limited dual agent",
+     "A broker representing both parties with written consent."
+    ],
+    [
+     "Agency pamphlet",
+     "The RCW 18.86.120 pamphlet that must be given and acknowledged."
+    ],
+    [
+     "Appointed broker",
+     "The individual broker the firm appoints for a principal."
+    ]
+   ]
+  },
+  "wa/general": {
+   "blurb": "Definitions, the Commission and Director, investigations and sanctions.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "General rules",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Not later than five business days after mutual acceptance, unless otherwise agreed",
+        "Before the offer",
+        "At closing",
+        "Within 10 days"
+       ],
+       "q": "The Washington seller disclosure statement is due:",
+       "why": "RCW 64.06.030."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Three business days",
+        "72 hours",
+        "Five business days",
+        "Ten days"
+       ],
+       "q": "The buyer's right to rescind after receiving it runs for:",
+       "why": "RCW 64.06.030."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Void",
+        "Deemed approved and accepted",
+        "Resent by the seller"
+       ],
+       "q": "If the buyer sends no rescission notice in that window, the statement is:",
+       "why": "RCW 64.06.030."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Must still amend",
+        "Must extend closing",
+        "Need not amend, and the buyer has no right of rescission"
+       ],
+       "q": "A seller who corrects an adverse change at least three business days before closing:",
+       "why": "RCW 64.06.040(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The buyer loses the right",
+        "The sale is void",
+        "The closing date is extended until the period expires"
+       ],
+       "q": "If closing falls inside the three-business-day rescission period:",
+       "why": "RCW 64.06.040(1)."
+      }
+     ],
+     "h": "The seller disclosure statement (RCW 64.06)",
+     "l": [
+      "Unless the buyer has EXPRESSLY WAIVED the right to receive it, the seller must deliver a COMPLETED, SIGNED AND DATED real property transfer disclosure statement NOT LATER THAN FIVE BUSINESS DAYS - or as otherwise agreed - after MUTUAL ACCEPTANCE.",
+      "Within THREE BUSINESS DAYS of receiving it - or as otherwise agreed - the buyer may either APPROVE AND ACCEPT it or RESCIND the agreement, in the BUYER'S SOLE DISCRETION, by delivering WRITTEN NOTICE of rescission within that period. On rescission the buyer gets back ALL DEPOSITS AND OTHER CONSIDERATION, less any agreed disbursements, and the agreement is VOID.",
+      "If the buyer delivers NO written rescission notice within the three business days, the statement is DEEMED APPROVED AND ACCEPTED.",
+      "If the seller later learns of additional information or an ADVERSE CHANGE making a disclosure inaccurate, the seller must AMEND and deliver the amendment - unless the seller CORRECTS the problem at least THREE BUSINESS DAYS BEFORE CLOSING. Otherwise the buyer may accept the amendment or RESCIND WITHIN THREE BUSINESS DAYS of receiving it.",
+      "If closing is scheduled inside that three-business-day rescission period, the CLOSING DATE IS EXTENDED until the period expires."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Race",
+        "Citizenship or immigration status",
+        "Color",
+        "National origin"
+       ],
+       "q": "Which is protected in Washington real estate but not by the federal Fair Housing Act?",
+       "why": "RCW 49.60.222(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Honorably discharged veteran or military status",
+        "Credit score",
+        "Occupation"
+       ],
+       "q": "Washington also protects:",
+       "why": "RCW 49.60.222(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Covered only by the ADA",
+        "A protected basis in its own right",
+        "Not protected in housing"
+       ],
+       "q": "The use of a trained dog guide or service animal is:",
+       "why": "RCW 49.60.222(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The named buyer only",
+        "Only tenants",
+        "People who will reside in the dwelling afterwards and people associated with the buyer or renter"
+       ],
+       "q": "The protection extends to:",
+       "why": "RCW 49.60.222(1)(f)."
+      }
+     ],
+     "h": "Unfair practices in real estate (RCW 49.60.222)",
+     "l": [
+      "SEX",
+      "MARITAL STATUS",
+      "SEXUAL ORIENTATION",
+      "RACE",
+      "CREED",
+      "COLOR",
+      "NATIONAL ORIGIN",
+      "CITIZENSHIP OR IMMIGRATION STATUS",
+      "FAMILIES WITH CHILDREN STATUS",
+      "HONORABLY DISCHARGED VETERAN OR MILITARY STATUS",
+      "THE PRESENCE OF ANY SENSORY, MENTAL OR PHYSICAL DISABILITY",
+      "THE USE OF A TRAINED DOG GUIDE OR SERVICE ANIMAL BY A PERSON WITH A DISABILITY",
+      "The protection reaches not only the buyer or renter but a person who will RESIDE IN the dwelling afterwards and ANY PERSON ASSOCIATED with the buyer or renter.",
+      "Discrimination in hiring or in brokerage service activity under ANY local, county, state or federal antidiscrimination law is separately a ground for DISCIPLINE (RCW 18.85.361(15))."
+     ],
+     "p": [
+      "It is an UNFAIR PRACTICE for any person, acting for themselves or another, to refuse a real estate transaction, discriminate in its terms, refuse to transmit a bona fide offer, refuse to negotiate, misrepresent availability, make a dwelling unavailable, publish a discriminatory advertisement or application, take a discriminatory listing, expel a person from occupancy, or discriminate in financing, because of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The buyer",
+        "The lender",
+        "The seller",
+        "The closing agent"
+       ],
+       "q": "The Washington real estate excise tax is the obligation of:",
+       "why": "RCW 82.45.080(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A flat 1.28%",
+        "A flat 1.78%",
+        "Graduated by portions of the selling price, from 1.1% up to 3%"
+       ],
+       "q": "Since 2020 the state excise tax is:",
+       "why": "RCW 82.45.060(1)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A flat 1.28% of the selling price",
+        "The graduated rates",
+        "1.1% flat"
+       ],
+       "q": "Timberland and agricultural land are taxed at:",
+       "why": "RCW 82.45.060(1)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Every fourth year, by the lesser of CPI-shelter growth or 5%",
+        "Annually by inflation",
+        "Never"
+       ],
+       "q": "The bracket thresholds are adjusted:",
+       "why": "RCW 82.45.060(2)."
+      }
+     ],
+     "h": "The real estate excise tax (RCW 82.45)",
+     "l": [
+      "An excise tax is imposed on EACH SALE of real property. Since 1 January 2020 the state rate is GRADUATED on portions of the selling price: 1.1%, then 1.28%, then 2.75%, then 3% on the highest portion. TIMBERLAND AND AGRICULTURAL LAND are taxed at a flat 1.28%.",
+      "The statutory thresholds between the brackets are ADJUSTED BY THE DEPARTMENT OF REVENUE EVERY FOURTH YEAR, by the lesser of the growth in the consumer price index for shelter or 5%, and the department PUBLISHES the updated thresholds - so always check the current figures rather than memorising dollar amounts.",
+      "The tax is THE OBLIGATION OF THE SELLER, and the department may enforce it by an ACTION OF DEBT against the seller or by proceeding as for the FORECLOSURE OF A MORTGAGE (RCW 82.45.080)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Whether or not it was for the licensee's own account",
+        "Only in client transactions",
+        "Only where a client complains"
+       ],
+       "q": "Discipline can follow conduct in a transaction:",
+       "why": "RCW 18.85.361."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A ground for discipline",
+        "Permitted without a subpoena",
+        "A civil matter"
+       ],
+       "q": "Refusing to produce records for the director on demand is:",
+       "why": "RCW 18.85.361(6)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only a civil claim",
+        "A ground for discipline under the licence law too",
+        "Outside the director's power"
+       ],
+       "q": "Breaching the RCW 18.86.030 duties is:",
+       "why": "RCW 18.85.361(1)."
+      }
+     ],
+     "h": "Discipline and the Commission",
+     "l": [
+      "The director may take disciplinary action and impose the sanctions and fines in RCW 18.235.110 against a broker, managing broker, designated broker or firm - WHETHER OR NOT the transaction was for the person's own account - for violating ch. 18.85, ch. 18.86's RCW 18.86.030 duties, ch. 18.235, ch. 64.36 or ch. 19.105, or the rules under them (RCW 18.85.361(1)).",
+      "The outline also covers DEFINITIONS, the POWERS AND DUTIES OF THE REAL ESTATE COMMISSION AND DIRECTOR, INVESTIGATIONS AND SANCTIONS (violations, hearings and appeals, penalties), and the REAL ESTATE RESEARCH CENTER.",
+      "A licensee who FAILS, ON DEMAND, to disclose information within their knowledge or to produce a document, book or record for inspection by the director is subject to discipline (RCW 18.85.361(6))."
+     ]
+    }
+   ],
+   "summary": "Four items on who regulates and what else Washington requires: the seller disclosure statement, the discrimination law, and the excise tax.",
+   "topic": "wa/general",
+   "traps": [
+    "Five business days to deliver the disclosure, three business days to rescind.",
+    "Citizenship or immigration status, veteran or military status, and service animal use are Washington additions.",
+    "The excise tax is graduated and the SELLER owes it; the thresholds move every four years."
+   ],
+   "vocab": [
+    [
+     "Form 17",
+     "The common name for the real property transfer disclosure statement."
+    ],
+    [
+     "Mutual acceptance",
+     "The point the five-business-day clock starts from."
+    ],
+    [
+     "REET",
+     "The real estate excise tax."
+    ],
+    [
+     "Unfair practice",
+     "The term RCW 49.60 uses for discrimination."
+    ]
+   ]
+  },
+  "wa/licensing": {
+   "blurb": "Who needs a licence, eligibility, types, renewal, status, education.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "60 hours",
+        "120 hours",
+        "90 hours, including 3 hours of fair housing and consumer protection within fundamentals",
+        "30 hours"
+       ],
+       "q": "Prelicence education for a Washington broker is:",
+       "why": "RCW 18.85.101(1)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Two years before applying for the examination",
+        "Five years",
+        "One year"
+       ],
+       "q": "Each prelicence course must be completed within:",
+       "why": "RCW 18.85.101(1)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A further 90 hours, including real estate law with 3 hours of fair housing and consumer protection, and advanced practices",
+        "30 hours of continuing education only",
+        "Nothing extra"
+       ],
+       "q": "The FIRST renewal of a Washington broker's licence requires:",
+       "why": "RCW 18.85.101(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "One firm at a time",
+        "Two firms",
+        "Any number of firms"
+       ],
+       "q": "A Washington broker may be licensed to:",
+       "why": "RCW 18.85.101(3)."
+      }
+     ],
+     "h": "Broker's licence (RCW 18.85.101)",
+     "l": [
+      "The applicant must be 18 YEARS OF AGE OR OLDER and hold a HIGH SCHOOL DIPLOMA OR ITS EQUIVALENT.",
+      "They must complete 90 HOURS of instruction in real estate - FUNDAMENTALS, which must include 3 HOURS ON FAIR HOUSING AND CONSUMER PROTECTION ISSUES, and PRACTICES. Each course must be completed WITHIN TWO YEARS before applying for the examination, be approved by the director, and be passed with a course examination.",
+      "They must pass the BROKER'S LICENCE EXAMINATION.",
+      "A broker is LICENSED TO ONE FIRM AT A TIME and is SUPERVISED by a designated or managing broker.",
+      "FIRST RENEWAL: the education requirement is a further 90 HOURS, including REAL ESTATE LAW - which must itself include 3 HOURS ON FAIR HOUSING AND CONSUMER PROTECTION - plus ADVANCED PRACTICES and continuing education."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "One year of licensure",
+        "Five years with no time limit",
+        "Three years as a full-time broker within the previous five years"
+       ],
+       "q": "A Washington managing broker applicant needs:",
+       "why": "RCW 18.85.111(1)(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At least 15 hours",
+        "At least 30 clock hours, with a comprehensive examination",
+        "Any length"
+       ],
+       "q": "Each managing broker course must be:",
+       "why": "RCW 18.85.111(1)(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Three years before applying for the examination",
+        "Two years",
+        "Five years"
+       ],
+       "q": "Those courses must be completed within:",
+       "why": "RCW 18.85.111(1)(d)."
+      }
+     ],
+     "h": "Managing broker's licence (RCW 18.85.111)",
+     "l": [
+      "18 OR OLDER, a HIGH SCHOOL DIPLOMA or equivalent, and a MINIMUM OF THREE YEARS of licensed experience as a FULL-TIME REAL ESTATE BROKER in Washington or a comparable jurisdiction WITHIN THE PREVIOUS FIVE YEARS - or other qualifying practical experience by rule.",
+      "90 HOURS of instruction including REAL ESTATE BROKERAGE MANAGEMENT, BUSINESS MANAGEMENT and ADVANCED REAL ESTATE LAW. Each course must be AT LEAST 30 CLOCK HOURS, carry a comprehensive examination, and be completed WITHIN THREE YEARS before applying.",
+      "A managing broker may be LICENSED TO ONE FIRM ONLY at any one time."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Annually",
+        "Every four years",
+        "Two years from the issuance date"
+       ],
+       "q": "A Washington real estate licence expires:",
+       "why": "RCW 18.85.191."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "30 days",
+        "Three years",
+        "One year of expiry"
+       ],
+       "q": "A licence is cancelled if the renewal fee is not received within:",
+       "why": "RCW 18.85.191."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Two years after issue",
+        "Never",
+        "When its registration or certificate of authority with the secretary of state expires"
+       ],
+       "q": "A firm licence issued to a corporation expires:",
+       "why": "RCW 18.85.191."
+      }
+     ],
+     "h": "Renewal, expiry and cancellation (RCW 18.85.191)",
+     "l": [
+      "A licence EXPIRES TWO YEARS from its issuance date, and must be RENEWED EVERY TWO YEARS with the biennial fee.",
+      "Firm licences for partnerships, LLPs, LLCs, corporations and other business entities expire WHEN THE REGISTRATION OR CERTIFICATE OF AUTHORITY filed with the SECRETARY OF STATE expires.",
+      "A late application brings a PENALTY FEE, and the director's acceptance of a late application is NOT A WAIVER of the delinquency.",
+      "A licence whose renewal fee is not received WITHIN ONE YEAR of expiry is CANCELLED; a new licence then requires satisfying the procedures and requirements prescribed by rule.",
+      "The director must set by rule a procedure and schedule so that all active licensees, and those applying for active status, renewal or reinstatement, have FINGERPRINT AND BACKGROUND CHECKS done REGULARLY."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "18 hours",
+        "12 hours",
+        "30 clock hours per renewal",
+        "45 hours"
+       ],
+       "q": "Washington continuing education is:",
+       "why": "WAC 308-124A."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "6 hours of ethics",
+        "3 hours of agency only",
+        "3 hours of core curriculum and 3 hours of Washington real estate fair housing curriculum"
+       ],
+       "q": "Of those hours, the prescribed requirements are:",
+       "why": "WAC 308-124A."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "24 months of the renewal date",
+        "36 months",
+        "12 months"
+       ],
+       "q": "Core curriculum must be completed within:",
+       "why": "WAC 308-124A-800."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prohibited",
+        "A recognised option",
+        "Allowed once"
+       ],
+       "q": "Going inactive to avoid continuing education is:",
+       "why": "WAC 308-124A."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A fine",
+        "A 30-day grace period",
+        "Denial of licence renewal"
+       ],
+       "q": "Failing to complete the prescribed core and fair housing hours results in:",
+       "why": "WAC 308-124A."
+      }
+     ],
+     "h": "Continuing education (WAC 308-124A)",
+     "l": [
+      "30 CLOCK HOURS of approved courses per renewal.",
+      "Of those 30, THREE CLOCK HOURS must be the prescribed CORE CURRICULUM and THREE CLOCK HOURS the prescribed WASHINGTON REAL ESTATE FAIR HOUSING curriculum. Failing to complete them RESULTS IN DENIAL OF LICENCE RENEWAL.",
+      "The CORE CURRICULUM may be a separate three-hour course or three hours inside an approved course of thirty hours or less, and must be COMPLETED WITHIN 24 MONTHS of the renewal date. Core taken more than 24 but within 36 months counts as ordinary continuing education, NOT as core.",
+      "Continuing education clock hours must be STARTED AFTER the first licence is issued.",
+      "A licensee MUST NOT place a licence on INACTIVE STATUS to avoid continuing education or post-licensing requirements. A licensee inactive LESS THAN ONE YEAR must attest to completing the hours to reactivate, and attestations are SUBJECT TO AUDIT."
+     ]
+    }
+   ],
+   "summary": "Eight items. The numbers: 18 years old, 90 hours before the examination, a two-year licence, 90 more hours for the first renewal, then 30 hours of continuing education.",
+   "topic": "wa/licensing",
+   "traps": [
+    "90 hours before the exam AND another 90 at the first renewal. Both carry 3 fair housing hours.",
+    "30 hours of continuing education, of which 3 core and 3 Washington fair housing.",
+    "Two-year licence; cancelled after one year unrenewed.",
+    "Managing broker needs 3 years full time within the last 5."
+   ],
+   "vocab": [
+    [
+     "Designated broker",
+     "The managing broker responsible for a firm's licence."
+    ],
+    [
+     "Core curriculum",
+     "The prescribed 3-hour course required each renewal."
+    ],
+    [
+     "Inactive status",
+     "A licence not in use, which does not excuse education."
+    ],
+    [
+     "Clock hour",
+     "The unit Washington counts education in."
+    ]
+   ]
+  },
+  "wa/statutes": {
+   "blurb": "Firm and affiliate relationships, trust money, records, offices, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 13,
+   "examples": [
+    {
+     "k": "Next banking day, unless the agreement itself defers the deposit.",
+     "s": "A broker receives a $10,000 earnest money cheque on Friday afternoon. The purchase and sale agreement says nothing about deferred deposit.",
+     "t": "Earnest money arrives Friday",
+     "w": [
+      "There is no deferred-deposit instruction, so the ordinary rule applies.",
+      "The funds go into the firm's trust bank account the NEXT BANKING DAY - Monday.",
+      "They sit in a pooled interest-bearing account, and the interest is remitted to the state."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Statutes & rules on licensee activity",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Within 3 business days",
+        "The next banking day after receipt, unless the agreement provides for deferred deposit",
+        "Within 5 days",
+        "At closing"
+       ],
+       "q": "A Washington broker must deposit client funds into the firm's trust account:",
+       "why": "RCW 18.85.285(7)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The firm",
+        "The buyer",
+        "The state treasurer, for the housing trust fund and the real estate education program account",
+        "The seller"
+       ],
+       "q": "Interest on a Washington pooled trust account goes to:",
+       "why": "RCW 18.85.285(8)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Is for new construction",
+        "Is a cash sale",
+        "Instructs the broker to deliver the earnest money directly to a named closing agent or the seller"
+       ],
+       "q": "No trust account is needed where the purchase and sale agreement:",
+       "why": "RCW 18.85.285(6)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Immediately",
+        "No later than 30 consecutive days after the written notification date",
+        "Only by court order",
+        "Within 10 days"
+       ],
+       "q": "Where two parties claim the trust funds, disbursement must occur:",
+       "why": "RCW 18.85.285(9)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The firm's income",
+        "The client's problem",
+        "Trust funds"
+       ],
+       "q": "Funds a licensee exercises control over are:",
+       "why": "RCW 18.85.285(2)."
+      }
+     ],
+     "h": "Trust funds (RCW 18.85.285)",
+     "l": [
+      "If ANY LICENSEE EXERCISES CONTROL over real estate transaction funds, those funds ARE TRUST FUNDS.",
+      "All licensees must keep clients' funds, INCLUDING ADVANCE FEES, SEPARATE AND APART AND PHYSICALLY SEGREGATED from the licensee's own funds.",
+      "A brokers must DEPOSIT ALL FUNDS INTO THE FIRM'S TRUST BANK ACCOUNT THE NEXT BANKING DAY following receipt, unless the purchase and sale agreement provides for DEFERRED DEPOSIT OR DELIVERY - in which case the broker deposits or delivers promptly in accordance with the agreement.",
+      "A firm need NOT maintain a trust account for a transaction where the purchase and sale agreement INSTRUCTS the broker to deliver the earnest money cheque DIRECTLY TO A NAMED CLOSING AGENT OR TO THE SELLER.",
+      "Trust fund accounts must be in a RECOGNISED WASHINGTON STATE DEPOSITORY, and the firm must keep enough of its own funds there to open the account or prevent its closure.",
+      "If a firm receives or maintains earnest money or client funds, it must keep a POOLED INTEREST-BEARING TRUST ACCOUNT - property management trust accounts excepted. The INTEREST, net of reasonable service charges, GOES TO THE STATE TREASURER for the WASHINGTON HOUSING TRUST FUND and the REAL ESTATE EDUCATION PROGRAM ACCOUNT. The firm NEED NOT notify the client of that use.",
+      "Where trust funds are CLAIMED BY MORE THAN ONE PARTY, the designated broker must promptly give WRITTEN NOTICE to all contracting parties of the intent to disburse - naming the parties, the amount, to whom it goes, and a disbursement date NO LATER THAN 30 CONSECUTIVE DAYS after the notification date."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "One year",
+        "Five years",
+        "Seven years",
+        "Three years"
+       ],
+       "q": "Washington transaction and trust records must be kept for:",
+       "why": "RCW 18.85.361(16), (17)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At closing",
+        "Within a reasonable time after signing",
+        "Within 30 days"
+       ],
+       "q": "Signed purchase and sale agreements must be delivered to all signing parties:",
+       "why": "RCW 18.85.285(3)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Each individual broker",
+        "The designated broker",
+        "The closing agent"
+       ],
+       "q": "Who keeps the firm's transaction records?",
+       "why": "RCW 18.85.285(1)."
+      }
+     ],
+     "h": "Records and documents",
+     "l": [
+      "Brokers and managing brokers must submit COMPLETE COPIES of their transactions to their FIRM, and the DESIGNATED BROKER keeps adequate records of all transactions handled by or through the firm - including the PURCHASE AND SALE AGREEMENT, the EARNEST MONEY RECEIPT and an ITEMISATION OF RECEIPTS AND DISBURSEMENTS for each transaction. They are OPEN TO INSPECTION by the director (RCW 18.85.285(1)).",
+      "Every licensee must DELIVER, WITHIN A REASONABLE TIME AFTER SIGNING, purchase and sale agreements, listing agreements and like instruments TO ALL PARTIES SIGNING THEM (RCW 18.85.285(3)); failing to furnish a copy is also a ground for discipline (RCW 18.85.361(18)).",
+      "ESCROW OR TRUSTEE ACCOUNT RECORDS must be kept for THREE YEARS, showing to whom paid and other required information, available on demand (RCW 18.85.361(16)).",
+      "A FIRM AND ITS DESIGNATED BROKER must preserve transaction records for THREE YEARS after they are submitted to the firm (RCW 18.85.361(17))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Disclose that they hold a real estate licence",
+        "Include the firm name anyway",
+        "Obtain the firm's written consent"
+       ],
+       "q": "A broker advertising their own home for sale must:",
+       "why": "RCW 18.85.361(8)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "File a notice within 30 days",
+        "Simply register it with the county",
+        "Obtain a separate licence for each assumed name before using it"
+       ],
+       "q": "A firm wishing to trade under an additional assumed name must:",
+       "why": "RCW 18.85.221."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "In the individual broker's name",
+        "In the client's name",
+        "In the name of the firm or its licensed assumed name"
+       ],
+       "q": "Real estate brokerage services must be conducted:",
+       "why": "RCW 18.85.221."
+      }
+     ],
+     "h": "Advertising and names",
+     "l": [
+      "Advertising WITHOUT INCLUDING THE FIRM'S NAME OR LICENSED ASSUMED NAME in a CLEAR AND CONSPICUOUS MANNER is a ground for discipline. The exception: a broker, managing broker or firm advertising their PERSONALLY OWNED real property need only disclose that THEY HOLD A REAL ESTATE LICENCE (RCW 18.85.361(8)).",
+      "ALL real estate brokerage services must be conducted IN THE NAME OF THE FIRM or its licensed assumed name. A firm may use one or more ASSUMED NAMES but must obtain a SEPARATE LICENCE FOR EACH ONE before using it (RCW 18.85.221).",
+      "A licence authorises only the person named on it, operating under the name on the licence (RCW 18.85.221)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The owner is told before accepting the offer and the fact is shown in the purchase and sale agreement",
+        "The broker approves",
+        "It is converted to cash before closing"
+       ],
+       "q": "Taking a promissory note as earnest money is permissible only if:",
+       "why": "RCW 18.85.361(9)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Oral consent",
+        "Full written disclosure to all interested parties first",
+        "Nothing, if the amounts are equal"
+       ],
+       "q": "Accepting compensation from both parties requires:",
+       "why": "RCW 18.85.361(10)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only their firm name",
+        "Nothing, if buying as a private party",
+        "In writing, that they are a real estate licensee"
+       ],
+       "q": "A licensee buying property for themselves must disclose:",
+       "why": "RCW 18.85.361(21)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A technical violation only",
+        "A civil matter only",
+        "Prima facie evidence of conversion"
+       ],
+       "q": "Failing to return trust property within 30 days of demand is:",
+       "why": "RCW 18.85.361(5)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any party to the transaction",
+        "The lender",
+        "The licensed real estate firm they are licensed with"
+       ],
+       "q": "A broker may accept a commission from:",
+       "why": "RCW 18.85.361(19)."
+      }
+     ],
+     "h": "Grounds for discipline (RCW 18.85.361)",
+     "l": [
+      "CONVERSION of money, a contract, deed, note, mortgage or other evidence of title delivered in trust. Failing to return it WITHIN 30 DAYS after the owner is entitled and makes demand is PRIMA FACIE EVIDENCE of conversion.",
+      "Accepting EARNEST MONEY OTHER THAN CASH OR ITS EQUIVALENT unless that fact is COMMUNICATED TO THE OWNER BEFORE acceptance of the offer AND shown in the purchase and sale agreement.",
+      "Charging or accepting COMPENSATION FROM MORE THAN ONE PARTY in a transaction WITHOUT FIRST MAKING FULL WRITTEN DISCLOSURE to all interested parties.",
+      "Accepting any UNDISCLOSED commission, rebate or direct profit on expenditures made for the principal.",
+      "Directing a principal's transaction to a LENDER OR ESCROW COMPANY in expectation of a KICKBACK without first disclosing that expectation to the principal.",
+      "BUYING, SELLING OR LEASING any interest in real property, directly or through a third party, WITHOUT DISCLOSING IN WRITING that the person is a real estate licensee.",
+      "A broker or managing broker ACCEPTING A COMMISSION from anyone EXCEPT THE LICENSED FIRM they are licensed with.",
+      "A firm, managing broker or designated broker FAILING TO EXERCISE ADEQUATE SUPERVISION over their brokers.",
+      "Accepting employment for an APPRAISAL CONTINGENT ON A PREDETERMINED VALUE, or issuing a report on property the licensee has an interest in without stating that interest.",
+      "DISCRIMINATION in hiring or in brokerage service activity under any local, county, state or federal antidiscrimination law.",
+      "Any conduct in a transaction demonstrating BAD FAITH, DISHONESTY, UNTRUSTWORTHINESS OR INCOMPETENCE."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Transfers automatically",
+        "Stays active for 30 days",
+        "Ceases to be in force"
+       ],
+       "q": "When a Washington broker leaves a firm, their licence:",
+       "why": "RCW 18.85.291."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Wait for the Commission to ask",
+        "Do nothing",
+        "Immediately file a written statement of the facts with the director"
+       ],
+       "q": "A firm that terminates a broker for a violation must:",
+       "why": "RCW 18.85.291."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Faces no consequence",
+        "Is subject to disciplinary action, as is the firm",
+        "Is fined by the MLS"
+       ],
+       "q": "A designated broker who will not notify the director of a termination:",
+       "why": "RCW 18.85.291."
+      }
+     ],
+     "h": "Affiliation and termination (RCW 18.85.291)",
+     "l": [
+      "Licences are KEPT AT ALL TIMES BY THE FIRM, and when a broker or managing broker ceases to represent the firm their licence CEASES TO BE IN FORCE.",
+      "The broker must give WRITTEN NOTIFICATION to the firm's DESIGNATED BROKER on terminating affiliation; the firm, through the designated broker, then notifies the director and SURRENDERS the licence.",
+      "A designated broker who fails to promptly notify the director after the affected broker's demand is subject to DISCIPLINARY ACTION, against both the firm and the designated broker.",
+      "Where the firm terminates a broker FOR A VIOLATION of ch. 18.85, 18.86 or 18.235, the firm must IMMEDIATELY FILE A WRITTEN STATEMENT OF THE FACTS with the director."
+     ]
+    }
+   ],
+   "summary": "Thirteen items, the biggest block. Trust money, records, advertising and supervision - and the long list in RCW 18.85.361 of things that cost you your licence.",
+   "topic": "wa/statutes",
+   "traps": [
+    "Next banking day, not three days, for the trust deposit.",
+    "Trust interest goes to the state housing trust fund - and you need not tell the client.",
+    "Three years for records; 30 days before return of trust property becomes prima facie conversion.",
+    "Advertising your own property: disclose that you hold a licence."
+   ],
+   "vocab": [
+    [
+     "Designated broker",
+     "The broker who runs and is responsible for a firm."
+    ],
+    [
+     "Managing broker",
+     "A broker qualified to supervise other brokers in a firm."
+    ],
+    [
+     "Pooled interest-bearing trust account",
+     "The account whose interest funds state housing and education."
+    ],
+    [
+     "Conversion",
+     "Using trust money or property for one's own purposes."
+    ],
+    [
+     "Assumed name",
+     "A separately licensed trading name of a firm."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Firm and affiliate relationships, trust money, records, offices, advertising.",
+   "counts_on_exam": true,
+   "exam_questions": 13,
+   "key": "wa/statutes",
+   "label": "Statutes & rules on licensee activity",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a licence, eligibility, types, renewal, status, education.",
+   "counts_on_exam": true,
+   "exam_questions": 8,
+   "key": "wa/licensing",
+   "label": "Licensing requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Services agreements, buyer's and seller's agents, limited dual agency.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "wa/agency",
+   "label": "Brokerage relationships (agency)",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Definitions, the Commission and Director, investigations and sanctions.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "wa/general",
+   "label": "General rules",
+   "portion": "georgia"
+  }
+ ]
+}
