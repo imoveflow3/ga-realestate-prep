@@ -1,0 +1,2487 @@
+{
+ "abbr": "NJ",
+ "bank": [
+  {
+   "answer": 1,
+   "choices": [
+    "A subagent of the seller",
+    "A buyer's agent",
+    "A transaction broker",
+    "A disclosed dual agent"
+   ],
+   "concept": "New Jersey agency default",
+   "difficulty": 1,
+   "explain": "C.45:15-16.88(a), from P.L.2024, c.32.",
+   "id": "nj-94fe4700",
+   "portion": "georgia",
+   "q": "A New Jersey brokerage firm performing brokerage services for a buyer is, by default:",
+   "sub": "nj/activities|Agency default",
+   "subtopic": "Agency default",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A seller's agent",
+    "A transaction broker",
+    "A dual agent",
+    "An unrepresented party"
+   ],
+   "concept": "New Jersey agency default",
+   "difficulty": 1,
+   "explain": "C.45:15-16.90(a).",
+   "id": "nj-1813b232",
+   "portion": "georgia",
+   "q": "A firm performing brokerage services for a seller is, by default:",
+   "sub": "nj/activities|Agency default",
+   "subtopic": "Agency default",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In a residential transaction, before or as soon as reasonably practical after services begin",
+    "In every transaction without exception",
+    "Only when an offer is written",
+    "Never"
+   ],
+   "concept": "New Jersey brokerage agreement",
+   "difficulty": 1,
+   "explain": "C.45:15-16.88(b)(1).",
+   "id": "nj-bce7af62",
+   "portion": "georgia",
+   "q": "A written brokerage services agreement with a buyer is required:",
+   "sub": "nj/activities|Brokerage agreement",
+   "subtopic": "Brokerage agreement",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Must sign one before any showing",
+    "Must file one with the Commission",
+    "Does not need a brokerage services agreement with the firm"
+   ],
+   "concept": "New Jersey brokerage agreement",
+   "difficulty": 2,
+   "explain": "C.45:15-16.88(b)(1).",
+   "id": "nj-4214de0b",
+   "portion": "georgia",
+   "q": "A buyer in a commercial real estate transaction:",
+   "sub": "nj/activities|Brokerage agreement",
+   "subtopic": "Brokerage agreement",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Exclusive or nonexclusive",
+    "Full service or limited service",
+    "Written or oral"
+   ],
+   "concept": "New Jersey brokerage agreement",
+   "difficulty": 2,
+   "explain": "C.45:15-16.88(b)(2)(c).",
+   "id": "nj-1fd2a9d7",
+   "portion": "georgia",
+   "q": "The brokerage services agreement must state whether the agency relationship is:",
+   "sub": "nj/activities|Brokerage agreement",
+   "subtopic": "Brokerage agreement",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A verbal agreement witnessed by the broker",
+    "A clause in the listing only",
+    "Separate initialling or signature, with an acknowledgment that a dual agent will not advocate terms favouring one principal"
+   ],
+   "concept": "New Jersey brokerage agreement",
+   "difficulty": 3,
+   "explain": "C.45:15-16.88(b)(2)(d).",
+   "id": "nj-1977d789",
+   "portion": "georgia",
+   "q": "Consent to disclosed dual agency or designated agency must be shown by:",
+   "sub": "nj/activities|Brokerage agreement",
+   "subtopic": "Brokerage agreement",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In a timely manner even where the property is already under contract, unless the principal directs otherwise in writing",
+    "Only until a contract is signed",
+    "Only if above the asking price",
+    "At the agent's discretion"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 1,
+   "explain": "C.45:15-16.87(d).",
+   "id": "nj-cf121adf",
+   "portion": "georgia",
+   "q": "Written offers and counteroffers must be presented:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "May be waived in writing",
+    "May be waived in commercial deals only",
+    "May not be waived"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 2,
+   "explain": "C.45:15-16.87.",
+   "id": "nj-72b5c8eb",
+   "portion": "georgia",
+   "q": "The statutory duties owed by a New Jersey brokerage firm to its principal:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At the first showing only",
+    "At closing",
+    "Within 7 days of an offer",
+    "No later than when they sign the brokerage services agreement"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 2,
+   "explain": "C.45:15-16.87(h)(1).",
+   "id": "nj-ca635ad4",
+   "portion": "georgia",
+   "q": "A party the firm serves must receive the consumer information statement:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Never",
+    "Before signing an offer, or as soon as reasonably practical after",
+    "Only on written request"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 2,
+   "explain": "C.45:15-16.87(h)(2).",
+   "id": "nj-be804b97",
+   "portion": "georgia",
+   "q": "A party NOT represented by any firm must receive the consumer information statement:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Notice to Consumer",
+    "Agency Disclosure",
+    "Material Facts",
+    "Statement of Relationship"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 3,
+   "explain": "C.45:15-16.87(i)(1).",
+   "id": "nj-529af1b6",
+   "portion": "georgia",
+   "q": "The firm's capacity must be disclosed in writing in a paragraph titled:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A title commitment",
+    "A home warranty",
+    "A signed property condition disclosure statement",
+    "A survey"
+   ],
+   "concept": "New Jersey duties",
+   "difficulty": 2,
+   "explain": "C.45:15-16.87(e), referring to C.56:8-19.1.",
+   "id": "nj-78a7320d",
+   "portion": "georgia",
+   "q": "Where the principal is a residential seller, the firm must obtain:",
+   "sub": "nj/activities|Duties",
+   "subtopic": "Duties",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is a form of dual agent",
+    "Represents no party and is not required to keep any information confidential",
+    "Owes fiduciary duties to the buyer",
+    "Represents whoever pays"
+   ],
+   "concept": "New Jersey transaction broker",
+   "difficulty": 1,
+   "explain": "C.45:15-16.94(a).",
+   "id": "nj-a9d33548",
+   "portion": "georgia",
+   "q": "A New Jersey transaction broker:",
+   "sub": "nj/activities|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "By advocating for the seller",
+    "Without advising any party how to gain an advantage at the other's expense",
+    "By advocating for whoever signed first"
+   ],
+   "concept": "New Jersey transaction broker",
+   "difficulty": 2,
+   "explain": "C.45:15-16.94(b)(7).",
+   "id": "nj-70884ca4",
+   "portion": "georgia",
+   "q": "A transaction broker must work toward an agreement:",
+   "sub": "nj/activities|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The broker's written approval",
+    "The informed consent of both parties, in their signed brokerage services agreements",
+    "An oral consent at the showing"
+   ],
+   "concept": "New Jersey dual agency",
+   "difficulty": 1,
+   "explain": "C.45:15-16.92(a).",
+   "id": "nj-0a8ba56c",
+   "portion": "georgia",
+   "q": "A disclosed dual agent may act only with:",
+   "sub": "nj/activities|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Covers the seller only",
+    "Covers both parties and survives termination of the relationship",
+    "Ends at closing"
+   ],
+   "concept": "New Jersey dual agency",
+   "difficulty": 2,
+   "explain": "C.45:15-16.92(b)(4).",
+   "id": "nj-ac080df5",
+   "portion": "georgia",
+   "q": "A disclosed dual agent's duty of confidentiality:",
+   "sub": "nj/activities|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Breaches loyalty",
+    "Must get written consent first",
+    "Does not breach the duty of loyalty"
+   ],
+   "concept": "New Jersey buyer agent",
+   "difficulty": 2,
+   "explain": "C.45:15-16.89(b)(1).",
+   "id": "nj-9ae30a6c",
+   "portion": "georgia",
+   "q": "A buyer's agent who shows the same property to other prospective buyers:",
+   "sub": "nj/activities|Buyer agent",
+   "subtopic": "Buyer agent",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Ends when the agreement expires",
+    "Ends at closing",
+    "Survives termination of the agency relationship"
+   ],
+   "concept": "New Jersey buyer agent",
+   "difficulty": 3,
+   "explain": "C.45:15-16.89(a)(4).",
+   "id": "nj-b8c25506",
+   "portion": "georgia",
+   "q": "A buyer's agent's duty not to disclose confidential information:",
+   "sub": "nj/activities|Buyer agent",
+   "subtopic": "Buyer agent",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "In the kitchen",
+    "On the street",
+    "At the entrance or at the sign-in sheet",
+    "In the listing"
+   ],
+   "concept": "New Jersey open house",
+   "difficulty": 1,
+   "explain": "C.45:15-16.99(a).",
+   "id": "nj-b11826ee",
+   "portion": "georgia",
+   "q": "At a residential showing generally open to the public, the required sign must be posted:",
+   "sub": "nj/activities|Open house",
+   "subtopic": "Open house",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Confidential",
+    "Not confidential and could be disclosed to the seller",
+    "Privileged",
+    "Covered by the listing agreement"
+   ],
+   "concept": "New Jersey open house",
+   "difficulty": 2,
+   "explain": "C.45:15-16.99(b).",
+   "id": "nj-ee73030d",
+   "portion": "georgia",
+   "q": "The open house sign tells prospective buyers that what they say to the agent is:",
+   "sub": "nj/activities|Open house",
+   "subtopic": "Open house",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Leave the open house",
+    "Disclose that representation on the sign-in sheet",
+    "Bring their agent",
+    "Say nothing"
+   ],
+   "concept": "New Jersey open house",
+   "difficulty": 3,
+   "explain": "C.45:15-16.99(b).",
+   "id": "nj-e77925c1",
+   "portion": "georgia",
+   "q": "A buyer already exclusively represented by a buyer's agent must:",
+   "sub": "nj/activities|Open house",
+   "subtopic": "Open house",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Their employing or contracting broker only",
+    "The seller directly",
+    "Any licensed broker",
+    "The closing agent"
+   ],
+   "concept": "New Jersey commissions",
+   "difficulty": 1,
+   "explain": "R.S.45:15-16(a); 45:15-17(m).",
+   "id": "nj-787c676f",
+   "portion": "georgia",
+   "q": "A New Jersey salesperson may accept a commission from:",
+   "sub": "nj/activities|Commissions",
+   "subtopic": "Commissions",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Any unlicensed referrer",
+    "The seller's attorney",
+    "A relocation consultant",
+    "A purchaser of residential real property, and no other third party"
+   ],
+   "concept": "New Jersey rebates",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(k)(2).",
+   "id": "nj-6e8e847f",
+   "portion": "georgia",
+   "q": "A New Jersey broker may rebate part of the commission to:",
+   "sub": "nj/activities|Rebates",
+   "subtopic": "Rebates",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At the time of closing, as a credit reducing the commission or a cheque from the closing agent",
+    "In cash at signing",
+    "Within 30 days after closing"
+   ],
+   "concept": "New Jersey rebates",
+   "difficulty": 3,
+   "explain": "R.S.45:15-17(k)(2).",
+   "id": "nj-99e743b2",
+   "portion": "georgia",
+   "q": "That rebate is paid:",
+   "sub": "nj/activities|Rebates",
+   "subtopic": "Rebates",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Notify the Commission",
+    "Obtain the seller's consent",
+    "Recommend the purchaser contact a tax professional"
+   ],
+   "concept": "New Jersey rebates",
+   "difficulty": 3,
+   "explain": "R.S.45:15-17(k)(2).",
+   "id": "nj-84ecd8a4",
+   "portion": "georgia",
+   "q": "Before paying a rebate the broker must also:",
+   "sub": "nj/activities|Rebates",
+   "subtopic": "Rebates",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "$100",
+    "$500",
+    "$1,000",
+    "$5,000"
+   ],
+   "concept": "New Jersey inducements",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(g).",
+   "id": "nj-0299498c",
+   "portion": "georgia",
+   "q": "A promotional benefit requiring written disclosure to the recipient is one conferring more than:",
+   "sub": "nj/activities|Inducements",
+   "subtopic": "Inducements",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Deposited in a special account separate and apart from personal or other business accounts",
+    "Held in the broker's operating account",
+    "Kept by the salesperson until closing"
+   ],
+   "concept": "New Jersey trust money",
+   "difficulty": 1,
+   "explain": "R.S.45:15-17(o).",
+   "id": "nj-ab2bb9ca",
+   "portion": "georgia",
+   "q": "Money a New Jersey broker receives belonging to others must be:",
+   "sub": "nj/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A ground for suspension or revocation",
+    "A civil matter only",
+    "Permitted pending a dispute"
+   ],
+   "concept": "New Jersey trust money",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(d).",
+   "id": "nj-12fff381",
+   "portion": "georgia",
+   "q": "Failing to account for or pay over money belonging to others is:",
+   "sub": "nj/activities|Trust money",
+   "subtopic": "Trust money",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Run for at least 90 days",
+    "Renew automatically",
+    "State a definite terminal date not subject to qualifying terms or conditions"
+   ],
+   "concept": "New Jersey listings",
+   "difficulty": 1,
+   "explain": "R.S.45:15-17(f).",
+   "id": "nj-a056bd43",
+   "portion": "georgia",
+   "q": "A New Jersey listing contract must:",
+   "sub": "nj/activities|Listings",
+   "subtopic": "Listings",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Within 5 business days",
+    "At closing",
+    "At the time of execution"
+   ],
+   "concept": "New Jersey listings",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(f).",
+   "id": "nj-fd1b3241",
+   "portion": "georgia",
+   "q": "The client must receive a fully executed copy of the listing contract:",
+   "sub": "nj/activities|Listings",
+   "subtopic": "Listings",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At the closing table",
+    "In the contract of sale",
+    "In the MLS only",
+    "Only if asked"
+   ],
+   "concept": "New Jersey conflicts",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(p).",
+   "id": "nj-51baf49a",
+   "portion": "georgia",
+   "q": "A licensee selling property in which they have an interest must disclose that interest and their licence status:",
+   "sub": "nj/activities|Conflicts",
+   "subtopic": "Conflicts",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Permitted dual agency",
+    "Allowed in commercial deals",
+    "A ground for discipline"
+   ],
+   "concept": "New Jersey conflicts",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(b).",
+   "id": "nj-86256681",
+   "portion": "georgia",
+   "q": "Acting for more than one party without the knowledge of all parties is:",
+   "sub": "nj/activities|Conflicts",
+   "subtopic": "Conflicts",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "30 days",
+    "90 days",
+    "At the next renewal",
+    "Only if sentenced to jail"
+   ],
+   "concept": "New Jersey conduct",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17(s).",
+   "id": "nj-b35c1fed",
+   "portion": "georgia",
+   "q": "A licensee convicted of a disorderly persons offence must notify the Commission within:",
+   "sub": "nj/activities|Conduct",
+   "subtopic": "Conduct",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A ground for discipline",
+    "Permitted with written disclosure",
+    "Permitted for new construction"
+   ],
+   "concept": "New Jersey conduct",
+   "difficulty": 3,
+   "explain": "R.S.45:15-17(g).",
+   "id": "nj-912c424b",
+   "portion": "georgia",
+   "q": "Promoting the sale of real estate by means of a prize drawing is:",
+   "sub": "nj/activities|Conduct",
+   "subtopic": "Conduct",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The grantor, when the deed is offered for recording",
+    "The grantee at closing",
+    "The lender",
+    "The listing broker"
+   ],
+   "concept": "New Jersey transfer fee",
+   "difficulty": 1,
+   "explain": "N.J.S.A. 46:15-7(a).",
+   "id": "nj-349bb53c",
+   "portion": "georgia",
+   "q": "Who pays the New Jersey realty transfer fee?",
+   "sub": "nj/activities|Transfer fee",
+   "subtopic": "Transfer fee",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not exceed $350,000",
+    "Does not exceed $150,000",
+    "Exceeds $1,000,000",
+    "Is paid in cash"
+   ],
+   "concept": "New Jersey transfer fee",
+   "difficulty": 3,
+   "explain": "N.J.S.A. 46:15-7(a)(3)(a).",
+   "id": "nj-3593bada",
+   "portion": "georgia",
+   "q": "The general purpose portion of the realty transfer fee is not imposed where the total consideration:",
+   "sub": "nj/activities|Transfer fee",
+   "subtopic": "Transfer fee",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The deed is void",
+    "The title becomes unmarketable",
+    "The title conveyed is not impaired, but the fee remains owed"
+   ],
+   "concept": "New Jersey transfer fee",
+   "difficulty": 3,
+   "explain": "N.J.S.A. 46:15-7(b).",
+   "id": "nj-58991703",
+   "portion": "georgia",
+   "q": "If the consideration is misstated on a recorded deed:",
+   "sub": "nj/activities|Transfer fee",
+   "subtopic": "Transfer fee",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Becomes the landlord's on receipt",
+    "Remains the tenant's property, is held in trust, and may not be mingled with the landlord's property",
+    "May be used for operating expenses"
+   ],
+   "concept": "New Jersey security deposits",
+   "difficulty": 1,
+   "explain": "N.J.S.A. 46:8-19.",
+   "id": "nj-93268bf2",
+   "portion": "georgia",
+   "q": "A New Jersey security deposit:",
+   "sub": "nj/activities|Security deposits",
+   "subtopic": "Security deposits",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "All single-family rentals",
+    "Any building under ten units",
+    "Premises of not more than two dwelling units, and owner-occupied premises of not more than three"
+   ],
+   "concept": "New Jersey truth in renting",
+   "difficulty": 2,
+   "explain": "N.J.S.A. 46:8-44(a).",
+   "id": "nj-6ebb8970",
+   "portion": "georgia",
+   "q": "The Truth in Renting Act's definition of landlord excludes:",
+   "sub": "nj/activities|Truth in Renting",
+   "subtopic": "Truth in Renting",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "English only",
+    "English and Spanish",
+    "Any language the tenant requests"
+   ],
+   "concept": "New Jersey truth in renting",
+   "difficulty": 3,
+   "explain": "N.J.S.A. 46:8-45(a).",
+   "id": "nj-3c951352",
+   "portion": "georgia",
+   "q": "The statement of legal rights and responsibilities must be printed in:",
+   "sub": "nj/activities|Truth in Renting",
+   "subtopic": "Truth in Renting",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The Pinelands Protection Act of 1979",
+    "The Coastal Zone Act of 1965",
+    "The Highlands Act of 1965"
+   ],
+   "concept": "New Jersey other laws",
+   "difficulty": 3,
+   "explain": "PSI New Jersey state outline, Other Laws and Regulations.",
+   "id": "nj-9efdcdb2",
+   "portion": "georgia",
+   "q": "Which appears on the New Jersey outline as a land use statute?",
+   "sub": "nj/activities|Other laws",
+   "subtopic": "Other laws",
+   "topic": "nj/activities"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "150 hours",
+    "60 hours",
+    "90 hours",
+    "75 hours"
+   ],
+   "concept": "New Jersey education",
+   "difficulty": 1,
+   "explain": "R.S.45:15-10.1(a).",
+   "id": "nj-88da38a1",
+   "portion": "georgia",
+   "q": "Prelicensure education for a New Jersey salesperson is:",
+   "sub": "nj/licensing|Education",
+   "subtopic": "Education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "6 hours of ethics",
+    "4 hours of fair housing",
+    "3 hours of ethics and 1 hour of fair housing",
+    "No specified subjects"
+   ],
+   "concept": "New Jersey education",
+   "difficulty": 2,
+   "explain": "R.S.45:15-10.1(a).",
+   "id": "nj-7b04b23b",
+   "portion": "georgia",
+   "q": "The salesperson's 75 hours must include at least:",
+   "sub": "nj/licensing|Education",
+   "subtopic": "Education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "75 hours",
+    "120 hours including 10 of ethics",
+    "90 hours",
+    "150 hours, including 30 hours of ethics"
+   ],
+   "concept": "New Jersey education",
+   "difficulty": 2,
+   "explain": "R.S.45:15-10.1(b).",
+   "id": "nj-7a85a341",
+   "portion": "georgia",
+   "q": "A New Jersey broker candidate must complete:",
+   "sub": "nj/licensing|Education",
+   "subtopic": "Education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "18 hours",
+    "6 hours",
+    "24 hours",
+    "12 credit hours per cycle"
+   ],
+   "concept": "New Jersey continuing education",
+   "difficulty": 1,
+   "explain": "NJREC published breakdown of required CE hours.",
+   "id": "nj-33f5cd53",
+   "portion": "georgia",
+   "q": "Continuing education in New Jersey is:",
+   "sub": "nj/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "1 fair housing and NJLAD, 1 agency, 2 ethics and 2 any core",
+    "3 ethics and 3 agency",
+    "2 fair housing and 2 contracts"
+   ],
+   "concept": "New Jersey continuing education",
+   "difficulty": 2,
+   "explain": "NJREC published breakdown of required CE hours.",
+   "id": "nj-d7367513",
+   "portion": "georgia",
+   "q": "Of those 12 hours, the required subjects are:",
+   "sub": "nj/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Yes, freely",
+    "No; fair housing may substitute for core and electives, but not the reverse",
+    "Yes, with Commission approval"
+   ],
+   "concept": "New Jersey continuing education",
+   "difficulty": 3,
+   "explain": "NJREC published breakdown of required CE hours.",
+   "id": "nj-0b2adffb",
+   "portion": "georgia",
+   "q": "May an elective course be used in place of the required fair housing hour?",
+   "sub": "nj/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "18",
+    "17",
+    "19",
+    "21"
+   ],
+   "concept": "New Jersey qualifying",
+   "difficulty": 1,
+   "explain": "R.S.45:15-9(a).",
+   "id": "nj-47d10acd",
+   "portion": "georgia",
+   "q": "The minimum age for a New Jersey real estate licence is:",
+   "sub": "nj/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A college degree",
+    "The equivalent of a high school education",
+    "Two years of sales experience",
+    "No educational minimum"
+   ],
+   "concept": "New Jersey qualifying",
+   "difficulty": 2,
+   "explain": "R.S.45:15-9(a).",
+   "id": "nj-89eec872",
+   "portion": "georgia",
+   "q": "Every New Jersey applicant must have:",
+   "sub": "nj/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "One year",
+    "Five years",
+    "Six months",
+    "Three years immediately preceding the application"
+   ],
+   "concept": "New Jersey qualifying",
+   "difficulty": 2,
+   "explain": "R.S.45:15-9(a); the Commission may waive it for an out-of-state broker of three years.",
+   "id": "nj-7899aaf1",
+   "portion": "georgia",
+   "q": "A broker applicant must have been actively engaged full time as a New Jersey salesperson for:",
+   "sub": "nj/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The employing broker",
+    "The Commission",
+    "The applicant",
+    "The State Police"
+   ],
+   "concept": "New Jersey qualifying",
+   "difficulty": 3,
+   "explain": "R.S.45:15-9(a).",
+   "id": "nj-cc310bbe",
+   "portion": "georgia",
+   "q": "The cost of the criminal history record background check is borne by:",
+   "sub": "nj/licensing|Qualifying",
+   "subtopic": "Qualifying",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Any licensed salesperson",
+    "The main office broker by telephone",
+    "A broker-salesperson"
+   ],
+   "concept": "New Jersey offices",
+   "difficulty": 1,
+   "explain": "R.S.45:15-12.",
+   "id": "nj-b0d43d1c",
+   "portion": "georgia",
+   "q": "Each New Jersey branch office must be under the direct supervision of:",
+   "sub": "nj/licensing|Offices",
+   "subtopic": "Offices",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The licence number",
+    "The authorised name and the words Licensed Real Estate Broker",
+    "The office hours",
+    "The Commission's seal"
+   ],
+   "concept": "New Jersey offices",
+   "difficulty": 2,
+   "explain": "R.S.45:15-12.",
+   "id": "nj-ba555169",
+   "portion": "georgia",
+   "q": "Every place of business must display conspicuously on the exterior:",
+   "sub": "nj/licensing|Offices",
+   "subtopic": "Offices",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the broker's own address",
+    "Optional if a branch exists",
+    "The business address of all licensed persons in the broker's employ"
+   ],
+   "concept": "New Jersey offices",
+   "difficulty": 3,
+   "explain": "R.S.45:15-12.",
+   "id": "nj-97f9ebb8",
+   "portion": "georgia",
+   "q": "The broker's designated main office is:",
+   "sub": "nj/licensing|Offices",
+   "subtopic": "Offices",
+   "topic": "nj/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "Race",
+    "Color",
+    "National origin",
+    "Source of lawful income used for rental or mortgage payments"
+   ],
+   "concept": "New Jersey njlad",
+   "difficulty": 1,
+   "explain": "N.J.S.A. 10:5-12(h)(1).",
+   "id": "nj-e7da52d1",
+   "portion": "georgia",
+   "q": "Which is protected in New Jersey housing but not by the federal Fair Housing Act?",
+   "sub": "nj/additional|NJLAD",
+   "subtopic": "NJLAD",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Credit score",
+    "Civil union status and domestic partnership status",
+    "Employment history",
+    "Length of residence"
+   ],
+   "concept": "New Jersey njlad",
+   "difficulty": 1,
+   "explain": "N.J.S.A. 10:5-12(h)(1).",
+   "id": "nj-2f5cd097",
+   "portion": "georgia",
+   "q": "New Jersey also protects, in housing:",
+   "sub": "nj/additional|NJLAD",
+   "subtopic": "NJLAD",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The full contract rent",
+    "Only the portion of the rent the tenant actually pays",
+    "Three times the market rent"
+   ],
+   "concept": "New Jersey njlad",
+   "difficulty": 2,
+   "explain": "N.J.S.A. 10:5-12(g)(4).",
+   "id": "nj-8a57f1ac",
+   "portion": "georgia",
+   "q": "A landlord applying a minimum income test to a voucher holder must base it on:",
+   "sub": "nj/additional|NJLAD",
+   "subtopic": "NJLAD",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Housing for older persons as defined in the act",
+    "Owner-occupied buildings",
+    "Studio apartments",
+    "Any two-family house"
+   ],
+   "concept": "New Jersey njlad",
+   "difficulty": 2,
+   "explain": "N.J.S.A. 10:5-12(g)(5).",
+   "id": "nj-6c0026f7",
+   "portion": "georgia",
+   "q": "Refusing to rent to a family with children under 18 is lawful only for:",
+   "sub": "nj/additional|NJLAD",
+   "subtopic": "NJLAD",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Inadmissible unless signed",
+    "Presumptive evidence that the person named authorised it",
+    "Actionable only with a refusal"
+   ],
+   "concept": "New Jersey njlad",
+   "difficulty": 3,
+   "explain": "N.J.S.A. 10:5-12(g)(3).",
+   "id": "nj-0e7adee5",
+   "portion": "georgia",
+   "q": "A discriminatory advertisement is treated as:",
+   "sub": "nj/additional|NJLAD",
+   "subtopic": "NJLAD",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Embezzlement, conversion or unlawful obtaining of money in a brokerage transaction",
+    "A bad home inspection",
+    "A declined mortgage",
+    "A low appraisal"
+   ],
+   "concept": "New Jersey guaranty fund",
+   "difficulty": 1,
+   "explain": "C.45:15-34.",
+   "id": "nj-079380eb",
+   "portion": "georgia",
+   "q": "The Real Estate Guaranty Fund compensates a person harmed by:",
+   "sub": "nj/additional|Guaranty fund",
+   "subtopic": "Guaranty fund",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$10,000 per claimant",
+    "$50,000 per transaction",
+    "Unlimited",
+    "$20,000 in the aggregate per transaction"
+   ],
+   "concept": "New Jersey guaranty fund",
+   "difficulty": 1,
+   "explain": "C.45:15-34, as amended by P.L.1993, c.51.",
+   "id": "nj-5d06d7cc",
+   "portion": "georgia",
+   "q": "The maximum recovery from the fund is:",
+   "sub": "nj/additional|Guaranty fund",
+   "subtopic": "Guaranty fund",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A private insurer",
+    "The Commission's own bank",
+    "The Attorney General",
+    "The State Treasurer, and administered by the Commission"
+   ],
+   "concept": "New Jersey guaranty fund",
+   "difficulty": 3,
+   "explain": "C.45:15-34.",
+   "id": "nj-3f4625b8",
+   "portion": "georgia",
+   "q": "The fund is maintained by:",
+   "sub": "nj/additional|Guaranty fund",
+   "subtopic": "Guaranty fund",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Fewer than 10 lots",
+    "Fewer than 25 lots",
+    "Fewer than 100 lots, parcels, units or interests",
+    "Fewer than 50 lots"
+   ],
+   "concept": "New Jersey full disclosure act",
+   "difficulty": 1,
+   "explain": "C.45:15-16.32(a)(6).",
+   "id": "nj-e0c37658",
+   "portion": "georgia",
+   "q": "The Real Estate Sales Full Disclosure Act does not apply to a subdivision of:",
+   "sub": "nj/additional|Full Disclosure Act",
+   "subtopic": "Full Disclosure Act",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Deliver a current public offering statement and allow a reasonable opportunity to examine it",
+    "Record a plat",
+    "Post a bond",
+    "Obtain a county permit"
+   ],
+   "concept": "New Jersey full disclosure act",
+   "difficulty": 2,
+   "explain": "C.45:15-16.30(b).",
+   "id": "nj-af97d4b1",
+   "portion": "georgia",
+   "q": "Before disposing of an interest in subdivided lands the seller must:",
+   "sub": "nj/additional|Full Disclosure Act",
+   "subtopic": "Full Disclosure Act",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Rentals are federally regulated",
+    "No consideration changes hands",
+    "The relationship created is one of landlord and tenant"
+   ],
+   "concept": "New Jersey full disclosure act",
+   "difficulty": 3,
+   "explain": "C.45:15-16.32(a)(8).",
+   "id": "nj-cc224e96",
+   "portion": "georgia",
+   "q": "A development made up wholly of rental units is exempt because:",
+   "sub": "nj/additional|Full Disclosure Act",
+   "subtopic": "Full Disclosure Act",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three days",
+    "Ten business days",
+    "Seven days of receiving the public offering statement or executing the contract, whichever is later",
+    "Thirty days"
+   ],
+   "concept": "New Jersey timeshares",
+   "difficulty": 1,
+   "explain": "C.45:15-16.59(b)(10).",
+   "id": "nj-e2bf071e",
+   "portion": "georgia",
+   "q": "A New Jersey timeshare purchaser may cancel within:",
+   "sub": "nj/additional|Timeshares",
+   "subtopic": "Timeshares",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A violation by the developer as well",
+    "The entity's alone",
+    "Not actionable in New Jersey"
+   ],
+   "concept": "New Jersey timeshares",
+   "difficulty": 2,
+   "explain": "C.45:15-16.58.",
+   "id": "nj-7ad02d14",
+   "portion": "georgia",
+   "q": "A violation committed by a timeshare developer's marketing entity is:",
+   "sub": "nj/additional|Timeshares",
+   "subtopic": "Timeshares",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "One year",
+    "30 days",
+    "90 days, extendable while a complete application is pursued",
+    "Indefinitely"
+   ],
+   "concept": "New Jersey timeshares",
+   "difficulty": 3,
+   "explain": "C.45:15-16.57(b).",
+   "id": "nj-753bec3a",
+   "portion": "georgia",
+   "q": "A preliminary timeshare registration runs for:",
+   "sub": "nj/additional|Timeshares",
+   "subtopic": "Timeshares",
+   "topic": "nj/additional"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "It chooses to",
+    "A court refers a case",
+    "It receives a verified written complaint from any person",
+    "A broker requests it"
+   ],
+   "concept": "New Jersey investigations",
+   "difficulty": 1,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-d677f4c2",
+   "portion": "georgia",
+   "q": "The New Jersey Real Estate Commission must investigate when:",
+   "sub": "nj/commission|Investigations",
+   "subtopic": "Investigations",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not deprive the Commission of jurisdiction",
+    "Ends the proceeding",
+    "Reduces the penalty by half"
+   ],
+   "concept": "New Jersey investigations",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-2ab95e48",
+   "portion": "georgia",
+   "q": "Voluntarily surrendering a licence after the conduct complained of:",
+   "sub": "nj/commission|Investigations",
+   "subtopic": "Investigations",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A separate offence",
+    "Part of a single course of conduct",
+    "One offence per licensee per year"
+   ],
+   "concept": "New Jersey investigations",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-1c31c68c",
+   "portion": "georgia",
+   "q": "For penalty purposes each transaction is treated as:",
+   "sub": "nj/commission|Investigations",
+   "subtopic": "Investigations",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Civil contempt only",
+    "Conduct demonstrating unworthiness",
+    "No violation"
+   ],
+   "concept": "New Jersey investigations",
+   "difficulty": 3,
+   "explain": "R.S.45:15-17(e).",
+   "id": "nj-f893de68",
+   "portion": "georgia",
+   "q": "Refusing to answer the Commission's questions in an investigation may be construed as:",
+   "sub": "nj/commission|Investigations",
+   "subtopic": "Investigations",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "$1,000",
+    "$10,000",
+    "$25,000",
+    "$5,000"
+   ],
+   "concept": "New Jersey sanctions",
+   "difficulty": 1,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-bfe1b0c4",
+   "portion": "georgia",
+   "q": "The maximum monetary penalty for a first violation is:",
+   "sub": "nj/commission|Sanctions",
+   "subtopic": "Sanctions",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "$5,000",
+    "$10,000",
+    "$20,000",
+    "$50,000"
+   ],
+   "concept": "New Jersey sanctions",
+   "difficulty": 1,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-76ce1894",
+   "portion": "georgia",
+   "q": "For any subsequent violation the maximum penalty is:",
+   "sub": "nj/commission|Sanctions",
+   "subtopic": "Sanctions",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only double the fine",
+    "Suspend the licence for six months",
+    "Deem the person a repeat offender and direct that no licence be issued to them again"
+   ],
+   "concept": "New Jersey sanctions",
+   "difficulty": 2,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-fea43834",
+   "portion": "georgia",
+   "q": "On a third violation the Commission may:",
+   "sub": "nj/commission|Sanctions",
+   "subtopic": "Sanctions",
+   "topic": "nj/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Of at least one year",
+    "Less than the unexpired portion of the licence period",
+    "Fixed at six months"
+   ],
+   "concept": "New Jersey sanctions",
+   "difficulty": 3,
+   "explain": "R.S.45:15-17.",
+   "id": "nj-3a8f3e3d",
+   "portion": "georgia",
+   "q": "A suspension imposed by the Commission must be for a period:",
+   "sub": "nj/commission|Sanctions",
+   "subtopic": "Sanctions",
+   "topic": "nj/commission"
+  }
+ ],
+ "code": "NJ",
+ "diffs": {
+  "national/agency": [
+   "P.L.2024, c.32 rebuilt New Jersey agency. A firm working with a BUYER is a BUYER'S AGENT by default, and a residential buyer needs a written BROKERAGE SERVICES AGREEMENT (C.45:15-16.88).",
+   "A TRANSACTION BROKER represents nobody and is NOT required to keep any information confidential - the opposite of the dual agent, who keeps both sides' confidences (C.45:15-16.92, 16.94).",
+   "The statutory duties, including presenting written offers even when the property is under contract, MAY NOT BE WAIVED (C.45:15-16.87).",
+   "Every public open house needs a posted sign, in statutory wording, warning buyers that nothing they say is confidential (C.45:15-16.99)."
+  ],
+  "national/disclosures": [
+   "The Law Against Discrimination adds SOURCE OF LAWFUL INCOME, civil union and domestic partnership status, pregnancy or breastfeeding, gender identity or expression and liability for military service to the federal classes (N.J.S.A. 10:5-12).",
+   "A residential seller's agent must obtain a SIGNED PROPERTY CONDITION DISCLOSURE STATEMENT (C.45:15-16.87(e)).",
+   "Subdivisions of 100 lots or more need a PUBLIC OFFERING STATEMENT delivered before disposition (C.45:15-16.30, 16.32)."
+  ],
+  "national/practice": [
+   "A salesperson may be paid ONLY by their employing or contracting broker, and rebates may go to a residential PURCHASER but to no other unlicensed person (R.S.45:15-16, 45:15-17(k)).",
+   "Listings must carry a DEFINITE TERMINAL DATE with no qualifying conditions, and the client gets a fully executed copy at signing (R.S.45:15-17(f)).",
+   "Discipline runs to $5,000 for a first violation and $10,000 after; a third violation can bar licensure for good (R.S.45:15-17).",
+   "The REAL ESTATE GUARANTY FUND pays up to $20,000 per transaction for a licensee's embezzlement or conversion (C.45:15-34).",
+   "Education: 75 hours for a salesperson, 150 for a broker, then 12 hours of continuing education a cycle."
+  ]
+ },
+ "name": "New Jersey",
+ "pass": 0.7,
+ "portions": {
+  "georgia": {
+   "blurb": "R.S.45:15, the 2024 agency act, the Law Against Discrimination and the other named statutes.",
+   "minutes": 65,
+   "name": "New Jersey law",
+   "scored": 30
+  },
+  "national": {
+   "blurb": "Principles, practice and the maths, as New Jersey tests them.",
+   "minutes": 175,
+   "name": "General practice",
+   "scored": 80
+  }
+ },
+ "regulator": "New Jersey Real Estate Commission",
+ "single": true,
+ "sources": [
+  {
+   "by": "New Jersey Legislature",
+   "name": "R.S.45:15-1 et seq., the real estate licence act",
+   "note": "Education, offices, commissions, the grounds for discipline in 45:15-17, and the guaranty fund.",
+   "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1"
+  },
+  {
+   "by": "New Jersey Legislature",
+   "name": "P.L.2024, c.32 (C.45:15-16.86 et al.)",
+   "note": "The current agency law: brokerage services agreements, buyer's and seller's agents, disclosed dual agents, designated agents and transaction brokers.",
+   "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1"
+  },
+  {
+   "by": "New Jersey Legislature",
+   "name": "N.J.S.A. 10:5-12, the Law Against Discrimination",
+   "note": "New Jersey's protected classes in housing, which run far past the federal list.",
+   "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1"
+  },
+  {
+   "by": "New Jersey Real Estate Commission",
+   "name": "Breakdown of required continuing education hours",
+   "note": "The Commission's own published 12-hour breakdown.",
+   "url": "https://www.nj.gov/dobi/division_rec/licensing/breakdowncehours.html"
+  },
+  {
+   "by": "PSI Services and the New Jersey Real Estate Commission",
+   "name": "New Jersey Candidate Information Bulletin",
+   "note": "One 110-question paper, 4 hours, 70% (77 correct), and the 30-item New Jersey outline.",
+   "url": "https://test-takers.psiexams.com/njre"
+  }
+ ],
+ "study": {
+  "nj/activities": {
+   "blurb": "Agency, trust money, advertising, listings, commissions, other laws.",
+   "counts_on_exam": true,
+   "exam_questions": 22,
+   "examples": [
+    {
+     "k": "The sign does the warning; the consumer information statement does the explaining.",
+     "s": "A buyer with no agent walks into your public open house and starts telling you their top price.",
+     "t": "Open house walk-in",
+     "w": [
+      "The sign at the entrance or sign-in sheet already told them you represent the seller only and that nothing they say is confidential.",
+      "You must give them the consumer information statement before they sign an offer, or as soon as reasonably practical.",
+      "You may become a disclosed dual agent or designated agent only with informed consent in signed agreements."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Statutes & rules on licensee activity",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A subagent of the seller",
+        "A buyer's agent",
+        "A transaction broker",
+        "A dual agent"
+       ],
+       "q": "A New Jersey firm that performs brokerage services for a buyer is, by default:",
+       "why": "C.45:15-16.88(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "In every transaction without exception",
+        "Only at the offer",
+        "In a residential transaction, before or as soon as reasonably practical after services begin",
+        "Never"
+       ],
+       "q": "A written brokerage services agreement with the buyer is required:",
+       "why": "C.45:15-16.88(b)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Needs one before any showing",
+        "Does not need a brokerage services agreement with the firm",
+        "Needs one signed by the Commission"
+       ],
+       "q": "A buyer in a COMMERCIAL transaction:",
+       "why": "C.45:15-16.88(b)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Separate initialling or signature in the brokerage services agreement or another document",
+        "A verbal agreement",
+        "The listing alone"
+       ],
+       "q": "Consent to dual or designated agency must be shown by:",
+       "why": "C.45:15-16.88(b)(2)(d)."
+      }
+     ],
+     "h": "The 2024 agency act: what a firm IS by default",
+     "l": [
+      "A brokerage firm that performs real estate brokerage services FOR A BUYER IS A BUYER'S AGENT unless (1) the firm represents the seller under a brokerage services agreement, (2) it represents both under agreements, making it a DISCLOSED DUAL AGENT, (3) it has agreed to work with the buyer as a TRANSACTION BROKER, or (4) the licensee is the seller (C.45:15-16.88).",
+      "The mirror rule applies to sellers: a firm performing services FOR A SELLER IS A SELLER'S AGENT subject to the same four exceptions (C.45:15-16.90).",
+      "In a RESIDENTIAL transaction the firm must enter into a BROKERAGE SERVICES AGREEMENT with the buyer BEFORE, OR AS SOON AS REASONABLY PRACTICAL AFTER, it starts rendering services. No such agreement is required with a buyer in a COMMERCIAL transaction (C.45:15-16.88(b)(1)).",
+      "A BROKERAGE SERVICES AGREEMENT is a written agreement appointing a firm to represent a principal as agent or to work with a party as a transaction broker. It covers listing agreements, buyer agency agreements, and transaction broker, dual agency and designated agency agreements (C.45:15-16.86).",
+      "The agreement must state the TERM, that the firm is appointed as agent, whether the relationship is EXCLUSIVE OR NONEXCLUSIVE, and, by separate initial or signature, whether the party consents to DISCLOSED DUAL AGENCY or DESIGNATED AGENCY - with an acknowledgement that a disclosed dual agent will NOT advocate terms favourable to one principal to the detriment of the other."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "In a timely manner even where the property is already under contract, unless the principal directs otherwise in writing",
+        "Only until a contract is signed",
+        "Only above list price"
+       ],
+       "q": "Written offers must be presented:",
+       "why": "C.45:15-16.87(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At closing",
+        "Within 7 days of the offer",
+        "No later than when they sign the brokerage services agreement"
+       ],
+       "q": "The consumer information statement must reach a party the firm serves:",
+       "why": "C.45:15-16.87(h)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Never",
+        "Before signing an offer, or as soon as reasonably practical after",
+        "Only on request"
+       ],
+       "q": "An unrepresented party must get the consumer information statement:",
+       "why": "C.45:15-16.87(h)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Agency Disclosure",
+        "Notice to Consumer",
+        "Material Facts"
+       ],
+       "q": "The agency capacity must be disclosed in writing in a paragraph titled:",
+       "why": "C.45:15-16.87(i)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "May be waived in writing",
+        "May not be waived",
+        "Apply only to sellers"
+       ],
+       "q": "These statutory duties:",
+       "why": "C.45:15-16.87."
+      }
+     ],
+     "h": "Duties that cannot be waived (C.45:15-16.87)",
+     "l": [
+      "Strict compliance with the laws of agency and the principles governing FIDUCIARY relationships.",
+      "REASONABLE SKILL AND CARE.",
+      "To deal HONESTLY AND IN GOOD FAITH.",
+      "To present ALL WRITTEN OFFERS AND COUNTEROFFERS in a timely manner and confirm receipt in writing to the other side - REGARDLESS of whether the property is already under contract or the buyer is already a party to a contract on another property, unless the principal directs otherwise in writing.",
+      "Where the principal is a residential seller, to obtain a SIGNED PROPERTY CONDITION DISCLOSURE STATEMENT (C.56:8-19.1); an unrepresented seller must give it to the buyer BEFORE the buyer becomes obligated under a contract.",
+      "To disclose all existing MATERIAL INFORMATION known, or that a reasonable effort would have revealed, about the PHYSICAL CONDITION of the property.",
+      "To ACCOUNT in a timely manner for all money and property received.",
+      "To provide the CONSUMER INFORMATION STATEMENT in the Commission's form and get a signed acknowledgement - to a party the firm serves no later than when they sign the brokerage services agreement, and to an unrepresented party before they sign an offer or as soon as practical after.",
+      "To disclose in writing, no later than when the principal signs, the firm's capacity in a paragraph titled 'AGENCY DISCLOSURE', and the terms of any compensation offered to another firm.",
+      "To undertake a reasonable effort to obtain material information about the condition of every property it takes on."
+     ],
+     "p": [
+      "A brokerage firm acting as a buyer's agent, seller's agent, disclosed dual agent or designated agent owes these to its principal AND to all parties, and they MAY NOT BE WAIVED:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Represents no party and is not required to keep information confidential",
+        "Is a dual agent",
+        "Owes fiduciary duties to the buyer"
+       ],
+       "q": "A New Jersey transaction broker:",
+       "why": "C.45:15-16.94(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Breaches loyalty",
+        "Does not breach a buyer's agent's duty of loyalty",
+        "Requires written consent"
+       ],
+       "q": "Showing the same property to other prospective buyers:",
+       "why": "C.45:15-16.89(b)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Ends at closing",
+        "Survives termination of the agency relationship",
+        "Ends when the agreement expires"
+       ],
+       "q": "A buyer's agent's duty of confidentiality:",
+       "why": "C.45:15-16.89(a)(4)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The informed consent of both parties in their signed brokerage services agreements",
+        "The broker's approval",
+        "An oral consent"
+       ],
+       "q": "A disclosed dual agent may act only with:",
+       "why": "C.45:15-16.92(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Favour the seller",
+        "Take no action adverse or detrimental to either party's interest",
+        "Disclose each side's position to the other"
+       ],
+       "q": "A dual agent must:",
+       "why": "C.45:15-16.92(b)(1)."
+      }
+     ],
+     "h": "Buyer's agent, dual agent, transaction broker",
+     "l": [
+      "A BUYER'S AGENT owes LOYALTY (no action adverse to the buyer, primary devotion to the buyer's interests), timely disclosure of conflicts, advice to seek expert help beyond the agent's expertise, CONFIDENTIALITY that survives termination of the relationship, and a good-faith continuous effort to find a property - though not while the buyer is under a contract that is past the attorney-review period (C.45:15-16.89).",
+      "Showing the same property to OTHER prospective buyers does NOT breach loyalty, and representing more than one buyer in COMPETING transactions on the same property does NOT breach loyalty or create a conflict (C.45:15-16.89(b)).",
+      "A DISCLOSED DUAL AGENT acts only with the INFORMED CONSENT OF BOTH PARTIES, set out in the brokerage services agreements each signs. The dual agent takes no action adverse to either, keeps BOTH sides' confidential information, and advises both to seek expert advice (C.45:15-16.92).",
+      "A TRANSACTION BROKER is NOT an agent for and does not represent any party, does not promote one party's interest over the other, and IS NOT REQUIRED TO KEEP ANY INFORMATION CONFIDENTIAL. It treats all parties honestly, presents all written offers, keeps everyone informed, and works toward an agreement WITHOUT advising any party how to gain an advantage at the other's expense (C.45:15-16.94)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "In the kitchen",
+        "At the entrance or at the sign-in sheet",
+        "In the listing only"
+       ],
+       "q": "At a public open house the required sign must be posted:",
+       "why": "C.45:15-16.99(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Confidential",
+        "Not confidential and could be disclosed to the seller",
+        "Privileged"
+       ],
+       "q": "The sign tells buyers that what they say to the open house agent is:",
+       "why": "C.45:15-16.99(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Disclose that representation on the sign-in sheet",
+        "Leave the open house",
+        "Say nothing"
+       ],
+       "q": "A buyer already exclusively represented by a buyer's agent must:",
+       "why": "C.45:15-16.99(b)."
+      }
+     ],
+     "h": "The open house sign (C.45:15-16.99)",
+     "p": [
+      "At any residential showing GENERALLY OPEN TO THE PUBLIC, a sign must be posted at the ENTRANCE OR AT THE SIGN-IN SHEET telling prospective buyers the hosting firm REPRESENTS THE SELLER ONLY. The statute prints the exact wording, which warns that ANY INFORMATION YOU GIVE THIS AGENT IS NOT CONSIDERED CONFIDENTIAL and could be disclosed to the seller, that the buyer may have their own agent, and that a buyer already exclusively represented MUST disclose that on the sign-in sheet."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The seller directly",
+        "Any licensed broker",
+        "Their employing or contracting broker only",
+        "The title company"
+       ],
+       "q": "A salesperson may accept a commission from:",
+       "why": "R.S.45:15-16(a); 45:15-17(m)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A purchaser of residential real property, under a written agreement made at the onset of the relationship",
+        "Any unlicensed referrer",
+        "The seller's attorney",
+        "Nobody"
+       ],
+       "q": "A broker may rebate part of the commission to:",
+       "why": "R.S.45:15-17(k)(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "In cash on signing",
+        "Within 30 days of closing",
+        "At the time of closing, as a credit or a cheque from the closing agent"
+       ],
+       "q": "That rebate must be paid:",
+       "why": "R.S.45:15-17(k)(2)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "$100",
+        "$500",
+        "$5,000",
+        "$1,000"
+       ],
+       "q": "A promotional benefit requiring written disclosure is one worth more than:",
+       "why": "R.S.45:15-17(g)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "In the broker's operating account",
+        "By the salesperson",
+        "In a special account separate and apart from personal or other business accounts"
+       ],
+       "q": "Money held for others must be kept:",
+       "why": "R.S.45:15-17(o)."
+      }
+     ],
+     "h": "Trust money, commissions and rebates",
+     "l": [
+      "COMMINGLING the money or property of principals with the licensee's own, or failing to maintain and deposit in a SPECIAL ACCOUNT SEPARATE AND APART from personal or other business accounts all money received as broker, escrow agent or temporary custodian of others' funds, is a ground for discipline (R.S.45:15-17(o)).",
+      "FAILURE TO ACCOUNT FOR OR PAY OVER money belonging to others is likewise a ground (R.S.45:15-17(d)).",
+      "A salesperson or broker-salesperson may accept a commission ONLY FROM THEIR EMPLOYING OR CONTRACTING BROKER, who must be a licensed broker (R.S.45:15-16(a); 45:15-17(m)). They may form an LLC or other entity to receive it, registered with the Commission (R.S.45:15-16(b), (c)).",
+      "PAYING any rebate, profit, compensation or commission to ANYONE NOT HOLDING A REAL ESTATE LICENCE is a ground for discipline, with two exceptions: the promotional services in subsection g., and a REBATE to a PURCHASER OF RESIDENTIAL REAL PROPERTY - but to no other third party - where the rebate was contracted for IN WRITING AT THE ONSET of the broker relationship, the broker complies with disclosure requirements, and the broker recommends the purchaser speak to a TAX PROFESSIONAL. The rebate is paid AT CLOSING as a credit reducing the commission or a cheque from the closing agent (R.S.45:15-17(k)).",
+      "If a broker runs a promotion conferring a benefit WORTH MORE THAN $1,000, the broker must disclose the benefit in writing to the recipient and disclose any compensation received, in RESPA form, NO LATER THAN WHEN THE OFFER IS EXTENDED (R.S.45:15-17(g))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A 90-day minimum",
+        "A definite terminal date not subject to qualifying terms or conditions",
+        "An automatic renewal"
+       ],
+       "q": "A listing contract must specify:",
+       "why": "R.S.45:15-17(f)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At the closing table",
+        "Only if asked",
+        "In the contract of sale"
+       ],
+       "q": "A licensee selling property they own must disclose their interest and licence status:",
+       "why": "R.S.45:15-17(p)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "30 days",
+        "90 days",
+        "At renewal",
+        "Never"
+       ],
+       "q": "A licensee convicted of a disorderly persons offence must notify the Commission within:",
+       "why": "R.S.45:15-17(s)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Permitted with disclosure",
+        "Permitted for new construction",
+        "A ground for discipline"
+       ],
+       "q": "Promoting a sale of real estate with a prize drawing is:",
+       "why": "R.S.45:15-17(g)."
+      }
+     ],
+     "h": "Listings, contracts and conflicts (R.S.45:15-17)",
+     "l": [
+      "FAILURE to give the client a FULLY EXECUTED COPY of any sale or exclusive sales or rental listing contract AT THE TIME OF EXECUTION, or failure to state a DEFINITE TERMINAL DATE not subject to qualifying terms or conditions, is a ground for discipline (subsection f.).",
+      "ACTING FOR MORE THAN ONE PARTY in a transaction WITHOUT THE KNOWLEDGE of all parties is a ground (subsection b.).",
+      "SELLING property in which the licensee has an interest requires DISCLOSURE IN THE CONTRACT OF SALE of that interest and of the licensee's status; BUYING property requires disclosure of the licensee's status in the contract (subsections p. and q.).",
+      "Collecting a commission as broker while at the same time representing either party in a DIFFERENT CAPACITY for consideration is a ground (subsection i.).",
+      "Using a TRADE NAME OR INSIGNIA of a real estate organisation the licensee does not belong to is a ground (subsection j.).",
+      "Any plan for selling real estate involving a LOTTERY, CONTEST, GAME, PRIZE OR DRAWING, or offering lots for advertising purposes, is a ground (subsection g.).",
+      "Charging a fee for information on PURPORTEDLY AVAILABLE RENTAL HOUSING before a lease is executed, or before the tenant takes possession where there is no lease, without complying with the Commission's rules, is a ground (subsection r.).",
+      "A licensee must NOTIFY THE COMMISSION WITHIN 30 DAYS of a conviction of any crime, misdemeanour or disorderly persons offence, an indictment, the filing of formal criminal charges, the suspension or revocation of a licence in another state, or formal discipline elsewhere (subsection s.)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The grantee at closing",
+        "The lender",
+        "The grantor, at the time the deed is offered for recording",
+        "The broker"
+       ],
+       "q": "Who pays the New Jersey realty transfer fee?",
+       "why": "N.J.S.A. 46:15-7(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Remains the tenant's property and is held in trust, not mingled with the landlord's property",
+        "Becomes the landlord's on receipt",
+        "May be spent on repairs at any time"
+       ],
+       "q": "A security deposit in New Jersey:",
+       "why": "N.J.S.A. 46:8-19."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Premises of not more than two dwelling units, and owner-occupied premises of not more than three",
+        "All single-family rentals",
+        "Any property under 10 units"
+       ],
+       "q": "The Truth in Renting Act's definition of landlord excludes:",
+       "why": "N.J.S.A. 46:8-44(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "English only",
+        "English and Spanish",
+        "Every language requested"
+       ],
+       "q": "The Truth in Renting statement must be printed in:",
+       "why": "N.J.S.A. 46:8-45(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Does not exceed $150,000",
+        "Does not exceed $350,000",
+        "Exceeds $1,000,000"
+       ],
+       "q": "The general purpose part of the realty transfer fee does not apply where the consideration:",
+       "why": "N.J.S.A. 46:15-7(a)(3)(a)."
+      }
+     ],
+     "h": "Other laws on the outline",
+     "l": [
+      "REALTY TRANSFER FEE: the GRANTOR pays it to the COUNTY RECORDING OFFICER at the time the deed is offered for recording. The basic fee is $1.25 per $500 of consideration (state portion) plus $0.50 per $500 (county portion), with an additional fee of $0.75 per $500 on consideration ABOVE $150,000 and a tiered general purpose fee that starts at $0.90 per $500 and does NOT apply at all where the total consideration does not exceed $350,000 (N.J.S.A. 46:15-7). A misstated consideration does NOT impair the title conveyed.",
+      "SECURITY DEPOSITS: the money REMAINS THE PROPERTY OF THE TENANT, is HELD IN TRUST, and SHALL NOT BE MINGLED with the landlord's property or become an asset of the landlord. It must be invested in a qualifying money market fund or deposited in an insured New Jersey institution in an interest-bearing account (N.J.S.A. 46:8-19).",
+      "TRUTH IN RENTING ACT: 'landlord' EXCLUDES premises of not more than two dwelling units, owner-occupied premises of not more than three, and hotels and motels serving transient or seasonal guests (N.J.S.A. 46:8-44). The Department of Community Affairs prepares an annual STATEMENT OF LEGAL RIGHTS AND RESPONSIBILITIES of tenants and landlords, free, in ENGLISH AND SPANISH, posted on its website (N.J.S.A. 46:8-45).",
+      "The outline also names the FARMLAND REASSESSMENT ACT, the PINELANDS PROTECTION ACT of 1979, the FRESHWATER WETLANDS PROTECTION ACT of 1987, MOUNT LAUREL affordable housing requirements, zoning and building codes, and the MUNICIPAL LAND USE LAW."
+     ]
+    }
+   ],
+   "summary": "Twenty-two of the thirty state items. Agency was rewritten in 2024, so learn it from the statute, not from an older guide. After that the marks are in 45:15-17, the long list of things that cost you your licence.",
+   "topic": "nj/activities",
+   "traps": [
+    "Agency changed in 2024. A firm working with a buyer IS a buyer's agent by default.",
+    "A transaction broker keeps NOTHING confidential; a dual agent keeps EVERYTHING confidential.",
+    "The rebate exception runs to a residential PURCHASER only - no other third party.",
+    "A listing needs a definite terminal date, and the client gets a copy at execution.",
+    "The grantor pays the realty transfer fee, at recording, to the county."
+   ],
+   "vocab": [
+    [
+     "Brokerage services agreement",
+     "The written agreement appointing a firm as agent or transaction broker."
+    ],
+    [
+     "Consumer information statement",
+     "The Commission's form explaining the relationships available."
+    ],
+    [
+     "Disclosed dual agent",
+     "One firm representing both sides with informed written consent."
+    ],
+    [
+     "Designated agent",
+     "An individual licensee named to act for one party."
+    ],
+    [
+     "Transaction broker",
+     "A firm representing nobody, keeping nothing confidential."
+    ],
+    [
+     "Attorney-review period",
+     "The window the statute refers to for contracts past review."
+    ]
+   ]
+  },
+  "nj/additional": {
+   "blurb": "Full Disclosure Act, the Law Against Discrimination, guaranty fund, timeshares.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Additional requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Race",
+        "Source of lawful income used for rental or mortgage payments",
+        "Color",
+        "National origin"
+       ],
+       "q": "Which is protected in New Jersey housing but not by the federal Fair Housing Act?",
+       "why": "N.J.S.A. 10:5-12(h)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Credit score",
+        "Employment history",
+        "Civil union status and domestic partnership status"
+       ],
+       "q": "New Jersey also protects:",
+       "why": "N.J.S.A. 10:5-12(h)(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Only the portion of the rent the tenant actually pays",
+        "The full contract rent",
+        "Three times the market rent"
+       ],
+       "q": "A landlord applying a minimum income test to a voucher holder must base it on:",
+       "why": "N.J.S.A. 10:5-12(g)(4)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any owner-occupied building",
+        "Studio apartments",
+        "Housing for older persons as defined in the act"
+       ],
+       "q": "Refusing to rent to a family with children under 18 is lawful only for:",
+       "why": "N.J.S.A. 10:5-12(g)(5)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Presumptive evidence that the person named authorised it",
+        "Only evidence if admitted",
+        "Not actionable without a refusal"
+       ],
+       "q": "A discriminatory advertisement is:",
+       "why": "N.J.S.A. 10:5-12(g)(3)."
+      }
+     ],
+     "h": "The Law Against Discrimination (N.J.S.A. 10:5-12(h))",
+     "l": [
+      "RACE",
+      "CREED",
+      "COLOR",
+      "NATIONAL ORIGIN",
+      "ANCESTRY",
+      "MARITAL STATUS",
+      "CIVIL UNION STATUS",
+      "DOMESTIC PARTNERSHIP STATUS",
+      "FAMILIAL STATUS",
+      "PREGNANCY OR BREASTFEEDING",
+      "SEX",
+      "GENDER IDENTITY OR EXPRESSION",
+      "AFFECTIONAL OR SEXUAL ORIENTATION",
+      "DISABILITY",
+      "LIABILITY FOR SERVICE IN THE ARMED FORCES",
+      "NATIONALITY",
+      "SOURCE OF LAWFUL INCOME USED FOR RENTAL OR MORTGAGE PAYMENTS",
+      "A landlord may not refuse a tenant because of the SOURCE of lawful income or rent payment, including by refusing to accept it, or by applying a MINIMUM INCOME REQUIREMENT that is not based exclusively on THE PORTION OF THE RENT THE TENANT ACTUALLY PAYS (10:5-12(g)(4)).",
+      "Refusing to rent because a family includes CHILDREN UNDER 18, or making a lease void on the birth of a child, is unlawful, except for HOUSING FOR OLDER PERSONS (10:5-12(g)(5)).",
+      "Producing a discriminatory advertisement or application is PRESUMPTIVE EVIDENCE that the person named authorised it."
+     ],
+     "p": [
+      "It is unlawful for ANY PERSON, including a real estate broker or salesperson or their employee or agent, to refuse to sell, rent, lease, assign or sublease, to refuse to negotiate, to represent that property is unavailable when it is available, to discriminate in the terms, conditions or privileges, or to publish any advertisement or make any record or inquiry indicating a preference, because of:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A bad home inspection",
+        "A failed mortgage application",
+        "Embezzlement, conversion or unlawful obtaining of money in a brokerage transaction",
+        "Negligent pricing advice"
+       ],
+       "q": "The Real Estate Guaranty Fund covers losses from:",
+       "why": "C.45:15-34."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "$10,000",
+        "$20,000 in the aggregate",
+        "$50,000",
+        "Unlimited"
+       ],
+       "q": "The maximum recovery per transaction is:",
+       "why": "C.45:15-34, as amended by P.L.1993, c.51."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The Commission's own bank",
+        "The State Treasurer, administered by the Commission",
+        "A private insurer"
+       ],
+       "q": "The fund is held by:",
+       "why": "C.45:15-34."
+      }
+     ],
+     "h": "The Real Estate Guaranty Fund (C.45:15-34)",
+     "l": [
+      "A special TRUST FUND maintained by the STATE TREASURER and administered by the COMMISSION.",
+      "It pays a person aggrieved by the EMBEZZLEMENT, CONVERSION OR UNLAWFUL OBTAINING of money or property IN A REAL ESTATE BROKERAGE TRANSACTION by a licensed broker, broker-salesperson or salesperson, or by an UNLICENSED EMPLOYEE OF A BROKER.",
+      "The cap is $20,000 IN THE AGGREGATE PER TRANSACTION for causes of action accruing after P.L.1993, c.51 - regardless of the number of claims, aggrieved persons or parcels involved. The original figure was $10,000."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Fewer than 10 lots",
+        "Fewer than 50 lots",
+        "Fewer than 100 lots, parcels, units or interests"
+       ],
+       "q": "The Full Disclosure Act does not apply to a subdivision of:",
+       "why": "C.45:15-16.32(a)(6)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Record a plat",
+        "Post a bond with the county",
+        "Deliver a current public offering statement and give a reasonable opportunity to examine it"
+       ],
+       "q": "Before disposing of an interest in subdivided lands the seller must:",
+       "why": "C.45:15-16.30(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Exempt, because the relationship created is landlord and tenant",
+        "Covered in full",
+        "Covered only above 100 units"
+       ],
+       "q": "A development made up wholly of rental units is:",
+       "why": "C.45:15-16.32(a)(8)."
+      }
+     ],
+     "h": "The Real Estate Sales Full Disclosure Act",
+     "l": [
+      "It governs the DISPOSITION OF SUBDIVIDED LANDS. No one may dispose of an interest unless a CURRENT PUBLIC OFFERING STATEMENT is DELIVERED TO THE PURCHASER and the purchaser has a REASONABLE OPPORTUNITY TO EXAMINE IT BEFORE the disposition (C.45:15-16.30).",
+      "It does NOT apply to, among others, a sale by an owner for their own account in a SINGLE OR ISOLATED transaction, purely INDUSTRIAL OR COMMERCIAL dispositions, sales by court order or a governmental agency, CEMETERY lots, subdivisions of FEWER THAN 100 lots, parcels, units or interests, or developments made up WHOLLY OF RENTAL UNITS (C.45:15-16.32).",
+      "A subdivider adding land under the same common promotional plan may make a CONSOLIDATED FILING (C.45:15-16.39)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Three days",
+        "Ten business days",
+        "Seven days of receiving the public offering statement or executing the contract, whichever is later",
+        "Thirty days"
+       ],
+       "q": "A New Jersey timeshare purchaser may cancel within:",
+       "why": "C.45:15-16.59(b)(10)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The agent's alone",
+        "Not actionable",
+        "A violation by the developer as well"
+       ],
+       "q": "A violation committed by a timeshare developer's sales agent is:",
+       "why": "C.45:15-16.58."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "90 days, extendable while a complete application is pursued",
+        "One year",
+        "30 days"
+       ],
+       "q": "A preliminary timeshare registration lasts:",
+       "why": "C.45:15-16.57(b)."
+      }
+     ],
+     "h": "The New Jersey Real Estate Timeshare Act (2006)",
+     "l": [
+      "A developer who sells or offers timeshare interests in New Jersey must REGISTER the timeshare plan with the Commission. The Commission may grant a 90-DAY PRELIMINARY REGISTRATION while a full application is pursued (C.45:15-16.57).",
+      "The developer must prepare a PUBLIC OFFERING STATEMENT, give it to each purchaser AT THE TIME OF PURCHASE, and have the purchaser CERTIFY RECEIPT IN WRITING (C.45:15-16.59).",
+      "The statement must say that a purchaser may CANCEL the purchase contract WITHIN SEVEN DAYS after RECEIPT OF THE PUBLIC OFFERING STATEMENT or after EXECUTION OF THE PURCHASE CONTRACT, WHICHEVER IS LATER (C.45:15-16.59(b)(10)).",
+      "The DEVELOPER is responsible for each registered plan and for the acts of any SALES AGENT, MARKETING ENTITY OR MANAGING ENTITY it uses - a violation by them is a violation by the developer too (C.45:15-16.58)."
+     ]
+    }
+   ],
+   "summary": "Three items across four named statutes. The Law Against Discrimination is the one worth real study - its list is the longest in the country.",
+   "topic": "nj/additional",
+   "traps": [
+    "Source of lawful income is the New Jersey class most likely to be tested.",
+    "Guaranty fund: $20,000 per TRANSACTION, not per claimant.",
+    "Full Disclosure Act kicks in at 100 lots or more.",
+    "Timeshare cancellation is seven days from the LATER of the two events."
+   ],
+   "vocab": [
+    [
+     "NJLAD",
+     "The New Jersey Law Against Discrimination."
+    ],
+    [
+     "Source of lawful income",
+     "Vouchers, benefits and other lawful rent money."
+    ],
+    [
+     "Public offering statement",
+     "The disclosure document for subdivisions and timeshares."
+    ],
+    [
+     "Subdivider",
+     "The person disposing of subdivided lands."
+    ]
+   ]
+  },
+  "nj/commission": {
+   "blurb": "Records, investigations and what the Commission can do to a licence.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [],
+   "ga": [],
+   "label": "Duties & powers of the Commission",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Only on its own motion",
+        "Only after a court refers a case",
+        "It receives a verified written complaint"
+       ],
+       "q": "The Commission must investigate when:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Ends the case",
+        "Does not deprive the Commission of jurisdiction",
+        "Halves the penalty"
+       ],
+       "q": "Surrendering a licence after the conduct:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A separate offence",
+        "Part of one course of conduct",
+        "Counted only once per year"
+       ],
+       "q": "For penalty purposes, each transaction is:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "A civil contempt only",
+        "No violation at all",
+        "Conduct demonstrating unworthiness"
+       ],
+       "q": "Refusing to answer the Commission's questions may be treated as:",
+       "why": "R.S.45:15-17."
+      }
+     ],
+     "h": "Investigations (R.S.45:15-17)",
+     "l": [
+      "The Commission MAY investigate on its OWN MOTION and MUST investigate on the VERIFIED WRITTEN COMPLAINT of any person - including against someone acting as a licensee WITHOUT A LICENCE.",
+      "A lapse, suspension or VOLUNTARY SURRENDER of a licence does NOT deprive the Commission of jurisdiction, provided the charges arose while the person was licensed.",
+      "EACH TRANSACTION IS A SEPARATE OFFENCE.",
+      "The Commission may take depositions, require written statements under oath, SUBPOENA witnesses, compel attendance, take evidence and require production of any relevant material, including all of a licensee's records. Failure to obey a subpoena or to answer questions may be construed as CONDUCT DEMONSTRATING UNWORTHINESS, and the Commission may apply to the SUPERIOR COURT for an order compelling compliance."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "$1,000",
+        "$5,000",
+        "$10,000",
+        "$25,000"
+       ],
+       "q": "The maximum penalty for a first violation is:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "$5,000",
+        "$10,000",
+        "$20,000"
+       ],
+       "q": "For any subsequent violation the maximum is:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only double the fine",
+        "Deem the person a repeat offender and bar any future licence",
+        "Suspend for 6 months"
+       ],
+       "q": "On a third violation the Commission may:",
+       "why": "R.S.45:15-17."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At least one year",
+        "For a period less than the unexpired portion of the licence period",
+        "Permanent"
+       ],
+       "q": "A suspension imposed by the Commission must be:",
+       "why": "R.S.45:15-17."
+      }
+     ],
+     "h": "Sanctions",
+     "l": [
+      "The Commission may place a licensee on PROBATION, SUSPEND for a period less than the unexpired portion of the licence period, or REVOKE the licence - or the RIGHT OF LICENSURE where the person no longer holds a licence at the time of hearing.",
+      "In addition or as an alternative it may impose a penalty of NOT MORE THAN $5,000 FOR A FIRST VIOLATION and NOT MORE THAN $10,000 FOR ANY SUBSEQUENT VIOLATION, recovered in the Commission's name by summary proceedings under the Penalty Enforcement Law of 1999.",
+      "On a THIRD VIOLATION of the section - whether of the same provision or of separate provisions - the Commission may deem the person a REPEAT OFFENDER and direct that NO LICENCE SHALL HENCEFORTH BE ISSUED to them.",
+      "The Commission is expressly vested with power to make and enforce rules for the conduct of the real estate brokerage business, and violating those rules is itself a ground for discipline (subsection t.)."
+     ]
+    }
+   ],
+   "summary": "Two items. Know what the Commission can do to a licence and what the fines are.",
+   "topic": "nj/commission",
+   "traps": [
+    "$5,000 first, $10,000 subsequent. Three violations can bar you for good.",
+    "Surrendering the licence does not stop the case."
+   ],
+   "vocab": [
+    [
+     "Verified complaint",
+     "A sworn written complaint that forces an investigation."
+    ],
+    [
+     "Right of licensure",
+     "What the Commission revokes when the licence has already lapsed."
+    ],
+    [
+     "Repeat offender",
+     "A third-violation finding barring future licensure."
+    ]
+   ]
+  },
+  "nj/licensing": {
+   "blurb": "Who needs a licence, the types, education and offices.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "75 hours",
+        "150 hours",
+        "60 hours",
+        "90 hours"
+       ],
+       "q": "Prelicensure education for a New Jersey salesperson is:",
+       "why": "R.S.45:15-10.1(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "6 hours of ethics",
+        "4 hours of fair housing",
+        "3 hours of ethics and 1 hour of fair housing"
+       ],
+       "q": "Of those hours, the statute requires at least:",
+       "why": "R.S.45:15-10.1(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "75 hours",
+        "150 hours, including 30 hours of ethics",
+        "120 hours including 10 of ethics"
+       ],
+       "q": "A broker candidate must complete:",
+       "why": "R.S.45:15-10.1(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "18 hours",
+        "6 hours",
+        "12 credit hours per cycle",
+        "24 hours"
+       ],
+       "q": "Continuing education in New Jersey is:",
+       "why": "NJREC published CE breakdown."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "1 hour",
+        "3 hours",
+        "4 hours",
+        "2 credit hours"
+       ],
+       "q": "Of those 12 hours, ethics accounts for:",
+       "why": "NJREC published CE breakdown."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No; fair housing may replace core and electives, but not the reverse",
+        "Yes, freely",
+        "Yes, with Commission approval"
+       ],
+       "q": "May core and elective hours be used in place of the required fair housing hour?",
+       "why": "NJREC published CE breakdown."
+      }
+     ],
+     "h": "Education (R.S.45:15-10.1)",
+     "l": [
+      "SALESPERSON: 75 HOURS in the aggregate of approved courses at a Commission-licensed school, as a PREREQUISITE TO ADMISSION TO THE EXAMINATION. At least 3 HOURS must be on ETHICS and ethical conduct, and at least 1 HOUR on FAIR HOUSING and housing discrimination.",
+      "BROKER or BROKER-SALESPERSON: 150 HOURS in the aggregate, of which 30 HOURS must be on ETHICS and at least 1 HOUR on FAIR HOUSING. The broker course is taken as a 90-hour general course plus two 30-hour courses, all certified on a SINGLE SCHOOL CERTIFICATE though they need not be taken at the same school.",
+      "CONTINUING EDUCATION, as the Commission publishes it: at least 12 CREDIT HOURS per cycle - 1 hour FAIR HOUSING AND THE NEW JERSEY LAW AGAINST DISCRIMINATION, 1 hour AGENCY, 2 hours ETHICS, 2 hours ANY CORE TOPIC, and 6 hours of any combination of core and elective topics. Ethics, fair housing and agency hours may substitute for core and elective hours, but core and elective hours may NOT substitute for them."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "18",
+        "17",
+        "19",
+        "21"
+       ],
+       "q": "The minimum age for a New Jersey licence is:",
+       "why": "R.S.45:15-9(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The equivalent of a high school education",
+        "A college degree",
+        "No educational minimum"
+       ],
+       "q": "Every applicant must have:",
+       "why": "R.S.45:15-9(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "One year",
+        "Three years immediately preceding the application",
+        "Five years",
+        "Six months"
+       ],
+       "q": "A broker applicant must have been a full-time New Jersey salesperson for:",
+       "why": "R.S.45:15-9(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The applicant",
+        "The employing broker",
+        "The Commission"
+       ],
+       "q": "Who pays for the criminal history record background check?",
+       "why": "R.S.45:15-9(a)."
+      }
+     ],
+     "h": "Qualifying (R.S.45:15-9)",
+     "l": [
+      "Every applicant must be 18 YEARS OF AGE OR OVER and have the EQUIVALENT OF A HIGH SCHOOL EDUCATION.",
+      "The applicant must furnish evidence of GOOD MORAL CHARACTER, and must submit NAME, ADDRESS, FINGERPRINTS and written consent for a CRIMINAL HISTORY RECORD BACKGROUND CHECK, at the applicant's own cost. The State Police must notify the commissioner if a licensee or applicant who was checked is later ARRESTED in New Jersey.",
+      "A BROKER or BROKER-SALESPERSON applicant must FIRST have held a New Jersey SALESPERSON'S licence and have been actively engaged FULL TIME in the brokerage business in New Jersey as a salesperson for THREE YEARS immediately preceding the application. The Commission may waive that where the applicant held a broker's licence in another state for at least three years, meets the education requirement and passes the examination.",
+      "A nonresident's licence is deemed IRREVOCABLE CONSENT to service of process through the Commission's secretary."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Any licensed salesperson",
+        "The main office broker remotely",
+        "A broker-salesperson"
+       ],
+       "q": "Each New Jersey branch office must be under the direct supervision of:",
+       "why": "R.S.45:15-12."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The licence number",
+        "The authorised name and the words Licensed Real Estate Broker",
+        "The office hours"
+       ],
+       "q": "Every place of business must display on the exterior:",
+       "why": "R.S.45:15-12."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Be in the broker's home",
+        "Be open to the public and display the licence certificates of the broker and everyone in their employ",
+        "Display only the broker's certificate"
+       ],
+       "q": "The broker's main office must:",
+       "why": "R.S.45:15-12."
+      }
+     ],
+     "h": "Offices (R.S.45:15-12)",
+     "l": [
+      "Every broker must maintain a DESIGNATED MAIN OFFICE OPEN TO THE PUBLIC, with the licence certificates of the broker and all licensed persons in their employ PROMINENTLY DISPLAYED. That office is the BUSINESS ADDRESS of all those licensees for all purposes under the act.",
+      "A BRANCH OFFICE LICENCE is required for each additional place of business, each branch must be under the DIRECT SUPERVISION OF A BROKER-SALESPERSON, and the fee is $50 PER LICENCE.",
+      "Every place of business must display CONSPICUOUSLY ON THE EXTERIOR the name the broker is authorised to operate under, for a corporation or partnership the name of its authorised broker, and the words LICENSED REAL ESTATE BROKER.",
+      "A broker whose main office is in another state must hold a valid broker's licence in good standing in that state."
+     ]
+    }
+   ],
+   "summary": "Only three items, so learn the four numbers: 75 hours, 150 hours, 12 hours of continuing education, and age 18.",
+   "topic": "nj/licensing",
+   "traps": [
+    "75 for salesperson, 150 for broker. The broker's ethics requirement is 30 hours, not 3.",
+    "Continuing education is 12 hours, and the mandated hours cannot be covered by electives.",
+    "Three years full time as a New Jersey salesperson before a broker's licence.",
+    "A branch is supervised by a BROKER-SALESPERSON, not by any salesperson."
+   ],
+   "vocab": [
+    [
+     "Broker-salesperson",
+     "A licensee qualified as a broker who works for another broker."
+    ],
+    [
+     "School certificate",
+     "The single certificate carrying all three broker courses."
+    ],
+    [
+     "Main office",
+     "The designated public office that is every licensee's business address."
+    ],
+    [
+     "CHRI check",
+     "The criminal history record background check applicants pay for."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Agency, trust money, advertising, listings, commissions, other laws.",
+   "counts_on_exam": true,
+   "exam_questions": 22,
+   "key": "nj/activities",
+   "label": "Statutes & rules on licensee activity",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a licence, the types, education and offices.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "nj/licensing",
+   "label": "Licensing requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Full Disclosure Act, the Law Against Discrimination, guaranty fund, timeshares.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "nj/additional",
+   "label": "Additional requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Records, investigations and what the Commission can do to a licence.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "nj/commission",
+   "label": "Duties & powers of the Commission",
+   "portion": "georgia"
+  }
+ ]
+}
