@@ -1,0 +1,2050 @@
+{
+ "abbr": "MO",
+ "bank": [
+  {
+   "answer": 1,
+   "choices": [
+    "Any affiliated licensee",
+    "The designated broker, unless affiliated licensees are authorised in writing",
+    "The managing salesperson"
+   ],
+   "concept": "Missouri agreements",
+   "difficulty": 1,
+   "explain": "RSMo 339.780.1.",
+   "id": "mo-3ee7147f",
+   "portion": "georgia",
+   "q": "In Missouri, written brokerage agreements are entered into by:",
+   "sub": "mo/relationships|Agreements",
+   "subtopic": "Agreements",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only the commission rate",
+    "The duties, the terms of compensation, and whether an offer of subagency may be made",
+    "Only the listing period"
+   ],
+   "concept": "Missouri agreements",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.2.",
+   "id": "mo-7e57fae0",
+   "portion": "georgia",
+   "q": "A Missouri seller's limited agency agreement must specify:",
+   "sub": "mo/relationships|Agreements",
+   "subtopic": "Agreements",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Enter a written transaction brokerage agreement with the party",
+    "Rely on an oral understanding",
+    "Use the standard agency agreement"
+   ],
+   "concept": "Missouri agreements",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.6.",
+   "id": "mo-ff2cef8c",
+   "portion": "georgia",
+   "q": "A broker expecting compensation as a transaction broker must:",
+   "sub": "mo/relationships|Agreements",
+   "subtopic": "Agreements",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A minimum advertising spend",
+    "A weekly open house",
+    "Presenting offers, assisting with negotiation until signing, and answering questions about them"
+   ],
+   "concept": "Missouri agreements",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.7.",
+   "id": "mo-7c3ceb5b",
+   "portion": "georgia",
+   "q": "Every Missouri exclusive brokerage agreement must guarantee at least:",
+   "sub": "mo/relationships|Agreements",
+   "subtopic": "Agreements",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Signing the listing agreement",
+    "Notifying the Commission",
+    "Disclosing to the customer that they are a subagent of the client"
+   ],
+   "concept": "Missouri subagency",
+   "difficulty": 3,
+   "explain": "RSMo 339.780.5.",
+   "id": "mo-3559ff64",
+   "portion": "georgia",
+   "q": "Where a unilateral offer of subagency has been made, another broker becomes a subagent by:",
+   "sub": "mo/relationships|Subagency",
+   "subtopic": "Subagency",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "General agent",
+    "Universal agent",
+    "Limited agent",
+    "Transaction broker"
+   ],
+   "concept": "Missouri limited agent",
+   "difficulty": 1,
+   "explain": "RSMo 339.730.1.",
+   "id": "mo-507a237e",
+   "portion": "georgia",
+   "q": "Missouri calls a seller's agent a:",
+   "sub": "mo/relationships|Limited agent",
+   "subtopic": "Limited agent",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only until a contract is signed",
+    "Timely, regardless of whether the property is already under contract",
+    "Only above the listed price"
+   ],
+   "concept": "Missouri limited agent",
+   "difficulty": 1,
+   "explain": "RSMo 339.730.1(3)(b).",
+   "id": "mo-47254cc5",
+   "portion": "georgia",
+   "q": "A Missouri seller's agent must present written offers:",
+   "sub": "mo/relationships|Limited agent",
+   "subtopic": "Limited agent",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Actually known only",
+    "Actually known or that should have been known by the licensee",
+    "Discoverable by inspection only"
+   ],
+   "concept": "Missouri limited agent",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.1(3)(c).",
+   "id": "mo-ff20f558",
+   "portion": "georgia",
+   "q": "Adverse material facts owed to the CLIENT are those:",
+   "sub": "mo/relationships|Limited agent",
+   "subtopic": "Limited agent",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Nothing at all",
+    "Disclosure of adverse material facts actually known or that should have been known",
+    "Full fiduciary duties"
+   ],
+   "concept": "Missouri customers",
+   "difficulty": 1,
+   "explain": "RSMo 339.730.3.",
+   "id": "mo-f77c9e97",
+   "portion": "georgia",
+   "q": "What does a Missouri seller's agent owe a CUSTOMER?",
+   "sub": "mo/relationships|Customers",
+   "subtopic": "Customers",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "None, and there is no duty to verify the client's or an inspector's statements",
+    "A visual inspection",
+    "A full inspection"
+   ],
+   "concept": "Missouri customers",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.3.",
+   "id": "mo-14909285",
+   "portion": "georgia",
+   "q": "A Missouri seller's agent's duty to inspect for the customer is:",
+   "sub": "mo/relationships|Customers",
+   "subtopic": "Customers",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The deal has closed",
+    "A statute or rule requires it, silence would be a misrepresentation, or it is needed to defend the licensee",
+    "The cooperating agent asks"
+   ],
+   "concept": "Missouri confidentiality",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.2.",
+   "id": "mo-315abcc6",
+   "portion": "georgia",
+   "q": "Confidential client information may be disclosed where:",
+   "sub": "mo/relationships|Confidentiality",
+   "subtopic": "Confidentiality",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The consent of all parties, presumed by the written agreement under 339.780",
+    "Oral consent",
+    "No consent at all"
+   ],
+   "concept": "Missouri dual agency",
+   "difficulty": 1,
+   "explain": "RSMo 339.750.1.",
+   "id": "mo-af6690b2",
+   "portion": "georgia",
+   "q": "Missouri dual agency requires:",
+   "sub": "mo/relationships|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A known structural defect",
+    "The terms of any prior offers or counteroffers",
+    "A statutory disclosure"
+   ],
+   "concept": "Missouri dual agency",
+   "difficulty": 2,
+   "explain": "RSMo 339.750.4(5).",
+   "id": "mo-7fd16357",
+   "portion": "georgia",
+   "q": "Which may a Missouri dual agent NOT disclose without consent?",
+   "sub": "mo/relationships|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A full fiduciary for both",
+    "A limited agent for both sides",
+    "Not an agent at all"
+   ],
+   "concept": "Missouri dual agency",
+   "difficulty": 2,
+   "explain": "RSMo 339.750.2.",
+   "id": "mo-b2a3ed2d",
+   "portion": "georgia",
+   "q": "A Missouri dual agent is:",
+   "sub": "mo/relationships|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Ends the relationship",
+    "Converts it to transaction brokerage",
+    "Does not terminate the dual agency relationship"
+   ],
+   "concept": "Missouri dual agency",
+   "difficulty": 3,
+   "explain": "RSMo 339.750.5.",
+   "id": "mo-dd476d1a",
+   "portion": "georgia",
+   "q": "Making a required disclosure as a Missouri dual agent:",
+   "sub": "mo/relationships|Dual agency",
+   "subtopic": "Dual agency",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is a limited agent for both sides",
+    "Represents the seller",
+    "Provides service with no agency or fiduciary relationship to any party"
+   ],
+   "concept": "Missouri transaction broker",
+   "difficulty": 1,
+   "explain": "RSMo 339.755.1.",
+   "id": "mo-4fe9873a",
+   "portion": "georgia",
+   "q": "A Missouri transaction broker:",
+   "sub": "mo/relationships|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any suspicion",
+    "Actual notice or knowledge",
+    "Constructive notice"
+   ],
+   "concept": "Missouri transaction broker",
+   "difficulty": 2,
+   "explain": "RSMo 339.755.2(2)(d).",
+   "id": "mo-dd0c1bba",
+   "portion": "georgia",
+   "q": "Adverse material facts a transaction broker must disclose are those of which the licensee has:",
+   "sub": "mo/relationships|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Are vicariously liable",
+    "Are liable only after closing",
+    "Are not liable for any acts of the transaction broker"
+   ],
+   "concept": "Missouri transaction broker",
+   "difficulty": 2,
+   "explain": "RSMo 339.755.2(2)(f).",
+   "id": "mo-5171041c",
+   "portion": "georgia",
+   "q": "In a Missouri transaction brokerage, the parties:",
+   "sub": "mo/relationships|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only ever be a transaction broker",
+    "Serve as a single agent, subagent, designated agent, limited agent or disclosed dual agent",
+    "Not represent anyone"
+   ],
+   "concept": "Missouri transaction broker",
+   "difficulty": 3,
+   "explain": "RSMo 339.755.6(4).",
+   "id": "mo-10b0e1b0",
+   "portion": "georgia",
+   "q": "A Missouri transaction broker, in OTHER transactions, may:",
+   "sub": "mo/relationships|Transaction broker",
+   "subtopic": "Transaction broker",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Automatically a dual agent",
+    "Neither a dual agent nor a transaction broker, by that fact alone",
+    "A transaction broker"
+   ],
+   "concept": "Missouri designated agents",
+   "difficulty": 1,
+   "explain": "RSMo 339.820.2.",
+   "id": "mo-ca65d9a2",
+   "portion": "georgia",
+   "q": "Appointing designated agents makes the Missouri designated broker:",
+   "sub": "mo/relationships|Designated agents",
+   "subtopic": "Designated agents",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Presumed to be a transaction broker",
+    "Presumed a subagent",
+    "Presumed a dual agent"
+   ],
+   "concept": "Missouri designated agents",
+   "difficulty": 2,
+   "explain": "RSMo 339.820.1.",
+   "id": "mo-fc1d00fb",
+   "portion": "georgia",
+   "q": "Where designated agents have been appointed, an affiliated licensee helping a party with no written agreement is:",
+   "sub": "mo/relationships|Designated agents",
+   "subtopic": "Designated agents",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Remains only a designated agent",
+    "Must withdraw from the deal",
+    "Is a dual agent or transaction broker and must comply with those rules"
+   ],
+   "concept": "Missouri designated agents",
+   "difficulty": 2,
+   "explain": "RSMo 339.820.2.",
+   "id": "mo-8e59b475",
+   "portion": "georgia",
+   "q": "A Missouri licensee who personally represents both sides of one transaction:",
+   "sub": "mo/relationships|Designated agents",
+   "subtopic": "Designated agents",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At the offer",
+    "At closing",
+    "At the earliest practicable opportunity during or after first substantial contact, to someone with no written agreement"
+   ],
+   "concept": "Missouri disclosure",
+   "difficulty": 1,
+   "explain": "RSMo 339.770.1.",
+   "id": "mo-796e311d",
+   "portion": "georgia",
+   "q": "The Missouri broker disclosure form is given:",
+   "sub": "mo/relationships|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Every licensee must repeat it",
+    "No other licensee need make the disclosure",
+    "The Commission must be told"
+   ],
+   "concept": "Missouri disclosure",
+   "difficulty": 2,
+   "explain": "RSMo 339.770.2.",
+   "id": "mo-08348c26",
+   "portion": "georgia",
+   "q": "Where the consumer already has a written agreement with a designated broker:",
+   "sub": "mo/relationships|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "mo/relationships"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Nothing at all",
+    "Up to $2,000",
+    "Not more than $1,000, specifically identified, to cover service charges",
+    "Any amount"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 1,
+   "explain": "RSMo 339.105.1.",
+   "id": "mo-0a8f5798",
+   "portion": "georgia",
+   "q": "How much of a broker's own money may sit in a Missouri escrow account?",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "90 days of the dispute",
+    "One year of the dispute",
+    "It never is",
+    "365 days of the initial projected closing date"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 1,
+   "explain": "RSMo 339.105.4.",
+   "id": "mo-e1a3988f",
+   "portion": "georgia",
+   "q": "Disputed Missouri escrow money must be delivered to the state treasurer within:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "On acceptance of the offer",
+    "Only once the transaction is consummated or terminated, unless all parties agree in writing",
+    "At any time"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 1,
+   "explain": "RSMo 339.105.5.",
+   "id": "mo-3104ddf6",
+   "portion": "georgia",
+   "q": "A Missouri broker may take their commission from escrow:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Thirty days",
+    "Ten business days",
+    "At the next renewal"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 2,
+   "explain": "RSMo 339.105.2.",
+   "id": "mo-ce875861",
+   "portion": "georgia",
+   "q": "A change of escrow account or account status must be reported to the Commission within:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Within 10 banking days",
+    "At closing",
+    "Promptly, unless all parties with an interest agree otherwise in writing"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 2,
+   "explain": "RSMo 339.105.1.",
+   "id": "mo-7400f00d",
+   "portion": "georgia",
+   "q": "Missouri escrow funds must be deposited:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "By subpoena only",
+    "Once a year by appointment",
+    "At all times during regular business hours at the broker's usual place of business"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 2,
+   "explain": "RSMo 339.105.3.",
+   "id": "mo-fe1d624a",
+   "portion": "georgia",
+   "q": "The Commission's access to escrow records is:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Must still be held in the escrow or trust account",
+    "May be kept in the operating account",
+    "Belong to the broker"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 3,
+   "explain": "RSMo 339.105.1.",
+   "id": "mo-4d8eea7f",
+   "portion": "georgia",
+   "q": "Funds in which the broker may have a future interest or claim:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Agreeing in writing that the funds are not in dispute and notifying the broker",
+    "Telephoning the broker",
+    "Letting 365 days pass"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 3,
+   "explain": "RSMo 339.105.4.",
+   "id": "mo-42d96ecc",
+   "portion": "georgia",
+   "q": "Parties may take escrow money out of 'dispute' status by:",
+   "sub": "mo/conduct|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only before a contract exists",
+    "At the party's request",
+    "Timely, regardless of an existing contract or letter of intent, unless the agreement provides otherwise"
+   ],
+   "concept": "Missouri offers",
+   "difficulty": 1,
+   "explain": "RSMo 339.755.2(2)(a).",
+   "id": "mo-297a37fc",
+   "portion": "georgia",
+   "q": "A Missouri transaction broker must present all written offers and counteroffers:",
+   "sub": "mo/conduct|Offers",
+   "subtopic": "Offers",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Continuing",
+    "Continuing for 30 days",
+    "None, while the property is under a contract for sale"
+   ],
+   "concept": "Missouri offers",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.1(3)(a).",
+   "id": "mo-31566dd9",
+   "portion": "georgia",
+   "q": "A Missouri limited agent's duty to seek further offers once one is accepted is:",
+   "sub": "mo/conduct|Offers",
+   "subtopic": "Offers",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "No, the statute is exhaustive",
+    "Only with Commission approval",
+    "Yes; nothing prohibits the public from contracting for additional duties"
+   ],
+   "concept": "Missouri agreements",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.8.",
+   "id": "mo-67e8da50",
+   "portion": "georgia",
+   "q": "May a Missouri brokerage agreement add duties beyond the statutory ones?",
+   "sub": "mo/conduct|Agreements",
+   "subtopic": "Agreements",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Answering the client's or customer's questions about offers, counteroffers, notices and contingencies",
+    "Providing professional photography",
+    "Paying for staging"
+   ],
+   "concept": "Missouri minimum services",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.7(3).",
+   "id": "mo-76669117",
+   "portion": "georgia",
+   "q": "The minimum services in a Missouri exclusive agreement include:",
+   "sub": "mo/conduct|Minimum services",
+   "subtopic": "Minimum services",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The terms of compensation and whether an offer of subagency may be made",
+    "The MLS number",
+    "The projected closing date"
+   ],
+   "concept": "Missouri compensation",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.2.",
+   "id": "mo-2d737c99",
+   "portion": "georgia",
+   "q": "A Missouri limited agency agreement must state:",
+   "sub": "mo/conduct|Compensation",
+   "subtopic": "Compensation",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Fair housing and civil rights statutes and regulations",
+    "The MLS rules",
+    "The local board's code"
+   ],
+   "concept": "Missouri fair housing",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.1(6).",
+   "id": "mo-584bbb1d",
+   "portion": "georgia",
+   "q": "A Missouri limited agent's statutory duties expressly include complying with:",
+   "sub": "mo/conduct|Fair housing",
+   "subtopic": "Fair housing",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Subsection 2 of section 339.100, the grounds for discipline",
+    "Only the agency sections",
+    "Only the escrow section"
+   ],
+   "concept": "Missouri discipline",
+   "difficulty": 3,
+   "explain": "RSMo 339.730.1(5).",
+   "id": "mo-21b2a028",
+   "portion": "georgia",
+   "q": "A Missouri limited agent must also comply with:",
+   "sub": "mo/conduct|Discipline",
+   "subtopic": "Discipline",
+   "topic": "mo/conduct"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "18",
+    "21",
+    "19",
+    "There is no minimum"
+   ],
+   "concept": "Missouri age",
+   "difficulty": 1,
+   "explain": "RSMo 339.040.3.",
+   "id": "mo-7c3e9151",
+   "portion": "georgia",
+   "q": "The minimum age for a Missouri real estate licence is:",
+   "sub": "mo/licenses|Age",
+   "subtopic": "Age",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "72 hours",
+    "90 hours",
+    "48 hours, completed on or before the exam date",
+    "24 hours"
+   ],
+   "concept": "Missouri education",
+   "difficulty": 1,
+   "explain": "MREC candidate handbook.",
+   "id": "mo-322ae112",
+   "portion": "georgia",
+   "q": "A Missouri salesperson applicant's pre-exam course is:",
+   "sub": "mo/licenses|Education",
+   "subtopic": "Education",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Before the exam only",
+    "Before the licence application is submitted; it may be taken before or after the exam",
+    "Within a year of licensure"
+   ],
+   "concept": "Missouri education",
+   "difficulty": 1,
+   "explain": "MREC candidate handbook.",
+   "id": "mo-3c618cea",
+   "portion": "georgia",
+   "q": "The 24-hour MREP course must be completed:",
+   "sub": "mo/licenses|Education",
+   "subtopic": "Education",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "One year of passing",
+    "Three months of the exam",
+    "Six months of completing the 48-hour pre-exam course"
+   ],
+   "concept": "Missouri application",
+   "difficulty": 2,
+   "explain": "MREC candidate handbook.",
+   "id": "mo-e8d38353",
+   "portion": "georgia",
+   "q": "The Missouri licence application must be submitted within:",
+   "sub": "mo/licenses|Application",
+   "subtopic": "Application",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year",
+    "At least two years immediately preceding the application",
+    "Three years"
+   ],
+   "concept": "Missouri broker",
+   "difficulty": 2,
+   "explain": "RSMo 339.040.5.",
+   "id": "mo-48c6aef6",
+   "portion": "georgia",
+   "q": "A Missouri broker applicant must have been an active salesperson for:",
+   "sub": "mo/licenses|Broker",
+   "subtopic": "Broker",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Is licensed without examination",
+    "Has no exemption",
+    "Has the education requirements waived but must still pass both portions"
+   ],
+   "concept": "Missouri attorneys",
+   "difficulty": 3,
+   "explain": "MREC candidate handbook.",
+   "id": "mo-677549e4",
+   "portion": "georgia",
+   "q": "A licensed Missouri attorney applying as a salesperson:",
+   "sub": "mo/licenses|Attorneys",
+   "subtopic": "Attorneys",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is an unlicensed assistant",
+    "Holds a broker licence but works under another broker",
+    "Is a salesperson awaiting a broker licence"
+   ],
+   "concept": "Missouri types",
+   "difficulty": 2,
+   "explain": "RSMo 339.040.5.",
+   "id": "mo-9fc627ac",
+   "portion": "georgia",
+   "q": "A Missouri broker-salesperson:",
+   "sub": "mo/licenses|Types",
+   "subtopic": "Types",
+   "topic": "mo/licenses"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The Administrative Hearing Commission, on a complaint filed by the Real Estate Commission",
+    "The Real Estate Commission alone",
+    "A circuit court jury"
+   ],
+   "concept": "Missouri process",
+   "difficulty": 1,
+   "explain": "RSMo 339.100; the state outline names both bodies.",
+   "id": "mo-1323899c",
+   "portion": "georgia",
+   "q": "In Missouri, who decides whether grounds for discipline exist?",
+   "sub": "mo/discipline|Process",
+   "subtopic": "Process",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Through the attorney general",
+    "By seizing the account itself",
+    "Only after a criminal conviction"
+   ],
+   "concept": "Missouri escrow",
+   "difficulty": 2,
+   "explain": "RSMo 339.105.6.",
+   "id": "mo-e63d30df",
+   "portion": "georgia",
+   "q": "On an escrow violation the Missouri Commission may act:",
+   "sub": "mo/discipline|Escrow",
+   "subtopic": "Escrow",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Faces no cause of action for it",
+    "May be sued by the client",
+    "Must report it to the Commission"
+   ],
+   "concept": "Missouri protection",
+   "difficulty": 2,
+   "explain": "RSMo 339.730.2; 339.750.5.",
+   "id": "mo-a699f2f5",
+   "portion": "georgia",
+   "q": "A licensee who makes a disclosure the agency sections require:",
+   "sub": "mo/discipline|Protection",
+   "subtopic": "Protection",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Two years of residency",
+    "They are competent to transact business in a manner that safeguards the public interest",
+    "A clean credit record"
+   ],
+   "concept": "Missouri competence",
+   "difficulty": 2,
+   "explain": "RSMo 339.040.1.",
+   "id": "mo-cd778983",
+   "portion": "georgia",
+   "q": "Missouri grants licences only to those who show:",
+   "sub": "mo/discipline|Competence",
+   "subtopic": "Competence",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The adequacy of the account may be determined at any time",
+    "They can be audited annually",
+    "They survive seven years"
+   ],
+   "concept": "Missouri records",
+   "difficulty": 3,
+   "explain": "RSMo 339.105.3.",
+   "id": "mo-4aa060e8",
+   "portion": "georgia",
+   "q": "A Missouri broker's escrow books and records must be kept so that:",
+   "sub": "mo/discipline|Records",
+   "subtopic": "Records",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A surety bond",
+    "Monthly bank statements",
+    "Written authorisation allowing it to examine each escrow account"
+   ],
+   "concept": "Missouri authorisation",
+   "difficulty": 3,
+   "explain": "RSMo 339.105.2.",
+   "id": "mo-3566abe0",
+   "portion": "georgia",
+   "q": "A Missouri broker must file with the Commission:",
+   "sub": "mo/discipline|Authorisation",
+   "subtopic": "Authorisation",
+   "topic": "mo/discipline"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclosure of adverse material facts actually known or that should have been known",
+    "Nothing at all",
+    "Full fiduciary duties"
+   ],
+   "concept": "Missouri customer",
+   "difficulty": 1,
+   "explain": "RSMo 339.730.3.",
+   "id": "mo-c391d463",
+   "portion": "georgia",
+   "q": "A Missouri CUSTOMER is owed:",
+   "sub": "mo/general|Customer",
+   "subtopic": "Customer",
+   "topic": "mo/general"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Before the written agency agreement is entered",
+    "Only after the agreement is signed",
+    "Never"
+   ],
+   "concept": "Missouri ministerial acts",
+   "difficulty": 2,
+   "explain": "RSMo 339.780.3.",
+   "id": "mo-8a9c5d3e",
+   "portion": "georgia",
+   "q": "Ministerial acts may be performed for a Missouri buyer:",
+   "sub": "mo/general|Ministerial acts",
+   "subtopic": "Ministerial acts",
+   "topic": "mo/general"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "16 hours",
+    "24 hours",
+    "6 hours",
+    "12 hours per renewal, at least 3 of them a core course"
+   ],
+   "concept": "Missouri continuing education",
+   "difficulty": 1,
+   "explain": "20 CSR 2250-10.100; Missouri Real Estate Commission.",
+   "id": "mo-b9e98560",
+   "portion": "georgia",
+   "q": "Missouri continuing education is:",
+   "sub": "mo/education|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "mo/education"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At each renewal",
+    "No later than 31 March of each even-numbered year, on its official website",
+    "Every December"
+   ],
+   "concept": "Missouri core course",
+   "difficulty": 2,
+   "explain": "20 CSR 2250-10.100(3).",
+   "id": "mo-1c8ec642",
+   "portion": "georgia",
+   "q": "The Commission identifies the Missouri core course topic:",
+   "sub": "mo/education|Core course",
+   "subtopic": "Core course",
+   "topic": "mo/education"
+  }
+ ],
+ "code": "MO",
+ "diffs": {
+  "national/agency": [
+   "Missouri routes everything through the DESIGNATED BROKER: all written brokerage agreements are the broker's unless affiliated licensees are authorised in writing (RSMo 339.780.1).",
+   "A seller's or buyer's agent is a LIMITED AGENT; the no-agency option is the TRANSACTION BROKER, whose parties are NOT LIABLE for the broker's acts (RSMo 339.730, 339.755).",
+   "A broker may appoint DESIGNATED AGENTS without becoming a dual agent, and an affiliated licensee helping a party with no written agreement is then PRESUMED A TRANSACTION BROKER (RSMo 339.820).",
+   "A dual agent's do-not-disclose list includes THE TERMS OF ANY PRIOR OFFERS OR COUNTEROFFERS (RSMo 339.750.4(5)).",
+   "Every EXCLUSIVE agreement must guarantee three MINIMUM SERVICES (RSMo 339.780.7)."
+  ],
+  "national/disclosures": [
+   "The COMMISSION'S BROKER DISCLOSURE FORM goes to anyone with no written agreement, at the earliest practicable opportunity during or after FIRST SUBSTANTIAL CONTACT in a residential transaction (RSMo 339.770).",
+   "ADVERSE MATERIAL FACTS owed to a CLIENT are those actually known OR THAT SHOULD HAVE BEEN KNOWN; a TRANSACTION BROKER owes only those of which they have ACTUAL notice or knowledge (RSMo 339.730.1(3)(c), 339.755.2(2)(d)).",
+   "No licensee owes a duty to inspect for a customer or to verify the client's or an inspector's statements (RSMo 339.730.3)."
+  ],
+  "national/practice": [
+   "A broker may keep up to $1,000 OF PERSONAL FUNDS in the escrow account, for service charges only (RSMo 339.105.1).",
+   "DISPUTED escrow money goes to the STATE TREASURER within 365 DAYS of the initial projected closing date (RSMo 339.105.4).",
+   "No commission may be taken from escrow until the transaction is CONSUMMATED OR TERMINATED (RSMo 339.105.5).",
+   "Education: a 48-hour pre-exam course plus the 24-hour MREP course, with the application due within SIX MONTHS of the pre-exam course; then 12 hours of continuing education with a 3-hour CORE.",
+   "A broker applicant needs TWO YEARS as an active salesperson (RSMo 339.040.5)."
+  ]
+ },
+ "name": "Missouri",
+ "pass": 0.75,
+ "portions": {
+  "georgia": {
+   "blurb": "40 items at 75%: chapter 339, the brokerage relationship sections and the Commission's rules.",
+   "minutes": 120,
+   "name": "Missouri law",
+   "pass": 0.75,
+   "scored": 40
+  },
+  "national": {
+   "blurb": "100 items, 70% to pass.",
+   "minutes": 150,
+   "pass": 0.7,
+   "scored": 100
+  }
+ },
+ "regulator": "Missouri Real Estate Commission",
+ "sources": [
+  {
+   "by": "Missouri Revisor of Statutes",
+   "name": "RSMo chapter 339",
+   "note": "Licensing, escrow accounts, grounds for discipline and the brokerage relationship sections 339.710 to 339.860.",
+   "url": "https://revisor.mo.gov/main/OneChapter.aspx?chapter=339"
+  },
+  {
+   "by": "Missouri Real Estate Commission",
+   "name": "20 CSR 2250 and the Commission's published requirements",
+   "note": "The 12-hour continuing education requirement with a 3-hour core course.",
+   "url": "https://pr.mo.gov/realestate.asp"
+  },
+  {
+   "by": "PSI Services and the Missouri Division of Professional Registration",
+   "name": "Missouri Real Estate Candidate Handbook",
+   "note": "National 100 items at 70% and State 40 items at 75%, the licence requirements and the state outline.",
+   "url": "https://pr.mo.gov/boards/realestate/MOREP-handbook.pdf"
+  }
+ ],
+ "study": {
+  "mo/conduct": {
+   "blurb": "Advertising, listings, offers, earnest money, closings, commissions.",
+   "counts_on_exam": true,
+   "exam_questions": 17,
+   "examples": [
+    {
+     "k": "Unresolved escrow goes to the state, not to whoever shouts loudest.",
+     "s": "A deal collapses. Buyer and seller each demand the $5,000 earnest money. The initial projected closing date was 1 March.",
+     "t": "Earnest money stand-off",
+     "w": [
+      "The broker cannot pick a side; the money stays in escrow.",
+      "If the parties never agree in writing that the funds are not in dispute, the broker must report and deliver the money to the STATE TREASURER within 365 DAYS of 1 March.",
+      "The broker's own commission cannot come out of that money either."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Business conduct and practices",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "Nothing at all",
+        "Up to $2,000",
+        "Any amount",
+        "Not more than $1,000, specifically identified, to cover service charges"
+       ],
+       "q": "How much of a broker's own money may sit in a Missouri escrow account?",
+       "why": "RSMo 339.105.1."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "90 days",
+        "365 days of the initial projected closing date",
+        "One year from the dispute",
+        "Never"
+       ],
+       "q": "Disputed escrow money must be delivered to the state treasurer within:",
+       "why": "RSMo 339.105.4."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "At any time after acceptance",
+        "On the closing date regardless",
+        "Only once the transaction is consummated or terminated, unless all parties agree in writing"
+       ],
+       "q": "A Missouri broker may take their commission from escrow:",
+       "why": "RSMo 339.105.5."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Thirty days",
+        "At renewal",
+        "Ten business days"
+       ],
+       "q": "A change of escrow account or status must be reported to the Commission within:",
+       "why": "RSMo 339.105.2."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Promptly, unless all parties with an interest agree otherwise in writing",
+        "Within 10 banking days",
+        "At closing"
+       ],
+       "q": "Escrow funds must be deposited:",
+       "why": "RSMo 339.105.1."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "By subpoena only",
+        "At all times during regular business hours at the broker's usual place of business",
+        "Once a year"
+       ],
+       "q": "The Commission's access to a broker's escrow records is:",
+       "why": "RSMo 339.105.3."
+      }
+     ],
+     "h": "Escrow and trust accounts (RSMo 339.105)",
+     "l": [
+      "Each broker holding funds belonging to another must maintain them in a SEPARATE BANK ACCOUNT designated an ESCROW OR TRUST ACCOUNT - including funds in which the broker may have a FUTURE INTEREST OR CLAIM.",
+      "Such funds must be DEPOSITED PROMPTLY unless ALL PARTIES having an interest have AGREED OTHERWISE IN WRITING.",
+      "NO COMMINGLING of personal or other funds, EXCEPT that a broker may deposit and keep A SUM NOT TO EXCEED ONE THOUSAND DOLLARS of personal funds, SPECIFICALLY IDENTIFIED, to cover SERVICE CHARGES related to the account.",
+      "The broker must NOTIFY THE COMMISSION of an intent NOT to maintain an escrow account, or of the financial institution, the name and number of each account, and must file WRITTEN AUTHORISATION letting the Commission examine each account. Any change must be notified WITHIN TEN BUSINESS DAYS.",
+      "The broker must maintain BOOKS, RECORDS, CONTRACTS AND OTHER DOCUMENTS so the adequacy of the account may be determined AT ANY TIME, available for inspection DURING REGULAR BUSINESS HOURS at the broker's usual place of business.",
+      "Where OWNERSHIP OF ESCROW MONEY IS IN DISPUTE, the broker must REPORT AND DELIVER THE MONEY TO THE STATE TREASURER WITHIN 365 DAYS of the INITIAL PROJECTED CLOSING DATE, under the unclaimed property law. The parties may agree IN WRITING that the funds are not in dispute and notify the broker.",
+      "A BROKER IS NOT ENTITLED to any money paid in connection with a transaction as part of a commission or fee UNTIL THE TRANSACTION HAS BEEN CONSUMMATED OR TERMINATED, unless all parties agree otherwise in writing."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Only before a contract exists",
+        "Weekly",
+        "Timely, to and from the client, regardless of an existing contract"
+       ],
+       "q": "A Missouri limited agent must present written offers:",
+       "why": "RSMo 339.730.1(3)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "No, the statute is exhaustive",
+        "Only with Commission approval",
+        "Yes; nothing prohibits the public from contracting for additional duties"
+       ],
+       "q": "May a Missouri brokerage agreement add duties beyond the statutory ones?",
+       "why": "RSMo 339.780.8."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Answering the client's questions about offers, counteroffers, notices and contingencies",
+        "Holding a weekly open house",
+        "Paying for staging"
+       ],
+       "q": "The minimum services in an exclusive agreement include:",
+       "why": "RSMo 339.780.7(3)."
+      }
+     ],
+     "h": "Offers, listings and standard forms",
+     "l": [
+      "The outline lists IMPROPER USE OF LICENSE AND OFFICE, BRANCH OFFICES, CLERICAL PERSONNEL AND PERSONAL OR PROFESSIONAL ASSISTANTS, ADVERTISING, LISTINGS, OFFERS, the LICENSEE'S INTEREST IN TRANSACTIONS AND RELATIONSHIP WITH PARTIES, EARNEST MONEY AND DISPUTES, STANDARD FORMS, CLOSINGS AND CLOSING STATEMENTS, GENERAL matters, and COMMISSIONS.",
+      "The three MINIMUM SERVICES in every exclusive brokerage agreement are the practical heart of the 'offers' topic: accepting delivery of and PRESENTING offers and counteroffers; ASSISTING with developing, communicating, negotiating and presenting them until a contract is signed and contingencies are satisfied or waived; and ANSWERING the client's or customer's questions about them (RSMo 339.780.7).",
+      "A limited agent must PRESENT ALL WRITTEN OFFERS to and from the client TIMELY REGARDLESS of an existing contract, and need NOT seek additional offers while the property is under contract (RSMo 339.730.1(3)).",
+      "A transaction broker must PRESENT ALL WRITTEN OFFERS AND COUNTEROFFERS TIMELY regardless of an existing contract or letter of intent, unless the agreement with the party provides otherwise (RSMo 339.755.2(2)(a)).",
+      "Nothing stops the public from contracting for DUTIES, OBLIGATIONS OR RESPONSIBILITIES IN ADDITION to the statutory ones (RSMo 339.780.8)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Only after the transaction is consummated or terminated, absent written agreement otherwise",
+        "On acceptance of the offer",
+        "At the broker's discretion"
+       ],
+       "q": "A Missouri broker's commission may be taken from escrow:",
+       "why": "RSMo 339.105.5."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The MLS number",
+        "The terms of compensation and whether an offer of subagency may be made",
+        "The closing date"
+       ],
+       "q": "A limited agency agreement must state:",
+       "why": "RSMo 339.780.2."
+      }
+     ],
+     "h": "Compensation and interests",
+     "l": [
+      "The outline's 'COMMISSIONS (must be licensee)' heading points at the rule that compensation for licensed activity goes to LICENSEES. A salesperson is paid through their broker, and paying an unlicensed person for licensed activity is improper.",
+      "The 'LICENSEE'S INTEREST IN TRANSACTIONS; RELATIONSHIP WITH PARTIES' heading covers a licensee dealing for their own account, which engages the duty to disclose ADVERSE MATERIAL FACTS and the ban on misrepresentation under RSMo 339.100.2.",
+      "A broker's compensation is NOT EARNED OUT OF ESCROW until the transaction is CONSUMMATED OR TERMINATED (RSMo 339.105.5).",
+      "A limited agency agreement must state the TERMS OF COMPENSATION and whether SUBAGENCY may be offered; a transaction brokerage agreement must state the terms of compensation (RSMo 339.780.2, .6)."
+     ]
+    }
+   ],
+   "summary": "Seventeen items - the biggest block by far. Escrow money, offers, advertising, and the commission rules that catch licensees out.",
+   "topic": "mo/conduct",
+   "traps": [
+    "$1,000 of the broker's own money, and only for service charges.",
+    "Disputed escrow goes to the STATE TREASURER after 365 days from the initial projected closing date.",
+    "No commission out of escrow until consummated or terminated.",
+    "Ten BUSINESS days to report an escrow account change."
+   ],
+   "vocab": [
+    [
+     "Escrow or trust account",
+     "The separate account holding others' funds."
+    ],
+    [
+     "Initial projected closing date",
+     "When the 365-day clock on disputed money starts."
+    ],
+    [
+     "Commingling",
+     "Mixing the broker's own funds with clients', beyond the $1,000."
+    ],
+    [
+     "Minimum services",
+     "The three services every exclusive agreement must guarantee."
+    ]
+   ]
+  },
+  "mo/discipline": {
+   "blurb": "Complaints, investigation, violations, the Commission and the AHC.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [],
+   "ga": [],
+   "label": "Disciplinary proceedings",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The Administrative Hearing Commission, on a complaint filed by the Real Estate Commission",
+        "The Real Estate Commission alone",
+        "A circuit court jury"
+       ],
+       "q": "In Missouri, who decides whether grounds for discipline exist?",
+       "why": "RSMo 339.100; the state outline lists both."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Through the attorney general",
+        "By seizing the account itself",
+        "Only after a conviction"
+       ],
+       "q": "On an escrow violation the Commission may act:",
+       "why": "RSMo 339.105.6."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "May be sued by the client",
+        "Must notify the Commission",
+        "Faces no cause of action for it"
+       ],
+       "q": "A licensee who makes a disclosure the agency sections require:",
+       "why": "RSMo 339.730.2; 339.750.5."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Optional guidance",
+        "Only relevant to brokers",
+        "Part of a limited agent's statutory duties"
+       ],
+       "q": "Compliance with RSMo 339.100.2 is:",
+       "why": "RSMo 339.730.1(5)."
+      }
+     ],
+     "h": "How a case moves",
+     "l": [
+      "The outline lists COMPLAINTS, INVESTIGATION, VIOLATIONS, ACTION BY THE COMMISSION, ACTION BY THE ADMINISTRATIVE HEARING COMMISSION, and the PENALTY FOR VIOLATING OR PRACTISING WITHOUT A LICENCE.",
+      "RSMo 339.100 sets out the Commission's investigative powers and the grounds for discipline. The MISSOURI REAL ESTATE COMMISSION investigates and FILES A COMPLAINT WITH THE ADMINISTRATIVE HEARING COMMISSION; the AHC decides whether cause for discipline exists; the Commission then imposes the DISCIPLINE.",
+      "Where the Commission has REASONABLE CAUSE to believe a licensee has acted, is acting or is about to act in violation of the escrow section, it may proceed THROUGH THE ATTORNEY GENERAL (RSMo 339.105.6).",
+      "A limited agent must COMPLY with the brokerage relationship sections and with SUBSECTION 2 OF SECTION 339.100 - the grounds for discipline - as part of their statutory duties (RSMo 339.730.1(5)).",
+      "NO CAUSE OF ACTION arises against a licensee for making a REQUIRED OR PERMITTED DISCLOSURE under the agency sections (RSMo 339.730.2, 339.750.5)."
+     ]
+    }
+   ],
+   "summary": "Six items. Missouri splits the job: the COMMISSION brings the case, the ADMINISTRATIVE HEARING COMMISSION decides whether there are grounds.",
+   "topic": "mo/discipline",
+   "traps": [
+    "The Commission prosecutes; the Administrative Hearing Commission adjudicates.",
+    "Required disclosures are protected - no cause of action."
+   ],
+   "vocab": [
+    [
+     "AHC",
+     "The Administrative Hearing Commission."
+    ],
+    [
+     "MREC",
+     "The Missouri Real Estate Commission."
+    ],
+    [
+     "Cause for discipline",
+     "What the AHC finds before the Commission sanctions."
+    ]
+   ]
+  },
+  "mo/education": {
+   "blurb": "The salesperson course and continuing education.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [],
+   "ga": [],
+   "label": "Educational requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "16 hours",
+        "24 hours",
+        "12 hours per renewal, at least 3 of them a core course",
+        "6 hours"
+       ],
+       "q": "Missouri continuing education is:",
+       "why": "20 CSR 2250-10.100; MREC."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No later than 31 March of each even-numbered year, on its official website",
+        "At each renewal",
+        "Annually in December"
+       ],
+       "q": "The Commission identifies the core course topic:",
+       "why": "20 CSR 2250-10.100(3)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "Agency",
+        "Escrow",
+        "Contracts",
+        "Fair housing"
+       ],
+       "q": "The required core topic for the 2026-2028 Missouri licence period is:",
+       "why": "Missouri Real Estate Commission, published CE requirements."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Carries a fine only",
+        "Is grounds for not renewing the licence",
+        "Has no consequence"
+       ],
+       "q": "Failing to give the Commission evidence of completed courses:",
+       "why": "20 CSR 2250-10."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Six months prior to the application",
+        "Two years",
+        "One year"
+       ],
+       "q": "A Missouri broker applicant's curriculum must be completed within:",
+       "why": "RSMo 339.040.5."
+      }
+     ],
+     "h": "The courses",
+     "l": [
+      "SALESPERSON COURSE: a 48-HOUR PRE-EXAM SALESPERSON COURSE from an ACCREDITED MISSOURI REAL ESTATE SCHOOL, completed ON OR BEFORE THE EXAM DATE, plus the 24-HOUR MISSOURI REAL ESTATE PRACTICE COURSE (MREP) before the licence application.",
+      "CONTINUING EDUCATION: 20 CSR 2250-10.100 requires 12 HOURS of approved instruction per renewal, of which AT LEAST 3 HOURS must be taken in a CORE COURSE identified by the Commission and noticed on its official website NO LATER THAN 31 MARCH OF EACH EVEN-NUMBERED YEAR.",
+      "The Commission publishes which core topic applies: for the 2026-2028 licence period the required CORE course is on FAIR HOUSING.",
+      "FAILURE to provide the Commission with evidence of course completion is GROUNDS FOR NOT RENEWING A LICENCE.",
+      "An ACTIVE LICENCE, for continuing education purposes, is any licence except one placed on INACTIVE STATUS.",
+      "A BROKER applicant must have completed the prescribed BROKER CURRICULUM within SIX MONTHS prior to application (RSMo 339.040.5)."
+     ]
+    }
+   ],
+   "summary": "Two items. Two numbers: the 48-hour salesperson course and 12 hours of continuing education with a 3-hour core.",
+   "topic": "mo/education",
+   "traps": [
+    "12 hours with a 3-hour CORE - and the core topic changes by biennium.",
+    "48 pre-exam hours, 24 MREP hours. Two different courses."
+   ],
+   "vocab": [
+    [
+     "Core course",
+     "The Commission-designated 3-hour continuing education topic."
+    ],
+    [
+     "MREP",
+     "The 24-hour Missouri Real Estate Practice course."
+    ],
+    [
+     "Inactive status",
+     "A licence excluded from the 'active licence' definition."
+    ]
+   ]
+  },
+  "mo/general": {
+   "blurb": "Definitions, and what counts as a dispute.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "examples": [],
+   "ga": [],
+   "label": "General rules",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Nothing at all",
+        "Disclosure of adverse material facts actually known or that should have been known",
+        "Full fiduciary duties"
+       ],
+       "q": "A Missouri CUSTOMER is owed:",
+       "why": "RSMo 339.730.3."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Before the written agency agreement is entered",
+        "Only after the agreement",
+        "Never"
+       ],
+       "q": "Ministerial acts may be performed for a buyer:",
+       "why": "RSMo 339.780.3."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The buyer",
+        "The state treasurer, within 365 days of the initial projected closing date",
+        "The seller",
+        "The broker"
+       ],
+       "q": "An escrow dispute ends with the money going to:",
+       "why": "RSMo 339.105.4."
+      }
+     ],
+     "h": "Who is who",
+     "l": [
+      "RSMo 339.010 defines what acts require a licence; RSMo 339.710 defines the brokerage relationship terms, including CONFIDENTIAL INFORMATION, MINISTERIAL ACTS, CLIENT and CUSTOMER.",
+      "A CLIENT is the party the licensee represents; a CUSTOMER is a party the licensee works with but does not represent. A seller's agent owes a customer ONLY the disclosure of ADVERSE MATERIAL FACTS actually known or that should have been known (RSMo 339.730.3).",
+      "MINISTERIAL ACTS are the acts a designated broker may perform for a buyer or tenant BEFORE entering the written agency agreement (RSMo 339.780.3).",
+      "The DESIGNATED BROKER is the broker responsible for the firm's written agreements and for the acts of affiliated licensees (RSMo 339.780.1).",
+      "DISPUTES: where ownership of escrow money is in dispute the broker reports and delivers it to the STATE TREASURER within 365 days of the initial projected closing date, unless the parties agree IN WRITING that the funds are not in dispute (RSMo 339.105.4)."
+     ]
+    }
+   ],
+   "summary": "Two items on definitions and disputes - small, but the definitions decide every other answer.",
+   "topic": "mo/general",
+   "traps": [
+    "Client versus customer decides which duties apply.",
+    "Ministerial acts are the exception that lets a buyer's broker work before signing."
+   ],
+   "vocab": [
+    [
+     "Client",
+     "The party a licensee represents."
+    ],
+    [
+     "Customer",
+     "A party the licensee works with but does not represent."
+    ],
+    [
+     "Ministerial act",
+     "Work allowed before a buyer agency agreement is signed."
+    ],
+    [
+     "Confidential information",
+     "Defined in RSMo 339.710 and protected by the agency sections."
+    ]
+   ]
+  },
+  "mo/licenses": {
+   "blurb": "Applications, qualification, renewal, broker-salesperson, transfers, denial.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [],
+   "ga": [],
+   "label": "Licenses",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "21",
+        "19",
+        "18",
+        "There is none"
+       ],
+       "q": "The minimum age for a Missouri real estate licence is:",
+       "why": "RSMo 339.040.3."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "48 hours, completed on or before the exam date",
+        "72 hours",
+        "90 hours",
+        "24 hours"
+       ],
+       "q": "A Missouri salesperson applicant's pre-exam course is:",
+       "why": "MREC candidate handbook."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Before the exam only",
+        "Within a year of licensure",
+        "Before the licence application is submitted; it may be taken before or after the exam"
+       ],
+       "q": "The 24-hour MREP course must be completed:",
+       "why": "MREC candidate handbook."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "One year of passing",
+        "Six months of completing the 48-hour pre-exam course",
+        "Three months of the exam"
+       ],
+       "q": "The licence application must be submitted within:",
+       "why": "MREC candidate handbook."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "One year",
+        "At least two years immediately preceding the application",
+        "Three years"
+       ],
+       "q": "A Missouri broker applicant must have been an active salesperson for:",
+       "why": "RSMo 339.040.5."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Is licensed without examination",
+        "Has no exemption",
+        "Has the education requirements waived but must pass both portions"
+       ],
+       "q": "A licensed Missouri attorney applying as a salesperson:",
+       "why": "MREC candidate handbook."
+      }
+     ],
+     "h": "Qualifying (RSMo 339.040; MREC handbook)",
+     "l": [
+      "Licences are granted only to persons who present SATISFACTORY PROOF THAT THEY ARE COMPETENT to transact business in a manner that SAFEGUARDS THE INTEREST OF THE PUBLIC.",
+      "Each applicant for a broker or salesperson licence must be AT LEAST 18 YEARS OF AGE and pay the examination fee.",
+      "A SALESPERSON applicant must earn a CERTIFICATE OF SATISFACTORY COMPLETION from a 48-HOUR PRE-EXAM SALESPERSON COURSE at an accredited Missouri school ON OR BEFORE THE EXAM DATE, PASS BOTH PORTIONS, and complete the 24-HOUR MISSOURI REAL ESTATE PRACTICE COURSE (MREP) BEFORE SUBMITTING the licence application. MREP may be taken BEFORE OR AFTER the exam.",
+      "The complete application must be submitted WITHIN SIX MONTHS of the COMPLETION DATE OF THE 48-HOUR PRE-EXAM COURSE.",
+      "A LICENSED ATTORNEY may have the education requirements WAIVED, passing both portions and applying within six months, with a copy of a current Bar card.",
+      "Someone holding a CURRENT ACTIVE LICENCE IN ANOTHER JURISDICTION passes the STATE PORTION only and completes MREP, applying within six months of passing, with a licence history certification issued within three months.",
+      "A BROKER applicant must have been ACTIVELY ENGAGED as a licensed salesperson for AT LEAST TWO YEARS immediately preceding the application, and must have completed the prescribed broker curriculum WITHIN SIX MONTHS prior to application. The Commission may waive parts of that for other acceptable education or experience.",
+      "A broker applicant must also have SATISFACTORILY COMPLETED THE SALESPERSON LICENCE EXAMINATION, and the Commission may let someone not associated with a broker sit it."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Is an unlicensed assistant",
+        "Is a salesperson awaiting a broker licence",
+        "Holds a broker licence but works under another broker"
+       ],
+       "q": "A Missouri broker-salesperson:",
+       "why": "RSMo 339.040.5."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Every shareholder",
+        "The officers, managers, associates, general partners or members who actively participate in the brokerage business",
+        "Only the registered agent"
+       ],
+       "q": "An entity licence requires satisfactory proof of competence from:",
+       "why": "RSMo 339.040.1."
+      }
+     ],
+     "h": "What the outline covers",
+     "l": [
+      "APPLICATIONS FOR LICENSE; QUALIFICATION FOR, EXPIRATION, AND RENEWAL; INDIVIDUAL LICENSE AND BUSINESS NAME; the BROKER-SALESPERSON RELATIONSHIP; SALESPERSON LICENSE AND TRANSFERS; DENIAL OF LICENSE; and APPLICATION AND LICENSE FEES.",
+      "A BROKER-SALESPERSON holds a broker licence but works under another broker - the application must include EVIDENCE OF THE CURRENT BROKER LICENCE held by the applicant (RSMo 339.040.5).",
+      "A licence may be granted to a CORPORATION, ASSOCIATION, PARTNERSHIP, LIMITED PARTNERSHIP, LIMITED LIABILITY COMPANY OR PROFESSIONAL CORPORATION whose officers, managers, associates, general partners or members ACTIVELY PARTICIPATING in the brokerage business present satisfactory proof of competence (RSMo 339.040.1).",
+      "All written brokerage agreements belong to the DESIGNATED BROKER, which is the statutory expression of the broker-salesperson relationship (RSMo 339.780.1)."
+     ]
+    }
+   ],
+   "summary": "Seven items. Missouri's own quirks: 18 years old, a 48-hour pre-exam course, and a six-month clock that catches people out.",
+   "topic": "mo/licenses",
+   "traps": [
+    "48 hours pre-exam, 24 hours MREP, six months to apply.",
+    "Broker needs TWO years as an active salesperson.",
+    "Attorneys get the education waived, not the examination."
+   ],
+   "vocab": [
+    [
+     "MREP",
+     "The 24-hour Missouri Real Estate Practice course."
+    ],
+    [
+     "Broker-salesperson",
+     "A broker licensee working under another broker."
+    ],
+    [
+     "Designated broker",
+     "The broker responsible for a firm's agreements."
+    ]
+   ]
+  },
+  "mo/relationships": {
+   "blurb": "Agency disclosure, the relationships Missouri permits, duties, dual agency.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [
+    {
+     "k": "The appointment splits the agents; only personally serving both sides creates dual agency.",
+     "s": "Your designated broker appointed you for the seller and another agent for the buyer, both in writing.",
+     "t": "Both sides, one office",
+     "w": [
+      "Each of you is a DESIGNATED AGENT for your own client, to the exclusion of the rest of the office.",
+      "The designated broker is NOT a dual agent just for making the appointments.",
+      "If you personally ended up representing both sides, THEN you would be a dual agent and the dual agency rules apply."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Brokerage relationships",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "The designated broker, unless affiliated licensees are authorised in writing",
+        "Any affiliated licensee",
+        "The managing salesperson"
+       ],
+       "q": "In Missouri, written brokerage agreements are entered into by:",
+       "why": "RSMo 339.780.1."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only the commission",
+        "The duties, the terms of compensation, and whether subagency may be offered",
+        "Only the listing period"
+       ],
+       "q": "A seller's limited agency agreement must specify:",
+       "why": "RSMo 339.780.2."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Rely on an oral understanding",
+        "Enter a written transaction brokerage agreement with the party",
+        "Use the agency agreement"
+       ],
+       "q": "A broker expecting compensation as a transaction broker must:",
+       "why": "RSMo 339.780.6."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Presenting offers, assisting with negotiation to signing, and answering questions about them",
+        "A minimum advertising spend",
+        "An open house a week"
+       ],
+       "q": "Every exclusive brokerage agreement must guarantee at least:",
+       "why": "RSMo 339.780.7."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Disclosing to the customer that they are a subagent of the client",
+        "Signing the listing",
+        "Notifying the Commission"
+       ],
+       "q": "Where a unilateral offer of subagency has been made, another broker becomes a subagent by:",
+       "why": "RSMo 339.780.5."
+      }
+     ],
+     "h": "Everything is the designated broker's (RSMo 339.780)",
+     "l": [
+      "ALL WRITTEN AGREEMENTS for brokerage services on behalf of a seller, landlord, buyer or tenant must be ENTERED INTO BY THE DESIGNATED BROKER on behalf of that broker and the affiliated licensees - unless the designated broker AUTHORISES AFFILIATED LICENSEES IN WRITING to enter them on the broker's behalf.",
+      "BEFORE engaging in licensed activity, a designated broker intending LIMITED AGENCY with a SELLER OR LANDLORD must enter a WRITTEN AGENCY AGREEMENT including the duties in 339.730, the TERMS OF COMPENSATION, and WHETHER AN OFFER OF SUBAGENCY may be made to another designated broker.",
+      "BEFORE engaging in licensed activity, except MINISTERIAL ACTS, a designated broker acting as a SINGLE AGENT FOR A BUYER OR TENANT must enter a written agency agreement including the 339.740 duties and the terms of compensation.",
+      "A designated broker intending to act as a DUAL AGENT must enter a written agreement WITH BOTH SIDES permitting it, including the 339.750 duties and the compensation terms.",
+      "A designated broker intending to act as a SUBAGENT must enter a written agreement with the client's designated broker - though where a UNILATERAL OFFER OF SUBAGENCY has been made, another broker may enter the relationship simply BY DISCLOSING TO THE CUSTOMER that they are a subagent of the client.",
+      "A designated broker intending to act as a TRANSACTION BROKER who expects compensation from the party assisted must enter a WRITTEN TRANSACTION BROKERAGE AGREEMENT including the 339.755 duties and the compensation terms.",
+      "EVERY EXCLUSIVE brokerage agreement must specify at least three minimum services: ACCEPTING DELIVERY OF AND PRESENTING offers and counteroffers; ASSISTING in developing, communicating, negotiating and presenting offers, counteroffers and notices UNTIL a lease or purchase agreement is signed and ALL CONTINGENCIES SATISFIED OR WAIVED; and ANSWERING QUESTIONS about offers, counteroffers, notices and contingencies."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 3,
+       "choices": [
+        "General agent",
+        "Universal agent",
+        "Transaction broker",
+        "Limited agent"
+       ],
+       "q": "Missouri calls a seller's agent a:",
+       "why": "RSMo 339.730.1."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only until a contract is signed",
+        "Only above the listed price",
+        "Timely, regardless of whether the property is already under contract"
+       ],
+       "q": "A Missouri seller's agent must present written offers:",
+       "why": "RSMo 339.730.1(3)(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Actually known only",
+        "Discoverable by inspection only",
+        "Actually known or that should have been known by the licensee"
+       ],
+       "q": "Adverse material facts owed to the CLIENT are those:",
+       "why": "RSMo 339.730.1(3)(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Disclosure of adverse material facts actually known or that should have been known",
+        "Nothing at all",
+        "Full fiduciary duties"
+       ],
+       "q": "What does a Missouri seller's agent owe a CUSTOMER?",
+       "why": "RSMo 339.730.3."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "None, and there is no duty to verify the client's or an inspector's statements",
+        "A visual inspection",
+        "A full inspection"
+       ],
+       "q": "A seller's agent's duty to inspect for the customer is:",
+       "why": "RSMo 339.730.3."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The deal has closed",
+        "A statute or rule requires it, silence would be a misrepresentation, or it is needed to defend the licensee",
+        "The other agent asks"
+       ],
+       "q": "Confidential client information may be disclosed where:",
+       "why": "RSMo 339.730.2."
+      }
+     ],
+     "h": "The limited agent for a seller (RSMo 339.730)",
+     "l": [
+      "A licensee representing a seller or landlord is a LIMITED AGENT who must PERFORM THE WRITTEN AGREEMENT; EXERCISE REASONABLE SKILL AND CARE; and PROMOTE THE CLIENT'S INTERESTS WITH THE UTMOST GOOD FAITH, LOYALTY AND FIDELITY.",
+      "That includes SEEKING an acceptable price and terms - but NOT being obliged to seek additional offers while the property is under a CONTRACT FOR SALE or a LEASE OR LETTER OF INTENT; PRESENTING ALL WRITTEN OFFERS to and from the client TIMELY, REGARDLESS of an existing contract; DISCLOSING to the client all ADVERSE MATERIAL FACTS ACTUALLY KNOWN OR THAT SHOULD HAVE BEEN KNOWN; and ADVISING the client to get EXPERT ADVICE beyond the licensee's expertise.",
+      "The licensee must ACCOUNT TIMELY for money and property, COMPLY with the brokerage relationship statutes and 339.100.2, and comply with all law INCLUDING FAIR HOUSING AND CIVIL RIGHTS.",
+      "CONFIDENTIAL INFORMATION about the client may NOT be disclosed unless disclosure is REQUIRED BY STATUTE OR RULE, failure to disclose would be a MISREPRESENTATION, or disclosure is NECESSARY TO DEFEND the licensee against an action for wrongful conduct. NO CAUSE OF ACTION arises for a required or permitted disclosure.",
+      "A seller's agent OWES NO DUTY TO A CUSTOMER except to DISCLOSE ALL ADVERSE MATERIAL FACTS ACTUALLY KNOWN OR THAT SHOULD HAVE BEEN KNOWN. There is NO duty to conduct an independent inspection for the customer and NO duty to verify statements by the client or an independent inspector.",
+      "A seller's agent may SHOW ALTERNATIVE PROPERTIES without breaching any duty. The mirror duties apply to a BUYER'S OR TENANT'S agent (RSMo 339.740)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Oral consent",
+        "No consent at all",
+        "The consent of all parties, presumed by the written agreement under 339.780"
+       ],
+       "q": "Missouri dual agency requires:",
+       "why": "RSMo 339.750.1."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A known structural defect",
+        "The terms of any prior offers or counteroffers",
+        "A statutory disclosure"
+       ],
+       "q": "Which may a Missouri dual agent NOT disclose without consent?",
+       "why": "RSMo 339.750.4(5)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "A limited agent for both sides",
+        "A fiduciary for both sides",
+        "Not an agent at all"
+       ],
+       "q": "A Missouri dual agent is:",
+       "why": "RSMo 339.750.2."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Ends the relationship",
+        "Converts it to transaction brokerage",
+        "Does not terminate the dual agency relationship"
+       ],
+       "q": "Making a required disclosure as a dual agent:",
+       "why": "RSMo 339.750.5."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Imputed to the firm",
+        "Imputed to the designated broker",
+        "Not imputed between the client and the dual agent or within the entity"
+       ],
+       "q": "In Missouri dual agency, knowledge is:",
+       "why": "RSMo 339.750.6."
+      }
+     ],
+     "h": "Dual agency (RSMo 339.750)",
+     "l": [
+      "A licensee may act as a DUAL AGENT ONLY WITH THE CONSENT OF ALL PARTIES, and CONSENT IS PRESUMED by a written agreement under 339.780.",
+      "A dual agent is a LIMITED AGENT FOR BOTH SIDES with the 339.730 and 339.740 duties, except as the section provides.",
+      "A dual agent MAY disclose to one client information gained from the other IF IT IS MATERIAL TO THE TRANSACTION, UNLESS it is CONFIDENTIAL INFORMATION as defined in 339.710.",
+      "FIVE things may NOT be disclosed without the consent of the client they concern: that a BUYER WILL PAY MORE than offered; that a SELLER WILL ACCEPT LESS than asking; WHAT MOTIVATES a client; that a client WILL AGREE TO OTHER FINANCING TERMS; and THE TERMS OF ANY PRIOR OFFERS OR COUNTEROFFERS made by any party.",
+      "A dual agent must NOT disclose confidential information about one client to the other except where required by statute or rule, where silence would be a MISREPRESENTATION, or where disclosure is NECESSARY TO DEFEND the licensee. Making a required or permitted disclosure DOES NOT TERMINATE the dual agency.",
+      "In dual agency there is NO IMPUTATION of knowledge between the client and the dual agent or among persons within the entity."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Provides service with no agency or fiduciary relationship to any party",
+        "Is a limited agent for both",
+        "Represents the seller"
+       ],
+       "q": "A Missouri transaction broker:",
+       "why": "RSMo 339.755.1."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Actual notice or knowledge",
+        "Any suspicion",
+        "Constructive notice"
+       ],
+       "q": "Adverse material facts a transaction broker must disclose are those of which the licensee has:",
+       "why": "RSMo 339.755.2(2)(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Are vicariously liable",
+        "Are liable only after closing",
+        "Are not liable for any acts of the transaction broker"
+       ],
+       "q": "In a Missouri transaction brokerage, the parties:",
+       "why": "RSMo 339.755.2(2)(f)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "None, and there is no duty to investigate the buyer's finances",
+        "A visual inspection",
+        "A financial check"
+       ],
+       "q": "A transaction broker's duty to inspect is:",
+       "why": "RSMo 339.755.4, .5."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only be a transaction broker",
+        "Serve as a single agent, subagent, designated agent, limited agent or disclosed dual agent",
+        "Not work at all"
+       ],
+       "q": "A transaction broker may, in OTHER transactions:",
+       "why": "RSMo 339.755.6(4)."
+      }
+     ],
+     "h": "Transaction broker (RSMo 339.755)",
+     "l": [
+      "A licensee may provide service to any party WITHOUT AN AGENCY OR FIDUCIARY RELATIONSHIP to anyone. Such a licensee is a TRANSACTION BROKER.",
+      "A transaction broker must PERFORM any written or oral agreement, and exercise REASONABLE SKILL, CARE AND DILIGENCE - including PRESENTING ALL WRITTEN OFFERS AND COUNTEROFFERS TIMELY regardless of an existing contract or letter of intent, INFORMING the parties and SUGGESTING EXPERT ADVICE on material matters beyond the broker's expertise, ACCOUNTING TIMELY, DISCLOSING TO EACH PARTY ANY ADVERSE MATERIAL FACTS OF WHICH THE LICENSEE HAS ACTUAL NOTICE OR KNOWLEDGE, and ASSISTING the parties to comply with the contract.",
+      "THE PARTIES ARE NOT LIABLE FOR ANY ACTS OF THE TRANSACTION BROKER.",
+      "FIVE items may not be disclosed without informed consent: that a buyer WILL PAY MORE; that a seller WILL ACCEPT LESS; a party's MOTIVATING FACTORS; that a party will agree to OTHER FINANCING TERMS; and ANY CONFIDENTIAL INFORMATION about the other party, unless the law requires disclosure or silence would be fraud or dishonest dealing.",
+      "A transaction broker has NO DUTY to conduct an independent inspection or investigation for adverse material facts, and NO DUTY to investigate the buyer's financial condition.",
+      "A transaction broker may SHOW ALTERNATIVE PROPERTIES, LIST COMPETING PROPERTIES, show the buyer's property to OTHER buyers, and SERVE AS A SINGLE AGENT, SUBAGENT, DESIGNATED AGENT, LIMITED AGENT OR DISCLOSED DUAL AGENT in OTHER transactions.",
+      "Each party and the transaction broker possess ONLY ACTUAL KNOWLEDGE; there is NO IMPUTATION of knowledge by operation of law."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Automatically a dual agent",
+        "Neither a dual agent nor a transaction broker, by that fact alone",
+        "A transaction broker"
+       ],
+       "q": "Appointing designated agents makes the Missouri designated broker:",
+       "why": "RSMo 339.820.2."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Presumed to be a transaction broker",
+        "Presumed a subagent",
+        "Presumed a dual agent"
+       ],
+       "q": "Where designated agents have been appointed, an affiliated licensee helping a party with no written agreement is:",
+       "why": "RSMo 339.820.1."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At the offer",
+        "At the earliest practicable opportunity during or after first substantial contact, to someone with no written agreement",
+        "At closing"
+       ],
+       "q": "The Missouri broker disclosure form is given:",
+       "why": "RSMo 339.770.1."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No other licensee need make the disclosure",
+        "Every licensee must repeat it",
+        "The Commission must be notified"
+       ],
+       "q": "Where the consumer already has a written agreement with a designated broker:",
+       "why": "RSMo 339.770.2."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Is a dual agent or transaction broker and must comply with those rules",
+        "Is still only a designated agent",
+        "Must withdraw"
+       ],
+       "q": "A licensee who personally represents both sides of one transaction:",
+       "why": "RSMo 339.820.2."
+      }
+     ],
+     "h": "Designated agents and the disclosure form (RSMo 339.820, 339.770)",
+     "l": [
+      "A designated broker entering a LIMITED AGENCY agreement may APPOINT IN WRITING affiliated licensees as DESIGNATED AGENTS TO THE EXCLUSION OF ALL OTHER affiliated licensees. The same works for a TRANSACTION BROKERAGE agreement and DESIGNATED TRANSACTION BROKERS.",
+      "Where such an appointment has been made, an affiliated licensee assisting a party WITHOUT a written agreement is PRESUMED TO BE A TRANSACTION BROKER to the exclusion of all other affiliated licensees, unless a different status has been disclosed or established.",
+      "A designated broker is NOT a dual agent or transaction broker SOLELY BECAUSE of making such an appointment - BUT any licensee who PERSONALLY REPRESENTS BOTH SIDES in a particular transaction IS a dual agent or transaction broker and must comply with those rules.",
+      "DISCLOSURE: in a RESIDENTIAL transaction, AT THE EARLIEST PRACTICABLE OPPORTUNITY during or following the FIRST SUBSTANTIAL CONTACT with a seller, landlord, buyer or tenant WHO HAS NOT ENTERED INTO A WRITTEN AGREEMENT for services, the licensee must give that person a written copy of the CURRENT BROKER DISCLOSURE FORM PRESCRIBED BY THE COMMISSION.",
+      "Where the person HAS ALREADY entered a written agreement with a designated broker, NO OTHER LICENSEE is required to make the disclosure.",
+      "Disclosures made under sections 339.710 to 339.860 are SUFFICIENT AS A MATTER OF LAW to disclose brokerage relationships to the public."
+     ]
+    }
+   ],
+   "summary": "Six items, and they decide how the rest of the paper reads. Missouri has FIVE relationships, calls its agents LIMITED AGENTS, and lets a broker appoint designated agents without becoming a dual agent.",
+   "topic": "mo/relationships",
+   "traps": [
+    "The DESIGNATED BROKER signs the agreements, not the individual licensee, unless authorised in writing.",
+    "Missouri's agents are LIMITED AGENTS; the no-agency option is TRANSACTION BROKER.",
+    "Appointing designated agents does NOT make the broker a dual agent.",
+    "Prior offers and counteroffers are on the dual agent's do-not-disclose list.",
+    "The disclosure form goes to someone with NO written agreement, at first substantial contact."
+   ],
+   "vocab": [
+    [
+     "Designated broker",
+     "The broker who holds the firm's agreements and responsibility."
+    ],
+    [
+     "Limited agent",
+     "Missouri's statutory name for a seller's or buyer's agent."
+    ],
+    [
+     "Transaction broker",
+     "A licensee with no agency relationship to anyone."
+    ],
+    [
+     "Designated agent",
+     "An affiliated licensee appointed for one client, excluding the others."
+    ],
+    [
+     "Ministerial acts",
+     "Acts a buyer's agent may do before the written agreement."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Advertising, listings, offers, earnest money, closings, commissions.",
+   "counts_on_exam": true,
+   "exam_questions": 17,
+   "key": "mo/conduct",
+   "label": "Business conduct and practices",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Applications, qualification, renewal, broker-salesperson, transfers, denial.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "mo/licenses",
+   "label": "Licenses",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Complaints, investigation, violations, the Commission and the AHC.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "mo/discipline",
+   "label": "Disciplinary proceedings",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Agency disclosure, the relationships Missouri permits, duties, dual agency.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "mo/relationships",
+   "label": "Brokerage relationships",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Definitions, and what counts as a dispute.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "mo/general",
+   "label": "General rules",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "The salesperson course and continuing education.",
+   "counts_on_exam": true,
+   "exam_questions": 2,
+   "key": "mo/education",
+   "label": "Educational requirements",
+   "portion": "georgia"
+  }
+ ]
+}
