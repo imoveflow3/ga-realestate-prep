@@ -1,0 +1,2117 @@
+{
+ "abbr": "IN",
+ "bank": [
+  {
+   "answer": 2,
+   "choices": [
+    "A transaction broker",
+    "A customer-only licensee",
+    "That buyer's agent, by default",
+    "A subagent of the seller"
+   ],
+   "concept": "Indiana default agency",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-9.5(a).",
+   "id": "in-c4b42018",
+   "portion": "georgia",
+   "q": "In Indiana, a licensee working with a buyer who has signed nothing is:",
+   "sub": "in/statutes-rules|Default agency",
+   "subtopic": "Default agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The licensee is paid by the other side",
+    "No offer has been written",
+    "There is a written agreement to the contrary, or the licensee merely assists a customer without compensation"
+   ],
+   "concept": "Indiana default agency",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-9.5(a).",
+   "id": "in-5584e879",
+   "portion": "georgia",
+   "q": "An Indiana agency relationship does NOT arise where:",
+   "sub": "in/statutes-rules|Default agency",
+   "subtopic": "Default agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Do nothing further",
+    "Receive and timely present offers, assist with forms and negotiation, and timely answer questions",
+    "Act as a limited agent"
+   ],
+   "concept": "Indiana default agency",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-9.5(b).",
+   "id": "in-9d345540",
+   "portion": "georgia",
+   "q": "A licensee who has contracted OUT of agency must still:",
+   "sub": "in/statutes-rules|Default agency",
+   "subtopic": "Default agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "No agency relationship is created for the other licensee",
+    "The other licensee becomes the agent",
+    "Both become dual agents"
+   ],
+   "concept": "Indiana default agency",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-10-9.5(c).",
+   "id": "in-90a0f954",
+   "portion": "georgia",
+   "q": "If that licensee fails those duties and another licensee performs them:",
+   "sub": "in/statutes-rules|Default agency",
+   "subtopic": "Default agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Loyalty and obedience",
+    "Accounting for money and property, and keeping confidential information confidential",
+    "All the statutory duties"
+   ],
+   "concept": "Indiana termination",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-14(c).",
+   "id": "in-e05cdea8",
+   "portion": "georgia",
+   "q": "Which duties survive the end of an Indiana agency relationship?",
+   "sub": "in/statutes-rules|Termination",
+   "subtopic": "Termination",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Immediately on receipt, even after an offer has been accepted, unless the seller directs otherwise",
+    "Only until the first acceptance",
+    "Weekly"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-10(a)(3)(B).",
+   "id": "in-b46882a4",
+   "portion": "georgia",
+   "q": "An Indiana seller's agent must present offers:",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A known foundation crack",
+    "That the seller will accept less than the listed price",
+    "A statutory disclosure"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-10(b)(1).",
+   "id": "in-193bcd35",
+   "portion": "georgia",
+   "q": "Which may NOT be disclosed without the seller's informed written consent?",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Full fiduciary duties",
+    "Honest treatment and no knowingly false information",
+    "No duty at all"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-10(c).",
+   "id": "in-498f398d",
+   "portion": "georgia",
+   "q": "A seller's agent owes a prospective buyer:",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Are actually known and could not be found by a reasonable and timely inspection",
+    "Are merely suspected",
+    "Appear in the listing"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-10(d).",
+   "id": "in-3c4ad045",
+   "portion": "georgia",
+   "q": "Adverse material facts about physical condition must be disclosed to a buyer where they:",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Yes, a visual inspection",
+    "No, and need not verify the seller's or an inspector's statements",
+    "Yes, a full inspection"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-10(d).",
+   "id": "in-33e63f5d",
+   "portion": "georgia",
+   "q": "Does an Indiana seller's agent have to inspect the property for the buyer?",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "No, unless the parties agree otherwise",
+    "Yes, always",
+    "Yes, until closing"
+   ],
+   "concept": "Indiana seller duties",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-10-10(a)(3)(A).",
+   "id": "in-f13b6bb0",
+   "portion": "georgia",
+   "q": "Must an Indiana seller's agent keep seeking offers after one is accepted?",
+   "sub": "in/statutes-rules|Seller duties",
+   "subtopic": "Seller duties",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Limited agency",
+    "Transaction brokerage",
+    "Designated agency",
+    "Facilitation"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-12.",
+   "id": "in-ceaca2f1",
+   "portion": "georgia",
+   "q": "Indiana's term for dual agency is:",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Oral consent of both",
+    "The written consent of all parties to the transaction",
+    "The managing broker's approval"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-12(a).",
+   "id": "in-fcc2dfd2",
+   "portion": "georgia",
+   "q": "A limited agent may act only with:",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Property information, including listed and sold properties from a multiple listing service",
+    "What motivates a party",
+    "That the buyer will pay more"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-12(b).",
+   "id": "in-6afa45be",
+   "portion": "georgia",
+   "q": "Which may a limited agent disclose to both sides?",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The fee is non-negotiable",
+    "The Commission has approved it",
+    "A party does not have to consent to the limited agency"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-12(a)(5).",
+   "id": "in-e04dc3cd",
+   "portion": "georgia",
+   "q": "The limited agency writing must state that:",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Imputed to the whole firm",
+    "Not imputed between any party and the limited agent or among licensees",
+    "Imputed to the managing broker"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-10-12(a)(4).",
+   "id": "in-bf3e2117",
+   "portion": "georgia",
+   "q": "In Indiana limited agency, knowledge is:",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Ends the relationship",
+    "Requires fresh written consent",
+    "Does not terminate the limited agency relationship"
+   ],
+   "concept": "Indiana limited agency",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-10-12(c).",
+   "id": "in-eae82acd",
+   "portion": "georgia",
+   "q": "Making a required disclosure as a limited agent:",
+   "sub": "in/statutes-rules|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A commission schedule",
+    "A written office policy describing agency relationships and permitting or rejecting disclosed limited agency",
+    "An advertising budget"
+   ],
+   "concept": "Indiana office policy",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-13(a).",
+   "id": "in-6f4a7a9c",
+   "portion": "georgia",
+   "q": "An Indiana managing broker must develop and enforce:",
+   "sub": "in/statutes-rules|Office policy",
+   "subtopic": "Office policy",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "With the offer",
+    "In writing at the beginning of the relationship, before any confidential information is given",
+    "At closing"
+   ],
+   "concept": "Indiana office policy",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-13(b).",
+   "id": "in-df9aeed5",
+   "portion": "georgia",
+   "q": "That written office policy must be disclosed:",
+   "sub": "in/statutes-rules|Office policy",
+   "subtopic": "Office policy",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Does not create an agency relationship",
+    "Makes the payer the client",
+    "Creates limited agency"
+   ],
+   "concept": "Indiana compensation",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-10-13(d).",
+   "id": "in-8cc0aa9a",
+   "portion": "georgia",
+   "q": "Paying an Indiana licensee's compensation:",
+   "sub": "in/statutes-rules|Compensation",
+   "subtopic": "Compensation",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Compensation will be shared with other broker companies representing adverse parties",
+    "The licensee belongs to a trade body",
+    "The firm is incorporated"
+   ],
+   "concept": "Indiana compensation",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-10-13(c).",
+   "id": "in-73ffc981",
+   "portion": "georgia",
+   "q": "Parties to an Indiana transaction must be told whether:",
+   "sub": "in/statutes-rules|Compensation",
+   "subtopic": "Compensation",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not required, and refusing to disclose carries no liability",
+    "Required on request",
+    "Required in every sale"
+   ],
+   "concept": "Indiana stigma",
+   "difficulty": 1,
+   "explain": "IC 32-21-6-5; 32-21-6-6.",
+   "id": "in-4d2d0532",
+   "portion": "georgia",
+   "q": "In Indiana, disclosure of a psychologically affected property is:",
+   "sub": "in/statutes-rules|Stigma",
+   "subtopic": "Stigma",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A low appraisal",
+    "An expired listing",
+    "A boundary dispute",
+    "An individual died on the property"
+   ],
+   "concept": "Indiana stigma",
+   "difficulty": 2,
+   "explain": "IC 32-21-6-3(1).",
+   "id": "in-5f08e9c5",
+   "portion": "georgia",
+   "q": "Which makes a property psychologically affected in Indiana?",
+   "sub": "in/statutes-rules|Stigma",
+   "subtopic": "Stigma",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Only proven facts",
+    "A reasonable suspicion of the listed facts, not only the facts themselves",
+    "Only events within five years"
+   ],
+   "concept": "Indiana stigma",
+   "difficulty": 3,
+   "explain": "IC 32-21-6-3.",
+   "id": "in-9973af66",
+   "portion": "georgia",
+   "q": "The Indiana definition also reaches:",
+   "sub": "in/statutes-rules|Stigma",
+   "subtopic": "Stigma",
+   "topic": "in/statutes-rules"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Before an offer for the sale is accepted",
+    "At closing",
+    "Within 10 days of the offer"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 1,
+   "explain": "IC 32-21-5-10(a).",
+   "id": "in-52d1df08",
+   "portion": "georgia",
+   "q": "The Indiana sales disclosure form must be given to the buyer:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any residential property",
+    "Not more than four dwelling units",
+    "Single-family homes only"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 1,
+   "explain": "IC 32-21-5-1(a).",
+   "id": "in-44779b2a",
+   "portion": "georgia",
+   "q": "The sales disclosure chapter applies to residential real estate of:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Three days",
+    "Ten days",
+    "Two business days, by written rescission",
+    "It does not"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 1,
+   "explain": "IC 32-21-5-13(a).",
+   "id": "in-31b0230a",
+   "portion": "georgia",
+   "q": "A disclosure form received after acceptance that reveals a defect lets the buyer nullify within:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The inspection is complete",
+    "The appraisal is received",
+    "Both the owner and the prospective buyer have signed the disclosure form"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 2,
+   "explain": "IC 32-21-5-10(c).",
+   "id": "in-cfc75dff",
+   "portion": "georgia",
+   "q": "Before closing, an accepted Indiana offer is not enforceable against the buyer until:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Disclose any material change in physical condition, or certify it is substantially the same",
+    "Re-sign the original form",
+    "Do nothing further"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 2,
+   "explain": "IC 32-21-5-12(a).",
+   "id": "in-a7b11cf4",
+   "portion": "georgia",
+   "q": "At or before settlement an Indiana owner must:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not a warranty, and not a substitute for inspections",
+    "A seller's warranty of condition",
+    "An inspection report"
+   ],
+   "concept": "Indiana disclosure",
+   "difficulty": 2,
+   "explain": "IC 32-21-5-9.",
+   "id": "in-12c01c7b",
+   "portion": "georgia",
+   "q": "The Indiana disclosure form is:",
+   "sub": "in/statutory|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "At closing",
+    "Within 30 days after closing",
+    "Not later than ten days before closing"
+   ],
+   "concept": "Indiana hoa",
+   "difficulty": 3,
+   "explain": "IC 32-21-5-8.5(e).",
+   "id": "in-f1ef5ac2",
+   "portion": "georgia",
+   "q": "HOA governing documents must reach an Indiana purchaser:",
+   "sub": "in/statutory|HOA",
+   "subtopic": "HOA",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Interest bearing only",
+    "Noninterest bearing only",
+    "Interest or noninterest bearing, with any interest held for the beneficiary"
+   ],
+   "concept": "Indiana trust money",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-4-5(a)(1), (b).",
+   "id": "in-fc94d2f8",
+   "portion": "georgia",
+   "q": "An Indiana trust account may be:",
+   "sub": "in/statutory|Trust money",
+   "subtopic": "Trust money",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "No; personal and other business funds are prohibited",
+    "Yes, up to $1,000",
+    "Yes, to cover bank charges"
+   ],
+   "concept": "Indiana trust money",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-4-5(b).",
+   "id": "in-0572f1c0",
+   "portion": "georgia",
+   "q": "May an Indiana broker company put its own operating funds in a trust account?",
+   "sub": "in/statutory|Trust money",
+   "subtopic": "Trust money",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the total balance",
+    "Only the firm's share",
+    "The amount of funds held for each beneficiary"
+   ],
+   "concept": "Indiana trust money",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-4-5(b).",
+   "id": "in-9f9e322b",
+   "portion": "georgia",
+   "q": "Indiana trust account records must identify:",
+   "sub": "in/statutory|Trust money",
+   "subtopic": "Trust money",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The firm's commission income",
+    "Earnest money, funds held for closing escrows and undisbursed sale proceeds",
+    "The broker's office rent"
+   ],
+   "concept": "Indiana trust money",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-4-5(a).",
+   "id": "in-e4924d1f",
+   "portion": "georgia",
+   "q": "Which belongs in an Indiana trust account?",
+   "sub": "in/statutory|Trust money",
+   "subtopic": "Trust money",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Must hold an appraiser certificate",
+    "May do so without appraiser licensure or certification",
+    "May give only a broker price opinion"
+   ],
+   "concept": "Indiana appraisal",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-3-8(a).",
+   "id": "in-a9b7ddbc",
+   "portion": "georgia",
+   "q": "An Indiana licensed broker appraising real estate for compensation:",
+   "sub": "in/statutory|Appraisal",
+   "subtopic": "Appraisal",
+   "topic": "in/statutory"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "60 hours",
+    "At least 90 hours",
+    "75 hours",
+    "120 hours"
+   ],
+   "concept": "Indiana education",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-5-5.",
+   "id": "in-aa6b543c",
+   "portion": "georgia",
+   "q": "Indiana prelicence education is:",
+   "sub": "in/licensing|Education",
+   "subtopic": "Education",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "21",
+    "18 years of age",
+    "19",
+    "There is no minimum"
+   ],
+   "concept": "Indiana eligibility",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-3-4.1(a)(1).",
+   "id": "in-ebd2f379",
+   "portion": "georgia",
+   "q": "An Indiana broker applicant must be at least:",
+   "sub": "in/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "A high school diploma or GED",
+    "An associate degree",
+    "No educational credential"
+   ],
+   "concept": "Indiana eligibility",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-3-4.1(a)(2).",
+   "id": "in-d2116bbf",
+   "portion": "georgia",
+   "q": "An Indiana broker applicant must also hold:",
+   "sub": "in/licensing|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "90 days",
+    "Two years",
+    "Six months",
+    "One year"
+   ],
+   "concept": "Indiana application",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-3-4.1(a)(6).",
+   "id": "in-f51a9628",
+   "portion": "georgia",
+   "q": "After passing the Indiana examination, the licence fee must be submitted within:",
+   "sub": "in/licensing|Application",
+   "subtopic": "Application",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Immediately",
+    "After one year",
+    "Not for at least two years after the licence is issued"
+   ],
+   "concept": "Indiana managing broker",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-3-4.1(f).",
+   "id": "in-a09fade1",
+   "portion": "georgia",
+   "q": "A newly licensed Indiana broker may become a managing broker:",
+   "sub": "in/licensing|Managing broker",
+   "subtopic": "Managing broker",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "At least 30 hours of postlicensing education instead of continuing education",
+    "12 hours of CE each year",
+    "Nothing"
+   ],
+   "concept": "Indiana post-licensing",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-9-11(c).",
+   "id": "in-9e5155c4",
+   "portion": "georgia",
+   "q": "A new Indiana broker's first two years require:",
+   "sub": "in/licensing|Post-licensing",
+   "subtopic": "Post-licensing",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "16 hours per cycle",
+    "24 hours per year",
+    "At least 12 hours per year and 36 hours per three-year cycle"
+   ],
+   "concept": "Indiana continuing education",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-9-11(a)(1).",
+   "id": "in-413465d8",
+   "portion": "georgia",
+   "q": "Indiana continuing education is:",
+   "sub": "in/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "2 hours to ethics",
+    "4 hours to business and management skills and legal knowledge",
+    "8 hours to agency"
+   ],
+   "concept": "Indiana continuing education",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-9-11(d).",
+   "id": "in-f4eebbbd",
+   "portion": "georgia",
+   "q": "An Indiana managing broker must devote each year at least:",
+   "sub": "in/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Annually",
+    "Every three years",
+    "Every two years",
+    "Every four years"
+   ],
+   "concept": "Indiana renewal",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-3-4.1(g).",
+   "id": "in-f64cd066",
+   "portion": "georgia",
+   "q": "An Indiana broker licence renews:",
+   "sub": "in/licensing|Renewal",
+   "subtopic": "Renewal",
+   "topic": "in/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Filed with the Commission only",
+    "Carried on the person",
+    "At the broker's place of business"
+   ],
+   "concept": "Indiana display",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-3-4.1(f).",
+   "id": "in-846bb6df",
+   "portion": "georgia",
+   "q": "Where must an Indiana broker's licence be displayed?",
+   "sub": "in/office|Display",
+   "subtopic": "Display",
+   "topic": "in/office"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Each broker, into a personal account",
+    "The managing broker, into the broker company's trust account",
+    "The closing agent"
+   ],
+   "concept": "Indiana monies",
+   "difficulty": 1,
+   "explain": "IC 25-34.1-4; IC 25-34.1-4-5.",
+   "id": "in-41ccc530",
+   "portion": "georgia",
+   "q": "Who must deposit escrow funds, security deposits and other money received?",
+   "sub": "in/office|Monies",
+   "subtopic": "Monies",
+   "topic": "in/office"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Perform clerical and administrative work, but not activities requiring a licence",
+    "Show property to buyers",
+    "Negotiate contract terms"
+   ],
+   "concept": "Indiana assistants",
+   "difficulty": 1,
+   "explain": "Named on the Indiana state outline.",
+   "id": "in-4ff975c8",
+   "portion": "georgia",
+   "q": "An unlicensed assistant in Indiana may:",
+   "sub": "in/office|Assistants",
+   "subtopic": "Assistants",
+   "topic": "in/office"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Thirty days",
+    "Ninety days",
+    "One year",
+    "Six months"
+   ],
+   "concept": "Indiana wind-up",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-4-6.",
+   "id": "in-d48a503b",
+   "portion": "georgia",
+   "q": "After the death of a sole proprietor, business contracted beforehand may be completed for a maximum of:",
+   "sub": "in/office|Wind-up",
+   "subtopic": "Wind-up",
+   "topic": "in/office"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Re-sign the listing agreement",
+    "Provide a new appraisal",
+    "Disclose any material change in the property's physical condition or certify it is substantially the same"
+   ],
+   "concept": "Indiana closing",
+   "difficulty": 2,
+   "explain": "IC 32-21-5-12(a).",
+   "id": "in-7e2500e5",
+   "portion": "georgia",
+   "q": "Indiana closing procedure requires the owner, at or before settlement, to:",
+   "sub": "in/office|Closing",
+   "subtopic": "Closing",
+   "topic": "in/office"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The amount of funds held for each beneficiary",
+    "A single running total",
+    "Deposits only"
+   ],
+   "concept": "Indiana records",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-4-5(b).",
+   "id": "in-bf71c848",
+   "portion": "georgia",
+   "q": "Indiana trust account records must show:",
+   "sub": "in/office|Records",
+   "subtopic": "Records",
+   "topic": "in/office"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Each individual broker",
+    "The Commission",
+    "The managing broker"
+   ],
+   "concept": "Indiana supervision",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-4; Indiana state outline.",
+   "id": "in-224e5333",
+   "portion": "georgia",
+   "q": "Supervision of the brokers whose licences a company holds falls to:",
+   "sub": "in/office|Supervision",
+   "subtopic": "Supervision",
+   "topic": "in/office"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Criminal sentencing",
+    "Rescission of the contract",
+    "Cease and desist orders, civil penalties, and the consumer restitution or recovery fund"
+   ],
+   "concept": "Indiana sanctions",
+   "difficulty": 1,
+   "explain": "Pearson Indiana state content outline.",
+   "id": "in-3560d5ba",
+   "portion": "georgia",
+   "q": "Which sanction does the Indiana outline name alongside suspension and revocation?",
+   "sub": "in/commission|Sanctions",
+   "subtopic": "Sanctions",
+   "topic": "in/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Closed by the bank",
+    "Paid out to the managing broker",
+    "Taken into the Commission's custody, which may appoint a successor trustee"
+   ],
+   "concept": "Indiana trust accounts",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-4-5(c).",
+   "id": "in-b6814a06",
+   "portion": "georgia",
+   "q": "If an Indiana broker company's licence is revoked, its trust accounts are:",
+   "sub": "in/commission|Trust accounts",
+   "subtopic": "Trust accounts",
+   "topic": "in/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Is any conviction at all",
+    "Has a direct bearing on competent practice or shows a propensity to endanger the public",
+    "Is more than ten years old"
+   ],
+   "concept": "Indiana eligibility",
+   "difficulty": 2,
+   "explain": "IC 25-34.1-3-4.1(a)(1).",
+   "id": "in-541bf3b8",
+   "portion": "georgia",
+   "q": "A conviction bars Indiana licensure where it:",
+   "sub": "in/commission|Eligibility",
+   "subtopic": "Eligibility",
+   "topic": "in/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Seven members appointed by the Governor",
+    "Three members",
+    "Five members, three recommended by the Indiana Association of Realtors"
+   ],
+   "concept": "Indiana education council",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-9-3.",
+   "id": "in-4f3071ed",
+   "portion": "georgia",
+   "q": "Indiana's real estate education advisory council has:",
+   "sub": "in/commission|Education council",
+   "subtopic": "Education council",
+   "topic": "in/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "On the anniversary of approval",
+    "On 31 December each year",
+    "Every three years"
+   ],
+   "concept": "Indiana course approval",
+   "difficulty": 3,
+   "explain": "IC 25-34.1-5-7(a).",
+   "id": "in-218ed72c",
+   "portion": "georgia",
+   "q": "Indiana course approvals and school permits expire:",
+   "sub": "in/commission|Course approval",
+   "subtopic": "Course approval",
+   "topic": "in/commission"
+  }
+ ],
+ "code": "IN",
+ "diffs": {
+  "national/agency": [
+   "Indiana makes AGENCY THE DEFAULT: a licensee represents the person they work with UNLESS a written agreement says otherwise or they merely assist a customer without compensation (IC 25-34.1-10-9.5).",
+   "Even without agency, three duties survive under the written agreement - receive and present offers, assist with forms and negotiation, and answer questions timely.",
+   "Dual agency is called LIMITED AGENCY and needs the WRITTEN consent of all parties, with six specific statements in the writing (IC 25-34.1-10-12).",
+   "The MANAGING BROKER must keep a WRITTEN OFFICE POLICY that permits or rejects disclosed limited agency, disclosed in writing before any confidential information is given (IC 25-34.1-10-13).",
+   "PAYING compensation never creates agency, and only accounting and confidentiality survive termination (IC 25-34.1-10-13(d), 10-14)."
+  ],
+  "national/disclosures": [
+   "The owner's SALES DISCLOSURE FORM must be delivered BEFORE AN OFFER IS ACCEPTED, and a defect revealed afterwards gives the buyer TWO BUSINESS DAYS to rescind in writing (IC 32-21-5-10, 32-21-5-13).",
+   "An accepted offer is NOT ENFORCEABLE against the buyer before closing until BOTH parties have signed the form (IC 32-21-5-10(c)).",
+   "PSYCHOLOGICALLY AFFECTED PROPERTY - death, a felony, criminal organisation activity, a police firearm discharge or drug manufacture - NEVER has to be disclosed, and refusing to disclose carries no liability (IC 32-21-6)."
+  ],
+  "national/practice": [
+   "Education: 90 prelicence hours, then 30 hours of POSTLICENSING education in the first two years INSTEAD of continuing education, then 12 hours a year and 36 per three-year cycle (IC 25-34.1-5-5, 25-34.1-9-11).",
+   "A new broker CANNOT be a managing broker for two years (IC 25-34.1-3-4.1(f)).",
+   "Trust accounts may be interest or noninterest bearing, and ANY INTEREST IS HELD FOR THE BENEFICIARY; the Commission takes custody if the firm fails (IC 25-34.1-4-5).",
+   "A licensed Indiana BROKER MAY APPRAISE for compensation without appraiser licensure (IC 25-34.1-3-8(a))."
+  ]
+ },
+ "name": "Indiana",
+ "pass": 0.75,
+ "pass_note": "Indiana EQUATES its examination forms and reports a SCALED score. The IPLA set the passing scaled score at 75, but the handbook says that score is neither the number nor the percentage of questions answered correctly. Numeric scores are reported only to candidates who FAIL, and a pass is good for ONE YEAR. Treat 75% here as a study target, not the state's requirement.",
+ "pass_published": false,
+ "portions": {
+  "georgia": {
+   "blurb": "50 scored items on IC 25-34.1, agency relationships and the disclosure statutes.",
+   "minutes": 92,
+   "name": "Indiana law",
+   "scored": 50
+  },
+  "national": {
+   "blurb": "80 scored general items.",
+   "minutes": 148,
+   "scored": 80
+  }
+ },
+ "regulator": "Indiana Real Estate Commission",
+ "sources": [
+  {
+   "by": "Indiana General Assembly",
+   "name": "Indiana Code title 25, article 34.1",
+   "note": "The licence law: broker requirements, trust accounts, education and chapter 10 on agency relationships.",
+   "url": "https://iga.in.gov/ic/2026/Title_25/Article_34.1.pdf"
+  },
+  {
+   "by": "Indiana General Assembly",
+   "name": "Indiana Code 32-21-5 and 32-21-6",
+   "note": "The residential sales disclosure form, and psychologically affected properties.",
+   "url": "https://iga.in.gov/ic/2026/Title_32/Article_21/Chapter_5.pdf"
+  },
+  {
+   "by": "Pearson VUE and the Indiana Professional Licensing Agency",
+   "name": "Indiana Real Estate Candidate Handbook",
+   "note": "145 questions in 240 minutes, 80 national and 50 state scored items, and a scaled passing score of 75.",
+   "url": "https://www.pearsonvue.com/us/en/in/realestate.html"
+  }
+ ],
+ "study": {
+  "in/commission": {
+   "blurb": "Powers, records, investigations and sanctions, including the recovery fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "The Indiana Real Estate Commission",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Cease and desist orders, civil penalties, and the consumer restitution or recovery fund",
+        "Criminal sentencing",
+        "Contract rescission"
+       ],
+       "q": "Which sanction does the Indiana outline name alongside suspension and revocation?",
+       "why": "Pearson Indiana state content outline."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Taken into the Commission's custody, with a possible successor trustee",
+        "Closed by the bank",
+        "Paid to the managing broker"
+       ],
+       "q": "If a broker company's licence is revoked, its trust accounts are:",
+       "why": "IC 25-34.1-4-5(c)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Has a direct bearing on competent practice or shows a propensity to endanger the public",
+        "Is any conviction at all",
+        "Is more than ten years old"
+       ],
+       "q": "A conviction bars licensure where it:",
+       "why": "IC 25-34.1-3-4.1(a)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only for managing brokers",
+        "As a condition of licence renewal",
+        "Not at all"
+       ],
+       "q": "The Commission may require continuing education:",
+       "why": "IC 25-34.1-3."
+      }
+     ],
+     "h": "Powers and sanctions",
+     "l": [
+      "The outline lists the Commission's GENERAL POWERS AND DUTIES, EXAMINATION OF RECORDS, INVESTIGATIONS, HEARINGS AND APPEALS, and DISCIPLINARY SANCTIONS.",
+      "Those sanctions are named as CEASE AND DESIST ORDERS, LICENCE SUSPENSION OR REVOCATION, OTHER SANCTIONS AND CIVIL PENALTIES, and the CONSUMER RESTITUTION / RECOVERY FUND.",
+      "The Commission may require CONTINUING EDUCATION as a condition of renewal (IC 25-34.1-3).",
+      "Where a broker company's licence EXPIRES, IS REVOKED OR SUSPENDED, or the company terminates, THE COMMISSION TAKES CUSTODY of each trust account and may APPOINT A SUCCESSOR TRUSTEE (IC 25-34.1-4-5(c)) - the clearest example of its power over client money.",
+      "A licence applicant is disqualified by a conviction for an act grounding disciplinary sanction under IC 25-1-11, a crime with a DIRECT BEARING on competent practice, or one showing a PROPENSITY TO ENDANGER THE PUBLIC (IC 25-34.1-3-4.1(a)(1))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Seven members, all appointed by the Governor",
+        "Five members, three recommended by the Indiana Association of Realtors",
+        "Three members"
+       ],
+       "q": "Indiana's real estate education advisory council has:",
+       "why": "IC 25-34.1-9-3."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Two years",
+        "Four years",
+        "One year"
+       ],
+       "q": "A council member's term is:",
+       "why": "IC 25-34.1-9-4."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "On 31 December each year",
+        "On the anniversary of approval",
+        "Every three years"
+       ],
+       "q": "Course approvals and school permits expire:",
+       "why": "IC 25-34.1-5-7(a)."
+      }
+     ],
+     "h": "Education infrastructure",
+     "l": [
+      "A REAL ESTATE EDUCATION ADVISORY COUNCIL is established, consisting of FIVE MEMBERS, THREE of whom must be RECOMMENDED BY THE INDIANA ASSOCIATION OF REALTORS and appointed by the Commission, each for a TWO YEAR TERM (IC 25-34.1-9-2 to 9-4).",
+      "The Commission may remove a council member FOR CAUSE, and appoints replacements for unexpired terms.",
+      "The Commission approves COURSE SPONSORS, inspects their RECORDS AND FACILITIES, may DENY, SUSPEND OR REVOKE approval of courses or sponsors, issues CONTINUING EDUCATION INSTRUCTOR PERMITS, and maintains an ELECTRONIC CONTINUING EDUCATION TRACKING SYSTEM (IC 25-34.1-9).",
+      "Course approval and school permits EXPIRE ON 31 DECEMBER each year, and renewal requires a letter, an ANNUAL REPORT and a BOND of 20 PERCENT of the previous year's figure to be submitted BY 30 NOVEMBER (IC 25-34.1-5-7)."
+     ]
+    }
+   ],
+   "summary": "Five items on the regulator. Indiana's distinctive piece is the CONSUMER RESTITUTION / RECOVERY FUND.",
+   "topic": "in/commission",
+   "traps": [
+    "The recovery fund is listed as a Commission sanction topic, not just a consumer remedy.",
+    "Course approvals lapse every 31 December; renewal paperwork is due by 30 November."
+   ],
+   "vocab": [
+    [
+     "IPLA",
+     "Indiana Professional Licensing Agency, which sets the passing score."
+    ],
+    [
+     "Cease and desist order",
+     "A Commission sanction stopping conduct."
+    ],
+    [
+     "Recovery fund",
+     "The consumer restitution fund named on the outline."
+    ],
+    [
+     "Successor trustee",
+     "Who the Commission may appoint over a failed firm's trust account."
+    ]
+   ]
+  },
+  "in/licensing": {
+   "blurb": "Who needs a licence, licence types, education, renewal, transfers and status.",
+   "counts_on_exam": true,
+   "exam_questions": 9,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "At least 90 hours",
+        "60 hours",
+        "75 hours",
+        "120 hours"
+       ],
+       "q": "Indiana prelicence education is:",
+       "why": "IC 25-34.1-5-5."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "21",
+        "19",
+        "18 years of age",
+        "There is no minimum"
+       ],
+       "q": "An Indiana broker applicant must be at least:",
+       "why": "IC 25-34.1-3-4.1(a)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "90 days",
+        "Two years",
+        "One year"
+       ],
+       "q": "After passing the examination, the licence fee must be submitted within:",
+       "why": "IC 25-34.1-3-4.1(a)(6)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Immediately",
+        "After one year",
+        "Not for at least two years after the licence is issued"
+       ],
+       "q": "A newly licensed Indiana broker may become a managing broker:",
+       "why": "IC 25-34.1-3-4.1(f)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "An associate degree",
+        "No educational credential",
+        "A high school diploma or GED"
+       ],
+       "q": "The applicant must also hold:",
+       "why": "IC 25-34.1-3-4.1(a)(2)."
+      }
+     ],
+     "h": "Getting the licence (IC 25-34.1-3-4.1, IC 25-34.1-5-5)",
+     "l": [
+      "An applicant must be AT LEAST 18 YEARS OF AGE before applying, and must NOT have a conviction for an act that would ground disciplinary sanction under IC 25-1-11, a CRIME WITH A DIRECT BEARING on the ability to practise competently, or a crime indicating a PROPENSITY TO ENDANGER THE PUBLIC.",
+      "The applicant must hold a HIGH SCHOOL DIPLOMA OR GED.",
+      "They must complete an APPROVED BROKER COURSE OF STUDY: a total of AT LEAST 90 HOURS covering PRINCIPLES, PRACTICES, INDIANA LICENCE LAW AND PROFESSIONAL STANDARDS, LAW OF AGENCY, CONTRACTS, FINANCING, SETTLEMENT PROCEDURES, ESCROW RESPONSIBILITY, RECORDKEEPING, GOVERNMENT REGULATIONS and APPRAISING (IC 25-34.1-5-5).",
+      "They must APPLY, naming the BROKER COMPANY they intend to associate with and its address, PASS THE WRITTEN EXAMINATION, and WITHIN ONE YEAR AFTER PASSING submit the licence fee - otherwise the Commission VOIDS THE APPLICATION and the applicant must apply and sit again.",
+      "The licence must be DISPLAYED at the broker's place of business.",
+      "FOR AT LEAST TWO YEARS after issue, the individual CANNOT BE A MANAGING BROKER."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "12 hours of CE each year",
+        "Nothing",
+        "At least 30 hours of postlicensing education instead of continuing education"
+       ],
+       "q": "A new Indiana broker's first two years require:",
+       "why": "IC 25-34.1-9-11(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "16 hours per cycle",
+        "At least 12 hours per year and 36 hours per three-year cycle",
+        "24 hours per year"
+       ],
+       "q": "Indiana continuing education is:",
+       "why": "IC 25-34.1-9-11(a)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "2 hours to ethics",
+        "4 hours to business and management skills and legal knowledge",
+        "8 hours to agency"
+       ],
+       "q": "A managing broker must devote, each year, at least:",
+       "why": "IC 25-34.1-9-11(d)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Annually",
+        "Every three years",
+        "Every two years"
+       ],
+       "q": "An Indiana broker licence renews:",
+       "why": "IC 25-34.1-3-4.1(g)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "One year",
+        "Five years",
+        "Three years of expiry"
+       ],
+       "q": "An expired licence may be reinstated within:",
+       "why": "IC 25-34.1-3-4.1(h)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Being exempt entirely",
+        "Completing continuing legal education in the listed subjects",
+        "Taking half the hours"
+       ],
+       "q": "An Indiana attorney may meet the education requirement by:",
+       "why": "IC 25-34.1-9-11(b)."
+      }
+     ],
+     "h": "Post-licensing and continuing education (IC 25-34.1-9-11)",
+     "l": [
+      "An individual who applied for a broker's licence AFTER 30 JUNE 2014 must, DURING THE FIRST TWO YEARS after the licence is issued, TAKE AND PASS AT LEAST 30 HOURS OF POSTLICENSING EDUCATION focused on the PRACTICAL MATTERS of real estate transactions, INSTEAD OF the continuing education requirement.",
+      "Otherwise the approved education requirement is AT LEAST 12 HOURS PER YEAR and AT LEAST 36 HOURS PER THREE-YEAR RENEWAL CYCLE, in subjects the Commission determines - including LICENCE AND ESCROW LAW, ANTI-TRUST LAW, CIVIL RIGHTS LAW, AGENCY LAW, LISTING CONTRACTS AND PURCHASE AGREEMENTS, ETHICS AND PROFESSIONAL STANDARDS, SETTLEMENT PROCEDURES, APPRAISING, PROPERTY MANAGEMENT, FINANCING and others.",
+      "A MANAGING BROKER must complete at least 12 HOURS A YEAR and 36 PER CYCLE, of which AT LEAST 4 HOURS EACH YEAR must be dedicated to the BUSINESS AND MANAGEMENT SKILLS AND LEGAL KNOWLEDGE a managing broker needs.",
+      "An INDIANA ATTORNEY in good standing may satisfy the requirement with CONTINUING LEGAL EDUCATION in the listed subjects.",
+      "A broker licensed after 30 June 2014 who goes INACTIVE before finishing the 30 postlicensing hours must COMPLETE THEM BEFORE REACTIVATION.",
+      "A broker licence EXPIRES on a date set by the licensing agency and then EVERY THREE YEARS. An expired licence may be REINSTATED within THREE YEARS of expiry on meeting IC 25-1-8-6(c)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Is not required to complete continuing education while inactive",
+        "Must still complete 12 hours a year",
+        "Loses the licence automatically"
+       ],
+       "q": "An inactive Indiana licensee:",
+       "why": "IC 25-34.1-3-10."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Take listings",
+        "Only make referrals to a licensed broker",
+        "Write offers for buyers"
+       ],
+       "q": "A licensee in referral status may:",
+       "why": "IC 25-34.1-3-10.5(e)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "All partners to be licensed brokers, with at least one qualifying as managing broker",
+        "One licensed partner only",
+        "No licensed partners"
+       ],
+       "q": "A partnership broker licence requires:",
+       "why": "IC 25-34.1-3-4.1(b)."
+      }
+     ],
+     "h": "Status and transfers",
+     "l": [
+      "The outline covers ACTIVITIES REQUIRING A LICENCE, EXEMPTIONS AND WAIVERS, and TYPES OF LICENCES - INDIVIDUAL, ORGANIZATIONAL, RESIDENT AND NONRESIDENT.",
+      "It also covers LICENCE MAINTENANCE: POST-LICENSING EDUCATION, RENEWALS, TRANSFERS AND CHANGES - including AGENTS CHANGING BROKERS and a BROKER TERMINATING AN AGENT - CONTINUING EDUCATION for both managing broker and broker, and ACTIVE, INACTIVE, ASSIGNED, UNASSIGNED and REFERRAL STATUS.",
+      "An individual holding an INACTIVE licence is NOT REQUIRED to fulfil the continuing education requirements while inactive (IC 25-34.1-3-10), but the Commission sets requirements for REACTIVATION.",
+      "REFERRAL STATUS means the Commission granted a waiver under IC 25-34.1-9-19; such a licensee MAY ONLY MAKE REFERRALS to a licensed broker and may NOT perform any other act requiring a broker's licence unless they complete the required 24 hours of education and meet the other conditions.",
+      "A PARTNERSHIP broker licence requires that ALL PARTNERS BE LICENSED BROKERS and that AT LEAST ONE PARTNER QUALIFY AS A MANAGING BROKER."
+     ]
+    }
+   ],
+   "summary": "Nine items. The numbers: 18 years old, 90 hours, 30 hours of post-licensing in the first two years, then 12 hours a year and 36 per three-year cycle.",
+   "topic": "in/licensing",
+   "traps": [
+    "90 hours to qualify, then 30 POST-licensing hours in the first two years INSTEAD of CE.",
+    "12 a year AND 36 a cycle - both numbers are tested.",
+    "No managing broker role for the first two years.",
+    "Licence fee within ONE YEAR of passing, or the application is void."
+   ],
+   "vocab": [
+    [
+     "Managing broker",
+     "The broker who runs a broker company; not available for two years."
+    ],
+    [
+     "Postlicensing education",
+     "The 30 practical hours required in a new broker's first two years."
+    ],
+    [
+     "Referral status",
+     "A waiver status permitting referrals only."
+    ],
+    [
+     "IPLA",
+     "The Indiana Professional Licensing Agency."
+    ]
+   ]
+  },
+  "in/office": {
+   "blurb": "Records, monies, place of business, branches, assistants, closings, supervision.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [],
+   "ga": [],
+   "label": "Real estate office procedures",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Filed with the Commission only",
+        "Carried in the car",
+        "At the broker's place of business"
+       ],
+       "q": "Where must an Indiana broker's licence be displayed?",
+       "why": "IC 25-34.1-3-4.1(f)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The managing broker, into the broker company's trust account",
+        "Each individual broker, into their own account",
+        "The closing agent"
+       ],
+       "q": "Who must deposit escrow funds, security deposits and other money received?",
+       "why": "IC 25-34.1-4; IC 25-34.1-4-5."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Ninety days",
+        "Thirty days",
+        "One year"
+       ],
+       "q": "After the death of a sole proprietor, business contracted beforehand may be completed for a maximum of:",
+       "why": "IC 25-34.1-4-6."
+      }
+     ],
+     "h": "The managing broker's statutory duties (IC 25-34.1-4)",
+     "l": [
+      "A MANAGING BROKER is the individual responsible for a BROKER COMPANY. Statutory duties include DEPOSITING ALL ESCROW FUNDS, SECURITY DEPOSITS AND OTHER MONEY RECEIVED by the company or its brokers into the company's TRUST ACCOUNT.",
+      "The managing broker is responsible for SUPERVISION of the brokers whose licences the company holds, and the outline names GENERAL SUPERVISION and EMPLOYMENT AND COMMISSIONS ISSUES as its own topic.",
+      "The outline also lists BROKER COMPANY / BROKER COMPANY RELATIONSHIPS - that is, cooperation and compensation between firms, which ties back to the rule that parties must be told whether compensation will be SHARED with firms representing adverse parties (IC 25-34.1-10-13(c)).",
+      "On the DEATH of a sole proprietor or the termination of a broker company, business contracted before the death may be carried out for a MAXIMUM PERIOD OF NINETY DAYS, during which a TRUST ACCOUNT must still be maintained (IC 25-34.1-4-6).",
+      "The licence must be DISPLAYED AT THE BROKER'S PLACE OF BUSINESS (IC 25-34.1-3-4.1(f))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Show property to buyers",
+        "Negotiate contract terms",
+        "Perform clerical and administrative work, but not licensed activities"
+       ],
+       "q": "An unlicensed assistant in Indiana may:",
+       "why": "Named on the Indiana state outline."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Re-sign the listing",
+        "Nothing further",
+        "Disclose any material change in the property's physical condition, or certify it is substantially the same"
+       ],
+       "q": "At or before settlement an owner must:",
+       "why": "IC 32-21-5-12(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A single running total",
+        "The amount of funds held for each beneficiary",
+        "Only deposits"
+       ],
+       "q": "Trust account records must show:",
+       "why": "IC 25-34.1-4-5(b)."
+      }
+     ],
+     "h": "Records, monies and the rest of the outline",
+     "l": [
+      "The outline names DOCUMENTS AND RECORDS, HANDLING OF MONIES, PLACE OF BUSINESS, BRANCH OFFICES, UNLICENSED ASSISTANTS, CLOSING PROCEDURES, and the MANAGING BROKER / BROKER RELATIONSHIP.",
+      "UNLICENSED ASSISTANTS may do clerical and administrative work but NOT the activities that require a licence - showing property, negotiating, or discussing terms.",
+      "HANDLING OF MONIES is the trust account rule: ALL FUNDS BELONGING TO OTHERS go into a trust account, NO personal or other business funds go in, and a DETAILED RECORD identifies the amount held FOR EACH BENEFICIARY (IC 25-34.1-4-5).",
+      "CLOSING PROCEDURES tie to the sales disclosure duty to disclose any MATERIAL CHANGE in the physical condition AT OR BEFORE SETTLEMENT, or certify the condition is SUBSTANTIALLY THE SAME (IC 32-21-5-12(a))."
+     ]
+    }
+   ],
+   "summary": "Seven items on running the office: records, money, the place of business, assistants and who answers for whom.",
+   "topic": "in/office",
+   "traps": [
+    "Money belonging to others goes to the company trust account - never a broker's own.",
+    "Ninety days is the wind-up window after a sole proprietor's death."
+   ],
+   "vocab": [
+    [
+     "Broker company",
+     "The licensed firm."
+    ],
+    [
+     "Unlicensed assistant",
+     "Support staff limited to non-licensed tasks."
+    ],
+    [
+     "Branch office",
+     "An additional place of business of a broker company."
+    ]
+   ]
+  },
+  "in/statutes-rules": {
+   "blurb": "Agency relationships and disclosures, office policy, and licensee conduct.",
+   "counts_on_exam": true,
+   "exam_questions": 17,
+   "examples": [
+    {
+     "k": "In Indiana, silence creates agency; writing removes it.",
+     "s": "A buyer has toured three houses with you. Nothing has been signed and you expect to be paid from the listing side.",
+     "t": "The buyer who signed nothing",
+     "w": [
+      "Because you are being compensated and there is no written agreement to the contrary, you ARE their agent.",
+      "That means the full IC 25-34.1-10-11 duties apply - loyalty, confidentiality, the lot.",
+      "If you wanted a customer relationship, it had to be in writing, and three duties would still apply."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Statutes & rules governing licensees",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A transaction broker",
+        "A customer-only licensee",
+        "That buyer's agent, by default",
+        "A subagent of the seller"
+       ],
+       "q": "In Indiana, a licensee working with a buyer who has signed nothing is:",
+       "why": "IC 25-34.1-10-9.5(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The licensee is not paid by that party",
+        "There is a written agreement to the contrary, or the licensee merely assists a customer without compensation",
+        "No offer is written"
+       ],
+       "q": "Agency does NOT arise where:",
+       "why": "IC 25-34.1-10-9.5(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Do nothing at all",
+        "Act as a dual agent",
+        "Receive and timely present offers, assist with forms and negotiation, and timely answer questions"
+       ],
+       "q": "A licensee who has contracted OUT of agency must still:",
+       "why": "IC 25-34.1-10-9.5(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Accounting for money and property, and keeping confidential information confidential",
+        "Loyalty and obedience",
+        "All of the statutory duties"
+       ],
+       "q": "Which duties survive the end of an Indiana agency relationship?",
+       "why": "IC 25-34.1-10-14(c)."
+      }
+     ],
+     "h": "Agency is the default (IC 25-34.1-10-9.5)",
+     "l": [
+      "A licensee HAS AN AGENCY RELATIONSHIP WITH, AND IS REPRESENTING, THE INDIVIDUAL WITH WHOM THE LICENSEE IS WORKING unless (1) there is a WRITTEN AGREEMENT TO THE CONTRARY, or (2) the licensee is MERELY ASSISTING THE INDIVIDUAL AS A CUSTOMER WITHOUT COMPENSATION.",
+      "Where a WRITTEN AGREEMENT removes the agency relationship, the licensee must STILL PERFORM AT LEAST THREE DUTIES under that agreement: BE AVAILABLE TO RECEIVE AND TIMELY PRESENT offers and counteroffers; ASSIST IN NEGOTIATING, COMPLETING REAL ESTATE FORMS, COMMUNICATING and timely presenting offers, counteroffers, notices and addenda until a purchase agreement or lease is SIGNED and all CONTINGENCIES SATISFIED OR WAIVED; and TIMELY RESPOND to questions on offers, counteroffers, notices, addenda and contingencies.",
+      "If that licensee FAILS to perform those duties and ANOTHER LICENSEE performs them for the party, that performance DOES NOT CREATE AN AGENCY RELATIONSHIP for the other licensee.",
+      "Nothing stops a licensee from performing DUTIES IN ADDITION to those specified.",
+      "The duties begin WHEN THE AGENCY RELATIONSHIP IS ENTERED and continue UNTIL IT TERMINATES. After termination only two duties survive: ACCOUNTING for money and property received, and KEEPING CONFIDENTIAL information made confidential by the client's request or instruction, unless the law requires disclosure or the client consents in writing (IC 25-34.1-10-14)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Only until the first acceptance",
+        "Immediately on receipt, even after an offer has been accepted, unless the seller directs otherwise",
+        "At the next weekly meeting"
+       ],
+       "q": "An Indiana seller's agent must present offers:",
+       "why": "IC 25-34.1-10-10(a)(3)(B)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "That the seller will accept less than the listed price",
+        "A known foundation crack",
+        "A required statutory disclosure"
+       ],
+       "q": "Which may NOT be disclosed without the seller's informed written consent?",
+       "why": "IC 25-34.1-10-10(b)(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Full fiduciary duties",
+        "Honest treatment and no knowingly false information",
+        "Nothing whatever"
+       ],
+       "q": "A seller's agent owes a prospective buyer:",
+       "why": "IC 25-34.1-10-10(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Are suspected",
+        "Appear in the listing",
+        "Are actually known and could not be found by a reasonable and timely inspection"
+       ],
+       "q": "Adverse material facts about physical condition must be disclosed to a buyer where they:",
+       "why": "IC 25-34.1-10-10(d)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No, and need not verify the seller's or an inspector's statements",
+        "Yes, a visual inspection",
+        "Yes, a full inspection"
+       ],
+       "q": "Does an Indiana seller's agent have to inspect the property for the buyer?",
+       "why": "IC 25-34.1-10-10(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Yes, always",
+        "Yes, for 30 days",
+        "No, unless the parties agree otherwise"
+       ],
+       "q": "Must a seller's agent keep seeking offers after one is accepted?",
+       "why": "IC 25-34.1-10-10(a)(3)(A)."
+      }
+     ],
+     "h": "Duties to a seller or landlord (IC 25-34.1-10-10)",
+     "l": [
+      "FULFIL THE TERMS of the agency relationship; DISCLOSE ITS NATURE, and REDEFINE AND DISCLOSE IF IT CHANGES.",
+      "PROMOTE THE CLIENT'S INTERESTS by seeking a satisfactory price and terms - though NOT OBLIGED to seek additional offers once one is accepted, unless agreed otherwise - and by PRESENTING ALL OFFERS TO AND FROM the seller IMMEDIATELY ON RECEIPT, REGARDLESS of whether an offer has already been accepted, unless the seller directs otherwise.",
+      "DISCLOSE ADVERSE MATERIAL FACTS OR RISKS ACTUALLY KNOWN concerning the transaction; ADVISE the client to get EXPERT ADVICE on matters beyond the licensee's expertise; ACCOUNT TIMELY for money and property; exercise REASONABLE CARE AND SKILL; and COMPLY with the chapter and all applicable law INCLUDING FAIR HOUSING AND CIVIL RIGHTS.",
+      "WITHOUT THE CLIENT'S INFORMED WRITTEN CONSENT the licensee may NOT disclose THAT THE SELLER WILL ACCEPT LESS than the listed price or other concessions, WHAT MOTIVATES the seller, or ANY MATERIAL OR CONFIDENTIAL INFORMATION unless the law requires it or silence would be FRAUD OR DISHONEST DEALING.",
+      "A seller's agent OWES NO DUTIES TO THE BUYER except to TREAT ALL PROSPECTIVE BUYERS HONESTLY and NOT KNOWINGLY GIVE THEM FALSE INFORMATION.",
+      "But a licensee MUST disclose to a prospective buyer ADVERSE MATERIAL FACTS OR RISKS ACTUALLY KNOWN about the PHYSICAL CONDITION of the property, and facts required by statute to be disclosed, THAT COULD NOT BE DISCOVERED BY A REASONABLE AND TIMELY INSPECTION. There is NO duty to conduct an independent inspection or to verify statements by the seller or an independent inspector, and NO CAUSE OF ACTION arises for disclosing in compliance with the section.",
+      "A seller's agent may SHOW ALTERNATIVE PROPERTIES and LIST COMPETING PROPERTIES without breaching any duty.",
+      "The mirror-image duties are owed to a BUYER OR TENANT by their agent (IC 25-34.1-10-11)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Transaction brokerage",
+        "Designated agency",
+        "Limited agency",
+        "Facilitation"
+       ],
+       "q": "Indiana's term for dual agency is:",
+       "why": "IC 25-34.1-10-12."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Oral consent",
+        "The managing broker's approval",
+        "The written consent of all parties"
+       ],
+       "q": "A limited agent may act only with:",
+       "why": "IC 25-34.1-10-12(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "What motivates a party",
+        "Property information, including listed and sold properties from an MLS",
+        "That the buyer will pay more"
+       ],
+       "q": "Which may a limited agent disclose to both sides?",
+       "why": "IC 25-34.1-10-12(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The fee is non-negotiable",
+        "A party does not have to consent to the limited agency",
+        "The Commission has approved it"
+       ],
+       "q": "The limited agency writing must state that:",
+       "why": "IC 25-34.1-10-12(a)(5)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Imputed to the whole firm",
+        "Imputed to the managing broker",
+        "Not imputed between any party and the limited agent or among licensees"
+       ],
+       "q": "In limited agency, knowledge is:",
+       "why": "IC 25-34.1-10-12(a)(4)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Ends the relationship",
+        "Does not terminate the limited agency relationship",
+        "Requires fresh consent"
+       ],
+       "q": "Making a required disclosure as limited agent:",
+       "why": "IC 25-34.1-10-12(c)."
+      }
+     ],
+     "h": "Limited agency (IC 25-34.1-10-12)",
+     "l": [
+      "A licensee may act as a LIMITED AGENT - Indiana's name for dual agency - ONLY WITH THE WRITTEN CONSENT OF ALL PARTIES.",
+      "Consent is PRESUMED GIVEN and all parties CONSIDERED INFORMED where a party signs a writing at the time of entering the agency relationship containing SIX things: a DESCRIPTION of the transactions in which the licensee will serve as limited agent; a statement that the licensee REPRESENTS PARTIES WHOSE INTERESTS ARE DIFFERENT OR EVEN ADVERSE; a statement of what MAY NOT BE DISCLOSED without informed written consent; a statement that there is NO IMPUTATION OF KNOWLEDGE between any party and the limited agent or among licensees; a statement that A PARTY DOES NOT HAVE TO CONSENT to limited agency; and a statement that consent was given VOLUNTARILY and the disclosure READ AND UNDERSTOOD.",
+      "The protected items are: any MATERIAL OR CONFIDENTIAL INFORMATION - except adverse material facts actually known about the PHYSICAL CONDITION and statutory disclosures not discoverable by reasonable and timely inspection; THAT A BUYER WILL PAY MORE than offered; THAT A SELLER WILL ACCEPT LESS than listed; WHAT MOTIVATES a party; and OTHER TERMS that would create a CONTRACTUAL ADVANTAGE for one party.",
+      "A limited agent MAY disclose and provide BOTH parties PROPERTY INFORMATION, including listed and sold properties from a multiple listing service or other source.",
+      "NO CAUSE OF ACTION arises against a licensee for disclosing or failing to disclose in compliance with the section, and making a REQUIRED DISCLOSURE DOES NOT TERMINATE the limited agency."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A commission schedule",
+        "A written office policy describing agency relationships and permitting or rejecting disclosed limited agency",
+        "A marketing plan"
+       ],
+       "q": "An Indiana managing broker must develop and enforce:",
+       "why": "IC 25-34.1-10-13(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "In writing at the beginning of the relationship, before any confidential information is given",
+        "At the offer",
+        "At closing"
+       ],
+       "q": "The written office policy must be disclosed:",
+       "why": "IC 25-34.1-10-13(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Makes the payer the client",
+        "Does not create an agency relationship",
+        "Creates limited agency"
+       ],
+       "q": "Paying a licensee's compensation:",
+       "why": "IC 25-34.1-10-13(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The licensee is a Realtor",
+        "The firm is incorporated",
+        "Compensation will be shared with other broker companies representing adverse parties"
+       ],
+       "q": "Parties must be told whether:",
+       "why": "IC 25-34.1-10-13(c)."
+      }
+     ],
+     "h": "Written office policy and compensation (IC 25-34.1-10-13)",
+     "l": [
+      "A MANAGING BROKER shall DEVELOP AND ENFORCE a BROKER COMPANY WRITTEN OFFICE POLICY identifying and describing the agency relationships a licensee may have, and SPECIFICALLY PERMITTING OR REJECTING the practice of DISCLOSED LIMITED AGENCY.",
+      "At the BEGINNING of an agency relationship a licensee shall DISCLOSE THAT WRITTEN OFFICE POLICY IN WRITING, BEFORE the potential client discloses ANY CONFIDENTIAL INFORMATION specific to them.",
+      "Parties must be ADVISED WHETHER COMPENSATION WILL BE SHARED with other broker companies that may represent other parties whose interests are different or even adverse.",
+      "THE PAYMENT OF COMPENSATION DOES NOT CREATE AN AGENCY RELATIONSHIP between a licensee and a seller, landlord, buyer or tenant."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Required on request",
+        "Required in every sale",
+        "Not required, and refusing to disclose carries no liability"
+       ],
+       "q": "In Indiana, disclosure of a psychologically affected property is:",
+       "why": "IC 32-21-6-5, 32-21-6-6."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "A low appraisal",
+        "An individual died on the property",
+        "An expired listing"
+       ],
+       "q": "Which makes a property psychologically affected in Indiana?",
+       "why": "IC 32-21-6-3(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only proven facts",
+        "Only facts within five years",
+        "A reasonable suspicion of the listed facts, not only the facts themselves"
+       ],
+       "q": "The definition also reaches:",
+       "why": "IC 32-21-6-3."
+      }
+     ],
+     "h": "Psychologically affected property (IC 32-21-6)",
+     "l": [
+      "A PSYCHOLOGICALLY AFFECTED PROPERTY is real estate or a dwelling for sale, rent or lease to which one or more facts - OR A REASONABLE SUSPICION of them - apply: that an INDIVIDUAL DIED on the property; or that it was the site of a FELONY under IC 35, CRIMINAL ORGANIZATION ACTIVITY, the DISCHARGE OF A FIREARM INVOLVING A LAW ENFORCEMENT OFFICER on duty, or the ILLEGAL MANUFACTURE OR DISTRIBUTION OF A CONTROLLED SUBSTANCE.",
+      "AN OWNER OR AGENT IS NOT REQUIRED TO DISCLOSE any knowledge of a psychologically affected property to a transferee (IC 32-21-6-5).",
+      "An owner or agent IS NOT LIABLE for refusing to disclose that a property is psychologically affected, or details of it (IC 32-21-6-6).",
+      "A TRANSFEREE here means a purchaser, tenant, lessee or prospective one."
+     ]
+    }
+   ],
+   "summary": "Seventeen items, the biggest block. Indiana's rule is the opposite of most states: you ARE their agent unless something in writing says you are not.",
+   "topic": "in/statutes-rules",
+   "traps": [
+    "Agency is the DEFAULT in Indiana - the written agreement is what removes it.",
+    "Even without agency, three duties survive under the written agreement.",
+    "Limited agency, not dual agency, and consent must be written.",
+    "Psychologically affected property NEVER has to be disclosed here."
+   ],
+   "vocab": [
+    [
+     "Limited agent",
+     "Indiana's dual agent, acting for both sides with written consent."
+    ],
+    [
+     "Adverse material fact",
+     "A known fact about condition that must be disclosed."
+    ],
+    [
+     "Broker company",
+     "Indiana's term for the brokerage firm."
+    ],
+    [
+     "Managing broker",
+     "The broker who runs the company and owns the office policy."
+    ],
+    [
+     "Psychologically affected property",
+     "A property marked by death or crime; no disclosure required."
+    ]
+   ]
+  },
+  "in/statutory": {
+   "blurb": "Advertising, compensation, brokerage agreements, offers, trust money, disclosure.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "examples": [
+    {
+     "k": "Two business days, in writing, deposits returned.",
+     "s": "An offer is accepted on Monday. On Thursday the seller hands over an amended disclosure form revealing a cracked sewer line.",
+     "t": "The late disclosure",
+     "w": [
+      "The amended form was received AFTER acceptance and discloses a defect.",
+      "The buyer has TWO BUSINESS DAYS from receipt to nullify by delivering a WRITTEN rescission.",
+      "On nullifying, the buyer is not liable and gets the deposits back."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Statutory & regulatory requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Before an offer for the sale is accepted",
+        "At closing",
+        "Within 10 days of the offer"
+       ],
+       "q": "The Indiana sales disclosure form must be given to the buyer:",
+       "why": "IC 32-21-5-10(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not more than four dwelling units",
+        "Any residential property",
+        "Single-family homes only"
+       ],
+       "q": "The chapter applies to residential real estate of:",
+       "why": "IC 32-21-5-1(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Three days",
+        "Two business days, by written rescission",
+        "Ten days",
+        "Not at all"
+       ],
+       "q": "A disclosure form received after acceptance that reveals a defect lets the buyer nullify within:",
+       "why": "IC 32-21-5-13(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The inspection is complete",
+        "Both the owner and the prospective buyer have signed the disclosure form",
+        "The appraisal is in"
+       ],
+       "q": "Before closing, an accepted offer is not enforceable against the buyer until:",
+       "why": "IC 32-21-5-10(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Re-sign the original form",
+        "Do nothing further",
+        "Disclose any material change in physical condition, or certify the condition is substantially the same"
+       ],
+       "q": "At or before settlement, the owner must:",
+       "why": "IC 32-21-5-12(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "At closing",
+        "Not later than ten days before closing",
+        "Within 30 days after closing"
+       ],
+       "q": "HOA documents must reach the purchaser:",
+       "why": "IC 32-21-5-8.5(e)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not a warranty, and not a substitute for inspections",
+        "A seller's warranty of condition",
+        "An inspection report"
+       ],
+       "q": "The disclosure form is:",
+       "why": "IC 32-21-5-9."
+      }
+     ],
+     "h": "The sales disclosure form (IC 32-21-5)",
+     "l": [
+      "The chapter applies ONLY to a SALE, EXCHANGE, INSTALLMENT SALES CONTRACT, or LEASE WITH OPTION TO BUY of residential real estate containing NOT MORE THAN FOUR RESIDENTIAL DWELLING UNITS, and NOT to court-ordered transfers, foreclosure sales, transfers by a bankruptcy trustee, eminent domain and similar.",
+      "An OWNER MUST COMPLETE AND SIGN a disclosure form and SUBMIT IT TO A PROSPECTIVE BUYER BEFORE AN OFFER FOR THE SALE IS ACCEPTED (IC 32-21-5-10(a)).",
+      "The form is NOT A WARRANTY by the owner or the owner's agent and MAY NOT BE USED AS A SUBSTITUTE for inspections or warranties (IC 32-21-5-9).",
+      "BEFORE CLOSING, an accepted offer is NOT ENFORCEABLE AGAINST THE BUYER until the OWNER AND THE PROSPECTIVE BUYER HAVE SIGNED the form. AFTER CLOSING, the owner's failure to deliver one DOES NOT BY ITSELF INVALIDATE the transaction, and a buyer may NOT invalidate a transaction because of THEIR OWN failure to sign a form they received.",
+      "The owner is NOT LIABLE for an error, inaccuracy or omission that was NOT WITHIN THEIR ACTUAL KNOWLEDGE or was based on information from a PUBLIC AGENCY or a licensed or specially knowledgeable person whose report the owner reasonably believed correct (IC 32-21-5-11).",
+      "An owner who later finds the form inaccurate does NOT violate the chapter, but AT OR BEFORE SETTLEMENT must DISCLOSE ANY MATERIAL CHANGE in the physical condition, or CERTIFY that the condition is SUBSTANTIALLY THE SAME (IC 32-21-5-12).",
+      "If a buyer receives a disclosure form or AMENDED form AFTER AN OFFER HAS BEEN ACCEPTED and it DISCLOSES A DEFECT, the buyer may NULLIFY THE CONTRACT WITHIN TWO BUSINESS DAYS by DELIVERING A WRITTEN RESCISSION, and is ENTITLED TO A RETURN OF DEPOSITS (IC 32-21-5-13).",
+      "HOMEOWNERS ASSOCIATION property: for transfers after 30 June 2015 the seller must give the purchaser, NOT LATER THAN TEN DAYS BEFORE CLOSING, a disclosure that the property is in an HOA community, a COPY OF THE RECORDED GOVERNING DOCUMENTS, a statement of ASSESSMENTS and their amount, and the NAME AND ADDRESS of a board member, HOA agent or management contractor. An HOA may not charge more than $50 for a statement of unpaid assessments (IC 32-21-5-8.5)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Interest bearing only",
+        "Noninterest bearing only",
+        "Interest or noninterest bearing, with any interest held for the beneficiary"
+       ],
+       "q": "An Indiana trust account may be:",
+       "why": "IC 25-34.1-4-5(a)(1), (b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Yes, up to $1,000",
+        "No; personal and other business funds are prohibited",
+        "Yes, to avoid bank charges"
+       ],
+       "q": "A broker company may deposit its own operating funds in a trust account:",
+       "why": "IC 25-34.1-4-5(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only the total balance",
+        "The amount of funds held for each beneficiary",
+        "Only the firm's share"
+       ],
+       "q": "Trust account records must identify:",
+       "why": "IC 25-34.1-4-5(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Frozen by the bank indefinitely",
+        "Taken into the Commission's custody, which may appoint a successor trustee",
+        "Distributed by the broker"
+       ],
+       "q": "If a broker company's licence is revoked, its trust accounts are:",
+       "why": "IC 25-34.1-4-5(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The firm's commission income",
+        "Earnest money, closing escrow funds and undisbursed sale proceeds",
+        "The broker's rent"
+       ],
+       "q": "Which belongs in the trust account?",
+       "why": "IC 25-34.1-4-5(a)."
+      }
+     ],
+     "h": "Trust accounts and earnest money (IC 25-34.1-4-5)",
+     "l": [
+      "Each BROKER COMPANY shall MAINTAIN ONE OR MORE TRUST ACCOUNTS (INTEREST OR NONINTEREST BEARING); DEPOSIT INTO THEM ALL FUNDS BELONGING TO OTHERS that come into the possession of the company or of any broker whose licence it holds; and CLEARLY IDENTIFY any account that is a trust account.",
+      "The trust accounts shall contain ALL EARNEST MONEY DEPOSITS, FUNDS HELD FOR CLOSING ESCROWS, SALE PROCEEDS NOT YET DISBURSED, and all other funds belonging to others.",
+      "The company SHALL NOT USE ANY TRUST ACCOUNT for the deposit of ANY PERSONAL FUNDS OR OTHER BUSINESS FUNDS, and shall keep a DETAILED RECORD of the funds and any interest accrued IDENTIFYING THE AMOUNT HELD FOR EACH BENEFICIARY. ANY INTEREST EARNED SHALL BE HELD FOR THE BENEFICIARY.",
+      "On the DEATH of a sole proprietor, the TERMINATION of a broker company, or the EXPIRATION, REVOCATION OR SUSPENSION of its licence, THE COMMISSION SHALL TAKE CUSTODY of each trust account and may APPOINT A SUCCESSOR TRUSTEE.",
+      "A managing broker's statutory duties include DEPOSITING ALL ESCROW FUNDS, SECURITY DEPOSITS AND OTHER MONEY RECEIVED into the company's trust account."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Must hold an appraiser certificate",
+        "May only give a broker price opinion",
+        "May do so without appraiser licensure or certification"
+       ],
+       "q": "An Indiana licensed broker appraising real estate for compensation:",
+       "why": "IC 25-34.1-3-8(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "In the purchase agreement",
+        "In the written brokerage agreement, or its absence",
+        "At the first showing"
+       ],
+       "q": "Where does Indiana's decision about agency actually get made?",
+       "why": "IC 25-34.1-10-9.5(a)."
+      }
+     ],
+     "h": "Advertising, agreements and offers",
+     "l": [
+      "The outline lists ADVERTISING, COMMISSIONS AND OTHER COMPENSATIONS, BROKERAGE AGREEMENTS - LISTING AGREEMENTS, EXCLUSIVE BUYER/TENANT AGENCY AGREEMENTS, LEASING, and PROPERTY MANAGEMENT AGREEMENTS - OFFERS TO PURCHASE, EARNEST MONEY AND TRUST ACCOUNTS, APPRAISALS, the SELLER'S RESIDENTIAL REAL ESTATE SALES DISCLOSURE and PSYCHOLOGICALLY AFFECTED PROPERTIES.",
+      "A BROKER LICENSED under the article may APPRAISE REAL ESTATE IN INDIANA FOR COMPENSATION without being a licensed or certified appraiser - the statute says so expressly (IC 25-34.1-3-8(a)).",
+      "A BROKERAGE AGREEMENT is where the written agreement under IC 25-34.1-10-9.5 lives, so the agreement itself decides whether there is agency and which duties apply.",
+      "COMPENSATION never creates agency (IC 25-34.1-10-13(d)), and the parties must be told whether compensation will be SHARED with firms representing adverse parties."
+     ]
+    }
+   ],
+   "summary": "Twelve items on the mechanics - adverts, agreements, offers, earnest money, and the two disclosure statutes consumers actually see.",
+   "topic": "in/statutory",
+   "traps": [
+    "Sales disclosure BEFORE the offer is accepted; two business days to rescind if a defect surfaces late.",
+    "Four units or fewer, and court-ordered and foreclosure transfers are out.",
+    "Trust account interest belongs to the BENEFICIARY, not the firm.",
+    "A broker may appraise for compensation in Indiana without an appraiser licence."
+   ],
+   "vocab": [
+    [
+     "Disclosure form",
+     "The owner's residential sales disclosure under IC 32-21-5."
+    ],
+    [
+     "Defect",
+     "What triggers the two-business-day rescission if revealed late."
+    ],
+    [
+     "Beneficiary",
+     "The person whose money a trust account holds."
+    ],
+    [
+     "Broker company",
+     "The licensed firm that must maintain the trust accounts."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Agency relationships and disclosures, office policy, and licensee conduct.",
+   "counts_on_exam": true,
+   "exam_questions": 17,
+   "key": "in/statutes-rules",
+   "label": "Statutes & rules governing licensees",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Advertising, compensation, brokerage agreements, offers, trust money, disclosure.",
+   "counts_on_exam": true,
+   "exam_questions": 12,
+   "key": "in/statutory",
+   "label": "Statutory & regulatory requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who needs a licence, licence types, education, renewal, transfers and status.",
+   "counts_on_exam": true,
+   "exam_questions": 9,
+   "key": "in/licensing",
+   "label": "Licensing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Records, monies, place of business, branches, assistants, closings, supervision.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "in/office",
+   "label": "Real estate office procedures",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Powers, records, investigations and sanctions, including the recovery fund.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "in/commission",
+   "label": "The Indiana Real Estate Commission",
+   "portion": "georgia"
+  }
+ ]
+}
