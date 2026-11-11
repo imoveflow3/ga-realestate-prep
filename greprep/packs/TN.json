@@ -1,0 +1,2891 @@
+{
+ "abbr": "TN",
+ "bank": [
+  {
+   "answer": 2,
+   "choices": [
+    "A website",
+    "An e-mail signature",
+    "A branded notepad or t-shirt",
+    "A yard sign"
+   ],
+   "concept": "Tennessee scope",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.12(1) excludes promotional items and event sponsorship.",
+   "id": "tn-3185131a",
+   "portion": "georgia",
+   "q": "Which is NOT advertising under the Tennessee rule?",
+   "sub": "tn/advertising|Scope",
+   "subtopic": "Scope",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The firm's entire name as licensed, or its licensed d/b/a name",
+    "The franchise name",
+    "The principal broker's name"
+   ],
+   "concept": "Tennessee scope",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(2).",
+   "id": "tn-d65e3fd6",
+   "portion": "georgia",
+   "q": "'Firm name' in the Tennessee advertising rule means:",
+   "sub": "tn/advertising|Scope",
+   "subtopic": "Scope",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "In letters the same size or larger than the licensee's or team's name",
+    "Anywhere on the advertisement",
+    "In smaller type than the agent's name"
+   ],
+   "concept": "Tennessee principles",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.12(3)(b).",
+   "id": "tn-c280dac9",
+   "portion": "georgia",
+   "q": "In Tennessee advertising, the firm name must appear:",
+   "sub": "tn/advertising|Principles",
+   "subtopic": "Principles",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "The firm name and the firm telephone number as on file with the Commission",
+    "The licensee's mobile number",
+    "The MLS number"
+   ],
+   "concept": "Tennessee principles",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.12(3)(b).",
+   "id": "tn-88b45193",
+   "portion": "georgia",
+   "q": "All Tennessee advertising must list:",
+   "sub": "tn/advertising|Principles",
+   "subtopic": "Principles",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A verbal go-ahead",
+    "Nothing, if the property is listed",
+    "Written authorisation from the owner or the owner's agent"
+   ],
+   "concept": "Tennessee signs",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.12(3)(d).",
+   "id": "tn-72415a45",
+   "portion": "georgia",
+   "q": "Posting a 'For Sale' sign in Tennessee requires:",
+   "sub": "tn/advertising|Signs",
+   "subtopic": "Signs",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Permitted for franchisees",
+    "False, misleading or deceptive advertising",
+    "Permitted online only"
+   ],
+   "concept": "Tennessee franchise",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(3)(f)(1).",
+   "id": "tn-a1110e37",
+   "portion": "georgia",
+   "q": "Advertising that shows only the franchise name is:",
+   "sub": "tn/advertising|Franchise",
+   "subtopic": "Franchise",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The team leader's surname",
+    "Words such as Realty, Company, LLC, Inc. or Associates",
+    "The word Team"
+   ],
+   "concept": "Tennessee teams",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(3)(f)(2).",
+   "id": "tn-b535fcbb",
+   "portion": "georgia",
+   "q": "A Tennessee team name may NOT include:",
+   "sub": "tn/advertising|Teams",
+   "subtopic": "Teams",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "MLS membership alone",
+    "Nothing at all",
+    "Written authorisation from the listing agent or listing broker"
+   ],
+   "concept": "Tennessee cooperation",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(3)(e).",
+   "id": "tn-05a85a63",
+   "portion": "georgia",
+   "q": "Advertising a property listed by another licensee requires:",
+   "sub": "tn/advertising|Cooperation",
+   "subtopic": "Cooperation",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "On the home page only",
+    "In the footer of the contact page",
+    "Conspicuously on each page"
+   ],
+   "concept": "Tennessee internet",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.12(5)(a).",
+   "id": "tn-34589b2f",
+   "portion": "georgia",
+   "q": "On a Tennessee licensee's website, the firm name and telephone number must appear:",
+   "sub": "tn/advertising|Internet",
+   "subtopic": "Internet",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "That some or all of the listings may not belong to the firm whose website is being visited",
+    "The database's name",
+    "The total number of listings"
+   ],
+   "concept": "Tennessee internet",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(5)(b).",
+   "id": "tn-d1a8b20a",
+   "portion": "georgia",
+   "q": "A page showing listings from an outside database must state:",
+   "sub": "tn/advertising|Internet",
+   "subtopic": "Internet",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Every copy anywhere on the internet",
+    "First generation advertising the licensee places, not syndicated copies beyond their control",
+    "Nothing online"
+   ],
+   "concept": "Tennessee internet",
+   "difficulty": 3,
+   "explain": "Rule 1260-02-.12(5)(c).",
+   "id": "tn-0f3f1e8a",
+   "portion": "georgia",
+   "q": "The duty to keep listing information current applies to:",
+   "sub": "tn/advertising|Internet",
+   "subtopic": "Internet",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the franchise logo",
+    "Only the firm name",
+    "The licensee's name, the firm name and the firm telephone number as registered with TREC"
+   ],
+   "concept": "Tennessee franchise",
+   "difficulty": 3,
+   "explain": "Rule 1260-02-.12(4)(a).",
+   "id": "tn-91a8c396",
+   "portion": "georgia",
+   "q": "A franchise-name advertisement for a specific property must show, adjacent to it:",
+   "sub": "tn/advertising|Franchise",
+   "subtopic": "Franchise",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Sponsored and approved by the firm, and offered in writing signed by the licensee",
+    "Approved by TREC",
+    "Worth less than $100"
+   ],
+   "concept": "Tennessee gifts",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.33(1).",
+   "id": "tn-8a7c09a0",
+   "portion": "georgia",
+   "q": "A gift offered as an inducement in Tennessee must be:",
+   "sub": "tn/advertising|Gifts",
+   "subtopic": "Gifts",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Prohibited, except a gift card at a licensee open house or as a closing gift",
+    "Always permitted",
+    "Permitted up to $500"
+   ],
+   "concept": "Tennessee gifts",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.33(2).",
+   "id": "tn-bc78fe29",
+   "portion": "georgia",
+   "q": "Cash rebates and gift cards as transaction incentives are:",
+   "sub": "tn/advertising|Gifts",
+   "subtopic": "Gifts",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "May not be used in advertising to induce business",
+    "May be advertised freely",
+    "Must be reported to TREC"
+   ],
+   "concept": "Tennessee gifts",
+   "difficulty": 3,
+   "explain": "Rule 1260-02-.33(2)(c).",
+   "id": "tn-ad6fd8c4",
+   "portion": "georgia",
+   "q": "A closing-gift gift card:",
+   "sub": "tn/advertising|Gifts",
+   "subtopic": "Gifts",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only the value",
+    "Only the delivery date",
+    "Accurate specifications, fair market value, time and place of delivery, and any requirements"
+   ],
+   "concept": "Tennessee gifts",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.33(1)(b).",
+   "id": "tn-60be9079",
+   "portion": "georgia",
+   "q": "The written gift offer must disclose:",
+   "sub": "tn/advertising|Gifts",
+   "subtopic": "Gifts",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The team leader",
+    "The principal broker",
+    "The franchise"
+   ],
+   "concept": "Tennessee supervision",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.12(3)(b).",
+   "id": "tn-09384724",
+   "portion": "georgia",
+   "q": "Tennessee advertising is under the direct supervision of:",
+   "sub": "tn/advertising|Supervision",
+   "subtopic": "Supervision",
+   "topic": "tn/advertising"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "A universal agent",
+    "A limited agent who functions as an intermediary in negotiations",
+    "A general agent with full fiduciary duty"
+   ],
+   "concept": "Tennessee limited agency",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-402(a).",
+   "id": "tn-ce1f2e35",
+   "portion": "georgia",
+   "q": "A Tennessee licensee acting as an agent is:",
+   "sub": "tn/agency|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Supersede any fiduciary or common law duties owed to the client",
+    "Supplement common law fiduciary duty",
+    "Apply only to buyers"
+   ],
+   "concept": "Tennessee limited agency",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-402(c).",
+   "id": "tn-2a3a2172",
+   "portion": "georgia",
+   "q": "The statutory duties in 62-13-403 and 62-13-404:",
+   "sub": "tn/agency|Limited agency",
+   "subtopic": "Limited agency",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "A dual agent",
+    "A subagent",
+    "A designated agent",
+    "A facilitator"
+   ],
+   "concept": "Tennessee facilitator",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-405; title 62 chapter 13 part 4.",
+   "id": "tn-a6a795fb",
+   "portion": "georgia",
+   "q": "A Tennessee licensee who represents neither party is:",
+   "sub": "tn/agency|Facilitator",
+   "subtopic": "Facilitator",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Survives both a later agency relationship and the closing of the transaction",
+    "Ends at closing",
+    "Ends when an agency agreement is signed"
+   ],
+   "concept": "Tennessee duties to all",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-403(3).",
+   "id": "tn-cb0278ec",
+   "portion": "georgia",
+   "q": "Tennessee's duty of confidentiality to a party:",
+   "sub": "tn/agency|Duties to all",
+   "subtopic": "Duties to all",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any suspicion",
+    "Actual notice or knowledge",
+    "Constructive notice",
+    "A rumour"
+   ],
+   "concept": "Tennessee duties to all",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-403(2).",
+   "id": "tn-eadf2595",
+   "portion": "georgia",
+   "q": "Adverse facts must be disclosed where the licensee has:",
+   "sub": "tn/agency|Duties to all",
+   "subtopic": "Duties to all",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Proactively to every party",
+    "Never",
+    "Only where available through public records and only when a party requests it"
+   ],
+   "concept": "Tennessee duties to all",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-403(5).",
+   "id": "tn-6d4aee05",
+   "portion": "georgia",
+   "q": "Market condition information must be given:",
+   "sub": "tn/agency|Duties to all",
+   "subtopic": "Duties to all",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Oral disclosure",
+    "Prior disclosure and the timely written consent of all parties",
+    "Nothing at all"
+   ],
+   "concept": "Tennessee duties to all",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-403(7)(A).",
+   "id": "tn-98d03084",
+   "portion": "georgia",
+   "q": "Acting for a member of the licensee's immediate family requires:",
+   "sub": "tn/agency|Duties to all",
+   "subtopic": "Duties to all",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Nothing if the provider is licensed",
+    "Timely disclosure of the interest or the possible fee",
+    "Written consent of all parties"
+   ],
+   "concept": "Tennessee duties to all",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-403(7)(B).",
+   "id": "tn-3b31b7ae",
+   "portion": "georgia",
+   "q": "Recommending a service provider who may pay the licensee a referral fee requires:",
+   "sub": "tn/agency|Duties to all",
+   "subtopic": "Duties to all",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Loyalty and obedience",
+    "Scheduling showings, receiving and forwarding offers, answering negotiation questions, and advising on post-execution steps",
+    "Confidentiality and accounting"
+   ],
+   "concept": "Tennessee client duties",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-404(3)(A).",
+   "id": "tn-19fcb864",
+   "portion": "georgia",
+   "q": "Which four client services may be waived in Tennessee?",
+   "sub": "tn/agency|Client duties",
+   "subtopic": "Client duties",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Oral with a witness",
+    "Implied by the listing agreement",
+    "Specific, individual and in writing by the client"
+   ],
+   "concept": "Tennessee client duties",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-404(3)(A).",
+   "id": "tn-17f797e1",
+   "portion": "georgia",
+   "q": "A waiver of those duties must be:",
+   "sub": "tn/agency|Client duties",
+   "subtopic": "Client duties",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "They may not expect or seek that assistance from any other licensee in the transaction",
+    "The commission will be reduced",
+    "TREC must approve the waiver"
+   ],
+   "concept": "Tennessee client duties",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-404(3)(B).",
+   "id": "tn-b8199000",
+   "portion": "georgia",
+   "q": "On waiving a duty, the consumer must be told in writing that:",
+   "sub": "tn/agency|Client duties",
+   "subtopic": "Client duties",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "At closing",
+    "Before the preparation of an offer to purchase",
+    "Within three days of the offer"
+   ],
+   "concept": "Tennessee disclosure",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-405(b).",
+   "id": "tn-961b56f8",
+   "portion": "georgia",
+   "q": "Agency status must be confirmed in writing with an unrepresented buyer:",
+   "sub": "tn/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only at listing",
+    "Only at the offer",
+    "Before execution of a listing agreement or presentation of an offer, whichever comes first"
+   ],
+   "concept": "Tennessee disclosure",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-405(b).",
+   "id": "tn-4b1d3683",
+   "portion": "georgia",
+   "q": "With an unrepresented seller, the written confirmation comes:",
+   "sub": "tn/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The commission rate",
+    "The complaint time limit and the Commission's address and telephone number",
+    "The firm's licence number"
+   ],
+   "concept": "Tennessee disclosure",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-405(b).",
+   "id": "tn-7daaabaf",
+   "portion": "georgia",
+   "q": "The signed receipt for the agency disclosure must include:",
+   "sub": "tn/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Yes, by personal inspection",
+    "Yes, by hiring an inspector",
+    "No; the duty is to disclose known adverse facts"
+   ],
+   "concept": "Tennessee disclosure",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-405(a).",
+   "id": "tn-6eb2b479",
+   "portion": "georgia",
+   "q": "Are Tennessee licensees obliged to discover latent defects?",
+   "sub": "tn/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Wait until an offer is made",
+    "Immediately disclose their role, including any agency relationship",
+    "Say nothing"
+   ],
+   "concept": "Tennessee disclosure",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-405(d).",
+   "id": "tn-85b56295",
+   "portion": "georgia",
+   "q": "On first contact with another licensee in the same transaction, a licensee must:",
+   "sub": "tn/agency|Disclosure",
+   "subtopic": "Disclosure",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Automatically becomes a dual agent",
+    "Must withdraw from the deal",
+    "Is not a dual agent where the designated agent represents only one party to the transaction"
+   ],
+   "concept": "Tennessee designated agency",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-406(a).",
+   "id": "tn-baf4b7f0",
+   "portion": "georgia",
+   "q": "In Tennessee designated agency, the managing broker:",
+   "sub": "tn/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not imputed among clients, the managing broker and the designated agents",
+    "Imputed to the whole firm",
+    "Imputed to the managing broker only"
+   ],
+   "concept": "Tennessee designated agency",
+   "difficulty": 2,
+   "explain": "T.C.A. 62-13-406(c).",
+   "id": "tn-95980327",
+   "portion": "georgia",
+   "q": "Knowledge in a designated agency situation is:",
+   "sub": "tn/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Only by specific appointment",
+    "Only by TREC",
+    "By specific appointment or by written company policy"
+   ],
+   "concept": "Tennessee designated agency",
+   "difficulty": 3,
+   "explain": "T.C.A. 62-13-406(a).",
+   "id": "tn-ca9f348c",
+   "portion": "georgia",
+   "q": "A designated agent may be appointed:",
+   "sub": "tn/agency|Designated agency",
+   "subtopic": "Designated agency",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Should arrange all viewings through the licensee and tell other licensees they are represented",
+    "May work with any agent",
+    "Owes nothing in any event"
+   ],
+   "concept": "Tennessee buyer agreements",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.36.",
+   "id": "tn-af1aa3be",
+   "portion": "georgia",
+   "q": "An exclusive buyer representation agreement must confirm in writing that the buyer:",
+   "sub": "tn/agency|Buyer agreements",
+   "subtopic": "Buyer agreements",
+   "topic": "tn/agency"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "A broker on call",
+    "Any licensed affiliate in charge",
+    "A principal broker devoted to its full time management"
+   ],
+   "concept": "Tennessee supervision",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.01(1).",
+   "id": "tn-6bb156c5",
+   "portion": "georgia",
+   "q": "A Tennessee real estate office must have:",
+   "sub": "tn/broker-affiliate|Supervision",
+   "subtopic": "Supervision",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Allowed for rural offices",
+    "Prohibited",
+    "Allowed with TREC approval"
+   ],
+   "concept": "Tennessee offices",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.05.",
+   "id": "tn-ca7d3e4e",
+   "portion": "georgia",
+   "q": "Using a post office box as a business location is:",
+   "sub": "tn/broker-affiliate|Offices",
+   "subtopic": "Offices",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "The seller directly",
+    "Their principal broker only",
+    "The team leader",
+    "Any licensed broker"
+   ],
+   "concept": "Tennessee compensation",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.41(2).",
+   "id": "tn-09f1c8e8",
+   "portion": "georgia",
+   "q": "A Tennessee team member may be paid by:",
+   "sub": "tn/broker-affiliate|Compensation",
+   "subtopic": "Compensation",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Yes, within the same county",
+    "Yes, with TREC approval",
+    "No"
+   ],
+   "concept": "Tennessee teams",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.41(1).",
+   "id": "tn-68a256a3",
+   "portion": "georgia",
+   "q": "A Tennessee team may maintain an office separate from the firm's location of record:",
+   "sub": "tn/broker-affiliate|Teams",
+   "subtopic": "Teams",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Yes, in writing",
+    "Yes, for team members only",
+    "No; the principal broker remains ultimately responsible"
+   ],
+   "concept": "Tennessee teams",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.41(3).",
+   "id": "tn-0be5d96b",
+   "portion": "georgia",
+   "q": "A principal broker may delegate supervisory responsibility to a team:",
+   "sub": "tn/broker-affiliate|Teams",
+   "subtopic": "Teams",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "When the licensee resigns",
+    "At the end of the month",
+    "When the Commission receives the release form or online submission"
+   ],
+   "concept": "Tennessee affiliation",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.02(1).",
+   "id": "tn-6899a2eb",
+   "portion": "georgia",
+   "q": "A principal broker's responsibility for a departing licensee's future acts ends:",
+   "sub": "tn/broker-affiliate|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Thirty days",
+    "Sixty days",
+    "Ten days"
+   ],
+   "concept": "Tennessee affiliation",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.02(2).",
+   "id": "tn-2650f823",
+   "portion": "georgia",
+   "q": "After release, the licensee must complete the change of affiliation or retirement within:",
+   "sub": "tn/broker-affiliate|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Not engage in any activity requiring a licence",
+    "Keep working for the old firm",
+    "Work for the new firm immediately"
+   ],
+   "concept": "Tennessee affiliation",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.02(2).",
+   "id": "tn-9d276cc2",
+   "portion": "georgia",
+   "q": "Between release and processing, the licensee may:",
+   "sub": "tn/broker-affiliate|Affiliation",
+   "subtopic": "Affiliation",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Never",
+    "Provided that broker conducts no negotiation in Tennessee",
+    "Only through an escrow agent"
+   ],
+   "concept": "Tennessee out of state",
+   "difficulty": 3,
+   "explain": "TREC guidance on the Broker License Act.",
+   "id": "tn-5207139b",
+   "portion": "georgia",
+   "q": "A Tennessee broker may pay a commission to a broker licensed in another state:",
+   "sub": "tn/broker-affiliate|Out of state",
+   "subtopic": "Out of state",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Thirty days",
+    "Five business days",
+    "Ten days"
+   ],
+   "concept": "Tennessee principal broker",
+   "difficulty": 3,
+   "explain": "Rule 1260-02-.38(1).",
+   "id": "tn-db0defba",
+   "portion": "georgia",
+   "q": "TREC must be notified of a principal broker's death or incapacity within:",
+   "sub": "tn/broker-affiliate|Principal broker",
+   "subtopic": "Principal broker",
+   "topic": "tn/broker-affiliate"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Unlicensed activity",
+    "A commission dispute between two licensees",
+    "A licensee's advertising",
+    "Escrow handling"
+   ],
+   "concept": "Tennessee jurisdiction",
+   "difficulty": 1,
+   "explain": "PSI Tennessee state outline; TREC's statutory purpose is public protection.",
+   "id": "tn-067ff473",
+   "portion": "georgia",
+   "q": "Which is OUTSIDE TREC's jurisdiction?",
+   "sub": "tn/commission|Jurisdiction",
+   "subtopic": "Jurisdiction",
+   "topic": "tn/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Entitles the candidate to a licence",
+    "Does not guarantee that a licence will be issued",
+    "Replaces the application"
+   ],
+   "concept": "Tennessee licensure",
+   "difficulty": 2,
+   "explain": "PSI Tennessee bulletin.",
+   "id": "tn-6649caf4",
+   "portion": "georgia",
+   "q": "Passing the Tennessee examination:",
+   "sub": "tn/commission|Licensure",
+   "subtopic": "Licensure",
+   "topic": "tn/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "One year has passed",
+    "Two years have passed from conviction, release, or the end of probation or parole, whichever is later",
+    "The conviction is expunged"
+   ],
+   "concept": "Tennessee discipline",
+   "difficulty": 2,
+   "explain": "Rule 1260-01-.01(4).",
+   "id": "tn-627c1873",
+   "portion": "georgia",
+   "q": "After a conviction for a theft misdemeanour, a person may not be licensed until:",
+   "sub": "tn/commission|Discipline",
+   "subtopic": "Discipline",
+   "topic": "tn/commission"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Any criminal offence",
+    "All felonies and to misdemeanours involving theft of money, services or property",
+    "Felonies only"
+   ],
+   "concept": "Tennessee discipline",
+   "difficulty": 3,
+   "explain": "Rule 1260-01-.01(4).",
+   "id": "tn-18f98633",
+   "portion": "georgia",
+   "q": "The two-year bar applies to:",
+   "sub": "tn/commission|Discipline",
+   "subtopic": "Discipline",
+   "topic": "tn/commission"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "60 hours in total",
+    "90 hours all before the examination",
+    "90 hours - 60 before the examination and a 30-hour Course for New Affiliates before licensure"
+   ],
+   "concept": "Tennessee education",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-303(b)(2); Rule 1260-05-.03.",
+   "id": "tn-98dc18c3",
+   "portion": "georgia",
+   "q": "Tennessee affiliate broker education totals:",
+   "sub": "tn/licensing|Education",
+   "subtopic": "Education",
+   "topic": "tn/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "The Course for New Affiliates",
+    "Contracts and closings",
+    "Real estate principles and fundamentals"
+   ],
+   "concept": "Tennessee education",
+   "difficulty": 2,
+   "explain": "PSI Tennessee bulletin.",
+   "id": "tn-cf4fc745",
+   "portion": "georgia",
+   "q": "Which 60 hours must be completed before sitting the examination?",
+   "sub": "tn/licensing|Education",
+   "subtopic": "Education",
+   "topic": "tn/licensing"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "16 hours, including the 6-hour mandatory TREC Core course",
+    "12 hours",
+    "24 hours",
+    "8 hours"
+   ],
+   "concept": "Tennessee continuing education",
+   "difficulty": 1,
+   "explain": "TREC Instructor Training Manual; Rule 1260-05.",
+   "id": "tn-93a4c961",
+   "portion": "georgia",
+   "q": "Tennessee continuing education is:",
+   "sub": "tn/licensing|Continuing education",
+   "subtopic": "Continuing education",
+   "topic": "tn/licensing"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Optional",
+    "Required, and the principal broker must ensure affiliated licensees carry it at all times",
+    "Required only of principal brokers"
+   ],
+   "concept": "Tennessee e&o",
+   "difficulty": 1,
+   "explain": "PSI Tennessee state outline; TREC newsletter.",
+   "id": "tn-5edb063c",
+   "portion": "georgia",
+   "q": "Errors and omissions insurance in Tennessee is:",
+   "sub": "tn/licensing|E&O",
+   "subtopic": "E&O",
+   "topic": "tn/licensing"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "One year",
+    "Five years",
+    "Three years following consummation of the transaction",
+    "Seven years"
+   ],
+   "concept": "Tennessee retention",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-312(b)(6); Rule 1260-02-.40(1).",
+   "id": "tn-4a39e7b3",
+   "portion": "georgia",
+   "q": "Tennessee transaction records must be kept for:",
+   "sub": "tn/records|Retention",
+   "subtopic": "Retention",
+   "topic": "tn/records"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Promptly, until a contract is signed by all parties",
+    "Only until the first offer is accepted",
+    "At the seller's convenience"
+   ],
+   "concept": "Tennessee offers",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.08.",
+   "id": "tn-6372b2da",
+   "portion": "georgia",
+   "q": "Written offers must be tendered:",
+   "sub": "tn/records|Offers",
+   "subtopic": "Offers",
+   "topic": "tn/records"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Both the purchaser and the seller, promptly",
+    "The purchaser only",
+    "The closing agent only"
+   ],
+   "concept": "Tennessee offers",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.08.",
+   "id": "tn-62fdde39",
+   "portion": "georgia",
+   "q": "On acceptance, true executed copies signed by the seller go to:",
+   "sub": "tn/records|Offers",
+   "subtopic": "Offers",
+   "topic": "tn/records"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Ask the seller to note the rejection on the offer and return it to the offeror or their agent",
+    "Destroy the offer",
+    "File it without comment"
+   ],
+   "concept": "Tennessee offers",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.08.",
+   "id": "tn-3aefd09f",
+   "portion": "georgia",
+   "q": "When an offer is rejected, the Tennessee licensee must:",
+   "sub": "tn/records|Offers",
+   "subtopic": "Offers",
+   "topic": "tn/records"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Promptly upon acceptance of the offer, unless the offer states who will deposit it",
+    "Within three banking days of receipt",
+    "At closing"
+   ],
+   "concept": "Tennessee deposit",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.09(11).",
+   "id": "tn-d2d1fc21",
+   "portion": "georgia",
+   "q": "Tennessee trust money must be deposited:",
+   "sub": "tn/escrow|Deposit",
+   "subtopic": "Deposit",
+   "topic": "tn/escrow"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "21 calendar days, absent a compelling reason",
+    "10 business days",
+    "30 days",
+    "60 days"
+   ],
+   "concept": "Tennessee disbursement",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.09(9).",
+   "id": "tn-0098c99d",
+   "portion": "georgia",
+   "q": "On a written request for disbursement, earnest money must be disbursed, interpleaded or given to an attorney within:",
+   "sub": "tn/escrow|Disbursement",
+   "subtopic": "Disbursement",
+   "topic": "tn/escrow"
+  },
+  {
+   "answer": 2,
+   "choices": [
+    "Mixing two clients' deposits",
+    "Holding funds too long",
+    "Keeping funds belonging to others in the same account as the licensee's own personal or business funds"
+   ],
+   "concept": "Tennessee commingling",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.09(1)(a).",
+   "id": "tn-acc85496",
+   "portion": "georgia",
+   "q": "Commingling in Tennessee means:",
+   "sub": "tn/escrow|Commingling",
+   "subtopic": "Commingling",
+   "topic": "tn/escrow"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "At the closing",
+    "On filing an interpleader action",
+    "On the order of a court",
+    "On the oral agreement of the buyer and seller"
+   ],
+   "concept": "Tennessee disbursement",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.09(7) requires a separate written agreement signed by all parties.",
+   "id": "tn-527f016c",
+   "portion": "georgia",
+   "q": "Which is NOT a permitted disbursement of Tennessee trust money?",
+   "sub": "tn/escrow|Disbursement",
+   "subtopic": "Disbursement",
+   "topic": "tn/escrow"
+  },
+  {
+   "answer": 0,
+   "choices": [
+    "Prohibited",
+    "Allowed with written consent",
+    "Allowed for commercial property"
+   ],
+   "concept": "Tennessee net listing",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.07.",
+   "id": "tn-c3c811a8",
+   "portion": "georgia",
+   "q": "A net listing in Tennessee is:",
+   "sub": "tn/improper|Net listing",
+   "subtopic": "Net listing",
+   "topic": "tn/improper"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Use a corporate nominee",
+    "Identify themselves as a licensee",
+    "Notify TREC in advance"
+   ],
+   "concept": "Tennessee personal interest",
+   "difficulty": 1,
+   "explain": "Rule 1260-02-.11(2).",
+   "id": "tn-97490bac",
+   "portion": "georgia",
+   "q": "A Tennessee licensee buying or selling property for themselves must:",
+   "sub": "tn/improper|Personal interest",
+   "subtopic": "Personal interest",
+   "topic": "tn/improper"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "Nothing, as no listing was signed",
+    "Full prior disclosure of your true position to the owner",
+    "TREC approval"
+   ],
+   "concept": "Tennessee personal interest",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.11(1).",
+   "id": "tn-5e4253c9",
+   "portion": "georgia",
+   "q": "Taking an option on a property the owner approached you to broker requires:",
+   "sub": "tn/improper|Personal interest",
+   "subtopic": "Personal interest",
+   "topic": "tn/improper"
+  },
+  {
+   "answer": 3,
+   "choices": [
+    "New construction",
+    "Vacant land",
+    "All cash sales",
+    "Commercial property, public auctions, residential property of more than four units, and residential leases"
+   ],
+   "concept": "Tennessee exemptions",
+   "difficulty": 1,
+   "explain": "T.C.A. 62-13-405(e).",
+   "id": "tn-ad7a8b51",
+   "portion": "georgia",
+   "q": "Which transactions escape the 62-13-403 to 405 disclosure duties?",
+   "sub": "tn/special|Exemptions",
+   "subtopic": "Exemptions",
+   "topic": "tn/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "1973",
+    "1987",
+    "1995",
+    "2006"
+   ],
+   "concept": "Tennessee timeshare",
+   "difficulty": 2,
+   "explain": "PSI Tennessee bulletin.",
+   "id": "tn-fc576f00",
+   "portion": "georgia",
+   "q": "The Tennessee Timeshare Act dates from:",
+   "sub": "tn/special|Timeshare",
+   "subtopic": "Timeshare",
+   "topic": "tn/special"
+  },
+  {
+   "answer": 1,
+   "choices": [
+    "In the firm's sales escrow account",
+    "In one or more separate escrow or trustee accounts",
+    "By the property owner"
+   ],
+   "concept": "Tennessee property management",
+   "difficulty": 2,
+   "explain": "Rule 1260-02-.09(12).",
+   "id": "tn-c947f460",
+   "portion": "georgia",
+   "q": "Trust money relating to leases must be held:",
+   "sub": "tn/special|Property management",
+   "subtopic": "Property management",
+   "topic": "tn/special"
+  }
+ ],
+ "code": "TN",
+ "diffs": {
+  "national/agency": [
+   "Tennessee's STATUTORY duties SUPERSEDE common law fiduciary duty, and an agent is a LIMITED AGENT acting as an intermediary (T.C.A. 62-13-402).",
+   "Confidentiality attaches BEFORE any agency agreement and SURVIVES CLOSING (62-13-403(3)).",
+   "Market condition information is owed only from PUBLIC RECORDS and only ON REQUEST (62-13-403(5)).",
+   "Four client services - scheduling showings, receiving and forwarding offers, answering negotiation questions, and post-execution advice - may be WAIVED IN WRITING, with a warning that no other licensee will supply them (62-13-404(3)).",
+   "A licensee representing neither party is a FACILITATOR, and under DESIGNATED AGENCY the managing broker is NOT a dual agent (62-13-406)."
+  ],
+  "national/disclosures": [
+   "Agency status is disclosed VERBALLY before any services to an unrepresented party, then CONFIRMED IN WRITING before the offer is prepared (buyer) or before listing or presentation of an offer (seller), with a SIGNED RECEIPT carrying TREC's contact details (62-13-405).",
+   "Licensees need not DISCOVER latent defects; the duty is to disclose KNOWN adverse facts (62-13-405(a)).",
+   "Commercial property, public auctions, residential property of MORE THAN FOUR UNITS and residential leases are OUTSIDE the disclosure duties (62-13-405(e))."
+  ],
+  "national/practice": [
+   "Trust money is deposited PROMPTLY UPON ACCEPTANCE of the offer, and a written disbursement request starts a 21 CALENDAR DAY clock (Rule 1260-02-.09).",
+   "NET LISTINGS are prohibited outright (Rule 1260-02-.07), and a licensee must identify themselves as a licensee when buying or selling for themselves (1260-02-.11).",
+   "Advertising must carry the FIRM NAME and FIRM TELEPHONE NUMBER, with the firm name in type the SAME SIZE OR LARGER than the agent's or team's; the firm name must be on EVERY page of a website (Rule 1260-02-.12).",
+   "CASH rebates and gift cards are banned as incentives, except a gift card at a licensee open house or as a closing gift (Rule 1260-02-.33).",
+   "Education: 90 hours split 60 plus a 30-hour Course for New Affiliates, then 16 hours of continuing education including the 6-hour TREC Core; records are kept THREE YEARS."
+  ]
+ },
+ "name": "Tennessee",
+ "pass": 0.7,
+ "portions": {
+  "georgia": {
+   "blurb": "The Broker License Act of 1973, TREC's Rules of Conduct and the 40-item state outline.",
+   "minutes": 80,
+   "name": "Tennessee law",
+   "scored": 40
+  },
+  "national": {
+   "blurb": "80 questions, 56 correct to pass.",
+   "minutes": 160,
+   "scored": 80
+  }
+ },
+ "regulator": "Tennessee Real Estate Commission",
+ "sources": [
+  {
+   "by": "Tennessee Secretary of State",
+   "name": "Tenn. Comp. R. & Regs. 1260-02, Rules of Conduct",
+   "note": "Supervision, offices, escrow, advertising, personal interest, gifts, teams and record retention.",
+   "url": "https://publications.tnsosfiles.com/rules/1260/1260-02.20250923.pdf"
+  },
+  {
+   "by": "Tennessee General Assembly",
+   "name": "Tennessee Real Estate Broker License Act of 1973, T.C.A. title 62 chapter 13",
+   "note": "Part 4 is the agency law: limited agency, duties to all parties and to clients, written disclosure and designated agents.",
+   "url": "https://www.tn.gov/commerce/regboards/trec/rules-and-laws/laws.html"
+  },
+  {
+   "by": "Tennessee Real Estate Commission",
+   "name": "TREC rules, bulletins and instructor materials",
+   "note": "The 90-hour education split, the 16-hour continuing education requirement and the TREC Core course.",
+   "url": "https://www.tn.gov/commerce/regboards/trec.html"
+  },
+  {
+   "by": "PSI Services and TREC",
+   "name": "Tennessee Candidate Information Bulletin",
+   "note": "National 80 in 160 minutes with 56 correct, State 40 in 80 with 28 correct, and the 40-item state outline.",
+   "url": "https://test-takers.psiexams.com/tnre"
+  }
+ ],
+ "study": {
+  "tn/advertising": {
+   "blurb": "Firm name and number, signs, teams, internet and social media, gifts.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "examples": [
+    {
+     "k": "Teams never outshine the firm, in words or in type size.",
+     "s": "A team wants a yard sign reading 'The Smith Group Realty' with the firm name in small print underneath.",
+     "t": "The team sign",
+     "w": [
+      "'Realty' is one of the words a team may not use - it suggests independence from the firm.",
+      "The FIRM NAME must be in letters the same size or larger than the team's name.",
+      "And the sign needs written authorisation from the owner before it goes up."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Advertising and marketing",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A website",
+        "An e-mail signature",
+        "A branded notepad or t-shirt",
+        "A yard sign"
+       ],
+       "q": "Which is NOT advertising under the Tennessee rule?",
+       "why": "Rule 1260-02-.12(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The firm's entire name as licensed, or its licensed d/b/a name",
+        "The franchise name",
+        "The principal broker's name"
+       ],
+       "q": "'Firm name' means:",
+       "why": "Rule 1260-02-.12(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Exempt as content",
+        "Exempt if unpaid",
+        "Advertising, subject to the rule"
+       ],
+       "q": "A video posted to a streaming platform promoting a listing is:",
+       "why": "Rule 1260-02-.12(1)."
+      }
+     ],
+     "h": "What counts as advertising (1260-02-.12(1), (2))",
+     "l": [
+      "ADVERTISING means anything promoting EITHER A LICENSEE OR THE SALE OR LEASE OF REAL PROPERTY, in any medium - print, radio, television, SIGNS, FLYERS, LETTERHEADS, E-MAIL SIGNATURES, WEBSITES, SOCIAL MEDIA, and VIDEO OR AUDIO transmitted by internet or broadcast streaming.",
+      "It does NOT include promotional items that merely advertise a licensee - HATS, PENS, NOTEPADS, T-SHIRTS, NAME TAGS, BUSINESS CARDS, and the SPONSORSHIP OF CHARITABLE AND COMMUNITY EVENTS.",
+      "FIRM NAME means either the entire name of the firm AS LICENSED with the Commission, or the firm's D/B/A NAME as licensed."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Anywhere on the advertisement",
+        "In letters the same size or larger than the licensee's or team's name",
+        "In smaller type than the agent's name"
+       ],
+       "q": "In Tennessee advertising, the firm name must appear:",
+       "why": "Rule 1260-02-.12(3)(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Written authorisation from the owner or the owner's agent",
+        "A verbal go-ahead",
+        "Nothing, if the property is listed"
+       ],
+       "q": "Posting a 'For Sale' sign requires:",
+       "why": "Rule 1260-02-.12(3)(d)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Permitted for franchisees",
+        "Permitted online only",
+        "False, misleading or deceptive advertising"
+       ],
+       "q": "Advertising using only the franchise name is:",
+       "why": "Rule 1260-02-.12(3)(f)(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The team leader's surname",
+        "The word 'Team'",
+        "Realty, Company, LLC, Inc. or Associates"
+       ],
+       "q": "A team may NOT use, in its name, words such as:",
+       "why": "Rule 1260-02-.12(3)(f)(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Written authorisation from the listing agent or listing broker",
+        "MLS membership alone",
+        "Nothing"
+       ],
+       "q": "Advertising another licensee's listing requires:",
+       "why": "Rule 1260-02-.12(3)(e)."
+      }
+     ],
+     "h": "The general principles (1260-02-.12(3))",
+     "l": [
+      "No licensee may advertise in a manner indicating the licensee is NOT ENGAGED IN THE REAL ESTATE BUSINESS.",
+      "ALL advertising is UNDER THE DIRECT SUPERVISION OF THE PRINCIPAL BROKER and must list the FIRM NAME and the FIRM TELEPHONE NUMBER as on file with the Commission. The FIRM NAME must appear in letters THE SAME SIZE OR LARGER than the name of a licensee or of any team or group.",
+      "Advertising that refers to an individual licensee must list that licensee's NAME AS LICENSED with the Commission.",
+      "No licensee may post a SIGN advertising property without WRITTEN AUTHORISATION FROM THE OWNER or the owner's agent.",
+      "No licensee may advertise property LISTED BY ANOTHER LICENSEE without WRITTEN AUTHORISATION from the listing agent or listing broker.",
+      "No false, misleading or deceptive advertising - which expressly INCLUDES advertising that shows ONLY THE FRANCHISE NAME without the firm name; a TEAM using words like 'Real Estate', 'Realty', 'Company', 'LLC', 'Inc.' or 'Associates' that suggest it operates independently of the firm; and any WEBPAGE LINKING to an unlicensed entity's site where that entity appears to be doing work requiring a licence."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "On the home page only",
+        "In the contact page footer",
+        "Conspicuously on each page"
+       ],
+       "q": "On a licensee's website, the firm name and telephone number must appear:",
+       "why": "Rule 1260-02-.12(5)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "That some or all of the listings may not belong to the firm whose website is being visited",
+        "The database's name",
+        "The number of listings"
+       ],
+       "q": "A page showing listings pulled from an outside database must state:",
+       "why": "Rule 1260-02-.12(5)(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only the franchise logo",
+        "The licensee's name, the firm name and the firm telephone number as registered with TREC",
+        "Only the firm name"
+       ],
+       "q": "A franchise-name advertisement for a specific property must show, adjacent to it:",
+       "why": "Rule 1260-02-.12(4)(a)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Every copy anywhere on the internet",
+        "Nothing online",
+        "First generation advertising the licensee places, not syndicated copies beyond their control"
+       ],
+       "q": "The duty to keep listing information current applies to:",
+       "why": "Rule 1260-02-.12(5)(c)."
+      }
+     ],
+     "h": "Franchise, internet and social media (1260-02-.12(4) to (6))",
+     "l": [
+      "A licensee using a FRANCHISE TRADE NAME or advertising as part of a COOPERATIVE GROUP must clearly and unmistakably show their NAME, FIRM NAME and FIRM TELEPHONE NUMBER (all as registered with TREC) ADJACENT TO any specific properties advertised.",
+      "The same three items must appear on BUSINESS CARDS, CONTRACTS and other transaction documents that use a franchise trade name.",
+      "INTERNET: the firm name and firm telephone number must CONSPICUOUSLY APPEAR ON EACH PAGE of the website. Any page displaying listings from an OUTSIDE DATABASE must state that SOME OR ALL OF THE LISTINGS MAY NOT BELONG to the firm whose site is being visited. Listing information must be KEPT CURRENT AND ACCURATE - a duty that applies to FIRST GENERATION advertising the licensee places, not to syndicated or aggregated copies outside the licensee's control.",
+      "SOCIAL MEDIA means internet-based applications or platforms letting the public create and share content - the rule names Facebook, Twitter, Instagram and LinkedIn - and the advertising rule applies to it."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Sponsored and approved by the firm, and offered in writing signed by the licensee",
+        "Approved by TREC",
+        "Worth less than $100"
+       ],
+       "q": "A gift offered as an inducement in Tennessee must be:",
+       "why": "Rule 1260-02-.33(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prohibited, except a gift card at a licensee open house or as a closing gift",
+        "Always allowed",
+        "Allowed up to $500"
+       ],
+       "q": "Cash rebates and gift cards as transaction incentives are:",
+       "why": "Rule 1260-02-.33(2)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "May be advertised freely",
+        "Must be reported to TREC",
+        "May not be used in advertising to induce business"
+       ],
+       "q": "A closing-gift gift card:",
+       "why": "Rule 1260-02-.33(2)(c)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only the value",
+        "Only the delivery date",
+        "Specifications, fair market value, time and place of delivery, and any requirements"
+       ],
+       "q": "The written gift offer must disclose:",
+       "why": "Rule 1260-02-.33(1)(b)."
+      }
+     ],
+     "h": "Gifts and prizes (1260-02-.33)",
+     "l": [
+      "A licensee may offer a GIFT, PRIZE OR OTHER VALUABLE CONSIDERATION as an inducement to purchase, list or lease real estate ONLY IF the offer is made UNDER THE SPONSORSHIP AND WITH THE APPROVAL OF THE FIRM, and IN WRITING, SIGNED BY THE LICENSEE, disclosing the pertinent details: ACCURATE SPECIFICATIONS of the gift, its FAIR MARKET VALUE, the TIME AND PLACE OF DELIVERY, and ANY REQUIREMENTS the prospect must satisfy.",
+      "A licensee SHALL NOT give or pay CASH REBATES, CASH GIFTS, GIFT CARDS, CASH PRIZES or any similar cash-based incentive in a real estate transaction, with three exceptions: a GIFT CARD AT AN OPEN HOUSE FOR OTHER LICENSEES; a GIFT CARD AS A CLOSING GIFT; and those closing-gift cards may NOT be used in any ADVERTISEMENT to induce business."
+     ]
+    }
+   ],
+   "summary": "Seven items - the largest single block on the Tennessee state paper, and almost all of it is Rule 1260-02-.12. Learn what must appear, and in what size.",
+   "topic": "tn/advertising",
+   "traps": [
+    "Firm name SAME SIZE OR LARGER than the agent's or team's name.",
+    "Firm name AND firm phone number on EVERY page of a website.",
+    "Franchise name alone is deceptive advertising.",
+    "Cash and gift cards are out, except a licensee open house card or a closing gift."
+   ],
+   "vocab": [
+    [
+     "Firm name",
+     "The firm's licensed name or licensed d/b/a."
+    ],
+    [
+     "First generation advertising",
+     "What the licensee places, as opposed to syndicated copies."
+    ],
+    [
+     "Cooperative group",
+     "An advertising group a licensee may belong to."
+    ],
+    [
+     "Team",
+     "Licensees within one firm who hold themselves out together."
+    ]
+   ]
+  },
+  "tn/agency": {
+   "blurb": "Duties to all parties and to clients, disclosure, designated agents, facilitators.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "examples": [
+    {
+     "k": "Verbal first, written before the offer, and get the signed receipt.",
+     "s": "You represent a buyer. A for-sale-by-owner lets you bring your buyer through.",
+     "t": "The unrepresented seller",
+     "w": [
+      "Before providing any services you must VERBALLY disclose that you are the buyer's agent.",
+      "Because the seller is unrepresented, that must be CONFIRMED IN WRITING before you present an offer.",
+      "You take a SIGNED RECEIPT carrying the complaint time limit and TREC's address and telephone number."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Agency and disclosure issues",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "A universal agent",
+        "A general agent with full fiduciary duty",
+        "A limited agent who functions as an intermediary in negotiations"
+       ],
+       "q": "A Tennessee licensee acting as an agent is:",
+       "why": "T.C.A. 62-13-402(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Supersede any fiduciary or common law duties owed to the client",
+        "Supplement common law duty",
+        "Apply only to buyers"
+       ],
+       "q": "The statutory duties in 62-13-403 and 62-13-404:",
+       "why": "T.C.A. 62-13-402(c)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "A dual agent",
+        "A subagent",
+        "A transaction broker",
+        "A facilitator"
+       ],
+       "q": "A Tennessee licensee who represents neither party is:",
+       "why": "T.C.A. 62-13-405; Part 4 generally."
+      }
+     ],
+     "h": "Limited agency (T.C.A. 62-13-402)",
+     "l": [
+      "A licensee engaged as an agent serves as a LIMITED AGENT retained to provide real estate services to a client, and FUNCTIONS AS AN INTERMEDIARY in negotiations unless the parties negotiate directly.",
+      "A licensee owes ALL PARTIES the duties in 62-13-403, and owes the CLIENT the additional duties in 62-13-404.",
+      "The statutory duties SUPERSEDE ANY FIDUCIARY OR COMMON LAW DUTIES owed by a licensee to a client. That is the sentence that makes Tennessee different from the national material.",
+      "A licensee who is NOT an agent for either party is a FACILITATOR, owing only the 62-13-403 duties owed to all parties.",
+      "A client or other party is NOT LIABLE for damages for a licensee's acts or omissions where services are provided as agent, subagent or facilitator, except in defined circumstances (62-13-407)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Ends at closing",
+        "Ends when an agency agreement is signed",
+        "Survives both a later agency relationship and the closing of the transaction"
+       ],
+       "q": "Tennessee's duty of confidentiality to a party:",
+       "why": "T.C.A. 62-13-403(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any suspicion",
+        "Constructive notice",
+        "Actual notice or knowledge"
+       ],
+       "q": "Adverse facts must be disclosed where the licensee has:",
+       "why": "T.C.A. 62-13-403(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Only where available through public records and only when a party requests it",
+        "Proactively to every party",
+        "Never"
+       ],
+       "q": "Market condition information must be given:",
+       "why": "T.C.A. 62-13-403(5)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Oral disclosure",
+        "Prior disclosure and the timely written consent of all parties",
+        "Nothing"
+       ],
+       "q": "Acting for a member of the licensee's immediate family requires:",
+       "why": "T.C.A. 62-13-403(7)(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Timely disclosure of the interest or the possible fee",
+        "Nothing, if the company is licensed",
+        "Written consent of all parties"
+       ],
+       "q": "Recommending a home warranty company that pays the licensee a referral fee requires:",
+       "why": "T.C.A. 62-13-403(7)(B)."
+      }
+     ],
+     "h": "Duties owed to ALL parties (T.C.A. 62-13-403)",
+     "l": [
+      "DILIGENTLY EXERCISE REASONABLE SKILL AND CARE.",
+      "DISCLOSE TO EACH PARTY any ADVERSE FACTS of which the licensee has ACTUAL NOTICE OR KNOWLEDGE.",
+      "MAINTAIN CONFIDENTIALITY of information obtained BEFORE disclosure to all parties of a written agency or subagency agreement. It extends to anything the party would REASONABLY EXPECT to be held in confidence, and it SURVIVES both the later establishment of an agency relationship AND THE CLOSING OF THE TRANSACTION.",
+      "Provide services with HONESTY AND GOOD FAITH.",
+      "Disclose TIMELY AND ACCURATE MARKET CONDITION INFORMATION - but ONLY where it is available through PUBLIC RECORDS and only WHEN REQUESTED by a party.",
+      "TIMELY ACCOUNT for trust fund deposits and all other property received.",
+      "NOT ENGAGE IN SELF-DEALING, nor act for the licensee's IMMEDIATE FAMILY or an entity in which the licensee has a personal interest, without PRIOR DISCLOSURE and the TIMELY WRITTEN CONSENT OF ALL PARTIES.",
+      "NOT RECOMMEND a service provider in which the licensee has an interest or from whom a REFERRAL FEE may be received - other than referrals to other real estate licensees - WITHOUT TIMELY DISCLOSING that interest or the possible fee to the party receiving the referral."
+     ],
+     "p": [
+      "Every licensee providing services in a transaction owes these to EVERY party:"
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Loyalty and obedience",
+        "Confidentiality and accounting",
+        "Scheduling showings, receiving and forwarding offers, answering negotiation questions, and advising on post-execution steps"
+       ],
+       "q": "Which four client services may be waived in Tennessee?",
+       "why": "T.C.A. 62-13-404(3)(A)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Oral with a witness",
+        "Specific, individual and in writing by the client",
+        "Implied by the listing"
+       ],
+       "q": "A waiver must be:",
+       "why": "T.C.A. 62-13-404(3)(A)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "They may not expect or seek that assistance from any other licensee in the transaction",
+        "The fee will be reduced",
+        "TREC must approve"
+       ],
+       "q": "On waiving a duty, the consumer must be told in writing that:",
+       "why": "T.C.A. 62-13-404(3)(B)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "When it is within the scope of the agency agreement",
+        "Always, without limit",
+        "Only if in writing"
+       ],
+       "q": "A client's lawful instruction must be obeyed:",
+       "why": "T.C.A. 62-13-404(1)."
+      }
+     ],
+     "h": "Extra duties owed to a CLIENT (T.C.A. 62-13-404)",
+     "l": [
+      "OBEY ALL LAWFUL INSTRUCTIONS of the client within the scope of the agency agreement.",
+      "BE LOYAL to the client's interests, placing them before all others - EXCEPT where loyalty would violate the licensee's duties to a CUSTOMER under 62-13-402 or to another client in a DUAL AGENCY.",
+      "Unless SPECIFICALLY AND INDIVIDUALLY WAIVED IN WRITING by the client, assist the client by: SCHEDULING ALL PROPERTY SHOWINGS; RECEIVING ALL OFFERS AND COUNTEROFFERS and forwarding them PROMPTLY; ANSWERING QUESTIONS in negotiating a successful purchase agreement within the licensee's expertise; and ADVISING on the forms, procedures and steps needed AFTER EXECUTION for a successful closing.",
+      "On waiver of any of those four, the consumer must be ADVISED IN WRITING that they MAY NOT EXPECT OR SEEK ASSISTANCE FROM ANY OTHER LICENSEE in the transaction for the waived duties."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Before the preparation of an offer to purchase",
+        "At closing",
+        "Within 3 days of the offer"
+       ],
+       "q": "Agency status must be confirmed in writing with an unrepresented buyer:",
+       "why": "T.C.A. 62-13-405(b)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Only at listing",
+        "Only at the offer",
+        "Before execution of a listing agreement or presentation of an offer, whichever comes first"
+       ],
+       "q": "With an unrepresented seller, the written confirmation comes:",
+       "why": "T.C.A. 62-13-405(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The complaint time limit and the Commission's address and telephone number",
+        "The commission rate",
+        "The licensee's licence number only"
+       ],
+       "q": "The signed receipt must include:",
+       "why": "T.C.A. 62-13-405(b)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "No; the duty is to disclose known adverse facts",
+        "Yes, by inspection",
+        "Yes, by hiring an inspector"
+       ],
+       "q": "Are licensees obliged to discover latent defects?",
+       "why": "T.C.A. 62-13-405(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Commercial property, public auctions, residential property of more than four units, and residential leases",
+        "Vacant land",
+        "New construction"
+       ],
+       "q": "The 403 to 405 disclosure duties do NOT apply to:",
+       "why": "T.C.A. 62-13-405(e)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Wait until an offer is made",
+        "Say nothing",
+        "Immediately disclose their role, including any agency relationship"
+       ],
+       "q": "On first contact with another licensee in the deal, a licensee must:",
+       "why": "T.C.A. 62-13-405(d)."
+      }
+     ],
+     "h": "Written disclosure (T.C.A. 62-13-405)",
+     "l": [
+      "If a licensee PERSONALLY ASSISTS a prospective buyer or seller who is NOT REPRESENTED by any licensee, the licensee must VERBALLY DISCLOSE their FACILITATOR, AGENT, SUBAGENT OR DESIGNATED AGENT STATUS BEFORE ANY REAL ESTATE SERVICES ARE PROVIDED.",
+      "That disclosure must be CONFIRMED IN WRITING: with an unrepresented BUYER, BEFORE THE PREPARATION OF AN OFFER TO PURCHASE; with an unrepresented SELLER, BEFORE EXECUTION OF A LISTING AGREEMENT OR PRESENTATION OF AN OFFER, WHICHEVER COMES FIRST.",
+      "The licensee must obtain a SIGNED RECEIPT, which must state that complaints alleging a violation of 62-13-312 must be filed within the statute of limitations in 62-13-313(e), and must give the COMMISSION'S ADDRESS AND TELEPHONE NUMBER.",
+      "The disclosure of status is NOT a substitute for a WRITTEN AGREEMENT establishing an agency relationship under 62-13-406.",
+      "On INITIAL CONTACT with any other licensee in the same prospective transaction, a licensee must IMMEDIATELY DISCLOSE their role, and must IMMEDIATELY NOTIFY other licensees and the parties if that role LATER CHANGES.",
+      "Known ADVERSE FACTS must also be disclosed under the residential property disclosure law in title 66 chapter 5 part 2, but licensees are NOT obliged to DISCOVER OR DISCLOSE LATENT DEFECTS or to advise on matters outside the scope of their licence.",
+      "The disclosure duties in 62-13-403, 62-13-404 and 62-13-405 do NOT apply to COMMERCIAL property, transfers by PUBLIC AUCTION, residential property of MORE THAN FOUR UNITS, or the LEASE OR RENTAL of residential property."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Automatically becomes a dual agent",
+        "Is not a dual agent where the designated agent represents only one party",
+        "Must withdraw"
+       ],
+       "q": "In Tennessee designated agency, the managing broker:",
+       "why": "T.C.A. 62-13-406(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not imputed among clients, the managing broker and the designated agents",
+        "Imputed to the whole firm",
+        "Imputed to the managing broker only"
+       ],
+       "q": "Knowledge in a designated agency situation is:",
+       "why": "T.C.A. 62-13-406(c)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Only by specific appointment",
+        "By specific appointment or by written company policy",
+        "Only by TREC"
+       ],
+       "q": "A designated agent may be appointed:",
+       "why": "T.C.A. 62-13-406(a)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Yes, with the firm's consent",
+        "No; that is the principal broker's responsibility",
+        "Yes, in writing"
+       ],
+       "q": "A team may designate its own members as designated firm agents:",
+       "why": "Rule 1260-02-.41(5)."
+      }
+     ],
+     "h": "Designated agency (T.C.A. 62-13-406)",
+     "l": [
+      "A licensee with a WRITTEN AGREEMENT to represent a party may be APPOINTED AS THE DESIGNATED AND INDIVIDUAL AGENT of that party by the MANAGING BROKER, to the EXCLUSION of all other licensees of that broker.",
+      "A managing broker IS NOT A DUAL AGENT where the appointed designated agent - by specific appointment OR BY WRITTEN COMPANY POLICY - does not represent any other party to the same transaction.",
+      "Designated agency does NOT abolish or diminish the managing broker's CONTRACTUAL RIGHTS to a listing or advertising agreement, nor LESSEN the broker's responsibility to ensure all affiliated licensees follow the law.",
+      "There is NO IMPUTATION OF KNOWLEDGE OR INFORMATION among or between clients, the managing broker and any designated agent in a designated agency situation.",
+      "Licensees who hold themselves out as a TEAM may NOT designate members as DESIGNATED FIRM AGENTS - that remains the PRINCIPAL BROKER'S responsibility (Rule 1260-02-.41(5))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Should arrange all viewings through the licensee and tell other licensees they are represented",
+        "May use any agent they wish",
+        "Owes nothing in any event"
+       ],
+       "q": "An exclusive buyer representation agreement must confirm in writing that the buyer:",
+       "why": "Rule 1260-02-.36."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "The listing commission",
+        "Whether the buyer will owe a commission if they buy without the licensee's assistance",
+        "The lender's fee"
+       ],
+       "q": "It must also state:",
+       "why": "Rule 1260-02-.36(3)."
+      }
+     ],
+     "h": "Exclusive buyer representation (Rule 1260-02-.36)",
+     "p": [
+      "When entering an EXCLUSIVE BUYER REPRESENTATION AGREEMENT a licensee must ADVISE AND CONFIRM IN WRITING that the buyer should arrange ALL VIEWINGS AND INSPECTIONS THROUGH THE LICENSEE and NOT CONTACT OTHER LICENSEES DIRECTLY; that the buyer should IMMEDIATELY TELL ANY OTHER LICENSEE they meet - for example at an open house - that they are represented; and WHETHER THE BUYER WILL OWE A COMMISSION if they buy without the licensee's assistance, through another licensee or directly from an owner."
+     ]
+    }
+   ],
+   "summary": "Six items. Tennessee replaced common law fiduciary duty with a STATUTORY list, and the default is that you represent nobody unless you have a written agreement.",
+   "topic": "tn/agency",
+   "traps": [
+    "Statutory duties SUPERSEDE common law fiduciary duty in Tennessee.",
+    "Confidentiality survives closing - and starts before any agency agreement.",
+    "Market condition information only from PUBLIC RECORDS and only ON REQUEST.",
+    "Four client services are waivable in writing; loyalty and obedience are not.",
+    "Designated agency does not make the managing broker a dual agent."
+   ],
+   "vocab": [
+    [
+     "Limited agent",
+     "What a Tennessee agent is called by statute."
+    ],
+    [
+     "Facilitator",
+     "A licensee representing neither party."
+    ],
+    [
+     "Adverse fact",
+     "A known fact that must be disclosed to every party."
+    ],
+    [
+     "Designated agent",
+     "An individual appointed by the managing broker for one party."
+    ],
+    [
+     "Affiliate broker",
+     "Tennessee's name for a salesperson-level licensee."
+    ]
+   ]
+  },
+  "tn/broker-affiliate": {
+   "blurb": "How compensation is paid, supervision, affiliation changes, listings.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "examples": [],
+   "ga": [],
+   "label": "Broker / affiliate relationships",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "A broker on call",
+        "A principal broker devoted to its full time management",
+        "Any licensed affiliate in charge"
+       ],
+       "q": "A Tennessee office must have:",
+       "why": "Rule 1260-02-.01(1)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Prohibited",
+        "Allowed for rural offices",
+        "Allowed with TREC approval"
+       ],
+       "q": "Using a post office box as a business location is:",
+       "why": "Rule 1260-02-.05."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Yes, in writing",
+        "Yes, for team members only",
+        "No; the principal broker remains ultimately responsible"
+       ],
+       "q": "A principal broker may delegate supervisory responsibility to a team:",
+       "why": "Rule 1260-02-.41(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Thirty days",
+        "Immediately, by telephone only",
+        "Ten days"
+       ],
+       "q": "The Commission must be told of a principal broker's death or incapacity within:",
+       "why": "Rule 1260-02-.38(1)."
+      }
+     ],
+     "h": "Supervision and offices (Rules 1260-02-.01, .03, .05)",
+     "l": [
+      "NO LICENSEE may engage in real estate activity in any office unless there is a PRINCIPAL BROKER DEVOTED TO THE FULL TIME MANAGEMENT of that office.",
+      "A licensee may be engaged only by a principal broker who is ENGAGED PRIMARILY IN THE REAL ESTATE BUSINESS and ACCESSIBLE DURING NORMAL DAYTIME WORKING HOURS.",
+      "USE OF A POST OFFICE BOX AS A BUSINESS LOCATION IS PROHIBITED (Rule 1260-02-.05).",
+      "The PRINCIPAL BROKER REMAINS ULTIMATELY RESPONSIBLE for oversight of all licensees in the firm and may NOT DELEGATE supervisory responsibilities to a team (Rule 1260-02-.41(3)).",
+      "The Commission must be NOTIFIED WITHIN TEN DAYS of the DEATH, RESIGNATION, TERMINATION OR INCAPACITY of a principal broker (Rule 1260-02-.38)."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The seller directly",
+        "The team leader",
+        "Their principal broker only",
+        "Any licensed broker"
+       ],
+       "q": "A Tennessee team member may be paid by:",
+       "why": "Rule 1260-02-.41(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Yes, within the same county",
+        "No",
+        "Yes, with TREC approval"
+       ],
+       "q": "A team may maintain a separate office from the firm's location of record:",
+       "why": "Rule 1260-02-.41(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Never",
+        "Provided that broker conducts no negotiation in Tennessee",
+        "Only through an escrow agent"
+       ],
+       "q": "A Tennessee broker may pay a commission to an out-of-state broker:",
+       "why": "TREC guidance on T.C.A. title 62 chapter 13."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Pay it over to the principal broker immediately upon receipt",
+        "Deposit it personally within 3 days",
+        "Hold it until closing"
+       ],
+       "q": "An affiliate broker who receives earnest money must:",
+       "why": "Rule 1260-02-.09(3)."
+      }
+     ],
+     "h": "Compensation",
+     "l": [
+      "Licensees who hold themselves out as a TEAM, GROUP OR SIMILAR ENTITY within a firm SHALL NOT RECEIVE COMPENSATION FROM ANYONE OTHER THAN THEIR PRINCIPAL BROKER for acts requiring a licence (Rule 1260-02-.41(2)).",
+      "Such licensees must be AFFILIATED WITH THE SAME LICENSED FIRM and may NOT ESTABLISH A SEPARATE PHYSICAL LOCATION from the firm's location of record, and may NOT represent themselves as a SEPARATE ENTITY from the firm (Rule 1260-02-.41(1), (4)).",
+      "A Tennessee broker may pay a commission to a BROKER LICENSED IN ANOTHER STATE provided that non-resident broker DOES NOT CONDUCT ANY NEGOTIATION IN TENNESSEE - an out-of-state licensee cannot 'partner' with a Tennessee licensee to do work that requires a Tennessee licence.",
+      "An AFFILIATED BROKER must PAY OVER TO THE PRINCIPAL BROKER all trust money IMMEDIATELY UPON RECEIPT (Rule 1260-02-.09(3)).",
+      "Rule 1260-02-.39 governs COMMISSIONS EARNED BY AFFILIATED LICENSEES."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "When the licensee resigns",
+        "When the Commission receives the release form or online submission",
+        "At the end of the month"
+       ],
+       "q": "A Tennessee principal broker's responsibility for a departing licensee's future acts ends:",
+       "why": "Rule 1260-02-.02(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Thirty days",
+        "Sixty days",
+        "Ten days"
+       ],
+       "q": "After release, the licensee must complete the change of affiliation or retirement within:",
+       "why": "Rule 1260-02-.02(2)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Not engage in any activity requiring a licence",
+        "Continue working for the old firm",
+        "Work under the new firm immediately"
+       ],
+       "q": "Between release and processing, the licensee may:",
+       "why": "Rule 1260-02-.02(2)."
+      }
+     ],
+     "h": "Change of affiliation (Rule 1260-02-.02)",
+     "l": [
+      "To terminate affiliation, the licensee or principal broker submits a completed TRANSFER, RELEASE AND CHANGE OF STATUS FORM (TREC FORM 1) or the required information ONLINE.",
+      "The principal broker's supervisory responsibility for the licensee's FUTURE ACTS TERMINATES UPON THE COMMISSION'S RECEIPT of the release form or online submission - not when the licensee walks out.",
+      "The principal broker must RETAIN A COPY of the executed form or confirmation of online submission.",
+      "WITHIN TEN DAYS after the date of release the licensee must complete the administrative steps for either CHANGE OF AFFILIATION OR RETIREMENT, and the licensee SHALL NOT ENGAGE IN ANY LICENSED ACTIVITY until the change of affiliation is RECEIVED AND PROCESSED by the Commission.",
+      "Failure to comply MAY RESULT IN DISCIPLINARY ACTION."
+     ]
+    }
+   ],
+   "summary": "Five items on who pays whom and who answers for what. One rule carries most of it: an affiliate broker is paid by, and supervised by, the principal broker.",
+   "topic": "tn/broker-affiliate",
+   "traps": [
+    "Paid only by the principal broker - teams included.",
+    "Supervision ends on the COMMISSION'S RECEIPT of the release, not on resignation.",
+    "No post office box as a business location."
+   ],
+   "vocab": [
+    [
+     "Principal broker",
+     "The broker who manages an office full time and supervises its licensees."
+    ],
+    [
+     "Affiliate broker",
+     "A licensee engaged by a principal broker."
+    ],
+    [
+     "TREC Form 1",
+     "The Transfer, Release and Change of Status form."
+    ],
+    [
+     "Team",
+     "Licensees of one firm holding themselves out together."
+    ]
+   ]
+  },
+  "tn/commission": {
+   "blurb": "What TREC does, what it cannot touch, complaints and discipline.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Duties and powers of the Commission",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Unlicensed activity",
+        "A licensee's advertising",
+        "A commission dispute between two licensees",
+        "Escrow handling"
+       ],
+       "q": "Which is OUTSIDE TREC's jurisdiction?",
+       "why": "PSI Tennessee state outline; TREC's statutory purpose."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Entitles the candidate to a licence",
+        "Does not guarantee a licence will be issued",
+        "Replaces the application"
+       ],
+       "q": "Passing the examination:",
+       "why": "PSI Tennessee bulletin."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Civil penalties, as well as suspension and revocation",
+        "Awarding damages to consumers",
+        "Ordering a sale to complete"
+       ],
+       "q": "TREC's sanctions include:",
+       "why": "Rule 1260-02-.32."
+      }
+     ],
+     "h": "Purpose and jurisdiction",
+     "l": [
+      "The TENNESSEE REAL ESTATE COMMISSION administers the TENNESSEE REAL ESTATE BROKER LICENSE ACT OF 1973 and its RULES, together with the TENNESSEE TIMESHARE ACT OF 1987. Its purpose is PUBLIC PROTECTION, not resolving private disputes.",
+      "The outline flags PERSONS AND DISPUTES NOT WITHIN COMMISSION JURISDICTION: TREC does NOT decide COMMISSION DISPUTES BETWEEN LICENSEES, does NOT award DAMAGES to consumers, and has NO AUTHORITY over people who are NOT LICENSEES except for UNLICENSED ACTIVITY.",
+      "The Commission issues rules under T.C.A. 62-13-203, investigates COMPLAINTS, holds HEARINGS, and imposes DISCIPLINARY ACTION including CIVIL PENALTIES (Rule 1260-02-.32).",
+      "Successful completion of the examination DOES NOT GUARANTEE the issuance of a licence - TREC reviews the applicant's qualifications."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "The commission split",
+        "The firm's licence number",
+        "The complaint time limit and TREC's address and telephone number"
+       ],
+       "q": "The agency disclosure receipt must tell the consumer:",
+       "why": "T.C.A. 62-13-405(b)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "One year has passed",
+        "Two years have passed from conviction, release or the end of probation or parole, whichever is later",
+        "The conviction is expunged"
+       ],
+       "q": "After a conviction for a theft misdemeanour, a person may not be licensed until:",
+       "why": "Rule 1260-01-.01(4)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Any criminal offence",
+        "Felonies only",
+        "All felonies and misdemeanours involving theft of money, services or property"
+       ],
+       "q": "The two-year bar applies to:",
+       "why": "Rule 1260-01-.01(4)."
+      }
+     ],
+     "h": "Complaints and discipline",
+     "l": [
+      "A complaint alleging a violation of T.C.A. 62-13-312 - the grounds for discipline - must be FILED WITHIN THE APPLICABLE STATUTE OF LIMITATIONS set out in 62-13-313(e). That is why the agency disclosure receipt must tell consumers about it.",
+      "The signed receipt for the agency disclosure must also carry the COMMISSION'S ADDRESS AND TELEPHONE NUMBER, so a consumer knows where to complain (62-13-405(b)).",
+      "Rule 1260-01-.01(4) bars examination or licensure until TWO YEARS have passed from the expiry of probation or parole, from conviction, or from release from incarceration, WHICHEVER IS LATER - applying to ALL FELONIES and to MISDEMEANOURS INVOLVING THEFT of money, services or property.",
+      "Records of a licensee are OPEN TO THE COMMISSION, and the outline names COMMISSION ACCESS TO RECORDS as its own topic."
+     ]
+    }
+   ],
+   "summary": "Four items on the regulator. Know what TREC covers, and the things it expressly does not.",
+   "topic": "tn/commission",
+   "traps": [
+    "TREC protects the public; it does not referee commission splits or award damages.",
+    "Two years from the LATER of conviction, release, or the end of probation or parole."
+   ],
+   "vocab": [
+    [
+     "TREC",
+     "The Tennessee Real Estate Commission."
+    ],
+    [
+     "Civil penalty",
+     "A monetary sanction TREC may impose."
+    ],
+    [
+     "62-13-312",
+     "The statutory grounds for discipline."
+    ]
+   ]
+  },
+  "tn/escrow": {
+   "blurb": "Deposit timing, permitted disbursements, commingling, interest.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [
+    {
+     "k": "Signed by everyone, a court order, or interplead - within 21 days.",
+     "s": "A buyer sends a written request for the earnest money back after a failed inspection, and the seller objects.",
+     "t": "The deal falls apart",
+     "w": [
+      "You cannot simply pay it over on one party's word - a disbursement on agreement needs a SEPARATE WRITING SIGNED BY ALL PARTIES.",
+      "Absent a compelling reason you have 21 CALENDAR DAYS from the written request to disburse, interplead, or hand the funds to an attorney to interplead.",
+      "A court order is the other clean route out."
+     ]
+    }
+   ],
+   "ga": [],
+   "label": "Trust and escrow funds",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "Mixing two clients' deposits",
+        "Keeping funds belonging to others in the same account as the licensee's own personal or business funds",
+        "Holding funds too long"
+       ],
+       "q": "Commingling in Tennessee means:",
+       "why": "Rule 1260-02-.09(1)(a)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Pay it over to the principal broker immediately upon receipt",
+        "Deposit it within 3 banking days",
+        "Hold it until acceptance"
+       ],
+       "q": "An affiliate broker who receives trust money must:",
+       "why": "Rule 1260-02-.09(3)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Remains liable regardless",
+        "Must still open an account",
+        "Is relieved of responsibility once that agent receives the funds"
+       ],
+       "q": "Where the contract names another escrow agent, the principal broker:",
+       "why": "Rule 1260-02-.09(6)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "In one or more separate escrow or trustee accounts",
+        "In the sales escrow account",
+        "By the property owner"
+       ],
+       "q": "Trust money relating to leases must be held:",
+       "why": "Rule 1260-02-.09(12)."
+      }
+     ],
+     "h": "The account (Rule 1260-02-.09(1) to (6))",
+     "l": [
+      "COMMINGLING is defined as a licensee MAINTAINING FUNDS BELONGING TO OTHERS IN THE SAME BANK ACCOUNT that contains the licensee's personal or business funds. It is EXPRESSLY PROHIBITED (subsection (13)).",
+      "TRUST MONEY is money belonging to others received by a licensee acting as AGENT OR FACILITATOR, or any money held by a licensee acting as TEMPORARY CUSTODIAN of others' funds.",
+      "Each PRINCIPAL BROKER shall maintain a SEPARATE ESCROW OR TRUSTEE ACCOUNT for trust money received in a fiduciary capacity.",
+      "An AFFILIATED BROKER shall PAY OVER TO THE PRINCIPAL BROKER all trust money IMMEDIATELY UPON RECEIPT.",
+      "Principal brokers are RESPONSIBLE AT ALL TIMES for trust money accepted by them or their affiliated brokers, in accordance with the terms of the contract.",
+      "Where a contract authorises the principal broker to hold trust money, the broker must SPECIFY IN THE CONTRACT the TERMS AND CONDITIONS FOR DISBURSEMENT and the NAME AND ADDRESS OF THE PERSON OR FIRM who will actually hold it.",
+      "Where the contract authorises SOMEONE ELSE to hold the money, the principal broker is RELIEVED OF RESPONSIBILITY once that escrow agent RECEIVES the funds.",
+      "All trust money relating to the LEASE of property must be held in ONE OR MORE SEPARATE escrow or trustee accounts (subsection (12))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Within 3 banking days of receipt",
+        "At closing",
+        "Promptly upon acceptance of the offer, unless the offer says who will deposit it and when"
+       ],
+       "q": "Tennessee trust money must be deposited:",
+       "why": "Rule 1260-02-.09(11)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "10 business days",
+        "30 days",
+        "60 days",
+        "21 calendar days, absent a compelling reason"
+       ],
+       "q": "On a written request for disbursement, earnest money must be disbursed, interpleaded or turned over to an attorney within:",
+       "why": "Rule 1260-02-.09(9)."
+      },
+      {
+       "answer": 3,
+       "choices": [
+        "At closing",
+        "On filing an interpleader action",
+        "On a court order",
+        "On the oral agreement of the buyer and seller"
+       ],
+       "q": "Which is NOT a permitted disbursement?",
+       "why": "Rule 1260-02-.09(7) requires a signed separate written agreement."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "May not be accepted unless the offer provides otherwise",
+        "Is always acceptable",
+        "Is acceptable up to 30 days"
+       ],
+       "q": "A postdated cheque for trust money:",
+       "why": "Rule 1260-02-.09(10)."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Neither required nor prohibited, but conditions apply if used",
+        "Required",
+        "Prohibited"
+       ],
+       "q": "Interest-bearing escrow accounts in Tennessee are:",
+       "why": "Rule 1260-02-.09(14)."
+      }
+     ],
+     "h": "Deposit and disbursement (Rule 1260-02-.09(7) to (11))",
+     "l": [
+      "TRUST MONEY SHALL BE DEPOSITED PROMPTLY UPON ACCEPTANCE OF THE OFFER, unless the offer contains a statement such as 'Trust money to be deposited by:'.",
+      "NO POSTDATED CHECK may be accepted for payment of trust money UNLESS OTHERWISE PROVIDED IN THE OFFER.",
+      "A principal broker may PROPERLY DISBURSE trust money in SEVEN ways: on a REASONABLE INTERPRETATION OF THE CONTRACT; on a SEPARATE WRITTEN AGREEMENT SIGNED BY ALL PARTIES having an interest; AT THE CLOSING; on the REJECTION of an offer; on the WITHDRAWAL of an offer not yet accepted; on FILING AN INTERPLEADER ACTION; or on the ORDER OF A COURT.",
+      "Trust money shall be disbursed IN A PROPER MANNER WITHOUT UNREASONABLE DELAY.",
+      "Absent a COMPELLING REASON, earnest money shall be DISBURSED, INTERPLEADED, OR TURNED OVER TO AN ATTORNEY with instructions to interplead WITHIN 21 CALENDAR DAYS from the date of receipt of a WRITTEN REQUEST FOR DISBURSEMENT.",
+      "INTEREST-BEARING escrow accounts are NEITHER REQUIRED NOR PROHIBITED by the Commission; if used, the licensee must DISCLOSE TO THE PAYOR AT THE TIME OF CONTRACT EXECUTION, among the other conditions the rule sets."
+     ]
+    }
+   ],
+   "summary": "Four items. Tennessee ties the deposit to ACCEPTANCE, gives seven lawful ways out of the account, and puts a 21-day clock on a disbursement request.",
+   "topic": "tn/escrow",
+   "traps": [
+    "Deposit on ACCEPTANCE, not on receipt - unless the offer says otherwise.",
+    "21 CALENDAR days from a written request for disbursement.",
+    "Separate accounts for lease money."
+   ],
+   "vocab": [
+    [
+     "Trust money",
+     "Money belonging to others held by a licensee."
+    ],
+    [
+     "Commingling",
+     "Mixing trust money with the licensee's own funds."
+    ],
+    [
+     "Interpleader",
+     "A court action to let a judge decide who gets the deposit."
+    ],
+    [
+     "Temporary custodian",
+     "A licensee holding others' funds without agency."
+    ]
+   ]
+  },
+  "tn/improper": {
+   "blurb": "Net listings, discrimination and other misconduct.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Other improper activities",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Prohibited",
+        "Allowed with written consent",
+        "Allowed for commercial property"
+       ],
+       "q": "A net listing in Tennessee is:",
+       "why": "Rule 1260-02-.07."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Use a corporate nominee",
+        "Notify TREC in advance",
+        "Identify themselves as a licensee"
+       ],
+       "q": "A licensee buying or selling property for themselves must:",
+       "why": "Rule 1260-02-.11(2)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Nothing, as the listing was never signed",
+        "Full prior disclosure of your true position",
+        "TREC approval"
+       ],
+       "q": "Taking an option on a property the owner approached you to broker requires:",
+       "why": "Rule 1260-02-.11(1)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "Oral notice",
+        "Nothing",
+        "Prior disclosure and the timely written consent of all parties"
+       ],
+       "q": "Acting for a company in which the licensee has an interest requires:",
+       "why": "T.C.A. 62-13-403(7)(A)."
+      }
+     ],
+     "h": "Net listings and personal interest",
+     "l": [
+      "NO broker or affiliate broker shall ACCEPT OR ENTER A LISTING BASED ON A 'NET PRICE' - that is, a price EXCLUDING the customary commission and expenses associated with the sale (Rule 1260-02-.07). Net listings are simply prohibited.",
+      "PERSONAL INTEREST: no licensee may, directly or through a third party, PURCHASE FOR HIMSELF or acquire any interest in or OPTION TO PURCHASE property listed with him or his company, or property the owner has approached him to broker, WITHOUT FIRST MAKING A FULL DISCLOSURE OF HIS TRUE POSITION to the owner or to any prospective purchaser he has acted for.",
+      "After acquiring such an interest, the licensee must MAKE A FULL DISCLOSURE OF HIS TRUE POSITION to prospective purchasers who tender offers.",
+      "ALL LICENSEES SHALL IDENTIFY THEMSELVES AS A LICENSEE when buying or selling property FOR THEMSELVES (Rule 1260-02-.11(2)).",
+      "The statutory duty to all parties forbids SELF-DEALING, or acting for IMMEDIATE FAMILY or an entity in which the licensee has an interest, without prior disclosure and the TIMELY WRITTEN CONSENT OF ALL PARTIES (T.C.A. 62-13-403(7)(A))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "T.C.A. title 62, chapter 13",
+        "The TREC rules",
+        "T.C.A. title 66, chapter 5, part 2"
+       ],
+       "q": "Tennessee's residential property disclosure law sits in:",
+       "why": "T.C.A. 62-13-405(a); TREC Core topics."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "An exclusive right to sell",
+        "A net listing",
+        "An open listing"
+       ],
+       "q": "The clearest example of an improper listing agreement is:",
+       "why": "Rule 1260-02-.07."
+      }
+     ],
+     "h": "Discrimination and other misconduct",
+     "l": [
+      "The outline lists DISCRIMINATION under 'Other Improper Activities and Consumer Protection'. Federal fair housing applies, and the TREC CORE course covers fair housing within its law and ethics content.",
+      "Known ADVERSE FACTS must be disclosed under the residential property disclosure law in T.C.A. title 66 chapter 5 part 2, and the TREC Core topics name the DISCLOSURE FORM at T.C.A. 66-5-210.",
+      "IMPROPER LISTING AGREEMENTS are a named topic, of which the NET LISTING is the headline example.",
+      "The advertising rule's ban on FALSE, MISLEADING OR DECEPTIVE advertising and the gifts rule's ban on CASH INCENTIVES both sit under consumer protection."
+     ]
+    }
+   ],
+   "summary": "Three items. Net listings, discrimination, and the self-dealing rule that catches brokers buying for themselves.",
+   "topic": "tn/improper",
+   "traps": [
+    "Net listings are banned outright, not merely discouraged.",
+    "You must say you are a licensee whenever you buy or sell for yourself."
+   ],
+   "vocab": [
+    [
+     "Net listing",
+     "A listing priced net of commission and expenses. Prohibited."
+    ],
+    [
+     "Personal interest",
+     "The rule requiring disclosure of a licensee's own stake."
+    ],
+    [
+     "Self-dealing",
+     "Acting for one's own benefit without disclosure and consent."
+    ]
+   ]
+  },
+  "tn/licensing": {
+   "blurb": "Education, qualifications, change of status, firm licences, renewal, E&O.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Licensing requirements",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "90 hours - 60 before the examination and a 30-hour Course for New Affiliates before licensure",
+        "60 hours in total",
+        "90 hours all before the exam"
+       ],
+       "q": "Tennessee affiliate broker education totals:",
+       "why": "T.C.A. 62-13-303(b)(2); Rule 1260-05-.03."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Real estate principles and fundamentals",
+        "The Course for New Affiliates",
+        "Contracts and closings"
+       ],
+       "q": "Which 60 hours must be done before sitting the examination?",
+       "why": "PSI Tennessee bulletin."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "One year",
+        "Six months",
+        "Two years"
+       ],
+       "q": "After passing both portions, a candidate must apply within:",
+       "why": "PSI Tennessee bulletin."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Indefinitely",
+        "Two retakes of the failed section or one year, whichever comes first",
+        "Three attempts"
+       ],
+       "q": "A pass on one section stays valid for:",
+       "why": "TREC PSI exam information."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "12 months of licensure",
+        "No experience",
+        "An active licence for at least 36 months, or a real estate degree plus 24 months"
+       ],
+       "q": "A broker candidate licensed after 12 May 1988 needs:",
+       "why": "PSI Tennessee bulletin."
+      }
+     ],
+     "h": "Becoming an affiliate broker",
+     "l": [
+      "An applicant must be AT LEAST 18 YEARS OF AGE.",
+      "An affiliate broker must complete A TOTAL OF 90 HOURS of real estate education. SIXTY HOURS must cover REAL ESTATE PRINCIPLES / FUNDAMENTALS and must be done to QUALIFY TO TAKE THE EXAMINATION. The remaining 30-HOUR 'COURSE FOR NEW AFFILIATES' must be completed BEFORE A LICENCE WILL BE ISSUED (T.C.A. 62-13-303(b)(2); Rule 1260-05-.03).",
+      "After passing ALL portions, the candidate must APPLY FOR THE LICENCE WITHIN ONE YEAR of passing.",
+      "A pass on ONE SECTION is valid for TWO RETAKES of the failed section OR ONE YEAR, whichever comes first.",
+      "BROKER candidates need experience: licensed as an affiliate broker AFTER 12 May 1988, an ACTIVE licence for at least 36 MONTHS, or a BACCALAUREATE DEGREE WITH A MAJOR IN REAL ESTATE for at least 24 MONTHS."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 1,
+       "choices": [
+        "12 hours",
+        "16 hours, including the 6-hour mandatory TREC Core course",
+        "24 hours",
+        "8 hours"
+       ],
+       "q": "Tennessee continuing education is:",
+       "why": "TREC Instructor Training Manual; Rule 1260-05."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "Ten",
+        "Six",
+        "Sixteen",
+        "None"
+       ],
+       "q": "How many of the 16 hours are elective?",
+       "why": "TREC Instructor Training Manual."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Are exempt",
+        "Must also complete 16 hours of continuing education for renewal",
+        "Need only the Core course"
+       ],
+       "q": "Out-of-state Tennessee licensees:",
+       "why": "TREC Core course topics page."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Optional",
+        "Required, and the principal broker must ensure affiliates carry it at all times",
+        "Required only of principal brokers"
+       ],
+       "q": "Errors and omissions insurance in Tennessee is:",
+       "why": "PSI Tennessee state outline; TREC newsletter."
+      }
+     ],
+     "h": "Keeping the licence",
+     "l": [
+      "CONTINUING EDUCATION: a licensee must complete 16 HOURS, of which SIX HOURS is the mandatory TREC CORE COURSE and TEN HOURS is approved ELECTIVE education (TREC Instructor Training Manual; Rule 1260-05). OUT-OF-STATE licensees must also complete the 16 hours for renewal.",
+      "The TREC CORE course covers, among other topics, LICENSING AND PENALTY FEES, AGENCY, ADVERTISING (Rule 1260-02-.12; T.C.A. 62-13-310; Rule 1260-02-.33), CONTRACTS, PROPERTY MANAGEMENT, the DISCLOSURE FORM (T.C.A. 66-5-210) and PRINCIPAL BROKER SUPERVISION.",
+      "ERRORS AND OMISSIONS INSURANCE is required of licensees, and PRINCIPAL BROKERS must AT ALL TIMES ENSURE THEIR AFFILIATED LICENSEES HOLD E&O INSURANCE as required by law - the outline lists it under licensing requirements.",
+      "The outline also covers CHANGE OF STATUS, NAME OR ADDRESS, FIRM LICENCES AND LICENCE DISPLAY, and RENEWAL OF LICENCE."
+     ]
+    }
+   ],
+   "summary": "Four items. The numbers: 18 years old, 90 hours in two parts, 16 hours of continuing education with a 6-hour TREC Core, and errors and omissions insurance.",
+   "topic": "tn/licensing",
+   "traps": [
+    "90 hours split 60 before the exam and 30 before the licence.",
+    "16 CE hours = 6 TREC Core + 10 elective.",
+    "Apply within ONE YEAR of passing, and a single-section pass lapses after two retakes or a year."
+   ],
+   "vocab": [
+    [
+     "Course for New Affiliates",
+     "The 30-hour course required before a licence issues."
+    ],
+    [
+     "TREC Core",
+     "The mandatory 6-hour continuing education course."
+    ],
+    [
+     "E&O insurance",
+     "Errors and omissions cover required of licensees."
+    ],
+    [
+     "CORE system",
+     "Tennessee's online licensing portal at core.tn.gov."
+    ]
+   ]
+  },
+  "tn/records": {
+   "blurb": "Who keeps what, for how long, handling offers and leaving copies.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "examples": [],
+   "ga": [],
+   "label": "Documents and record keeping",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 0,
+       "choices": [
+        "Three years following consummation of the transaction",
+        "One year",
+        "Five years",
+        "Seven years"
+       ],
+       "q": "Tennessee transaction records must be kept for:",
+       "why": "T.C.A. 62-13-312(b)(6); Rule 1260-02-.40(1)."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Prohibited",
+        "Permitted, if readily accessible, organised, backed up and readable",
+        "Permitted only with TREC approval"
+       ],
+       "q": "Electronic records are:",
+       "why": "Rule 1260-02-.40."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The principal broker",
+        "The licensee",
+        "TREC"
+       ],
+       "q": "Who must retain the executed release form when a licensee transfers?",
+       "why": "Rule 1260-02-.02(1)."
+      }
+     ],
+     "h": "Retention (Rule 1260-02-.40)",
+     "l": [
+      "Under T.C.A. 62-13-312(b)(6), licensees must PRESERVE RECORDS relating to any real estate transaction FOR THREE YEARS FOLLOWING THE CONSUMMATION of the transaction.",
+      "Records may be kept ELECTRONICALLY, but all documents required to be retained must be READILY ACCESSIBLE IN AN ORGANISED manner, on a backup schedule that SAFEGUARDS THE SECURITY, AUTHENTICITY AND ACCURACY of the records, with hardware that keeps them accessible IN A READABLE FORMAT.",
+      "The outline also names RESPONSIBILITY FOR KEEPING RECORDS, WHAT INFORMATION AND DOCUMENTS MUST BE KEPT, and COMMISSION ACCESS TO RECORDS.",
+      "A principal broker must also RETAIN A COPY of each executed Transfer, Release and Change of Status form or online confirmation (Rule 1260-02-.02(1))."
+     ]
+    },
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "Only until the first offer is accepted",
+        "At the seller's convenience",
+        "Promptly, until a contract is signed by all parties"
+       ],
+       "q": "Written offers must be tendered:",
+       "why": "Rule 1260-02-.08."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "The purchaser only",
+        "The closing agent only",
+        "Both the purchaser and the seller, promptly"
+       ],
+       "q": "On acceptance, copies signed by the seller go to:",
+       "why": "Rule 1260-02-.08."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "Destroy the offer",
+        "Ask the seller to note the rejection on the offer and return it to the offeror or their agent",
+        "File it without comment"
+       ],
+       "q": "When an offer is rejected, the licensee must:",
+       "why": "Rule 1260-02-.08."
+      },
+      {
+       "answer": 0,
+       "choices": [
+        "The septic system inspection letter available from TDEC for a fee",
+        "A free radon test",
+        "A state home warranty"
+       ],
+       "q": "A licensee preparing an offer to buy must tell the buyer about:",
+       "why": "Rule 1260-02-.37."
+      }
+     ],
+     "h": "Handling offers and copies (Rules 1260-02-.08, .10)",
+     "l": [
+      "A broker or affiliate broker shall PROMPTLY TENDER EVERY WRITTEN OFFER to purchase or sell obtained on a property UNTIL A CONTRACT IS SIGNED BY ALL PARTIES.",
+      "On a proper acceptance of an offer or any counteroffer, the licensee shall PROMPTLY DELIVER TRUE EXECUTED COPIES, SIGNED BY THE SELLER, TO BOTH THE PURCHASER AND THE SELLER.",
+      "Licensees must MAKE CERTAIN THAT ALL TERMS AND CONDITIONS of the transaction are INCLUDED IN THE CONTRACT to purchase.",
+      "If an offer is REJECTED, the licensee shall REQUEST THE SELLER TO NOTE THE REJECTION ON THE OFFER and return it to the offeror or the offeror's agent.",
+      "CLOSING STATEMENTS: if a broker acts as CLOSING AGENT, the broker shall PROVIDE COPIES of the closing statement to the parties (Rule 1260-02-.10).",
+      "A licensee preparing an OFFER TO BUY must provide in the offer, and make the buyer aware, that a SEPTIC SYSTEM INSPECTION LETTER is available for a fee from the Tennessee Department of Environment and Conservation, Division of Ground Water Protection (Rule 1260-02-.37)."
+     ]
+    }
+   ],
+   "summary": "Four items. Three years is the number, and the principal broker is the keeper.",
+   "topic": "tn/records",
+   "traps": [
+    "Three years from CONSUMMATION, not from the listing.",
+    "Offers keep being tendered until all parties sign - not until the first acceptance.",
+    "The septic inspection letter notice goes in the offer itself."
+   ],
+   "vocab": [
+    [
+     "Consummation",
+     "The event that starts the three-year retention clock."
+    ],
+    [
+     "Tender",
+     "To present an offer to the party entitled to see it."
+    ],
+    [
+     "TDEC",
+     "Tennessee Department of Environment and Conservation."
+    ]
+   ]
+  },
+  "tn/special": {
+   "blurb": "Timeshare, property management and commercial practice.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "examples": [],
+   "ga": [],
+   "label": "Special areas of practice",
+   "portion": "georgia",
+   "sections": [
+    {
+     "check": [
+      {
+       "answer": 2,
+       "choices": [
+        "New construction",
+        "Vacant land",
+        "Commercial property, public auctions, residential property of more than four units, and residential leases",
+        "Cash sales"
+       ],
+       "q": "Which transactions escape the 403 to 405 disclosure duties?",
+       "why": "T.C.A. 62-13-405(e)."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "1973",
+        "1995",
+        "1987",
+        "2006"
+       ],
+       "q": "The Tennessee Timeshare Act dates from:",
+       "why": "PSI Tennessee bulletin."
+      },
+      {
+       "answer": 2,
+       "choices": [
+        "40 items, 28 correct",
+        "80 items, 56 correct",
+        "35 items, with 25 correct to pass"
+       ],
+       "q": "A timeshare salesperson's state examination is:",
+       "why": "PSI Tennessee bulletin score table."
+      },
+      {
+       "answer": 1,
+       "choices": [
+        "In the firm's sales escrow account",
+        "In one or more separate escrow or trustee accounts",
+        "By the landlord"
+       ],
+       "q": "Lease-related trust money must be held:",
+       "why": "Rule 1260-02-.09(12)."
+      }
+     ],
+     "h": "What changes",
+     "l": [
+      "COMMERCIAL property, transfers by PUBLIC AUCTION, residential property of MORE THAN FOUR UNITS, and the LEASE OR RENTAL of residential property are NOT subject to the disclosure duties of T.C.A. 62-13-403, 62-13-404 and 62-13-405.",
+      "TIMESHARE is governed by the TENNESSEE TIMESHARE ACT OF 1987, which TREC also administers. It carries its own licence categories - TIMESHARE SALESPERSON and ACQUISITION AGENT - each with a 35-item state examination requiring 25 correct (70%).",
+      "The timeshare state outline names PUBLIC OFFERING STATEMENTS, ESCROW OF DEPOSITS, MUTUAL RIGHTS OF CANCELLATION, the ban on MISLEADING ADVERTISEMENTS, specific ADVERTISING PROHIBITIONS, and PRIZE OR GIFT PROMOTIONAL OFFERS.",
+      "PROPERTY MANAGEMENT: money relating to leases goes in SEPARATE escrow or trustee accounts (Rule 1260-02-.09(12)), and the TREC Core course covers property management as a listed topic.",
+      "Rule 1260-02-.15 and others concerning specialised practice have been REPEALED, so the modern rules are the general ones applied to these contexts."
+     ]
+    }
+   ],
+   "summary": "Three items on where the ordinary rules bend: timeshares, property management and commercial deals.",
+   "topic": "tn/special",
+   "traps": [
+    "Residential of MORE than four units is outside the disclosure duties; one to four is inside.",
+    "Timeshare has its own act, its own licences and its own 35-item examination."
+   ],
+   "vocab": [
+    [
+     "Timeshare Act",
+     "The Tennessee Timeshare Act of 1987."
+    ],
+    [
+     "Acquisition agent",
+     "A timeshare licence category with its own state exam."
+    ],
+    [
+     "Public offering statement",
+     "The timeshare disclosure document."
+    ]
+   ]
+  }
+ },
+ "topics": [
+  {
+   "blurb": "Firm name and number, signs, teams, internet and social media, gifts.",
+   "counts_on_exam": true,
+   "exam_questions": 7,
+   "key": "tn/advertising",
+   "label": "Advertising and marketing",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Duties to all parties and to clients, disclosure, designated agents, facilitators.",
+   "counts_on_exam": true,
+   "exam_questions": 6,
+   "key": "tn/agency",
+   "label": "Agency and disclosure issues",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "How compensation is paid, supervision, affiliation changes, listings.",
+   "counts_on_exam": true,
+   "exam_questions": 5,
+   "key": "tn/broker-affiliate",
+   "label": "Broker / affiliate relationships",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "What TREC does, what it cannot touch, complaints and discipline.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "tn/commission",
+   "label": "Duties and powers of the Commission",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Education, qualifications, change of status, firm licences, renewal, E&O.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "tn/licensing",
+   "label": "Licensing requirements",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Who keeps what, for how long, handling offers and leaving copies.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "tn/records",
+   "label": "Documents and record keeping",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Deposit timing, permitted disbursements, commingling, interest.",
+   "counts_on_exam": true,
+   "exam_questions": 4,
+   "key": "tn/escrow",
+   "label": "Trust and escrow funds",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Net listings, discrimination and other misconduct.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "tn/improper",
+   "label": "Other improper activities",
+   "portion": "georgia"
+  },
+  {
+   "blurb": "Timeshare, property management and commercial practice.",
+   "counts_on_exam": true,
+   "exam_questions": 3,
+   "key": "tn/special",
+   "label": "Special areas of practice",
+   "portion": "georgia"
+  }
+ ]
+}
